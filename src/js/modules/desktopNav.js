@@ -1,118 +1,129 @@
 /**
- * desktopNav.js
+ * desktopNav.js – Versão 3
  * 
- * Estratégia: Em vez de brigar com o JS nativo do Shopkit/Boxie que controla
- * o estado do menu mobile, nós lemos os links do menu original, construímos
- * nossa própria nav horizontal premium e inserimos no header.
- * O menu original é ocultado no desktop via CSS.
+ * Estratégia: Lê a estrutura COMPLETA do menu nativo (incluindo submenus),
+ * reconstrói uma nav horizontal de 2 níveis com Font Awesome 5,
+ * e injeta num <div> próprio abaixo da linha logo+ícones.
  */
 
-// Mapa de ícones RemixIcon por palavra-chave (português)
-const ICON_MAP = {
-  'equipamento': 'ri-settings-4-line',
-  'alimentação': 'ri-restaurant-2-line',
-  'alimentacao': 'ri-restaurant-2-line',
-  'hardscape': 'ri-landscape-line',
-  'planta': 'ri-leaf-line',
-  'peixe': 'ri-drop-line',
-  'invertebrado': 'ri-bug-line',
-  'outro': 'ri-archive-line',
-  'condicionador': 'ri-flask-line',
-  'aquascape': 'ri-anchor-line',
-  'aquascaping': 'ri-anchor-line',
+// Mapa de itens → Font Awesome 5 (free)
+const FA_ICON_MAP = {
+  'equipamento':         'fas fa-tools',
+  'alimentação':         'fas fa-utensils',
+  'alimentacao':         'fas fa-utensils',
+  'hardscape':           'fas fa-mountain',
+  'planta':              'fas fa-seedling',
+  'peixe':               'fas fa-fish',
+  'invertebrado':        'fas fa-bug',
+  'outro':               'fas fa-ellipsis-h',
+  'condicionador':       'fas fa-tint',
+  'água':                'fas fa-tint',
+  'agua':                'fas fa-tint',
+  'aquascape':           'fas fa-leaf',
+  'aquascaping':         'fas fa-leaf',
 };
 
-function getIconForLabel(text) {
-  const normalized = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-  for (const [key, icon] of Object.entries(ICON_MAP)) {
-    const keyNorm = key.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-    if (normalized.includes(keyNorm)) return icon;
+function normStr(str) {
+  return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+function getFA(text) {
+  const n = normStr(text);
+  for (const [key, icon] of Object.entries(FA_ICON_MAP)) {
+    if (n.includes(normStr(key))) return icon;
   }
-  return 'ri-arrow-right-s-line'; // fallback genérico
+  return 'fas fa-circle'; // fallback
+}
+
+function buildItem(originalLi) {
+  const originalA = originalLi.querySelector(':scope > a');
+  if (!originalA) return null;
+
+  const label = originalA.textContent.trim();
+  const href  = originalA.getAttribute('href') || '#';
+
+  // Verifica submenu
+  const originalSub = originalLi.querySelector(':scope > ul');
+
+  const li = document.createElement('li');
+  li.className = originalSub ? 'aq-has-sub' : '';
+
+  const a = document.createElement('a');
+  a.href = href;
+  a.title = label;
+  a.innerHTML = `<i class="${getFA(label)}"></i><span>${label}</span>`;
+  if (originalSub) a.innerHTML += `<i class="fas fa-chevron-down aq-arrow"></i>`;
+
+  li.appendChild(a);
+
+  if (originalSub) {
+    const sub = document.createElement('ul');
+    sub.className = 'aq-submenu';
+
+    originalSub.querySelectorAll(':scope > li').forEach(subLi => {
+      const subA = subLi.querySelector(':scope > a');
+      if (!subA) return;
+      const subLi2 = document.createElement('li');
+      const subA2  = document.createElement('a');
+      subA2.href  = subA.getAttribute('href') || '#';
+      subA2.textContent = subA.textContent.trim();
+      subLi2.appendChild(subA2);
+      sub.appendChild(subLi2);
+    });
+
+    li.appendChild(sub);
+  }
+
+  return li;
 }
 
 export function buildDesktopNav() {
-  // Apenas em telas desktop
   if (window.innerWidth < 992) return;
 
-  // Encontrar o header
-  const header = document.querySelector('header, #header, .header, .navbar');
-  if (!header) return;
-
   // Evitar duplicação
-  if (document.getElementById('aq-desktop-nav')) return;
+  if (document.getElementById('aq-nav-bar')) return;
 
-  // Encontrar os links do menu nativo
-  // Tenta várias seletoras comuns do Shopkit/Boxie
-  const possibleMenus = [
-    '.menu-wrapper a',
-    '.header-menu a',
-    '#menu a',
-    'nav.navigation a',
-    '.nav-menu a',
-    '.navbar-collapse a',
-    'header nav a',
+  // Procurar os <li> do menu nativo
+  const menuSelectors = [
+    '.menu-wrapper > ul > li',
+    '.header-menu > ul > li',
+    '#menu > li',
+    'nav.navigation > ul > li',
+    '.nav-menu > li',
+    '.navbar-collapse ul > li',
+    'header nav > ul > li',
   ];
 
-  let menuLinks = [];
-  for (const selector of possibleMenus) {
-    const found = document.querySelectorAll(selector);
-    if (found.length >= 3) { // Pelo menos 3 links = menu de verdade
-      menuLinks = Array.from(found).filter(a => {
-        const text = a.textContent.trim();
-        const href = a.getAttribute('href') || '';
-        // Filtrar links vazios, ícones e links de sistema
-        return text.length > 1 && !a.querySelector('i') && href && !href.startsWith('#');
-      });
-      if (menuLinks.length >= 3) break;
-    }
+  let sourceItems = [];
+  for (const sel of menuSelectors) {
+    const found = document.querySelectorAll(sel);
+    if (found.length >= 3) { sourceItems = Array.from(found); break; }
   }
 
-  if (menuLinks.length === 0) {
-    console.warn('[AQ] Nenhum link de menu encontrado. Tentando novamente em 1s...');
-    setTimeout(buildDesktopNav, 1000);
+  if (sourceItems.length === 0) {
+    setTimeout(buildDesktopNav, 800);
     return;
   }
 
-  // Construir a nav premium
+  // Construir a nav
   const nav = document.createElement('nav');
-  nav.id = 'aq-desktop-nav';
+  nav.id = 'aq-nav-bar';
   nav.setAttribute('aria-label', 'Menu Principal');
 
   const ul = document.createElement('ul');
 
-  menuLinks.forEach(originalLink => {
-    const text = originalLink.textContent.trim();
-    const href = originalLink.getAttribute('href');
-
-    const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.href = href;
-    a.title = text;
-
-    // Ícone
-    const icon = document.createElement('i');
-    icon.className = getIconForLabel(text);
-
-    // Texto
-    const span = document.createElement('span');
-    span.textContent = text;
-
-    a.appendChild(icon);
-    a.appendChild(span);
-    li.appendChild(a);
-    ul.appendChild(li);
+  sourceItems.forEach(li => {
+    const item = buildItem(li);
+    if (item) ul.appendChild(item);
   });
 
   nav.appendChild(ul);
 
-  // Inserir depois do logo no header
-  const logo = header.querySelector('.logo, .header-logo, .navbar-brand');
-  if (logo && logo.nextSibling) {
-    header.insertBefore(nav, logo.nextSibling);
-  } else {
+  // Inserir como segunda linha do header
+  const header = document.querySelector('header, #header, .header');
+  if (header) {
     header.appendChild(nav);
   }
 
-  console.log(`[AQ] Desktop nav construída com ${menuLinks.length} itens.`);
+  console.log(`[AQ] Nav construída com ${ul.children.length} itens.`);
 }

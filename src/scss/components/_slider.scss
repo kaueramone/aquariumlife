@@ -31,10 +31,10 @@
   }
 }
 
-// Adjust positioning if necessary
+// Adjust positioning so arrows don't get cropped
 .slick-prev {
-  left: -15px !important;
+  left: 12px !important; // Dentro do banner, não fora
 }
 .slick-next {
-  right: -15px !important;
+  right: 12px !important;
 }
