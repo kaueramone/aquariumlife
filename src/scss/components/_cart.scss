@@ -1,0 +1,250 @@
+@use '../base/variables' as *;
+
+// ============================================================
+// CART — Mini-cart popup + badge de quantidade
+// Shopkit Boxie: .cart-count / .cart-summary / .cart-popup
+// ============================================================
+
+// ── Badge de quantidade no ícone ────────────────────────────
+.cart-count,
+.cart-qty,
+.cart-badge,
+.header-cart .badge,
+.cart-icon .badge,
+[class*="cart"] .badge,
+.badge-cart {
+  background: $color-neon-accent !important;
+  color: #001531 !important;
+  font-family: $font-family-title !important;
+  font-size: 0.6rem !important;
+  font-weight: 700 !important;
+  min-width: 18px !important;
+  height: 18px !important;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 4px !important;
+  border: none !important;
+  box-shadow: 0 0 8px rgba(8, 238, 188, 0.6) !important;
+  line-height: 1 !important;
+}
+
+// ── Popup / dropdown do carrinho ────────────────────────────
+.cart-summary,
+.cart-popup,
+.cart-dropdown,
+.mini-cart,
+.popover-cart,
+.cart-preview,
+[class*="cart-summary"],
+[class*="mini-cart"] {
+  background: linear-gradient(160deg, #001a38 0%, #000f24 100%) !important;
+  border: 1px solid rgba(8, 238, 188, 0.22) !important;
+  border-radius: 14px !important;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.7),
+    inset 0 1px 0 rgba(8, 238, 188, 0.1) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  overflow: hidden !important;
+  color: #fff !important;
+  min-width: 300px !important;
+
+  // Linha neon no topo
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 10%; width: 80%; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(8,238,188,0.6), transparent);
+    pointer-events: none;
+  }
+}
+
+// ── Item do carrinho ────────────────────────────────────────
+.cart-summary .cart-item,
+.cart-popup .cart-item,
+.mini-cart .cart-item,
+.cart-product,
+.cart-item {
+  border-bottom: 1px solid rgba(8, 238, 188, 0.08) !important;
+  padding: 14px 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  background: transparent !important;
+
+  // Imagem do produto
+  img {
+    width: 58px !important;
+    height: 58px !important;
+    object-fit: contain !important;
+    border-radius: 8px !important;
+    background: rgba(0, 8, 20, 0.6) !important;
+    padding: 4px !important;
+    border: 1px solid rgba(8, 238, 188, 0.12) !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+// Nome e preço do produto
+.cart-item-name,
+.cart-item .product-name,
+.cart-product-name,
+.cart-item a,
+.cart-product a {
+  color: #cde4f8 !important;
+  font-family: $font-family-body !important;
+  font-size: 0.84rem !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  line-height: 1.4 !important;
+  &:hover { color: #fff !important; }
+}
+
+.cart-item-price,
+.cart-item .price,
+.cart-product-price,
+.cart-item-total {
+  color: $color-neon-accent !important;
+  font-family: $font-family-title !important;
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+}
+
+// Botão remover item (lixo)
+.cart-item-remove,
+.cart-remove,
+.remove-item,
+.cart-item .btn-remove,
+.cart-item [class*="remove"],
+.cart-item [class*="delete"] {
+  background: transparent !important;
+  border: 1px solid rgba(8, 238, 188, 0.25) !important;
+  border-radius: 50% !important;
+  color: $color-neon-accent !important;
+  width: 30px !important;
+  height: 30px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  flex-shrink: 0 !important;
+  transition: $transition-fast;
+  margin-left: auto !important;
+
+  i, svg { color: $color-neon-accent !important; font-size: 0.8rem !important; }
+
+  &:hover {
+    background: rgba(255, 50, 80, 0.12) !important;
+    border-color: rgba(255, 50, 80, 0.5) !important;
+    color: #ff3250 !important;
+    i, svg { color: #ff3250 !important; }
+  }
+}
+
+// ── Total ───────────────────────────────────────────────────
+.cart-total,
+.cart-summary-total,
+.mini-cart-total,
+.cart-subtotal {
+  padding: 12px 16px !important;
+  border-top: 1px solid rgba(8, 238, 188, 0.12) !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  background: rgba(8, 238, 188, 0.03) !important;
+
+  // Label "Total:"
+  span:first-child,
+  .total-label,
+  label {
+    color: rgba(255, 255, 255, 0.65) !important;
+    font-family: $font-family-body !important;
+    font-size: 0.82rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+  }
+
+  // Valor
+  span:last-child,
+  .total-price,
+  strong {
+    color: $color-neon-accent !important;
+    font-family: $font-family-title !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+  }
+}
+
+// ── Botões de acção ─────────────────────────────────────────
+.cart-actions,
+.cart-buttons,
+.cart-summary-actions,
+.mini-cart-actions {
+  padding: 12px 16px 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  background: transparent !important;
+}
+
+// Botão base — contorno neon, preenchimento no hover
+.cart-actions a,
+.cart-buttons a,
+.cart-summary-actions a,
+.mini-cart-actions a,
+.cart-actions .btn,
+.cart-buttons .btn,
+.view-cart-btn,
+.checkout-btn,
+.cart-checkout,
+.cart-view,
+[class*="cart"] .btn-primary,
+[class*="cart"] .btn-secondary {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  padding: 11px 20px !important;
+  border-radius: 6px !important;
+  font-family: $font-family-title !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.8px !important;
+  text-decoration: none !important;
+  text-align: center !important;
+  cursor: pointer !important;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease !important;
+
+  // Contorno neon, fundo transparente
+  background: transparent !important;
+  background-image: none !important;
+  border: 1.5px solid $color-neon-accent !important;
+  color: $color-neon-accent !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+
+  // Kill Shopkit ::before overlay
+  &::before { content: none !important; display: none !important; }
+  &::after  { content: none !important; display: none !important; }
+
+  &:hover, &:focus {
+    background: $color-neon-accent !important;
+    background-image: none !important;
+    color: #001531 !important;
+    box-shadow: 0 0 18px rgba(8, 238, 188, 0.45) !important;
+    text-decoration: none !important;
+  }
+}
+
+// Botão primário (Finalizar Compra) — destaque extra
+.cart-actions a:last-child,
+.cart-buttons a:last-child,
+.checkout-btn,
+.cart-checkout {
+  border-color: $color-neon-accent !important;
+  position: relative;
+  overflow: hidden;
+}
