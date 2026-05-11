@@ -124,18 +124,17 @@ function createNavItem(item) {
   return li;
 }
 
-export function buildDesktopNav() {
+function tryBuild() {
   if (window.innerWidth < 992) return;
   if (document.getElementById('aq-nav-bar')) return;
 
-  const header = document.querySelector('header, #header, .header');
-  if (!header) { setTimeout(buildDesktopNav, 500); return; }
+  const header = document.querySelector('header, #header, .header, [class*="header"]');
+  if (!header) return false; // Não encontrou ainda
 
   // Esconder bolinha hamburguer real do Boxie
-  const triggers = header.querySelectorAll(
+  header.querySelectorAll(
     '.trigger-header-menu, .menu-toggle, .mobile-menu-btn, .burger, .btn-menu, .navbar-toggler'
-  );
-  triggers.forEach(el => el.style.setProperty('display', 'none', 'important'));
+  ).forEach(el => el.style.setProperty('display', 'none', 'important'));
 
   // Construir nav
   const nav = document.createElement('nav');
@@ -148,8 +147,29 @@ export function buildDesktopNav() {
   MENU.forEach(item => ul.appendChild(createNavItem(item)));
   nav.appendChild(ul);
 
-  // Adicionar como segunda linha no header
   header.appendChild(nav);
+  console.log('[AQ] Nav v5 inserida —', MENU.length, 'itens no header:', header.tagName, header.className);
+  return true;
+}
 
-  console.log('[AQ] Nav v5 pronta —', MENU.length, 'itens.');
+export function buildDesktopNav() {
+  // Tenta imediatamente
+  if (tryBuild()) return;
+
+  // Retry por polling (até 5 segundos)
+  let attempts = 0;
+  const interval = setInterval(() => {
+    attempts++;
+    console.log('[AQ] Tentativa', attempts, 'de encontrar o header...');
+    if (tryBuild() || attempts >= 10) clearInterval(interval);
+  }, 500);
+
+  // Também usa MutationObserver como segurança extra
+  const observer = new MutationObserver(() => {
+    if (tryBuild()) observer.disconnect();
+  });
+  observer.observe(document.body || document.documentElement, {
+    childList: true,
+    subtree: true
+  });
 }

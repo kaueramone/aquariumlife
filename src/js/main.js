@@ -1,14 +1,21 @@
 // JS Entry Point for AquariumLife Custom Layer
-// Este arquivo será injetado na Shopkit via painel avançado
+// Injetado via Shopkit — o DOMContentLoaded pode já ter disparado!
 
 import { initAnimations } from './modules/animations.js';
 import { injectMenuIcons } from './modules/menuIcons.js';
 import { buildDesktopNav } from './modules/desktopNav.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+function init() {
   initAnimations();
   injectMenuIcons();
-  buildDesktopNav(); // Constrói nav horizontal própria no desktop
+  buildDesktopNav();
+  console.log('[AQ] Premium Layer Loaded — readyState:', document.readyState);
+}
 
-  console.log('AquariumLife Premium Layer Loaded');
-});
+// Seguro para qualquer momento de carregamento
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  // DOM já está pronto (script carregado depois do DOMContentLoaded)
+  init();
+}
