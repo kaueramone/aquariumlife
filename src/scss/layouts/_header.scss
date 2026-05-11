@@ -1,5 +1,16 @@
 @use '../base/variables' as *;
 
+// Top Bar Notice (usually light blue in Shopkit)
+.top-bar, #top-bar, .store-notice, .info-bar {
+  background: #000 !important;
+  color: $color-neon-accent !important;
+  border-bottom: 1px solid rgba(8, 238, 188, 0.2) !important;
+  font-family: $font-family-body !important;
+  font-size: 0.85rem !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 // Shopkit default Header Overrides
 header, .header, #header {
   background: rgba(0, 4, 13, 0.8) !important;
@@ -12,6 +23,22 @@ header, .header, #header {
   z-index: 1000;
   transition: $transition-smooth;
 
+  // Make sure the internal container aligns items properly
+  .container, .container-fluid, .header-inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: wrap;
+  }
+
+  // Logo background fix (if it's a solid JPEG/PNG with white bg)
+  .logo img, .header-logo img {
+    background: #fff !important;
+    border-radius: 8px !important;
+    padding: 5px !important;
+    box-shadow: 0 0 10px rgba(8, 238, 188, 0.2) !important;
+  }
+
   // Menu items and links
   .menu-item, .menu-link, .nav-link, a {
     color: $color-text-primary !important;
@@ -20,6 +47,7 @@ header, .header, #header {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: $transition-fast;
+    margin: 0 10px; // Add spacing
     
     &:hover {
       color: $color-neon-accent !important;

@@ -1,0 +1,40 @@
+@use '../base/variables' as *;
+
+// Slick Slider Overrides for Premium feel
+.slick-prev, .slick-next, .slick-arrow {
+  background: rgba(0, 4, 13, 0.8) !important;
+  border: 1px solid $color-neon-accent !important;
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  z-index: 10 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: $transition-smooth !important;
+  box-shadow: 0 0 10px rgba(8, 238, 188, 0.2) !important;
+
+  &:hover {
+    background: $color-neon-accent !important;
+    box-shadow: 0 0 20px rgba(8, 238, 188, 0.8) !important;
+    
+    &::before {
+      color: #000 !important; // Seta preta sobre fundo neon
+    }
+  }
+
+  &::before {
+    color: $color-neon-accent !important;
+    font-size: 20px !important;
+    opacity: 1 !important;
+    transition: $transition-fast !important;
+  }
+}
+
+// Adjust positioning if necessary
+.slick-prev {
+  left: -15px !important;
+}
+.slick-next {
+  right: -15px !important;
+}

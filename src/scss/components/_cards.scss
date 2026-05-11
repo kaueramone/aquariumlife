@@ -18,15 +18,30 @@
   }
 
   .product-pic, .img-frame {
-    background: #000;
+    background: #ffffff !important; // Moldura branca elegante para disfarçar JPEGs
+    border-bottom: 1px solid rgba(8, 238, 188, 0.2) !important;
+    padding: 20px !important; // Espaço em volta da imagem bruta
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
     img {
-      opacity: 0.8;
+      opacity: 0.9;
       transition: $transition-smooth;
+      mix-blend-mode: multiply; // Ajuda se tiver fundo não 100% branco, mas o padding é a principal cura
+      max-width: 100% !important;
+      height: auto !important;
     }
+  }
+
+  // Centralizar o texto abaixo da imagem
+  .product-details, .product-info, .categories-text, .title, .product-price {
+    text-align: center !important;
+    padding: 10px !important;
   }
 
   &:hover .product-pic img {
     opacity: 1;
-    transform: scale(1.05);
+    transform: scale(1.08);
   }
 }
