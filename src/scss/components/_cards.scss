@@ -112,7 +112,7 @@ a.product-name {
   color: #cde4f8 !important;
   text-decoration: none !important;
   text-align: center !important;
-  padding: 13px 14px 5px !important;
+  padding: 10px 12px 3px !important;
   line-height: 1.45 !important;
   flex: 1;
 
@@ -129,7 +129,7 @@ a.product-name {
 
 .product-price {
   text-align: center !important;
-  padding: 4px 14px 13px !important;
+  padding: 3px 12px 8px !important;
 
   .product-actual, span {
     font-family: $font-family-title !important;
@@ -157,9 +157,9 @@ a.product-name {
   pointer-events: none !important;
 }
 
-// MOSTRAR apenas quando o JS o mover para filho direto de .card-shadow-hover
-.card-shadow-hover > a.product-btn,
-.card-shadow-hover > .product-btn {
+// MOSTRAR apenas quando o JS o mover para dentro de .product-details
+.product-details > a.product-btn,
+.product-details > .product-btn {
   display: flex !important;
   visibility: visible !important;
   pointer-events: auto !important;

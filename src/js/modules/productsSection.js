@@ -21,10 +21,10 @@ function moveComprarButtons() {
     if (!card) return;
     const details = card.querySelector('.product-details');
     if (details) {
-      // Mover para logo após .product-details (filho direto de .card-shadow-hover)
-      details.insertAdjacentElement('afterend', btn);
+      // Mover para DENTRO de .product-details como último filho
+      // (fica dentro do card, alinhado com o preço)
+      details.appendChild(btn);
     } else {
-      // Fallback: append direto no card
       card.appendChild(btn);
     }
   });
