@@ -94,7 +94,7 @@ function applyDarkCart(popup) {
     btns.style.setProperty('background',       'transparent', 'important');
     btns.style.setProperty('padding',          '12px 16px 16px', 'important');
     btns.style.setProperty('display',          'flex',      'important');
-    btns.style.setProperty('flex-direction',   'column',    'important');
+    btns.style.setProperty('flex-direction',   'row',       'important');
     btns.style.setProperty('gap',              '8px',       'important');
   }
 
@@ -141,21 +141,31 @@ function updateBadge() {
   const link = document.querySelector('.link-cart');
   if (!link) return;
 
-  // Ler contagem: data-count, data-qty, ou texto de elemento filho
   let count = 0;
+
+  // 1. data-count / data-qty no próprio link
   const raw = link.dataset.count ?? link.dataset.qty ?? link.dataset.cartCount;
   if (raw !== undefined) {
     count = parseInt(raw, 10) || 0;
-  } else {
+  }
+
+  // 2. Elemento filho com texto de contagem
+  if (!count) {
     const el = link.querySelector('.count, .qty, [class*="count"], [class*="qty"]');
     if (el) count = parseInt(el.textContent.trim(), 10) || 0;
   }
 
-  const hasProducts = link.classList.contains('has-products');
+  // 3. Fallback: contar .cart-item no popup aberto
+  if (!count) {
+    const items = document.querySelectorAll('.cart-list .cart-item');
+    count = items.length;
+  }
+
+  const hasProducts = link.classList.contains('has-products') || count > 0;
 
   let badge = link.querySelector('.aq-cart-badge');
 
-  if (!hasProducts && count === 0) {
+  if (!hasProducts) {
     if (badge) badge.remove();
     return;
   }
