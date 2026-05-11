@@ -1,0 +1,28 @@
+@use '../base/variables' as *;
+
+.product, .product-view, .categories-item, .brands-item, .card {
+  @include glass-panel;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: $transition-smooth;
+  position: relative;
+  
+  &:hover {
+    transform: translateY(-5px);
+    @include neon-glow-hover;
+    border-color: rgba(8, 238, 188, 0.4);
+  }
+
+  .product-pic, .img-frame {
+    background: #000;
+    img {
+      opacity: 0.8;
+      transition: $transition-smooth;
+    }
+  }
+
+  &:hover .product-pic img {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}

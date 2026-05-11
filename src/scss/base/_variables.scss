@@ -1,0 +1,38 @@
+// Paleta Premium AquariumLife
+
+// Cores Principais
+$color-bg-primary: #00040D;
+$color-bg-secondary: #001531;
+$color-neon-accent: #08EEBC;
+$color-text-primary: #FFFFFF;
+$color-text-secondary: rgba(255, 255, 255, 0.7);
+
+// Gradientes
+$gradient-primary: linear-gradient(135deg, $color-bg-primary 0%, $color-bg-secondary 100%);
+$gradient-secondary: linear-gradient(135deg, $color-bg-secondary 0%, $color-bg-primary 100%);
+$gradient-neon: linear-gradient(90deg, #08EEBC 0%, #00bfff 100%);
+
+// Fontes (Serão injetadas via Shopkit, mas definimos o fallback aqui)
+$font-family-title: 'Poppins', sans-serif;
+$font-family-body: 'Open Sans', sans-serif;
+
+// Efeitos & Transições
+$transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+$transition-fast: all 0.2s ease-in-out;
+
+// Glassmorphism Mixins & Functions
+@mixin glass-panel {
+  background: rgba(0, 21, 49, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(8, 238, 188, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+@mixin neon-glow {
+  box-shadow: 0 0 15px rgba(8, 238, 188, 0.4), 0 0 30px rgba(8, 238, 188, 0.2);
+}
+
+@mixin neon-glow-hover {
+  box-shadow: 0 0 20px rgba(8, 238, 188, 0.6), 0 0 40px rgba(8, 238, 188, 0.3);
+}

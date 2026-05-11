@@ -1,0 +1,26 @@
+@use 'variables' as *;
+
+h1, h2, h3, h4, h5, h6, .title, .product-name {
+  font-family: $font-family-title;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: $color-text-primary;
+}
+
+p, span, .product-price, .categories-text {
+  font-family: $font-family-body;
+  color: $color-text-secondary;
+  line-height: 1.6;
+}
+
+a {
+  color: $color-neon-accent;
+  text-decoration: none;
+  transition: $transition-fast;
+  
+  &:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(8, 238, 188, 0.8);
+    text-decoration: none;
+  }
+}

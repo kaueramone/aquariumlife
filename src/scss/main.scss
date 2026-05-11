@@ -1,0 +1,13 @@
+// SCSS Entry Point for AquariumLife Custom Layer Premium
+// Este arquivo será injetado na Shopkit via painel avançado
+
+@use 'base/variables';
+@use 'base/reset';
+@use 'base/typography';
+@use 'components/buttons';
+@use 'components/cards';
+
+// Layout e Pages podem ser adicionados conforme necessidade
+// @use 'layouts/header';
+// @use 'layouts/footer';
+// @use 'pages/product';
