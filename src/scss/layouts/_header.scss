@@ -248,7 +248,9 @@ header, .header, #header {
     transition: opacity 0.25s ease, transform 0.25s ease;
 
     li a {
-      display: block !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
       padding: 10px 20px !important;
       color: rgba(255,255,255,0.8) !important;
       font-family: $font-family-body !important;
@@ -258,6 +260,8 @@ header, .header, #header {
       text-decoration: none !important;
       border-left: 2px solid transparent;
       transition: $transition-fast;
+
+      i { flex-shrink: 0; font-size: 0.85rem !important; }
 
       &:hover {
         color: $color-neon-accent !important;

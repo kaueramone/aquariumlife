@@ -4,7 +4,7 @@
 // Estrutura esperada: .product > .product-pic (foto) > .product-details (título + preço + botão)
 
 .product, .product-item {
-  background: rgba(0, 15, 35, 0.7) !important;
+  background: #001531 !important;
   backdrop-filter: blur(10px) !important;
   -webkit-backdrop-filter: blur(10px) !important;
   border: 1px solid rgba(8, 238, 188, 0.12) !important;
@@ -117,6 +117,133 @@
       &::before {
         opacity: 1;
       }
+    }
+  }
+}
+
+
+// ============================================================
+// BADGES DE PRODUTO — Etiquetas modernas (Novo, Desconto…)
+// ============================================================
+
+// Wrapper das etiquetas (posição absoluta sobre o card)
+.product-badges, .product-badge-list {
+  position: absolute !important;
+  top: 10px !important;
+  left: 10px !important;
+  z-index: 4 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 5px !important;
+  pointer-events: none;
+}
+
+// Etiqueta base
+.badge, .product-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 3px 9px !important;
+  border-radius: 20px !important;
+  font-family: $font-family-title !important;
+  font-size: 0.62rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.8px !important;
+  line-height: 1.4 !important;
+  white-space: nowrap !important;
+  // Sombra para destacar sobre a imagem branca
+  box-shadow: 0 2px 8px rgba(0,0,0,0.35) !important;
+}
+
+// Etiqueta "Novo"
+.badge.new, .badge-new, [class*="badge"][class*="new"] {
+  background: $color-neon-accent !important;
+  color: #000 !important;
+}
+
+// Etiqueta de desconto / promoção
+.badge.sale, .badge-sale, .badge.discount, .badge-discount,
+[class*="badge"][class*="sale"], [class*="badge"][class*="promo"] {
+  background: #ff4060 !important;
+  color: #fff !important;
+}
+
+// Etiqueta genérica (fallback)
+.badge:not(.new):not(.sale):not(.discount) {
+  background: rgba(8, 238, 188, 0.15) !important;
+  color: $color-neon-accent !important;
+  border: 1px solid rgba(8, 238, 188, 0.4) !important;
+}
+
+// ============================================================
+// SECÇÃO DE PRODUTOS — Ocultar título nativo + espaçamento
+// ============================================================
+
+// Ocultar "Produtos" / títulos de secção nativos do Shopkit
+// que ficam acima das grelhas de produto
+section:has(.product) > .title,
+section:has(.product) > .container > .title,
+section:has(.product) > .container-fluid > .title,
+.section:has(.product) > .title,
+.section:has(.product) .title_mb-lg,
+section:has(.product-view) > .title,
+section:has(.product-view) > .container > .title {
+  display: none !important;
+}
+
+// Aproximar secção de produtos das categorias
+section:has(.product),
+.section:has(.product) {
+  padding-top: 8px !important;
+  margin-top: 0 !important;
+}
+
+// ============================================================
+// BOTÃO "VER TODOS OS NOSSOS PRODUTOS"
+// ============================================================
+
+#aq-ver-todos {
+  display: flex !important;
+  justify-content: center !important;
+  padding: 28px 20px 16px !important;
+
+  a {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    background: transparent !important;
+    border: 1.5px solid $color-neon-accent !important;
+    color: $color-neon-accent !important;
+    font-family: $font-family-title !important;
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    text-decoration: none !important;
+    padding: 13px 36px !important;
+    border-radius: 4px !important;
+    position: relative;
+    overflow: hidden;
+    transition: $transition-smooth;
+
+    // Brilho de fundo no hover
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: $gradient-neon;
+      opacity: 0;
+      transition: $transition-smooth;
+    }
+
+    span { position: relative; z-index: 1; }
+
+    &:hover {
+      color: #000 !important;
+      box-shadow: 0 0 24px rgba(8, 238, 188, 0.6), 0 0 48px rgba(8, 238, 188, 0.25) !important;
+      transform: translateY(-2px);
+
+      &::before { opacity: 1; }
     }
   }
 }
