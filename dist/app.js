@@ -501,141 +501,139 @@
     }
 
     /**
-     * cartStyles.js
-     * Aplica o tema escuro ao popup do carrinho via JS (inline styles)
-     * e injeta badge com número no ícone do carrinho.
-     * Necessário porque o Shopkit usa inline style="background:#fff" no popup.
+     * cartStyles.js — v2
+     * Aplica tema escuro ao popup do carrinho.
+     * Observer apenas para childList (sem attributes) para evitar loop infinito.
      */
+
+    const NEON   = '#08EEBC';
+    const DARK   = '#001531';
+    const STYLED = 'aq-styled';
 
     // ── Tema escuro no popup ─────────────────────────────────────
     function applyDarkCart(popup) {
-      if (!popup || popup.dataset.aqStyled === '1') return;
-      popup.dataset.aqStyled = '1';
+      if (!popup || popup.getAttribute(STYLED)) return;
+      popup.setAttribute(STYLED, '1');   // marca para não re-aplicar
 
-      const s = popup.style;
-      s.setProperty('background',       '#001531',                            'important');
-      s.setProperty('background-color', '#001531',                            'important');
-      s.setProperty('border',           '1px solid rgba(8,238,188,0.25)',     'important');
-      s.setProperty('border-radius',    '14px',                               'important');
-      s.setProperty('box-shadow',       '0 20px 50px rgba(0,0,0,0.75), inset 0 1px 0 rgba(8,238,188,0.1)', 'important');
-      s.setProperty('overflow',         'hidden',                             'important');
-      s.setProperty('color',            '#fff',                               'important');
+      const set = (el, prop, val) => el && el.style.setProperty(prop, val, 'important');
 
-      // Item linha
+      // Fundo principal
+      set(popup, 'background',        DARK);
+      set(popup, 'background-color',  DARK);
+      set(popup, 'border',            '1px solid rgba(8,238,188,0.25)');
+      set(popup, 'border-radius',     '14px');
+      set(popup, 'box-shadow',        '0 20px 50px rgba(0,0,0,0.75), inset 0 1px 0 rgba(8,238,188,0.1)');
+      set(popup, 'overflow',          'hidden');
+      set(popup, 'color',             '#fff');
+
+      // Cart items
       popup.querySelectorAll('.cart-item').forEach(el => {
-        el.style.setProperty('border-bottom', '1px solid rgba(8,238,188,0.08)', 'important');
-        el.style.setProperty('background',    'transparent',                    'important');
+        set(el, 'border-bottom', '1px solid rgba(8,238,188,0.08)');
+        set(el, 'background',    'transparent');
       });
 
-      // Imagem produto
+      // Imagens
       popup.querySelectorAll('.item-image img').forEach(el => {
-        el.style.setProperty('border-radius', '8px',                          'important');
-        el.style.setProperty('background',    'rgba(0,8,20,0.6)',              'important');
-        el.style.setProperty('border',        '1px solid rgba(8,238,188,0.15)','important');
-        el.style.setProperty('padding',       '4px',                           'important');
+        set(el, 'border-radius', '8px');
+        set(el, 'background',    'rgba(0,8,20,0.6)');
+        set(el, 'border',        '1px solid rgba(8,238,188,0.12)');
+        set(el, 'padding',       '4px');
       });
 
-      // Nome produto
+      // Nome
       popup.querySelectorAll('.item-product').forEach(el => {
-        el.style.setProperty('color',       '#cde4f8', 'important');
-        el.style.setProperty('font-weight', '500',     'important');
+        set(el, 'color',       '#cde4f8');
+        set(el, 'font-weight', '500');
       });
 
       // Preço item
       popup.querySelectorAll('.details .price').forEach(el => {
-        el.style.setProperty('color',       '#08EEBC', 'important');
-        el.style.setProperty('font-weight', '700',     'important');
+        set(el, 'color',       NEON);
+        set(el, 'font-weight', '700');
       });
 
-      // Botão remover (lixo)
+      // Botão remover
       popup.querySelectorAll('a.remove').forEach(el => {
-        el.style.setProperty('background',    'transparent',                    'important');
-        el.style.setProperty('border',        '1px solid rgba(8,238,188,0.2)', 'important');
-        el.style.setProperty('border-radius', '50%',                            'important');
-        el.style.setProperty('color',         '#08EEBC',                        'important');
-        el.style.setProperty('width',         '30px',                           'important');
-        el.style.setProperty('height',        '30px',                           'important');
-        el.style.setProperty('display',       'flex',                           'important');
-        el.style.setProperty('align-items',   'center',                         'important');
-        el.style.setProperty('justify-content','center',                        'important');
-        el.style.setProperty('box-shadow',    'none',                           'important');
-        // SVG dentro do botão remover
-        el.querySelectorAll('svg path, svg').forEach(p => {
-          p.style.setProperty('fill', '#08EEBC', 'important');
-        });
+        set(el, 'background',      'transparent');
+        set(el, 'border',          '1px solid rgba(8,238,188,0.2)');
+        set(el, 'border-radius',   '50%');
+        set(el, 'width',           '30px');
+        set(el, 'height',          '30px');
+        set(el, 'display',         'flex');
+        set(el, 'align-items',     'center');
+        set(el, 'justify-content', 'center');
+        set(el, 'padding',         '0');
+        set(el, 'box-shadow',      'none');
+        el.querySelectorAll('svg, path').forEach(p => set(p, 'fill', NEON));
       });
 
-      // Área total
-      const totalRow = popup.querySelector('.cart-total');
-      if (totalRow) {
-        totalRow.style.setProperty('background',    'rgba(8,238,188,0.03)',          'important');
-        totalRow.style.setProperty('border-top',    '1px solid rgba(8,238,188,0.1)', 'important');
-        totalRow.style.setProperty('padding',       '12px 16px',                     'important');
-        totalRow.style.setProperty('display',       'flex',                          'important');
-        totalRow.style.setProperty('justify-content','space-between',                'important');
-        totalRow.style.setProperty('align-items',   'center',                        'important');
+      // Total
+      const total = popup.querySelector('.cart-total');
+      if (total) {
+        set(total, 'background',      'rgba(8,238,188,0.03)');
+        set(total, 'border-top',      '1px solid rgba(8,238,188,0.1)');
+        set(total, 'padding',         '12px 16px');
+        set(total, 'display',         'flex');
+        set(total, 'justify-content', 'space-between');
+        set(total, 'align-items',     'center');
 
-        const texts = totalRow.querySelectorAll('.cart-total-text');
-        if (texts[0]) { // "Total:" label
-          texts[0].style.setProperty('color',       'rgba(255,255,255,0.6)', 'important');
-          texts[0].style.setProperty('font-size',   '0.8rem',                'important');
-          texts[0].style.setProperty('font-weight', '500',                   'important');
-          texts[0].style.setProperty('text-transform','uppercase',           'important');
-          texts[0].style.setProperty('letter-spacing','1px',                 'important');
+        const tt = total.querySelectorAll('.cart-total-text');
+        if (tt[0]) {
+          set(tt[0], 'color',          'rgba(255,255,255,0.6)');
+          set(tt[0], 'font-size',      '0.8rem');
+          set(tt[0], 'text-transform', 'uppercase');
+          set(tt[0], 'letter-spacing', '1px');
         }
-        if (texts[1]) { // valor
-          texts[1].style.setProperty('color',       '#08EEBC', 'important');
-          texts[1].style.setProperty('font-size',   '1.15rem', 'important');
-          texts[1].style.setProperty('font-weight', '700',     'important');
+        if (tt[1]) {
+          set(tt[1], 'color',      NEON);
+          set(tt[1], 'font-size',  '1.15rem');
+          set(tt[1], 'font-weight','700');
         }
       }
 
-      // Área de botões
+      // Botões — lado a lado
       const btns = popup.querySelector('.cart-btns');
       if (btns) {
-        btns.style.setProperty('background',       'transparent', 'important');
-        btns.style.setProperty('padding',          '12px 16px 16px', 'important');
-        btns.style.setProperty('display',          'flex',      'important');
-        btns.style.setProperty('flex-direction',   'row',       'important');
-        btns.style.setProperty('gap',              '8px',       'important');
+        set(btns, 'display',         'flex');
+        set(btns, 'flex-direction',  'row');
+        set(btns, 'gap',             '8px');
+        set(btns, 'padding',         '12px 16px 16px');
+        set(btns, 'background',      'transparent');
       }
 
       popup.querySelectorAll('.cart-btn').forEach(btn => {
-        btn.style.setProperty('background',        'transparent',              'important');
-        btn.style.setProperty('background-image',  'none',                     'important');
-        btn.style.setProperty('border',            '1.5px solid #08EEBC',      'important');
-        btn.style.setProperty('border-radius',     '6px',                      'important');
-        btn.style.setProperty('color',             '#08EEBC',                  'important');
-        btn.style.setProperty('box-shadow',        'none',                     'important');
-        btn.style.setProperty('text-shadow',       'none',                     'important');
-        btn.style.setProperty('width',             '100%',                     'important');
-        btn.style.setProperty('padding',           '11px 20px',                'important');
-        btn.style.setProperty('font-size',         '0.72rem',                  'important');
-        btn.style.setProperty('font-weight',       '700',                      'important');
-        btn.style.setProperty('text-transform',    'uppercase',                'important');
-        btn.style.setProperty('letter-spacing',    '1.8px',                    'important');
-        btn.style.setProperty('text-decoration',   'none',                     'important');
-        btn.style.setProperty('display',           'flex',                     'important');
-        btn.style.setProperty('align-items',       'center',                   'important');
-        btn.style.setProperty('justify-content',   'center',                   'important');
+        set(btn, 'background',       'transparent');
+        set(btn, 'background-image', 'none');
+        set(btn, 'border',           '1.5px solid ' + NEON);
+        set(btn, 'border-radius',    '6px');
+        set(btn, 'color',            NEON);
+        set(btn, 'box-shadow',       'none');
+        set(btn, 'text-shadow',      'none');
+        set(btn, 'flex',             '1');
+        set(btn, 'padding',          '11px 10px');
+        set(btn, 'font-size',        '0.7rem');
+        set(btn, 'font-weight',      '700');
+        set(btn, 'text-transform',   'uppercase');
+        set(btn, 'letter-spacing',   '1.5px');
+        set(btn, 'text-decoration',  'none');
+        set(btn, 'display',          'flex');
+        set(btn, 'align-items',      'center');
+        set(btn, 'justify-content',  'center');
+        set(btn, 'text-align',       'center');
 
         btn.addEventListener('mouseenter', () => {
-          btn.style.setProperty('background', '#08EEBC', 'important');
-          btn.style.setProperty('color',      '#001531', 'important');
+          btn.style.setProperty('background', NEON,  'important');
+          btn.style.setProperty('color',      DARK,  'important');
           btn.style.setProperty('box-shadow', '0 0 16px rgba(8,238,188,0.4)', 'important');
         });
         btn.addEventListener('mouseleave', () => {
           btn.style.setProperty('background', 'transparent', 'important');
-          btn.style.setProperty('color',      '#08EEBC',     'important');
+          btn.style.setProperty('color',      NEON,          'important');
           btn.style.setProperty('box-shadow', 'none',        'important');
         });
       });
 
-      console.log('[AQ] Cart popup dark theme applied');
-    }
-
-    function scanAndStyle() {
-      document.querySelectorAll('.cart-list').forEach(applyDarkCart);
+      console.log('[AQ] Cart dark theme applied');
     }
 
     // ── Badge com número ─────────────────────────────────────────
@@ -643,67 +641,66 @@
       const link = document.querySelector('.link-cart');
       if (!link) return;
 
+      // Tentar ler contagem de várias fontes
       let count = 0;
-
-      // 1. data-count / data-qty no próprio link
       const raw = link.dataset.count ?? link.dataset.qty ?? link.dataset.cartCount;
       if (raw !== undefined) {
         count = parseInt(raw, 10) || 0;
       }
-
-      // 2. Elemento filho com texto de contagem
       if (!count) {
         const el = link.querySelector('.count, .qty, [class*="count"], [class*="qty"]');
         if (el) count = parseInt(el.textContent.trim(), 10) || 0;
       }
-
-      // 3. Fallback: contar .cart-item no popup aberto
+      // Fallback: contar itens no popup se estiver aberto
       if (!count) {
-        const items = document.querySelectorAll('.cart-list .cart-item');
-        count = items.length;
+        count = document.querySelectorAll('.cart-list .cart-item').length;
       }
 
       const hasProducts = link.classList.contains('has-products') || count > 0;
-
       let badge = link.querySelector('.aq-cart-badge');
 
       if (!hasProducts) {
         if (badge) badge.remove();
         return;
       }
-
       if (!badge) {
         badge = document.createElement('span');
         badge.className = 'aq-cart-badge';
         link.appendChild(badge);
       }
-
-      badge.textContent = count > 0 ? String(count) : '';
+      if (count > 0) badge.textContent = String(count);
     }
 
+    // ── Init ─────────────────────────────────────────────────────
     function initCartStyles() {
-      // Estilizar popup existente
-      scanAndStyle();
+      // Estilizar popups já presentes
+      document.querySelectorAll('.cart-list').forEach(applyDarkCart);
+      updateBadge();
 
-      // Observar quando o popup aparece ou muda
+      // Observer APENAS para childList — sem attributes para evitar loop infinito
       new MutationObserver((mutations) => {
+        let needsBadge = false;
+
         mutations.forEach(m => {
           m.addedNodes.forEach(node => {
             if (node.nodeType !== 1) return;
-            if (node.classList?.contains('cart-list')) applyDarkCart(node);
-            node.querySelectorAll?.('.cart-list').forEach(applyDarkCart);
+            if (node.classList?.contains('cart-list')) {
+              applyDarkCart(node);
+              needsBadge = true;
+            }
+            node.querySelectorAll?.('.cart-list').forEach(el => {
+              applyDarkCart(el);
+              needsBadge = true;
+            });
           });
-          // Também re-estilizar se atributos mudarem (Shopkit pode resetar)
-          if (m.type === 'attributes' && m.target.classList?.contains('cart-list')) {
-            applyDarkCart(m.target);
-          }
         });
-        // Badge
-        updateBadge();
-      }).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class', 'data-count', 'data-qty'] });
 
-      // Badge inicial
-      updateBadge();
+        if (needsBadge) updateBadge();
+      }).observe(document.body, {
+        childList: true,
+        subtree: true,
+        // SEM attributes: true — evita o loop infinito!
+      });
     }
 
     // JS Entry Point for AquariumLife Custom Layer
