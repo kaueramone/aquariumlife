@@ -75,25 +75,35 @@
   border-radius: 14px 14px 0 0 !important;
 }
 
-// Suprimir qualquer overlay hover do Shopkit na area de imagem
+// Suprimir TODOS os pseudo-elementos de hover do Shopkit na area de imagem
 .product-view::before,
-.product-view::after {
+.product-view::after,
+.hover-effect-floating .product-view::before,
+.hover-effect-floating .product-view::after,
+.hover-effect-floating:hover .product-view::before,
+.hover-effect-floating:hover .product-view::after {
   content: none !important;
   display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
 a.product-preview {
   display: block !important;
   background: rgba(0, 8, 20, 0.55) !important;
+  background-image: none !important;
+  background-color: rgba(0, 8, 20, 0.55) !important;
   border-radius: 14px 14px 0 0 !important;
   overflow: hidden !important;
   aspect-ratio: 1 / 1;
   text-decoration: none !important;
 
-  // Suprimir overlay hover nativo
+  // Suprimir overlay de hover nativo do Shopkit (hover-effect-floating usa cor primaria)
   &::before, &::after {
     content: none !important;
     display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
   }
 
   img.product-pic, img {
@@ -108,6 +118,32 @@ a.product-preview {
     border: none !important;
     transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   }
+}
+
+// Shopkit injeta background na product-preview via hover-effect-floating
+// Neutralizar em todos os estados com especificidade maxima
+.hover-effect-floating a.product-preview,
+.hover-effect-floating:hover a.product-preview,
+.hover-effect-floating .product-preview,
+.hover-effect-floating:hover .product-preview {
+  background: rgba(0, 8, 20, 0.55) !important;
+  background-image: none !important;
+  background-color: rgba(0, 8, 20, 0.55) !important;
+}
+
+.hover-effect-floating a.product-preview::before,
+.hover-effect-floating a.product-preview::after,
+.hover-effect-floating:hover a.product-preview::before,
+.hover-effect-floating:hover a.product-preview::after,
+.hover-effect-floating .product-preview::before,
+.hover-effect-floating .product-preview::after,
+.hover-effect-floating:hover .product-preview::before,
+.hover-effect-floating:hover .product-preview::after {
+  content: none !important;
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  background: none !important;
 }
 
 .card-shadow-hover:hover a.product-preview img {
@@ -180,13 +216,11 @@ a.product-name {
 .card-shadow-hover > a.product-btn.btn-primary,
 .card-shadow-hover > a.product-btn.btn.btn-primary,
 .card-shadow-hover > a.product-btn.btn.btn-primary.btn-shadow {
-  // Visibilidade
   display: flex !important;
   visibility: visible !important;
   opacity: 1 !important;
   pointer-events: auto !important;
 
-  // Layout — forcar no fluxo flex, sem posicionamento absoluto
   position: static !important;
   top: auto !important;
   bottom: auto !important;
@@ -201,7 +235,6 @@ a.product-name {
   margin: 0 14px 14px !important;
   padding: 7px 10px !important;
 
-  // Visual — anular Bootstrap e Shopkit completamente
   background: rgba(8, 238, 188, 0.07) !important;
   background-image: none !important;
   border: 1px solid rgba(8, 238, 188, 0.4) !important;
@@ -210,7 +243,6 @@ a.product-name {
   outline: none !important;
   transform: none !important;
 
-  // Tipografia
   color: $color-neon-accent !important;
   font-family: $font-family-title !important;
   font-size: 0.65rem !important;
@@ -225,7 +257,6 @@ a.product-name {
 
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease !important;
 
-  // Icone SVG do carrinho
   svg,
   svg.svg-inline--fa {
     width: 11px !important;
@@ -254,9 +285,7 @@ a.product-name {
   }
 }
 
-// ── Badges — sobresaem acima da borda do card ───────────────
-// O .product-view tem overflow:hidden, mas o badge esta posicionado
-// relativamente ao .card-shadow-hover (overflow:visible), logo nao e cortado.
+// ── Badges ───────────────────────────────────────────────────
 .product-badges {
   position: absolute !important;
   top: -11px !important;
