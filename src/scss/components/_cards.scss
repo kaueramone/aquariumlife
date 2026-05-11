@@ -283,6 +283,21 @@ a.product-name {
   }
 }
 
+// ── Neutralizar pseudo-elemento ::before do Bootstrap/Shopkit no botao ────
+// .btn::before, .btn-primary::before, .product-btn::before
+// injetam um overlay com content:"" que cria o efeito verde no card inteiro
+.btn::before,
+.btn-primary::before,
+.product-btn::before,
+.btn-shadow::before,
+a.product-btn::before {
+  content: none !important;
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  background: none !important;
+}
+
 // ── Badges ───────────────────────────────────────────────────
 .product-badges {
   position: absolute !important;
