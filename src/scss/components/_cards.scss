@@ -107,13 +107,13 @@ a.product-preview {
 a.product-name {
   display: block !important;
   font-family: $font-family-body !important;
-  font-size: 0.86rem !important;
+  font-size: 0.84rem !important;
   font-weight: 600 !important;
   color: #cde4f8 !important;
   text-decoration: none !important;
   text-align: center !important;
-  padding: 10px 12px 3px !important;
-  line-height: 1.45 !important;
+  padding: 8px 12px 2px !important;
+  line-height: 1.4 !important;
   flex: 1;
 
   &:hover { color: #fff !important; }
@@ -129,7 +129,7 @@ a.product-name {
 
 .product-price {
   text-align: center !important;
-  padding: 3px 12px 8px !important;
+  padding: 2px 12px 6px !important;
 
   .product-actual, span {
     font-family: $font-family-title !important;
@@ -149,50 +149,86 @@ a.product-name {
 }
 
 // ── Botão comprar ───────────────────────────────────────────
-// ESCONDER na posição original (overlay sobre a imagem dentro de .product-view)
+// ESCONDER na posição original (.product-view) — aplica ANTES do JS mover
 .product-view a.product-btn,
 .product-view .product-btn {
   display: none !important;
   visibility: hidden !important;
   pointer-events: none !important;
+  opacity: 0 !important;
 }
 
-// MOSTRAR apenas quando o JS o mover para dentro de .product-details
+// MOSTRAR quando o JS o mover para .product-details
+// Selector com todas as classes Bootstrap para vencer qualquer !important deles
 .product-details > a.product-btn,
-.product-details > .product-btn {
+.product-details > a.product-btn.btn,
+.product-details > a.product-btn.btn-primary,
+.product-details > a.product-btn.btn.btn-primary,
+.product-details > a.product-btn.btn.btn-primary.btn-shadow {
+  // Visibilidade
   display: flex !important;
   visibility: visible !important;
+  opacity: 1 !important;
   pointer-events: auto !important;
+
+  // Layout
   align-items: center !important;
   justify-content: center !important;
-  gap: 6px !important;
+  gap: 5px !important;
   position: static !important;
-  width: calc(100% - 24px) !important;
-  margin: 0 12px 14px !important;
-  background: rgba(8, 238, 188, 0.06) !important;
-  border: 1px solid rgba(8, 238, 188, 0.35) !important;
-  color: $color-neon-accent !important;
+  float: none !important;
+  width: calc(100% - 28px) !important;
+  margin: 2px 14px 14px !important;
+  padding: 7px 10px !important;
+
+  // Visual — anular Bootstrap e Shopkit
+  background: rgba(8, 238, 188, 0.07) !important;
+  background-image: none !important;
+  border: 1px solid rgba(8, 238, 188, 0.4) !important;
   border-radius: 6px !important;
-  padding: 8px 12px !important;
+  box-shadow: none !important;
+  outline: none !important;
+
+  // Tipografia
+  color: $color-neon-accent !important;
   font-family: $font-family-title !important;
-  font-size: 0.68rem !important;
+  font-size: 0.65rem !important;
   font-weight: 600 !important;
+  line-height: 1.2 !important;
   text-transform: uppercase !important;
-  letter-spacing: 1.6px !important;
+  letter-spacing: 1.5px !important;
   text-decoration: none !important;
   text-shadow: none !important;
-  cursor: pointer;
-  box-shadow: none !important;
-  transition: background 0.22s, color 0.22s, border-color 0.22s, box-shadow 0.22s !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
 
-  svg { width: 11px !important; height: 11px !important; flex-shrink: 0; }
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease !important;
 
-  &:hover {
+  // Ícone SVG do carrinho
+  svg,
+  svg.svg-inline--fa {
+    width: 11px !important;
+    height: 11px !important;
+    flex-shrink: 0 !important;
+    fill: currentColor !important;
+    vertical-align: middle !important;
+  }
+
+  &:hover,
+  &:focus {
     background: $color-neon-accent !important;
+    background-image: none !important;
     color: #001531 !important;
     border-color: $color-neon-accent !important;
-    font-weight: 700 !important;
-    box-shadow: 0 0 16px rgba(8, 238, 188, 0.5) !important;
+    box-shadow: 0 0 14px rgba(8, 238, 188, 0.45) !important;
+    text-decoration: none !important;
+    outline: none !important;
+  }
+
+  &:active {
+    background: #06c99e !important;
+    color: #001531 !important;
+    box-shadow: none !important;
   }
 }
 
