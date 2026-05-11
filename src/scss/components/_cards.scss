@@ -149,7 +149,7 @@ a.product-name {
 }
 
 // ── Botão comprar ───────────────────────────────────────────
-// ESCONDER na posição original (.product-view) — aplica ANTES do JS mover
+// ESCONDER em qualquer posição dentro de .product-view (original do Shopkit)
 .product-view a.product-btn,
 .product-view .product-btn {
   display: none !important;
@@ -158,36 +158,43 @@ a.product-name {
   opacity: 0 !important;
 }
 
-// MOSTRAR quando o JS o mover para .product-details
-// Selector com todas as classes Bootstrap para vencer qualquer !important deles
-.product-details > a.product-btn,
-.product-details > a.product-btn.btn,
-.product-details > a.product-btn.btn-primary,
-.product-details > a.product-btn.btn.btn-primary,
-.product-details > a.product-btn.btn.btn-primary.btn-shadow {
+// MOSTRAR quando o JS o mover para filho direto de .card-shadow-hover
+// (depois de .product-details — no fluxo flex do card)
+// Seletores com todas as classes Bootstrap para maxima especificidade
+.card-shadow-hover > a.product-btn,
+.card-shadow-hover > a.product-btn.btn,
+.card-shadow-hover > a.product-btn.btn-primary,
+.card-shadow-hover > a.product-btn.btn.btn-primary,
+.card-shadow-hover > a.product-btn.btn.btn-primary.btn-shadow {
   // Visibilidade
   display: flex !important;
   visibility: visible !important;
   opacity: 1 !important;
   pointer-events: auto !important;
 
-  // Layout
+  // Layout — forcar no fluxo flex, sem posicionamento absoluto
+  position: static !important;
+  top: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  float: none !important;
+  align-self: stretch !important;
   align-items: center !important;
   justify-content: center !important;
   gap: 5px !important;
-  position: static !important;
-  float: none !important;
-  width: calc(100% - 28px) !important;
-  margin: 2px 14px 14px !important;
+  width: auto !important;
+  margin: 0 14px 14px !important;
   padding: 7px 10px !important;
 
-  // Visual — anular Bootstrap e Shopkit
+  // Visual — anular Bootstrap e Shopkit completamente
   background: rgba(8, 238, 188, 0.07) !important;
   background-image: none !important;
   border: 1px solid rgba(8, 238, 188, 0.4) !important;
   border-radius: 6px !important;
   box-shadow: none !important;
   outline: none !important;
+  transform: none !important;
 
   // Tipografia
   color: $color-neon-accent !important;
@@ -204,7 +211,7 @@ a.product-name {
 
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease !important;
 
-  // Ícone SVG do carrinho
+  // Icone SVG do carrinho
   svg,
   svg.svg-inline--fa {
     width: 11px !important;
@@ -223,6 +230,7 @@ a.product-name {
     box-shadow: 0 0 14px rgba(8, 238, 188, 0.45) !important;
     text-decoration: none !important;
     outline: none !important;
+    transform: none !important;
   }
 
   &:active {
@@ -269,7 +277,7 @@ a.product-name {
 }
 
 // ============================================================
-// SECÇÃO DE PRODUTOS — Título + espaçamento
+// SECCAO DE PRODUTOS — Titulo + espacamento
 // ============================================================
 
 section:has(.product-view) > .title,
@@ -287,7 +295,7 @@ section:has(.product-view),
 }
 
 // ============================================================
-// BOTÃO VER TODOS OS NOSSOS PRODUTOS
+// BOTAO VER TODOS OS NOSSOS PRODUTOS
 // ============================================================
 
 #aq-ver-todos {

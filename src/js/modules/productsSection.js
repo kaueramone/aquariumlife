@@ -1,39 +1,32 @@
 /**
- * productsSection.js – v3
- * - Oculta título nativo "Produtos"
- * - Move botão Comprar de dentro de .product-view para filho direto
- *   de .card-shadow-hover, logo após .product-details
- * - Injeta botão "Ver todos os nossos produtos"
+ * productsSection.js – v4
+ * - Oculta titulo nativo "Produtos"
+ * - Move botao Comprar para filho direto de .card-shadow-hover (apos .product-details)
+ * - Injeta botao "Ver todos os nossos produtos"
  */
 
 const VER_TODOS_HREF = '/products';
 
-// ── Mover botões ────────────────────────────────────────────────────────────
-// CSS esconde o botão dentro de .product-view e só mostra quando é
-// filho direto de .card-shadow-hover — esta função faz essa transição no DOM.
+// Mover botoes ────────────────────────────────────────────────────────────────
 function moveComprarButtons() {
-  // Seleciona apenas botões que AINDA estão dentro de .product-view
-  const btns = document.querySelectorAll('.product-view a.product-btn, .product-view .product-btn');
+  const btns = document.querySelectorAll(
+    '.product-view a.product-btn, .product-view .product-btn'
+  );
   if (!btns.length) return false;
 
   btns.forEach(btn => {
     const card = btn.closest('.card-shadow-hover');
     if (!card) return;
-    const details = card.querySelector('.product-details');
-    if (details) {
-      // Mover para DENTRO de .product-details como último filho
-      // (fica dentro do card, alinhado com o preço)
-      details.appendChild(btn);
-    } else {
-      card.appendChild(btn);
-    }
+    // Ultimo filho de .card-shadow-hover = depois de .product-details
+    // Fica no fluxo flex do card, abaixo do preco, dentro da borda visual
+    card.appendChild(btn);
   });
 
-  console.log('[AQ] Botões Comprar movidos —', btns.length);
+  console.log('[AQ] Botoes Comprar movidos:', btns.length);
   return true;
 }
 
-// ── Ocultar título da secção ────────────────────────────────────────────────
+// Ocultar titulo da seccao ────────────────────────────────────────────────────
 function hideProductsTitle() {
   const firstView = document.querySelector('.product-view');
   if (!firstView) return false;
@@ -54,7 +47,7 @@ function hideProductsTitle() {
   return true;
 }
 
-// ── Injetar "Ver todos" ─────────────────────────────────────────────────────
+// Injetar "Ver todos" ─────────────────────────────────────────────────────────
 function injectVerTodos() {
   if (document.getElementById('aq-ver-todos')) return true;
 
@@ -82,7 +75,7 @@ function injectVerTodos() {
   return true;
 }
 
-// ── Build principal ─────────────────────────────────────────────────────────
+// Build principal ─────────────────────────────────────────────────────────────
 function build() {
   const t = hideProductsTitle();
   const m = moveComprarButtons();
@@ -99,14 +92,13 @@ export function initProductsSection() {
     if (build() || attempts >= 25) clearInterval(interval);
   }, 250);
 
-  // Observer persistente — Shopkit pode renderizar produtos dinamicamente
   const observer = new MutationObserver(() => {
-    // Verificar se ainda há botões na posição original
     if (document.querySelector('.product-view a.product-btn')) {
       moveComprarButtons();
     }
   });
   observer.observe(document.body || document.documentElement, {
-    childList: true, subtree: true,
+    childList: true,
+    subtree: true,
   });
 }
