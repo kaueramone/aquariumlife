@@ -1,47 +1,122 @@
 @use '../base/variables' as *;
 
-.product, .product-view, .categories-item, .brands-item, .card {
-  background: rgba(0, 21, 49, 0.4) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  border: 1px solid rgba(8, 238, 188, 0.1) !important;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
-  border-radius: 12px !important;
+// === CARDS DE PRODUTO PREMIUM ===
+// Estrutura esperada: .product > .product-pic (foto) > .product-details (título + preço + botão)
+
+.product, .product-item {
+  background: rgba(0, 15, 35, 0.7) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(8, 238, 188, 0.12) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4) !important;
+  border-radius: 14px !important;
   overflow: hidden !important;
   transition: $transition-smooth;
   position: relative;
-  
+  display: flex !important;
+  flex-direction: column !important;
+
+  // Borda neon ao passar o mouse
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(8, 238, 188, 0.6), 0 0 40px rgba(8, 238, 188, 0.3) !important;
-    border-color: rgba(8, 238, 188, 0.4) !important;
+    transform: translateY(-6px);
+    border-color: rgba(8, 238, 188, 0.45) !important;
+    box-shadow: 0 0 25px rgba(8, 238, 188, 0.3), 0 15px 40px rgba(0, 0, 0, 0.5) !important;
   }
 
-  .product-pic, .img-frame {
-    background: #ffffff !important; // Moldura branca elegante para disfarçar JPEGs
-    border-bottom: 1px solid rgba(8, 238, 188, 0.2) !important;
-    padding: 20px !important; // Espaço em volta da imagem bruta
+  // === FOTO ===
+  // Moldura da foto: fundo branco contido, sem fundo branco espalhando no card inteiro
+  .product-pic, .product-image, .product-thumb {
+    background: #fff !important;
+    border-radius: 10px 10px 0 0 !important; // Curvas só no topo
+    overflow: hidden !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    
+    aspect-ratio: 1 / 1; // Quadrado consistente
+    padding: 12px !important;
+
     img {
-      opacity: 0.9;
-      transition: $transition-smooth;
-      mix-blend-mode: multiply; // Ajuda se tiver fundo não 100% branco, mas o padding é a principal cura
       max-width: 100% !important;
       height: auto !important;
+      object-fit: contain;
+      transition: $transition-smooth;
+      mix-blend-mode: multiply; // Remove halos se a foto não for 100% branca
     }
   }
 
-  // Centralizar o texto abaixo da imagem
-  .product-details, .product-info, .categories-text, .title, .product-price {
-    text-align: center !important;
-    padding: 10px !important;
+  &:hover .product-pic img,
+  &:hover .product-image img,
+  &:hover .product-thumb img {
+    transform: scale(1.07);
   }
 
-  &:hover .product-pic img {
-    opacity: 1;
-    transform: scale(1.08);
+  // === TÍTULO ===
+  .product-title, .product-name, h3, h2, .name {
+    font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, Georgia, serif !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: $color-neon-accent !important;
+    text-shadow: 0 0 10px rgba(8, 238, 188, 0.35) !important;
+    text-align: center !important;
+    padding: 14px 12px 6px !important;
+    line-height: 1.3;
+    letter-spacing: 0.3px;
+  }
+
+  // === PREÇO ===
+  .product-price, .price, .product-cost {
+    font-family: $font-family-title !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    color: #fff !important;
+    text-align: center !important;
+    padding: 4px 12px 10px !important;
+    
+    // Preço original riscado (se houver desconto)
+    del, .old-price {
+      color: rgba(255,255,255,0.35) !important;
+      font-size: 0.85rem !important;
+      margin-right: 6px;
+    }
+  }
+
+  // === BOTÃO DE COMPRAR ===
+  .product-btn, .btn-cart, .add-to-cart, .btn-primary, button[type="submit"] {
+    display: block !important;
+    width: calc(100% - 24px) !important;
+    margin: 0 12px 14px !important;
+    background: transparent !important;
+    border: 1px solid $color-neon-accent !important;
+    color: $color-neon-accent !important;
+    border-radius: 6px !important;
+    padding: 9px 16px !important;
+    font-family: $font-family-title !important;
+    font-size: 0.85rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    text-align: center !important;
+    cursor: pointer;
+    transition: $transition-smooth;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(8,238,188,0.15), transparent);
+      opacity: 0;
+      transition: $transition-fast;
+    }
+
+    &:hover {
+      background: rgba(8, 238, 188, 0.12) !important;
+      color: #fff !important;
+      box-shadow: 0 0 15px rgba(8, 238, 188, 0.5) !important;
+
+      &::before {
+        opacity: 1;
+      }
+    }
   }
 }

@@ -1,6 +1,6 @@
 @use '../base/variables' as *;
 
-// Top Bar Notice (usually light blue in Shopkit)
+// Top Bar Notice
 .top-bar, #top-bar, .store-notice, .info-bar {
   background: #000 !important;
   color: $color-neon-accent !important;
@@ -11,113 +11,182 @@
   letter-spacing: 1px;
 }
 
-// Shopkit default Header Overrides
+// === HEADER PRINCIPAL ===
 header, .header, #header {
-  background: rgba(0, 4, 13, 0.8) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
+  background: rgba(0, 4, 13, 0.88) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
   border-bottom: 1px solid rgba(8, 238, 188, 0.15) !important;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6) !important;
   position: sticky !important;
   top: 0;
-  z-index: 1000;
+  z-index: 9999;
   transition: $transition-smooth;
 
-  // Make sure the internal container aligns items properly
-  .container, .container-fluid, .header-inner {
+  // Container interno do header alinhado em linha
+  .container, .container-fluid, .header-inner, .navbar {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
-    flex-wrap: wrap;
+    flex-wrap: nowrap !important;
+    gap: 20px;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
   }
 
-  // Logo background fix (Transparent PNG with neon shadow)
-  .logo img, .header-logo img, .navbar-brand img {
-    background: transparent !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
-    box-shadow: none !important;
-    filter: drop-shadow(0 0 10px rgba(8, 238, 188, 0.4)) !important;
-  }
-
-  // Desativar Menu Mobile (Bolinha) no Desktop e Forçar Menu Horizontal
-  @media (min-width: 992px) {
-    .menu-toggle, .mobile-menu-btn, .burger, .btn-menu {
-      display: none !important;
-    }
+  // === LOGO ===
+  .logo, .header-logo, .navbar-brand {
+    flex-shrink: 0;
     
-    .menu-wrapper, .navigation, nav, .header-menu, #menu {
+    img {
+      background: transparent !important;
+      border-radius: 0 !important;
+      padding: 0 !important;
+      box-shadow: none !important;
+      filter: drop-shadow(0 0 8px rgba(8, 238, 188, 0.5)) drop-shadow(0 0 20px rgba(8, 238, 188, 0.2)) !important;
+      max-height: 50px;
+    }
+  }
+
+  // === MENU HORIZONTAL DESKTOP ===
+  // Remove QUALQUER botão de hamburguer/bolinha no desktop
+  @media (min-width: 992px) {
+    .menu-toggle, .mobile-menu-btn, .burger, .btn-menu, .toggler,
+    [data-toggle="collapse"], .navbar-toggler, button.menu-btn {
+      display: none !important;
+      pointer-events: none !important;
+    }
+
+    // Força o menu a ser um flex row simples e visível
+    .menu-wrapper, .navigation, .header-menu, #menu, .nav-menu,
+    .collapse.navbar-collapse, .navbar-collapse {
       display: flex !important;
+      flex-direction: row !important; // NUNCA coluna/lista
       position: static !important;
       background: transparent !important;
       height: auto !important;
+      max-height: none !important;
       width: auto !important;
       transform: none !important;
       visibility: visible !important;
       opacity: 1 !important;
-      align-items: center;
-      justify-content: center;
-      flex-grow: 1;
+      overflow: visible !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex: 1;
+      // Remove qualquer overlay ou modal behavior
+      box-shadow: none !important;
+      border: none !important;
+      padding: 0 !important;
 
-      ul {
+      // Garante que a lista não seja em coluna
+      ul, ol {
         display: flex !important;
         flex-direction: row !important;
-        gap: 15px;
-        margin: 0;
-        padding: 0;
-        list-style: none;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
       }
-      
+
       li {
-        margin: 0;
-        display: flex;
+        display: flex !important;
         align-items: center;
+        margin: 0 !important;
+        padding: 0 !important;
       }
     }
   }
 
-  // Menu items and links
-  .menu-item, .menu-link, .nav-link, a {
-    color: $color-text-primary !important;
+  // Links do menu
+  .menu-item a, .menu-link, .nav-link, nav a, .navigation a {
+    color: rgba(255,255,255,0.85) !important;
     font-family: $font-family-title !important;
     font-weight: 500 !important;
     text-transform: uppercase;
-    font-size: 0.9rem !important;
-    letter-spacing: 0.5px;
+    font-size: 0.82rem !important;
+    letter-spacing: 0.8px;
     transition: $transition-fast;
-    margin: 0; 
-    
+    padding: 8px 10px !important;
+    white-space: nowrap;
+    display: flex !important;
+    align-items: center;
+    gap: 6px;
+
     &:hover {
       color: $color-neon-accent !important;
-      text-shadow: 0 0 8px rgba(8, 238, 188, 0.6) !important;
+      text-shadow: 0 0 8px rgba(8, 238, 188, 0.7) !important;
     }
   }
 
-  // Os 3 ícones principais (Lupa, Carrinho, Conta)
-  .header-actions i, .header-icons i, .ri-search-line, .ri-shopping-cart-line, .ri-user-line, .action-icon {
+  // Ícone injetado pelo JS dentro dos links do menu
+  .menu-dynamic-icon {
+    color: $color-neon-accent !important;
+    font-size: 1rem !important;
+    vertical-align: middle;
+  }
+
+  // === 3 ÍCONES DE AÇÃO (Lupa, Carrinho, Conta) ===
+  .header-actions, .header-icons, .cart-icon, .user-icon, .search-icon {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    
+    a, button {
+      background: transparent !important;
+      border: none !important;
+      padding: 6px !important;
+      display: flex;
+      align-items: center;
+    }
+
+    i, .ri, [class^="ri-"] {
+      color: $color-neon-accent !important;
+      font-size: 1.4rem !important;
+      transition: $transition-fast;
+
+      &:hover {
+        filter: drop-shadow(0 0 8px $color-neon-accent) drop-shadow(0 0 15px $color-neon-accent) !important;
+        transform: scale(1.15);
+      }
+    }
+  }
+
+  // Catchall para ícones que podem estar diretamente no header
+  i.ri-shopping-cart-line,
+  i.ri-user-line,
+  i.ri-search-line {
     color: $color-neon-accent !important;
     font-size: 1.4rem !important;
     transition: $transition-fast;
-    
+    cursor: pointer;
+
     &:hover {
-      filter: drop-shadow(0 0 10px $color-neon-accent) !important;
-      transform: scale(1.1);
+      filter: drop-shadow(0 0 8px $color-neon-accent) !important;
+      transform: scale(1.15);
     }
   }
 
-  // Correção do Bug do Input de Pesquisa (Texto sobrepondo a lupa)
-  .search-form, .header-search {
+  // === BUSCA EXPANDÍVEL ===
+  .search-form, .header-search, .search-wrapper {
     position: relative;
-    
+
     input[type="text"], input[type="search"], .search-input {
-      background: rgba(0, 21, 49, 0.6) !important;
+      background: rgba(0, 21, 49, 0.7) !important;
       border: 1px solid rgba(8, 238, 188, 0.5) !important;
       color: $color-text-primary !important;
       border-radius: 20px !important;
-      padding: 10px 16px 10px 45px !important; // 45px de espaço na esquerda para a lupa
-      width: 100%;
-      min-width: 250px;
-      
+      // padding-left: 45px garante que o texto não fique atrás do ícone
+      padding: 9px 16px 9px 44px !important;
+      min-width: 240px;
+
+      &::placeholder {
+        color: rgba(255,255,255,0.4) !important;
+        padding-left: 0 !important;
+      }
+
       &:focus {
         outline: none !important;
         border-color: $color-neon-accent !important;
@@ -125,16 +194,19 @@ header, .header, #header {
       }
     }
 
-    // Posicionar a Lupa ABSOLUTAMENTE dentro do input para não bugar
-    button[type="submit"], .search-btn {
+    // Botão/ícone da lupa posicionado dentro do campo
+    button[type="submit"], .search-btn, .search-submit {
       position: absolute !important;
-      left: 10px !important;
+      left: 12px !important;
       top: 50% !important;
       transform: translateY(-50%) !important;
       background: transparent !important;
       border: none !important;
       padding: 0 !important;
       z-index: 5;
+      color: $color-neon-accent !important;
+      
+      i { color: $color-neon-accent !important; }
     }
   }
 }
