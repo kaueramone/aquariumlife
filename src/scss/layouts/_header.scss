@@ -48,54 +48,19 @@ header, .header, #header {
     }
   }
 
-  // === MENU HORIZONTAL DESKTOP ===
-  // Remove QUALQUER botão de hamburguer/bolinha no desktop
+  // === MENU: Esconder o menu nativo no desktop ===
+  // Nossa nav é construída via JS (desktopNav.js) e inserida no header
   @media (min-width: 992px) {
+    // Esconde o botão hamburguer/bolinha
     .menu-toggle, .mobile-menu-btn, .burger, .btn-menu, .toggler,
     [data-toggle="collapse"], .navbar-toggler, button.menu-btn {
       display: none !important;
-      pointer-events: none !important;
     }
 
-    // Força o menu a ser um flex row simples e visível
+    // Esconde o container do menu nativo (nossa nav JS substitui)
     .menu-wrapper, .navigation, .header-menu, #menu, .nav-menu,
     .collapse.navbar-collapse, .navbar-collapse {
-      display: flex !important;
-      flex-direction: row !important; // NUNCA coluna/lista
-      position: static !important;
-      background: transparent !important;
-      height: auto !important;
-      max-height: none !important;
-      width: auto !important;
-      transform: none !important;
-      visibility: visible !important;
-      opacity: 1 !important;
-      overflow: visible !important;
-      align-items: center !important;
-      justify-content: center !important;
-      flex: 1;
-      // Remove qualquer overlay ou modal behavior
-      box-shadow: none !important;
-      border: none !important;
-      padding: 0 !important;
-
-      // Garante que a lista não seja em coluna
-      ul, ol {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap;
-        gap: 4px;
-        margin: 0 !important;
-        padding: 0 !important;
-        list-style: none !important;
-      }
-
-      li {
-        display: flex !important;
-        align-items: center;
-        margin: 0 !important;
-        padding: 0 !important;
-      }
+      display: none !important;
     }
   }
 
