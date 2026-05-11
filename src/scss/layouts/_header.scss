@@ -6,15 +6,22 @@
 // Linha 2: #aq-nav-bar (menu horizontal com submenus)
 // ============================================================
 
-// Ocultar tudo que seja mobile-menu no desktop
+// Ocultar menu nativo e hamburguer no desktop
 @media (min-width: 992px) {
-  .menu-toggle, .mobile-menu-btn, .burger, .btn-menu,
-  [data-toggle="collapse"], .navbar-toggler,
-  .menu-wrapper, .navigation, .header-menu,
-  #menu, .nav-menu, .collapse.navbar-collapse,
-  .navbar-collapse {
+  // Botão hamburguer real do Boxie/Shopkit
+  .trigger-header-menu,
+  .menu-toggle, .mobile-menu-btn, .burger,
+  .btn-menu, [data-toggle="collapse"], .navbar-toggler {
     display: none !important;
     pointer-events: none !important;
+    visibility: hidden !important;
+  }
+
+  // Container do menu slide-over nativo (substituído pela nossa nav)
+  .header-menu, #menu, .nav-menu,
+  .collapse.navbar-collapse, .navbar-collapse,
+  .menu-overlay, .menu-drawer, .header-drawer {
+    display: none !important;
     visibility: hidden !important;
   }
 }

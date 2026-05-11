@@ -1,129 +1,99 @@
 /**
- * desktopNav.js – Versão 3
+ * desktopNav.js – Versão 4 (Definitiva)
  * 
- * Estratégia: Lê a estrutura COMPLETA do menu nativo (incluindo submenus),
- * reconstrói uma nav horizontal de 2 níveis com Font Awesome 5,
- * e injeta num <div> próprio abaixo da linha logo+ícones.
+ * O menu do Shopkit/Boxie usa um painel slide-over (`.trigger-header-menu`)
+ * que só popula o DOM ao clicar — os links NÃO existem no DOM principal.
+ * 
+ * Estratégia: Hardcodar as categorias conhecidas + tentar ler da página.
+ * Escondemos o .trigger-header-menu e injetamos nossa nav de 2 linhas.
  */
 
-// Mapa de itens → Font Awesome 5 (free)
-const FA_ICON_MAP = {
-  'equipamento':         'fas fa-tools',
-  'alimentação':         'fas fa-utensils',
-  'alimentacao':         'fas fa-utensils',
-  'hardscape':           'fas fa-mountain',
-  'planta':              'fas fa-seedling',
-  'peixe':               'fas fa-fish',
-  'invertebrado':        'fas fa-bug',
-  'outro':               'fas fa-ellipsis-h',
-  'condicionador':       'fas fa-tint',
-  'água':                'fas fa-tint',
-  'agua':                'fas fa-tint',
-  'aquascape':           'fas fa-leaf',
-  'aquascaping':         'fas fa-leaf',
-};
+// Font Awesome 5 – ícones por categoria
+const MENU_ITEMS = [
+  { label: 'Equipamento',           icon: 'fas fa-tools',          href: '/categories/equipamento'           },
+  { label: 'Alimentação',           icon: 'fas fa-utensils',        href: '/categories/alimentacao'           },
+  { label: 'Hardscape',             icon: 'fas fa-mountain',        href: '/categories/hardscape'             },
+  { label: 'Plantas',               icon: 'fas fa-seedling',        href: '/categories/plantas'               },
+  { label: 'Peixes',                icon: 'fas fa-fish',            href: '/categories/peixes'                },
+  { label: 'Invertebrados',         icon: 'fas fa-bug',             href: '/categories/invertebrados'         },
+  { label: 'Condicionadores de água', icon: 'fas fa-tint',          href: '/categories/condicionadores-de-agua'},
+  { label: 'Aquascaping',           icon: 'fas fa-leaf',            href: '/categories/aquascaping'           },
+  { label: 'Outros',                icon: 'fas fa-ellipsis-h',      href: '/categories/outros'                },
+];
 
-function normStr(str) {
-  return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-}
+/**
+ * Tenta enriquecer os hrefs com os links reais do DOM (se existirem).
+ * O Shopkit às vezes lista as categorias no body da homepage.
+ */
+function enrichFromDOM() {
+  // Procura qualquer link de categoria no DOM
+  const domLinks = document.querySelectorAll('a[href*="/categories/"], a[href*="/category/"]');
+  if (!domLinks.length) return;
 
-function getFA(text) {
-  const n = normStr(text);
-  for (const [key, icon] of Object.entries(FA_ICON_MAP)) {
-    if (n.includes(normStr(key))) return icon;
-  }
-  return 'fas fa-circle'; // fallback
-}
+  const urlMap = {};
+  domLinks.forEach(a => {
+    const text = a.textContent.trim().toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const href = a.getAttribute('href');
+    if (href && text.length > 2) urlMap[text] = href;
+  });
 
-function buildItem(originalLi) {
-  const originalA = originalLi.querySelector(':scope > a');
-  if (!originalA) return null;
-
-  const label = originalA.textContent.trim();
-  const href  = originalA.getAttribute('href') || '#';
-
-  // Verifica submenu
-  const originalSub = originalLi.querySelector(':scope > ul');
-
-  const li = document.createElement('li');
-  li.className = originalSub ? 'aq-has-sub' : '';
-
-  const a = document.createElement('a');
-  a.href = href;
-  a.title = label;
-  a.innerHTML = `<i class="${getFA(label)}"></i><span>${label}</span>`;
-  if (originalSub) a.innerHTML += `<i class="fas fa-chevron-down aq-arrow"></i>`;
-
-  li.appendChild(a);
-
-  if (originalSub) {
-    const sub = document.createElement('ul');
-    sub.className = 'aq-submenu';
-
-    originalSub.querySelectorAll(':scope > li').forEach(subLi => {
-      const subA = subLi.querySelector(':scope > a');
-      if (!subA) return;
-      const subLi2 = document.createElement('li');
-      const subA2  = document.createElement('a');
-      subA2.href  = subA.getAttribute('href') || '#';
-      subA2.textContent = subA.textContent.trim();
-      subLi2.appendChild(subA2);
-      sub.appendChild(subLi2);
-    });
-
-    li.appendChild(sub);
-  }
-
-  return li;
+  MENU_ITEMS.forEach(item => {
+    const key = item.label.toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    if (urlMap[key]) item.href = urlMap[key];
+  });
 }
 
 export function buildDesktopNav() {
+  // Só no desktop
   if (window.innerWidth < 992) return;
 
   // Evitar duplicação
   if (document.getElementById('aq-nav-bar')) return;
 
-  // Procurar os <li> do menu nativo
-  const menuSelectors = [
-    '.menu-wrapper > ul > li',
-    '.header-menu > ul > li',
-    '#menu > li',
-    'nav.navigation > ul > li',
-    '.nav-menu > li',
-    '.navbar-collapse ul > li',
-    'header nav > ul > li',
-  ];
+  const header = document.querySelector('header, #header, .header');
+  if (!header) { setTimeout(buildDesktopNav, 500); return; }
 
-  let sourceItems = [];
-  for (const sel of menuSelectors) {
-    const found = document.querySelectorAll(sel);
-    if (found.length >= 3) { sourceItems = Array.from(found); break; }
-  }
+  // 1. Esconder o botão hamburguer (classe real do Boxie)
+  const triggers = header.querySelectorAll(
+    '.trigger-header-menu, .menu-toggle, .mobile-menu-btn, .burger, .btn-menu, .navbar-toggler'
+  );
+  triggers.forEach(el => {
+    el.style.setProperty('display', 'none', 'important');
+    el.setAttribute('aria-hidden', 'true');
+  });
 
-  if (sourceItems.length === 0) {
-    setTimeout(buildDesktopNav, 800);
-    return;
-  }
+  // 2. Tentar enriquecer hrefs com links reais do DOM
+  enrichFromDOM();
 
-  // Construir a nav
+  // 3. Construir a nav
   const nav = document.createElement('nav');
   nav.id = 'aq-nav-bar';
   nav.setAttribute('aria-label', 'Menu Principal');
+  nav.setAttribute('role', 'navigation');
 
   const ul = document.createElement('ul');
+  ul.setAttribute('role', 'menubar');
 
-  sourceItems.forEach(li => {
-    const item = buildItem(li);
-    if (item) ul.appendChild(item);
+  MENU_ITEMS.forEach(item => {
+    const li = document.createElement('li');
+    li.setAttribute('role', 'none');
+
+    const a = document.createElement('a');
+    a.href = item.href;
+    a.setAttribute('role', 'menuitem');
+    a.title = item.label;
+    a.innerHTML = `<i class="${item.icon}" aria-hidden="true"></i><span>${item.label}</span>`;
+
+    li.appendChild(a);
+    ul.appendChild(li);
   });
 
   nav.appendChild(ul);
 
-  // Inserir como segunda linha do header
-  const header = document.querySelector('header, #header, .header');
-  if (header) {
-    header.appendChild(nav);
-  }
+  // 4. Inserir como segunda linha DENTRO do header (após o conteúdo existente)
+  header.appendChild(nav);
 
-  console.log(`[AQ] Nav construída com ${ul.children.length} itens.`);
+  console.log('[AQ] Desktop nav v4 construída com', MENU_ITEMS.length, 'itens.');
 }
