@@ -4,11 +4,13 @@
 import { initAnimations } from './modules/animations.js';
 import { injectMenuIcons } from './modules/menuIcons.js';
 import { buildDesktopNav } from './modules/desktopNav.js';
+import { initCategorySection } from './modules/categorySection.js';
 
 function init() {
   initAnimations();
   injectMenuIcons();
   buildDesktopNav();
+  initCategorySection();
   console.log('[AQ] Premium Layer Loaded — readyState:', document.readyState);
 }
 

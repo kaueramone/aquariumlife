@@ -1,0 +1,126 @@
+@use '../base/variables' as *;
+
+// ============================================================
+// #aq-categories — Secção de categorias premium
+// Ícones com nomes abaixo + efeito neon glow no hover
+// ============================================================
+
+#aq-categories {
+  padding: 48px 20px 44px;
+  background: transparent;
+
+  .aq-cat-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  .aq-cat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none !important;
+    width: 108px;
+    padding: 18px 10px 14px;
+    border-radius: 14px;
+    border: 1px solid transparent;
+    background: transparent;
+    transition: $transition-smooth;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      background: rgba(8, 238, 188, 0.04);
+      border-color: rgba(8, 238, 188, 0.22);
+      box-shadow: 0 0 18px rgba(8, 238, 188, 0.08), inset 0 0 14px rgba(8, 238, 188, 0.04);
+      outline: none;
+
+      .aq-cat-icon {
+        filter:
+          drop-shadow(0 0 6px $color-neon-accent)
+          drop-shadow(0 0 16px $color-neon-accent)
+          drop-shadow(0 0 36px rgba(8, 238, 188, 0.55));
+        transform: translateY(-5px) scale(1.1);
+      }
+
+      .aq-cat-name {
+        color: $color-neon-accent !important;
+        text-shadow: 0 0 10px rgba(8, 238, 188, 0.45);
+      }
+    }
+  }
+
+  .aq-cat-icon {
+    width: 62px;
+    height: 62px;
+    object-fit: contain;
+    display: block;
+    transition: $transition-smooth;
+    // Garante que imagens com fundo transparente não piscam em branco
+    background: transparent;
+  }
+
+  .aq-cat-name {
+    color: #ffffff !important;
+    font-family: $font-family-body;
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    line-height: 1.35;
+    transition: $transition-fast;
+  }
+
+  // ── Responsivo ──────────────────────────────────────────────
+
+  // Tablet
+  @media (max-width: 768px) {
+    padding: 36px 16px 32px;
+
+    .aq-cat-grid {
+      gap: 10px 14px;
+    }
+
+    .aq-cat-item {
+      width: calc(25% - 14px);
+      min-width: 82px;
+      padding: 14px 8px 12px;
+    }
+
+    .aq-cat-icon {
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  // Mobile
+  @media (max-width: 480px) {
+    padding: 28px 12px 24px;
+
+    .aq-cat-grid {
+      gap: 8px 10px;
+    }
+
+    .aq-cat-item {
+      width: calc(33.33% - 10px);
+      min-width: 78px;
+      padding: 12px 6px 10px;
+    }
+
+    .aq-cat-icon {
+      width: 46px;
+      height: 46px;
+    }
+
+    .aq-cat-name {
+      font-size: 0.64rem;
+      letter-spacing: 0.5px;
+    }
+  }
+}

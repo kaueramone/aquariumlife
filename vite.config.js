@@ -1,18 +1,18 @@
 import { defineConfig } from 'vite';
 import path from 'path';
 
+// Build simples: só o SCSS → style.css
+// O JS é compilado separadamente via rollup (veja package.json)
 export default defineConfig({
   build: {
     outDir: 'dist',
     rollupOptions: {
       input: {
-        app: path.resolve(__dirname, 'src/js/main.js'),
-        style: path.resolve(__dirname, 'src/scss/main.scss')
+        style: path.resolve(__dirname, 'src/scss/main.scss'),
       },
       output: {
-        entryFileNames: '[name].js',
-        assetFileNames: '[name].[ext]'
-      }
-    }
-  }
+        assetFileNames: '[name].[ext]',
+      },
+    },
+  },
 });
