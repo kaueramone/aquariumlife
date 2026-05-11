@@ -1,0 +1,55 @@
+@use '../base/variables' as *;
+
+// Shopkit default Header Overrides
+header, .header, #header {
+  background: rgba(0, 4, 13, 0.8) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(8, 238, 188, 0.15) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5) !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 1000;
+  transition: $transition-smooth;
+
+  // Menu items and links
+  .menu-item, .menu-link, .nav-link, a {
+    color: $color-text-primary !important;
+    font-family: $font-family-title !important;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: $transition-fast;
+    
+    &:hover {
+      color: $color-neon-accent !important;
+      text-shadow: 0 0 8px rgba(8, 238, 188, 0.6) !important;
+    }
+  }
+
+  // Icons in header (search, cart, user)
+  i, .ri, .icon {
+    color: $color-text-primary !important;
+    transition: $transition-fast;
+    
+    &:hover {
+      color: $color-neon-accent !important;
+      filter: drop-shadow(0 0 5px $color-neon-accent);
+    }
+  }
+
+  // Search input if present in header
+  input[type="text"], input[type="search"], .search-input {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(8, 238, 188, 0.3) !important;
+    color: $color-text-primary !important;
+    border-radius: 20px !important;
+    padding: 8px 16px !important;
+    
+    &:focus {
+      outline: none !important;
+      border-color: $color-neon-accent !important;
+      box-shadow: 0 0 10px rgba(8, 238, 188, 0.3) !important;
+    }
+  }
+}

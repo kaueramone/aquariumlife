@@ -8,6 +8,6 @@
 @use 'components/cards';
 
 // Layout e Pages podem ser adicionados conforme necessidade
-// @use 'layouts/header';
-// @use 'layouts/footer';
+@use 'layouts/header';
+@use 'layouts/footer';
 // @use 'pages/product';

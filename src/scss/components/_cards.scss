@@ -1,16 +1,20 @@
 @use '../base/variables' as *;
 
 .product, .product-view, .categories-item, .brands-item, .card {
-  @include glass-panel;
-  border-radius: 12px;
-  overflow: hidden;
+  background: rgba(0, 21, 49, 0.4) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(8, 238, 188, 0.1) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
   transition: $transition-smooth;
   position: relative;
   
   &:hover {
     transform: translateY(-5px);
-    @include neon-glow-hover;
-    border-color: rgba(8, 238, 188, 0.4);
+    box-shadow: 0 0 20px rgba(8, 238, 188, 0.6), 0 0 40px rgba(8, 238, 188, 0.3) !important;
+    border-color: rgba(8, 238, 188, 0.4) !important;
   }
 
   .product-pic, .img-frame {

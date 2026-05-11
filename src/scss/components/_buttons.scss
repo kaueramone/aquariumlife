@@ -1,19 +1,19 @@
 @use '../base/variables' as *;
 
 .btn, .btn-primary, .product-btn {
-  background: transparent;
-  border: 1px solid $color-neon-accent;
-  color: $color-neon-accent;
-  border-radius: 4px;
-  padding: 10px 24px;
-  font-family: $font-family-title;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 500;
+  background: transparent !important;
+  border: 1px solid $color-neon-accent !important;
+  color: $color-neon-accent !important;
+  border-radius: 4px !important;
+  padding: 10px 24px !important;
+  font-family: $font-family-title !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  font-weight: 500 !important;
   transition: $transition-smooth;
   position: relative;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(8, 238, 188, 0.1);
+  overflow: hidden !important;
+  box-shadow: 0 0 10px rgba(8, 238, 188, 0.1) !important;
 
   &::before {
     content: '';
@@ -27,10 +27,10 @@
   }
 
   &:hover {
-    background: rgba(8, 238, 188, 0.1);
-    color: #fff;
-    border-color: #fff;
-    @include neon-glow;
+    background: rgba(8, 238, 188, 0.1) !important;
+    color: #fff !important;
+    border-color: #fff !important;
+    box-shadow: 0 0 20px rgba(8, 238, 188, 0.6), 0 0 40px rgba(8, 238, 188, 0.3) !important;
     
     &::before {
       left: 100%;

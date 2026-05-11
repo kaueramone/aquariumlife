@@ -1,0 +1,57 @@
+@use '../base/variables' as *;
+
+// Shopkit default Footer Overrides
+footer, .footer, #footer {
+  background: $color-bg-secondary !important;
+  border-top: 1px solid rgba(8, 238, 188, 0.1) !important;
+  padding-top: 40px;
+  position: relative;
+  overflow: hidden;
+
+  // Subtle bottom glow for the footer
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 100px;
+    background: $color-neon-accent;
+    filter: blur(80px);
+    opacity: 0.15;
+    pointer-events: none;
+  }
+
+  .title, h3, h4, .footer-title {
+    color: $color-neon-accent !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  .footer-link, .footer-menu a, li a {
+    color: $color-text-secondary !important;
+    transition: $transition-fast;
+    display: inline-block;
+    padding: 5px 0;
+
+    &:hover {
+      color: $color-text-primary !important;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+      transform: translateX(5px);
+    }
+  }
+
+  // Newsletter input area if present
+  .newsletter-form input {
+    background: rgba(0, 4, 13, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
+    
+    &:focus {
+      border-color: $color-neon-accent !important;
+    }
+  }
+}
