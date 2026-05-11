@@ -1,26 +1,43 @@
 @use '../base/variables' as *;
 
 // ============================================================
-// PRODUCT CARDS — Reinventados v2
+// PRODUCT CARDS — v3
+// Estrutura real do Shopkit Boxie:
+//  .product
+//    └ .card-shadow-hover
+//        ├ .product-view
+//        │   ├ .product-badges > .badge
+//        │   ├ a.product-preview > img.product-pic
+//        │   └ a.product-btn.btn.btn-primary
+//        ├ .product-category  (oculto)
+//        ├ a.product-name
+//        └ .product-details
+//            ├ .product-category  (oculto)
+//            └ .product-price > .product-actual
 // ============================================================
 
-// Neutralizar as classes de hover do Shopkit/Boxie para evitar conflito
-.hover-effect-floating,
-.card-shadow-hover {
-  transform: none !important;
-  transition: none !important;
+// Neutralizar helpers do Shopkit
+.hover-effect-floating { transform: none !important; }
+
+// ── Wrapper externo — sem visuais próprios ──────────────────
+.product {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+  position: relative !important;
+  padding: 0 !important;
 }
 
-.product, .product-item, .product-view {
-  background: linear-gradient(160deg, #00213f 0%, #001531 100%) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
+// ── Card visual ─────────────────────────────────────────────
+.card-shadow-hover {
+  background: linear-gradient(160deg, #001d3d 0%, #001531 100%) !important;
   border: 1px solid rgba(8, 238, 188, 0.1) !important;
   border-radius: 16px !important;
-  overflow: visible !important;   // badges sobresaem o card
+  overflow: visible !important;
   box-shadow:
-    0 2px 0 rgba(8, 238, 188, 0.06) inset,
-    0 8px 28px rgba(0, 0, 0, 0.45) !important;
+    inset 0 1px 0 rgba(8, 238, 188, 0.07),
+    0 6px 24px rgba(0, 0, 0, 0.45) !important;
   transition:
     transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1),
     border-color 0.35s ease,
@@ -29,20 +46,12 @@
   display: flex !important;
   flex-direction: column !important;
 
-  // Linha brilhante no topo — detalhe de luxo
+  // Linha brilhante de luxo no topo
   &::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 18%;
-    width: 64%;
-    height: 1px;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(8, 238, 188, 0.55),
-      transparent
-    );
+    top: 0; left: 16%; width: 68%; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(8, 238, 188, 0.5), transparent);
     border-radius: 50%;
     pointer-events: none;
     z-index: 1;
@@ -50,117 +59,134 @@
 
   &:hover {
     transform: translateY(-8px) !important;
-    border-color: rgba(8, 238, 188, 0.42) !important;
+    border-color: rgba(8, 238, 188, 0.4) !important;
     box-shadow:
-      0 2px 0 rgba(8, 238, 188, 0.1) inset,
-      0 28px 52px rgba(0, 0, 0, 0.55),
-      0 0 40px rgba(8, 238, 188, 0.1) !important;
+      inset 0 1px 0 rgba(8, 238, 188, 0.12),
+      0 28px 50px rgba(0, 0, 0, 0.55),
+      0 0 36px rgba(8, 238, 188, 0.09) !important;
   }
+}
 
-  // ── ÁREA DE IMAGEM ──────────────────────────────────────────
-  .product-pic, .product-image, .product-thumb, .img-frame {
-    background: #ffffff !important;
-    border-radius: 14px 14px 0 0 !important;
-    overflow: hidden !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    aspect-ratio: 1 / 1;
+// ── Área de imagem ──────────────────────────────────────────
+.product-view {
+  position: relative;
+}
+
+a.product-preview {
+  display: block !important;
+  background: rgba(0, 8, 20, 0.55) !important;
+  border-radius: 14px 14px 0 0 !important;
+  overflow: hidden !important;
+  aspect-ratio: 1 / 1;
+  text-decoration: none !important;
+
+  img.product-pic, img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    display: block !important;
+    background: transparent !important;
     padding: 18px !important;
-    flex-shrink: 0;
-    position: relative;
-
-    img {
-      max-width: 100% !important;
-      max-height: 100% !important;
-      height: auto !important;
-      object-fit: contain;
-      transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-      mix-blend-mode: multiply;
-    }
+    box-sizing: border-box;
+    border: none !important;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   }
+}
 
-  &:hover .product-pic img,
-  &:hover .product-image img,
-  &:hover .img-frame img {
-    transform: scale(1.09);
-  }
+.card-shadow-hover:hover a.product-preview img {
+  transform: scale(1.08);
+}
 
-  // ── NOME DO PRODUTO ─────────────────────────────────────────
-  .product-name, .product-title, h3, h2, .name {
-    font-family: $font-family-body !important;
-    font-size: 0.86rem !important;
-    font-weight: 600 !important;
-    color: #d8eeff !important;
-    text-shadow: none !important;
-    text-align: center !important;
-    padding: 14px 14px 6px !important;
-    line-height: 1.45 !important;
-    letter-spacing: 0.1px;
-    flex-grow: 1;
-  }
+// ── Categoria — ocultar ─────────────────────────────────────
+.product-category {
+  display: none !important;
+}
 
-  // ── PREÇO ────────────────────────────────────────────────────
-  .product-price, .price, .product-cost {
+// ── Nome do produto ─────────────────────────────────────────
+a.product-name {
+  display: block !important;
+  font-family: $font-family-body !important;
+  font-size: 0.86rem !important;
+  font-weight: 600 !important;
+  color: #cde4f8 !important;
+  text-decoration: none !important;
+  text-align: center !important;
+  padding: 13px 14px 5px !important;
+  line-height: 1.45 !important;
+  flex: 1;
+
+  &:hover { color: #fff !important; }
+}
+
+// ── Preço ───────────────────────────────────────────────────
+.product-details {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding: 0 !important;
+}
+
+.product-price {
+  text-align: center !important;
+  padding: 4px 14px 13px !important;
+
+  .product-actual, span {
     font-family: $font-family-title !important;
     font-size: 1.15rem !important;
     font-weight: 700 !important;
     color: $color-neon-accent !important;
-    text-align: center !important;
-    padding: 4px 14px 14px !important;
     letter-spacing: -0.3px;
-
-    del, .old-price, .price-old {
-      color: rgba(255, 255, 255, 0.3) !important;
-      font-size: 0.82rem !important;
-      font-weight: 400 !important;
-      text-decoration: line-through !important;
-      margin-right: 8px;
-    }
   }
 
-  // ── BOTÃO COMPRAR ────────────────────────────────────────────
-  .product-btn, .btn-cart, .add-to-cart,
-  .btn.btn-primary, button.btn-primary {
-    display: block !important;
-    width: calc(100% - 20px) !important;
-    margin: 0 10px 14px !important;
-    background: rgba(8, 238, 188, 0.07) !important;
-    border: 1px solid rgba(8, 238, 188, 0.45) !important;
-    color: $color-neon-accent !important;
-    border-radius: 8px !important;
-    padding: 10px 16px !important;
-    font-family: $font-family-title !important;
-    font-size: 0.75rem !important;
-    font-weight: 600 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 1.8px !important;
-    text-align: center !important;
-    cursor: pointer;
-    transition:
-      background 0.22s ease,
-      color 0.22s ease,
-      border-color 0.22s ease,
-      box-shadow 0.22s ease !important;
-    position: relative;
-    overflow: hidden;
-    box-shadow: none !important;
-
-    &:hover {
-      background: $color-neon-accent !important;
-      color: #001531 !important;
-      border-color: $color-neon-accent !important;
-      font-weight: 700 !important;
-      box-shadow: 0 0 20px rgba(8, 238, 188, 0.55) !important;
-    }
+  del, .old-price {
+    color: rgba(255, 255, 255, 0.3) !important;
+    font-size: 0.82rem !important;
+    font-weight: 400 !important;
+    text-decoration: line-through !important;
+    margin-right: 8px;
   }
 }
 
-// ============================================================
-// BADGES — Sobresaem acima do topo do card
-// ============================================================
+// ── Botão comprar ────────────────────────────────────────────
+a.product-btn,
+a.product-btn.btn,
+a.product-btn.btn-primary {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 7px !important;
+  width: calc(100% - 20px) !important;
+  margin: 0 10px 14px !important;
+  background: rgba(8, 238, 188, 0.07) !important;
+  border: 1px solid rgba(8, 238, 188, 0.4) !important;
+  color: $color-neon-accent !important;
+  border-radius: 8px !important;
+  padding: 10px 16px !important;
+  font-family: $font-family-title !important;
+  font-size: 0.74rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.8px !important;
+  text-decoration: none !important;
+  text-shadow: none !important;
+  cursor: pointer;
+  box-shadow: none !important;
+  transition: background 0.22s, color 0.22s, border-color 0.22s, box-shadow 0.22s !important;
 
-.product-badges, .product-badge-list {
+  svg { width: 13px !important; height: 13px !important; flex-shrink: 0; }
+
+  &:hover {
+    background: $color-neon-accent !important;
+    color: #001531 !important;
+    border-color: $color-neon-accent !important;
+    font-weight: 700 !important;
+    box-shadow: 0 0 20px rgba(8, 238, 188, 0.55) !important;
+  }
+}
+
+// ── Badges — sobresaem acima da borda do card ───────────────
+.product-badges {
   position: absolute !important;
   top: -11px !important;
   left: 14px !important;
@@ -171,8 +197,7 @@
   pointer-events: none;
 }
 
-// Base das etiquetas
-.badge, .product-badge {
+.badge {
   display: inline-flex !important;
   align-items: center !important;
   padding: 4px 11px !important;
@@ -187,47 +212,31 @@
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.5) !important;
 }
 
-// Novo
-.badge.new, .badge-new,
-[class*="badge"][class*="new"] {
-  background: $color-neon-accent !important;
-  color: #001531 !important;
-}
-
-// Promoção / desconto
-.badge.sale, .badge-sale,
-.badge.discount, .badge-discount,
-[class*="badge"][class*="sale"],
-[class*="badge"][class*="promo"] {
-  background: #ff3d5c !important;
-  color: #fff !important;
-}
-
-// Fallback genérico
-.badge:not([class*="new"]):not([class*="sale"]):not([class*="discount"]):not([class*="promo"]) {
+.badge.new  { background: $color-neon-accent !important; color: #001531 !important; }
+.badge.sale,
+.badge.discount { background: #ff3d5c !important; color: #fff !important; }
+.badge:not(.new):not(.sale):not(.discount) {
   background: rgba(8, 238, 188, 0.15) !important;
   color: $color-neon-accent !important;
   border: 1px solid rgba(8, 238, 188, 0.5) !important;
 }
 
 // ============================================================
-// SECÇÃO DE PRODUTOS — Remover título + espaçamento
+// SECÇÃO DE PRODUTOS — Título + espaçamento
 // ============================================================
 
-section:has(.product) > .title,
-section:has(.product) > .container > .title,
-section:has(.product) > .container-fluid > .title,
-.section:has(.product) > .title,
-.section:has(.product) .title_mb-lg,
 section:has(.product-view) > .title,
-section:has(.product-view) > .container > .title {
+section:has(.product-view) > .container > .title,
+section:has(.product-view) > .container-fluid > .title,
+.section:has(.product-view) .title_mb-lg {
   display: none !important;
 }
 
-section:has(.product),
-.section:has(.product) {
-  padding-top: 8px !important;
+section:has(.product-view),
+.section:has(.product-view) {
+  padding-top: 0 !important;
   margin-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 // ============================================================
@@ -237,12 +246,11 @@ section:has(.product),
 #aq-ver-todos {
   display: flex !important;
   justify-content: center !important;
-  padding: 28px 20px 16px !important;
+  padding: 18px 20px 12px !important;
 
   a {
     display: inline-flex !important;
     align-items: center !important;
-    gap: 10px !important;
     background: transparent !important;
     border: 1.5px solid $color-neon-accent !important;
     color: $color-neon-accent !important;
@@ -271,11 +279,8 @@ section:has(.product),
 
     &:hover {
       color: #001531 !important;
-      box-shadow:
-        0 0 24px rgba(8, 238, 188, 0.6),
-        0 0 48px rgba(8, 238, 188, 0.25) !important;
+      box-shadow: 0 0 24px rgba(8, 238, 188, 0.6), 0 0 48px rgba(8, 238, 188, 0.25) !important;
       transform: translateY(-2px);
-
       &::before { opacity: 1; }
     }
   }

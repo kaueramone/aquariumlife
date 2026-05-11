@@ -32,3 +32,24 @@ html, body {
 ::-webkit-scrollbar-thumb:hover {
   background: $color-neon-accent;
 }
+
+
+// ============================================================
+// ESPAÇAMENTO ENTRE SECÇÕES — Override do Shopkit
+// ============================================================
+
+// Zerar margens e paddings das secções nativas
+section, .section, .home-section, .block {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+// As secções com slider/banner podem ter padding interno
+// mas não devem empurrar as secções seguintes
+section + section,
+section + #aq-categories,
+.section + .section,
+.section + #aq-categories {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
