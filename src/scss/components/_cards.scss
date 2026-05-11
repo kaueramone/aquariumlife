@@ -1,186 +1,219 @@
 @use '../base/variables' as *;
 
-// === CARDS DE PRODUTO PREMIUM ===
-// Estrutura esperada: .product > .product-pic (foto) > .product-details (título + preço + botão)
+// ============================================================
+// PRODUCT CARDS — Reinventados v2
+// ============================================================
 
-.product, .product-item {
-  background: #001531 !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
-  border: 1px solid rgba(8, 238, 188, 0.12) !important;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4) !important;
-  border-radius: 14px !important;
-  overflow: hidden !important;
-  transition: $transition-smooth;
-  position: relative;
+// Neutralizar as classes de hover do Shopkit/Boxie para evitar conflito
+.hover-effect-floating,
+.card-shadow-hover {
+  transform: none !important;
+  transition: none !important;
+}
+
+.product, .product-item, .product-view {
+  background: linear-gradient(160deg, #00213f 0%, #001531 100%) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 1px solid rgba(8, 238, 188, 0.1) !important;
+  border-radius: 16px !important;
+  overflow: visible !important;   // badges sobresaem o card
+  box-shadow:
+    0 2px 0 rgba(8, 238, 188, 0.06) inset,
+    0 8px 28px rgba(0, 0, 0, 0.45) !important;
+  transition:
+    transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1),
+    border-color 0.35s ease,
+    box-shadow 0.35s ease !important;
+  position: relative !important;
   display: flex !important;
   flex-direction: column !important;
 
-  // Borda neon ao passar o mouse
-  &:hover {
-    transform: translateY(-6px);
-    border-color: rgba(8, 238, 188, 0.45) !important;
-    box-shadow: 0 0 25px rgba(8, 238, 188, 0.3), 0 15px 40px rgba(0, 0, 0, 0.5) !important;
+  // Linha brilhante no topo — detalhe de luxo
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 18%;
+    width: 64%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(8, 238, 188, 0.55),
+      transparent
+    );
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
   }
 
-  // === FOTO ===
-  // Moldura da foto: fundo branco contido, sem fundo branco espalhando no card inteiro
-  .product-pic, .product-image, .product-thumb {
-    background: #fff !important;
-    border-radius: 10px 10px 0 0 !important; // Curvas só no topo
+  &:hover {
+    transform: translateY(-8px) !important;
+    border-color: rgba(8, 238, 188, 0.42) !important;
+    box-shadow:
+      0 2px 0 rgba(8, 238, 188, 0.1) inset,
+      0 28px 52px rgba(0, 0, 0, 0.55),
+      0 0 40px rgba(8, 238, 188, 0.1) !important;
+  }
+
+  // ── ÁREA DE IMAGEM ──────────────────────────────────────────
+  .product-pic, .product-image, .product-thumb, .img-frame {
+    background: #ffffff !important;
+    border-radius: 14px 14px 0 0 !important;
     overflow: hidden !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    aspect-ratio: 1 / 1; // Quadrado consistente
-    padding: 12px !important;
+    aspect-ratio: 1 / 1;
+    padding: 18px !important;
+    flex-shrink: 0;
+    position: relative;
 
     img {
       max-width: 100% !important;
+      max-height: 100% !important;
       height: auto !important;
       object-fit: contain;
-      transition: $transition-smooth;
-      mix-blend-mode: multiply; // Remove halos se a foto não for 100% branca
+      transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      mix-blend-mode: multiply;
     }
   }
 
   &:hover .product-pic img,
   &:hover .product-image img,
-  &:hover .product-thumb img {
-    transform: scale(1.07);
+  &:hover .img-frame img {
+    transform: scale(1.09);
   }
 
-  // === TÍTULO ===
-  .product-title, .product-name, h3, h2, .name {
-    font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, Georgia, serif !important;
-    font-size: 1rem !important;
+  // ── NOME DO PRODUTO ─────────────────────────────────────────
+  .product-name, .product-title, h3, h2, .name {
+    font-family: $font-family-body !important;
+    font-size: 0.86rem !important;
     font-weight: 600 !important;
-    color: $color-neon-accent !important;
-    text-shadow: 0 0 10px rgba(8, 238, 188, 0.35) !important;
+    color: #d8eeff !important;
+    text-shadow: none !important;
     text-align: center !important;
-    padding: 14px 12px 6px !important;
-    line-height: 1.3;
-    letter-spacing: 0.3px;
+    padding: 14px 14px 6px !important;
+    line-height: 1.45 !important;
+    letter-spacing: 0.1px;
+    flex-grow: 1;
   }
 
-  // === PREÇO ===
+  // ── PREÇO ────────────────────────────────────────────────────
   .product-price, .price, .product-cost {
     font-family: $font-family-title !important;
-    font-size: 1.1rem !important;
+    font-size: 1.15rem !important;
     font-weight: 700 !important;
-    color: #fff !important;
+    color: $color-neon-accent !important;
     text-align: center !important;
-    padding: 4px 12px 10px !important;
-    
-    // Preço original riscado (se houver desconto)
-    del, .old-price {
-      color: rgba(255,255,255,0.35) !important;
-      font-size: 0.85rem !important;
-      margin-right: 6px;
+    padding: 4px 14px 14px !important;
+    letter-spacing: -0.3px;
+
+    del, .old-price, .price-old {
+      color: rgba(255, 255, 255, 0.3) !important;
+      font-size: 0.82rem !important;
+      font-weight: 400 !important;
+      text-decoration: line-through !important;
+      margin-right: 8px;
     }
   }
 
-  // === BOTÃO DE COMPRAR ===
-  .product-btn, .btn-cart, .add-to-cart, .btn-primary, button[type="submit"] {
+  // ── BOTÃO COMPRAR ────────────────────────────────────────────
+  .product-btn, .btn-cart, .add-to-cart,
+  .btn.btn-primary, button.btn-primary {
     display: block !important;
-    width: calc(100% - 24px) !important;
-    margin: 0 12px 14px !important;
-    background: transparent !important;
-    border: 1px solid $color-neon-accent !important;
+    width: calc(100% - 20px) !important;
+    margin: 0 10px 14px !important;
+    background: rgba(8, 238, 188, 0.07) !important;
+    border: 1px solid rgba(8, 238, 188, 0.45) !important;
     color: $color-neon-accent !important;
-    border-radius: 6px !important;
-    padding: 9px 16px !important;
+    border-radius: 8px !important;
+    padding: 10px 16px !important;
     font-family: $font-family-title !important;
-    font-size: 0.85rem !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
     text-transform: uppercase !important;
-    letter-spacing: 1px !important;
+    letter-spacing: 1.8px !important;
     text-align: center !important;
     cursor: pointer;
-    transition: $transition-smooth;
+    transition:
+      background 0.22s ease,
+      color 0.22s ease,
+      border-color 0.22s ease,
+      box-shadow 0.22s ease !important;
     position: relative;
     overflow: hidden;
-
-    &::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(8,238,188,0.15), transparent);
-      opacity: 0;
-      transition: $transition-fast;
-    }
+    box-shadow: none !important;
 
     &:hover {
-      background: rgba(8, 238, 188, 0.12) !important;
-      color: #fff !important;
-      box-shadow: 0 0 15px rgba(8, 238, 188, 0.5) !important;
-
-      &::before {
-        opacity: 1;
-      }
+      background: $color-neon-accent !important;
+      color: #001531 !important;
+      border-color: $color-neon-accent !important;
+      font-weight: 700 !important;
+      box-shadow: 0 0 20px rgba(8, 238, 188, 0.55) !important;
     }
   }
 }
 
-
 // ============================================================
-// BADGES DE PRODUTO — Etiquetas modernas (Novo, Desconto…)
+// BADGES — Sobresaem acima do topo do card
 // ============================================================
 
-// Wrapper das etiquetas (posição absoluta sobre o card)
 .product-badges, .product-badge-list {
   position: absolute !important;
-  top: 10px !important;
-  left: 10px !important;
-  z-index: 4 !important;
+  top: -11px !important;
+  left: 14px !important;
+  z-index: 10 !important;
   display: flex !important;
-  flex-direction: column !important;
-  gap: 5px !important;
+  flex-direction: row !important;
+  gap: 6px !important;
   pointer-events: none;
 }
 
-// Etiqueta base
+// Base das etiquetas
 .badge, .product-badge {
   display: inline-flex !important;
   align-items: center !important;
-  padding: 3px 9px !important;
+  padding: 4px 11px !important;
   border-radius: 20px !important;
   font-family: $font-family-title !important;
-  font-size: 0.62rem !important;
+  font-size: 0.6rem !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.8px !important;
+  letter-spacing: 0.9px !important;
   line-height: 1.4 !important;
   white-space: nowrap !important;
-  // Sombra para destacar sobre a imagem branca
-  box-shadow: 0 2px 8px rgba(0,0,0,0.35) !important;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.5) !important;
 }
 
-// Etiqueta "Novo"
-.badge.new, .badge-new, [class*="badge"][class*="new"] {
+// Novo
+.badge.new, .badge-new,
+[class*="badge"][class*="new"] {
   background: $color-neon-accent !important;
-  color: #000 !important;
+  color: #001531 !important;
 }
 
-// Etiqueta de desconto / promoção
-.badge.sale, .badge-sale, .badge.discount, .badge-discount,
-[class*="badge"][class*="sale"], [class*="badge"][class*="promo"] {
-  background: #ff4060 !important;
+// Promoção / desconto
+.badge.sale, .badge-sale,
+.badge.discount, .badge-discount,
+[class*="badge"][class*="sale"],
+[class*="badge"][class*="promo"] {
+  background: #ff3d5c !important;
   color: #fff !important;
 }
 
-// Etiqueta genérica (fallback)
-.badge:not(.new):not(.sale):not(.discount) {
+// Fallback genérico
+.badge:not([class*="new"]):not([class*="sale"]):not([class*="discount"]):not([class*="promo"]) {
   background: rgba(8, 238, 188, 0.15) !important;
   color: $color-neon-accent !important;
-  border: 1px solid rgba(8, 238, 188, 0.4) !important;
+  border: 1px solid rgba(8, 238, 188, 0.5) !important;
 }
 
 // ============================================================
-// SECÇÃO DE PRODUTOS — Ocultar título nativo + espaçamento
+// SECÇÃO DE PRODUTOS — Remover título + espaçamento
 // ============================================================
 
-// Ocultar "Produtos" / títulos de secção nativos do Shopkit
-// que ficam acima das grelhas de produto
 section:has(.product) > .title,
 section:has(.product) > .container > .title,
 section:has(.product) > .container-fluid > .title,
@@ -191,7 +224,6 @@ section:has(.product-view) > .container > .title {
   display: none !important;
 }
 
-// Aproximar secção de produtos das categorias
 section:has(.product),
 .section:has(.product) {
   padding-top: 8px !important;
@@ -199,7 +231,7 @@ section:has(.product),
 }
 
 // ============================================================
-// BOTÃO "VER TODOS OS NOSSOS PRODUTOS"
+// BOTÃO VER TODOS OS NOSSOS PRODUTOS
 // ============================================================
 
 #aq-ver-todos {
@@ -226,7 +258,6 @@ section:has(.product),
     overflow: hidden;
     transition: $transition-smooth;
 
-    // Brilho de fundo no hover
     &::before {
       content: '';
       position: absolute;
@@ -239,8 +270,10 @@ section:has(.product),
     span { position: relative; z-index: 1; }
 
     &:hover {
-      color: #000 !important;
-      box-shadow: 0 0 24px rgba(8, 238, 188, 0.6), 0 0 48px rgba(8, 238, 188, 0.25) !important;
+      color: #001531 !important;
+      box-shadow:
+        0 0 24px rgba(8, 238, 188, 0.6),
+        0 0 48px rgba(8, 238, 188, 0.25) !important;
       transform: translateY(-2px);
 
       &::before { opacity: 1; }

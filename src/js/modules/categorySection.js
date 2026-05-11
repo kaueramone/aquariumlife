@@ -109,6 +109,13 @@ function buildSection() {
   const hideTarget = findCategoryContainer(nativeItem);
   hideTarget.style.setProperty('display', 'none', 'important');
 
+  // Remover espaçamento inferior da secção anterior (banner/slider)
+  const prevSection = hideTarget.previousElementSibling;
+  if (prevSection && !prevSection.id?.startsWith('aq-')) {
+    prevSection.style.setProperty('margin-bottom', '0', 'important');
+    prevSection.style.setProperty('padding-bottom', '0', 'important');
+  }
+
   const newSection = buildNewSection();
   hideTarget.parentNode.insertBefore(newSection, hideTarget.nextSibling);
 
