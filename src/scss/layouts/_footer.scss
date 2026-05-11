@@ -2,25 +2,52 @@
 
 // Shopkit default Footer Overrides
 footer, .footer, #footer {
-  background: $color-bg-secondary !important;
-  border-top: 1px solid rgba(8, 238, 188, 0.1) !important;
-  padding-top: 40px;
+  background: rgba(0, 4, 13, 0.9) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-top: 1px solid rgba(8, 238, 188, 0.2) !important;
+  padding: 60px 0 20px 0 !important;
   position: relative;
   overflow: hidden;
+  margin-top: 50px;
 
   // Subtle bottom glow for the footer
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $color-neon-accent, transparent);
+  }
+
   &::after {
     content: '';
     position: absolute;
-    bottom: -50px;
+    bottom: -150px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60%;
-    height: 100px;
+    width: 80%;
+    height: 200px;
     background: $color-neon-accent;
-    filter: blur(80px);
-    opacity: 0.15;
+    filter: blur(120px);
+    opacity: 0.1;
     pointer-events: none;
+  }
+
+  // Transformar os widgets/colunas num grid
+  .container, .footer-inner, .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    gap: 30px;
+  }
+
+  .col-md-3, .col-lg-3, .footer-widget {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 30px;
   }
 
   .title, h3, h4, .footer-title {
@@ -28,30 +55,74 @@ footer, .footer, #footer {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 1.1rem;
-    margin-bottom: 20px;
+    margin-bottom: 25px !important;
+    position: relative;
+    display: inline-block;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: $color-neon-accent;
+    }
   }
 
   .footer-link, .footer-menu a, li a {
     color: $color-text-secondary !important;
     transition: $transition-fast;
-    display: inline-block;
-    padding: 5px 0;
+    display: block !important;
+    padding: 8px 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 
     &:hover {
       color: $color-text-primary !important;
       text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-      transform: translateX(5px);
+      transform: translateX(10px);
+      border-color: rgba(8, 238, 188, 0.2);
     }
   }
 
+  ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
   // Newsletter input area if present
-  .newsletter-form input {
-    background: rgba(0, 4, 13, 0.5) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    color: #fff !important;
+  .newsletter-form, .subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     
-    &:focus {
-      border-color: $color-neon-accent !important;
+    input {
+      background: rgba(0, 21, 49, 0.5) !important;
+      border: 1px solid rgba(8, 238, 188, 0.2) !important;
+      color: #fff !important;
+      border-radius: 8px !important;
+      padding: 12px 15px !important;
+      width: 100%;
+      
+      &:focus {
+        outline: none !important;
+        border-color: $color-neon-accent !important;
+        box-shadow: 0 0 10px rgba(8, 238, 188, 0.3) !important;
+      }
+    }
+  }
+
+  .copyright, .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    margin-top: 40px !important;
+    padding-top: 20px !important;
+    text-align: center !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    width: 100%;
+    
+    a {
+      color: $color-neon-accent !important;
     }
   }
 }
