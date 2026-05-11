@@ -128,8 +128,21 @@ function tryBuild() {
   if (window.innerWidth < 992) return;
   if (document.getElementById('aq-nav-bar')) return;
 
-  const header = document.querySelector('header, #header, .header, [class*="header"]');
-  if (!header) return false; // Não encontrou ainda
+  // Seletores por prioridade — o <header> semântico primeiro,
+  // sem [class*="header"] que faz match em .section-header, .footer-header, etc.
+  const header =
+    document.querySelector('body > header') ||
+    document.querySelector('body > #header') ||
+    document.querySelector('body > .header') ||
+    document.querySelector('#wrapper > header') ||
+    document.querySelector('#wrapper > .header') ||
+    document.querySelector('#header') ||
+    document.querySelector('header');
+
+  if (!header) return false;
+
+  // Segurança extra: nunca injetar dentro do footer
+  if (header.closest('footer, #footer, .footer')) return false;
 
   // Esconder bolinha hamburguer real do Boxie
   header.querySelectorAll(
