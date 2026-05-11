@@ -148,40 +148,51 @@ a.product-name {
   }
 }
 
-// ── Botão comprar ────────────────────────────────────────────
-a.product-btn,
-a.product-btn.btn,
-a.product-btn.btn-primary {
+// ── Botão comprar ───────────────────────────────────────────
+// ESCONDER na posição original (overlay sobre a imagem dentro de .product-view)
+.product-view a.product-btn,
+.product-view .product-btn {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+// MOSTRAR apenas quando o JS o mover para filho direto de .card-shadow-hover
+.card-shadow-hover > a.product-btn,
+.card-shadow-hover > .product-btn {
   display: flex !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 7px !important;
-  width: calc(100% - 20px) !important;
-  margin: 0 10px 14px !important;
-  background: rgba(8, 238, 188, 0.07) !important;
-  border: 1px solid rgba(8, 238, 188, 0.4) !important;
+  gap: 6px !important;
+  position: static !important;
+  width: calc(100% - 24px) !important;
+  margin: 0 12px 14px !important;
+  background: rgba(8, 238, 188, 0.06) !important;
+  border: 1px solid rgba(8, 238, 188, 0.35) !important;
   color: $color-neon-accent !important;
-  border-radius: 8px !important;
-  padding: 10px 16px !important;
+  border-radius: 6px !important;
+  padding: 8px 12px !important;
   font-family: $font-family-title !important;
-  font-size: 0.74rem !important;
+  font-size: 0.68rem !important;
   font-weight: 600 !important;
   text-transform: uppercase !important;
-  letter-spacing: 1.8px !important;
+  letter-spacing: 1.6px !important;
   text-decoration: none !important;
   text-shadow: none !important;
   cursor: pointer;
   box-shadow: none !important;
   transition: background 0.22s, color 0.22s, border-color 0.22s, box-shadow 0.22s !important;
 
-  svg { width: 13px !important; height: 13px !important; flex-shrink: 0; }
+  svg { width: 11px !important; height: 11px !important; flex-shrink: 0; }
 
   &:hover {
     background: $color-neon-accent !important;
     color: #001531 !important;
     border-color: $color-neon-accent !important;
     font-weight: 700 !important;
-    box-shadow: 0 0 20px rgba(8, 238, 188, 0.55) !important;
+    box-shadow: 0 0 16px rgba(8, 238, 188, 0.5) !important;
   }
 }
 
