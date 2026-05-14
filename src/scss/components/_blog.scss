@@ -121,11 +121,28 @@
   flex: 1;
 }
 
+.aq-blog-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .aq-blog-card-date {
   color: rgba(8, 238, 188, 0.65);
   font-size: 0.75rem;
   font-family: $font-family-body;
   letter-spacing: 0.5px;
+}
+
+.aq-blog-card-read {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.72rem;
+  font-family: $font-family-body;
+  &::before {
+    content: '·';
+    margin-right: 12px;
+    color: rgba(255,255,255,0.2);
+  }
 }
 
 .aq-blog-card-title {

@@ -1,7 +1,6 @@
 /**
- * blogSection.js – v3
- * Exporta buildBlogSection() para uso pelo homeOrchestrator.
- * Também trata redesign de /blog e post individual.
+ * blogSection.js – v4
+ * Cards premium com imagem destacada, leitura estimada e design melhorado.
  */
 
 const BLOG_API  = '/api/json/blog/posts?limit=3&page=1';
@@ -13,9 +12,16 @@ function formatDate(dateStr) {
   } catch { return dateStr; }
 }
 
-function truncate(str, max = 130) {
+function truncate(str, max = 120) {
   if (!str || str.length <= max) return str || '';
   return str.slice(0, max).replace(/\s\S*$/, '') + '…';
+}
+
+function readingTime(text) {
+  if (!text) return '1 min';
+  const words = text.trim().split(/\s+/).length;
+  const mins = Math.max(1, Math.round(words / 200));
+  return `${mins} min de leitura`;
 }
 
 function buildPostCard(post) {
@@ -23,19 +29,36 @@ function buildPostCard(post) {
   card.href = post.url || `${BLOG_HREF}/${post.handle}`;
   card.className = 'aq-blog-card';
   card.setAttribute('aria-label', `Ler artigo: ${post.title}`);
-  const thumb = post.image?.url || post.featured_image || '';
+
+  const thumb = post.image?.url || post.featured_image || post.image_url || '';
+  const excerpt = post.excerpt || post.body_plain || post.summary || '';
+  const date = formatDate(post.created_at || post.published_at);
+  const time = readingTime(excerpt);
+
   card.innerHTML = `
     <div class="aq-blog-card-img">
       ${thumb
         ? `<img src="${thumb}" alt="${post.title}" loading="lazy"/>`
-        : `<div class="aq-blog-card-img-placeholder"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="10" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="22" r="4" stroke="currentColor" stroke-width="2"/><path d="M6 34l10-10 6 6 8-8 12 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>`}
+        : `<div class="aq-blog-card-img-placeholder">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="10" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2"/>
+              <circle cx="18" cy="22" r="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M6 34l10-10 6 6 8-8 12 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+           </div>`}
       <span class="aq-blog-card-tag">Aquarismo</span>
     </div>
     <div class="aq-blog-card-body">
-      <time class="aq-blog-card-date">${formatDate(post.created_at || post.published_at)}</time>
+      <div class="aq-blog-card-meta">
+        <time class="aq-blog-card-date">${date}</time>
+        <span class="aq-blog-card-read">${time}</span>
+      </div>
       <h3 class="aq-blog-card-title">${post.title}</h3>
-      <p class="aq-blog-card-excerpt">${truncate(post.excerpt || post.body_plain || post.summary)}</p>
-      <span class="aq-blog-card-cta">Ler artigo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      <p class="aq-blog-card-excerpt">${truncate(excerpt)}</p>
+      <span class="aq-blog-card-cta">
+        Ler artigo
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </span>
     </div>
   `;
   return card;
@@ -71,9 +94,9 @@ export async function buildBlogSection() {
   section.id = 'aq-blog-home';
   section.innerHTML = `
     <div class="aq-section-header">
-      <span class="aq-section-tag">Conteúdo</span>
+      <span class="aq-section-tag">Do nosso blogue</span>
       <h2 class="aq-section-title">Mergulha no Mundo do <span class="aq-neon">Aquarismo</span></h2>
-      <p class="aq-section-sub">Dicas de especialistas, guias para montar o aquário perfeito, novidades do hobby e tudo sobre peixes, plantas e aquascaping — o nosso blog é o teu ponto de partida.</p>
+      <p class="aq-section-sub">Dicas de especialistas, guias passo a passo, novidades do hobby e tudo sobre peixes, plantas e aquascaping — escrito por quem vive o aquarismo todos os dias.</p>
     </div>
     <div class="aq-blog-grid" id="aq-blog-grid"></div>
     <div class="aq-blog-home-cta">
@@ -84,11 +107,9 @@ export async function buildBlogSection() {
     </div>
   `;
 
-  // Skeletons imediatos
   const grid = section.querySelector('#aq-blog-grid');
   for (let i = 0; i < 3; i++) grid.appendChild(buildSkeletonCard());
 
-  // Busca assíncrona — substitui skeletons quando chegar
   fetchPosts().then(posts => {
     grid.innerHTML = '';
     if (posts && posts.length) {

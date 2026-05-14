@@ -1,7 +1,6 @@
 /**
- * homeOrchestrator.js – v5
- * Abordagem simples: injeta secções no fim do <main> ou <body>,
- * sem depender do footer nem de polling.
+ * homeOrchestrator.js – v6
+ * Oculta secções nativas do Shopkit e injeta as nossas em ordem.
  */
 
 import { buildBrandsSection }  from './brandsSection.js';
@@ -9,22 +8,47 @@ import { buildStoreSection }   from './storeSection.js';
 import { buildFAQSection }     from './faqSection.js';
 import { buildBlogSection }    from './blogSection.js';
 
+// Seletores das secções nativas do Shopkit a ocultar
+const NATIVE_SECTIONS = [
+  'section.brands-block',
+  'section.brands.section',
+  '[data-section-type="blog"]',
+  'section.blog-section',
+  '.blog-posts-section',
+  '.section-blog',
+  '#blog',
+];
+
+function hideNativeSections() {
+  NATIVE_SECTIONS.forEach(sel => {
+    document.querySelectorAll(sel).forEach(el => {
+      el.style.setProperty('display', 'none', 'important');
+      console.log('[AQ] ocultado nativo:', sel);
+    });
+  });
+}
+
 function getContainer() {
-  // Tenta encontrar o container principal do Shopkit
-  return document.querySelector('main, #main, .main, [role="main"], #content, .content') 
+  return document.querySelector('main, #main, .main, [role="main"], #content, .content')
     || document.body;
 }
 
 function append(section, id) {
   if (!section) return;
   if (document.getElementById(id)) return;
-  const container = getContainer();
-  container.appendChild(section);
-  console.log('[AQ] injetado:', id, '→', container.tagName + (container.id ? '#'+container.id : ''));
+  getContainer().appendChild(section);
+  console.log('[AQ] injetado:', id);
 }
 
 export async function initHome() {
-  console.log('[AQ] initHome() v5 — container:', getContainer()?.tagName);
+  // Oculta secções nativas antes de injetar as nossas
+  hideNativeSections();
+
+  // Observa o DOM para ocultar secções nativas que apareçam depois
+  const obs = new MutationObserver(() => hideNativeSections());
+  obs.observe(document.body, { childList: true, subtree: true });
+  // Para o observer após 5s (já não é necessário)
+  setTimeout(() => obs.disconnect(), 5000);
 
   // 1. Marcas
   try {
