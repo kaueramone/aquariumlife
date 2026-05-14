@@ -9,7 +9,8 @@ section.brands.section {
 // Oculta o blog nativo do Shopkit na home (mantém em /blog)
 body:not(.aq-page-blog) {
   .blog-posts, .blog-section, .section-blog,
-  [data-section-type="blog"], section.blog {
+  [data-section-type="blog"], section.blog,
+  .blog.section, div.blog.section {
     display: none !important;
   }
 }
