@@ -1,42 +1,25 @@
 /**
- * faqSection.js – v1
- * Injeta uma seção FAQ em acordeão na home, antes do footer.
- * Estratégia SEO: conteúdo semântico <details>/<summary> + schema.org FAQPage.
+ * faqSection.js – v2
+ * Exporta buildFAQSection() para uso pelo homeOrchestrator.
  */
 
 const FAQS = [
-  {
-    q: 'Fazem envios para todo Portugal continental e ilhas?',
-    a: 'Sim! Enviamos para todo o Portugal continental, Madeira e Açores. Os prazos e custos de envio variam consoante o destino — consulta as condições de envio na página do carrinho.',
-  },
-  {
-    q: 'Vendem peixes, plantas e invertebrados vivos?',
-    a: 'Sim, trabalhamos com seres vivos! As encomendas de animais e plantas são cuidadosamente embaladas com materiais específicos para garantir a chegada em segurança. Em caso de problema na chegada, contacta-nos em até 2 horas com foto/vídeo.',
-  },
-  {
-    q: 'Qual o prazo de entrega habitual?',
-    a: 'Para equipamento e produtos secos, o prazo habitual é de 2 a 5 dias úteis. Para encomendas com seres vivos, os envios são feitos às terças e quartas-feiras para evitar atrasos no fim de semana.',
-  },
-  {
-    q: 'Posso visitar a vossa loja física?',
-    a: 'Claro! Temos loja física em Portugal onde podes ver os produtos ao vivo, pedir aconselhamento especializado e até trazer o teu aquário para diagnóstico. Consulta o nosso Google Maps para morada e horários.',
-  },
-  {
-    q: 'Que marcas comercializam?',
-    a: 'Trabalhamos com marcas de referência mundial como Tropica, ADA, JBL, Fluval, Oase, Dennerle, Eheim e Seachem, entre outras. Temos sempre stock renovado e acesso a encomenda especial.',
-  },
-  {
-    q: 'Como escolher o filtro certo para o meu aquário?',
-    a: 'Recomendamos um filtro capaz de filtrar pelo menos 4× o volume do aquário por hora. Por exemplo, para um aquário de 100L, procura um filtro com débito mínimo de 400 L/h. A nossa equipa pode ajudar-te a escolher a melhor solução — basta contactar-nos!',
-  },
-  {
-    q: 'Devo usar CO₂ no meu aquário plantado?',
-    a: 'Depende das plantas que pretendes manter. Para plantações simples (Anubias, Java Fern, Musgo), o CO₂ líquido ou fertilizantes são suficientes. Para aquascaping intensivo com plantas exigentes, um sistema de CO₂ gasoso faz toda a diferença na qualidade e crescimento.',
-  },
-  {
-    q: 'Aceitam devoluções?',
-    a: 'Sim, tens 14 dias para devolver produtos em bom estado, conforme a legislação europeia de comércio eletrónico. Para seres vivos, a política é diferente — lê com atenção as condições na página de Termos e Condições.',
-  },
+  { q: 'Fazem envios para todo Portugal continental e ilhas?',
+    a: 'Sim! Enviamos para todo o Portugal continental, Madeira e Açores. Os prazos e custos de envio variam consoante o destino — consulta as condições de envio na página do carrinho.' },
+  { q: 'Vendem peixes, plantas e invertebrados vivos?',
+    a: 'Sim, trabalhamos com seres vivos! As encomendas de animais e plantas são cuidadosamente embaladas com materiais específicos para garantir a chegada em segurança. Em caso de problema na chegada, contacta-nos em até 2 horas com foto/vídeo.' },
+  { q: 'Qual o prazo de entrega habitual?',
+    a: 'Para equipamento e produtos secos, o prazo habitual é de 2 a 5 dias úteis. Para encomendas com seres vivos, os envios são feitos às terças e quartas-feiras para evitar atrasos no fim de semana.' },
+  { q: 'Posso visitar a vossa loja física?',
+    a: 'Claro! Temos loja física em Sintra onde podes ver os produtos ao vivo, pedir aconselhamento especializado e até trazer o teu aquário para diagnóstico. Consulta o nosso Google Maps para morada e horários.' },
+  { q: 'Que marcas comercializam?',
+    a: 'Trabalhamos com marcas de referência mundial como Tropica, ADA, JBL, Fluval, Oase, Dennerle, Eheim e Seachem, entre outras. Temos sempre stock renovado e acesso a encomenda especial.' },
+  { q: 'Como escolher o filtro certo para o meu aquário?',
+    a: 'Recomendamos um filtro capaz de filtrar pelo menos 4× o volume do aquário por hora. Por exemplo, para um aquário de 100L, procura um filtro com débito mínimo de 400 L/h. A nossa equipa pode ajudar-te a escolher a melhor solução — basta contactar-nos!' },
+  { q: 'Devo usar CO₂ no meu aquário plantado?',
+    a: 'Depende das plantas que pretendes manter. Para plantações simples (Anubias, Java Fern, Musgo), o CO₂ líquido ou fertilizantes são suficientes. Para aquascaping intensivo com plantas exigentes, um sistema de CO₂ gasoso faz toda a diferença.' },
+  { q: 'Aceitam devoluções?',
+    a: 'Sim, tens 14 dias para devolver produtos em bom estado, conforme a legislação europeia de comércio eletrónico. Para seres vivos, a política é diferente — lê com atenção as condições na página de Termos e Condições.' },
 ];
 
 function buildFAQSchema() {
@@ -55,7 +38,11 @@ function buildFAQSchema() {
   document.head.appendChild(script);
 }
 
-function buildFAQSection() {
+export function buildFAQSection() {
+  if (document.getElementById('aq-faq')) return null;
+
+  buildFAQSchema();
+
   const section = document.createElement('section');
   section.id = 'aq-faq';
 
@@ -89,23 +76,18 @@ function buildFAQSection() {
     const answer = document.createElement('div');
     answer.className = 'aq-faq-a';
     answer.id = `aq-faq-a-${i}`;
-    answer.setAttribute('role', 'region');
     const p = document.createElement('p');
     p.textContent = a;
     answer.appendChild(p);
 
-    // Toggle
     btn.addEventListener('click', () => {
       const isOpen = btn.getAttribute('aria-expanded') === 'true';
-
-      // Fechar todos os outros
       list.querySelectorAll('.aq-faq-q[aria-expanded="true"]').forEach(other => {
         if (other !== btn) {
           other.setAttribute('aria-expanded', 'false');
           other.closest('.aq-faq-item').classList.remove('open');
         }
       });
-
       btn.setAttribute('aria-expanded', String(!isOpen));
       item.classList.toggle('open', !isOpen);
     });
@@ -119,26 +101,5 @@ function buildFAQSection() {
   return section;
 }
 
-function build() {
-  if (document.getElementById('aq-faq')) return true;
-
-  // Injetar antes do footer
-  const footer = document.querySelector('footer, #footer, .footer');
-  if (!footer) return false;
-
-  const section = buildFAQSection();
-  footer.parentNode.insertBefore(section, footer);
-  buildFAQSchema();
-  console.log('[AQ] FAQ section injetada');
-  return true;
-}
-
-export function initFAQSection() {
-  if (build()) return;
-
-  let attempts = 0;
-  const interval = setInterval(() => {
-    attempts++;
-    if (build() || attempts >= 20) clearInterval(interval);
-  }, 300);
-}
+// Mantido por compatibilidade
+export function initFAQSection() {}

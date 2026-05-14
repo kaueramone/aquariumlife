@@ -473,7 +473,7 @@
     }
 
     // Build principal ─────────────────────────────────────────────────────────────
-    function build$4() {
+    function build$1() {
       const t = hideProductsTitle();
       const m = moveComprarButtons();
       const v = injectVerTodos();
@@ -481,12 +481,12 @@
     }
 
     function initProductsSection() {
-      if (build$4()) return;
+      if (build$1()) return;
 
       let attempts = 0;
       const interval = setInterval(() => {
         attempts++;
-        if (build$4() || attempts >= 25) clearInterval(interval);
+        if (build$1() || attempts >= 25) clearInterval(interval);
       }, 250);
 
       const observer = new MutationObserver(() => {
@@ -756,24 +756,19 @@
     }
 
     /**
-     * brandsSection.js – v2
-     * - Busca marcas via API Shopkit (/api/json/brands) em vez de URLs hardcoded
-     * - Fallback para lista estática se API não responder
-     * - Sem links (apenas visuais)
+     * brandsSection.js – v3
+     * Exporta buildBrandsSection() para uso pelo homeOrchestrator.
+     * initBrandsSection() oculta o bloco nativo (chamado independentemente).
      */
 
     const BRANDS_API = '/api/json/brands';
 
-    // Fallback estático com apenas nomes (imagens virão da API)
     const BRANDS_FALLBACK = [
-      'Tropica', 'ADA', 'JBL', 'Fluval', 'Oase',
-      'Dennerle', 'Eheim', 'Seachem', 'Aquael', 'Tetra',
+      'Tropica','ADA','JBL','Fluval','Oase',
+      'Dennerle','Eheim','Seachem','Aquael','Tetra',
     ];
 
-    const BRANDS_NATIVE_SELECTORS = [
-      '.brands-item',
-      '[class*="brands"]',
-    ];
+    const NATIVE_SELECTORS = ['.brands-item','[class*="brands"]'];
 
     async function fetchBrands() {
       try {
@@ -781,13 +776,12 @@
         if (!res.ok) return null;
         const data = await res.json();
         const list = Array.isArray(data) ? data : (data.brands || data.data || null);
-        if (!list || !list.length) return null;
-        return list;
+        return (list && list.length) ? list : null;
       } catch { return null; }
     }
 
     function hideNativeBrands() {
-      for (const sel of BRANDS_NATIVE_SELECTORS) {
+      for (const sel of NATIVE_SELECTORS) {
         const el = document.querySelector(sel);
         if (!el) continue;
         let target = el;
@@ -798,41 +792,44 @@
           if (target.tagName === 'SECTION' || target.classList.contains('section') || target.classList.contains('block')) break;
         }
         target.style.setProperty('display', 'none', 'important');
-        console.log('[AQ] Brands nativo ocultado:', target.tagName, target.className);
-        return target;
+        return true;
       }
-      return null;
+      return false;
     }
 
     function buildBrandItem(label, imgSrc) {
       const div = document.createElement('div');
       div.className = 'aq-brand-item';
       div.title = label;
-
       if (imgSrc) {
         const img = document.createElement('img');
-        img.src = imgSrc;
-        img.alt = label;
-        img.loading = 'lazy';
+        img.src = imgSrc; img.alt = label; img.loading = 'lazy';
         img.onerror = function () {
           this.style.display = 'none';
-          const fallback = document.createElement('span');
-          fallback.className = 'aq-brand-fallback';
-          fallback.textContent = label;
-          div.appendChild(fallback);
+          const s = document.createElement('span');
+          s.className = 'aq-brand-fallback'; s.textContent = label;
+          div.appendChild(s);
         };
         div.appendChild(img);
       } else {
-        const span = document.createElement('span');
-        span.className = 'aq-brand-fallback';
-        span.textContent = label;
-        div.appendChild(span);
+        const s = document.createElement('span');
+        s.className = 'aq-brand-fallback'; s.textContent = label;
+        div.appendChild(s);
       }
-
       return div;
     }
 
-    function buildBrandsSection(brands) {
+    async function buildBrandsSection() {
+      if (document.getElementById('aq-brands')) return null;
+
+      const rawBrands = await fetchBrands();
+      const brands = rawBrands || BRANDS_FALLBACK;
+
+      const items = brands.map(b => ({
+        label: b.title || b.name || b,
+        img:   b.image?.url || b.logo || b.img || null,
+      }));
+
       const section = document.createElement('section');
       section.id = 'aq-brands';
 
@@ -847,332 +844,185 @@
 
       const track = document.createElement('div');
       track.className = 'aq-brands-track';
-
       const inner = document.createElement('div');
       inner.className = 'aq-brands-inner';
-
-      // Duplicar lista para loop infinito via CSS
-      const items = brands.map(b => ({
-        label: b.title || b.name || b,
-        img:   b.image?.url || b.logo || b.img || null,
-      }));
-
-      [...items, ...items].forEach(({ label, img }) => {
-        inner.appendChild(buildBrandItem(label, img));
-      });
-
+      [...items, ...items].forEach(({ label, img }) => inner.appendChild(buildBrandItem(label, img)));
       track.appendChild(inner);
       section.appendChild(track);
+
       return section;
-    }
-
-    async function build$3() {
-      if (document.getElementById('aq-brands')) return true;
-
-      const nativeHidden = hideNativeBrands();
-      if (!nativeHidden) return false;
-
-      // Tentar API; fallback para lista estática
-      let brands = await fetchBrands();
-      if (!brands) brands = BRANDS_FALLBACK;
-
-      const newSection = buildBrandsSection(brands);
-      nativeHidden.parentNode.insertBefore(newSection, nativeHidden.nextSibling);
-      console.log('[AQ] Brands section v2 injetada —', brands.length, 'marcas');
-      return true;
     }
 
     function initBrandsSection() {
-      const nativeItem = document.querySelector(BRANDS_NATIVE_SELECTORS[0]);
-      if (nativeItem) { build$3(); return; }
-
-      let attempts = 0;
-      const interval = setInterval(() => {
-        attempts++;
-        const found = BRANDS_NATIVE_SELECTORS.some(s => document.querySelector(s));
-        if (found || attempts >= 20) {
-          clearInterval(interval);
-          if (found) build$3();
-        }
-      }, 300);
-
-      const observer = new MutationObserver(() => {
-        const found = BRANDS_NATIVE_SELECTORS.some(s => document.querySelector(s));
-        if (found) { observer.disconnect(); build$3(); }
-      });
-      observer.observe(document.body || document.documentElement, { childList: true, subtree: true });
+      const tryHide = () => {
+        const found = NATIVE_SELECTORS.some(s => document.querySelector(s));
+        if (found) { hideNativeBrands(); return; }
+        const obs = new MutationObserver(() => {
+          if (NATIVE_SELECTORS.some(s => document.querySelector(s))) {
+            obs.disconnect(); hideNativeBrands();
+          }
+        });
+        obs.observe(document.body || document.documentElement, { childList: true, subtree: true });
+      };
+      tryHide();
     }
 
     /**
-     * storeSection.js – v2
-     * - Iframe Google Maps incorporado
-     * - Link Maps: https://maps.app.goo.gl/6uvfMJofFLiB5yZi6
+     * blogSection.js – v3
+     * Exporta buildBlogSection() para uso pelo homeOrchestrator.
+     * Também trata redesign de /blog e post individual.
      */
 
-    const MAPS_URL   = 'https://maps.app.goo.gl/6uvfMJofFLiB5yZi6';
-    const REVIEW_URL = 'https://maps.app.goo.gl/6uvfMJofFLiB5yZi6';
-    const MAPS_EMBED = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.6698765065166!2d-9.31225998837219!3d38.72538765671719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecf2d390fc4f5%3A0xf717a596f0307179!2sAquariumlife!5e0!3m2!1spt-PT!2spt!4v1778773494142!5m2!1spt-PT!2spt';
+    const BLOG_API  = '/api/json/blog/posts?limit=3&page=1';
+    const BLOG_HREF = '/blog';
 
-    function starSVG() {
-      return `<svg viewBox="0 0 24 24" class="aq-star filled" aria-hidden="true">
-    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-      fill="currentColor" stroke="currentColor" stroke-width="1.5"/>
-  </svg>`;
+    function formatDate(dateStr) {
+      try {
+        return new Date(dateStr).toLocaleDateString('pt-PT', { day: 'numeric', month: 'long', year: 'numeric' });
+      } catch { return dateStr; }
     }
 
-    function buildStoreSection() {
+    function truncate(str, max = 130) {
+      if (!str || str.length <= max) return str || '';
+      return str.slice(0, max).replace(/\s\S*$/, '') + '…';
+    }
+
+    function buildPostCard(post) {
+      const card = document.createElement('a');
+      card.href = post.url || `${BLOG_HREF}/${post.handle}`;
+      card.className = 'aq-blog-card';
+      card.setAttribute('aria-label', `Ler artigo: ${post.title}`);
+      const thumb = post.image?.url || post.featured_image || '';
+      card.innerHTML = `
+    <div class="aq-blog-card-img">
+      ${thumb
+        ? `<img src="${thumb}" alt="${post.title}" loading="lazy"/>`
+        : `<div class="aq-blog-card-img-placeholder"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="10" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="22" r="4" stroke="currentColor" stroke-width="2"/><path d="M6 34l10-10 6 6 8-8 12 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>`}
+      <span class="aq-blog-card-tag">Aquarismo</span>
+    </div>
+    <div class="aq-blog-card-body">
+      <time class="aq-blog-card-date">${formatDate(post.created_at || post.published_at)}</time>
+      <h3 class="aq-blog-card-title">${post.title}</h3>
+      <p class="aq-blog-card-excerpt">${truncate(post.excerpt || post.body_plain || post.summary)}</p>
+      <span class="aq-blog-card-cta">Ler artigo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+    </div>
+  `;
+      return card;
+    }
+
+    function buildSkeletonCard() {
+      const card = document.createElement('div');
+      card.className = 'aq-blog-card aq-blog-skeleton';
+      card.innerHTML = `
+    <div class="aq-blog-card-img aq-skel-img"></div>
+    <div class="aq-blog-card-body">
+      <div class="aq-skel-line aq-skel-short"></div>
+      <div class="aq-skel-line aq-skel-full"></div>
+      <div class="aq-skel-line aq-skel-medium"></div>
+    </div>
+  `;
+      return card;
+    }
+
+    async function fetchPosts() {
+      try {
+        const res = await fetch(BLOG_API);
+        if (!res.ok) return null;
+        const data = await res.json();
+        return Array.isArray(data) ? data : (data.posts || data.data || null);
+      } catch { return null; }
+    }
+
+    async function buildBlogSection() {
+      if (document.getElementById('aq-blog-home')) return null;
+
       const section = document.createElement('section');
-      section.id = 'aq-store';
-
+      section.id = 'aq-blog-home';
       section.innerHTML = `
-    <div class="aq-store-inner">
-
-      <!-- Lado esquerdo: iframe Google Maps -->
-      <div class="aq-store-map">
-        <iframe
-          src="${MAPS_EMBED}"
-          width="100%"
-          height="100%"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Localização Aquariumlife no Google Maps"
-        ></iframe>
-      </div>
-
-      <!-- Lado direito: info + CTAs -->
-      <div class="aq-store-info">
-        <div class="aq-section-header aq-store-header">
-          <span class="aq-section-tag">Loja Física</span>
-          <h2 class="aq-section-title">Visita-nos <span class="aq-neon">Pessoalmente</span></h2>
-          <p class="aq-section-sub">Vem conhecer o nosso espaço, ver os produtos ao vivo e receber aconselhamento especializado da nossa equipa.</p>
-        </div>
-
-        <ul class="aq-store-details">
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
-            </svg>
-            <span>Rinchoa, Rio de Mouro — Sintra, Portugal</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
-            </svg>
-            <span>Horários disponíveis no nosso perfil Google</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 15.92z"/>
-            </svg>
-            <span>Atendimento presencial e online</span>
-          </li>
-        </ul>
-
-        <div class="aq-store-ctas">
-          <a href="${MAPS_URL}" target="_blank" rel="noopener noreferrer" class="aq-btn-primary">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
-            </svg>
-            Como chegar
-          </a>
-          <a href="${REVIEW_URL}" target="_blank" rel="noopener noreferrer" class="aq-btn-outline aq-btn-review">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-            </svg>
-            Avaliar no Google
-          </a>
-        </div>
-
-        <div class="aq-google-rating">
-          <div class="aq-rating-badge">
-            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="aq-google-logo" aria-hidden="true">
-              <path fill="#4285F4" d="M47.5 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h13.2c-.6 3-2.3 5.5-4.9 7.2v6h7.9c4.6-4.3 7.3-10.6 7.3-17.2z"/>
-              <path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.9-6c-2.1 1.4-4.9 2.3-8 2.3-6.1 0-11.3-4.1-13.2-9.7H2.6v6.2C6.6 43.2 14.7 48 24 48z"/>
-              <path fill="#FBBC05" d="M10.8 28.8c-.5-1.4-.7-2.8-.7-4.3s.3-2.9.7-4.3v-6.2H2.6C.9 17.3 0 20.6 0 24s.9 6.7 2.6 9.5l8.2-4.7z"/>
-              <path fill="#EA4335" d="M24 9.5c3.4 0 6.5 1.2 8.9 3.5l6.7-6.7C35.9 2.4 30.4 0 24 0 14.7 0 6.6 4.8 2.6 12.5l8.2 4.7c1.9-5.6 7.1-9.7 13.2-9.7z"/>
-            </svg>
-            <div class="aq-rating-info">
-              <div class="aq-rating-stars">
-                ${starSVG()}${starSVG()}${starSVG()}${starSVG()}${starSVG()}
-              </div>
-              <span class="aq-rating-text">Avalia-nos no Google</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <div class="aq-section-header">
+      <span class="aq-section-tag">Conteúdo</span>
+      <h2 class="aq-section-title">Mergulha no Mundo do <span class="aq-neon">Aquarismo</span></h2>
+      <p class="aq-section-sub">Dicas de especialistas, guias para montar o aquário perfeito, novidades do hobby e tudo sobre peixes, plantas e aquascaping — o nosso blog é o teu ponto de partida.</p>
+    </div>
+    <div class="aq-blog-grid" id="aq-blog-grid"></div>
+    <div class="aq-blog-home-cta">
+      <a href="${BLOG_HREF}" class="aq-btn-outline">
+        Ver todos os artigos
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
     </div>
   `;
 
-      return section;
-    }
+      // Skeletons imediatos
+      const grid = section.querySelector('#aq-blog-grid');
+      for (let i = 0; i < 3; i++) grid.appendChild(buildSkeletonCard());
 
-    function build$2() {
-      if (document.getElementById('aq-store')) return true;
-      const faq    = document.getElementById('aq-faq');
-      const footer = document.querySelector('footer, #footer, .footer');
-      const anchor = faq || footer;
-      if (!anchor) return false;
-      const section = buildStoreSection();
-      anchor.parentNode.insertBefore(section, anchor);
-      console.log('[AQ] Store section v2 injetada (com iframe Maps)');
-      return true;
-    }
-
-    function initStoreSection() {
-      if (build$2()) return;
-      let attempts = 0;
-      const interval = setInterval(() => {
-        attempts++;
-        if (build$2() || attempts >= 20) clearInterval(interval);
-      }, 300);
-    }
-
-    /**
-     * faqSection.js – v1
-     * Injeta uma seção FAQ em acordeão na home, antes do footer.
-     * Estratégia SEO: conteúdo semântico <details>/<summary> + schema.org FAQPage.
-     */
-
-    const FAQS = [
-      {
-        q: 'Fazem envios para todo Portugal continental e ilhas?',
-        a: 'Sim! Enviamos para todo o Portugal continental, Madeira e Açores. Os prazos e custos de envio variam consoante o destino — consulta as condições de envio na página do carrinho.',
-      },
-      {
-        q: 'Vendem peixes, plantas e invertebrados vivos?',
-        a: 'Sim, trabalhamos com seres vivos! As encomendas de animais e plantas são cuidadosamente embaladas com materiais específicos para garantir a chegada em segurança. Em caso de problema na chegada, contacta-nos em até 2 horas com foto/vídeo.',
-      },
-      {
-        q: 'Qual o prazo de entrega habitual?',
-        a: 'Para equipamento e produtos secos, o prazo habitual é de 2 a 5 dias úteis. Para encomendas com seres vivos, os envios são feitos às terças e quartas-feiras para evitar atrasos no fim de semana.',
-      },
-      {
-        q: 'Posso visitar a vossa loja física?',
-        a: 'Claro! Temos loja física em Portugal onde podes ver os produtos ao vivo, pedir aconselhamento especializado e até trazer o teu aquário para diagnóstico. Consulta o nosso Google Maps para morada e horários.',
-      },
-      {
-        q: 'Que marcas comercializam?',
-        a: 'Trabalhamos com marcas de referência mundial como Tropica, ADA, JBL, Fluval, Oase, Dennerle, Eheim e Seachem, entre outras. Temos sempre stock renovado e acesso a encomenda especial.',
-      },
-      {
-        q: 'Como escolher o filtro certo para o meu aquário?',
-        a: 'Recomendamos um filtro capaz de filtrar pelo menos 4× o volume do aquário por hora. Por exemplo, para um aquário de 100L, procura um filtro com débito mínimo de 400 L/h. A nossa equipa pode ajudar-te a escolher a melhor solução — basta contactar-nos!',
-      },
-      {
-        q: 'Devo usar CO₂ no meu aquário plantado?',
-        a: 'Depende das plantas que pretendes manter. Para plantações simples (Anubias, Java Fern, Musgo), o CO₂ líquido ou fertilizantes são suficientes. Para aquascaping intensivo com plantas exigentes, um sistema de CO₂ gasoso faz toda a diferença na qualidade e crescimento.',
-      },
-      {
-        q: 'Aceitam devoluções?',
-        a: 'Sim, tens 14 dias para devolver produtos em bom estado, conforme a legislação europeia de comércio eletrónico. Para seres vivos, a política é diferente — lê com atenção as condições na página de Termos e Condições.',
-      },
-    ];
-
-    function buildFAQSchema() {
-      const schema = {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: FAQS.map(({ q, a }) => ({
-          '@type': 'Question',
-          name: q,
-          acceptedAnswer: { '@type': 'Answer', text: a },
-        })),
-      };
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.textContent = JSON.stringify(schema);
-      document.head.appendChild(script);
-    }
-
-    function buildFAQSection() {
-      const section = document.createElement('section');
-      section.id = 'aq-faq';
-
-      const header = document.createElement('div');
-      header.className = 'aq-section-header';
-      header.innerHTML = `
-    <span class="aq-section-tag">Dúvidas</span>
-    <h2 class="aq-section-title">Perguntas <span class="aq-neon">Frequentes</span></h2>
-    <p class="aq-section-sub">Tudo o que precisas de saber antes de comprar</p>
-  `;
-      section.appendChild(header);
-
-      const list = document.createElement('div');
-      list.className = 'aq-faq-list';
-
-      FAQS.forEach(({ q, a }, i) => {
-        const item = document.createElement('div');
-        item.className = 'aq-faq-item';
-
-        const btn = document.createElement('button');
-        btn.className = 'aq-faq-q';
-        btn.setAttribute('aria-expanded', 'false');
-        btn.setAttribute('aria-controls', `aq-faq-a-${i}`);
-        btn.innerHTML = `
-      <span>${q}</span>
-      <svg class="aq-faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    `;
-
-        const answer = document.createElement('div');
-        answer.className = 'aq-faq-a';
-        answer.id = `aq-faq-a-${i}`;
-        answer.setAttribute('role', 'region');
-        const p = document.createElement('p');
-        p.textContent = a;
-        answer.appendChild(p);
-
-        // Toggle
-        btn.addEventListener('click', () => {
-          const isOpen = btn.getAttribute('aria-expanded') === 'true';
-
-          // Fechar todos os outros
-          list.querySelectorAll('.aq-faq-q[aria-expanded="true"]').forEach(other => {
-            if (other !== btn) {
-              other.setAttribute('aria-expanded', 'false');
-              other.closest('.aq-faq-item').classList.remove('open');
-            }
-          });
-
-          btn.setAttribute('aria-expanded', String(!isOpen));
-          item.classList.toggle('open', !isOpen);
-        });
-
-        item.appendChild(btn);
-        item.appendChild(answer);
-        list.appendChild(item);
+      // Busca assíncrona — substitui skeletons quando chegar
+      fetchPosts().then(posts => {
+        grid.innerHTML = '';
+        if (posts && posts.length) {
+          posts.slice(0, 3).forEach(p => grid.appendChild(buildPostCard(p)));
+        } else {
+          grid.innerHTML = `<div class="aq-blog-empty"><p>Em breve novos artigos sobre aquarismo!</p></div>`;
+        }
+        console.log('[AQ] Blog posts carregados:', posts?.length || 0);
       });
 
-      section.appendChild(list);
       return section;
     }
 
-    function build$1() {
-      if (document.getElementById('aq-faq')) return true;
+    // ── Redesign /blog e post individual ─────────────────────────────────────────
 
-      // Injetar antes do footer
-      const footer = document.querySelector('footer, #footer, .footer');
-      if (!footer) return false;
+    function redesignBlogListing() {
+      const path = window.location.pathname;
+      if (path !== '/blog' && path !== '/blog/') return;
+      if (document.body.classList.contains('aq-blog-styled')) return;
+      document.body.classList.add('aq-blog-styled', 'aq-page-blog');
 
-      const section = buildFAQSection();
-      footer.parentNode.insertBefore(section, footer);
-      buildFAQSchema();
-      console.log('[AQ] FAQ section injetada');
-      return true;
+      const pageTitle = document.querySelector('.page-title, .blog-title, h1.title, .section-title');
+      if (pageTitle) {
+        const wrap = document.createElement('div');
+        wrap.className = 'aq-blog-page-header';
+        wrap.innerHTML = `
+      <span class="aq-section-tag">Blog</span>
+      <h1 class="aq-section-title">Mundo do <span class="aq-neon">Aquarismo</span></h1>
+      <p class="aq-section-sub">Dicas de especialistas, guias passo-a-passo e novidades do mundo aquático</p>
+    `;
+        const container = pageTitle.closest('section, .container, .row');
+        container?.parentNode?.insertBefore(wrap, container);
+        pageTitle.style.setProperty('display', 'none', 'important');
+      }
+
+      setTimeout(() => {
+        document.querySelectorAll('.post, .blog-item, [class*="post-item"]').forEach(card => {
+          card.classList.add('aq-blog-native-card');
+        });
+      }, 500);
     }
 
-    function initFAQSection() {
-      if (build$1()) return;
+    function redesignBlogPost() {
+      const path = window.location.pathname;
+      if (!path.startsWith('/blog/') || path === '/blog/') return;
+      if (document.body.classList.contains('aq-post-styled')) return;
+      document.body.classList.add('aq-post-styled', 'aq-page-post');
 
-      let attempts = 0;
-      const interval = setInterval(() => {
-        attempts++;
-        if (build$1() || attempts >= 20) clearInterval(interval);
-      }, 300);
+      document.querySelector('.post-title, .article-title, h1.title, .blog-post-title')?.classList.add('aq-post-title');
+      document.querySelectorAll('.post-date, .post-meta, .article-meta').forEach(el => el.classList.add('aq-post-meta'));
+      document.querySelectorAll('.post-image, .post-thumbnail, .article-image').forEach(el => el.classList.add('aq-post-featured-img'));
+      document.querySelectorAll('.post-body, .post-content, .article-body').forEach(el => el.classList.add('aq-post-body'));
+
+      if (!document.getElementById('aq-post-back')) {
+        const btn = document.createElement('a');
+        btn.id = 'aq-post-back'; btn.href = BLOG_HREF; btn.className = 'aq-post-back-btn';
+        btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg> Voltar ao Blog`;
+        document.querySelector('article, .post-wrapper, main > .container')?.prepend(btn);
+      }
+    }
+
+    function initBlogSection() {
+      const path = window.location.pathname;
+      if (path === '/blog' || path === '/blog/') redesignBlogListing();
+      else if (path.startsWith('/blog/')) redesignBlogPost();
     }
 
     /**
@@ -1305,242 +1155,248 @@
     }
 
     /**
-     * blogSection.js – v2
-     * 1. Home: 3 cards dos últimos posts + botão "Ver todos" centralizado
-     * 2. Página /blog: redesenha listagem
-     * 3. Página de post: redesenha artigo
+     * storeSection.js – v3
+     * Exporta buildStoreSection() para uso pelo homeOrchestrator.
      */
 
-    const BLOG_API  = '/api/json/blog/posts?limit=3&page=1';
-    const BLOG_HREF = '/blog';
+    const MAPS_URL   = 'https://maps.app.goo.gl/6uvfMJofFLiB5yZi6';
+    const REVIEW_URL = 'https://maps.app.goo.gl/6uvfMJofFLiB5yZi6';
+    const MAPS_EMBED = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.6698765065166!2d-9.31225998837219!3d38.72538765671719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecf2d390fc4f5%3A0xf717a596f0307179!2sAquariumlife!5e0!3m2!1spt-PT!2spt!4v1778773494142!5m2!1spt-PT!2spt';
 
-    function isPage(path) {
-      return window.location.pathname.startsWith(path);
+    function starSVG() {
+      return `<svg viewBox="0 0 24 24" class="aq-star filled" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor" stroke="currentColor" stroke-width="1.5"/></svg>`;
     }
 
-    function formatDate(dateStr) {
-      try {
-        return new Date(dateStr).toLocaleDateString('pt-PT', {
-          day: 'numeric', month: 'long', year: 'numeric',
-        });
-      } catch { return dateStr; }
-    }
+    function buildStoreSection() {
+      if (document.getElementById('aq-store')) return null;
 
-    function truncate(str, max = 130) {
-      if (!str || str.length <= max) return str || '';
-      return str.slice(0, max).replace(/\s\S*$/, '') + '…';
-    }
-
-    // ─── Card de post ─────────────────────────────────────────────────────────────
-
-    function buildPostCard(post) {
-      const card = document.createElement('a');
-      card.href = post.url || `${BLOG_HREF}/${post.handle}`;
-      card.className = 'aq-blog-card';
-      card.setAttribute('aria-label', `Ler artigo: ${post.title}`);
-
-      const thumb = post.image?.url || post.featured_image || '';
-
-      card.innerHTML = `
-    <div class="aq-blog-card-img">
-      ${thumb
-        ? `<img src="${thumb}" alt="${post.title}" loading="lazy"/>`
-        : `<div class="aq-blog-card-img-placeholder">
-             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <rect x="6" y="10" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2"/>
-               <circle cx="18" cy="22" r="4" stroke="currentColor" stroke-width="2"/>
-               <path d="M6 34l10-10 6 6 8-8 12 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-             </svg>
-           </div>`}
-      <span class="aq-blog-card-tag">Aquarismo</span>
-    </div>
-    <div class="aq-blog-card-body">
-      <time class="aq-blog-card-date">${formatDate(post.created_at || post.published_at)}</time>
-      <h3 class="aq-blog-card-title">${post.title}</h3>
-      <p class="aq-blog-card-excerpt">${truncate(post.excerpt || post.body_plain || post.summary)}</p>
-      <span class="aq-blog-card-cta">
-        Ler artigo
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M5 12h14M12 5l7 7-7 7"/>
-        </svg>
-      </span>
-    </div>
-  `;
-      return card;
-    }
-
-    // Cards de placeholder enquanto aguarda API
-    function buildSkeletonCard() {
-      const card = document.createElement('div');
-      card.className = 'aq-blog-card aq-blog-skeleton';
-      card.innerHTML = `
-    <div class="aq-blog-card-img aq-skel-img"></div>
-    <div class="aq-blog-card-body">
-      <div class="aq-skel-line aq-skel-short"></div>
-      <div class="aq-skel-line aq-skel-full"></div>
-      <div class="aq-skel-line aq-skel-medium"></div>
-    </div>
-  `;
-      return card;
-    }
-
-    async function fetchPosts() {
-      try {
-        const res = await fetch(BLOG_API);
-        if (!res.ok) return null;
-        const data = await res.json();
-        return Array.isArray(data) ? data : (data.posts || data.data || null);
-      } catch { return null; }
-    }
-
-    // ─── Seção na Home ────────────────────────────────────────────────────────────
-
-    function buildBlogHomeSection() {
       const section = document.createElement('section');
-      section.id = 'aq-blog-home';
+      section.id = 'aq-store';
 
       section.innerHTML = `
-    <div class="aq-section-header">
-      <span class="aq-section-tag">Conteúdo</span>
-      <h2 class="aq-section-title">Mergulha no Mundo do <span class="aq-neon">Aquarismo</span></h2>
-      <p class="aq-section-sub">
-        Dicas de especialistas, guias para montar o aquário perfeito, novidades do hobby
-        e tudo sobre peixes, plantas e aquascaping — o nosso blog é o teu ponto de partida.
-      </p>
-    </div>
-    <div class="aq-blog-grid" id="aq-blog-grid"></div>
-    <div class="aq-blog-home-cta">
-      <a href="${BLOG_HREF}" class="aq-btn-outline">
-        Ver todos os artigos
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M5 12h14M12 5l7 7-7 7"/>
-        </svg>
-      </a>
+    <div class="aq-store-inner">
+      <div class="aq-store-map">
+        <iframe
+          src="${MAPS_EMBED}"
+          width="100%" height="100%"
+          style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Localização Aquariumlife no Google Maps"
+        ></iframe>
+      </div>
+      <div class="aq-store-info">
+        <div class="aq-section-header aq-store-header">
+          <span class="aq-section-tag">Loja Física</span>
+          <h2 class="aq-section-title">Visita-nos <span class="aq-neon">Pessoalmente</span></h2>
+          <p class="aq-section-sub">Vem conhecer o nosso espaço, ver os produtos ao vivo e receber aconselhamento especializado da nossa equipa.</p>
+        </div>
+        <ul class="aq-store-details">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Rinchoa, Rio de Mouro — Sintra, Portugal</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <span>Horários disponíveis no nosso perfil Google</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 15.92z"/></svg>
+            <span>Atendimento presencial e online</span>
+          </li>
+        </ul>
+        <div class="aq-store-ctas">
+          <a href="${MAPS_URL}" target="_blank" rel="noopener noreferrer" class="aq-btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Como chegar
+          </a>
+          <a href="${REVIEW_URL}" target="_blank" rel="noopener noreferrer" class="aq-btn-outline aq-btn-review">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Avaliar no Google
+          </a>
+        </div>
+        <div class="aq-google-rating">
+          <div class="aq-rating-badge">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="aq-google-logo" aria-hidden="true">
+              <path fill="#4285F4" d="M47.5 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h13.2c-.6 3-2.3 5.5-4.9 7.2v6h7.9c4.6-4.3 7.3-10.6 7.3-17.2z"/>
+              <path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.9-6c-2.1 1.4-4.9 2.3-8 2.3-6.1 0-11.3-4.1-13.2-9.7H2.6v6.2C6.6 43.2 14.7 48 24 48z"/>
+              <path fill="#FBBC05" d="M10.8 28.8c-.5-1.4-.7-2.8-.7-4.3s.3-2.9.7-4.3v-6.2H2.6C.9 17.3 0 20.6 0 24s.9 6.7 2.6 9.5l8.2-4.7z"/>
+              <path fill="#EA4335" d="M24 9.5c3.4 0 6.5 1.2 8.9 3.5l6.7-6.7C35.9 2.4 30.4 0 24 0 14.7 0 6.6 4.8 2.6 12.5l8.2 4.7c1.9-5.6 7.1-9.7 13.2-9.7z"/>
+            </svg>
+            <div class="aq-rating-info">
+              <div class="aq-rating-stars">${starSVG()}${starSVG()}${starSVG()}${starSVG()}${starSVG()}</div>
+              <span class="aq-rating-text">Avalia-nos no Google</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   `;
 
       return section;
     }
 
-    async function initBlogHome() {
-      if (document.getElementById('aq-blog-home')) return true;
+    /**
+     * faqSection.js – v2
+     * Exporta buildFAQSection() para uso pelo homeOrchestrator.
+     */
 
-      const faq    = document.getElementById('aq-faq');
-      const store  = document.getElementById('aq-store');
-      const footer = document.querySelector('footer, #footer, .footer');
-      const anchor = faq || store || footer;
-      if (!anchor) return false;
+    const FAQS = [
+      { q: 'Fazem envios para todo Portugal continental e ilhas?',
+        a: 'Sim! Enviamos para todo o Portugal continental, Madeira e Açores. Os prazos e custos de envio variam consoante o destino — consulta as condições de envio na página do carrinho.' },
+      { q: 'Vendem peixes, plantas e invertebrados vivos?',
+        a: 'Sim, trabalhamos com seres vivos! As encomendas de animais e plantas são cuidadosamente embaladas com materiais específicos para garantir a chegada em segurança. Em caso de problema na chegada, contacta-nos em até 2 horas com foto/vídeo.' },
+      { q: 'Qual o prazo de entrega habitual?',
+        a: 'Para equipamento e produtos secos, o prazo habitual é de 2 a 5 dias úteis. Para encomendas com seres vivos, os envios são feitos às terças e quartas-feiras para evitar atrasos no fim de semana.' },
+      { q: 'Posso visitar a vossa loja física?',
+        a: 'Claro! Temos loja física em Sintra onde podes ver os produtos ao vivo, pedir aconselhamento especializado e até trazer o teu aquário para diagnóstico. Consulta o nosso Google Maps para morada e horários.' },
+      { q: 'Que marcas comercializam?',
+        a: 'Trabalhamos com marcas de referência mundial como Tropica, ADA, JBL, Fluval, Oase, Dennerle, Eheim e Seachem, entre outras. Temos sempre stock renovado e acesso a encomenda especial.' },
+      { q: 'Como escolher o filtro certo para o meu aquário?',
+        a: 'Recomendamos um filtro capaz de filtrar pelo menos 4× o volume do aquário por hora. Por exemplo, para um aquário de 100L, procura um filtro com débito mínimo de 400 L/h. A nossa equipa pode ajudar-te a escolher a melhor solução — basta contactar-nos!' },
+      { q: 'Devo usar CO₂ no meu aquário plantado?',
+        a: 'Depende das plantas que pretendes manter. Para plantações simples (Anubias, Java Fern, Musgo), o CO₂ líquido ou fertilizantes são suficientes. Para aquascaping intensivo com plantas exigentes, um sistema de CO₂ gasoso faz toda a diferença.' },
+      { q: 'Aceitam devoluções?',
+        a: 'Sim, tens 14 dias para devolver produtos em bom estado, conforme a legislação europeia de comércio eletrónico. Para seres vivos, a política é diferente — lê com atenção as condições na página de Termos e Condições.' },
+    ];
 
-      // Injeta a seção imediatamente com skeletons
-      const section = buildBlogHomeSection();
-      anchor.parentNode.insertBefore(section, anchor);
-
-      const grid = section.querySelector('#aq-blog-grid');
-
-      // Mostrar 3 skeletons enquanto carrega
-      for (let i = 0; i < 3; i++) grid.appendChild(buildSkeletonCard());
-
-      // Buscar posts reais
-      const posts = await fetchPosts();
-      grid.innerHTML = '';
-
-      if (posts && posts.length) {
-        posts.slice(0, 3).forEach(p => grid.appendChild(buildPostCard(p)));
-      } else {
-        // Fallback: 3 placeholders com mensagem
-        grid.innerHTML = `
-      <div class="aq-blog-empty">
-        <p>Em breve novos artigos sobre aquarismo!</p>
-        <a href="${BLOG_HREF}" class="aq-btn-outline" style="margin-top:16px;display:inline-flex">Visitar o Blog</a>
-      </div>
-    `;
-      }
-
-      console.log('[AQ] Blog home v2 injetado —', posts?.length || 0, 'posts');
-      return true;
+    function buildFAQSchema() {
+      const schema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: FAQS.map(({ q, a }) => ({
+          '@type': 'Question',
+          name: q,
+          acceptedAnswer: { '@type': 'Answer', text: a },
+        })),
+      };
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(schema);
+      document.head.appendChild(script);
     }
 
-    // ─── Redesign /blog ───────────────────────────────────────────────────────────
+    function buildFAQSection() {
+      if (document.getElementById('aq-faq')) return null;
 
-    function redesignBlogListing() {
-      if (!isPage('/blog') || window.location.pathname.length > 6) return;
-      if (document.body.classList.contains('aq-blog-styled')) return;
-      document.body.classList.add('aq-blog-styled', 'aq-page-blog');
+      buildFAQSchema();
 
-      const pageTitle = document.querySelector('.page-title, .blog-title, h1.title, .section-title');
-      if (pageTitle) {
-        const wrap = document.createElement('div');
-        wrap.className = 'aq-blog-page-header';
-        wrap.innerHTML = `
-      <span class="aq-section-tag">Blog</span>
-      <h1 class="aq-section-title">Mundo do <span class="aq-neon">Aquarismo</span></h1>
-      <p class="aq-section-sub">Dicas de especialistas, guias passo-a-passo e novidades do mundo aquático</p>
-    `;
-        const container = pageTitle.closest('section, .container, .row');
-        container?.parentNode?.insertBefore(wrap, container);
-        pageTitle.style.setProperty('display', 'none', 'important');
-      }
+      const section = document.createElement('section');
+      section.id = 'aq-faq';
 
-      setTimeout(() => {
-        document.querySelectorAll('.post, .blog-item, [class*="post-item"]').forEach(card => {
-          card.classList.add('aq-blog-native-card');
-        });
-      }, 500);
+      const header = document.createElement('div');
+      header.className = 'aq-section-header';
+      header.innerHTML = `
+    <span class="aq-section-tag">Dúvidas</span>
+    <h2 class="aq-section-title">Perguntas <span class="aq-neon">Frequentes</span></h2>
+    <p class="aq-section-sub">Tudo o que precisas de saber antes de comprar</p>
+  `;
+      section.appendChild(header);
 
-      console.log('[AQ] Blog listing redesigned');
-    }
+      const list = document.createElement('div');
+      list.className = 'aq-faq-list';
 
-    // ─── Redesign post individual ─────────────────────────────────────────────────
+      FAQS.forEach(({ q, a }, i) => {
+        const item = document.createElement('div');
+        item.className = 'aq-faq-item';
 
-    function redesignBlogPost() {
-      const path = window.location.pathname;
-      if (!path.startsWith('/blog/') || path === '/blog/') return;
-      if (document.body.classList.contains('aq-post-styled')) return;
-      document.body.classList.add('aq-post-styled', 'aq-page-post');
-
-      document.querySelector('.post-title, .article-title, h1.title, .blog-post-title')?.classList.add('aq-post-title');
-      document.querySelectorAll('.post-date, .post-meta, .article-meta, .blog-meta').forEach(el => el.classList.add('aq-post-meta'));
-      document.querySelectorAll('.post-image, .post-thumbnail, .article-image').forEach(el => el.classList.add('aq-post-featured-img'));
-      document.querySelectorAll('.post-body, .post-content, .article-body, .blog-post-body').forEach(el => el.classList.add('aq-post-body'));
-
-      if (!document.getElementById('aq-post-back')) {
-        const btn = document.createElement('a');
-        btn.id = 'aq-post-back';
-        btn.href = BLOG_HREF;
-        btn.className = 'aq-post-back-btn';
+        const btn = document.createElement('button');
+        btn.className = 'aq-faq-q';
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-controls', `aq-faq-a-${i}`);
         btn.innerHTML = `
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M19 12H5M12 5l-7 7 7 7"/>
+      <span>${q}</span>
+      <svg class="aq-faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      Voltar ao Blog
     `;
-        const container = document.querySelector('article, .post-wrapper, .blog-post, main > .container');
-        if (container) container.prepend(btn);
-      }
 
-      console.log('[AQ] Blog post redesigned');
+        const answer = document.createElement('div');
+        answer.className = 'aq-faq-a';
+        answer.id = `aq-faq-a-${i}`;
+        const p = document.createElement('p');
+        p.textContent = a;
+        answer.appendChild(p);
+
+        btn.addEventListener('click', () => {
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+          list.querySelectorAll('.aq-faq-q[aria-expanded="true"]').forEach(other => {
+            if (other !== btn) {
+              other.setAttribute('aria-expanded', 'false');
+              other.closest('.aq-faq-item').classList.remove('open');
+            }
+          });
+          btn.setAttribute('aria-expanded', String(!isOpen));
+          item.classList.toggle('open', !isOpen);
+        });
+
+        item.appendChild(btn);
+        item.appendChild(answer);
+        list.appendChild(item);
+      });
+
+      section.appendChild(list);
+      return section;
     }
 
-    // ─── Init ─────────────────────────────────────────────────────────────────────
+    /**
+     * homeOrchestrator.js – v1
+     * Garante a ordem exata das seções da home, injetando-as sequencialmente
+     * ANTES do footer, na ordem correta:
+     *
+     *  [Shopkit nativo: banner, categorias, produtos]
+     *  ↓ aq-brands      (marcas)
+     *  ↓ aq-store       (loja física + mapa)
+     *  ↓ aq-faq         (perguntas frequentes)
+     *  ↓ aq-blog-home   (últimos posts)
+     *  [footer]
+     *
+     * Cada módulo expõe buildSection() que retorna um HTMLElement pronto.
+     * O orquestrador insere tudo de uma vez, em sequência, antes do footer.
+     */
 
-    function initBlogSection() {
-      const path = window.location.pathname;
 
-      if (path === '/' || path === '' || path === '/index') {
-        const tryHome = async () => {
-          const footer = document.querySelector('footer, #footer, .footer');
-          if (footer) { await initBlogHome(); return; }
-          setTimeout(tryHome, 400);
-        };
-        tryHome();
-        return;
-      }
+    function waitForFooter(cb, maxMs = 6000) {
+      const footer = document.querySelector('footer, #footer, .footer');
+      if (footer) { cb(footer); return; }
+      const start = Date.now();
+      const interval = setInterval(() => {
+        const f = document.querySelector('footer, #footer, .footer');
+        if (f || Date.now() - start > maxMs) {
+          clearInterval(interval);
+          if (f) cb(f);
+        }
+      }, 200);
+    }
 
-      if (path === '/blog' || path === '/blog/') {
-        redesignBlogListing();
-      } else if (path.startsWith('/blog/')) {
-        redesignBlogPost();
-      }
+    async function initHome() {
+      waitForFooter(async (footer) => {
+
+        // 1. Marcas (síncrono — aguarda API internamente, retorna section)
+        const brands = await buildBrandsSection();
+        if (brands && !document.getElementById('aq-brands')) {
+          footer.parentNode.insertBefore(brands, footer);
+        }
+
+        // 2. Loja física + Maps (síncrono)
+        const store = buildStoreSection();
+        if (store && !document.getElementById('aq-store')) {
+          footer.parentNode.insertBefore(store, footer);
+        }
+
+        // 3. FAQ (síncrono)
+        const faq = buildFAQSection();
+        if (faq && !document.getElementById('aq-faq')) {
+          footer.parentNode.insertBefore(faq, footer);
+        }
+
+        // 4. Blog (async — busca posts)
+        const blog = await buildBlogSection();
+        if (blog && !document.getElementById('aq-blog-home')) {
+          footer.parentNode.insertBefore(blog, footer);
+        }
+
+        console.log('[AQ] Home orquestrada: brands → store → faq → blog');
+      });
     }
 
     // JS Entry Point for AquariumLife Custom Layer
@@ -1552,12 +1408,22 @@
       buildDesktopNav();
       initCategorySection();
       initProductsSection();
-      initBrandsSection();
-      initStoreSection();
-      initFAQSection();
       initCartStyles();
       initTrustSeals();
+
+      // Oculta bloco nativo de marcas independentemente do orquestrador
+      initBrandsSection();
+
+      // Redesign de /blog e post individual (não faz nada na home)
       initBlogSection();
+
+      // Orquestrador: injeta seções da home em ordem garantida
+      // brands → store → faq → blog
+      const path = window.location.pathname;
+      if (path === '/' || path === '' || path === '/index') {
+        initHome();
+      }
+
       console.log('[AQ] Premium Layer Loaded — readyState:', document.readyState);
     }
 

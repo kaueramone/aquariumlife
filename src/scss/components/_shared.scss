@@ -1,11 +1,48 @@
 @use '../base/variables' as *;
 
 // ── Componentes Partilhados ──────────────────────────────────────────────────
-// Cabeçalhos de seção reutilizáveis em toda a home
+
+// Padding padrão de todas as seções premium
+#aq-brands,
+#aq-store,
+#aq-faq,
+#aq-blog-home {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (max-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+// Linha divisória sutil entre seções
+#aq-brands,
+#aq-store,
+#aq-faq,
+#aq-blog-home {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 900px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(8, 238, 188, 0.15), transparent);
+    pointer-events: none;
+  }
+}
+
+// ── Cabeçalhos de seção ───────────────────────────────────────────────────────
 
 .aq-section-header {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 56px;
 }
 
 .aq-section-tag {
