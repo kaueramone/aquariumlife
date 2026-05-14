@@ -756,17 +756,43 @@
     }
 
     /**
-     * brandsSection.js – v6
-     * Extrai marcas do DOM nativo do Shopkit (já presentes na página),
-     * oculta a section nativa e injeta o carrossel premium.
+     * brandsSection.js – v7
+     * Mapa hardcoded de marcas com logos do CDN Shopkit + links.
+     * Fallback para DOM nativo se disponível.
      */
 
-    const BRANDS_FALLBACK = [
-      'Tropica','ADA','JBL','Fluval','Oase',
-      'Dennerle','Eheim','Seachem','Aquael','Tetra',
+    const BASE = 'https://www.aquariumlife.pt/brand/';
+
+    // Mapa completo: handle → { label, img, href }
+    const BRANDS_MAP = [
+      { label: 'Oase',             href: `${BASE}oase`,             img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1e9e814-155547-oase.png' },
+      { label: 'UNS',              href: `${BASE}uns`,              img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bf1a5d4-223057-uns.png' },
+      { label: 'ME',               href: `${BASE}me`,               img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/25baccc-224313-meaquarist.png' },
+      { label: 'Easy Life',        href: `${BASE}easy-life`,        img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/58cd74f-224703-easy-life-logo-white.svg' },
+      { label: 'Seachem',          href: `${BASE}seachem`,          img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/81c433b-230814-logo2x.png' },
+      { label: 'Hikari',           href: `${BASE}hiraki`,           img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/c6662f4-230041-hikari_logo.png' },
+      { label: 'WeekAqua',         href: `${BASE}weekaqua`,         img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d26904d-225829-weekaqua.png' },
+      { label: 'Tropica',          href: `${BASE}tropica-plants`,   img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/82414e4-225722-tropica.png' },
+      { label: 'Milwaukee',        href: `${BASE}milwaukee`,        img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b191a88-232705-logo-white.png' },
+      { label: 'Salifert',         href: `${BASE}salifert`,         img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/40e8d92-232153-salifert.png' },
+      { label: 'ICA',              href: `${BASE}ica`,              img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/248e14a-231838-ica_logo_vertical.svg' },
+      { label: 'ESHA',             href: `${BASE}esha`,             img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/68ba01d-231641-esha-logo-white-2020.svg' },
+      { label: 'Sera',             href: `${BASE}sera`,             img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/641f247-231444-sera.png' },
+      { label: 'Superfish',        href: `${BASE}superfish`,        img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b5a9cb8-234638-superfish.png' },
+      { label: 'Colombo',          href: `${BASE}colombo`,          img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3ee83b1-233903-logo-colombo-awg.svg' },
+      { label: 'Tropical',         href: `${BASE}tropical`,         img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d106650-233758-tropical.png' },
+      { label: 'AS Aquaristik',    href: `${BASE}as`,               img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3344f1f-233301-as-aquaristik-logo.svg' },
+      // Sem logo ainda — só texto clicável
+      { label: 'Hydra',            href: `${BASE}hydra`,            img: null },
+      { label: 'Twinstar',         href: `${BASE}twinstar`,         img: null },
+      { label: 'Aquael',           href: `${BASE}aquael`,           img: null },
+      { label: 'Dennerle',         href: `${BASE}dennerle`,         img: null },
+      { label: 'ADA',              href: `${BASE}ada`,              img: null },
+      { label: 'Eheim',            href: `${BASE}eheim`,            img: null },
+      { label: 'Juwel',            href: `${BASE}juwel`,            img: null },
+      { label: 'Chihiros',         href: `${BASE}chihiros-led`,     img: null },
     ];
 
-    // Oculta a section nativa — seletor preciso baseado no HTML real do Shopkit
     function hideNativeBrands() {
       const native = document.querySelector('section.brands-block, section.brands.section');
       if (native) {
@@ -777,53 +803,39 @@
       return false;
     }
 
-    // Extrai marcas do DOM nativo (mais fiável que a API)
-    function extractBrandsFromDOM() {
-      const items = document.querySelectorAll(
-        'section.brands-block .brands-item:not(.slick-cloned), ' +
-        'section.brands.section .brands-item:not(.slick-cloned)'
-      );
-      if (!items.length) return null;
-      const brands = [];
-      items.forEach(item => {
-        const img = item.querySelector('img');
-        const label = img?.alt || img?.title || item.querySelector('a')?.textContent?.trim() || '';
-        const src = img?.src || '';
-        // Ignora imagens de placeholder do Shopkit
-        const imgFinal = src.includes('no-img') ? null : src;
-        if (label) brands.push({ label, img: imgFinal });
-      });
-      return brands.length ? brands : null;
-    }
+    function buildBrandItem({ label, img: imgSrc, href }) {
+      const el = document.createElement(href ? 'a' : 'div');
+      el.className = 'aq-brand-item';
+      el.title = label;
+      if (href) {
+        el.href = href;
+        el.rel = 'noopener';
+      }
 
-    function buildBrandItem({ label, img: imgSrc }) {
-      const div = document.createElement('div');
-      div.className = 'aq-brand-item';
-      div.title = label;
       if (imgSrc) {
         const img = document.createElement('img');
-        img.src = imgSrc; img.alt = label; img.loading = 'lazy';
+        img.src = imgSrc;
+        img.alt = label;
+        img.loading = 'lazy';
         img.onerror = function () {
           this.style.display = 'none';
           const s = document.createElement('span');
-          s.className = 'aq-brand-fallback'; s.textContent = label;
-          div.appendChild(s);
+          s.className = 'aq-brand-fallback';
+          s.textContent = label;
+          el.appendChild(s);
         };
-        div.appendChild(img);
+        el.appendChild(img);
       } else {
         const s = document.createElement('span');
-        s.className = 'aq-brand-fallback'; s.textContent = label;
-        div.appendChild(s);
+        s.className = 'aq-brand-fallback';
+        s.textContent = label;
+        el.appendChild(s);
       }
-      return div;
+      return el;
     }
 
     async function buildBrandsSection() {
       if (document.getElementById('aq-brands')) return null;
-
-      // Extrai do DOM nativo (já disponível); fallback para lista estática
-      const extracted = extractBrandsFromDOM();
-      const items = extracted || BRANDS_FALLBACK.map(label => ({ label, img: null }));
 
       const section = document.createElement('section');
       section.id = 'aq-brands';
@@ -841,12 +853,14 @@
       track.className = 'aq-brands-track';
       const inner = document.createElement('div');
       inner.className = 'aq-brands-inner';
+
       // Duplica para scroll infinito
-      [...items, ...items].forEach(item => inner.appendChild(buildBrandItem(item)));
+      [...BRANDS_MAP, ...BRANDS_MAP].forEach(brand => inner.appendChild(buildBrandItem(brand)));
+
       track.appendChild(inner);
       section.appendChild(track);
 
-      console.log('[AQ] brands extraídas do DOM:', items.length);
+      console.log('[AQ] brands carregadas:', BRANDS_MAP.length);
       return section;
     }
 
@@ -1459,5 +1473,6 @@
     // build Thu May 14 21:46:56 HVGMT 2026
     // Thu May 14 21:59:55 HVGMT 2026
     // Thu May 14 22:11:14 HVGMT 2026
+    // Thu May 14 23:49:01 HVGMT 2026
 
 })();
