@@ -501,11 +501,9 @@
     }
 
     /**
-     * cartStyles.js - v4
-     * - Tema escuro no mini-cart popup (.cart-list)
-     * - Badge ! no icone do carrinho
-     * - Tema escuro + centralizacao no popup pos-compra (modal Bootstrap/Shopkit)
-     * - Observer escuta class e style para capturar modal ja existente no DOM
+     * cartStyles.js - v5
+     * - Observer leve: childList apenas no body, sem attributes subtree
+     * - Modal existente no DOM: polling leve ao clicar em comprar
      */
 
     var NEON = '#08EEBC';
@@ -589,12 +587,13 @@
         set(btns, 'background', 'transparent');
       }
       popup.querySelectorAll('.cart-btn').forEach(styleNeonBtn);
-
-      console.log('[AQ] Cart dark theme applied');
     }
 
     function applyDarkModal(modal) {
-      if (!modal || modal.getAttribute(STYLED)) return;
+      if (!modal) return;
+      /* Permite reaplicar sempre que chamado (modal pode abrir varias vezes) */
+      modal.removeAttribute(STYLED);
+      if (modal.getAttribute(STYLED)) return;
       modal.setAttribute(STYLED, '1');
 
       var set = function(el, p, v) { if (el) el.style.setProperty(p, v, 'important'); };
@@ -663,17 +662,6 @@
           set(el, 'color', '#fff');
           set(el, 'font-weight', '600');
         });
-        mBody.querySelectorAll('img').forEach(function(el) {
-          set(el, 'border-radius', '8px');
-          set(el, 'background',    'rgba(0,8,20,0.6)');
-          set(el, 'border',        '1px solid rgba(8,238,188,0.12)');
-          set(el, 'padding',       '4px');
-        });
-        mBody.querySelectorAll('[class*="price"], .price, strong').forEach(function(el) {
-          set(el, 'color',       NEON);
-          set(el, 'font-weight', '700');
-        });
-        /* Icone check verde -> neon */
         mBody.querySelectorAll('svg').forEach(function(el) {
           set(el, 'color', NEON);
           set(el, 'fill',  NEON);
@@ -735,16 +723,10 @@
     function updateBadge() {
       var link = document.querySelector('.link-cart');
       if (!link) return;
-
       var hasProducts = link.classList.contains('has-products') ||
         document.querySelectorAll('.cart-list .cart-item').length > 0;
-
       var badge = link.querySelector('.aq-cart-badge');
-
-      if (!hasProducts) {
-        if (badge) badge.remove();
-        return;
-      }
+      if (!hasProducts) { if (badge) badge.remove(); return; }
       if (!badge) {
         badge = document.createElement('span');
         badge.className = 'aq-cart-badge';
@@ -753,38 +735,53 @@
       badge.textContent = '!';
     }
 
-    function handleVisibleModal(node) {
-      if (!node || node.nodeType !== 1) return;
-      if (node.classList && node.classList.contains('modal')) {
-        var isVisible = node.classList.contains('show') ||
-                        node.classList.contains('in') ||
-                        node.style.display === 'block';
-        if (isVisible) {
-          node.removeAttribute(STYLED);
-          applyDarkModal(node);
+    /*
+     * Polling leve: verifica a cada 200ms se algum .modal esta visivel.
+     * So corre durante 5s apos um clique em botao de compra, depois para.
+     * Muito mais eficiente que attributes+subtree no MutationObserver.
+     */
+    function watchForModal() {
+      var attempts = 0;
+      var interval = setInterval(function() {
+        attempts++;
+        var modal = document.querySelector('.modal.show, .modal.in');
+        if (!modal) {
+          /* Bootstrap 4 usa display:block sem classe show em alguns temas */
+          var all = document.querySelectorAll('.modal');
+          for (var i = 0; i < all.length; i++) {
+            if (all[i].style.display === 'block') { modal = all[i]; break; }
+          }
         }
-        return;
-      }
-      if (node.closest) {
-        var parent = node.closest('.modal');
-        if (parent) {
-          parent.removeAttribute(STYLED);
-          applyDarkModal(parent);
+        if (modal) {
+          applyDarkModal(modal);
+          clearInterval(interval);
+          return;
         }
-      }
+        if (attempts >= 25) clearInterval(interval); /* para apos 5s */
+      }, 200);
+    }
+
+    /* Escuta cliques em botoes de compra para iniciar o polling */
+    function listenBuyButtons() {
+      document.addEventListener('click', function(e) {
+        var btn = e.target.closest('[data-action="cart.add"], .btn-cart, .add-to-cart, [class*="add-cart"], form[action*="cart"] button[type="submit"]');
+        if (btn) watchForModal();
+      }, true);
     }
 
     function initCartStyles() {
       document.querySelectorAll('.cart-list').forEach(applyDarkCart);
       document.querySelectorAll('.modal.show, .modal.in').forEach(applyDarkModal);
       updateBadge();
+      listenBuyButtons();
 
+      /* Observer leve: so childList no body direto, sem subtree nos atributos */
       new MutationObserver(function(mutations) {
         var needsBadge = false;
         mutations.forEach(function(m) {
-
           m.addedNodes.forEach(function(node) {
             if (node.nodeType !== 1) return;
+            /* Mini-cart adicionado */
             if (node.classList && node.classList.contains('cart-list')) {
               applyDarkCart(node);
               needsBadge = true;
@@ -795,41 +792,22 @@
                 needsBadge = true;
               });
             }
-            handleVisibleModal(node);
-            if (node.querySelectorAll) {
-              node.querySelectorAll('.modal').forEach(handleVisibleModal);
+            /* Modal adicionado dinamicamente */
+            if (node.classList && node.classList.contains('modal')) {
+              watchForModal();
             }
+            /* Backdrop */
             if (node.classList && node.classList.contains('modal-backdrop')) {
               node.style.setProperty('z-index', '10050', 'important');
               node.style.setProperty('background', 'rgba(0,4,13,0.82)', 'important');
               node.style.setProperty('opacity', '1', 'important');
+              /* Modal provavelmente esta a abrir agora */
+              watchForModal();
             }
           });
-
-          if (m.type === 'attributes' && m.attributeName === 'class') {
-            handleVisibleModal(m.target);
-          }
-
-          if (m.type === 'attributes' && m.attributeName === 'style') {
-            var el = m.target;
-            if (el.classList && el.classList.contains('modal') && el.style.display === 'block') {
-              el.removeAttribute(STYLED);
-              applyDarkModal(el);
-            }
-            if (el.classList && el.classList.contains('modal-backdrop')) {
-              el.style.setProperty('z-index', '10050', 'important');
-              el.style.setProperty('background', 'rgba(0,4,13,0.82)', 'important');
-              el.style.setProperty('opacity', '1', 'important');
-            }
-          }
         });
         if (needsBadge) updateBadge();
-      }).observe(document.body, {
-        childList: true,
-        subtree: true,
-        attributes: true,
-        attributeFilter: ['class', 'style']
-      });
+      }).observe(document.body, { childList: true, subtree: true });
     }
 
     /**
