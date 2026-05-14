@@ -1351,30 +1351,11 @@
     }
 
     /**
-     * homeOrchestrator.js – v6
-     * Oculta secções nativas do Shopkit e injeta as nossas em ordem.
+     * homeOrchestrator.js – v7
+     * Sem MutationObserver. Oculta nativos via CSS no SCSS.
+     * Injeta secções premium em ordem no container principal.
      */
 
-
-    // Seletores das secções nativas do Shopkit a ocultar
-    const NATIVE_SECTIONS = [
-      'section.brands-block',
-      'section.brands.section',
-      '[data-section-type="blog"]',
-      'section.blog-section',
-      '.blog-posts-section',
-      '.section-blog',
-      '#blog',
-    ];
-
-    function hideNativeSections() {
-      NATIVE_SECTIONS.forEach(sel => {
-        document.querySelectorAll(sel).forEach(el => {
-          el.style.setProperty('display', 'none', 'important');
-          console.log('[AQ] ocultado nativo:', sel);
-        });
-      });
-    }
 
     function getContainer() {
       return document.querySelector('main, #main, .main, [role="main"], #content, .content')
@@ -1389,38 +1370,15 @@
     }
 
     async function initHome() {
-      // Oculta secções nativas antes de injetar as nossas
-      hideNativeSections();
+      const container = getContainer();
+      console.log('[AQ] initHome v7 — container:', container.tagName, container.id || container.className.slice(0,30));
 
-      // Observa o DOM para ocultar secções nativas que apareçam depois
-      const obs = new MutationObserver(() => hideNativeSections());
-      obs.observe(document.body, { childList: true, subtree: true });
-      // Para o observer após 5s (já não é necessário)
-      setTimeout(() => obs.disconnect(), 5000);
+      try { append(await buildBrandsSection(), 'aq-brands'); } catch(e) { console.warn('[AQ] brands:', e); }
+      try { append(buildStoreSection(),        'aq-store');  } catch(e) { console.warn('[AQ] store:', e);  }
+      try { append(buildFAQSection(),          'aq-faq');    } catch(e) { console.warn('[AQ] faq:', e);    }
+      try { append(await buildBlogSection(),   'aq-blog-home'); } catch(e) { console.warn('[AQ] blog:', e); }
 
-      // 1. Marcas
-      try {
-        const brands = await buildBrandsSection();
-        append(brands, 'aq-brands');
-      } catch(e) { console.warn('[AQ] brands erro:', e); }
-
-      // 2. Loja
-      try {
-        append(buildStoreSection(), 'aq-store');
-      } catch(e) { console.warn('[AQ] store erro:', e); }
-
-      // 3. FAQ
-      try {
-        append(buildFAQSection(), 'aq-faq');
-      } catch(e) { console.warn('[AQ] faq erro:', e); }
-
-      // 4. Blog
-      try {
-        const blog = await buildBlogSection();
-        append(blog, 'aq-blog-home');
-      } catch(e) { console.warn('[AQ] blog erro:', e); }
-
-      console.log('[AQ] Home completa: brands → store → faq → blog');
+      console.log('[AQ] Home completa ✓');
     }
 
     // JS Entry Point for AquariumLife Custom Layer

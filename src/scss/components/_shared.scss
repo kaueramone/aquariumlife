@@ -1,5 +1,19 @@
 @use '../base/variables' as *;
 
+// ── Ocultar secções nativas do Shopkit via CSS ────────────────────────────────
+section.brands-block,
+section.brands.section {
+  display: none !important;
+}
+
+// Oculta o blog nativo do Shopkit na home (mantém em /blog)
+body:not(.aq-page-blog) {
+  .blog-posts, .blog-section, .section-blog,
+  [data-section-type="blog"], section.blog {
+    display: none !important;
+  }
+}
+
 // ── Componentes Partilhados ──────────────────────────────────────────────────
 
 // Padding padrão de todas as seções premium
