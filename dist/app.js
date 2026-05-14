@@ -859,46 +859,66 @@
     }
 
     /**
-     * blogSection.js – v4
-     * Cards premium com imagem destacada, leitura estimada e design melhorado.
+     * blogSection.js – v5
+     * Extrai posts do DOM nativo do Shopkit (sem API).
+     * A section nativa .blog.section é ocultada via CSS.
      */
 
-    const BLOG_API  = '/api/json/blog/posts?limit=3&page=1';
     const BLOG_HREF = '/blog';
-
-    function formatDate(dateStr) {
-      try {
-        return new Date(dateStr).toLocaleDateString('pt-PT', { day: 'numeric', month: 'long', year: 'numeric' });
-      } catch { return dateStr; }
-    }
 
     function truncate(str, max = 120) {
       if (!str || str.length <= max) return str || '';
       return str.slice(0, max).replace(/\s\S*$/, '') + '…';
     }
 
-    function readingTime(text) {
-      if (!text) return '1 min';
-      const words = text.trim().split(/\s+/).length;
-      const mins = Math.max(1, Math.round(words / 200));
-      return `${mins} min de leitura`;
+    // Extrai posts do DOM nativo do Shopkit
+    function extractPostsFromDOM() {
+      const items = document.querySelectorAll('.blog-item');
+      if (!items.length) return null;
+
+      const posts = [];
+      items.forEach(item => {
+        // Título
+        const title = item.querySelector('.blog-info, h3, h2')?.textContent?.trim() || '';
+        if (!title) return;
+
+        // Link — está no próprio .blog-item ou num <a> filho
+        const linkEl = item.closest('a') || item.querySelector('a') ||
+                       item.parentElement?.closest('a');
+        const href = linkEl?.href || BLOG_HREF;
+
+        // Imagem — está como background-image no .blog-preview
+        const preview = item.querySelector('.blog-preview');
+        let img = '';
+        if (preview) {
+          const bg = preview.style.backgroundImage || '';
+          const match = bg.match(/url\(['"]?([^'"]+)['"]?\)/);
+          if (match) img = match[1];
+        }
+
+        // Data
+        const dateEl = item.querySelector('time, .blog-date, .date, .blog-status');
+        const date = dateEl?.getAttribute('datetime') || dateEl?.textContent?.trim() || '';
+
+        // Excerpt
+        const excerpt = item.querySelector('p, .blog-excerpt, .blog-text')?.textContent?.trim() || '';
+
+        posts.push({ title, href, img, date, excerpt });
+      });
+
+      return posts.length ? posts : null;
     }
 
-    function buildPostCard(post) {
+    function buildPostCard({ title, href, img, date, excerpt }) {
       const card = document.createElement('a');
-      card.href = post.url || `${BLOG_HREF}/${post.handle}`;
+      card.href = href;
       card.className = 'aq-blog-card';
-      card.setAttribute('aria-label', `Ler artigo: ${post.title}`);
-
-      const thumb = post.image?.url || post.featured_image || post.image_url || '';
-      const excerpt = post.excerpt || post.body_plain || post.summary || '';
-      const date = formatDate(post.created_at || post.published_at);
-      const time = readingTime(excerpt);
+      card.setAttribute('aria-label', `Ler artigo: ${title}`);
 
       card.innerHTML = `
     <div class="aq-blog-card-img">
-      ${thumb
-        ? `<img src="${thumb}" alt="${post.title}" loading="lazy"/>`
+      ${img
+        ? `<img src="${img}" alt="${title}" loading="lazy"/>`
         : `<div class="aq-blog-card-img-placeholder">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="6" y="10" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2"/>
@@ -910,11 +930,10 @@
     </div>
     <div class="aq-blog-card-body">
       <div class="aq-blog-card-meta">
-        <time class="aq-blog-card-date">${date}</time>
-        <span class="aq-blog-card-read">${time}</span>
+        ${date ? `<time class="aq-blog-card-date">${date}</time>` : ''}
       </div>
-      <h3 class="aq-blog-card-title">${post.title}</h3>
-      <p class="aq-blog-card-excerpt">${truncate(excerpt)}</p>
+      <h3 class="aq-blog-card-title">${title}</h3>
+      ${excerpt ? `<p class="aq-blog-card-excerpt">${truncate(excerpt)}</p>` : ''}
       <span class="aq-blog-card-cta">
         Ler artigo
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -922,32 +941,6 @@
     </div>
   `;
       return card;
-    }
-
-    function buildSkeletonCard() {
-      const card = document.createElement('div');
-      card.className = 'aq-blog-card aq-blog-skeleton';
-      card.innerHTML = `
-    <div class="aq-blog-card-img aq-skel-img"></div>
-    <div class="aq-blog-card-body">
-      <div class="aq-skel-line aq-skel-short"></div>
-      <div class="aq-skel-line aq-skel-full"></div>
-      <div class="aq-skel-line aq-skel-medium"></div>
-    </div>
-  `;
-      return card;
-    }
-
-    async function fetchPosts() {
-      try {
-        const res = await fetch(BLOG_API);
-        if (!res.ok) { console.warn('[AQ] Blog API status:', res.status); return null; }
-        const data = await res.json();
-        console.log('[AQ] Blog API raw:', JSON.stringify(data).slice(0, 200));
-        const list = Array.isArray(data) ? data
-          : (data.posts || data.data || data.articles || data.items || null);
-        return (list && list.length) ? list : null;
-      } catch(e) { console.warn('[AQ] Blog fetch erro:', e); return null; }
     }
 
     async function buildBlogSection() {
@@ -971,17 +964,15 @@
   `;
 
       const grid = section.querySelector('#aq-blog-grid');
-      for (let i = 0; i < 3; i++) grid.appendChild(buildSkeletonCard());
+      const posts = extractPostsFromDOM();
 
-      fetchPosts().then(posts => {
-        grid.innerHTML = '';
-        if (posts && posts.length) {
-          posts.slice(0, 3).forEach(p => grid.appendChild(buildPostCard(p)));
-        } else {
-          grid.innerHTML = `<div class="aq-blog-empty"><p>Em breve novos artigos sobre aquarismo!</p></div>`;
-        }
-        console.log('[AQ] Blog posts carregados:', posts?.length || 0);
-      });
+      if (posts && posts.length) {
+        posts.slice(0, 3).forEach(p => grid.appendChild(buildPostCard(p)));
+        console.log('[AQ] Blog: extraídos', posts.length, 'posts do DOM');
+      } else {
+        grid.innerHTML = `<div class="aq-blog-empty"><p>Em breve novos artigos sobre aquarismo!</p></div>`;
+        console.warn('[AQ] Blog: sem posts no DOM');
+      }
 
       return section;
     }
@@ -1017,7 +1008,7 @@
 
     function redesignBlogPost() {
       const path = window.location.pathname;
-      if (!path.startsWith('/blog/') || path === '/blog/') return;
+      if (!path.startsWith('/blog/') && !path.startsWith('/post/')) return;
       if (document.body.classList.contains('aq-post-styled')) return;
       document.body.classList.add('aq-post-styled', 'aq-page-post');
 
@@ -1037,7 +1028,7 @@
     function initBlogSection() {
       const path = window.location.pathname;
       if (path === '/blog' || path === '/blog/') redesignBlogListing();
-      else if (path.startsWith('/blog/')) redesignBlogPost();
+      else if (path.startsWith('/blog/') || path.startsWith('/post/')) redesignBlogPost();
     }
 
     /**
@@ -1467,5 +1458,6 @@
     // build Thu May 14 21:42:27 HVGMT 2026
     // build Thu May 14 21:46:56 HVGMT 2026
     // Thu May 14 21:59:55 HVGMT 2026
+    // Thu May 14 22:11:14 HVGMT 2026
 
 })();
