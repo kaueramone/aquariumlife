@@ -1,7 +1,7 @@
 /**
- * brandsSection.js – v3
+ * brandsSection.js – v4
  * Exporta buildBrandsSection() para uso pelo homeOrchestrator.
- * initBrandsSection() oculta o bloco nativo (chamado independentemente).
+ * initBrandsSection() oculta o bloco nativo sem tocar no #aq-brands.
  */
 
 const BRANDS_API = '/api/json/brands';
@@ -11,7 +11,16 @@ const BRANDS_FALLBACK = [
   'Dennerle','Eheim','Seachem','Aquael','Tetra',
 ];
 
-const NATIVE_SELECTORS = ['.brands-item','[class*="brands"]'];
+// Seletores específicos do Shopkit — NÃO incluir [class*="brands"] genérico
+// que apanha o nosso próprio #aq-brands
+const NATIVE_SELECTORS = [
+  '.brands-item',
+  '.brands-list',
+  '.brands-section',
+  '#brands',
+  '#marcas',
+  '[data-section-type="brands"]',
+];
 
 async function fetchBrands() {
   try {
@@ -27,14 +36,20 @@ function hideNativeBrands() {
   for (const sel of NATIVE_SELECTORS) {
     const el = document.querySelector(sel);
     if (!el) continue;
+    // Nunca esconder o nosso próprio bloco
+    if (el.id === 'aq-brands' || el.closest('#aq-brands')) continue;
     let target = el;
     for (let i = 0; i < 6; i++) {
       const p = target.parentElement;
       if (!p || p.tagName === 'BODY') break;
+      // Parar antes de esconder algo que contenha o nosso bloco
+      if (p.querySelector('#aq-brands')) break;
       target = p;
       if (target.tagName === 'SECTION' || target.classList.contains('section') || target.classList.contains('block')) break;
     }
+    if (target.id === 'aq-brands' || target.querySelector('#aq-brands')) continue;
     target.style.setProperty('display', 'none', 'important');
+    console.log('[AQ] brands nativo ocultado:', sel);
     return true;
   }
   return false;
@@ -98,12 +113,17 @@ export async function buildBrandsSection() {
 
 export function initBrandsSection() {
   const tryHide = () => {
-    const found = NATIVE_SELECTORS.some(s => document.querySelector(s));
+    const found = NATIVE_SELECTORS.some(s => {
+      const el = document.querySelector(s);
+      return el && !el.closest('#aq-brands');
+    });
     if (found) { hideNativeBrands(); return; }
     const obs = new MutationObserver(() => {
-      if (NATIVE_SELECTORS.some(s => document.querySelector(s))) {
-        obs.disconnect(); hideNativeBrands();
-      }
+      const f = NATIVE_SELECTORS.some(s => {
+        const el = document.querySelector(s);
+        return el && !el.closest('#aq-brands');
+      });
+      if (f) { obs.disconnect(); hideNativeBrands(); }
     });
     obs.observe(document.body || document.documentElement, { childList: true, subtree: true });
   };
