@@ -1,5 +1,5 @@
 /**
- * homeOrchestrator.js – v1
+ * homeOrchestrator.js – v2
  * Garante a ordem exata das seções da home, injetando-as sequencialmente
  * ANTES do footer, na ordem correta:
  *
@@ -10,8 +10,8 @@
  *  ↓ aq-blog-home   (últimos posts)
  *  [footer]
  *
- * Cada módulo expõe buildSection() que retorna um HTMLElement pronto.
- * O orquestrador insere tudo de uma vez, em sequência, antes do footer.
+ * v2: waitForFooter retorna Promise; cada seção tem try/catch independente
+ * para que a falha de uma não bloqueie as demais.
  */
 
 import { buildBrandsSection }  from './brandsSection.js';
@@ -19,46 +19,69 @@ import { buildStoreSection }   from './storeSection.js';
 import { buildFAQSection }     from './faqSection.js';
 import { buildBlogSection }    from './blogSection.js';
 
-function waitForFooter(cb, maxMs = 6000) {
-  const footer = document.querySelector('footer, #footer, .footer');
-  if (footer) { cb(footer); return; }
-  const start = Date.now();
-  const interval = setInterval(() => {
-    const f = document.querySelector('footer, #footer, .footer');
-    if (f || Date.now() - start > maxMs) {
-      clearInterval(interval);
-      if (f) cb(f);
-    }
-  }, 200);
+function waitForFooter(maxMs = 6000) {
+  return new Promise((resolve, reject) => {
+    const footer = document.querySelector('footer, #footer, .footer, [class*="footer"]');
+    if (footer) { resolve(footer); return; }
+    const start = Date.now();
+    const interval = setInterval(() => {
+      const f = document.querySelector('footer, #footer, .footer, [class*="footer"]');
+      if (f) {
+        clearInterval(interval);
+        resolve(f);
+      } else if (Date.now() - start > maxMs) {
+        clearInterval(interval);
+        // Fallback: injeta no fim do body
+        resolve(document.body);
+      }
+    }, 200);
+  });
+}
+
+function injectBefore(section, id, ref) {
+  if (!section) return;
+  if (document.getElementById(id)) return;
+  ref.parentNode.insertBefore(section, ref);
 }
 
 export async function initHome() {
-  waitForFooter(async (footer) => {
+  const footer = await waitForFooter();
 
-    // 1. Marcas (síncrono — aguarda API internamente, retorna section)
+  // 1. Marcas
+  try {
     const brands = await buildBrandsSection();
-    if (brands && !document.getElementById('aq-brands')) {
-      footer.parentNode.insertBefore(brands, footer);
-    }
+    injectBefore(brands, 'aq-brands', footer);
+    console.log('[AQ] brands injetado');
+  } catch (e) {
+    console.warn('[AQ] brands falhou:', e);
+  }
 
-    // 2. Loja física + Maps (síncrono)
+  // 2. Loja física + Maps
+  try {
     const store = buildStoreSection();
-    if (store && !document.getElementById('aq-store')) {
-      footer.parentNode.insertBefore(store, footer);
-    }
+    injectBefore(store, 'aq-store', footer);
+    console.log('[AQ] store injetado');
+  } catch (e) {
+    console.warn('[AQ] store falhou:', e);
+  }
 
-    // 3. FAQ (síncrono)
+  // 3. FAQ
+  try {
     const faq = buildFAQSection();
-    if (faq && !document.getElementById('aq-faq')) {
-      footer.parentNode.insertBefore(faq, footer);
-    }
+    injectBefore(faq, 'aq-faq', footer);
+    console.log('[AQ] faq injetado');
+  } catch (e) {
+    console.warn('[AQ] faq falhou:', e);
+  }
 
-    // 4. Blog (async — busca posts)
+  // 4. Blog
+  try {
     const blog = await buildBlogSection();
-    if (blog && !document.getElementById('aq-blog-home')) {
-      footer.parentNode.insertBefore(blog, footer);
-    }
+    injectBefore(blog, 'aq-blog-home', footer);
+    console.log('[AQ] blog injetado');
+  } catch (e) {
+    console.warn('[AQ] blog falhou:', e);
+  }
 
-    console.log('[AQ] Home orquestrada: brands → store → faq → blog');
-  });
+  console.log('[AQ] Home orquestrada: brands → store → faq → blog');
 }
