@@ -1,7 +1,9 @@
 node_modules/
-dist/
 .env
 .DS_Store
 audit/
 dom-map/
 screenshots/
+
+.vercel
+.env*.local
