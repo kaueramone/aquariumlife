@@ -1,17 +1,12 @@
 /**
- * blogSection.js – v1
- * Três responsabilidades:
- *  1. Home: injeta seção "Do Nosso Blog" com os últimos posts (via API Shopkit)
- *  2. Página /blog: redesenha a listagem de posts
- *  3. Página de post: redesenha o layout do artigo
- *
- * O Shopkit expõe a API pública em /api/json/blog/posts
+ * blogSection.js – v2
+ * 1. Home: 3 cards dos últimos posts + botão "Ver todos" centralizado
+ * 2. Página /blog: redesenha listagem
+ * 3. Página de post: redesenha artigo
  */
 
 const BLOG_API  = '/api/json/blog/posts?limit=3&page=1';
 const BLOG_HREF = '/blog';
-
-// ─── Utilitários ─────────────────────────────────────────────────────────────
 
 function isPage(path) {
   return window.location.pathname.startsWith(path);
@@ -25,12 +20,12 @@ function formatDate(dateStr) {
   } catch { return dateStr; }
 }
 
-function truncate(str, max = 120) {
+function truncate(str, max = 130) {
   if (!str || str.length <= max) return str || '';
   return str.slice(0, max).replace(/\s\S*$/, '') + '…';
 }
 
-// ─── 1. Seção "Do Nosso Blog" na Home ────────────────────────────────────────
+// ─── Card de post ─────────────────────────────────────────────────────────────
 
 function buildPostCard(post) {
   const card = document.createElement('a');
@@ -38,7 +33,7 @@ function buildPostCard(post) {
   card.className = 'aq-blog-card';
   card.setAttribute('aria-label', `Ler artigo: ${post.title}`);
 
-  const thumb = post.image?.url || '';
+  const thumb = post.image?.url || post.featured_image || '';
 
   card.innerHTML = `
     <div class="aq-blog-card-img">
@@ -46,18 +41,38 @@ function buildPostCard(post) {
         ? `<img src="${thumb}" alt="${post.title}" loading="lazy"/>`
         : `<div class="aq-blog-card-img-placeholder">
              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M6 38V14a2 2 0 012-2h32a2 2 0 012 2v24" stroke="currentColor" stroke-width="2"/>
+               <rect x="6" y="10" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2"/>
                <circle cx="18" cy="22" r="4" stroke="currentColor" stroke-width="2"/>
-               <path d="M6 38l10-10 6 6 8-8 12 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+               <path d="M6 34l10-10 6 6 8-8 12 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
              </svg>
            </div>`}
       <span class="aq-blog-card-tag">Aquarismo</span>
     </div>
     <div class="aq-blog-card-body">
-      <time class="aq-blog-card-date">${formatDate(post.created_at)}</time>
+      <time class="aq-blog-card-date">${formatDate(post.created_at || post.published_at)}</time>
       <h3 class="aq-blog-card-title">${post.title}</h3>
-      <p class="aq-blog-card-excerpt">${truncate(post.excerpt || post.body_plain)}</p>
-      <span class="aq-blog-card-cta">Ler artigo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      <p class="aq-blog-card-excerpt">${truncate(post.excerpt || post.body_plain || post.summary)}</p>
+      <span class="aq-blog-card-cta">
+        Ler artigo
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </span>
+    </div>
+  `;
+  return card;
+}
+
+// Cards de placeholder enquanto aguarda API
+function buildSkeletonCard() {
+  const card = document.createElement('div');
+  card.className = 'aq-blog-card aq-blog-skeleton';
+  card.innerHTML = `
+    <div class="aq-blog-card-img aq-skel-img"></div>
+    <div class="aq-blog-card-body">
+      <div class="aq-skel-line aq-skel-short"></div>
+      <div class="aq-skel-line aq-skel-full"></div>
+      <div class="aq-skel-line aq-skel-medium"></div>
     </div>
   `;
   return card;
@@ -68,40 +83,35 @@ async function fetchPosts() {
     const res = await fetch(BLOG_API);
     if (!res.ok) return null;
     const data = await res.json();
-    // Shopkit retorna { posts: [...] } ou diretamente array
     return Array.isArray(data) ? data : (data.posts || data.data || null);
   } catch { return null; }
 }
 
-function buildBlogHomeSection(posts) {
+// ─── Seção na Home ────────────────────────────────────────────────────────────
+
+function buildBlogHomeSection() {
   const section = document.createElement('section');
   section.id = 'aq-blog-home';
 
-  const header = document.createElement('div');
-  header.className = 'aq-section-header';
-  header.innerHTML = `
-    <span class="aq-section-tag">Conteúdo</span>
-    <h2 class="aq-section-title">Do Nosso <span class="aq-neon">Blog</span></h2>
-    <p class="aq-section-sub">Dicas, guias e novidades do mundo do aquarismo</p>
+  section.innerHTML = `
+    <div class="aq-section-header">
+      <span class="aq-section-tag">Conteúdo</span>
+      <h2 class="aq-section-title">Mergulha no Mundo do <span class="aq-neon">Aquarismo</span></h2>
+      <p class="aq-section-sub">
+        Dicas de especialistas, guias para montar o aquário perfeito, novidades do hobby
+        e tudo sobre peixes, plantas e aquascaping — o nosso blog é o teu ponto de partida.
+      </p>
+    </div>
+    <div class="aq-blog-grid" id="aq-blog-grid"></div>
+    <div class="aq-blog-home-cta">
+      <a href="${BLOG_HREF}" class="aq-btn-outline">
+        Ver todos os artigos
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
   `;
-  section.appendChild(header);
-
-  const grid = document.createElement('div');
-  grid.className = 'aq-blog-grid';
-
-  if (posts && posts.length) {
-    posts.slice(0, 3).forEach(p => grid.appendChild(buildPostCard(p)));
-  } else {
-    // Fallback estático se API não responder
-    grid.innerHTML = `<p class="aq-blog-empty">Em breve novos artigos sobre aquarismo!</p>`;
-  }
-
-  section.appendChild(grid);
-
-  const cta = document.createElement('div');
-  cta.className = 'aq-blog-home-cta';
-  cta.innerHTML = `<a href="${BLOG_HREF}" class="aq-btn-outline">Ver todos os artigos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>`;
-  section.appendChild(cta);
 
   return section;
 }
@@ -112,29 +122,45 @@ async function initBlogHome() {
   const faq    = document.getElementById('aq-faq');
   const store  = document.getElementById('aq-store');
   const footer = document.querySelector('footer, #footer, .footer');
-  // Inserir antes do FAQ se existir, senão antes da loja, senão antes do footer
   const anchor = faq || store || footer;
   if (!anchor) return false;
 
-  const posts = await fetchPosts();
-  const section = buildBlogHomeSection(posts);
+  // Injeta a seção imediatamente com skeletons
+  const section = buildBlogHomeSection();
   anchor.parentNode.insertBefore(section, anchor);
-  console.log('[AQ] Blog home section injetada');
+
+  const grid = section.querySelector('#aq-blog-grid');
+
+  // Mostrar 3 skeletons enquanto carrega
+  for (let i = 0; i < 3; i++) grid.appendChild(buildSkeletonCard());
+
+  // Buscar posts reais
+  const posts = await fetchPosts();
+  grid.innerHTML = '';
+
+  if (posts && posts.length) {
+    posts.slice(0, 3).forEach(p => grid.appendChild(buildPostCard(p)));
+  } else {
+    // Fallback: 3 placeholders com mensagem
+    grid.innerHTML = `
+      <div class="aq-blog-empty">
+        <p>Em breve novos artigos sobre aquarismo!</p>
+        <a href="${BLOG_HREF}" class="aq-btn-outline" style="margin-top:16px;display:inline-flex">Visitar o Blog</a>
+      </div>
+    `;
+  }
+
+  console.log('[AQ] Blog home v2 injetado —', posts?.length || 0, 'posts');
   return true;
 }
 
-// ─── 2. Redesign da listagem /blog ───────────────────────────────────────────
+// ─── Redesign /blog ───────────────────────────────────────────────────────────
 
 function redesignBlogListing() {
-  // Verificar se é página de blog
-  if (!isPage('/blog')) return;
+  if (!isPage('/blog') || window.location.pathname.length > 6) return;
   if (document.body.classList.contains('aq-blog-styled')) return;
-  document.body.classList.add('aq-blog-styled');
+  document.body.classList.add('aq-blog-styled', 'aq-page-blog');
 
-  // Adicionar classe ao body para ativar os estilos SCSS
-  document.body.classList.add('aq-page-blog');
-
-  // Injetar cabeçalho premium da página
   const pageTitle = document.querySelector('.page-title, .blog-title, h1.title, .section-title');
   if (pageTitle) {
     const wrap = document.createElement('div');
@@ -144,12 +170,11 @@ function redesignBlogListing() {
       <h1 class="aq-section-title">Mundo do <span class="aq-neon">Aquarismo</span></h1>
       <p class="aq-section-sub">Dicas de especialistas, guias passo-a-passo e novidades do mundo aquático</p>
     `;
-    pageTitle.closest('section, .container, .row')?.parentNode?.insertBefore(wrap, pageTitle.closest('section, .container, .row'));
+    const container = pageTitle.closest('section, .container, .row');
+    container?.parentNode?.insertBefore(wrap, container);
     pageTitle.style.setProperty('display', 'none', 'important');
   }
 
-  // Estilizar os cards nativos do Shopkit/Boxie
-  // Classes nativas: .post, .post-item, .blog-post, .card
   setTimeout(() => {
     document.querySelectorAll('.post, .blog-item, [class*="post-item"]').forEach(card => {
       card.classList.add('aq-blog-native-card');
@@ -159,43 +184,32 @@ function redesignBlogListing() {
   console.log('[AQ] Blog listing redesigned');
 }
 
-// ─── 3. Redesign de post individual ──────────────────────────────────────────
+// ─── Redesign post individual ─────────────────────────────────────────────────
 
 function redesignBlogPost() {
-  if (!isPage('/blog/') || window.location.pathname === '/blog/') return;
+  const path = window.location.pathname;
+  if (!path.startsWith('/blog/') || path === '/blog/') return;
   if (document.body.classList.contains('aq-post-styled')) return;
   document.body.classList.add('aq-post-styled', 'aq-page-post');
 
-  // Cabeçalho do post
-  const postTitle = document.querySelector('.post-title, .article-title, h1.title, .blog-post-title');
-  if (postTitle) {
-    postTitle.classList.add('aq-post-title');
-  }
+  document.querySelector('.post-title, .article-title, h1.title, .blog-post-title')?.classList.add('aq-post-title');
+  document.querySelectorAll('.post-date, .post-meta, .article-meta, .blog-meta').forEach(el => el.classList.add('aq-post-meta'));
+  document.querySelectorAll('.post-image, .post-thumbnail, .article-image').forEach(el => el.classList.add('aq-post-featured-img'));
+  document.querySelectorAll('.post-body, .post-content, .article-body, .blog-post-body').forEach(el => el.classList.add('aq-post-body'));
 
-  // Meta (data, autor)
-  document.querySelectorAll('.post-date, .post-meta, .article-meta, .blog-meta').forEach(el => {
-    el.classList.add('aq-post-meta');
-  });
-
-  // Imagem de destaque
-  document.querySelectorAll('.post-image, .post-thumbnail, .article-image, .blog-post-image').forEach(el => {
-    el.classList.add('aq-post-featured-img');
-  });
-
-  // Corpo do artigo
-  document.querySelectorAll('.post-body, .post-content, .article-body, .blog-post-body').forEach(el => {
-    el.classList.add('aq-post-body');
-  });
-
-  // Botão voltar ao blog
-  const backBtn = document.querySelector('a[href="/blog"], a[href*="blog"]');
-  if (backBtn && !document.getElementById('aq-post-back')) {
+  if (!document.getElementById('aq-post-back')) {
     const btn = document.createElement('a');
     btn.id = 'aq-post-back';
     btn.href = BLOG_HREF;
     btn.className = 'aq-post-back-btn';
-    btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg> Voltar ao Blog`;
-    backBtn.closest('section, .container, article')?.prepend(btn);
+    btn.innerHTML = `
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 5l-7 7 7 7"/>
+      </svg>
+      Voltar ao Blog
+    `;
+    const container = document.querySelector('article, .post-wrapper, .blog-post, main > .container');
+    if (container) container.prepend(btn);
   }
 
   console.log('[AQ] Blog post redesigned');
@@ -206,21 +220,19 @@ function redesignBlogPost() {
 export function initBlogSection() {
   const path = window.location.pathname;
 
-  if (path === '/' || path === '/index' || path === '') {
-    // Home: tentar logo e retry se o DOM ainda não estiver pronto
+  if (path === '/' || path === '' || path === '/index') {
     const tryHome = async () => {
       const footer = document.querySelector('footer, #footer, .footer');
       if (footer) { await initBlogHome(); return; }
       setTimeout(tryHome, 400);
     };
     tryHome();
+    return;
   }
 
-  if (path.startsWith('/blog')) {
-    if (path === '/blog' || path === '/blog/') {
-      redesignBlogListing();
-    } else {
-      redesignBlogPost();
-    }
+  if (path === '/blog' || path === '/blog/') {
+    redesignBlogListing();
+  } else if (path.startsWith('/blog/')) {
+    redesignBlogPost();
   }
 }

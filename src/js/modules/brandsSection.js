@@ -1,32 +1,38 @@
 /**
- * brandsSection.js – v1
- * Oculta o bloco nativo "Nossas Marcas" do Shopkit
- * e injeta uma seção premium de marcas com carrossel infinito.
+ * brandsSection.js – v2
+ * - Busca marcas via API Shopkit (/api/json/brands) em vez de URLs hardcoded
+ * - Fallback para lista estática se API não responder
+ * - Sem links (apenas visuais)
  */
 
-const BRANDS = [
-  { label: 'Tropica',       href: '/products?brand=tropica',       img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/tropica-logo.png' },
-  { label: 'ADA',           href: '/products?brand=ada',           img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ada-logo.png' },
-  { label: 'JBL',           href: '/products?brand=jbl',           img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/jbl-logo.png' },
-  { label: 'Fluval',        href: '/products?brand=fluval',        img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fluval-logo.png' },
-  { label: 'Oase',          href: '/products?brand=oase',          img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/oase-logo.png' },
-  { label: 'Dennerle',      href: '/products?brand=dennerle',      img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/dennerle-logo.png' },
-  { label: 'Eheim',         href: '/products?brand=eheim',         img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/eheim-logo.png' },
-  { label: 'Seachem',       href: '/products?brand=seachem',       img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/seachem-logo.png' },
+const BRANDS_API = '/api/json/brands';
+
+// Fallback estático com apenas nomes (imagens virão da API)
+const BRANDS_FALLBACK = [
+  'Tropica', 'ADA', 'JBL', 'Fluval', 'Oase',
+  'Dennerle', 'Eheim', 'Seachem', 'Aquael', 'Tetra',
 ];
 
-// Nomes de classes/texto para identificar o bloco nativo de marcas
 const BRANDS_NATIVE_SELECTORS = [
   '.brands-item',
   '[class*="brands"]',
 ];
 
+async function fetchBrands() {
+  try {
+    const res = await fetch(BRANDS_API);
+    if (!res.ok) return null;
+    const data = await res.json();
+    const list = Array.isArray(data) ? data : (data.brands || data.data || null);
+    if (!list || !list.length) return null;
+    return list;
+  } catch { return null; }
+}
+
 function hideNativeBrands() {
   for (const sel of BRANDS_NATIVE_SELECTORS) {
     const el = document.querySelector(sel);
     if (!el) continue;
-
-    // Sobe até a <section> contenedora
     let target = el;
     for (let i = 0; i < 6; i++) {
       const p = target.parentElement;
@@ -41,11 +47,38 @@ function hideNativeBrands() {
   return null;
 }
 
-function buildBrandsSection() {
+function buildBrandItem(label, imgSrc) {
+  const div = document.createElement('div');
+  div.className = 'aq-brand-item';
+  div.title = label;
+
+  if (imgSrc) {
+    const img = document.createElement('img');
+    img.src = imgSrc;
+    img.alt = label;
+    img.loading = 'lazy';
+    img.onerror = function () {
+      this.style.display = 'none';
+      const fallback = document.createElement('span');
+      fallback.className = 'aq-brand-fallback';
+      fallback.textContent = label;
+      div.appendChild(fallback);
+    };
+    div.appendChild(img);
+  } else {
+    const span = document.createElement('span');
+    span.className = 'aq-brand-fallback';
+    span.textContent = label;
+    div.appendChild(span);
+  }
+
+  return div;
+}
+
+function buildBrandsSection(brands) {
   const section = document.createElement('section');
   section.id = 'aq-brands';
 
-  // Cabeçalho
   const header = document.createElement('div');
   header.className = 'aq-section-header';
   header.innerHTML = `
@@ -55,70 +88,60 @@ function buildBrandsSection() {
   `;
   section.appendChild(header);
 
-  // Wrapper do carrossel (duplicamos para loop infinito via CSS)
   const track = document.createElement('div');
   track.className = 'aq-brands-track';
 
   const inner = document.createElement('div');
   inner.className = 'aq-brands-inner';
 
-  // Duplicar itens para criar loop contínuo
-  [...BRANDS, ...BRANDS].forEach((brand) => {
-    const a = document.createElement('a');
-    a.href = brand.href;
-    a.className = 'aq-brand-item';
-    a.title = `Ver produtos ${brand.label}`;
-    a.setAttribute('aria-label', `Filtrar por marca ${brand.label}`);
+  // Duplicar lista para loop infinito via CSS
+  const items = brands.map(b => ({
+    label: b.title || b.name || b,
+    img:   b.image?.url || b.logo || b.img || null,
+  }));
 
-    const img = document.createElement('img');
-    img.src = brand.img;
-    img.alt = brand.label;
-    img.loading = 'lazy';
-    // Fallback: se a imagem não carregar, mostra o nome
-    img.onerror = function () {
-      this.style.display = 'none';
-      const fallback = document.createElement('span');
-      fallback.className = 'aq-brand-fallback';
-      fallback.textContent = brand.label;
-      a.appendChild(fallback);
-    };
-
-    a.appendChild(img);
-    inner.appendChild(a);
+  [...items, ...items].forEach(({ label, img }) => {
+    inner.appendChild(buildBrandItem(label, img));
   });
 
   track.appendChild(inner);
   section.appendChild(track);
-
   return section;
 }
 
-function build() {
+async function build() {
   if (document.getElementById('aq-brands')) return true;
 
   const nativeHidden = hideNativeBrands();
   if (!nativeHidden) return false;
 
-  const newSection = buildBrandsSection();
+  // Tentar API; fallback para lista estática
+  let brands = await fetchBrands();
+  if (!brands) brands = BRANDS_FALLBACK;
+
+  const newSection = buildBrandsSection(brands);
   nativeHidden.parentNode.insertBefore(newSection, nativeHidden.nextSibling);
-  console.log('[AQ] Brands section injetada');
+  console.log('[AQ] Brands section v2 injetada —', brands.length, 'marcas');
   return true;
 }
 
 export function initBrandsSection() {
-  if (build()) return;
+  const nativeItem = document.querySelector(BRANDS_NATIVE_SELECTORS[0]);
+  if (nativeItem) { build(); return; }
 
   let attempts = 0;
   const interval = setInterval(() => {
     attempts++;
-    if (build() || attempts >= 20) clearInterval(interval);
+    const found = BRANDS_NATIVE_SELECTORS.some(s => document.querySelector(s));
+    if (found || attempts >= 20) {
+      clearInterval(interval);
+      if (found) build();
+    }
   }, 300);
 
   const observer = new MutationObserver(() => {
-    if (build()) observer.disconnect();
+    const found = BRANDS_NATIVE_SELECTORS.some(s => document.querySelector(s));
+    if (found) { observer.disconnect(); build(); }
   });
-  observer.observe(document.body || document.documentElement, {
-    childList: true,
-    subtree: true,
-  });
+  observer.observe(document.body || document.documentElement, { childList: true, subtree: true });
 }

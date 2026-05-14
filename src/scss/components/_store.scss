@@ -2,11 +2,10 @@
 
 // ── Seção Loja Física + Google ───────────────────────────────────────────────
 #aq-store {
-  padding: 80px 20px;
+  padding: 100px 20px;
   position: relative;
   overflow: hidden;
 
-  // Halo de fundo
   &::before {
     content: '';
     position: absolute;
@@ -33,72 +32,38 @@
   }
 }
 
-// Placeholder do mapa
+// ── Iframe do Google Maps ─────────────────────────────────────────────────────
 .aq-store-map {
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid rgba(8, 238, 188, 0.15);
-  @include glass-panel;
+  border: 1px solid rgba(8, 238, 188, 0.2);
+  box-shadow: 0 0 30px rgba(8, 238, 188, 0.08), 0 20px 60px rgba(0, 0, 0, 0.4);
   aspect-ratio: 4/3;
-  min-height: 300px;
-}
-
-.aq-store-map-link {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
+  min-height: 340px;
   position: relative;
 
-  &::after {
-    content: '';
+  iframe {
     position: absolute;
     inset: 0;
-    background: rgba(8, 238, 188, 0.04);
-    opacity: 0;
-    transition: opacity 0.3s;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0 !important;
+    display: block;
+    filter: hue-rotate(145deg) saturate(0.7) brightness(0.85);
+    transition: filter 0.3s ease;
+
+    &:hover { filter: hue-rotate(145deg) saturate(0.9) brightness(0.95); }
   }
-  &:hover::after { opacity: 1; }
+
+  @media (max-width: 768px) {
+    aspect-ratio: 16/10;
+    min-height: 260px;
+  }
 }
 
-.aq-store-map-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  width: 100%;
-  height: 100%;
-  padding: 40px;
-  background: radial-gradient(ellipse at center, rgba(8, 238, 188, 0.08) 0%, transparent 70%);
-}
-
-.aq-map-pin-icon {
-  width: 80px;
-  height: 80px;
-  filter: drop-shadow(0 0 20px rgba(8, 238, 188, 0.5));
-  animation: aq-pin-pulse 2.5s ease-in-out infinite;
-}
-
-@keyframes aq-pin-pulse {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-8px); }
-}
-
-.aq-store-map-label {
-  color: $color-neon-accent;
-  font-family: $font-family-title;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-// Bloco de info
+// ── Info lateral ──────────────────────────────────────────────────────────────
 .aq-store-header {
   text-align: left !important;
-
-  &::before { display: none; } // remove linha central se existir
 }
 
 .aq-store-details {
@@ -133,7 +98,7 @@
   flex-wrap: wrap;
 }
 
-// Botão primário neon (reutilizável)
+// ── Botões reutilizáveis ──────────────────────────────────────────────────────
 .aq-btn-primary {
   display: inline-flex;
   align-items: center;
@@ -159,7 +124,6 @@
   }
 }
 
-// Botão outline
 .aq-btn-outline {
   display: inline-flex;
   align-items: center;
@@ -185,10 +149,8 @@
   }
 }
 
-// Badge Google Rating
-.aq-google-rating {
-  margin-top: 32px;
-}
+// ── Badge Google Rating ────────────────────────────────────────────────────────
+.aq-google-rating { margin-top: 32px; }
 
 .aq-rating-badge {
   display: inline-flex;
@@ -201,22 +163,14 @@
   backdrop-filter: blur(8px);
 }
 
-.aq-google-logo {
-  width: 32px;
-  height: 32px;
-  flex-shrink: 0;
-}
+.aq-google-logo { width: 32px; height: 32px; flex-shrink: 0; }
 
-.aq-rating-stars {
-  display: flex;
-  gap: 2px;
-}
+.aq-rating-stars { display: flex; gap: 2px; }
 
 .aq-star {
   width: 16px;
   height: 16px;
   color: #FBBC05;
-
   &.filled { fill: #FBBC05; }
 }
 

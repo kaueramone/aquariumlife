@@ -1,17 +1,17 @@
 /**
- * storeSection.js – v1
- * Seção "Visita-nos" — convida à loja física e pede avaliação no Google.
- * Link Maps: https://maps.app.goo.gl/6uvfMJofFLiB5yZi6
+ * storeSection.js – v2
+ * - Iframe Google Maps incorporado
+ * - Link Maps: https://maps.app.goo.gl/6uvfMJofFLiB5yZi6
  */
 
 const MAPS_URL   = 'https://maps.app.goo.gl/6uvfMJofFLiB5yZi6';
 const REVIEW_URL = 'https://maps.app.goo.gl/6uvfMJofFLiB5yZi6';
+const MAPS_EMBED = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.6698765065166!2d-9.31225998837219!3d38.72538765671719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecf2d390fc4f5%3A0xf717a596f0307179!2sAquariumlife!5e0!3m2!1spt-PT!2spt!4v1778773494142!5m2!1spt-PT!2spt';
 
-// Estrela SVG reutilizável
-function starSVG(filled = true) {
-  return `<svg viewBox="0 0 24 24" class="aq-star${filled ? ' filled' : ''}" aria-hidden="true">
+function starSVG() {
+  return `<svg viewBox="0 0 24 24" class="aq-star filled" aria-hidden="true">
     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-      fill="${filled ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="1.5"/>
+      fill="currentColor" stroke="currentColor" stroke-width="1.5"/>
   </svg>`;
 }
 
@@ -22,17 +22,18 @@ function buildStoreSection() {
   section.innerHTML = `
     <div class="aq-store-inner">
 
-      <!-- Lado esquerdo: mapa / visual -->
+      <!-- Lado esquerdo: iframe Google Maps -->
       <div class="aq-store-map">
-        <a href="${MAPS_URL}" target="_blank" rel="noopener noreferrer" class="aq-store-map-link" aria-label="Ver no Google Maps">
-          <div class="aq-store-map-placeholder">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="aq-map-pin-icon">
-              <path d="M32 6C22.06 6 14 14.06 14 24c0 14.4 18 34 18 34s18-19.6 18-34c0-9.94-8.06-18-18-18z" fill="#08EEBC" opacity=".15" stroke="#08EEBC" stroke-width="2"/>
-              <circle cx="32" cy="24" r="7" fill="#08EEBC" opacity=".9"/>
-            </svg>
-            <span class="aq-store-map-label">Ver no Google Maps</span>
-          </div>
-        </a>
+        <iframe
+          src="${MAPS_EMBED}"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Localização Aquariumlife no Google Maps"
+        ></iframe>
       </div>
 
       <!-- Lado direito: info + CTAs -->
@@ -48,7 +49,7 @@ function buildStoreSection() {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
             </svg>
-            <span>Portugal — consulta o Google Maps para morada exata</span>
+            <span>Rinchoa, Rio de Mouro — Sintra, Portugal</span>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -79,7 +80,6 @@ function buildStoreSection() {
           </a>
         </div>
 
-        <!-- Rating visual estático -->
         <div class="aq-google-rating">
           <div class="aq-rating-badge">
             <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="aq-google-logo" aria-hidden="true">
@@ -106,22 +106,18 @@ function buildStoreSection() {
 
 function build() {
   if (document.getElementById('aq-store')) return true;
-
-  // Injetar após a seção de produtos (antes do FAQ se existir, senão antes do footer)
   const faq    = document.getElementById('aq-faq');
   const footer = document.querySelector('footer, #footer, .footer');
   const anchor = faq || footer;
   if (!anchor) return false;
-
   const section = buildStoreSection();
   anchor.parentNode.insertBefore(section, anchor);
-  console.log('[AQ] Store section injetada');
+  console.log('[AQ] Store section v2 injetada (com iframe Maps)');
   return true;
 }
 
 export function initStoreSection() {
   if (build()) return;
-
   let attempts = 0;
   const interval = setInterval(() => {
     attempts++;

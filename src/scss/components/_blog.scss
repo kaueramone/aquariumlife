@@ -1,23 +1,57 @@
 @use '../base/variables' as *;
 
-// ── Seção Blog na Home ───────────────────────────────────────────────────────
-#aq-blog-home {
-  padding: 80px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
+// ── Espaçamento global entre seções premium ───────────────────────────────────
+#aq-categories,
+#aq-brands,
+#aq-blog-home,
+#aq-store,
+#aq-faq {
+  & + #aq-categories,
+  & + #aq-brands,
+  & + #aq-blog-home,
+  & + #aq-store,
+  & + #aq-faq {
+    margin-top: 0;
+  }
 }
 
+// Separador sutil entre seções
+#aq-brands      { border-top: 1px solid rgba(8, 238, 188, 0.06); }
+#aq-blog-home   { border-top: 1px solid rgba(8, 238, 188, 0.06); }
+#aq-store       { border-top: 1px solid rgba(8, 238, 188, 0.06); }
+#aq-faq         { border-top: 1px solid rgba(8, 238, 188, 0.06); }
+
+// ── Seção Blog na Home ────────────────────────────────────────────────────────
+#aq-blog-home {
+  padding: 100px 20px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 700px; height: 400px;
+    background: radial-gradient(ellipse, rgba(8, 238, 188, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .aq-section-header { margin-bottom: 56px; }
+}
+
+// ── Grid de cards ─────────────────────────────────────────────────────────────
 .aq-blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
-  margin-top: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
 
   @media (max-width: 992px) { grid-template-columns: repeat(2, 1fr); }
   @media (max-width: 600px) { grid-template-columns: 1fr; }
 }
 
+// ── Card de post ──────────────────────────────────────────────────────────────
 .aq-blog-card {
   display: flex;
   flex-direction: column;
@@ -29,13 +63,14 @@
   -webkit-backdrop-filter: blur(8px);
   text-decoration: none;
   transition: $transition-smooth;
+  cursor: pointer;
 
   &:hover {
     border-color: rgba(8, 238, 188, 0.35);
     transform: translateY(-6px);
     @include neon-glow;
 
-    .aq-blog-card-img img { transform: scale(1.05); }
+    .aq-blog-card-img img { transform: scale(1.06); }
     .aq-blog-card-cta     { color: $color-neon-accent; gap: 10px; }
   }
 }
@@ -47,8 +82,7 @@
   background: rgba(0, 8, 20, 0.6);
 
   img {
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
   }
@@ -58,17 +92,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-  color: rgba(8, 238, 188, 0.3);
-
-  svg { width: 48px; height: 48px; }
+  width: 100%; height: 100%;
+  color: rgba(8, 238, 188, 0.25);
+  svg { width: 52px; height: 52px; }
 }
 
 .aq-blog-card-tag {
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 12px; left: 12px;
   padding: 4px 12px;
   border-radius: 20px;
   background: rgba(8, 238, 188, 0.15);
@@ -86,12 +117,12 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 20px;
+  padding: 22px 24px;
   flex: 1;
 }
 
 .aq-blog-card-date {
-  color: rgba(8, 238, 188, 0.7);
+  color: rgba(8, 238, 188, 0.65);
   font-size: 0.75rem;
   font-family: $font-family-body;
   letter-spacing: 0.5px;
@@ -110,7 +141,7 @@
   color: $color-text-secondary;
   font-family: $font-family-body;
   font-size: 0.88rem;
-  line-height: 1.6;
+  line-height: 1.65;
   margin: 0;
   flex: 1;
 }
@@ -119,7 +150,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.45);
   font-family: $font-family-title;
   font-size: 0.8rem;
   font-weight: 600;
@@ -130,23 +161,56 @@
   svg { width: 14px; height: 14px; transition: $transition-fast; }
 }
 
+// ── Skeleton loader ───────────────────────────────────────────────────────────
+@keyframes aq-skeleton-pulse {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 0.8; }
+}
+
+.aq-blog-skeleton {
+  pointer-events: none;
+  animation: aq-skeleton-pulse 1.6s ease-in-out infinite;
+}
+
+.aq-skel-img {
+  background: rgba(8, 238, 188, 0.07);
+}
+
+.aq-skel-line {
+  height: 14px;
+  border-radius: 6px;
+  background: rgba(8, 238, 188, 0.07);
+  margin-bottom: 10px;
+}
+
+.aq-skel-short  { width: 40%; }
+.aq-skel-full   { width: 100%; height: 18px; }
+.aq-skel-medium { width: 70%; }
+
+// ── CTA "Ver todos" centralizado ──────────────────────────────────────────────
 .aq-blog-home-cta {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 48px;
+
+  .aq-btn-outline {
+    padding: 16px 40px;
+    font-size: 0.95rem;
+  }
 }
 
 .aq-blog-empty {
   color: $color-text-secondary;
   text-align: center;
   grid-column: 1 / -1;
-  padding: 40px;
+  padding: 48px 20px;
+  font-family: $font-family-body;
+
+  p { margin: 0 0 8px; font-size: 1rem; }
 }
 
-// ── Página de Listagem /blog ─────────────────────────────────────────────────
+// ── Página de Listagem /blog ──────────────────────────────────────────────────
 body.aq-page-blog {
-
-  // Cabeçalho da página
   .aq-blog-page-header {
     text-align: center;
     padding: 60px 20px 40px;
@@ -154,7 +218,6 @@ body.aq-page-blog {
     margin: 0 auto;
   }
 
-  // Cards nativos do Shopkit/Boxie — override premium
   .aq-blog-native-card,
   .post, .blog-item {
     background: rgba(0, 21, 49, 0.35) !important;
@@ -171,26 +234,11 @@ body.aq-page-blog {
       @include neon-glow;
     }
 
-    // Título do card
-    h2, h3, .post-title, .blog-title {
-      color: $color-text-primary !important;
-      font-family: $font-family-title !important;
-    }
+    h2, h3, .post-title { color: $color-text-primary !important; font-family: $font-family-title !important; }
+    p, .post-excerpt    { color: $color-text-secondary !important; font-family: $font-family-body !important; }
+    time, .post-date    { color: rgba(8, 238, 188, 0.7) !important; font-size: 0.78rem !important; }
 
-    // Excerto
-    p, .post-excerpt, .post-text {
-      color: $color-text-secondary !important;
-      font-family: $font-family-body !important;
-    }
-
-    // Data
-    time, .post-date, .post-meta {
-      color: rgba(8, 238, 188, 0.7) !important;
-      font-size: 0.78rem !important;
-    }
-
-    // Botão "Ler mais"
-    a.btn, .btn-primary, .post-link, a[class*="btn"] {
+    a.btn, .btn-primary, .post-link {
       background: transparent !important;
       border: 1.5px solid $color-neon-accent !important;
       color: $color-neon-accent !important;
@@ -210,10 +258,8 @@ body.aq-page-blog {
   }
 }
 
-// ── Página de Post Individual ────────────────────────────────────────────────
+// ── Post Individual ───────────────────────────────────────────────────────────
 body.aq-page-post {
-
-  // Botão voltar
   .aq-post-back-btn {
     display: inline-flex;
     align-items: center;
@@ -222,22 +268,16 @@ body.aq-page-post {
     font-family: $font-family-title;
     font-size: 0.85rem;
     font-weight: 600;
-    letter-spacing: 0.5px;
     text-decoration: none;
     padding: 10px 0;
     margin-bottom: 24px;
     opacity: 0.8;
     transition: $transition-fast;
 
-    svg { width: 16px; height: 16px; transition: $transition-fast; }
-
-    &:hover {
-      opacity: 1;
-      gap: 12px;
-    }
+    svg { width: 16px; height: 16px; }
+    &:hover { opacity: 1; gap: 12px; }
   }
 
-  // Título do post
   .aq-post-title {
     color: $color-text-primary !important;
     font-family: $font-family-title !important;
@@ -248,20 +288,14 @@ body.aq-page-post {
     margin-bottom: 20px !important;
   }
 
-  // Meta (data, autor)
   .aq-post-meta,
-  .post-date, .post-meta, .article-meta {
+  .post-date, .post-meta {
     color: rgba(8, 238, 188, 0.7) !important;
     font-size: 0.82rem !important;
     font-family: $font-family-body !important;
-    display: flex !important;
-    gap: 16px !important;
-    align-items: center !important;
     margin-bottom: 28px !important;
-    flex-wrap: wrap !important;
   }
 
-  // Imagem de destaque
   .aq-post-featured-img,
   .post-image, .post-thumbnail {
     border-radius: 16px !important;
@@ -269,11 +303,9 @@ body.aq-page-post {
     border: 1px solid rgba(8, 238, 188, 0.1) !important;
     margin-bottom: 40px !important;
     @include neon-glow;
-
     img { width: 100% !important; height: auto !important; display: block !important; }
   }
 
-  // Corpo do artigo — tipografia legível
   .aq-post-body,
   .post-body, .post-content, .article-body {
     color: rgba(255, 255, 255, 0.85) !important;
@@ -283,32 +315,15 @@ body.aq-page-post {
     max-width: 780px !important;
     margin: 0 auto !important;
 
-    h1, h2, h3, h4 {
-      color: $color-text-primary !important;
-      font-family: $font-family-title !important;
-      margin-top: 2em !important;
-      margin-bottom: 0.75em !important;
-    }
-
-    h2 { font-size: 1.5rem !important; }
-    h3 { font-size: 1.2rem !important; color: $color-neon-accent !important; }
-
-    p { margin-bottom: 1.4em !important; }
-
-    a {
-      color: $color-neon-accent !important;
-      text-decoration: underline !important;
-      text-underline-offset: 3px !important;
-    }
+    h2 { color: $color-text-primary !important; font-family: $font-family-title !important; font-size: 1.5rem !important; margin-top: 2em !important; }
+    h3 { color: $color-neon-accent !important; font-family: $font-family-title !important; font-size: 1.2rem !important; margin-top: 1.8em !important; }
+    p  { margin-bottom: 1.4em !important; }
+    a  { color: $color-neon-accent !important; text-decoration: underline !important; text-underline-offset: 3px !important; }
 
     ul, ol {
       padding-left: 1.5em !important;
       margin-bottom: 1.4em !important;
-
-      li {
-        margin-bottom: 0.5em !important;
-        color: rgba(255, 255, 255, 0.8) !important;
-      }
+      li { margin-bottom: 0.5em !important; color: rgba(255,255,255,0.8) !important; }
     }
 
     blockquote {
@@ -324,7 +339,6 @@ body.aq-page-post {
     img {
       border-radius: 12px !important;
       max-width: 100% !important;
-      height: auto !important;
       border: 1px solid rgba(8, 238, 188, 0.08) !important;
       margin: 1.5em 0 !important;
     }
