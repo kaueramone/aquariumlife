@@ -1,7 +1,8 @@
 /**
- * trustSeals.js – v1
- * Injeta barra de selos de confiança antes do copyright do footer.
- * Selos: SSL Shopkit | Compra Segura | Google Business | MB | MB WAY | Visa/MC
+ * trustSeals.js – v2
+ * - Selos de confiança na col 1 do footer (antes do copyright)
+ * - Move redes sociais para coluna de Contactos
+ * - Remove .secure-site nativo do Shopkit
  */
 
 const SEALS = [
@@ -23,17 +24,6 @@ const SEALS = [
     icon: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M24 4L8 10v12c0 10.5 6.8 20.3 16 23.4C33.2 42.3 40 32.5 40 22V10L24 4z" stroke="currentColor" stroke-width="2" fill="none"/>
       <path d="M16 24l5 5 11-11" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`,
-  },
-  {
-    id: 'google',
-    label: 'Google Business',
-    sub: 'Perfil verificado',
-    icon: `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#4285F4" d="M47.5 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h13.2c-.6 3-2.3 5.5-4.9 7.2v6h7.9c4.6-4.3 7.3-10.6 7.3-17.2z"/>
-      <path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.9-6c-2.1 1.4-4.9 2.3-8 2.3-6.1 0-11.3-4.1-13.2-9.7H2.6v6.2C6.6 43.2 14.7 48 24 48z"/>
-      <path fill="#FBBC05" d="M10.8 28.8c-.5-1.4-.7-2.8-.7-4.3s.3-2.9.7-4.3v-6.2H2.6C.9 17.3 0 20.6 0 24s.9 6.7 2.6 9.5l8.2-4.7z"/>
-      <path fill="#EA4335" d="M24 9.5c3.4 0 6.5 1.2 8.9 3.5l6.7-6.7C35.9 2.4 30.4 0 24 0 14.7 0 6.6 4.8 2.6 12.5l8.2 4.7c1.9-5.6 7.1-9.7 13.2-9.7z"/>
     </svg>`,
   },
   {
@@ -73,10 +63,8 @@ const SEALS = [
 function buildSealsBar() {
   const bar = document.createElement('div');
   bar.id = 'aq-trust-seals';
-
   const inner = document.createElement('div');
   inner.className = 'aq-seals-inner';
-
   SEALS.forEach(seal => {
     const item = document.createElement('div');
     item.className = `aq-seal-item aq-seal-${seal.id}`;
@@ -89,9 +77,63 @@ function buildSealsBar() {
     `;
     inner.appendChild(item);
   });
-
   bar.appendChild(inner);
   return bar;
+}
+
+function moveSocialToContacts(footer) {
+  // Encontra as redes sociais nativas
+  const social = footer.querySelector('.footer-social, .social');
+  if (!social) return;
+
+  // Encontra a coluna de Contactos pela heading
+  let contactsCol = null;
+  footer.querySelectorAll('.footer-category').forEach(el => {
+    if (el.textContent.trim().toLowerCase().includes('contacto')) {
+      contactsCol = el.closest('.col-lg-3, .col-md-6, [class*="col"]');
+    }
+  });
+
+  if (!contactsCol) return;
+
+  // Clona e estiliza os links sociais
+  const socialWrap = document.createElement('div');
+  socialWrap.className = 'aq-footer-social';
+  socialWrap.style.cssText = 'display:flex;gap:12px;margin-top:16px;';
+
+  social.querySelectorAll('a').forEach(a => {
+    const clone = a.cloneNode(true);
+    clone.style.cssText = `
+      display:inline-flex;align-items:center;justify-content:center;
+      width:38px;height:38px;border-radius:50%;
+      border:1px solid rgba(8,238,188,0.25);
+      color:rgba(255,255,255,0.7);
+      transition:all 0.2s ease;
+      text-decoration:none;
+    `;
+    clone.addEventListener('mouseenter', () => {
+      clone.style.borderColor = '#08EEBC';
+      clone.style.color = '#08EEBC';
+      clone.style.boxShadow = '0 0 10px rgba(8,238,188,0.3)';
+    });
+    clone.addEventListener('mouseleave', () => {
+      clone.style.borderColor = 'rgba(8,238,188,0.25)';
+      clone.style.color = 'rgba(255,255,255,0.7)';
+      clone.style.boxShadow = 'none';
+    });
+    socialWrap.appendChild(clone);
+  });
+
+  contactsCol.appendChild(socialWrap);
+
+  // Oculta o social original
+  social.style.setProperty('display', 'none', 'important');
+}
+
+function removeSiteSeal(footer) {
+  footer.querySelectorAll('.secure-site, .site-seal, [class*="secure-site"]').forEach(el => {
+    el.style.setProperty('display', 'none', 'important');
+  });
 }
 
 function build() {
@@ -100,26 +142,27 @@ function build() {
   const footer = document.querySelector('footer, #footer, .footer');
   if (!footer) return false;
 
-  // Tentar inserir antes do copyright; se não existir, appenda ao footer
-  const copyright = footer.querySelector(
-    '.copyright, .footer-bottom, .footer-copyright, [class*="copyright"]'
-  );
-
+  // Injeta selos antes do copyright
+  const copyright = footer.querySelector('.copyright, .footer-bottom, [class*="copyright"]');
   const bar = buildSealsBar();
-
   if (copyright && copyright.parentNode) {
     copyright.parentNode.insertBefore(bar, copyright);
   } else {
-    footer.appendChild(bar);
+    footer.querySelector('.col-lg-3, [class*="col"]')?.appendChild(bar);
   }
 
-  console.log('[AQ] Trust seals injetados');
+  // Move redes sociais para Contactos
+  moveSocialToContacts(footer);
+
+  // Remove selos nativos Shopkit
+  removeSiteSeal(footer);
+
+  console.log('[AQ] Trust seals v2 aplicados');
   return true;
 }
 
 export function initTrustSeals() {
   if (build()) return;
-
   let attempts = 0;
   const interval = setInterval(() => {
     attempts++;

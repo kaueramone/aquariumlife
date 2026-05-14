@@ -178,3 +178,14 @@ img[src*="ssl"], img[src*="secure"],
 .badges, .footer .badges {
   display: none !important;
 }
+
+// ── Logo do footer: 30% maior ─────────────────────────────────────────────────
+footer .footer-logo img,
+.footer .footer-logo img {
+  width: auto !important;
+  max-width: none !important;
+  transform: scale(1.3) !important;
+  transform-origin: left top !important;
+  display: block !important;
+  margin-bottom: 16px !important;
+}
