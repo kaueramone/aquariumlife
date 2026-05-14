@@ -1,6 +1,6 @@
 @use '../base/variables' as *;
 
-// Shopkit default Footer Overrides
+// ── Footer base ───────────────────────────────────────────────────────────────
 footer, .footer, #footer {
   background: rgba(0, 4, 13, 0.9) !important;
   backdrop-filter: blur(20px) !important;
@@ -11,181 +11,138 @@ footer, .footer, #footer {
   overflow: hidden;
   margin-top: 50px;
 
-  // Subtle bottom glow for the footer
   &::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
+    top: 0; left: 0;
+    width: 100%; height: 1px;
     background: linear-gradient(90deg, transparent, $color-neon-accent, transparent);
   }
 
   &::after {
     content: '';
     position: absolute;
-    bottom: -150px;
-    left: 50%;
+    bottom: -150px; left: 50%;
     transform: translateX(-50%);
-    width: 80%;
-    height: 200px;
+    width: 80%; height: 200px;
     background: $color-neon-accent;
     filter: blur(120px);
     opacity: 0.1;
     pointer-events: none;
   }
-
-  // Transformar os widgets/colunas num grid
-  .container, .footer-inner, .row {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: space-between !important;
-    gap: 30px;
-  }
-
-  .col-md-3, .col-lg-3, .footer-widget {
-    flex: 1;
-    min-width: 200px;
-    margin-bottom: 30px;
-  }
-
-  .title, h3, h4, .footer-title {
-    color: $color-neon-accent !important;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 1.1rem;
-    margin-bottom: 25px !important;
-    position: relative;
-    display: inline-block;
-    
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      width: 40px;
-      height: 2px;
-      background: $color-neon-accent;
-    }
-  }
-
-  .footer-link, .footer-menu a, li a {
-    color: $color-text-secondary !important;
-    transition: $transition-fast;
-    display: block !important;
-    padding: 8px 0 !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-
-    &:hover {
-      color: $color-text-primary !important;
-      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-      transform: translateX(10px);
-      border-color: rgba(8, 238, 188, 0.2);
-    }
-  }
-
-  ul {
-    list-style: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  // Newsletter input area if present
-  .newsletter-form, .subscribe-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    
-    input {
-      background: rgba(0, 21, 49, 0.5) !important;
-      border: 1px solid rgba(8, 238, 188, 0.2) !important;
-      color: #fff !important;
-      border-radius: 8px !important;
-      padding: 12px 15px !important;
-      width: 100%;
-      
-      &:focus {
-        outline: none !important;
-        border-color: $color-neon-accent !important;
-        box-shadow: 0 0 10px rgba(8, 238, 188, 0.3) !important;
-      }
-    }
-  }
-
-  .copyright, .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
-    margin-top: 40px !important;
-    padding-top: 20px !important;
-    text-align: center !important;
-    color: rgba(255, 255, 255, 0.5) !important;
-    width: 100%;
-    
-    a {
-      color: $color-neon-accent !important;
-    }
-  }
 }
 
-// Logo do footer 30% maior
-footer, .footer, #footer {
-  .footer-logo, .logo, .brand-logo,
-  .footer-brand img, .footer-logo img,
-  [class*="footer"] img[alt*="logo"],
-  [class*="footer"] img[alt*="Logo"],
-  .footer-widget img:first-child {
-    transform: scale(1.3) !important;
-    transform-origin: left center !important;
-    margin-bottom: 8px !important;
-  }
-}
-
-// ── Redes sociais: mover para coluna de Contactos via CSS ────────────────────
-// O Shopkit coloca as redes sociais numa coluna separada — escondemos lá
-// e mostramos apenas dentro da coluna de contactos (última col)
-.footer-social, .social-links, [class*="social-media"],
-.footer-widget:has(.social), .col-social {
-  display: none !important;
-}
-
-// ── Copyright centralizado em linha única ─────────────────────────────────────
-footer .copyright, footer .footer-bottom,
-.footer .copyright, .footer .footer-bottom {
+// ── Grid de colunas ───────────────────────────────────────────────────────────
+footer .container-fluid,
+footer .container,
+footer .footer-inner {
   display: block !important;
-  text-align: center !important;
+}
+
+footer .row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-between !important;
+  gap: 30px !important;
+  align-items: flex-start !important;
+}
+
+footer .col-lg-3,
+footer .col-md-6,
+footer .col-xs-12 {
+  flex: 1 !important;
+  min-width: 200px !important;
+  max-width: 280px !important;
+  margin-bottom: 30px !important;
+}
+
+// ── Logo: 30% maior, sem overflow ────────────────────────────────────────────
+footer .footer-logo {
+  display: block !important;
+  margin-bottom: 20px !important;
+
+  img {
+    width: 130% !important;
+    max-width: 130% !important;
+    height: auto !important;
+    display: block !important;
+  }
+}
+
+// ── Títulos das colunas ───────────────────────────────────────────────────────
+footer .footer-category {
+  color: $color-neon-accent !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  font-family: $font-family-title !important;
+  margin-bottom: 20px !important;
+  position: relative !important;
+  display: block !important;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -8px; left: 0;
+    width: 32px; height: 2px;
+    background: $color-neon-accent;
+  }
+}
+
+// ── Links do footer ───────────────────────────────────────────────────────────
+footer .footer-link,
+footer .footer-menu a,
+footer li a {
+  color: $color-text-secondary !important;
+  transition: $transition-fast !important;
+  display: block !important;
+  padding: 6px 0 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+  text-decoration: none !important;
+
+  &:hover {
+    color: $color-text-primary !important;
+    padding-left: 6px !important;
+    border-color: rgba(8, 238, 188, 0.2) !important;
+  }
+}
+
+footer ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+// ── Copyright: fora das colunas, centralizado ─────────────────────────────────
+footer .copyright,
+footer .footer-bottom {
   width: 100% !important;
+  flex-basis: 100% !important;
+  text-align: center !important;
   border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
-  margin-top: 40px !important;
-  padding-top: 20px !important;
-  color: rgba(255, 255, 255, 0.5) !important;
-  white-space: nowrap !important;
+  margin-top: 20px !important;
+  padding: 20px 20px 0 !important;
+  color: rgba(255, 255, 255, 0.45) !important;
+  font-size: 0.85rem !important;
+  font-family: $font-family-body !important;
 
-  // Força tudo numa linha
-  * { display: inline !important; }
-
+  p { display: inline !important; margin: 0 !important; }
   a { color: $color-neon-accent !important; }
 }
 
-// ── Remover selos nativos do Shopkit (SecureSite + 4 selos) ─────────────────
-.footer-certificates, .footer-seals, .footer-badges,
-[class*="certificate"], [class*="trustmark"],
-.site-seal, .secure-seal, #siteseal,
-.footer-payment-icons > img,
-.payment-methods-footer,
-img[src*="comodo"], img[src*="trustlogo"],
-img[src*="ssl"], img[src*="secure"],
-.shopkit-badges, .footer-shopkit-badges,
-.badges, .footer .badges {
+// ── Redes sociais nativas: ocultar (movidas via JS para Contactos) ────────────
+footer .footer-social,
+footer .social {
   display: none !important;
 }
 
-// ── Logo do footer: 30% maior ─────────────────────────────────────────────────
-footer .footer-logo img,
-.footer .footer-logo img {
-  width: auto !important;
-  max-width: none !important;
-  transform: scale(1.3) !important;
-  transform-origin: left top !important;
-  display: block !important;
-  margin-bottom: 16px !important;
+// ── Selos nativos Shopkit: remover ────────────────────────────────────────────
+footer .secure-site,
+footer .site-seal,
+footer [class*="secure-site"],
+footer img[src*="secure-site"],
+footer img[src*="comodo"],
+footer img[src*="trustlogo"] {
+  display: none !important;
 }
