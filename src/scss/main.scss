@@ -9,6 +9,12 @@
 @use 'components/slider';
 @use 'components/categories';
 @use 'components/cart';
+@use 'components/brands';
+@use 'components/faq';
+@use 'components/store';
+@use 'components/trust-seals';
+@use 'components/blog';
+@use 'components/shared';
 
 // Layout e Pages podem ser adicionados conforme necessidade
 @use 'layouts/header';

@@ -1,0 +1,340 @@
+@use '../base/variables' as *;
+
+// ── Seção Blog na Home ───────────────────────────────────────────────────────
+#aq-blog-home {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.aq-blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 48px;
+
+  @media (max-width: 992px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 600px) { grid-template-columns: 1fr; }
+}
+
+.aq-blog-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(8, 238, 188, 0.1);
+  background: rgba(0, 21, 49, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  text-decoration: none;
+  transition: $transition-smooth;
+
+  &:hover {
+    border-color: rgba(8, 238, 188, 0.35);
+    transform: translateY(-6px);
+    @include neon-glow;
+
+    .aq-blog-card-img img { transform: scale(1.05); }
+    .aq-blog-card-cta     { color: $color-neon-accent; gap: 10px; }
+  }
+}
+
+.aq-blog-card-img {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background: rgba(0, 8, 20, 0.6);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+}
+
+.aq-blog-card-img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: rgba(8, 238, 188, 0.3);
+
+  svg { width: 48px; height: 48px; }
+}
+
+.aq-blog-card-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(8, 238, 188, 0.15);
+  border: 1px solid rgba(8, 238, 188, 0.35);
+  color: $color-neon-accent;
+  font-family: $font-family-title;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  backdrop-filter: blur(4px);
+}
+
+.aq-blog-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  flex: 1;
+}
+
+.aq-blog-card-date {
+  color: rgba(8, 238, 188, 0.7);
+  font-size: 0.75rem;
+  font-family: $font-family-body;
+  letter-spacing: 0.5px;
+}
+
+.aq-blog-card-title {
+  color: $color-text-primary;
+  font-family: $font-family-title;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.aq-blog-card-excerpt {
+  color: $color-text-secondary;
+  font-family: $font-family-body;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+.aq-blog-card-cta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: $font-family-title;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: $transition-fast;
+  margin-top: 8px;
+
+  svg { width: 14px; height: 14px; transition: $transition-fast; }
+}
+
+.aq-blog-home-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.aq-blog-empty {
+  color: $color-text-secondary;
+  text-align: center;
+  grid-column: 1 / -1;
+  padding: 40px;
+}
+
+// ── Página de Listagem /blog ─────────────────────────────────────────────────
+body.aq-page-blog {
+
+  // Cabeçalho da página
+  .aq-blog-page-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  // Cards nativos do Shopkit/Boxie — override premium
+  .aq-blog-native-card,
+  .post, .blog-item {
+    background: rgba(0, 21, 49, 0.35) !important;
+    border: 1px solid rgba(8, 238, 188, 0.1) !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    transition: $transition-smooth !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+
+    &:hover {
+      border-color: rgba(8, 238, 188, 0.35) !important;
+      transform: translateY(-6px) !important;
+      @include neon-glow;
+    }
+
+    // Título do card
+    h2, h3, .post-title, .blog-title {
+      color: $color-text-primary !important;
+      font-family: $font-family-title !important;
+    }
+
+    // Excerto
+    p, .post-excerpt, .post-text {
+      color: $color-text-secondary !important;
+      font-family: $font-family-body !important;
+    }
+
+    // Data
+    time, .post-date, .post-meta {
+      color: rgba(8, 238, 188, 0.7) !important;
+      font-size: 0.78rem !important;
+    }
+
+    // Botão "Ler mais"
+    a.btn, .btn-primary, .post-link, a[class*="btn"] {
+      background: transparent !important;
+      border: 1.5px solid $color-neon-accent !important;
+      color: $color-neon-accent !important;
+      border-radius: 6px !important;
+      font-family: $font-family-title !important;
+      font-weight: 700 !important;
+      letter-spacing: 1px !important;
+      text-transform: uppercase !important;
+      font-size: 0.78rem !important;
+      transition: $transition-fast !important;
+
+      &:hover {
+        background: $color-neon-accent !important;
+        color: $color-bg-primary !important;
+      }
+    }
+  }
+}
+
+// ── Página de Post Individual ────────────────────────────────────────────────
+body.aq-page-post {
+
+  // Botão voltar
+  .aq-post-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: $color-neon-accent;
+    font-family: $font-family-title;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    padding: 10px 0;
+    margin-bottom: 24px;
+    opacity: 0.8;
+    transition: $transition-fast;
+
+    svg { width: 16px; height: 16px; transition: $transition-fast; }
+
+    &:hover {
+      opacity: 1;
+      gap: 12px;
+    }
+  }
+
+  // Título do post
+  .aq-post-title {
+    color: $color-text-primary !important;
+    font-family: $font-family-title !important;
+    font-size: clamp(1.6rem, 4vw, 2.8rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.5px !important;
+    margin-bottom: 20px !important;
+  }
+
+  // Meta (data, autor)
+  .aq-post-meta,
+  .post-date, .post-meta, .article-meta {
+    color: rgba(8, 238, 188, 0.7) !important;
+    font-size: 0.82rem !important;
+    font-family: $font-family-body !important;
+    display: flex !important;
+    gap: 16px !important;
+    align-items: center !important;
+    margin-bottom: 28px !important;
+    flex-wrap: wrap !important;
+  }
+
+  // Imagem de destaque
+  .aq-post-featured-img,
+  .post-image, .post-thumbnail {
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(8, 238, 188, 0.1) !important;
+    margin-bottom: 40px !important;
+    @include neon-glow;
+
+    img { width: 100% !important; height: auto !important; display: block !important; }
+  }
+
+  // Corpo do artigo — tipografia legível
+  .aq-post-body,
+  .post-body, .post-content, .article-body {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-family: $font-family-body !important;
+    font-size: 1rem !important;
+    line-height: 1.8 !important;
+    max-width: 780px !important;
+    margin: 0 auto !important;
+
+    h1, h2, h3, h4 {
+      color: $color-text-primary !important;
+      font-family: $font-family-title !important;
+      margin-top: 2em !important;
+      margin-bottom: 0.75em !important;
+    }
+
+    h2 { font-size: 1.5rem !important; }
+    h3 { font-size: 1.2rem !important; color: $color-neon-accent !important; }
+
+    p { margin-bottom: 1.4em !important; }
+
+    a {
+      color: $color-neon-accent !important;
+      text-decoration: underline !important;
+      text-underline-offset: 3px !important;
+    }
+
+    ul, ol {
+      padding-left: 1.5em !important;
+      margin-bottom: 1.4em !important;
+
+      li {
+        margin-bottom: 0.5em !important;
+        color: rgba(255, 255, 255, 0.8) !important;
+      }
+    }
+
+    blockquote {
+      border-left: 3px solid $color-neon-accent !important;
+      padding: 12px 20px !important;
+      margin: 2em 0 !important;
+      background: rgba(8, 238, 188, 0.04) !important;
+      border-radius: 0 8px 8px 0 !important;
+      font-style: italic !important;
+      color: $color-text-secondary !important;
+    }
+
+    img {
+      border-radius: 12px !important;
+      max-width: 100% !important;
+      height: auto !important;
+      border: 1px solid rgba(8, 238, 188, 0.08) !important;
+      margin: 1.5em 0 !important;
+    }
+
+    code {
+      background: rgba(8, 238, 188, 0.08) !important;
+      color: $color-neon-accent !important;
+      padding: 2px 6px !important;
+      border-radius: 4px !important;
+      font-size: 0.9em !important;
+    }
+  }
+}

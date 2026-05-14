@@ -1,0 +1,93 @@
+@use '../base/variables' as *;
+
+// ── Seção FAQ ────────────────────────────────────────────────────────────────
+#aq-faq {
+  padding: 80px 20px;
+  max-width: 860px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.aq-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 48px;
+}
+
+.aq-faq-item {
+  border-radius: 12px;
+  border: 1px solid rgba(8, 238, 188, 0.1);
+  background: rgba(0, 21, 49, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+
+  &.open {
+    border-color: rgba(8, 238, 188, 0.35);
+    @include neon-glow;
+  }
+}
+
+.aq-faq-q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: $color-text-primary;
+  font-family: $font-family-title;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  transition: color 0.2s ease;
+
+  &:hover,
+  &[aria-expanded="true"] {
+    color: $color-neon-accent;
+  }
+
+  span {
+    flex: 1;
+  }
+}
+
+.aq-faq-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.4);
+  transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), color 0.2s;
+
+  .aq-faq-q[aria-expanded="true"] & {
+    transform: rotate(180deg);
+    color: $color-neon-accent;
+  }
+}
+
+.aq-faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  .aq-faq-item.open & {
+    max-height: 400px;
+  }
+
+  p {
+    padding: 0 24px 20px;
+    color: $color-text-secondary;
+    font-family: $font-family-body;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+    border-top: 1px solid rgba(8, 238, 188, 0.07);
+    padding-top: 16px;
+  }
+}

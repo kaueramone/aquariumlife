@@ -1,13 +1,38 @@
 @use '../base/variables' as *;
 
 // ============================================================
-// CART — Badge + Mini-cart popup (Shopkit Boxie)
+// CART — Badge + Mini-cart popup
+// HTML real: .cart-list.well-featured.well-shadow
 // ============================================================
 
-// ── Badge de quantidade no ícone do carrinho ────────────────
-// Shopkit usa .link-cart.has-products::before para o contador
+// ── Badge JS (.aq-cart-badge) ───────────────────────────────
+.link-cart {
+  position: relative !important;
+}
+
+// O ::before do Shopkit — deixar o content intacto, só estilizar
 .link-cart.has-products::before,
 .link-cart::before {
+  background: $color-neon-accent !important;
+  color: #001531 !important;
+  font-weight: 700 !important;
+  font-size: 0.6rem !important;
+  min-width: 17px !important;
+  height: 17px !important;
+  border-radius: 50% !important;
+  display: inline-block !important;
+  text-align: center !important;
+  line-height: 17px !important;
+  padding: 0 3px !important;
+  border: none !important;
+  box-shadow: 0 0 8px rgba(8, 238, 188, 0.65) !important;
+}
+
+// Badge custom injetado pelo nosso JS
+.aq-cart-badge {
+  position: absolute !important;
+  top: -6px !important;
+  right: -8px !important;
   background: $color-neon-accent !important;
   color: #001531 !important;
   font-family: $font-family-title !important;
@@ -16,178 +41,139 @@
   min-width: 17px !important;
   height: 17px !important;
   border-radius: 50% !important;
-  display: inline-flex !important;
+  display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   padding: 0 3px !important;
-  border: none !important;
-  box-shadow: 0 0 8px rgba(8, 238, 188, 0.7) !important;
   line-height: 1 !important;
+  box-shadow: 0 0 8px rgba(8, 238, 188, 0.65) !important;
+  pointer-events: none !important;
+  z-index: 10 !important;
 }
 
-// ── Popup / dropdown do carrinho ────────────────────────────
-// Shopkit Boxie usa .resume-cart ou .cart-resume
-.resume-cart,
-.cart-resume,
-.cart-summary-box,
-.cart-box,
-.dropdown-cart,
-.shopping-cart-dropdown {
+// ── Popup: container principal ──────────────────────────────
+.cart-list.well-featured,
+.cart-list.well-shadow,
+.cart-list {
   background: #001531 !important;
-  border: 1px solid rgba(8, 238, 188, 0.25) !important;
+  background-color: #001531 !important;
+  border: 1px solid rgba(8, 238, 188, 0.22) !important;
   border-radius: 14px !important;
   box-shadow:
     0 20px 50px rgba(0, 0, 0, 0.75),
-    inset 0 1px 0 rgba(8, 238, 188, 0.12) !important;
-  color: #fff !important;
+    inset 0 1px 0 rgba(8, 238, 188, 0.1) !important;
   overflow: hidden !important;
-  min-width: 300px !important;
-  position: relative;
-
-  &::before {
-    content: '' !important;
-    position: absolute !important;
-    top: 0; left: 10%; width: 80%; height: 1px !important;
-    background: linear-gradient(90deg, transparent, rgba(8,238,188,0.55), transparent) !important;
-    pointer-events: none !important;
-    display: block !important;
-  }
-
-  // Todo o texto branco por defeito
-  * { color: #fff !important; }
+  padding: 0 !important;
 }
 
-// ── Linha de produto no popup ───────────────────────────────
-.resume-cart .cart-item,
-.resume-cart .resume-item,
-.resume-cart .cart-product,
-.cart-resume .cart-item,
-.cart-resume .resume-item {
-  border-bottom: 1px solid rgba(8, 238, 188, 0.08) !important;
-  padding: 14px 16px !important;
+// ── Item do carrinho ────────────────────────────────────────
+.cart-list .cart-item {
   display: flex !important;
   align-items: center !important;
   gap: 12px !important;
+  padding: 14px 16px !important;
+  border-bottom: 1px solid rgba(8, 238, 188, 0.08) !important;
   background: transparent !important;
 }
 
-// Imagem — manter tamanho original do Shopkit, só estilizar
-.resume-cart img,
-.cart-resume img {
+// Imagem
+.cart-list .item-image img {
+  width: 62px !important;
+  height: 62px !important;
+  object-fit: contain !important;
   border-radius: 8px !important;
   background: rgba(0, 8, 20, 0.6) !important;
-  border: 1px solid rgba(8, 238, 188, 0.15) !important;
+  border: 1px solid rgba(8, 238, 188, 0.12) !important;
   padding: 4px !important;
-  object-fit: contain !important;
 }
 
 // Nome do produto
-.resume-cart .item-name,
-.resume-cart .cart-item-name,
-.resume-cart .product-name,
-.resume-cart a,
-.cart-resume a {
+.cart-list .details .item-product {
   color: #cde4f8 !important;
+  font-family: $font-family-body !important;
   font-size: 0.84rem !important;
   font-weight: 500 !important;
   text-decoration: none !important;
+  display: block !important;
+  line-height: 1.4 !important;
+  margin-bottom: 4px !important;
   &:hover { color: #fff !important; }
 }
 
-// Preço do produto
-.resume-cart .item-price,
-.resume-cart .cart-item-price,
-.resume-cart .price,
-.resume-cart .product-price,
-.cart-resume .price,
-.cart-resume .item-price {
+// Preço do item
+.cart-list .details .price {
   color: $color-neon-accent !important;
   font-family: $font-family-title !important;
-  font-weight: 700 !important;
   font-size: 0.95rem !important;
+  font-weight: 700 !important;
 }
 
-// Botão remover item
-.resume-cart .item-remove,
-.resume-cart .remove-item,
-.resume-cart [class*="remove"],
-.resume-cart [class*="delete"],
-.cart-resume .item-remove {
+// Botão remover (lixo)
+.cart-list a.remove {
   background: transparent !important;
+  background-image: none !important;
   border: 1px solid rgba(8, 238, 188, 0.2) !important;
   border-radius: 50% !important;
   color: $color-neon-accent !important;
-  width: 28px !important; height: 28px !important;
+  width: 30px !important;
+  height: 30px !important;
+  min-width: 30px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   padding: 0 !important;
-  flex-shrink: 0 !important;
   margin-left: auto !important;
-  transition: $transition-fast;
+  flex-shrink: 0 !important;
+  box-shadow: none !important;
+  transition: border-color 0.2s, background 0.2s !important;
 
-  i, svg { color: $color-neon-accent !important; }
+  &::before, &::after { content: none !important; display: none !important; }
+
+  svg, path { fill: $color-neon-accent !important; }
 
   &:hover {
     background: rgba(255, 50, 80, 0.12) !important;
-    border-color: #ff3250 !important;
-    i, svg { color: #ff3250 !important; }
+    border-color: rgba(255, 50, 80, 0.55) !important;
+    svg, path { fill: #ff3250 !important; }
   }
 }
 
 // ── Total ───────────────────────────────────────────────────
-.resume-cart .cart-total,
-.resume-cart .resume-total,
-.resume-cart .total,
-.cart-resume .cart-total,
-.cart-resume .total {
-  padding: 12px 16px !important;
-  border-top: 1px solid rgba(8, 238, 188, 0.12) !important;
+.cart-list .cart-total {
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
+  padding: 12px 16px !important;
+  border-top: 1px solid rgba(8, 238, 188, 0.1) !important;
   background: rgba(8, 238, 188, 0.03) !important;
-
-  // Label "Total:"
-  span:first-child, label, .total-label {
-    color: rgba(255, 255, 255, 0.6) !important;
-    font-size: 0.8rem !important;
-    text-transform: uppercase !important;
-    letter-spacing: 1px !important;
-    font-weight: 400 !important;
-  }
-
-  // Valor
-  span:last-child, strong, .total-value, .total-price {
-    color: $color-neon-accent !important;
-    font-family: $font-family-title !important;
-    font-size: 1.2rem !important;
-    font-weight: 700 !important;
-  }
 }
 
-// ── Botões de acção ─────────────────────────────────────────
-.resume-cart .cart-actions,
-.resume-cart .resume-actions,
-.resume-cart .cart-buttons,
-.cart-resume .cart-actions,
-.cart-resume .resume-actions {
-  padding: 12px 16px 16px !important;
+.cart-list .cart-total .cart-total-text {
+  font-family: $font-family-title !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  color: $color-neon-accent !important;
+}
+
+// Label "Total:" — ligeiramente mais suave
+.cart-list .cart-total .cart-total-text:first-child {
+  color: rgba(255, 255, 255, 0.65) !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+// ── Botões ──────────────────────────────────────────────────
+.cart-list .cart-btns {
   display: flex !important;
   flex-direction: column !important;
   gap: 8px !important;
+  padding: 12px 16px 16px !important;
   background: transparent !important;
 }
 
-.resume-cart .cart-actions a,
-.resume-cart .resume-actions a,
-.resume-cart .cart-buttons a,
-.resume-cart a.btn,
-.resume-cart .btn,
-.cart-resume .cart-actions a,
-.cart-resume .resume-actions a,
-.cart-resume a.btn,
-.cart-resume .btn {
+.cart-list .cart-btns .cart-btn {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -203,6 +189,7 @@
   cursor: pointer !important;
   transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease !important;
 
+  // Contorno neon, fundo transparente
   background: transparent !important;
   background-image: none !important;
   border: 1.5px solid $color-neon-accent !important;
@@ -214,8 +201,14 @@
 
   &:hover, &:focus {
     background: $color-neon-accent !important;
+    background-image: none !important;
     color: #001531 !important;
     box-shadow: 0 0 16px rgba(8, 238, 188, 0.4) !important;
     text-decoration: none !important;
   }
+}
+
+// "Finalizar compra" — destaque extra (segundo botão)
+.cart-list .cart-btns .cart-btn.btn-primary {
+  border-width: 1.5px !important;
 }

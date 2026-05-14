@@ -1,0 +1,229 @@
+@use '../base/variables' as *;
+
+// ── Seção Loja Física + Google ───────────────────────────────────────────────
+#aq-store {
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+
+  // Halo de fundo
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(ellipse, rgba(8, 238, 188, 0.04) 0%, transparent 70%);
+    pointer-events: none;
+  }
+}
+
+.aq-store-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+// Placeholder do mapa
+.aq-store-map {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(8, 238, 188, 0.15);
+  @include glass-panel;
+  aspect-ratio: 4/3;
+  min-height: 300px;
+}
+
+.aq-store-map-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(8, 238, 188, 0.04);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  &:hover::after { opacity: 1; }
+}
+
+.aq-store-map-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  background: radial-gradient(ellipse at center, rgba(8, 238, 188, 0.08) 0%, transparent 70%);
+}
+
+.aq-map-pin-icon {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0 0 20px rgba(8, 238, 188, 0.5));
+  animation: aq-pin-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes aq-pin-pulse {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+.aq-store-map-label {
+  color: $color-neon-accent;
+  font-family: $font-family-title;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+// Bloco de info
+.aq-store-header {
+  text-align: left !important;
+
+  &::before { display: none; } // remove linha central se existir
+}
+
+.aq-store-details {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    color: $color-text-secondary;
+    font-size: 0.95rem;
+    line-height: 1.5;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      color: $color-neon-accent;
+      margin-top: 2px;
+    }
+  }
+}
+
+.aq-store-ctas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+// Botão primário neon (reutilizável)
+.aq-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: $color-neon-accent;
+  color: $color-bg-primary;
+  font-family: $font-family-title;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 2px solid $color-neon-accent;
+  transition: $transition-smooth;
+
+  svg { width: 16px; height: 16px; }
+
+  &:hover {
+    background: transparent;
+    color: $color-neon-accent;
+    @include neon-glow;
+  }
+}
+
+// Botão outline
+.aq-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: transparent;
+  color: $color-neon-accent;
+  font-family: $font-family-title;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 2px solid rgba(8, 238, 188, 0.5);
+  transition: $transition-smooth;
+
+  svg { width: 16px; height: 16px; }
+
+  &:hover {
+    border-color: $color-neon-accent;
+    background: rgba(8, 238, 188, 0.06);
+    @include neon-glow;
+  }
+}
+
+// Badge Google Rating
+.aq-google-rating {
+  margin-top: 32px;
+}
+
+.aq-rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(8, 238, 188, 0.12);
+  background: rgba(0, 21, 49, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+.aq-google-logo {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.aq-rating-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.aq-star {
+  width: 16px;
+  height: 16px;
+  color: #FBBC05;
+
+  &.filled { fill: #FBBC05; }
+}
+
+.aq-rating-text {
+  display: block;
+  font-size: 0.78rem;
+  color: $color-text-secondary;
+  margin-top: 2px;
+  font-family: $font-family-body;
+}

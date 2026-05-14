@@ -473,7 +473,7 @@
     }
 
     // Build principal ─────────────────────────────────────────────────────────────
-    function build() {
+    function build$4() {
       const t = hideProductsTitle();
       const m = moveComprarButtons();
       const v = injectVerTodos();
@@ -481,12 +481,12 @@
     }
 
     function initProductsSection() {
-      if (build()) return;
+      if (build$4()) return;
 
       let attempts = 0;
       const interval = setInterval(() => {
         attempts++;
-        if (build() || attempts >= 25) clearInterval(interval);
+        if (build$4() || attempts >= 25) clearInterval(interval);
       }, 250);
 
       const observer = new MutationObserver(() => {
@@ -755,6 +755,763 @@
       }).observe(document.body, { childList: true, subtree: true });
     }
 
+    /**
+     * brandsSection.js – v1
+     * Oculta o bloco nativo "Nossas Marcas" do Shopkit
+     * e injeta uma seção premium de marcas com carrossel infinito.
+     */
+
+    const BRANDS = [
+      { label: 'Tropica',       href: '/products?brand=tropica',       img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/tropica-logo.png' },
+      { label: 'ADA',           href: '/products?brand=ada',           img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ada-logo.png' },
+      { label: 'JBL',           href: '/products?brand=jbl',           img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/jbl-logo.png' },
+      { label: 'Fluval',        href: '/products?brand=fluval',        img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fluval-logo.png' },
+      { label: 'Oase',          href: '/products?brand=oase',          img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/oase-logo.png' },
+      { label: 'Dennerle',      href: '/products?brand=dennerle',      img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/dennerle-logo.png' },
+      { label: 'Eheim',         href: '/products?brand=eheim',         img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/eheim-logo.png' },
+      { label: 'Seachem',       href: '/products?brand=seachem',       img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/seachem-logo.png' },
+    ];
+
+    // Nomes de classes/texto para identificar o bloco nativo de marcas
+    const BRANDS_NATIVE_SELECTORS = [
+      '.brands-item',
+      '[class*="brands"]',
+    ];
+
+    function hideNativeBrands() {
+      for (const sel of BRANDS_NATIVE_SELECTORS) {
+        const el = document.querySelector(sel);
+        if (!el) continue;
+
+        // Sobe até a <section> contenedora
+        let target = el;
+        for (let i = 0; i < 6; i++) {
+          const p = target.parentElement;
+          if (!p || p.tagName === 'BODY') break;
+          target = p;
+          if (target.tagName === 'SECTION' || target.classList.contains('section') || target.classList.contains('block')) break;
+        }
+        target.style.setProperty('display', 'none', 'important');
+        console.log('[AQ] Brands nativo ocultado:', target.tagName, target.className);
+        return target;
+      }
+      return null;
+    }
+
+    function buildBrandsSection() {
+      const section = document.createElement('section');
+      section.id = 'aq-brands';
+
+      // Cabeçalho
+      const header = document.createElement('div');
+      header.className = 'aq-section-header';
+      header.innerHTML = `
+    <span class="aq-section-tag">Parceiros</span>
+    <h2 class="aq-section-title">As Melhores <span class="aq-neon">Marcas</span></h2>
+    <p class="aq-section-sub">Trabalhamos apenas com marcas de referência mundial em aquarismo</p>
+  `;
+      section.appendChild(header);
+
+      // Wrapper do carrossel (duplicamos para loop infinito via CSS)
+      const track = document.createElement('div');
+      track.className = 'aq-brands-track';
+
+      const inner = document.createElement('div');
+      inner.className = 'aq-brands-inner';
+
+      // Duplicar itens para criar loop contínuo
+      [...BRANDS, ...BRANDS].forEach((brand) => {
+        const a = document.createElement('a');
+        a.href = brand.href;
+        a.className = 'aq-brand-item';
+        a.title = `Ver produtos ${brand.label}`;
+        a.setAttribute('aria-label', `Filtrar por marca ${brand.label}`);
+
+        const img = document.createElement('img');
+        img.src = brand.img;
+        img.alt = brand.label;
+        img.loading = 'lazy';
+        // Fallback: se a imagem não carregar, mostra o nome
+        img.onerror = function () {
+          this.style.display = 'none';
+          const fallback = document.createElement('span');
+          fallback.className = 'aq-brand-fallback';
+          fallback.textContent = brand.label;
+          a.appendChild(fallback);
+        };
+
+        a.appendChild(img);
+        inner.appendChild(a);
+      });
+
+      track.appendChild(inner);
+      section.appendChild(track);
+
+      return section;
+    }
+
+    function build$3() {
+      if (document.getElementById('aq-brands')) return true;
+
+      const nativeHidden = hideNativeBrands();
+      if (!nativeHidden) return false;
+
+      const newSection = buildBrandsSection();
+      nativeHidden.parentNode.insertBefore(newSection, nativeHidden.nextSibling);
+      console.log('[AQ] Brands section injetada');
+      return true;
+    }
+
+    function initBrandsSection() {
+      if (build$3()) return;
+
+      let attempts = 0;
+      const interval = setInterval(() => {
+        attempts++;
+        if (build$3() || attempts >= 20) clearInterval(interval);
+      }, 300);
+
+      const observer = new MutationObserver(() => {
+        if (build$3()) observer.disconnect();
+      });
+      observer.observe(document.body || document.documentElement, {
+        childList: true,
+        subtree: true,
+      });
+    }
+
+    /**
+     * storeSection.js – v1
+     * Seção "Visita-nos" — convida à loja física e pede avaliação no Google.
+     * Link Maps: https://maps.app.goo.gl/6uvfMJofFLiB5yZi6
+     */
+
+    const MAPS_URL   = 'https://maps.app.goo.gl/6uvfMJofFLiB5yZi6';
+    const REVIEW_URL = 'https://maps.app.goo.gl/6uvfMJofFLiB5yZi6';
+
+    // Estrela SVG reutilizável
+    function starSVG(filled = true) {
+      return `<svg viewBox="0 0 24 24" class="aq-star${filled ? ' filled' : ''}" aria-hidden="true">
+    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+      fill="${filled ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="1.5"/>
+  </svg>`;
+    }
+
+    function buildStoreSection() {
+      const section = document.createElement('section');
+      section.id = 'aq-store';
+
+      section.innerHTML = `
+    <div class="aq-store-inner">
+
+      <!-- Lado esquerdo: mapa / visual -->
+      <div class="aq-store-map">
+        <a href="${MAPS_URL}" target="_blank" rel="noopener noreferrer" class="aq-store-map-link" aria-label="Ver no Google Maps">
+          <div class="aq-store-map-placeholder">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="aq-map-pin-icon">
+              <path d="M32 6C22.06 6 14 14.06 14 24c0 14.4 18 34 18 34s18-19.6 18-34c0-9.94-8.06-18-18-18z" fill="#08EEBC" opacity=".15" stroke="#08EEBC" stroke-width="2"/>
+              <circle cx="32" cy="24" r="7" fill="#08EEBC" opacity=".9"/>
+            </svg>
+            <span class="aq-store-map-label">Ver no Google Maps</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Lado direito: info + CTAs -->
+      <div class="aq-store-info">
+        <div class="aq-section-header aq-store-header">
+          <span class="aq-section-tag">Loja Física</span>
+          <h2 class="aq-section-title">Visita-nos <span class="aq-neon">Pessoalmente</span></h2>
+          <p class="aq-section-sub">Vem conhecer o nosso espaço, ver os produtos ao vivo e receber aconselhamento especializado da nossa equipa.</p>
+        </div>
+
+        <ul class="aq-store-details">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>Portugal — consulta o Google Maps para morada exata</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+            <span>Horários disponíveis no nosso perfil Google</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 15.92z"/>
+            </svg>
+            <span>Atendimento presencial e online</span>
+          </li>
+        </ul>
+
+        <div class="aq-store-ctas">
+          <a href="${MAPS_URL}" target="_blank" rel="noopener noreferrer" class="aq-btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            Como chegar
+          </a>
+          <a href="${REVIEW_URL}" target="_blank" rel="noopener noreferrer" class="aq-btn-outline aq-btn-review">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            Avaliar no Google
+          </a>
+        </div>
+
+        <!-- Rating visual estático -->
+        <div class="aq-google-rating">
+          <div class="aq-rating-badge">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="aq-google-logo" aria-hidden="true">
+              <path fill="#4285F4" d="M47.5 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h13.2c-.6 3-2.3 5.5-4.9 7.2v6h7.9c4.6-4.3 7.3-10.6 7.3-17.2z"/>
+              <path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.9-6c-2.1 1.4-4.9 2.3-8 2.3-6.1 0-11.3-4.1-13.2-9.7H2.6v6.2C6.6 43.2 14.7 48 24 48z"/>
+              <path fill="#FBBC05" d="M10.8 28.8c-.5-1.4-.7-2.8-.7-4.3s.3-2.9.7-4.3v-6.2H2.6C.9 17.3 0 20.6 0 24s.9 6.7 2.6 9.5l8.2-4.7z"/>
+              <path fill="#EA4335" d="M24 9.5c3.4 0 6.5 1.2 8.9 3.5l6.7-6.7C35.9 2.4 30.4 0 24 0 14.7 0 6.6 4.8 2.6 12.5l8.2 4.7c1.9-5.6 7.1-9.7 13.2-9.7z"/>
+            </svg>
+            <div class="aq-rating-info">
+              <div class="aq-rating-stars">
+                ${starSVG()}${starSVG()}${starSVG()}${starSVG()}${starSVG()}
+              </div>
+              <span class="aq-rating-text">Avalia-nos no Google</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  `;
+
+      return section;
+    }
+
+    function build$2() {
+      if (document.getElementById('aq-store')) return true;
+
+      // Injetar após a seção de produtos (antes do FAQ se existir, senão antes do footer)
+      const faq    = document.getElementById('aq-faq');
+      const footer = document.querySelector('footer, #footer, .footer');
+      const anchor = faq || footer;
+      if (!anchor) return false;
+
+      const section = buildStoreSection();
+      anchor.parentNode.insertBefore(section, anchor);
+      console.log('[AQ] Store section injetada');
+      return true;
+    }
+
+    function initStoreSection() {
+      if (build$2()) return;
+
+      let attempts = 0;
+      const interval = setInterval(() => {
+        attempts++;
+        if (build$2() || attempts >= 20) clearInterval(interval);
+      }, 300);
+    }
+
+    /**
+     * faqSection.js – v1
+     * Injeta uma seção FAQ em acordeão na home, antes do footer.
+     * Estratégia SEO: conteúdo semântico <details>/<summary> + schema.org FAQPage.
+     */
+
+    const FAQS = [
+      {
+        q: 'Fazem envios para todo Portugal continental e ilhas?',
+        a: 'Sim! Enviamos para todo o Portugal continental, Madeira e Açores. Os prazos e custos de envio variam consoante o destino — consulta as condições de envio na página do carrinho.',
+      },
+      {
+        q: 'Vendem peixes, plantas e invertebrados vivos?',
+        a: 'Sim, trabalhamos com seres vivos! As encomendas de animais e plantas são cuidadosamente embaladas com materiais específicos para garantir a chegada em segurança. Em caso de problema na chegada, contacta-nos em até 2 horas com foto/vídeo.',
+      },
+      {
+        q: 'Qual o prazo de entrega habitual?',
+        a: 'Para equipamento e produtos secos, o prazo habitual é de 2 a 5 dias úteis. Para encomendas com seres vivos, os envios são feitos às terças e quartas-feiras para evitar atrasos no fim de semana.',
+      },
+      {
+        q: 'Posso visitar a vossa loja física?',
+        a: 'Claro! Temos loja física em Portugal onde podes ver os produtos ao vivo, pedir aconselhamento especializado e até trazer o teu aquário para diagnóstico. Consulta o nosso Google Maps para morada e horários.',
+      },
+      {
+        q: 'Que marcas comercializam?',
+        a: 'Trabalhamos com marcas de referência mundial como Tropica, ADA, JBL, Fluval, Oase, Dennerle, Eheim e Seachem, entre outras. Temos sempre stock renovado e acesso a encomenda especial.',
+      },
+      {
+        q: 'Como escolher o filtro certo para o meu aquário?',
+        a: 'Recomendamos um filtro capaz de filtrar pelo menos 4× o volume do aquário por hora. Por exemplo, para um aquário de 100L, procura um filtro com débito mínimo de 400 L/h. A nossa equipa pode ajudar-te a escolher a melhor solução — basta contactar-nos!',
+      },
+      {
+        q: 'Devo usar CO₂ no meu aquário plantado?',
+        a: 'Depende das plantas que pretendes manter. Para plantações simples (Anubias, Java Fern, Musgo), o CO₂ líquido ou fertilizantes são suficientes. Para aquascaping intensivo com plantas exigentes, um sistema de CO₂ gasoso faz toda a diferença na qualidade e crescimento.',
+      },
+      {
+        q: 'Aceitam devoluções?',
+        a: 'Sim, tens 14 dias para devolver produtos em bom estado, conforme a legislação europeia de comércio eletrónico. Para seres vivos, a política é diferente — lê com atenção as condições na página de Termos e Condições.',
+      },
+    ];
+
+    function buildFAQSchema() {
+      const schema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: FAQS.map(({ q, a }) => ({
+          '@type': 'Question',
+          name: q,
+          acceptedAnswer: { '@type': 'Answer', text: a },
+        })),
+      };
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(schema);
+      document.head.appendChild(script);
+    }
+
+    function buildFAQSection() {
+      const section = document.createElement('section');
+      section.id = 'aq-faq';
+
+      const header = document.createElement('div');
+      header.className = 'aq-section-header';
+      header.innerHTML = `
+    <span class="aq-section-tag">Dúvidas</span>
+    <h2 class="aq-section-title">Perguntas <span class="aq-neon">Frequentes</span></h2>
+    <p class="aq-section-sub">Tudo o que precisas de saber antes de comprar</p>
+  `;
+      section.appendChild(header);
+
+      const list = document.createElement('div');
+      list.className = 'aq-faq-list';
+
+      FAQS.forEach(({ q, a }, i) => {
+        const item = document.createElement('div');
+        item.className = 'aq-faq-item';
+
+        const btn = document.createElement('button');
+        btn.className = 'aq-faq-q';
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-controls', `aq-faq-a-${i}`);
+        btn.innerHTML = `
+      <span>${q}</span>
+      <svg class="aq-faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    `;
+
+        const answer = document.createElement('div');
+        answer.className = 'aq-faq-a';
+        answer.id = `aq-faq-a-${i}`;
+        answer.setAttribute('role', 'region');
+        const p = document.createElement('p');
+        p.textContent = a;
+        answer.appendChild(p);
+
+        // Toggle
+        btn.addEventListener('click', () => {
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          // Fechar todos os outros
+          list.querySelectorAll('.aq-faq-q[aria-expanded="true"]').forEach(other => {
+            if (other !== btn) {
+              other.setAttribute('aria-expanded', 'false');
+              other.closest('.aq-faq-item').classList.remove('open');
+            }
+          });
+
+          btn.setAttribute('aria-expanded', String(!isOpen));
+          item.classList.toggle('open', !isOpen);
+        });
+
+        item.appendChild(btn);
+        item.appendChild(answer);
+        list.appendChild(item);
+      });
+
+      section.appendChild(list);
+      return section;
+    }
+
+    function build$1() {
+      if (document.getElementById('aq-faq')) return true;
+
+      // Injetar antes do footer
+      const footer = document.querySelector('footer, #footer, .footer');
+      if (!footer) return false;
+
+      const section = buildFAQSection();
+      footer.parentNode.insertBefore(section, footer);
+      buildFAQSchema();
+      console.log('[AQ] FAQ section injetada');
+      return true;
+    }
+
+    function initFAQSection() {
+      if (build$1()) return;
+
+      let attempts = 0;
+      const interval = setInterval(() => {
+        attempts++;
+        if (build$1() || attempts >= 20) clearInterval(interval);
+      }, 300);
+    }
+
+    /**
+     * trustSeals.js – v1
+     * Injeta barra de selos de confiança antes do copyright do footer.
+     * Selos: SSL Shopkit | Compra Segura | Google Business | MB | MB WAY | Visa/MC
+     */
+
+    const SEALS = [
+      {
+        id: 'ssl',
+        label: 'SSL Seguro',
+        sub: 'Loja certificada',
+        icon: `<svg viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="18" width="32" height="26" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M12 18V13a8 8 0 0116 0v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="20" cy="31" r="3" fill="currentColor"/>
+      <line x1="20" y1="34" x2="20" y2="39" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>`,
+      },
+      {
+        id: 'secure',
+        label: 'Compra Segura',
+        sub: 'Dados protegidos',
+        icon: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M24 4L8 10v12c0 10.5 6.8 20.3 16 23.4C33.2 42.3 40 32.5 40 22V10L24 4z" stroke="currentColor" stroke-width="2" fill="none"/>
+      <path d="M16 24l5 5 11-11" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`,
+      },
+      {
+        id: 'google',
+        label: 'Google Business',
+        sub: 'Perfil verificado',
+        icon: `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#4285F4" d="M47.5 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h13.2c-.6 3-2.3 5.5-4.9 7.2v6h7.9c4.6-4.3 7.3-10.6 7.3-17.2z"/>
+      <path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.9-6c-2.1 1.4-4.9 2.3-8 2.3-6.1 0-11.3-4.1-13.2-9.7H2.6v6.2C6.6 43.2 14.7 48 24 48z"/>
+      <path fill="#FBBC05" d="M10.8 28.8c-.5-1.4-.7-2.8-.7-4.3s.3-2.9.7-4.3v-6.2H2.6C.9 17.3 0 20.6 0 24s.9 6.7 2.6 9.5l8.2-4.7z"/>
+      <path fill="#EA4335" d="M24 9.5c3.4 0 6.5 1.2 8.9 3.5l6.7-6.7C35.9 2.4 30.4 0 24 0 14.7 0 6.6 4.8 2.6 12.5l8.2 4.7c1.9-5.6 7.1-9.7 13.2-9.7z"/>
+    </svg>`,
+      },
+      {
+        id: 'mb',
+        label: 'Multibanco',
+        sub: 'Pagamento aceite',
+        icon: `<svg viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="48" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+      <rect x="6" y="10" width="8" height="12" rx="1" fill="currentColor" opacity=".4"/>
+      <rect x="16" y="10" width="8" height="12" rx="1" fill="currentColor" opacity=".7"/>
+      <rect x="26" y="10" width="8" height="12" rx="1" fill="currentColor"/>
+      <text x="24" y="26" text-anchor="middle" font-size="5" fill="currentColor" font-family="sans-serif" opacity=".7">MULTIBANCO</text>
+    </svg>`,
+      },
+      {
+        id: 'mbway',
+        label: 'MB WAY',
+        sub: 'Pagamento aceite',
+        icon: `<svg viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="48" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+      <text x="24" y="14" text-anchor="middle" font-size="8" fill="#08EEBC" font-family="sans-serif" font-weight="bold">MB</text>
+      <text x="24" y="25" text-anchor="middle" font-size="7" fill="currentColor" font-family="sans-serif" opacity=".8">WAY</text>
+    </svg>`,
+      },
+      {
+        id: 'cards',
+        label: 'Visa / Mastercard',
+        sub: 'Cartão aceite',
+        icon: `<svg viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="48" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="18" cy="16" r="8" fill="#EA4335" opacity=".7"/>
+      <circle cx="30" cy="16" r="8" fill="#FBBC05" opacity=".7"/>
+    </svg>`,
+      },
+    ];
+
+    function buildSealsBar() {
+      const bar = document.createElement('div');
+      bar.id = 'aq-trust-seals';
+
+      const inner = document.createElement('div');
+      inner.className = 'aq-seals-inner';
+
+      SEALS.forEach(seal => {
+        const item = document.createElement('div');
+        item.className = `aq-seal-item aq-seal-${seal.id}`;
+        item.innerHTML = `
+      <div class="aq-seal-icon">${seal.icon}</div>
+      <div class="aq-seal-text">
+        <strong>${seal.label}</strong>
+        <span>${seal.sub}</span>
+      </div>
+    `;
+        inner.appendChild(item);
+      });
+
+      bar.appendChild(inner);
+      return bar;
+    }
+
+    function build() {
+      if (document.getElementById('aq-trust-seals')) return true;
+
+      const footer = document.querySelector('footer, #footer, .footer');
+      if (!footer) return false;
+
+      // Tentar inserir antes do copyright; se não existir, appenda ao footer
+      const copyright = footer.querySelector(
+        '.copyright, .footer-bottom, .footer-copyright, [class*="copyright"]'
+      );
+
+      const bar = buildSealsBar();
+
+      if (copyright) {
+        footer.insertBefore(bar, copyright);
+      } else {
+        footer.appendChild(bar);
+      }
+
+      console.log('[AQ] Trust seals injetados');
+      return true;
+    }
+
+    function initTrustSeals() {
+      if (build()) return;
+
+      let attempts = 0;
+      const interval = setInterval(() => {
+        attempts++;
+        if (build() || attempts >= 20) clearInterval(interval);
+      }, 300);
+    }
+
+    /**
+     * blogSection.js – v1
+     * Três responsabilidades:
+     *  1. Home: injeta seção "Do Nosso Blog" com os últimos posts (via API Shopkit)
+     *  2. Página /blog: redesenha a listagem de posts
+     *  3. Página de post: redesenha o layout do artigo
+     *
+     * O Shopkit expõe a API pública em /api/json/blog/posts
+     */
+
+    const BLOG_API  = '/api/json/blog/posts?limit=3&page=1';
+    const BLOG_HREF = '/blog';
+
+    // ─── Utilitários ─────────────────────────────────────────────────────────────
+
+    function isPage(path) {
+      return window.location.pathname.startsWith(path);
+    }
+
+    function formatDate(dateStr) {
+      try {
+        return new Date(dateStr).toLocaleDateString('pt-PT', {
+          day: 'numeric', month: 'long', year: 'numeric',
+        });
+      } catch { return dateStr; }
+    }
+
+    function truncate(str, max = 120) {
+      if (!str || str.length <= max) return str || '';
+      return str.slice(0, max).replace(/\s\S*$/, '') + '…';
+    }
+
+    // ─── 1. Seção "Do Nosso Blog" na Home ────────────────────────────────────────
+
+    function buildPostCard(post) {
+      const card = document.createElement('a');
+      card.href = post.url || `${BLOG_HREF}/${post.handle}`;
+      card.className = 'aq-blog-card';
+      card.setAttribute('aria-label', `Ler artigo: ${post.title}`);
+
+      const thumb = post.image?.url || '';
+
+      card.innerHTML = `
+    <div class="aq-blog-card-img">
+      ${thumb
+        ? `<img src="${thumb}" alt="${post.title}" loading="lazy"/>`
+        : `<div class="aq-blog-card-img-placeholder">
+             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M6 38V14a2 2 0 012-2h32a2 2 0 012 2v24" stroke="currentColor" stroke-width="2"/>
+               <circle cx="18" cy="22" r="4" stroke="currentColor" stroke-width="2"/>
+               <path d="M6 38l10-10 6 6 8-8 12 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+             </svg>
+           </div>`}
+      <span class="aq-blog-card-tag">Aquarismo</span>
+    </div>
+    <div class="aq-blog-card-body">
+      <time class="aq-blog-card-date">${formatDate(post.created_at)}</time>
+      <h3 class="aq-blog-card-title">${post.title}</h3>
+      <p class="aq-blog-card-excerpt">${truncate(post.excerpt || post.body_plain)}</p>
+      <span class="aq-blog-card-cta">Ler artigo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+    </div>
+  `;
+      return card;
+    }
+
+    async function fetchPosts() {
+      try {
+        const res = await fetch(BLOG_API);
+        if (!res.ok) return null;
+        const data = await res.json();
+        // Shopkit retorna { posts: [...] } ou diretamente array
+        return Array.isArray(data) ? data : (data.posts || data.data || null);
+      } catch { return null; }
+    }
+
+    function buildBlogHomeSection(posts) {
+      const section = document.createElement('section');
+      section.id = 'aq-blog-home';
+
+      const header = document.createElement('div');
+      header.className = 'aq-section-header';
+      header.innerHTML = `
+    <span class="aq-section-tag">Conteúdo</span>
+    <h2 class="aq-section-title">Do Nosso <span class="aq-neon">Blog</span></h2>
+    <p class="aq-section-sub">Dicas, guias e novidades do mundo do aquarismo</p>
+  `;
+      section.appendChild(header);
+
+      const grid = document.createElement('div');
+      grid.className = 'aq-blog-grid';
+
+      if (posts && posts.length) {
+        posts.slice(0, 3).forEach(p => grid.appendChild(buildPostCard(p)));
+      } else {
+        // Fallback estático se API não responder
+        grid.innerHTML = `<p class="aq-blog-empty">Em breve novos artigos sobre aquarismo!</p>`;
+      }
+
+      section.appendChild(grid);
+
+      const cta = document.createElement('div');
+      cta.className = 'aq-blog-home-cta';
+      cta.innerHTML = `<a href="${BLOG_HREF}" class="aq-btn-outline">Ver todos os artigos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>`;
+      section.appendChild(cta);
+
+      return section;
+    }
+
+    async function initBlogHome() {
+      if (document.getElementById('aq-blog-home')) return true;
+
+      const faq    = document.getElementById('aq-faq');
+      const store  = document.getElementById('aq-store');
+      const footer = document.querySelector('footer, #footer, .footer');
+      // Inserir antes do FAQ se existir, senão antes da loja, senão antes do footer
+      const anchor = faq || store || footer;
+      if (!anchor) return false;
+
+      const posts = await fetchPosts();
+      const section = buildBlogHomeSection(posts);
+      anchor.parentNode.insertBefore(section, anchor);
+      console.log('[AQ] Blog home section injetada');
+      return true;
+    }
+
+    // ─── 2. Redesign da listagem /blog ───────────────────────────────────────────
+
+    function redesignBlogListing() {
+      // Verificar se é página de blog
+      if (!isPage('/blog')) return;
+      if (document.body.classList.contains('aq-blog-styled')) return;
+      document.body.classList.add('aq-blog-styled');
+
+      // Adicionar classe ao body para ativar os estilos SCSS
+      document.body.classList.add('aq-page-blog');
+
+      // Injetar cabeçalho premium da página
+      const pageTitle = document.querySelector('.page-title, .blog-title, h1.title, .section-title');
+      if (pageTitle) {
+        const wrap = document.createElement('div');
+        wrap.className = 'aq-blog-page-header';
+        wrap.innerHTML = `
+      <span class="aq-section-tag">Blog</span>
+      <h1 class="aq-section-title">Mundo do <span class="aq-neon">Aquarismo</span></h1>
+      <p class="aq-section-sub">Dicas de especialistas, guias passo-a-passo e novidades do mundo aquático</p>
+    `;
+        pageTitle.closest('section, .container, .row')?.parentNode?.insertBefore(wrap, pageTitle.closest('section, .container, .row'));
+        pageTitle.style.setProperty('display', 'none', 'important');
+      }
+
+      // Estilizar os cards nativos do Shopkit/Boxie
+      // Classes nativas: .post, .post-item, .blog-post, .card
+      setTimeout(() => {
+        document.querySelectorAll('.post, .blog-item, [class*="post-item"]').forEach(card => {
+          card.classList.add('aq-blog-native-card');
+        });
+      }, 500);
+
+      console.log('[AQ] Blog listing redesigned');
+    }
+
+    // ─── 3. Redesign de post individual ──────────────────────────────────────────
+
+    function redesignBlogPost() {
+      if (!isPage('/blog/') || window.location.pathname === '/blog/') return;
+      if (document.body.classList.contains('aq-post-styled')) return;
+      document.body.classList.add('aq-post-styled', 'aq-page-post');
+
+      // Cabeçalho do post
+      const postTitle = document.querySelector('.post-title, .article-title, h1.title, .blog-post-title');
+      if (postTitle) {
+        postTitle.classList.add('aq-post-title');
+      }
+
+      // Meta (data, autor)
+      document.querySelectorAll('.post-date, .post-meta, .article-meta, .blog-meta').forEach(el => {
+        el.classList.add('aq-post-meta');
+      });
+
+      // Imagem de destaque
+      document.querySelectorAll('.post-image, .post-thumbnail, .article-image, .blog-post-image').forEach(el => {
+        el.classList.add('aq-post-featured-img');
+      });
+
+      // Corpo do artigo
+      document.querySelectorAll('.post-body, .post-content, .article-body, .blog-post-body').forEach(el => {
+        el.classList.add('aq-post-body');
+      });
+
+      // Botão voltar ao blog
+      const backBtn = document.querySelector('a[href="/blog"], a[href*="blog"]');
+      if (backBtn && !document.getElementById('aq-post-back')) {
+        const btn = document.createElement('a');
+        btn.id = 'aq-post-back';
+        btn.href = BLOG_HREF;
+        btn.className = 'aq-post-back-btn';
+        btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg> Voltar ao Blog`;
+        backBtn.closest('section, .container, article')?.prepend(btn);
+      }
+
+      console.log('[AQ] Blog post redesigned');
+    }
+
+    // ─── Init ─────────────────────────────────────────────────────────────────────
+
+    function initBlogSection() {
+      const path = window.location.pathname;
+
+      if (path === '/' || path === '/index' || path === '') {
+        // Home: tentar logo e retry se o DOM ainda não estiver pronto
+        const tryHome = async () => {
+          const footer = document.querySelector('footer, #footer, .footer');
+          if (footer) { await initBlogHome(); return; }
+          setTimeout(tryHome, 400);
+        };
+        tryHome();
+      }
+
+      if (path.startsWith('/blog')) {
+        if (path === '/blog' || path === '/blog/') {
+          redesignBlogListing();
+        } else {
+          redesignBlogPost();
+        }
+      }
+    }
+
     // JS Entry Point for AquariumLife Custom Layer
 
 
@@ -764,7 +1521,12 @@
       buildDesktopNav();
       initCategorySection();
       initProductsSection();
+      initBrandsSection();
+      initStoreSection();
+      initFAQSection();
       initCartStyles();
+      initTrustSeals();
+      initBlogSection();
       console.log('[AQ] Premium Layer Loaded — readyState:', document.readyState);
     }
 
