@@ -107,8 +107,8 @@ function build() {
 
   const bar = buildSealsBar();
 
-  if (copyright) {
-    footer.insertBefore(bar, copyright);
+  if (copyright && copyright.parentNode) {
+    copyright.parentNode.insertBefore(bar, copyright);
   } else {
     footer.appendChild(bar);
   }

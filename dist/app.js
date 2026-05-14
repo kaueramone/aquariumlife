@@ -1146,8 +1146,8 @@
 
       const bar = buildSealsBar();
 
-      if (copyright) {
-        footer.insertBefore(bar, copyright);
+      if (copyright && copyright.parentNode) {
+        copyright.parentNode.insertBefore(bar, copyright);
       } else {
         footer.appendChild(bar);
       }
@@ -1415,5 +1415,6 @@
       init();
     }
     // build Thu May 14 21:12:37 HVGMT 2026
+    // build Thu May 14 21:19:10 HVGMT 2026
 
 })();
