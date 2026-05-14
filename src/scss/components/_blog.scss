@@ -369,3 +369,34 @@ body.aq-page-post {
     }
   }
 }
+
+// ── Responsividade mobile ─────────────────────────────────────────────────────
+@media (max-width: 768px) {
+  #aq-blog-home {
+    padding: 60px 16px;
+  }
+
+  .aq-blog-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .aq-blog-card-title {
+    font-size: 1rem;
+  }
+
+  .aq-blog-home-cta {
+    margin-top: 32px;
+    .aq-btn-outline {
+      width: 100%;
+      justify-content: center;
+      padding: 14px 20px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .aq-section-title {
+    font-size: 1.6rem;
+  }
+}
