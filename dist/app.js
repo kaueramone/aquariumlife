@@ -588,14 +588,32 @@
 
       const set = (el, p, v) => el && el.style.setProperty(p, v, 'important');
 
-      // Z-index acima do header (9999) e do overlay
-      set(modal, 'z-index', '10100');
+      // Z-index acima do header + centralizado via flex
+      set(modal, 'z-index',         '10100');
+      set(modal, 'display',         'flex');
+      set(modal, 'align-items',     'center');
+      set(modal, 'justify-content', 'center');
+      set(modal, 'padding',         '20px');
+      set(modal, 'overflow-y',      'auto');
+
+      // Garante que o dialog fique centrado sem margin-top inline do Shopkit
+      const dialog = modal.querySelector('.modal-dialog');
+      if (dialog) {
+        set(dialog, 'position',  'relative');
+        set(dialog, 'margin',    'auto');
+        set(dialog, 'top',       'auto');
+        set(dialog, 'left',      'auto');
+        set(dialog, 'transform', 'none');
+        set(dialog, 'max-width', '480px');
+        set(dialog, 'width',     '100%');
+      }
 
       // Overlay do modal
       const backdrop = document.querySelector('.modal-backdrop');
       if (backdrop) {
-        set(backdrop, 'z-index', '10050');
-        set(backdrop, 'background', 'rgba(0,4,13,0.75)');
+        set(backdrop, 'z-index',    '10050');
+        set(backdrop, 'background', 'rgba(0,4,13,0.82)');
+        set(backdrop, 'opacity',    '1');
       }
 
       // Caixa interna do modal
@@ -747,7 +765,8 @@
             // Backdrop
             if (node.classList?.contains('modal-backdrop')) {
               node.style.setProperty('z-index', '10050', 'important');
-              node.style.setProperty('background', 'rgba(0,4,13,0.75)', 'important');
+              node.style.setProperty('background', 'rgba(0,4,13,0.82)', 'important');
+              node.style.setProperty('opacity', '1', 'important');
             }
           });
         });

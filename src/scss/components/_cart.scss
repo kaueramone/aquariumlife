@@ -212,3 +212,158 @@
 .cart-list .cart-btns .cart-btn.btn-primary {
   border-width: 1.5px !important;
 }
+
+// ── Modal pós-compra ("Adicionado ao carrinho") ──────────────
+// Overlay escuro atrás do modal
+.modal-backdrop,
+.modal-backdrop.fade,
+.modal-backdrop.in,
+.modal-backdrop.show {
+  z-index: 10050 !important;
+  background: rgba(0, 4, 13, 0.82) !important;
+  opacity: 1 !important;
+}
+
+// Container do modal — acima do header (z-index ~9000)
+.modal,
+.modal.fade,
+.modal.in,
+.modal.show {
+  z-index: 10100 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 20px !important;
+  overflow-y: auto !important;
+}
+
+// Centraliza o dialog dentro do modal
+.modal-dialog {
+  position: relative !important;
+  margin: auto !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  width: 100% !important;
+  max-width: 480px !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+}
+
+// Caixa interna do modal — tema escuro
+.modal-content {
+  background: #001531 !important;
+  background-color: #001531 !important;
+  border: 1px solid rgba(8, 238, 188, 0.25) !important;
+  border-radius: 14px !important;
+  box-shadow:
+    0 0 0 1px rgba(8, 238, 188, 0.08),
+    0 30px 80px rgba(0, 0, 0, 0.85) !important;
+  color: #fff !important;
+  overflow: hidden !important;
+}
+
+// Header do modal
+.modal-header {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(8, 238, 188, 0.1) !important;
+  padding: 16px 20px !important;
+
+  h1, h2, h3, h4, h5, h6, .modal-title {
+    color: #fff !important;
+    font-weight: 600 !important;
+  }
+
+  // Botão fechar (×)
+  .close, button[data-dismiss] {
+    color: rgba(255, 255, 255, 0.5) !important;
+    background: transparent !important;
+    border: none !important;
+    font-size: 1.4rem !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+    &:hover { color: #fff !important; }
+  }
+}
+
+// Body do modal
+.modal-body {
+  background: transparent !important;
+  padding: 16px 20px !important;
+
+  p, span, div, label {
+    color: rgba(255, 255, 255, 0.85) !important;
+  }
+
+  img {
+    border-radius: 8px !important;
+    border: 1px solid rgba(8, 238, 188, 0.12) !important;
+    background: rgba(0, 8, 20, 0.6) !important;
+    padding: 4px !important;
+    max-width: 100% !important;
+  }
+
+  [class*="price"], .price, strong {
+    color: $color-neon-accent !important;
+    font-weight: 700 !important;
+  }
+}
+
+// Footer do modal — botões
+.modal-footer {
+  background: transparent !important;
+  border-top: 1px solid rgba(8, 238, 188, 0.1) !important;
+  padding: 12px 20px 16px !important;
+  display: flex !important;
+  gap: 8px !important;
+
+  a, button, .btn {
+    flex: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 11px 10px !important;
+    border-radius: 6px !important;
+    background: transparent !important;
+    background-image: none !important;
+    border: 1.5px solid $color-neon-accent !important;
+    color: $color-neon-accent !important;
+    font-weight: 700 !important;
+    font-size: 0.72rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    cursor: pointer !important;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s !important;
+
+    &::before, &::after { content: none !important; }
+
+    &:hover, &:focus {
+      background: $color-neon-accent !important;
+      background-image: none !important;
+      color: #001531 !important;
+      box-shadow: 0 0 16px rgba(8, 238, 188, 0.4) !important;
+    }
+  }
+}
+
+// Mobile: modal ocupa mais espaço
+@media (max-width: 576px) {
+  .modal {
+    padding: 12px !important;
+    align-items: flex-end !important; // sobe do fundo no mobile
+  }
+
+  .modal-dialog {
+    max-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 20px 20px 0 0 !important;
+  }
+
+  .modal-content {
+    border-radius: 20px 20px 0 0 !important;
+    border-bottom: none !important;
+  }
+}
