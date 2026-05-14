@@ -126,3 +126,16 @@ footer, .footer, #footer {
     }
   }
 }
+
+// Logo do footer 30% maior
+footer, .footer, #footer {
+  .footer-logo, .logo, .brand-logo,
+  .footer-brand img, .footer-logo img,
+  [class*="footer"] img[alt*="logo"],
+  [class*="footer"] img[alt*="Logo"],
+  .footer-widget img:first-child {
+    transform: scale(1.3) !important;
+    transform-origin: left center !important;
+    margin-bottom: 8px !important;
+  }
+}

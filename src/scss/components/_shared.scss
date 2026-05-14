@@ -33,7 +33,7 @@ body:not(.aq-page-blog) {
   }
 }
 
-// Linha divisória sutil entre seções
+// Linha divisória sutil entre seções — com espaço extra para não colar
 #aq-brands,
 #aq-store,
 #aq-faq,
@@ -50,6 +50,11 @@ body:not(.aq-page-blog) {
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(8, 238, 188, 0.15), transparent);
     pointer-events: none;
+  }
+
+  // Garante que o título da secção tem espaço acima da linha
+  .aq-section-header {
+    padding-top: 10px;
   }
 }
 

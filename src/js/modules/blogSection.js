@@ -81,10 +81,13 @@ function buildSkeletonCard() {
 async function fetchPosts() {
   try {
     const res = await fetch(BLOG_API);
-    if (!res.ok) return null;
+    if (!res.ok) { console.warn('[AQ] Blog API status:', res.status); return null; }
     const data = await res.json();
-    return Array.isArray(data) ? data : (data.posts || data.data || null);
-  } catch { return null; }
+    console.log('[AQ] Blog API raw:', JSON.stringify(data).slice(0, 200));
+    const list = Array.isArray(data) ? data
+      : (data.posts || data.data || data.articles || data.items || null);
+    return (list && list.length) ? list : null;
+  } catch(e) { console.warn('[AQ] Blog fetch erro:', e); return null; }
 }
 
 export async function buildBlogSection() {

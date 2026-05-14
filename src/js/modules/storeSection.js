@@ -3,8 +3,8 @@
  * Exporta buildStoreSection() para uso pelo homeOrchestrator.
  */
 
-const MAPS_URL   = 'https://maps.app.goo.gl/6uvfMJofFLiB5yZi6';
-const REVIEW_URL = 'https://maps.app.goo.gl/6uvfMJofFLiB5yZi6';
+const MAPS_URL   = 'https://g.page/r/CXlxMPCWpRf3EAE/review';
+const REVIEW_URL = 'https://g.page/r/CXlxMPCWpRf3EAE/review';
 const MAPS_EMBED = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.6698765065166!2d-9.31225998837219!3d38.72538765671719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecf2d390fc4f5%3A0xf717a596f0307179!2sAquariumlife!5e0!3m2!1spt-PT!2spt!4v1778773494142!5m2!1spt-PT!2spt';
 
 function starSVG() {
