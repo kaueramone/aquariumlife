@@ -139,3 +139,42 @@ footer, .footer, #footer {
     margin-bottom: 8px !important;
   }
 }
+
+// ── Redes sociais: mover para coluna de Contactos via CSS ────────────────────
+// O Shopkit coloca as redes sociais numa coluna separada — escondemos lá
+// e mostramos apenas dentro da coluna de contactos (última col)
+.footer-social, .social-links, [class*="social-media"],
+.footer-widget:has(.social), .col-social {
+  display: none !important;
+}
+
+// ── Copyright centralizado em linha única ─────────────────────────────────────
+footer .copyright, footer .footer-bottom,
+.footer .copyright, .footer .footer-bottom {
+  display: block !important;
+  text-align: center !important;
+  width: 100% !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+  margin-top: 40px !important;
+  padding-top: 20px !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  white-space: nowrap !important;
+
+  // Força tudo numa linha
+  * { display: inline !important; }
+
+  a { color: $color-neon-accent !important; }
+}
+
+// ── Remover selos nativos do Shopkit (SecureSite + 4 selos) ─────────────────
+.footer-certificates, .footer-seals, .footer-badges,
+[class*="certificate"], [class*="trustmark"],
+.site-seal, .secure-seal, #siteseal,
+.footer-payment-icons > img,
+.payment-methods-footer,
+img[src*="comodo"], img[src*="trustlogo"],
+img[src*="ssl"], img[src*="secure"],
+.shopkit-badges, .footer-shopkit-badges,
+.badges, .footer .badges {
+  display: none !important;
+}
