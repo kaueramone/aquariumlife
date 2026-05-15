@@ -2,13 +2,20 @@
 
 // ============================================================
 // HEADER: Layout 2 linhas
-// Linha 1: Logo (esq) | espaço | Ícones (dir)
+// Linha 1: Logo (esq) | espaco | Icones (dir)
 // Linha 2: #aq-nav-bar (menu horizontal com submenus)
 // ============================================================
 
-// Ocultar menu nativo e hamburguer no desktop
+// Overlay e drawer nativos bloqueiam cliques em mobile -- ocultar em TODOS os ecras
+.menu-overlay, .menu-drawer, .header-drawer,
+.header-menu-overlay, [class*="menu-overlay"], [class*="-drawer"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+// Ocultar hamburguer e menu nativo apenas no desktop
 @media (min-width: 992px) {
-  // Botão hamburguer real do Boxie/Shopkit
   .trigger-header-menu,
   .menu-toggle, .mobile-menu-btn, .burger,
   .btn-menu, [data-toggle="collapse"], .navbar-toggler {
@@ -17,10 +24,8 @@
     visibility: hidden !important;
   }
 
-  // Container do menu slide-over nativo (substituído pela nossa nav)
   .header-menu, #menu, .nav-menu,
-  .collapse.navbar-collapse, .navbar-collapse,
-  .menu-overlay, .menu-drawer, .header-drawer {
+  .collapse.navbar-collapse, .navbar-collapse {
     display: none !important;
     visibility: hidden !important;
   }
@@ -40,9 +45,7 @@ header, .header, #header {
   z-index: 9999;
   padding: 0 !important;
 
-  // ──────────────────────────────────────────────
-  // LINHA 1: Container original do header (logo + ícones)
-  // ──────────────────────────────────────────────
+  // LINHA 1: Container original do header (logo + icones)
   .container, .container-fluid, .header-inner, .navbar {
     display: flex !important;
     align-items: center !important;
@@ -56,7 +59,7 @@ header, .header, #header {
   // Logo: esquerda, sem fundo branco
   .logo, .header-logo, .navbar-brand {
     flex-shrink: 0;
-    margin-right: auto; // empurra ícones para a direita
+    margin-right: auto;
 
     img {
       background: transparent !important;
@@ -69,7 +72,7 @@ header, .header, #header {
     }
   }
 
-  // Ícones de ação (Lupa, Carrinho, Conta) – lado direito
+  // Icones de acao (Lupa, Carrinho, Conta) -- lado direito
   .header-actions, .header-icons,
   .cart-icon, .user-icon, .search-icon,
   .icon-bar, .header-right {
@@ -100,7 +103,7 @@ header, .header, #header {
     }
   }
 
-  // Catchall para ícones RemixIcon de carrinho/busca/conta no header
+  // Catchall para icones RemixIcon de carrinho/busca/conta no header
   i.ri-shopping-cart-line, i.ri-user-line, i.ri-search-line {
     color: $color-neon-accent !important;
     font-size: 1.4rem !important;
@@ -109,7 +112,7 @@ header, .header, #header {
     &:hover { filter: drop-shadow(0 0 8px $color-neon-accent) !important; transform: scale(1.15); }
   }
 
-  // Busca expandível – afastar texto do ícone
+  // Busca expansivel
   .search-form, .header-search, .search-wrapper {
     position: relative;
 
@@ -148,50 +151,47 @@ header, .header, #header {
   background: #000 !important;
   color: $color-neon-accent !important;
   border-bottom: 1px solid rgba(8, 238, 188, 0.2) !important;
-  font-family: $font-family-body !important;
-  font-size: 0.82rem !important;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-align: center;
-  padding: 6px !important;
+  font-size: 0.8rem !important;
+  text-align: center !important;
+  padding: 6px 20px !important;
 }
 
 // ============================================================
-// LINHA 2: #aq-nav-bar – menu horizontal com submenus
+// NAV BAR HORIZONTAL CUSTOMIZADO (#aq-nav-bar)
+// Linha 2 do header -- substituicao do menu nativo
 // ============================================================
+
 #aq-nav-bar {
   width: 100%;
-  background: rgba(0, 10, 25, 0.85) !important;
-  border-top: 1px solid rgba(8, 238, 188, 0.08);
+  background: rgba(0, 4, 13, 0.7);
+  border-top: 1px solid rgba(8, 238, 188, 0.1);
 
   > ul {
     display: flex !important;
-    flex-direction: row !important;
+    align-items: center !important;
     list-style: none !important;
     margin: 0 !important;
     padding: 0 20px !important;
     gap: 0;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
   }
 
-  // Item de nível 1
   > ul > li {
     position: relative;
-    margin: 0;
 
     > a {
       display: flex !important;
       align-items: center !important;
-      gap: 7px !important;
-      color: $color-neon-accent !important;
+      gap: 5px !important;
+      padding: 12px 16px !important;
+      color: rgba(255,255,255,0.85) !important;
       font-family: $font-family-title !important;
-      font-weight: 500 !important;
       font-size: 0.82rem !important;
+      font-weight: 500 !important;
       text-transform: uppercase !important;
       letter-spacing: 0.8px !important;
-      padding: 12px 12px !important;
-      white-space: nowrap;
+      white-space: nowrap !important;
       text-decoration: none !important;
       transition: $transition-fast;
       border-bottom: 2px solid transparent;
@@ -203,7 +203,6 @@ header, .header, #header {
         transition: transform 0.25s ease;
       }
 
-      // Ícone FA5 do item
       > i:first-child {
         color: $color-neon-accent !important;
         font-size: 0.9rem !important;
@@ -241,7 +240,6 @@ header, .header, #header {
     margin: 0 !important;
     box-shadow: 0 15px 40px rgba(0,0,0,0.6) !important;
     z-index: 10000;
-    // Animação de entrada suave
     opacity: 0;
     pointer-events: none;
     transform: translateY(-6px);

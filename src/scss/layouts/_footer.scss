@@ -1,6 +1,6 @@
 @use '../base/variables' as *;
 
-// ── Footer base ───────────────────────────────────────────────────────────────
+// -- Footer base ---------------------------------------------------------------
 footer, .footer, #footer {
   background: rgba(0, 4, 13, 0.9) !important;
   backdrop-filter: blur(20px) !important;
@@ -17,6 +17,7 @@ footer, .footer, #footer {
     top: 0; left: 0;
     width: 100%; height: 1px;
     background: linear-gradient(90deg, transparent, $color-neon-accent, transparent);
+    pointer-events: none;
   }
 
   &::after {
@@ -32,13 +33,16 @@ footer, .footer, #footer {
   }
 }
 
-// ── Grid de colunas ───────────────────────────────────────────────────────────
+// -- Container: coluna para empilhar .row + .copyright -----------------------
 footer .container-fluid,
 footer .container,
 footer .footer-inner {
-  display: block !important;
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
 }
 
+// -- Grid de colunas ----------------------------------------------------------
 footer .row {
   display: flex !important;
   flex-wrap: wrap !important;
@@ -56,14 +60,14 @@ footer .col-xs-12 {
   margin-bottom: 30px !important;
 }
 
-// ── Ocultar div.col com payment-logos nativa do Shopkit ──────────────────────
+// -- Ocultar payment-logos nativa do Shopkit ----------------------------------
 footer .col:has(.payment-logos),
 footer .payment-logos,
 footer .col > .payment-logos {
   display: none !important;
 }
 
-// ── Logo: 110% (original + 10%, era 130%) ────────────────────────────────────
+// -- Logo: 110% ---------------------------------------------------------------
 footer .footer-logo {
   display: block !important;
   margin-bottom: 20px !important;
@@ -76,7 +80,7 @@ footer .footer-logo {
   }
 }
 
-// ── Títulos das colunas ───────────────────────────────────────────────────────
+// -- Titulos das colunas ------------------------------------------------------
 footer .footer-category {
   color: $color-neon-accent !important;
   text-transform: uppercase !important;
@@ -97,7 +101,7 @@ footer .footer-category {
   }
 }
 
-// ── Links do footer ───────────────────────────────────────────────────────────
+// -- Links do footer ----------------------------------------------------------
 footer .footer-link,
 footer .footer-menu a,
 footer li a {
@@ -121,32 +125,34 @@ footer ul {
   margin: 0 !important;
 }
 
-// ── Copyright: ocupa linha inteira abaixo das 4 colunas ──────────────────────
+// -- Copyright: barra completa abaixo de tudo ---------------------------------
 footer .copyright,
 footer .footer-bottom {
   flex: 0 0 100% !important;
   width: 100% !important;
   max-width: 100% !important;
+  box-sizing: border-box !important;
   text-align: center !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
-  margin-top: 10px !important;
-  padding: 20px 20px 0 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  margin-top: 20px !important;
+  padding: 20px 20px 10px !important;
   color: rgba(255, 255, 255, 0.45) !important;
   font-size: 0.85rem !important;
   font-family: $font-family-body !important;
   order: 99 !important;
+  align-self: stretch !important;
 
   p { display: inline !important; margin: 0 !important; }
   a { color: $color-neon-accent !important; }
 }
 
-// ── Redes sociais nativas: ocultar (movidas via JS para Contactos) ────────────
+// -- Redes sociais nativas: ocultar (movidas via JS para Contactos) -----------
 footer .footer-social,
 footer .social {
   display: none !important;
 }
 
-// ── Selos nativos Shopkit: remover ────────────────────────────────────────────
+// -- Selos nativos Shopkit: remover ------------------------------------------
 footer .secure-site,
 footer .site-seal,
 footer [class*="secure-site"],
@@ -156,7 +162,7 @@ footer img[src*="trustlogo"] {
   display: none !important;
 }
 
-// Mobile: colunas centralizadas
+// -- Mobile: colunas centralizadas -------------------------------------------
 @media (max-width: 768px) {
   footer .row {
     flex-direction: column !important;
@@ -183,11 +189,19 @@ footer img[src*="trustlogo"] {
     transform: translateX(-50%) !important;
   }
 
+  // Centralizar listas de links
+  footer ul {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
   footer .footer-link,
   footer .footer-menu a,
   footer li a {
     text-align: center !important;
     padding-left: 0 !important;
+    border-bottom: none !important;
   }
 
   .aq-footer-social {
@@ -195,7 +209,7 @@ footer img[src*="trustlogo"] {
   }
 }
 
-// Assinatura do desenvolvedor
+// -- Assinatura do desenvolvedor ---------------------------------------------
 .aq-signature {
   display: block;
   margin-top: 10px;
