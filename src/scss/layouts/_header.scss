@@ -171,11 +171,12 @@ header, .header, #header {
     align-items: center !important;
     justify-content: flex-start !important;
     list-style: none !important;
-    margin: 0 auto !important;
-    padding: 0 20px !important;
+    margin: 0 !important;
+    padding: 0 !important;
     gap: 0;
-    flex-wrap: wrap;
-    max-width: 1200px;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    width: 100%;
   }
 
   > ul > li {
@@ -185,13 +186,13 @@ header, .header, #header {
       display: flex !important;
       align-items: center !important;
       gap: 5px !important;
-      padding: 12px 16px !important;
+      padding: 10px 10px !important;
       color: rgba(255,255,255,0.85) !important;
       font-family: $font-family-title !important;
-      font-size: 0.82rem !important;
+      font-size: 0.72rem !important;
       font-weight: 500 !important;
       text-transform: uppercase !important;
-      letter-spacing: 0.8px !important;
+      letter-spacing: 0.5px !important;
       white-space: nowrap !important;
       text-decoration: none !important;
       transition: $transition-fast;
@@ -206,7 +207,7 @@ header, .header, #header {
 
       > i:first-child {
         color: $color-neon-accent !important;
-        font-size: 0.9rem !important;
+        font-size: 0.75rem !important;
       }
 
       &:hover {

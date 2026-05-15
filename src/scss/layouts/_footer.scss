@@ -126,17 +126,11 @@ footer ul {
 }
 
 // -- Copyright: barra completa abaixo de tudo ---------------------------------
-// O Shopkit coloca o copyright dentro de uma .col-lg-3 -- forcamos a saida
+// JS move o copyright para fora do .row -- aqui so estilizamos
 footer .copyright,
 footer .footer-bottom {
-  // Escapar da coluna pai (max-width: 280px) usando margin negativa
-  position: relative !important;
-  left: 50% !important;
-  right: 50% !important;
-  margin-left: -50vw !important;
-  margin-right: -50vw !important;
-  width: 100vw !important;
-  max-width: 100vw !important;
+  width: 100% !important;
+  max-width: 100% !important;
   box-sizing: border-box !important;
   text-align: center !important;
   border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
@@ -148,6 +142,17 @@ footer .footer-bottom {
 
   p { display: inline !important; margin: 0 !important; }
   a { color: $color-neon-accent !important; }
+}
+
+// Quando o copyright for filho direto do container (movido pelo JS)
+footer .container > .copyright,
+footer .container-fluid > .copyright,
+footer .footer-inner > .copyright,
+footer .container > .footer-bottom,
+footer .container-fluid > .footer-bottom,
+footer .footer-inner > .footer-bottom {
+  display: block !important;
+  width: 100% !important;
 }
 
 // -- Redes sociais nativas: ocultar (movidas via JS para Contactos) -----------

@@ -116,11 +116,25 @@ function injectSignature(footer) {
   copyright.appendChild(sig);
 }
 
+function moveCopyrightToContainer(footer) {
+  var copyright = footer.querySelector('.copyright, .footer-bottom');
+  if (!copyright) return;
+  // Ja esta no nivel certo (filho direto do container)
+  var container = footer.querySelector('.container, .container-fluid, .footer-inner');
+  if (!container) return;
+  // Se o copyright esta dentro de uma coluna, move-o para o container
+  if (copyright.closest('.col-lg-3, .col-md-6, .col-xs-12, [class*="col-"]')) {
+    container.appendChild(copyright);
+  }
+}
+
 function build() {
   if (document.getElementById('aq-trust-seals')) return true;
 
   var footer = document.querySelector('footer, #footer, .footer');
   if (!footer) return false;
+
+  moveCopyrightToContainer(footer);
 
   var copyright = footer.querySelector('.copyright, .footer-bottom');
   var bar = buildSealsBar();
