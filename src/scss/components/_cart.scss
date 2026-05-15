@@ -367,3 +367,26 @@
     border-bottom: none !important;
   }
 }
+
+// -- Modal de geolocalizacao do Shopkit: ocultar e neutralizar ----------------
+// Este modal aparece automaticamente e bloqueia todos os cliques
+#user-geolocation-modal {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
+
+// Backdrop residual do Bootstrap que fica no DOM e bloqueia cliques
+.modal-backdrop {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
+
+// Garantir que o body nao fica com overflow:hidden (classe que o Bootstrap adiciona)
+body.modal-open {
+  overflow: auto !important;
+  padding-right: 0 !important;
+}

@@ -770,6 +770,7 @@
     }
 
     function initCartStyles() {
+      killGeoModal();
       document.querySelectorAll('.cart-list').forEach(applyDarkCart);
       document.querySelectorAll('.modal.show, .modal.in').forEach(applyDarkModal);
       updateBadge();
@@ -798,16 +799,76 @@
             }
             /* Backdrop */
             if (node.classList && node.classList.contains('modal-backdrop')) {
-              node.style.setProperty('z-index', '10050', 'important');
-              node.style.setProperty('background', 'rgba(0,4,13,0.82)', 'important');
-              node.style.setProperty('opacity', '1', 'important');
-              /* Modal provavelmente esta a abrir agora */
-              watchForModal();
+              /* Verificar se e do geo modal -- se for, eliminar */
+              var geoModal = document.getElementById('user-geolocation-modal');
+              if (geoModal && (geoModal.classList.contains('in') || geoModal.style.display === 'block')) {
+                setTimeout(function() {
+                  var geo2 = document.getElementById('user-geolocation-modal');
+                  if (geo2) { geo2.style.setProperty('display', 'none', 'important'); }
+                  node.style.setProperty('display', 'none', 'important');
+                  document.body.classList.remove('modal-open');
+                }, 50);
+              } else {
+                node.style.setProperty('z-index', '10050', 'important');
+                node.style.setProperty('background', 'rgba(0,4,13,0.82)', 'important');
+                node.style.setProperty('opacity', '1', 'important');
+                /* Modal de carrinho a abrir */
+                watchForModal();
+              }
             }
           });
         });
         if (needsBadge) updateBadge();
       }).observe(document.body, { childList: true, subtree: true });
+    }
+
+    /* Neutraliza o modal de geolocalizacao do Shopkit que bloqueia cliques */
+    function killGeoModal() {
+      function dismiss() {
+        var geo = document.getElementById('user-geolocation-modal');
+        if (!geo) return;
+        /* Fechar via Bootstrap se disponivel */
+        if (window.jQuery && window.jQuery.fn.modal) {
+          try { window.jQuery('#user-geolocation-modal').modal('hide'); } catch(e) {}
+        }
+        /* Forcado via CSS */
+        geo.style.setProperty('display', 'none', 'important');
+        geo.style.setProperty('pointer-events', 'none', 'important');
+        /* Remover backdrop residual */
+        document.querySelectorAll('.modal-backdrop').forEach(function(b) {
+          b.style.setProperty('display', 'none', 'important');
+          b.style.setProperty('pointer-events', 'none', 'important');
+          if (b.parentNode) b.parentNode.removeChild(b);
+        });
+        /* Restaurar body */
+        document.body.classList.remove('modal-open');
+        document.body.style.removeProperty('overflow');
+        document.body.style.removeProperty('padding-right');
+      }
+
+      /* Tentar imediatamente */
+      dismiss();
+
+      /* E quando o DOM estiver pronto */
+      if (document.readyState !== 'complete') {
+        window.addEventListener('load', dismiss);
+      }
+
+      /* Observer: se o Shopkit adicionar backdrop dinamicamente, remover */
+      new MutationObserver(function(mutations) {
+        mutations.forEach(function(m) {
+          m.addedNodes.forEach(function(node) {
+            if (!node.classList) return;
+            if (node.classList.contains('modal-backdrop')) {
+              /* Verificar se e o geo modal (nao o carrinho) */
+              var geoOpen = document.getElementById('user-geolocation-modal');
+              if (geoOpen && (geoOpen.classList.contains('in') || geoOpen.style.display === 'block')) {
+                setTimeout(dismiss, 50);
+              }
+            }
+          });
+        });
+      }).observe(document.body, { childList: true });
     }
 
     /**
