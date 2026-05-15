@@ -169,13 +169,12 @@ header, .header, #header {
   > ul {
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
     list-style: none !important;
     margin: 0 auto !important;
     padding: 0 20px !important;
     gap: 0;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    flex-wrap: wrap;
     max-width: 1200px;
   }
 
