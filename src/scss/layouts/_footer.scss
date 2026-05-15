@@ -155,3 +155,63 @@ footer img[src*="comodo"],
 footer img[src*="trustlogo"] {
   display: none !important;
 }
+
+// Mobile: colunas centralizadas
+@media (max-width: 768px) {
+  footer .row {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  footer .col-lg-3,
+  footer .col-md-6,
+  footer .col-xs-12 {
+    flex: none !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    min-width: unset !important;
+    text-align: center !important;
+    margin-bottom: 24px !important;
+  }
+
+  footer .footer-logo img {
+    margin: 0 auto !important;
+  }
+
+  footer .footer-category::after {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  footer .footer-link,
+  footer .footer-menu a,
+  footer li a {
+    text-align: center !important;
+    padding-left: 0 !important;
+  }
+
+  .aq-footer-social {
+    justify-content: center !important;
+  }
+}
+
+// Assinatura do desenvolvedor
+.aq-signature {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: var(--font-body, sans-serif);
+  text-align: center;
+
+  a {
+    color: rgba(8, 238, 188, 0.6) !important;
+    text-decoration: none !important;
+    font-weight: 600;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #08EEBC !important;
+    }
+  }
+}

@@ -1,10 +1,5 @@
 @use '../base/variables' as *;
 
-// ============================================================
-// #aq-categories — Secção de categorias premium
-// Ícones com nomes abaixo + efeito neon glow no hover
-// ============================================================
-
 #aq-categories {
   padding: 12px 20px 16px;
   background: transparent;
@@ -61,7 +56,6 @@
     object-fit: contain;
     display: block;
     transition: $transition-smooth;
-    // Garante que imagens com fundo transparente não piscam em branco
     background: transparent;
   }
 
@@ -77,50 +71,50 @@
     transition: $transition-fast;
   }
 
-  // ── Responsivo ──────────────────────────────────────────────
-
-  // Tablet
   @media (max-width: 768px) {
-    padding: 36px 16px 32px;
+    padding: 28px 16px 24px;
 
     .aq-cat-grid {
-      gap: 10px 14px;
+      gap: 8px 12px;
     }
 
     .aq-cat-item {
-      width: calc(25% - 14px);
-      min-width: 82px;
-      padding: 14px 8px 12px;
+      width: calc(25% - 12px);
+      min-width: 70px;
+      padding: 10px 6px 8px;
     }
 
     .aq-cat-icon {
-      width: 52px;
-      height: 52px;
-    }
-  }
-
-  // Mobile
-  @media (max-width: 480px) {
-    padding: 28px 12px 24px;
-
-    .aq-cat-grid {
-      gap: 8px 10px;
-    }
-
-    .aq-cat-item {
-      width: calc(33.33% - 10px);
-      min-width: 78px;
-      padding: 12px 6px 10px;
-    }
-
-    .aq-cat-icon {
-      width: 46px;
-      height: 46px;
+      width: 44px;
+      height: 44px;
     }
 
     .aq-cat-name {
-      font-size: 0.64rem;
-      letter-spacing: 0.5px;
+      font-size: 0.62rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px 10px 16px;
+
+    .aq-cat-grid {
+      gap: 6px 8px;
+    }
+
+    .aq-cat-item {
+      width: calc(33.33% - 8px);
+      min-width: 66px;
+      padding: 8px 4px 6px;
+    }
+
+    .aq-cat-icon {
+      width: 39px;
+      height: 39px;
+    }
+
+    .aq-cat-name {
+      font-size: 0.58rem;
+      letter-spacing: 0.4px;
     }
   }
 }

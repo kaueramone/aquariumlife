@@ -184,6 +184,22 @@
   border: 1px solid rgba(8, 238, 188, 0.12);
   background: rgba(0, 21, 49, 0.4);
   backdrop-filter: blur(8px);
+  text-decoration: none;
+
+  &--link {
+    cursor: pointer;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+
+    &:hover {
+      border-color: rgba(8, 238, 188, 0.4);
+      background: rgba(8, 238, 188, 0.06);
+      box-shadow: 0 0 20px rgba(8, 238, 188, 0.15);
+
+      .aq-rating-text {
+        color: $color-neon-accent;
+      }
+    }
+  }
 }
 
 .aq-google-logo { width: 32px; height: 32px; flex-shrink: 0; }

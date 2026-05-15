@@ -38,3 +38,12 @@
 .slick-next {
   right: 12px !important;
 }
+
+// Ocultar setas no mobile
+@media (max-width: 768px) {
+  .slick-prev,
+  .slick-next,
+  .slick-arrow {
+    display: none !important;
+  }
+}

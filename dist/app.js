@@ -834,7 +834,6 @@
       { label: 'Superfish',     href: `${BASE}superfish`,      img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b5a9cb8-234638-superfish.png' },
       { label: 'Colombo',       href: `${BASE}colombo`,        img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3ee83b1-233903-logo-colombo-awg.svg' },
       { label: 'Tropical',      href: `${BASE}tropical`,       img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d106650-233758-tropical.png' },
-      { label: 'AS Aquaristik', href: `${BASE}as`,             img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3344f1f-233301-as-aquaristik-logo.svg' },
     ];
 
     function hideNativeBrands() {
@@ -1072,82 +1071,57 @@
     }
 
     /**
-     * trustSeals.js – v2
-     * - Selos de confiança na col 1 do footer (antes do copyright)
+     * trustSeals.js - v3
+     * - Selos de confianca no footer
      * - Move redes sociais para coluna de Contactos
-     * - Remove .secure-site nativo do Shopkit
+     * - Remove selos nativos Shopkit
+     * - Injeta assinatura no copyright
      */
 
-    const SEALS = [
+    var SEALS = [
       {
         id: 'ssl',
         label: 'SSL Seguro',
         sub: 'Loja certificada',
-        icon: `<svg viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="4" y="18" width="32" height="26" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
-      <path d="M12 18V13a8 8 0 0116 0v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      <circle cx="20" cy="31" r="3" fill="currentColor"/>
-      <line x1="20" y1="34" x2="20" y2="39" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>`,
+        icon: '<svg viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="18" width="32" height="26" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 18V13a8 8 0 0116 0v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="31" r="3" fill="currentColor"/><line x1="20" y1="34" x2="20" y2="39" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
       },
       {
         id: 'secure',
         label: 'Compra Segura',
         sub: 'Dados protegidos',
-        icon: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M24 4L8 10v12c0 10.5 6.8 20.3 16 23.4C33.2 42.3 40 32.5 40 22V10L24 4z" stroke="currentColor" stroke-width="2" fill="none"/>
-      <path d="M16 24l5 5 11-11" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`,
+        icon: '<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4L8 10v12c0 10.5 6.8 20.3 16 23.4C33.2 42.3 40 32.5 40 22V10L24 4z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M16 24l5 5 11-11" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
       },
       {
         id: 'mb',
         label: 'Multibanco',
         sub: 'Pagamento aceite',
-        icon: `<svg viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="48" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
-      <rect x="6" y="10" width="8" height="12" rx="1" fill="currentColor" opacity=".4"/>
-      <rect x="16" y="10" width="8" height="12" rx="1" fill="currentColor" opacity=".7"/>
-      <rect x="26" y="10" width="8" height="12" rx="1" fill="currentColor"/>
-      <text x="24" y="26" text-anchor="middle" font-size="5" fill="currentColor" font-family="sans-serif" opacity=".7">MULTIBANCO</text>
-    </svg>`,
+        icon: '<svg viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><rect x="6" y="10" width="8" height="12" rx="1" fill="currentColor" opacity=".4"/><rect x="16" y="10" width="8" height="12" rx="1" fill="currentColor" opacity=".7"/><rect x="26" y="10" width="8" height="12" rx="1" fill="currentColor"/><text x="24" y="26" text-anchor="middle" font-size="5" fill="currentColor" font-family="sans-serif" opacity=".7">MULTIBANCO</text></svg>',
       },
       {
         id: 'mbway',
         label: 'MB WAY',
         sub: 'Pagamento aceite',
-        icon: `<svg viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="48" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
-      <text x="24" y="14" text-anchor="middle" font-size="8" fill="#08EEBC" font-family="sans-serif" font-weight="bold">MB</text>
-      <text x="24" y="25" text-anchor="middle" font-size="7" fill="currentColor" font-family="sans-serif" opacity=".8">WAY</text>
-    </svg>`,
+        icon: '<svg viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><text x="24" y="14" text-anchor="middle" font-size="8" fill="#08EEBC" font-family="sans-serif" font-weight="bold">MB</text><text x="24" y="25" text-anchor="middle" font-size="7" fill="currentColor" font-family="sans-serif" opacity=".8">WAY</text></svg>',
       },
       {
         id: 'cards',
         label: 'Visa / Mastercard',
-        sub: 'Cartão aceite',
-        icon: `<svg viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="48" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
-      <circle cx="18" cy="16" r="8" fill="#EA4335" opacity=".7"/>
-      <circle cx="30" cy="16" r="8" fill="#FBBC05" opacity=".7"/>
-    </svg>`,
+        sub: 'Cartao aceite',
+        icon: '<svg viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="16" r="8" fill="#EA4335" opacity=".7"/><circle cx="30" cy="16" r="8" fill="#FBBC05" opacity=".7"/></svg>',
       },
     ];
 
     function buildSealsBar() {
-      const bar = document.createElement('div');
+      var bar = document.createElement('div');
       bar.id = 'aq-trust-seals';
-      const inner = document.createElement('div');
+      var inner = document.createElement('div');
       inner.className = 'aq-seals-inner';
-      SEALS.forEach(seal => {
-        const item = document.createElement('div');
-        item.className = `aq-seal-item aq-seal-${seal.id}`;
-        item.innerHTML = `
-      <div class="aq-seal-icon">${seal.icon}</div>
-      <div class="aq-seal-text">
-        <strong>${seal.label}</strong>
-        <span>${seal.sub}</span>
-      </div>
-    `;
+      SEALS.forEach(function(seal) {
+        var item = document.createElement('div');
+        item.className = 'aq-seal-item aq-seal-' + seal.id;
+        item.innerHTML =
+          '<div class="aq-seal-icon">' + seal.icon + '</div>' +
+          '<div class="aq-seal-text"><strong>' + seal.label + '</strong><span>' + seal.sub + '</span></div>';
         inner.appendChild(item);
       });
       bar.appendChild(inner);
@@ -1155,13 +1129,11 @@
     }
 
     function moveSocialToContacts(footer) {
-      // Encontra as redes sociais nativas
-      const social = footer.querySelector('.footer-social, .social');
+      var social = footer.querySelector('.footer-social, .social');
       if (!social) return;
 
-      // Encontra a coluna de Contactos pela heading
-      let contactsCol = null;
-      footer.querySelectorAll('.footer-category').forEach(el => {
+      var contactsCol = null;
+      footer.querySelectorAll('.footer-category').forEach(function(el) {
         if (el.textContent.trim().toLowerCase().includes('contacto')) {
           contactsCol = el.closest('.col-lg-3, .col-md-6, [class*="col"]');
         }
@@ -1169,27 +1141,19 @@
 
       if (!contactsCol) return;
 
-      // Clona e estiliza os links sociais
-      const socialWrap = document.createElement('div');
+      var socialWrap = document.createElement('div');
       socialWrap.className = 'aq-footer-social';
       socialWrap.style.cssText = 'display:flex;gap:12px;margin-top:16px;';
 
-      social.querySelectorAll('a').forEach(a => {
-        const clone = a.cloneNode(true);
-        clone.style.cssText = `
-      display:inline-flex;align-items:center;justify-content:center;
-      width:38px;height:38px;border-radius:50%;
-      border:1px solid rgba(8,238,188,0.25);
-      color:rgba(255,255,255,0.7);
-      transition:all 0.2s ease;
-      text-decoration:none;
-    `;
-        clone.addEventListener('mouseenter', () => {
+      social.querySelectorAll('a').forEach(function(a) {
+        var clone = a.cloneNode(true);
+        clone.style.cssText = 'display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;border:1px solid rgba(8,238,188,0.25);color:rgba(255,255,255,0.7);transition:all 0.2s ease;text-decoration:none;';
+        clone.addEventListener('mouseenter', function() {
           clone.style.borderColor = '#08EEBC';
           clone.style.color = '#08EEBC';
           clone.style.boxShadow = '0 0 10px rgba(8,238,188,0.3)';
         });
-        clone.addEventListener('mouseleave', () => {
+        clone.addEventListener('mouseleave', function() {
           clone.style.borderColor = 'rgba(8,238,188,0.25)';
           clone.style.color = 'rgba(255,255,255,0.7)';
           clone.style.boxShadow = 'none';
@@ -1198,128 +1162,139 @@
       });
 
       contactsCol.appendChild(socialWrap);
-
-      // Oculta o social original
       social.style.setProperty('display', 'none', 'important');
     }
 
     function removeSiteSeal(footer) {
-      footer.querySelectorAll('.secure-site, .site-seal, [class*="secure-site"]').forEach(el => {
+      footer.querySelectorAll('.secure-site, .site-seal, [class*="secure-site"]').forEach(function(el) {
         el.style.setProperty('display', 'none', 'important');
       });
+    }
+
+    function injectSignature(footer) {
+      if (footer.querySelector('.aq-signature')) return;
+      var copyright = footer.querySelector('.copyright, .footer-bottom');
+      if (!copyright) return;
+
+      var sig = document.createElement('div');
+      sig.className = 'aq-signature';
+      sig.innerHTML =
+        'Loja feita com ' +
+        '<svg viewBox="0 0 24 24" aria-hidden="true" style="width:13px;height:13px;display:inline-block;vertical-align:middle;margin:0 3px;fill:#08EEBC;">' +
+        '<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>' +
+        '</svg>' +
+        ' por <a href="https://kaueramone.dev" target="_blank" rel="noopener noreferrer">Kaue Ramone</a>';
+
+      copyright.appendChild(sig);
     }
 
     function build() {
       if (document.getElementById('aq-trust-seals')) return true;
 
-      const footer = document.querySelector('footer, #footer, .footer');
+      var footer = document.querySelector('footer, #footer, .footer');
       if (!footer) return false;
 
-      // Injeta selos antes do copyright
-      const copyright = footer.querySelector('.copyright, .footer-bottom, [class*="copyright"]');
-      const bar = buildSealsBar();
+      var copyright = footer.querySelector('.copyright, .footer-bottom');
+      var bar = buildSealsBar();
       if (copyright && copyright.parentNode) {
         copyright.parentNode.insertBefore(bar, copyright);
       } else {
-        footer.querySelector('.col-lg-3, [class*="col"]')?.appendChild(bar);
+        var col = footer.querySelector('.col-lg-3, [class*="col"]');
+        if (col) col.appendChild(bar);
       }
 
-      // Move redes sociais para Contactos
       moveSocialToContacts(footer);
-
-      // Remove selos nativos Shopkit
       removeSiteSeal(footer);
+      injectSignature(footer);
 
-      console.log('[AQ] Trust seals v2 aplicados');
+      console.log('[AQ] Trust seals v3 aplicados');
       return true;
     }
 
     function initTrustSeals() {
       if (build()) return;
-      let attempts = 0;
-      const interval = setInterval(() => {
+      var attempts = 0;
+      var interval = setInterval(function() {
         attempts++;
         if (build() || attempts >= 20) clearInterval(interval);
       }, 300);
     }
 
     /**
-     * storeSection.js – v3
-     * Exporta buildStoreSection() para uso pelo homeOrchestrator.
+     * storeSection.js - v4
+     * - Endereco correto: Praceta Jose Afonso 3A, 2740-192 Porto Salvo, Portugal
+     * - Botao "Como chegar": abre rotas do Google Maps ate a loja
+     * - Badge Google Reviews e clicavel (substitui botao "Avaliar no Google")
      */
 
-    const MAPS_URL   = 'https://g.page/r/CXlxMPCWpRf3EAE/review';
     const REVIEW_URL = 'https://g.page/r/CXlxMPCWpRf3EAE/review';
     const MAPS_EMBED = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.6698765065166!2d-9.31225998837219!3d38.72538765671719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecf2d390fc4f5%3A0xf717a596f0307179!2sAquariumlife!5e0!3m2!1spt-PT!2spt!4v1778773494142!5m2!1spt-PT!2spt';
 
+    /* Link de direcoes: abre rota da localizacao atual ate a loja */
+    const DIRECTIONS_URL = 'https://www.google.com/maps/dir/?api=1&destination=Praceta+Jos%C3%A9+Afonso+3A+2740-192+Porto+Salvo+Portugal&destination_place_id=ChIJ9U8ME9Py7UcReXEw8JalF_c';
+
     function starSVG() {
-      return `<svg viewBox="0 0 24 24" class="aq-star filled" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor" stroke="currentColor" stroke-width="1.5"/></svg>`;
+      return '<svg viewBox="0 0 24 24" class="aq-star filled" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor" stroke="currentColor" stroke-width="1.5"/></svg>';
+    }
+
+    function googleLogoSVG() {
+      return '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="aq-google-logo" aria-hidden="true"><path fill="#4285F4" d="M47.5 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h13.2c-.6 3-2.3 5.5-4.9 7.2v6h7.9c4.6-4.3 7.3-10.6 7.3-17.2z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.9-6c-2.1 1.4-4.9 2.3-8 2.3-6.1 0-11.3-4.1-13.2-9.7H2.6v6.2C6.6 43.2 14.7 48 24 48z"/><path fill="#FBBC05" d="M10.8 28.8c-.5-1.4-.7-2.8-.7-4.3s.3-2.9.7-4.3v-6.2H2.6C.9 17.3 0 20.6 0 24s.9 6.7 2.6 9.5l8.2-4.7z"/><path fill="#EA4335" d="M24 9.5c3.4 0 6.5 1.2 8.9 3.5l6.7-6.7C35.9 2.4 30.4 0 24 0 14.7 0 6.6 4.8 2.6 12.5l8.2 4.7c1.9-5.6 7.1-9.7 13.2-9.7z"/></svg>';
     }
 
     function buildStoreSection() {
       if (document.getElementById('aq-store')) return null;
 
-      const section = document.createElement('section');
+      var section = document.createElement('section');
       section.id = 'aq-store';
 
-      section.innerHTML = `
-    <div class="aq-store-inner">
-      <div class="aq-store-map">
-        <iframe
-          src="${MAPS_EMBED}"
-          width="100%" height="100%"
-          style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Localização Aquariumlife no Google Maps"
-        ></iframe>
-      </div>
-      <div class="aq-store-info">
-        <div class="aq-section-header aq-store-header">
-          <span class="aq-section-tag">Loja Física</span>
-          <h2 class="aq-section-title">Visita-nos <span class="aq-neon">Pessoalmente</span></h2>
-          <p class="aq-section-sub">Vem conhecer o nosso espaço, ver os produtos ao vivo e receber aconselhamento especializado da nossa equipa.</p>
-        </div>
-        <ul class="aq-store-details">
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Rinchoa, Rio de Mouro — Sintra, Portugal</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            <span>Horários disponíveis no nosso perfil Google</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 15.92z"/></svg>
-            <span>Atendimento presencial e online</span>
-          </li>
-        </ul>
-        <div class="aq-store-ctas">
-          <a href="${MAPS_URL}" target="_blank" rel="noopener noreferrer" class="aq-btn-primary">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Como chegar
-          </a>
-          <a href="${REVIEW_URL}" target="_blank" rel="noopener noreferrer" class="aq-btn-outline aq-btn-review">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            Avaliar no Google
-          </a>
-        </div>
-        <div class="aq-google-rating">
-          <div class="aq-rating-badge">
-            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="aq-google-logo" aria-hidden="true">
-              <path fill="#4285F4" d="M47.5 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h13.2c-.6 3-2.3 5.5-4.9 7.2v6h7.9c4.6-4.3 7.3-10.6 7.3-17.2z"/>
-              <path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.9-6c-2.1 1.4-4.9 2.3-8 2.3-6.1 0-11.3-4.1-13.2-9.7H2.6v6.2C6.6 43.2 14.7 48 24 48z"/>
-              <path fill="#FBBC05" d="M10.8 28.8c-.5-1.4-.7-2.8-.7-4.3s.3-2.9.7-4.3v-6.2H2.6C.9 17.3 0 20.6 0 24s.9 6.7 2.6 9.5l8.2-4.7z"/>
-              <path fill="#EA4335" d="M24 9.5c3.4 0 6.5 1.2 8.9 3.5l6.7-6.7C35.9 2.4 30.4 0 24 0 14.7 0 6.6 4.8 2.6 12.5l8.2 4.7c1.9-5.6 7.1-9.7 13.2-9.7z"/>
-            </svg>
-            <div class="aq-rating-info">
-              <div class="aq-rating-stars">${starSVG()}${starSVG()}${starSVG()}${starSVG()}${starSVG()}</div>
-              <span class="aq-rating-text">Avalia-nos no Google</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
+      section.innerHTML =
+        '<div class="aq-store-inner">' +
+          '<div class="aq-store-map">' +
+            '<iframe' +
+              ' src="' + MAPS_EMBED + '"' +
+              ' width="100%" height="100%"' +
+              ' style="border:0;" allowfullscreen="" loading="lazy"' +
+              ' referrerpolicy="no-referrer-when-downgrade"' +
+              ' title="Localizacao Aquariumlife no Google Maps"' +
+            '></iframe>' +
+          '</div>' +
+          '<div class="aq-store-info">' +
+            '<div class="aq-section-header aq-store-header">' +
+              '<span class="aq-section-tag">Loja Fisica</span>' +
+              '<h2 class="aq-section-title">Visita-nos <span class="aq-neon">Pessoalmente</span></h2>' +
+              '<p class="aq-section-sub">Vem conhecer o nosso espaco, ver os produtos ao vivo e receber aconselhamento especializado da nossa equipa.</p>' +
+            '</div>' +
+            '<ul class="aq-store-details">' +
+              '<li>' +
+                '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>' +
+                '<span>Praceta Jose Afonso 3A, 2740-192 Porto Salvo, Portugal</span>' +
+              '</li>' +
+              '<li>' +
+                '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>' +
+                '<span>Horarios disponiveis no nosso perfil Google</span>' +
+              '</li>' +
+              '<li>' +
+                '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 15.92z"/></svg>' +
+                '<span>Atendimento presencial e online</span>' +
+              '</li>' +
+            '</ul>' +
+            '<div class="aq-store-ctas">' +
+              '<a href="' + DIRECTIONS_URL + '" target="_blank" rel="noopener noreferrer" class="aq-btn-primary">' +
+                '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>' +
+                'Como chegar' +
+              '</a>' +
+            '</div>' +
+            '<div class="aq-google-rating">' +
+              '<a href="' + REVIEW_URL + '" target="_blank" rel="noopener noreferrer" class="aq-rating-badge aq-rating-badge--link">' +
+                googleLogoSVG() +
+                '<div class="aq-rating-info">' +
+                  '<div class="aq-rating-stars">' + starSVG() + starSVG() + starSVG() + starSVG() + starSVG() + '</div>' +
+                  '<span class="aq-rating-text">Deixa a tua avaliacao no Google</span>' +
+                '</div>' +
+              '</a>' +
+            '</div>' +
+          '</div>' +
+        '</div>';
 
       return section;
     }
@@ -1491,5 +1466,15 @@
     } else {
       init();
     }
+    // build Thu May 14 21:12:37 HVGMT 2026
+    // build Thu May 14 21:19:10 HVGMT 2026
+    // build Thu May 14 21:28:05 HVGMT 2026
+    // build Thu May 14 21:35:19 HVGMT 2026
+    // build Thu May 14 21:42:27 HVGMT 2026
+    // build Thu May 14 21:46:56 HVGMT 2026
+    // Thu May 14 21:59:55 HVGMT 2026
+    // Thu May 14 22:11:14 HVGMT 2026
+    // Thu May 14 23:49:01 HVGMT 2026
+    // Thu May 14 23:52:33 HVGMT 2026
 
 })();

@@ -398,3 +398,46 @@ section:has(.product-view),
     }
   }
 }
+
+// ── Mobile: cards mais largos e compactos ─────────────────────
+@media (max-width: 768px) {
+  // Grid nativo do Shopkit: forcar 2 colunas com menos margem lateral
+  .products-list,
+  .products.row,
+  [class*="products-grid"] {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .product {
+    padding: 0 4px !important;
+  }
+
+  // Imagem mais compacta
+  a.product-preview {
+    aspect-ratio: 1 / 1;
+  }
+
+  // Titulo mais junto da imagem
+  a.product-name {
+    padding: 4px 8px 1px !important;
+    font-size: 0.78rem !important;
+  }
+
+  // Preco mais compacto
+  .product-price {
+    padding: 1px 8px 4px !important;
+  }
+
+  // Botao comprar mais compacto
+  .card-shadow-hover > a.product-btn {
+    margin: 0 10px 10px !important;
+    padding: 6px 8px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  a.product-name {
+    font-size: 0.74rem !important;
+  }
+}
