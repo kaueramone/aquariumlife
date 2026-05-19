@@ -1,27 +1,15 @@
 @use '../base/variables' as *;
 
-// Espacamento global entre secoes premium
-#aq-categories,
-#aq-brands,
-#aq-blog-home,
-#aq-store,
-#aq-faq {
-  & + #aq-categories,
-  & + #aq-brands,
-  & + #aq-blog-home,
-  & + #aq-store,
-  & + #aq-faq {
-    margin-top: 0;
-  }
+// Espacamento global entre secoes
+#aq-categories, #aq-brands, #aq-blog-home, #aq-store, #aq-faq {
+  & + #aq-categories, & + #aq-brands, & + #aq-blog-home, & + #aq-store, & + #aq-faq { margin-top: 0; }
 }
+#aq-brands    { border-top: 1px solid rgba(8, 238, 188, 0.06); }
+#aq-blog-home { border-top: 1px solid rgba(8, 238, 188, 0.06); }
+#aq-store     { border-top: 1px solid rgba(8, 238, 188, 0.06); }
+#aq-faq       { border-top: 1px solid rgba(8, 238, 188, 0.06); }
 
-// Separador sutil entre secoes
-#aq-brands      { border-top: 1px solid rgba(8, 238, 188, 0.06); }
-#aq-blog-home   { border-top: 1px solid rgba(8, 238, 188, 0.06); }
-#aq-store       { border-top: 1px solid rgba(8, 238, 188, 0.06); }
-#aq-faq         { border-top: 1px solid rgba(8, 238, 188, 0.06); }
-
-// ── Secao Blog na Home ────────────────────────────────────────────────────────
+// Secao Blog na Home
 #aq-blog-home {
   padding: 100px 20px;
   position: relative;
@@ -39,7 +27,7 @@
   .aq-section-header { margin-bottom: 56px; }
 }
 
-// ── Grid de cards ─────────────────────────────────────────────────────────────
+// Grid de cards
 .aq-blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -51,7 +39,7 @@
   @media (max-width: 600px) { grid-template-columns: 1fr; }
 }
 
-// ── Card de post ──────────────────────────────────────────────────────────────
+// Card de post
 .aq-blog-card {
   display: flex;
   flex-direction: column;
@@ -69,7 +57,6 @@
     border-color: rgba(8, 238, 188, 0.35);
     transform: translateY(-6px);
     @include neon-glow;
-
     .aq-blog-card-img img { transform: scale(1.06); }
     .aq-blog-card-cta     { color: $color-neon-accent; gap: 10px; }
   }
@@ -81,11 +68,7 @@
   overflow: hidden;
   background: rgba(0, 8, 20, 0.6);
 
-  img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
+  img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
 }
 
 .aq-blog-card-img-placeholder {
@@ -121,28 +104,13 @@
   flex: 1;
 }
 
-.aq-blog-card-meta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+.aq-blog-card-meta { display: flex; align-items: center; gap: 12px; }
 
 .aq-blog-card-date {
   color: rgba(8, 238, 188, 0.65);
   font-size: 0.75rem;
   font-family: $font-family-body;
   letter-spacing: 0.5px;
-}
-
-.aq-blog-card-read {
-  color: rgba(255, 255, 255, 0.3);
-  font-size: 0.72rem;
-  font-family: $font-family-body;
-  &::before {
-    content: '·';
-    margin-right: 12px;
-    color: rgba(255,255,255,0.2);
-  }
 }
 
 .aq-blog-card-title {
@@ -174,37 +142,27 @@
   letter-spacing: 0.5px;
   transition: $transition-fast;
   margin-top: 8px;
-
   svg { width: 14px; height: 14px; transition: $transition-fast; }
 }
 
-// ── Skeleton loader ───────────────────────────────────────────────────────────
+// Skeleton
 @keyframes aq-skeleton-pulse {
   0%, 100% { opacity: 0.4; }
   50%       { opacity: 0.8; }
 }
+.aq-blog-skeleton { pointer-events: none; animation: aq-skeleton-pulse 1.6s ease-in-out infinite; }
+.aq-skel-img      { background: rgba(8, 238, 188, 0.07); }
+.aq-skel-line     { height: 14px; border-radius: 6px; background: rgba(8, 238, 188, 0.07); margin-bottom: 10px; }
+.aq-skel-short    { width: 40%; }
+.aq-skel-full     { width: 100%; height: 18px; }
+.aq-skel-medium   { width: 70%; }
 
-.aq-blog-skeleton {
-  pointer-events: none;
-  animation: aq-skeleton-pulse 1.6s ease-in-out infinite;
-}
-
-.aq-skel-img   { background: rgba(8, 238, 188, 0.07); }
-.aq-skel-line  { height: 14px; border-radius: 6px; background: rgba(8, 238, 188, 0.07); margin-bottom: 10px; }
-.aq-skel-short  { width: 40%; }
-.aq-skel-full   { width: 100%; height: 18px; }
-.aq-skel-medium { width: 70%; }
-
-// ── CTA "Ver todos" centralizado ──────────────────────────────────────────────
+// CTA ver todos
 .aq-blog-home-cta {
   display: flex;
   justify-content: center;
   margin-top: 48px;
-
-  .aq-btn-outline {
-    padding: 16px 40px;
-    font-size: 0.95rem;
-  }
+  .aq-btn-outline { padding: 16px 40px; font-size: 0.95rem; }
 }
 
 .aq-blog-empty {
@@ -213,218 +171,19 @@
   grid-column: 1 / -1;
   padding: 48px 20px;
   font-family: $font-family-body;
-
   p { margin: 0 0 8px; font-size: 1rem; }
 }
 
 
-// ═══════════════════════════════════════════════════════════════════════════════
-// PAGINA /blog — Hero + Filtros + Cards Sofisticados
-// ═══════════════════════════════════════════════════════════════════════════════
-
-body.aq-page-blog {
-
-  // ── Hero ──────────────────────────────────────────────────────────────────
-  .aq-blog-hero {
-    position: relative;
-    padding: 100px 20px 80px;
-    text-align: center;
-    overflow: hidden;
-  }
-
-  .aq-blog-hero-bg {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .aq-blog-hero-orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(60px);
-    opacity: 0.18;
-
-    &--1 {
-      width: 500px; height: 500px;
-      top: -180px; left: 50%;
-      transform: translateX(-50%);
-      background: radial-gradient(circle, #08EEBC, transparent 70%);
-    }
-    &--2 {
-      width: 300px; height: 300px;
-      top: 20px; right: -60px;
-      background: radial-gradient(circle, #00bfff, transparent 70%);
-      opacity: 0.12;
-    }
-    &--3 {
-      width: 250px; height: 250px;
-      bottom: -40px; left: -40px;
-      background: radial-gradient(circle, #08EEBC, transparent 70%);
-      opacity: 0.08;
-    }
-  }
-
-  .aq-blog-hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 720px;
-    margin: 0 auto;
-  }
-
-  .aq-blog-hero-title {
-    font-family: $font-family-title;
-    font-size: clamp(2.2rem, 5vw, 3.4rem);
-    font-weight: 800;
-    color: $color-text-primary;
-    line-height: 1.1;
-    letter-spacing: -1px;
-    margin: 16px 0 20px;
-  }
-
-  .aq-blog-hero-sub {
-    color: $color-text-secondary;
-    font-family: $font-family-body;
-    font-size: 1.05rem;
-    line-height: 1.7;
-    max-width: 560px;
-    margin: 0 auto 40px;
-  }
-
-  .aq-blog-hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-  }
-
-  .aq-blog-hero-stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-  }
-
-  .aq-blog-hero-stat-num {
-    font-family: $font-family-title;
-    font-size: 2rem;
-    font-weight: 800;
-    background: $gradient-neon;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    line-height: 1;
-  }
-
-  .aq-blog-hero-stat-label {
-    font-family: $font-family-body;
-    font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.45);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-
-  // ── Filtros de categoria ──────────────────────────────────────────────────
-  .aq-blog-filters {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 0 20px 56px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .aq-blog-filter-btn {
-    padding: 8px 20px;
-    border-radius: 40px;
-    border: 1.5px solid rgba(8, 238, 188, 0.2);
-    background: rgba(0, 21, 49, 0.4);
-    color: rgba(255, 255, 255, 0.55);
-    font-family: $font-family-title;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    transition: $transition-fast;
-    backdrop-filter: blur(4px);
-
-    &:hover {
-      border-color: rgba(8, 238, 188, 0.45);
-      color: $color-text-primary;
-    }
-
-    &.active {
-      background: rgba(8, 238, 188, 0.12);
-      border-color: $color-neon-accent;
-      color: $color-neon-accent;
-      @include neon-glow;
-    }
-  }
-
-  // ── Cards nativos do Shopkit ──────────────────────────────────────────────
-  .aq-blog-native-card,
-  .post, .blog-item {
-    background: rgba(0, 21, 49, 0.35) !important;
-    border: 1px solid rgba(8, 238, 188, 0.1) !important;
-    border-radius: 16px !important;
-    overflow: hidden !important;
-    transition: $transition-smooth !important;
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
-
-    &:hover {
-      border-color: rgba(8, 238, 188, 0.35) !important;
-      transform: translateY(-6px) !important;
-      @include neon-glow;
-    }
-
-    h2, h3, .post-title { color: $color-text-primary !important; font-family: $font-family-title !important; }
-    p, .post-excerpt    { color: $color-text-secondary !important; font-family: $font-family-body !important; }
-    time, .post-date    { color: rgba(8, 238, 188, 0.7) !important; font-size: 0.78rem !important; }
-
-    a.btn, .btn-primary, .post-link {
-      background: transparent !important;
-      border: 1.5px solid $color-neon-accent !important;
-      color: $color-neon-accent !important;
-      border-radius: 6px !important;
-      font-family: $font-family-title !important;
-      font-weight: 700 !important;
-      letter-spacing: 1px !important;
-      text-transform: uppercase !important;
-      font-size: 0.78rem !important;
-      transition: $transition-fast !important;
-
-      &:hover {
-        background: $color-neon-accent !important;
-        color: $color-bg-primary !important;
-      }
-    }
-
-    // Featured: primeiro card maior
-    &--featured {
-      grid-column: 1 / -1 !important;
-    }
-  }
-
-  // ── Pagina de listagem: header nativo oculto ──────────────────────────────
-  .aq-blog-page-header {
-    display: none !important;
-  }
-}
-
-
-// ═══════════════════════════════════════════════════════════════════════════════
-// POST INDIVIDUAL — Barra de Progresso + Tempo de Leitura
-// ═══════════════════════════════════════════════════════════════════════════════
-
-// ── Barra de progresso de leitura (sticky, topo) ──────────────────────────────
+// ============================================================
+// BARRA DE PROGRESSO DE LEITURA (sticky topo)
+// ============================================================
 #aq-read-progress {
   position: fixed;
   top: 0; left: 0; right: 0;
   height: 3px;
   background: rgba(8, 238, 188, 0.08);
-  z-index: 9999;
+  z-index: 99999;
   pointer-events: none;
 }
 
@@ -436,7 +195,7 @@ body.aq-page-blog {
   box-shadow: 0 0 8px rgba(8, 238, 188, 0.6);
 }
 
-// ── Badge flutuante de % de conclusao ─────────────────────────────────────────
+// Badge flutuante de % de conclusao
 #aq-read-pct {
   position: fixed;
   bottom: 32px;
@@ -460,23 +219,12 @@ body.aq-page-blog {
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
 
-  &.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  #aq-read-pct-num {
-    font-size: 1rem;
-    line-height: 1;
-  }
-
-  .aq-read-pct-label {
-    color: rgba(8, 238, 188, 0.6);
-    font-size: 0.75rem;
-  }
+  &.visible { opacity: 1; transform: translateY(0); }
+  #aq-read-pct-num { font-size: 1rem; line-height: 1; }
+  .aq-read-pct-label { color: rgba(8, 238, 188, 0.6); font-size: 0.75rem; }
 }
 
-// ── Tempo de leitura no meta ───────────────────────────────────────────────────
+// Tempo de leitura no meta
 .aq-post-read-time {
   display: inline-flex;
   align-items: center;
@@ -490,12 +238,44 @@ body.aq-page-blog {
   font-family: $font-family-body;
   font-size: 0.75rem;
   vertical-align: middle;
-
   svg { width: 12px; height: 12px; flex-shrink: 0; }
 }
 
-// ── Post Individual: estilos base ─────────────────────────────────────────────
+
+// ============================================================
+// POST INDIVIDUAL — body.aq-page-post
+// ============================================================
 body.aq-page-post {
+
+  // Fundo escuro em TODOS os containers do Shopkit Boxie (sobrepoe o #fff nativo)
+  .main,
+  .blog-post,
+  .blog-post.section,
+  .post-detail,
+  .post-detail.well-featured,
+  .post-detail.well-shadow,
+  .well,
+  .well-featured,
+  .well-shadow,
+  .content,
+  .post-content,
+  .blog-post .col,
+  .blog-post .row,
+  .blog-post .container-fluid {
+    background: $color-bg-primary !important;
+    background-color: $color-bg-primary !important;
+    color: rgba(255, 255, 255, 0.88) !important;
+    box-shadow: none !important;
+  }
+
+  // Breadcrumb
+  .breadcrumbs, .breadcrumb {
+    background: transparent !important;
+    a { color: rgba(8, 238, 188, 0.7) !important; text-decoration: none !important; }
+    li, span { color: rgba(255,255,255,0.4) !important; }
+  }
+
+  // Botao voltar
   .aq-post-back-btn {
     display: inline-flex;
     align-items: center;
@@ -509,12 +289,13 @@ body.aq-page-post {
     margin-bottom: 24px;
     opacity: 0.8;
     transition: $transition-fast;
-
     svg { width: 16px; height: 16px; }
     &:hover { opacity: 1; gap: 12px; }
   }
 
-  .aq-post-title {
+  // Titulo do post
+  .aq-post-title,
+  .blog-post-title {
     color: $color-text-primary !important;
     font-family: $font-family-title !important;
     font-size: clamp(1.6rem, 4vw, 2.8rem) !important;
@@ -524,7 +305,9 @@ body.aq-page-post {
     margin-bottom: 20px !important;
   }
 
+  // Meta (data, categoria)
   .aq-post-meta,
+  .post-details,
   .post-date, .post-meta {
     display: flex !important;
     align-items: center !important;
@@ -534,30 +317,49 @@ body.aq-page-post {
     font-size: 0.82rem !important;
     font-family: $font-family-body !important;
     margin-bottom: 28px !important;
+    background: transparent !important;
   }
 
+  // Imagem destaque
   .aq-post-featured-img,
+  .image-post,
   .post-image, .post-thumbnail {
     border-radius: 16px !important;
     overflow: hidden !important;
-    border: 1px solid rgba(8, 238, 188, 0.1) !important;
+    border: 1px solid rgba(8, 238, 188, 0.12) !important;
     margin-bottom: 40px !important;
+    background: transparent !important;
     @include neon-glow;
-    img { width: 100% !important; height: auto !important; display: block !important; }
+    img { width: 100% !important; height: auto !important; display: block !important; border-radius: 16px !important; }
   }
 
+  // Corpo do artigo
   .aq-post-body,
-  .post-body, .post-content, .article-body {
+  .post-content {
     color: rgba(255, 255, 255, 0.88) !important;
     font-family: $font-family-body !important;
     font-size: 1.05rem !important;
     line-height: 1.85 !important;
     max-width: 780px !important;
     margin: 0 auto !important;
+    background: transparent !important;
 
-    h2 { color: $color-text-primary !important; font-family: $font-family-title !important; font-size: 1.55rem !important; margin-top: 2.2em !important; margin-bottom: 0.6em !important; }
-    h3 { color: $color-neon-accent !important; font-family: $font-family-title !important; font-size: 1.2rem !important; margin-top: 1.8em !important; margin-bottom: 0.5em !important; }
-    p  { margin-bottom: 1.5em !important; }
+    h2 {
+      color: $color-text-primary !important;
+      font-family: $font-family-title !important;
+      font-size: 1.55rem !important;
+      font-weight: 700 !important;
+      margin-top: 2.2em !important;
+      margin-bottom: 0.6em !important;
+    }
+    h3 {
+      color: $color-neon-accent !important;
+      font-family: $font-family-title !important;
+      font-size: 1.2rem !important;
+      margin-top: 1.8em !important;
+      margin-bottom: 0.5em !important;
+    }
+    p  { margin-bottom: 1.5em !important; color: rgba(255,255,255,0.88) !important; }
     a  { color: $color-neon-accent !important; text-decoration: underline !important; text-underline-offset: 3px !important; }
 
     ul, ol {
@@ -594,51 +396,25 @@ body.aq-page-post {
 }
 
 
-// ── Responsividade mobile ─────────────────────────────────────────────────────
+// Responsividade mobile
 @media (max-width: 768px) {
-  #aq-blog-home {
-    padding: 60px 16px;
-  }
+  #aq-blog-home { padding: 60px 16px; }
 
   .aq-blog-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .aq-blog-card-title {
-    font-size: 1rem;
-  }
+  .aq-blog-card-title { font-size: 1rem; }
 
   .aq-blog-home-cta {
     margin-top: 32px;
-    .aq-btn-outline {
-      width: 100%;
-      justify-content: center;
-      padding: 14px 20px;
-    }
+    .aq-btn-outline { width: 100%; justify-content: center; padding: 14px 20px; }
   }
 
-  body.aq-page-blog {
-    .aq-blog-hero { padding: 70px 16px 50px; }
-    .aq-blog-hero-title { font-size: 2rem; }
-    .aq-blog-hero-stats { gap: 24px; }
-    .aq-blog-hero-stat-num { font-size: 1.5rem; }
-    .aq-blog-filters { padding-bottom: 36px; }
-  }
-
-  #aq-read-pct {
-    bottom: 20px;
-    right: 16px;
-    padding: 8px 12px;
-  }
+  #aq-read-pct { bottom: 20px; right: 16px; padding: 8px 12px; }
 }
 
 @media (max-width: 480px) {
-  .aq-section-title {
-    font-size: 1.6rem;
-  }
-
-  body.aq-page-blog .aq-blog-hero-stats {
-    gap: 16px;
-  }
+  .aq-section-title { font-size: 1.6rem; }
 }
