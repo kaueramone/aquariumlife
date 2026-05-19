@@ -119,3 +119,82 @@ div.breadcrumbs,
   margin: 0 auto;
   text-align: center;
 }
+
+// Paginas estaticas do Shopkit (/page/*)
+// body.page-page cobre: politicas, termos, reclamacoes, etc.
+body.page-page {
+
+  // Fundo escuro em todos os containers brancos do Boxie
+  .main,
+  .page.section,
+  .page-content,
+  .page-content.well-featured,
+  .page-content.well-shadow,
+  .well, .well-featured, .well-shadow,
+  .page .col,
+  .page .row,
+  .page .container-fluid {
+    background: $color-bg-primary !important;
+    background-color: $color-bg-primary !important;
+    box-shadow: none !important;
+  }
+
+  // Titulo da pagina
+  .page-title, h1.title {
+    color: $color-text-primary !important;
+    font-family: $font-family-title !important;
+    font-size: clamp(1.6rem, 4vw, 2.4rem) !important;
+    font-weight: 700 !important;
+    margin-bottom: 32px !important;
+  }
+
+  // Corpo do conteudo
+  .page-content {
+    color: rgba(255, 255, 255, 0.88) !important;
+    font-family: $font-family-body !important;
+    font-size: 1rem !important;
+    line-height: 1.8 !important;
+    max-width: 860px !important;
+    margin: 0 auto !important;
+    padding: 40px !important;
+    border: 1px solid rgba(8, 238, 188, 0.08) !important;
+    border-radius: 16px !important;
+
+    h2, h3, h4 {
+      color: $color-text-primary !important;
+      font-family: $font-family-title !important;
+      margin-top: 2em !important;
+      margin-bottom: 0.6em !important;
+    }
+    h2 { font-size: 1.4rem !important; }
+    h3 { font-size: 1.15rem !important; color: $color-neon-accent !important; }
+
+    p { margin-bottom: 1.2em !important; color: rgba(255,255,255,0.85) !important; }
+
+    a {
+      color: $color-neon-accent !important;
+      text-decoration: underline !important;
+      text-underline-offset: 3px !important;
+    }
+
+    ul, ol {
+      padding-left: 1.5em !important;
+      margin-bottom: 1.2em !important;
+      li { margin-bottom: 0.5em !important; color: rgba(255,255,255,0.82) !important; }
+    }
+
+    strong, b { color: $color-text-primary !important; }
+
+    table {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      margin-bottom: 1.5em !important;
+      td, th {
+        border: 1px solid rgba(8, 238, 188, 0.15) !important;
+        padding: 10px 14px !important;
+        color: rgba(255,255,255,0.82) !important;
+      }
+      th { background: rgba(8, 238, 188, 0.08) !important; color: $color-text-primary !important; }
+    }
+  }
+}
