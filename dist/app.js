@@ -917,17 +917,12 @@
     }
 
     /**
-     * blogSection.js - v9
-     * DOM real confirmado via inspecao ao vivo:
-     *   .blog-page.section > .container-fluid > .blog-row > .blog-col > .col > .blog-item
-     *   .blog-item > div.col-lg-3 > .blog-image > a > img.lazy
-     *   .blog-item > .blog-post > h2 > a  (titulo+link)
-     *   .blog-item > .blog-post > .date-post  (data)
-     *   .blog-item > .blog-post > p  (excerpt)
-     *   h1.blog-title  (titulo nativo a ocultar)
+     * blogSection.js - v10
+     * Blog listing: hero injectado imediatamente, cards preenchidos com MutationObserver
      */
 
     var BLOG_HREF = '/blog';
+    var VISIBLE_CARDS = 6;
 
     function truncate(str, max) {
       if (!max) max = 130;
@@ -938,59 +933,129 @@
     function estimateReadTime(text) {
       if (!text) return null;
       var words = text.trim().split(/\s+/).length;
-      var mins = Math.max(1, Math.round(words / 220));
-      return mins + ' min';
+      return Math.max(1, Math.round(words / 220)) + ' min';
     }
 
-    // Extrai dados de um .blog-item nativo do Shopkit
+    // Estrutura real Shopkit Boxie confirmada ao vivo:
+    // img:     .blog-image img[data-src]
+    // titulo:  .blog-post a.link-inherit  (ou img[title])
+    // data:    .post-details span  (remover SVG/i)
+    // excerpt: .blog-excerpt
     function extractPost(item) {
-      var imgEl   = item.querySelector('.blog-image img, img.lazy, img');
-      var linkEl  = item.querySelector('.blog-post h2 a, h2 a, h3 a, a[href*="/post/"]');
-      var dateEl  = item.querySelector('.date-post, time, .blog-date, .date');
-      var excerptEl = item.querySelector('.blog-post p, p');
+      var imgEl    = item.querySelector('.blog-image img');
+      var linkEl   = item.querySelector('.blog-post a.link-inherit, .blog-post > a');
+      var dateEl   = item.querySelector('.post-details span');
+      var excerptEl = item.querySelector('.blog-excerpt');
 
-      var img    = imgEl  ? (imgEl.getAttribute('data-src') || imgEl.src || '') : '';
-      var href   = linkEl ? linkEl.href : BLOG_HREF;
-      var title  = linkEl ? linkEl.textContent.trim() : '';
-      var date   = dateEl ? dateEl.textContent.trim() : '';
-      var excerpt = excerptEl ? excerptEl.textContent.trim() : '';
+      var img   = imgEl ? (imgEl.getAttribute('data-src') || imgEl.src || '') : '';
+      var href  = linkEl ? linkEl.href : BLOG_HREF;
+      var title = linkEl ? linkEl.textContent.trim() : '';
+      if (!title && imgEl) title = imgEl.getAttribute('title') || imgEl.getAttribute('alt') || '';
 
-      // Fallback: imagem do link pai
-      if (!img) {
-        var aImg = item.querySelector('a img');
-        if (aImg) img = aImg.getAttribute('data-src') || aImg.src || '';
+      var date = '';
+      if (dateEl) {
+        var clone = dateEl.cloneNode(true);
+        Array.from(clone.querySelectorAll('svg, i')).forEach(function(el) { el.remove(); });
+        date = clone.textContent.trim();
       }
 
+      var excerpt = excerptEl ? excerptEl.textContent.trim() : '';
       return { img: img, href: href, title: title, date: date, excerpt: excerpt };
     }
 
-    // Cria card novo no nosso estilo
-    function buildCard(post, featured) {
+    function buildCard(post) {
       var card = document.createElement('a');
       card.href = post.href;
-      card.className = 'aq-bl-card' + ('');
+      card.className = 'aq-bl-card';
       card.setAttribute('aria-label', 'Ler artigo: ' + post.title);
 
-      var readTime = estimateReadTime(post.excerpt);
+      var rt = estimateReadTime(post.excerpt);
 
       card.innerHTML =
         '<div class="aq-bl-card-img">' +
-          (post.img
-            ? '<img src="' + post.img + '" alt="' + post.title + '" loading="lazy"/>'
-            : '<div class="aq-bl-card-img-ph"><svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="22" r="4" stroke="currentColor" stroke-width="2"/><path d="M6 34l10-10 6 6 8-8 12 12" stroke="currentColor" stroke-width="2"/></svg></div>') +
+          (post.img ? '<img src="' + post.img + '" alt="' + post.title.replace(/"/g,'') + '" loading="lazy"/>'
+                    : '<div class="aq-bl-card-img-ph"><svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2"/></svg></div>') +
           '<span class="aq-bl-card-tag">Aquarismo</span>' +
         '</div>' +
         '<div class="aq-bl-card-body">' +
           '<div class="aq-bl-card-meta">' +
-            (post.date ? '<time class="aq-bl-card-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>' + post.date + '</time>' : '') +
-            (readTime ? '<span class="aq-bl-card-rt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>' + readTime + '</span>' : '') +
+            (post.date ? '<time class="aq-bl-card-date">' + post.date + '</time>' : '') +
+            (rt ? '<span class="aq-bl-card-rt">' + rt + ' leitura</span>' : '') +
           '</div>' +
           '<h3 class="aq-bl-card-title">' + post.title + '</h3>' +
           (post.excerpt ? '<p class="aq-bl-card-excerpt">' + truncate(post.excerpt) + '</p>' : '') +
-          '<span class="aq-bl-card-cta">Ler artigo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>' +
+          '<span class="aq-bl-card-cta">Ler artigo ' +
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>' +
+          '</span>' +
         '</div>';
-
       return card;
+    }
+
+    function injectCards(posts) {
+      var grid = document.getElementById('aq-bl-grid');
+      if (!grid) return;
+
+      // Limpar qualquer conteudo anterior
+      grid.innerHTML = '';
+
+      var wrap = grid.parentElement;
+
+      posts.forEach(function(post, idx) {
+        var card = buildCard(post);
+        if (idx >= VISIBLE_CARDS) card.classList.add('aq-bl-hidden');
+        grid.appendChild(card);
+      });
+
+      // Botao ver mais
+      if (posts.length > VISIBLE_CARDS && wrap) {
+        var existing = wrap.querySelector('.aq-bl-more');
+        if (!existing) {
+          var moreWrap = document.createElement('div');
+          moreWrap.className = 'aq-bl-more';
+          moreWrap.innerHTML =
+            '<button class="aq-bl-more-btn">Ver mais artigos ' +
+              '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>' +
+            '</button>';
+          wrap.appendChild(moreWrap);
+          moreWrap.querySelector('.aq-bl-more-btn').addEventListener('click', function() {
+            Array.from(grid.querySelectorAll('.aq-bl-hidden')).forEach(function(c) {
+              c.classList.remove('aq-bl-hidden');
+              c.classList.add('aq-bl-revealed');
+            });
+            moreWrap.style.display = 'none';
+          });
+        }
+      }
+
+      console.log('[AQ] Blog v10: ' + posts.length + ' cards injectados');
+    }
+
+    function waitForPostsAndFill() {
+      // Tentar imediatamente
+      var items = Array.from(document.querySelectorAll('.blog-item'));
+      var posts = items.map(extractPost).filter(function(p) { return !!p.title; });
+      if (posts.length) { injectCards(posts); return; }
+
+      // Usar MutationObserver para detectar quando .blog-item aparece
+      var observer = new MutationObserver(function() {
+        var items2 = Array.from(document.querySelectorAll('.blog-item'));
+        var posts2 = items2.map(extractPost).filter(function(p) { return !!p.title; });
+        if (posts2.length) {
+          observer.disconnect();
+          injectCards(posts2);
+        }
+      });
+
+      observer.observe(document.body, { childList: true, subtree: true });
+
+      // Timeout de seguranca: 5 segundos
+      setTimeout(function() {
+        observer.disconnect();
+        var items3 = Array.from(document.querySelectorAll('.blog-item'));
+        var posts3 = items3.map(extractPost).filter(function(p) { return !!p.title; });
+        if (posts3.length) injectCards(posts3);
+        else console.warn('[AQ] Blog: timeout — sem .blog-item');
+      }, 5000);
     }
 
     function redesignBlogListing() {
@@ -999,23 +1064,16 @@
       if (document.body.classList.contains('aq-blog-styled')) return;
       document.body.classList.add('aq-blog-styled', 'aq-page-blog');
 
-      // Ocultar titulo e estrutura nativa
+      // Ocultar elementos nativos do Shopkit
       var blogTitle = document.querySelector('h1.blog-title, .blog-title');
       if (blogTitle) blogTitle.style.setProperty('display', 'none', 'important');
 
-      // Recolher posts nativos
-      var nativeItems = Array.from(document.querySelectorAll('.blog-item'));
-      var posts = nativeItems.map(function(item) { return extractPost(item); }).filter(function(p) { return !!p.title; });
+      // Container
+      var containerFluid = document.querySelector('.blog-page .container-fluid, .blog-page.section .container-fluid')
+        || document.querySelector('.main')
+        || document.body;
 
-      // Ocultar a estrutura nativa do Shopkit
-      var blogRow = document.querySelector('.blog-row, .blog-col');
-      if (blogRow) blogRow.style.setProperty('display', 'none', 'important');
-
-      // Container onde vamos injectar
-      var containerFluid = document.querySelector('.blog-page .container-fluid, .blog-page.section .container-fluid');
-      if (!containerFluid) containerFluid = document.querySelector('.main') || document.body;
-
-      // ── Hero ────────────────────────────────────────────────────────────────────
+      // Injectar hero imediatamente
       var hero = document.createElement('div');
       hero.className = 'aq-bl-hero';
       hero.innerHTML =
@@ -1026,74 +1084,29 @@
         '<div class="aq-bl-hero-inner">' +
           '<span class="aq-section-tag">Blogue</span>' +
           '<h1 class="aq-bl-hero-title">Mundo do <span class="aq-neon">Aquarismo</span></h1>' +
-          '<p class="aq-bl-hero-sub">Guias, dicas de especialistas e novidades do hobby — escritos por quem vive o aquarismo todos os dias.</p>' +
-          '<div class="aq-bl-hero-stats">' +
-            '<div class="aq-bl-stat"><span class="aq-bl-stat-n" id="aq-bl-count">' + (posts.length || '...') + '</span><span class="aq-bl-stat-l">Artigos</span></div>' +
-            '<div class="aq-bl-stat"><span class="aq-bl-stat-n">5+</span><span class="aq-bl-stat-l">Categorias</span></div>' +
-            '<div class="aq-bl-stat"><span class="aq-bl-stat-n">2+</span><span class="aq-bl-stat-l">Anos</span></div>' +
-          '</div>' +
+          '<p class="aq-bl-hero-sub">Guias e dicas de especialistas sobre peixes, plantas, aquascaping e manutencao.</p>' +
         '</div>';
 
-      // ── Grid ────────────────────────────────────────────────────────────────────
+      // Injectar grid wrapper imediatamente (vazio)
       var gridWrap = document.createElement('div');
       gridWrap.className = 'aq-bl-wrap';
-
       var grid = document.createElement('div');
       grid.className = 'aq-bl-grid';
       grid.id = 'aq-bl-grid';
-
-      var VISIBLE = 6; // 2 linhas de 3
-
-      posts.forEach(function(post, idx) {
-        var card = buildCard(post);
-        if (idx >= VISIBLE) card.classList.add('aq-bl-hidden');
-        grid.appendChild(card);
-      });
-
-      // Botao ver mais (so aparece se houver mais de 6)
-      var moreBtn = null;
-      if (posts.length > VISIBLE) {
-        moreBtn = document.createElement('div');
-        moreBtn.className = 'aq-bl-more';
-        moreBtn.innerHTML =
-          '<button class="aq-bl-more-btn" id="aq-bl-more-btn">' +
-            'Ver mais artigos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>' +
-          '</button>';
-      }
-
       gridWrap.appendChild(grid);
-      if (moreBtn) gridWrap.appendChild(moreBtn);
 
-      // Injectar no container
       containerFluid.insertBefore(gridWrap, containerFluid.firstChild);
       containerFluid.insertBefore(hero, containerFluid.firstChild);
 
-      // Evento ver mais
-      if (moreBtn) {
-        moreBtn.querySelector('#aq-bl-more-btn').addEventListener('click', function() {
-          Array.from(grid.querySelectorAll('.aq-bl-hidden')).forEach(function(card) {
-            card.classList.remove('aq-bl-hidden');
-            card.classList.add('aq-bl-revealed');
-          });
-          moreBtn.style.display = 'none';
-        });
-      }
+      // Ocultar blog-row nativo (depois de injectar o nosso)
+      var blogRow = document.querySelector('.blog-row, .blog-col');
+      if (blogRow) blogRow.style.setProperty('display', 'none', 'important');
 
-      console.log('[AQ] Blog v9 redesign — ' + posts.length + ' posts');
+      // Aguardar posts e preencher
+      waitForPostsAndFill();
     }
 
-    // Secao Blog na Home
-    function extractPostsFromDOM() {
-      var items = document.querySelectorAll('.blog-item');
-      if (!items.length) return null;
-      var posts = [];
-      items.forEach(function(item) {
-        var p = extractPost(item);
-        if (p.title) posts.push(p);
-      });
-      return posts.length ? posts : null;
-    }
-
+    // ── Secao Blog na Home ────────────────────────────────────────────────────────
     function buildHomeCard(post) {
       var card = document.createElement('a');
       card.href = post.href;
@@ -1101,9 +1114,8 @@
       card.setAttribute('aria-label', 'Ler artigo: ' + post.title);
       card.innerHTML =
         '<div class="aq-blog-card-img">' +
-          (post.img
-            ? '<img src="' + post.img + '" alt="' + post.title + '" loading="lazy"/>'
-            : '<div class="aq-blog-card-img-placeholder"><svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="22" r="4" stroke="currentColor" stroke-width="2"/><path d="M6 34l10-10 6 6 8-8 12 12" stroke="currentColor" stroke-width="2"/></svg></div>') +
+          (post.img ? '<img src="' + post.img + '" alt="' + post.title.replace(/"/g,'') + '" loading="lazy"/>'
+                    : '<div class="aq-blog-card-img-placeholder"></div>') +
           '<span class="aq-blog-card-tag">Aquarismo</span>' +
         '</div>' +
         '<div class="aq-blog-card-body">' +
@@ -1133,8 +1145,10 @@
         '</div>';
 
       var grid = section.querySelector('#aq-blog-grid');
-      var posts = extractPostsFromDOM();
-      if (posts && posts.length) {
+      var items = Array.from(document.querySelectorAll('.blog-item'));
+      var posts = items.map(extractPost).filter(function(p) { return !!p.title; });
+
+      if (posts.length) {
         posts.slice(0, 3).forEach(function(p) { grid.appendChild(buildHomeCard(p)); });
       } else {
         grid.innerHTML = '<div class="aq-blog-empty"><p>Em breve novos artigos sobre aquarismo!</p></div>';
@@ -1142,7 +1156,7 @@
       return section;
     }
 
-    // Post individual
+    // ── Post Individual ────────────────────────────────────────────────────────────
     function applyPostStyles() {
       var titleEl  = document.querySelector('.blog-post-title, h1.title, .post-title');
       var metaEl   = document.querySelector('.post-details');
@@ -1155,18 +1169,21 @@
       if (imgEl)   imgEl.classList.add('aq-post-featured-img');
       if (bodyEl)  bodyEl.classList.add('aq-post-body');
 
-      var readTime = estimateReadTime(bodyEl ? bodyEl.textContent : '');
-      if (readTime && metaEl && !metaEl.querySelector('.aq-post-read-time')) {
+      var rt = estimateReadTime(bodyEl ? bodyEl.textContent : '');
+      if (rt && metaEl && !metaEl.querySelector('.aq-post-read-time')) {
         var tag = document.createElement('span');
         tag.className = 'aq-post-read-time';
-        tag.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>' + readTime + ' de leitura';
+        tag.innerHTML =
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>' +
+          rt + ' de leitura';
         metaEl.appendChild(tag);
       }
 
       if (!document.getElementById('aq-post-back')) {
         var btn = document.createElement('a');
         btn.id = 'aq-post-back'; btn.href = BLOG_HREF; btn.className = 'aq-post-back-btn';
-        btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg> Voltar ao Blog';
+        btn.innerHTML =
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg> Voltar ao Blog';
         var wrapper = document.querySelector('.content, .post-detail, article');
         if (wrapper) wrapper.insertBefore(btn, wrapper.firstChild);
       }
