@@ -1,12 +1,10 @@
 @use '../base/variables' as *;
 
 // ============================================================
-// HEADER: Layout 2 linhas
-// Linha 1: Logo (esq) | espaco | Icones (dir)
-// Linha 2: #aq-nav-bar (menu horizontal com submenus)
+// HEADER — 2 linhas: Linha 1 logo+icones | Linha 2 nav
 // ============================================================
 
-// Overlay e drawer nativos bloqueiam cliques em mobile -- ocultar em TODOS os ecras
+// Overlay e drawer nativos — ocultar sempre
 .menu-overlay, .menu-drawer, .header-drawer,
 .header-menu-overlay, [class*="menu-overlay"], [class*="-drawer"] {
   display: none !important;
@@ -14,8 +12,10 @@
   pointer-events: none !important;
 }
 
-// Ocultar hamburguer e menu nativo apenas no desktop
+// Desktop: ocultar hamburguer e menu nativo
 @media (min-width: 992px) {
+  // Hamburguer nativo — todas as variantes do Boxie
+  .trigger-wrapper,
   .trigger-header-menu,
   .menu-toggle, .mobile-menu-btn, .burger,
   .btn-menu, [data-toggle="collapse"], .navbar-toggler {
@@ -24,14 +24,23 @@
     visibility: hidden !important;
   }
 
+  // Menu nativo do header (drawer/collapse)
   .header-menu, #menu, .nav-menu,
   .collapse.navbar-collapse, .navbar-collapse {
     display: none !important;
     visibility: hidden !important;
   }
+
+  // Nav nativo do Shopkit dentro do header (tag nav sem id aq-nav-bar)
+  header > nav:not(#aq-nav-bar),
+  .header > nav:not(#aq-nav-bar) {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
 }
 
-// Header em coluna para acomodar 2 linhas
+// ── Estrutura geral do header ────────────────────────────────────────────────
 header, .header, #header {
   display: flex !important;
   flex-direction: column !important;
@@ -45,8 +54,8 @@ header, .header, #header {
   z-index: 9999;
   padding: 0 !important;
 
-  // LINHA 1: Container original do header (logo + icones)
-  .container, .container-fluid, .header-inner, .navbar {
+  // Linha 1: container original do Shopkit (logo + icones)
+  > .container, > .container-fluid {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
@@ -56,10 +65,9 @@ header, .header, #header {
     gap: 16px;
   }
 
-  // Logo: esquerda, sem fundo branco
-  .logo, .header-logo, .navbar-brand {
+  // Logo
+  .logo, .header-logo, .navbar-brand, a.logo {
     flex-shrink: 0;
-    margin-right: auto;
 
     img {
       background: transparent !important;
@@ -72,8 +80,8 @@ header, .header, #header {
     }
   }
 
-  // Icones de acao (Lupa, Carrinho, Conta) -- lado direito
-  .header-actions, .header-icons,
+  // Icones de acao (carrinho, conta, pesquisa)
+  .header-control, .header-actions, .header-icons,
   .cart-icon, .user-icon, .search-icon,
   .icon-bar, .header-right {
     display: flex !important;
@@ -103,7 +111,7 @@ header, .header, #header {
     }
   }
 
-  // Catchall para icones RemixIcon de carrinho/busca/conta no header
+  // Catchall icones RemixIcon
   i.ri-shopping-cart-line, i.ri-user-line, i.ri-search-line {
     color: $color-neon-accent !important;
     font-size: 1.4rem !important;
@@ -134,8 +142,7 @@ header, .header, #header {
 
     button[type="submit"], .search-btn {
       position: absolute !important;
-      left: 12px !important;
-      top: 50% !important;
+      left: 12px !important; top: 50% !important;
       transform: translateY(-50%) !important;
       background: transparent !important;
       border: none !important;
@@ -157,8 +164,7 @@ header, .header, #header {
 }
 
 // ============================================================
-// NAV BAR HORIZONTAL CUSTOMIZADO (#aq-nav-bar)
-// Linha 2 do header -- substituicao do menu nativo
+// NAV BAR HORIZONTAL (#aq-nav-bar) — Linha 2 do header
 // ============================================================
 
 #aq-nav-bar {
@@ -169,39 +175,43 @@ header, .header, #header {
   > ul {
     display: flex !important;
     align-items: center !important;
-    justify-content: flex-start !important;
+    justify-content: center !important;   // CENTRADO
     list-style: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
     gap: 0;
     flex-wrap: nowrap;
-    overflow-x: hidden;
-    width: 100%;
+    overflow-x: auto;
+    max-width: 1400px;
+
+    // Esconder scrollbar
+    scrollbar-width: none;
+    &::-webkit-scrollbar { display: none; }
   }
 
   > ul > li {
     position: relative;
+    flex-shrink: 0;
 
     > a {
       display: flex !important;
       align-items: center !important;
       gap: 5px !important;
-      padding: 10px 10px !important;
-      color: rgba(255,255,255,0.85) !important;
+      padding: 11px 12px !important;
+      color: rgba(255,255,255,0.82) !important;
       font-family: $font-family-title !important;
-      font-size: 0.72rem !important;
+      font-size: 0.73rem !important;
       font-weight: 500 !important;
       text-transform: uppercase !important;
-      letter-spacing: 0.5px !important;
+      letter-spacing: 0.6px !important;
       white-space: nowrap !important;
       text-decoration: none !important;
       transition: $transition-fast;
       border-bottom: 2px solid transparent;
-      position: relative;
 
       i.aq-arrow {
-        font-size: 0.65rem !important;
-        margin-left: 2px;
+        font-size: 0.6rem !important;
+        margin-left: 1px;
         transition: transform 0.25s ease;
       }
 
@@ -210,9 +220,9 @@ header, .header, #header {
         font-size: 0.75rem !important;
       }
 
-      &:hover {
+      &:hover, &:focus {
         color: #fff !important;
-        text-shadow: 0 0 10px rgba(8,238,188,0.6) !important;
+        text-shadow: 0 0 10px rgba(8,238,188,0.5) !important;
         border-bottom-color: $color-neon-accent;
 
         i.aq-arrow { transform: rotate(180deg); }
@@ -220,7 +230,8 @@ header, .header, #header {
     }
 
     // Abrir submenu no hover
-    &:hover .aq-submenu {
+    &.aq-has-sub:hover > .aq-submenu,
+    &.aq-has-sub:focus-within > .aq-submenu {
       opacity: 1;
       pointer-events: all;
       transform: translateY(0);
@@ -231,28 +242,35 @@ header, .header, #header {
   .aq-submenu {
     position: absolute !important;
     top: 100%;
-    left: 0;
-    min-width: 220px;
-    background: rgba(0, 15, 35, 0.97) !important;
+    left: 50%;
+    transform: translateX(-50%) translateY(-6px);
+    min-width: 230px;
+    background: rgba(0, 10, 25, 0.98) !important;
     border: 1px solid rgba(8, 238, 188, 0.2) !important;
     border-top: 2px solid $color-neon-accent !important;
-    border-radius: 0 0 10px 10px !important;
+    border-radius: 0 0 12px 12px !important;
     list-style: none !important;
     padding: 8px 0 !important;
     margin: 0 !important;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.6) !important;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.7) !important;
     z-index: 10000;
     opacity: 0;
     pointer-events: none;
-    transform: translateY(-6px);
-    transition: opacity 0.25s ease, transform 0.25s ease;
+    transition: opacity 0.22s ease, transform 0.22s ease;
+
+    // Garantir que nao sai do ecra pela direita
+    &.aq-submenu--right {
+      left: auto;
+      right: 0;
+      transform: translateY(-6px);
+    }
 
     li a {
       display: flex !important;
       align-items: center !important;
-      gap: 8px !important;
+      gap: 10px !important;
       padding: 10px 20px !important;
-      color: rgba(255,255,255,0.8) !important;
+      color: rgba(255,255,255,0.78) !important;
       font-family: $font-family-body !important;
       font-size: 0.88rem !important;
       text-transform: none !important;
@@ -261,14 +279,28 @@ header, .header, #header {
       border-left: 2px solid transparent;
       transition: $transition-fast;
 
-      i { flex-shrink: 0; font-size: 0.85rem !important; }
+      i { flex-shrink: 0; color: rgba(8,238,188,0.5) !important; font-size: 0.85rem !important; }
 
       &:hover {
         color: $color-neon-accent !important;
         background: rgba(8,238,188,0.06) !important;
         border-left-color: $color-neon-accent;
         padding-left: 26px !important;
+
+        i { color: $color-neon-accent !important; }
       }
     }
+  }
+}
+
+// Mobile: esconder o nosso nav, mostrar nativo
+@media (max-width: 991px) {
+  #aq-nav-bar { display: none !important; }
+
+  header > nav:not(#aq-nav-bar),
+  .header > nav:not(#aq-nav-bar),
+  .header-menu, .trigger-wrapper {
+    display: block !important;
+    visibility: visible !important;
   }
 }

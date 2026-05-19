@@ -1,188 +1,146 @@
 /**
- * desktopNav.js – Versão 5 (Definitiva com URLs reais)
- * Menu de 9 itens horizontais com submenus para Equipamento e Hardscape.
- * Font Awesome 5 Free.
+ * desktopNav.js - v6
+ * Fix: nav nativo oculto, hamburguer oculto, aq-nav-bar centrado
  */
 
 const MENU = [
   {
     label: 'Equipamento',
     icon: 'fas fa-tools',
-    href: null, // Só submenu
+    href: '/category/equipamento',
     children: [
-      { label: 'Filtros Externos',   icon: 'fas fa-filter',            href: '/category/equipamento-filtros-externos' },
-      { label: 'Filtros Internos',   icon: 'fas fa-filter',            href: '/category/equipamento-filtros-internos' },
-      { label: 'Filtros Cascata',    icon: 'fas fa-water',             href: '/category/equipamento-filtros-cascata' },
-      { label: 'Medicação',          icon: 'fas fa-pills',             href: '/category/equipamento-medicacao' },
-      { label: 'Termostatos',        icon: 'fas fa-thermometer-half',  href: '/category/equipamento-termostatos' },
-      { label: 'Fertilizantes',      icon: 'fas fa-flask',             href: '/category/equipamento-fertilizantes' },
-      { label: 'Areão',              icon: 'fas fa-layer-group',       href: '/category/equipamento-areao-inerte' },
-      { label: 'Substrato Fértil',   icon: 'fas fa-seedling',          href: '/category/equipamento-areao-fertil' },
-      { label: 'CO₂',                icon: 'fas fa-wind',              href: '/category/equipamento-co2' },
-      { label: 'LEDs',               icon: 'fas fa-lightbulb',         href: '/category/equipamento-led-s' },
-      { label: 'Media Filtrante',    icon: 'fas fa-recycle',           href: '/category/equipamento-media-filtrante' },
-      { label: 'Testes de Água',     icon: 'fas fa-vial',              href: '/category/equipamento-testes-de-agua' },
-      { label: 'Lilly Pipes',        icon: 'fas fa-grip-lines-vertical',href: '/category/equipamento-lilly-pipes' },
-      { label: 'Aquários',           icon: 'fas fa-cube',              href: '/category/equipamento-aquarios' },
-      { label: 'Acessórios',         icon: 'fas fa-toolbox',           href: '/category/equipamento-acessorios' },
-      { label: 'Bombas de Água',     icon: 'fas fa-sync',              href: '/category/equipamento-bombas-de-agua' },
+      { label: 'Filtros Externos',  icon: 'fas fa-filter',             href: '/category/equipamento-filtros-externos' },
+      { label: 'Filtros Internos',  icon: 'fas fa-filter',             href: '/category/equipamento-filtros-internos' },
+      { label: 'Filtros Cascata',   icon: 'fas fa-water',              href: '/category/equipamento-filtros-cascata' },
+      { label: 'Medicacao',         icon: 'fas fa-pills',              href: '/category/equipamento-medicacao' },
+      { label: 'Termostatos',       icon: 'fas fa-thermometer-half',   href: '/category/equipamento-termostatos' },
+      { label: 'Fertilizantes',     icon: 'fas fa-flask',              href: '/category/equipamento-fertilizantes' },
+      { label: 'Areao',             icon: 'fas fa-layer-group',        href: '/category/equipamento-areao-inerte' },
+      { label: 'Substrato Fertil',  icon: 'fas fa-seedling',           href: '/category/equipamento-areao-fertil' },
+      { label: 'CO2',               icon: 'fas fa-wind',               href: '/category/equipamento-co2' },
+      { label: 'LEDs',              icon: 'fas fa-lightbulb',          href: '/category/equipamento-led-s' },
+      { label: 'Media Filtrante',   icon: 'fas fa-recycle',            href: '/category/equipamento-media-filtrante' },
+      { label: 'Testes de Agua',    icon: 'fas fa-vial',               href: '/category/equipamento-testes-de-agua' },
+      { label: 'Lilly Pipes',       icon: 'fas fa-grip-lines-vertical', href: '/category/equipamento-lilly-pipes' },
+      { label: 'Aquarios',          icon: 'fas fa-cube',               href: '/category/equipamento-aquarios' },
+      { label: 'Acessorios',        icon: 'fas fa-toolbox',            href: '/category/equipamento-acessorios' },
+      { label: 'Bombas de Agua',    icon: 'fas fa-sync',               href: '/category/equipamento-bombas-de-agua' },
     ]
   },
-  {
-    label: 'Alimentação',
-    icon: 'fas fa-utensils',
-    href: '/category/alimentacao',
-    children: []
-  },
+  { label: 'Alimentacao',           icon: 'fas fa-utensils',  href: '/category/alimentacao',           children: [] },
   {
     label: 'Hardscape',
     icon: 'fas fa-mountain',
-    href: null, // Só submenu
+    href: '/category/hardscape',
     children: [
       { label: 'Rochas',  icon: 'fas fa-mountain', href: '/category/hardscape-rochas' },
-      { label: 'Troncos', icon: 'fas fa-tree',      href: '/category/hardscape-troncos' },
+      { label: 'Troncos', icon: 'fas fa-tree',     href: '/category/hardscape-troncos' },
     ]
   },
-  {
-    label: 'Plantas',
-    icon: 'fas fa-seedling',
-    href: '/category/plantas',
-    children: []
-  },
-  {
-    label: 'Peixes',
-    icon: 'fas fa-fish',
-    href: '/category/peixes',
-    children: []
-  },
-  {
-    label: 'Invertebrados',
-    icon: 'fas fa-bug',
-    href: '/category/invertebrados',
-    children: []
-  },
-  {
-    label: 'Outros',
-    icon: 'fas fa-ellipsis-h',
-    href: '/category/outros',
-    children: []
-  },
-  {
-    label: 'Condicionadores de Água',
-    icon: 'fas fa-tint',
-    href: '/category/condicionadores-de-agua',
-    children: []
-  },
-  {
-    label: 'Aquascaping',
-    icon: 'fas fa-leaf',
-    href: '/category/aquascaping',
-    children: []
-  },
+  { label: 'Plantas',               icon: 'fas fa-seedling',  href: '/category/plantas',               children: [] },
+  { label: 'Peixes',                icon: 'fas fa-fish',      href: '/category/peixes',                children: [] },
+  { label: 'Invertebrados',         icon: 'fas fa-bug',       href: '/category/invertebrados',         children: [] },
+  { label: 'Condicionadores',       icon: 'fas fa-tint',      href: '/category/condicionadores-de-agua', children: [] },
+  { label: 'Aquascaping',           icon: 'fas fa-leaf',      href: '/category/aquascaping',           children: [] },
+  { label: 'Outros',                icon: 'fas fa-ellipsis-h',href: '/category/outros',                children: [] },
 ];
 
 function createNavItem(item) {
-  const li = document.createElement('li');
-  const hasChildren = item.children && item.children.length > 0;
+  var li = document.createElement('li');
+  var hasChildren = item.children && item.children.length > 0;
   if (hasChildren) li.className = 'aq-has-sub';
 
-  const a = document.createElement('a');
-  // Se não tem página própria, previne navegação
+  var a = document.createElement('a');
   a.href = item.href || '#';
-  if (!item.href) a.addEventListener('click', e => e.preventDefault());
   a.setAttribute('role', 'menuitem');
-  a.title = item.label;
 
-  // Ícone + texto + seta (se tiver submenu)
-  a.innerHTML = `
-    <i class="${item.icon}" aria-hidden="true"></i>
-    <span>${item.label}</span>
-    ${hasChildren ? '<i class="fas fa-chevron-down aq-arrow" aria-hidden="true"></i>' : ''}
-  `;
+  a.innerHTML =
+    '<i class="' + item.icon + '" aria-hidden="true"></i>' +
+    '<span>' + item.label + '</span>' +
+    (hasChildren ? '<i class="fas fa-chevron-down aq-arrow" aria-hidden="true"></i>' : '');
 
   li.appendChild(a);
 
-  // Submenu dropdown
   if (hasChildren) {
-    const sub = document.createElement('ul');
+    var sub = document.createElement('ul');
     sub.className = 'aq-submenu';
     sub.setAttribute('role', 'menu');
-
-    item.children.forEach(child => {
-      const subLi = document.createElement('li');
-      const subA  = document.createElement('a');
-      subA.href   = child.href;
-      subA.innerHTML = `<i class="${child.icon}" aria-hidden="true"></i><span>${child.label}</span>`;
+    item.children.forEach(function(child) {
+      var subLi = document.createElement('li');
+      var subA  = document.createElement('a');
+      subA.href = child.href;
       subA.setAttribute('role', 'menuitem');
+      subA.innerHTML = '<i class="' + child.icon + '" aria-hidden="true"></i><span>' + child.label + '</span>';
       subLi.appendChild(subA);
       sub.appendChild(subLi);
     });
-
     li.appendChild(sub);
   }
 
   return li;
 }
 
-function tryBuild() {
-  if (window.innerWidth < 992) return;
-  if (document.getElementById('aq-nav-bar')) return;
+function hideNativeNav() {
+  // Ocultar o nav nativo do Shopkit (tag nav directa dentro do header, sem id aq-nav-bar)
+  var header = document.querySelector('body > header, body > .header');
+  if (!header) return;
+  Array.from(header.querySelectorAll('nav')).forEach(function(nav) {
+    if (nav.id !== 'aq-nav-bar') {
+      nav.style.setProperty('display', 'none', 'important');
+    }
+  });
+  // Ocultar hamburguer: trigger-wrapper e similares
+  Array.from(header.querySelectorAll(
+    '.trigger-wrapper, .trigger-header-menu, .menu-toggle, .mobile-menu-btn, .burger, .btn-menu, .navbar-toggler'
+  )).forEach(function(el) {
+    el.style.setProperty('display', 'none', 'important');
+  });
+}
 
-  // Seletores por prioridade — o <header> semântico primeiro,
-  // sem [class*="header"] que faz match em .section-header, .footer-header, etc.
-  const header =
+function tryBuild() {
+  if (window.innerWidth < 992) return false;
+  if (document.getElementById('aq-nav-bar')) {
+    // Nav ja existe — apenas garantir que o nativo esta oculto
+    hideNativeNav();
+    return true;
+  }
+
+  var header =
     document.querySelector('body > header') ||
-    document.querySelector('body > #header') ||
     document.querySelector('body > .header') ||
-    document.querySelector('#wrapper > header') ||
-    document.querySelector('#wrapper > .header') ||
     document.querySelector('#header') ||
     document.querySelector('header');
 
   if (!header) return false;
-
-  // Segurança extra: nunca injetar dentro do footer
   if (header.closest('footer, #footer, .footer')) return false;
 
-  // Esconder bolinha hamburguer real do Boxie
-  header.querySelectorAll(
-    '.trigger-header-menu, .menu-toggle, .mobile-menu-btn, .burger, .btn-menu, .navbar-toggler'
-  ).forEach(el => el.style.setProperty('display', 'none', 'important'));
-
-  // Construir nav
-  const nav = document.createElement('nav');
+  // Construir o nosso nav
+  var nav = document.createElement('nav');
   nav.id = 'aq-nav-bar';
   nav.setAttribute('aria-label', 'Menu Principal');
   nav.setAttribute('role', 'navigation');
 
-  const ul = document.createElement('ul');
+  var ul = document.createElement('ul');
   ul.setAttribute('role', 'menubar');
-  MENU.forEach(item => ul.appendChild(createNavItem(item)));
+  MENU.forEach(function(item) { ul.appendChild(createNavItem(item)); });
   nav.appendChild(ul);
 
+  // Inserir como ultimo filho do header (abaixo da linha logo/icones)
   header.appendChild(nav);
-  console.log('[AQ] Nav v5 inserida —', MENU.length, 'itens no header:', header.tagName, header.className);
+
+  // Ocultar nav nativo APOS inserir o nosso
+  hideNativeNav();
+
+  console.log('[AQ] desktopNav v6 — ' + MENU.length + ' itens inseridos');
   return true;
 }
 
 export function buildDesktopNav() {
-  // Tenta imediatamente
   if (tryBuild()) return;
 
-  // Retry por polling (até 5 segundos)
-  let attempts = 0;
-  const interval = setInterval(() => {
+  var attempts = 0;
+  var interval = setInterval(function() {
     attempts++;
-    console.log('[AQ] Tentativa', attempts, 'de encontrar o header...');
-    if (tryBuild() || attempts >= 10) clearInterval(interval);
-  }, 500);
-
-  // Também usa MutationObserver como segurança extra
-  const observer = new MutationObserver(() => {
-    if (tryBuild()) observer.disconnect();
-  });
-  observer.observe(document.body || document.documentElement, {
-    childList: true,
-    subtree: true
-  });
+    if (tryBuild() || attempts >= 15) clearInterval(interval);
+  }, 400);
 }
