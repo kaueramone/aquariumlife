@@ -89,27 +89,61 @@ function buildCard(post, featured) {
   return card;
 }
 
-function doBlogListing() {
-  // Recolher posts — se ainda nao estao no DOM, retorna false
-  var nativeItems = Array.from(document.querySelectorAll('.blog-item'));
-  if (!nativeItems.length) return false;
+function fillBlogGrid(posts) {
+  // Preenche o grid ja existente no DOM com os cards
+  var grid = document.getElementById('aq-bl-grid');
+  if (!grid) return false;
+  if (grid.children.length > 0) return true; // ja preenchido
 
-  var posts = nativeItems.map(function(item) { return extractPost(item); }).filter(function(p) { return !!p.title; });
-  if (!posts.length) return false;
+  var VISIBLE = 6;
+  posts.forEach(function(post, idx) {
+    var card = buildCard(post, false);
+    if (idx >= VISIBLE) card.classList.add('aq-bl-hidden');
+    grid.appendChild(card);
+  });
 
-  // Ocultar titulo e estrutura nativa
+  // Botao ver mais
+  if (posts.length > VISIBLE) {
+    var wrap = grid.parentElement;
+    if (wrap) {
+      var moreBtn = document.createElement('div');
+      moreBtn.className = 'aq-bl-more';
+      moreBtn.innerHTML =
+        '<button class="aq-bl-more-btn">' +
+          'Ver mais artigos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>' +
+        '</button>';
+      wrap.appendChild(moreBtn);
+      moreBtn.querySelector('.aq-bl-more-btn').addEventListener('click', function() {
+        Array.from(grid.querySelectorAll('.aq-bl-hidden')).forEach(function(c) {
+          c.classList.remove('aq-bl-hidden');
+          c.classList.add('aq-bl-revealed');
+        });
+        moreBtn.style.display = 'none';
+      });
+    }
+  }
+
+  console.log('[AQ] Blog: ' + posts.length + ' cards injectados');
+  return true;
+}
+
+function redesignBlogListing() {
+  var path = window.location.pathname;
+  if (path !== '/blog' && path !== '/blog/') return;
+  if (document.body.classList.contains('aq-blog-styled')) return;
+  document.body.classList.add('aq-blog-styled', 'aq-page-blog');
+
+  // Ocultar elementos nativos
   var blogTitle = document.querySelector('h1.blog-title, .blog-title');
   if (blogTitle) blogTitle.style.setProperty('display', 'none', 'important');
-
-  // Ocultar a estrutura nativa do Shopkit
   var blogRow = document.querySelector('.blog-row, .blog-col');
   if (blogRow) blogRow.style.setProperty('display', 'none', 'important');
 
-  // Container onde vamos injectar
+  // Container
   var containerFluid = document.querySelector('.blog-page .container-fluid, .blog-page.section .container-fluid');
   if (!containerFluid) containerFluid = document.querySelector('.main') || document.body;
 
-  // ── Hero ────────────────────────────────────────────────────────────────────
+  // Injectar hero + wrap + grid AGORA (vazio por enquanto)
   var hero = document.createElement('div');
   hero.className = 'aq-bl-hero';
   hero.innerHTML =
@@ -123,7 +157,6 @@ function doBlogListing() {
       '<p class="aq-bl-hero-sub">Guias e dicas de especialistas sobre peixes, plantas, aquascaping e manutencao — escritos por quem vive o aquarismo todos os dias.</p>' +
     '</div>';
 
-  // ── Grid ────────────────────────────────────────────────────────────────────
   var gridWrap = document.createElement('div');
   gridWrap.className = 'aq-bl-wrap';
 
@@ -131,63 +164,28 @@ function doBlogListing() {
   grid.className = 'aq-bl-grid';
   grid.id = 'aq-bl-grid';
 
-  var VISIBLE = 6; // 2 linhas de 3
-
-  posts.forEach(function(post, idx) {
-    var card = buildCard(post, false);
-    if (idx >= VISIBLE) card.classList.add('aq-bl-hidden');
-    grid.appendChild(card);
-  });
-
-  // Botao ver mais (so aparece se houver mais de 6)
-  var moreBtn = null;
-  if (posts.length > VISIBLE) {
-    moreBtn = document.createElement('div');
-    moreBtn.className = 'aq-bl-more';
-    moreBtn.innerHTML =
-      '<button class="aq-bl-more-btn" id="aq-bl-more-btn">' +
-        'Ver mais artigos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>' +
-      '</button>';
-  }
-
   gridWrap.appendChild(grid);
-  if (moreBtn) gridWrap.appendChild(moreBtn);
-
-  // Injectar no container
   containerFluid.insertBefore(gridWrap, containerFluid.firstChild);
   containerFluid.insertBefore(hero, containerFluid.firstChild);
 
-  // Evento ver mais
-  if (moreBtn) {
-    moreBtn.querySelector('#aq-bl-more-btn').addEventListener('click', function() {
-      Array.from(grid.querySelectorAll('.aq-bl-hidden')).forEach(function(card) {
-        card.classList.remove('aq-bl-hidden');
-        card.classList.add('aq-bl-revealed');
-      });
-      moreBtn.style.display = 'none';
-    });
+  // Tentar preencher o grid agora; se .blog-item nao estiver pronto, retry
+  function tryFill() {
+    var items = Array.from(document.querySelectorAll('.blog-item'));
+    if (!items.length) return false;
+    var posts = items.map(function(item) { return extractPost(item); }).filter(function(p) { return !!p.title; });
+    if (!posts.length) return false;
+    return fillBlogGrid(posts);
   }
 
-  console.log('[AQ] Blog v9 redesign — ' + posts.length + ' posts');
-  return true;
-}
-
-function redesignBlogListing() {
-  var path = window.location.pathname;
-  if (path !== '/blog' && path !== '/blog/') return;
-  if (document.body.classList.contains('aq-blog-styled')) return;
-  document.body.classList.add('aq-blog-styled', 'aq-page-blog');
-
-  // Tentar imediatamente; se os .blog-item ainda nao estao no DOM, retry com polling
-  if (!doBlogListing()) {
+  if (!tryFill()) {
     var attempts = 0;
     var iv = setInterval(function() {
       attempts++;
-      if (doBlogListing() || attempts >= 25) {
+      if (tryFill() || attempts >= 30) {
         clearInterval(iv);
-        if (attempts >= 25) console.warn('[AQ] Blog: .blog-item nao encontrado apos 25 tentativas');
+        if (attempts >= 30) console.warn('[AQ] Blog: timeout aguardando .blog-item');
       }
-    }, 200);
+    }, 150);
   }
 }
 
