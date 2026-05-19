@@ -9,6 +9,7 @@ import { initCartStyles }      from './modules/cartStyles.js';
 import { initBrandsSection }   from './modules/brandsSection.js';
 import { initBlogSection }     from './modules/blogSection.js';
 import { initPagesSection }    from './modules/pagesSection.js';
+import { initThemeToggle }     from './modules/themeToggle.js';
 import { initTrustSeals }      from './modules/trustSeals.js';
 import { initHome }            from './modules/homeOrchestrator.js';
 
@@ -29,6 +30,9 @@ function init() {
 
   // Redesign de paginas estaticas /page/*
   initPagesSection();
+
+  // Toggle dark/light mode (lampada flutuante)
+  initThemeToggle();
 
   // Orquestrador: injeta seções da home em ordem garantida
   // brands → store → faq → blog
