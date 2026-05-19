@@ -89,19 +89,17 @@ function buildCard(post, featured) {
   return card;
 }
 
-function redesignBlogListing() {
-  var path = window.location.pathname;
-  if (path !== '/blog' && path !== '/blog/') return;
-  if (document.body.classList.contains('aq-blog-styled')) return;
-  document.body.classList.add('aq-blog-styled', 'aq-page-blog');
+function doBlogListing() {
+  // Recolher posts — se ainda nao estao no DOM, retorna false
+  var nativeItems = Array.from(document.querySelectorAll('.blog-item'));
+  if (!nativeItems.length) return false;
+
+  var posts = nativeItems.map(function(item) { return extractPost(item); }).filter(function(p) { return !!p.title; });
+  if (!posts.length) return false;
 
   // Ocultar titulo e estrutura nativa
   var blogTitle = document.querySelector('h1.blog-title, .blog-title');
   if (blogTitle) blogTitle.style.setProperty('display', 'none', 'important');
-
-  // Recolher posts nativos
-  var nativeItems = Array.from(document.querySelectorAll('.blog-item'));
-  var posts = nativeItems.map(function(item) { return extractPost(item); }).filter(function(p) { return !!p.title; });
 
   // Ocultar a estrutura nativa do Shopkit
   var blogRow = document.querySelector('.blog-row, .blog-col');
@@ -171,6 +169,26 @@ function redesignBlogListing() {
   }
 
   console.log('[AQ] Blog v9 redesign — ' + posts.length + ' posts');
+  return true;
+}
+
+function redesignBlogListing() {
+  var path = window.location.pathname;
+  if (path !== '/blog' && path !== '/blog/') return;
+  if (document.body.classList.contains('aq-blog-styled')) return;
+  document.body.classList.add('aq-blog-styled', 'aq-page-blog');
+
+  // Tentar imediatamente; se os .blog-item ainda nao estao no DOM, retry com polling
+  if (!doBlogListing()) {
+    var attempts = 0;
+    var iv = setInterval(function() {
+      attempts++;
+      if (doBlogListing() || attempts >= 25) {
+        clearInterval(iv);
+        if (attempts >= 25) console.warn('[AQ] Blog: .blog-item nao encontrado apos 25 tentativas');
+      }
+    }, 200);
+  }
 }
 
 // Secao Blog na Home
