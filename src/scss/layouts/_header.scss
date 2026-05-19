@@ -1,10 +1,6 @@
 @use '../base/variables' as *;
 
-// ============================================================
-// HEADER — 2 linhas: Linha 1 logo+icones | Linha 2 nav
-// ============================================================
-
-// Overlay e drawer nativos — ocultar sempre
+// Overlay e drawer nativos
 .menu-overlay, .menu-drawer, .header-drawer,
 .header-menu-overlay, [class*="menu-overlay"], [class*="-drawer"] {
   display: none !important;
@@ -12,9 +8,8 @@
   pointer-events: none !important;
 }
 
-// Desktop: ocultar hamburguer e menu nativo
+// Desktop: ocultar hamburguer e nav nativo
 @media (min-width: 992px) {
-  // Hamburguer nativo — todas as variantes do Boxie
   .trigger-wrapper,
   .trigger-header-menu,
   .menu-toggle, .mobile-menu-btn, .burger,
@@ -24,14 +19,12 @@
     visibility: hidden !important;
   }
 
-  // Menu nativo do header (drawer/collapse)
   .header-menu, #menu, .nav-menu,
   .collapse.navbar-collapse, .navbar-collapse {
     display: none !important;
     visibility: hidden !important;
   }
 
-  // Nav nativo do Shopkit dentro do header (tag nav sem id aq-nav-bar)
   header > nav:not(#aq-nav-bar),
   .header > nav:not(#aq-nav-bar) {
     display: none !important;
@@ -40,7 +33,7 @@
   }
 }
 
-// ── Estrutura geral do header ────────────────────────────────────────────────
+// Estrutura geral do header
 header, .header, #header {
   display: flex !important;
   flex-direction: column !important;
@@ -53,8 +46,8 @@ header, .header, #header {
   top: 0;
   z-index: 9999;
   padding: 0 !important;
+  overflow: visible !important;
 
-  // Linha 1: container original do Shopkit (logo + icones)
   > .container, > .container-fluid {
     display: flex !important;
     align-items: center !important;
@@ -65,7 +58,6 @@ header, .header, #header {
     gap: 16px;
   }
 
-  // Logo
   .logo, .header-logo, .navbar-brand, a.logo {
     flex-shrink: 0;
 
@@ -80,7 +72,6 @@ header, .header, #header {
     }
   }
 
-  // Icones de acao (carrinho, conta, pesquisa)
   .header-control, .header-actions, .header-icons,
   .cart-icon, .user-icon, .search-icon,
   .icon-bar, .header-right {
@@ -111,16 +102,17 @@ header, .header, #header {
     }
   }
 
-  // Catchall icones RemixIcon
   i.ri-shopping-cart-line, i.ri-user-line, i.ri-search-line {
     color: $color-neon-accent !important;
     font-size: 1.4rem !important;
     transition: $transition-fast;
     cursor: pointer;
-    &:hover { filter: drop-shadow(0 0 8px $color-neon-accent) !important; transform: scale(1.15); }
+    &:hover {
+      filter: drop-shadow(0 0 8px $color-neon-accent) !important;
+      transform: scale(1.15);
+    }
   }
 
-  // Busca expansivel
   .search-form, .header-search, .search-wrapper {
     position: relative;
 
@@ -142,7 +134,8 @@ header, .header, #header {
 
     button[type="submit"], .search-btn {
       position: absolute !important;
-      left: 12px !important; top: 50% !important;
+      left: 12px !important;
+      top: 50% !important;
       transform: translateY(-50%) !important;
       background: transparent !important;
       border: none !important;
@@ -153,7 +146,7 @@ header, .header, #header {
   }
 }
 
-// Top Bar Notice
+// Top Bar
 .top-bar, #top-bar, .store-notice, .info-bar {
   background: #000 !important;
   color: $color-neon-accent !important;
@@ -163,30 +156,24 @@ header, .header, #header {
   padding: 6px 20px !important;
 }
 
-// ============================================================
-// NAV BAR HORIZONTAL (#aq-nav-bar) — Linha 2 do header
-// ============================================================
-
+// NAV BAR HORIZONTAL (#aq-nav-bar)
 #aq-nav-bar {
   width: 100%;
   background: rgba(0, 4, 13, 0.7);
   border-top: 1px solid rgba(8, 238, 188, 0.1);
+  overflow: visible;
 
   > ul {
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;   // CENTRADO
+    justify-content: center !important;
     list-style: none !important;
     margin: 0 auto !important;
     padding: 0 20px !important;
     gap: 0;
     flex-wrap: nowrap;
-    overflow-x: auto;
+    overflow: visible;
     max-width: 1400px;
-
-    // Esconder scrollbar
-    scrollbar-width: none;
-    &::-webkit-scrollbar { display: none; }
   }
 
   > ul > li {
@@ -229,16 +216,14 @@ header, .header, #header {
       }
     }
 
-    // Abrir submenu no hover
     &.aq-has-sub:hover > .aq-submenu,
     &.aq-has-sub:focus-within > .aq-submenu {
       opacity: 1;
       pointer-events: all;
-      transform: translateY(0);
+      transform: translateX(-50%) translateY(0);
     }
   }
 
-  // Submenu dropdown
   .aq-submenu {
     position: absolute !important;
     top: 100%;
@@ -258,13 +243,6 @@ header, .header, #header {
     pointer-events: none;
     transition: opacity 0.22s ease, transform 0.22s ease;
 
-    // Garantir que nao sai do ecra pela direita
-    &.aq-submenu--right {
-      left: auto;
-      right: 0;
-      transform: translateY(-6px);
-    }
-
     li a {
       display: flex !important;
       align-items: center !important;
@@ -279,7 +257,11 @@ header, .header, #header {
       border-left: 2px solid transparent;
       transition: $transition-fast;
 
-      i { flex-shrink: 0; color: rgba(8,238,188,0.5) !important; font-size: 0.85rem !important; }
+      i {
+        flex-shrink: 0;
+        color: rgba(8,238,188,0.5) !important;
+        font-size: 0.85rem !important;
+      }
 
       &:hover {
         color: $color-neon-accent !important;
@@ -293,7 +275,7 @@ header, .header, #header {
   }
 }
 
-// Mobile: esconder o nosso nav, mostrar nativo
+// Mobile: esconder nosso nav, mostrar nativo
 @media (max-width: 991px) {
   #aq-nav-bar { display: none !important; }
 
