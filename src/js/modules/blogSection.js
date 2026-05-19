@@ -24,24 +24,38 @@ function estimateReadTime(text) {
   return mins + ' min';
 }
 
-// Extrai dados de um .blog-item nativo do Shopkit
+// Extrai dados de um .blog-item nativo do Shopkit Boxie
+// Estrutura real confirmada via inspecao DOM ao vivo:
+//   img:     .blog-image img[data-src]
+//   titulo:  .blog-post > a.link-inherit
+//   data:    .post-details span (ultimo texto do span, sem o icone SVG)
+//   excerpt: .blog-excerpt
 function extractPost(item) {
-  var imgEl   = item.querySelector('.blog-image img, img.lazy, img');
-  var linkEl  = item.querySelector('.blog-post h2 a, h2 a, h3 a, a[href*="/post/"]');
-  var dateEl  = item.querySelector('.date-post, time, .blog-date, .date');
-  var excerptEl = item.querySelector('.blog-post p, p');
+  // Imagem: preferir data-src (lazy load do Shopkit)
+  var imgEl = item.querySelector('.blog-image img');
+  var img = imgEl ? (imgEl.getAttribute('data-src') || imgEl.src || '') : '';
 
-  var img    = imgEl  ? (imgEl.getAttribute('data-src') || imgEl.src || '') : '';
-  var href   = linkEl ? linkEl.href : BLOG_HREF;
-  var title  = linkEl ? linkEl.textContent.trim() : '';
-  var date   = dateEl ? dateEl.textContent.trim() : '';
-  var excerpt = excerptEl ? excerptEl.textContent.trim() : '';
+  // Link e titulo: .blog-post > a.link-inherit
+  var linkEl = item.querySelector('.blog-post a.link-inherit, .blog-post > a');
+  var href  = linkEl ? linkEl.href : BLOG_HREF;
+  var title = linkEl ? linkEl.textContent.trim() : '';
 
-  // Fallback: imagem do link pai
-  if (!img) {
-    var aImg = item.querySelector('a img');
-    if (aImg) img = aImg.getAttribute('data-src') || aImg.src || '';
+  // Fallback titulo: img alt ou title
+  if (!title && imgEl) title = imgEl.getAttribute('title') || imgEl.getAttribute('alt') || '';
+
+  // Data: .post-details span — extrair so o texto (ignorar SVG)
+  var dateEl = item.querySelector('.post-details span');
+  var date = '';
+  if (dateEl) {
+    // Clonar e remover SVGs para ficar so com texto
+    var clone = dateEl.cloneNode(true);
+    Array.from(clone.querySelectorAll('svg, i')).forEach(function(el) { el.remove(); });
+    date = clone.textContent.trim();
   }
+
+  // Excerpt: .blog-excerpt
+  var excerptEl = item.querySelector('.blog-excerpt, .blog-text p, .blog-description');
+  var excerpt = excerptEl ? excerptEl.textContent.trim() : '';
 
   return { img: img, href: href, title: title, date: date, excerpt: excerpt };
 }
@@ -108,7 +122,7 @@ function redesignBlogListing() {
     '<div class="aq-bl-hero-inner">' +
       '<span class="aq-section-tag">Blogue</span>' +
       '<h1 class="aq-bl-hero-title">Mundo do <span class="aq-neon">Aquarismo</span></h1>' +
-      '<p class="aq-bl-hero-sub">Guias, dicas de especialistas e novidades do hobby — escritos por quem vive o aquarismo todos os dias.</p>' +
+      '<p class="aq-bl-hero-sub">Guias e dicas de especialistas sobre peixes, plantas, aquascaping e manutencao — escritos por quem vive o aquarismo todos os dias.</p>' +
     '</div>';
 
   // ── Grid ────────────────────────────────────────────────────────────────────
