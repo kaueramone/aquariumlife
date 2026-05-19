@@ -8,6 +8,7 @@ import { initProductsSection } from './modules/productsSection.js';
 import { initCartStyles }      from './modules/cartStyles.js';
 import { initBrandsSection }   from './modules/brandsSection.js';
 import { initBlogSection }     from './modules/blogSection.js';
+import { initPagesSection }    from './modules/pagesSection.js';
 import { initTrustSeals }      from './modules/trustSeals.js';
 import { initHome }            from './modules/homeOrchestrator.js';
 
@@ -23,8 +24,11 @@ function init() {
   // Oculta bloco nativo de marcas independentemente do orquestrador
   initBrandsSection();
 
-  // Redesign de /blog e post individual (não faz nada na home)
+  // Redesign de /blog e post individual
   initBlogSection();
+
+  // Redesign de paginas estaticas /page/*
+  initPagesSection();
 
   // Orquestrador: injeta seções da home em ordem garantida
   // brands → store → faq → blog

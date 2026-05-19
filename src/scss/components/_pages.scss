@@ -1,0 +1,205 @@
+@use '../base/variables' as *;
+
+// Paginas estaticas /page/*
+body.aq-page-styled {
+
+  // Hero da pagina
+  .aq-pg-hero {
+    position: relative;
+    text-align: center;
+    padding: 70px 20px 50px;
+    overflow: hidden;
+
+    .aq-pg-hero-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(8, 238, 188, 0.12) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .aq-pg-hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .aq-pg-hero-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(8, 238, 188, 0.1);
+      border: 1px solid rgba(8, 238, 188, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+
+      i {
+        font-size: 1.8rem;
+        color: $color-neon-accent;
+      }
+    }
+
+    .aq-pg-hero-title {
+      font-family: $font-family-title;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: $color-text-primary;
+      line-height: 1.1;
+      margin: 0 0 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .aq-pg-hero-sub {
+      color: $color-text-secondary;
+      font-family: $font-family-body;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+  }
+
+  // Caixa "Em linguagem simples"
+  .aq-pg-summary {
+    max-width: 900px;
+    margin: 0 auto 32px;
+    padding: 0 20px;
+    background: rgba(8, 238, 188, 0.04);
+    border: 1px solid rgba(8, 238, 188, 0.15);
+    border-radius: 16px;
+    overflow: hidden;
+
+    .aq-pg-summary-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 18px 24px;
+      border-bottom: 1px solid rgba(8, 238, 188, 0.1);
+
+      i {
+        color: $color-neon-accent;
+        font-size: 1rem;
+      }
+
+      span {
+        font-family: $font-family-title;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: $color-neon-accent;
+      }
+    }
+
+    .aq-pg-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+
+      @media (max-width: 640px) { grid-template-columns: 1fr; }
+    }
+  }
+
+  .aq-pg-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 24px;
+    border-bottom: 1px solid rgba(8, 238, 188, 0.06);
+    border-right: 1px solid rgba(8, 238, 188, 0.06);
+
+    &:nth-child(2n) { border-right: none; }
+    &:nth-last-child(-n+2) { border-bottom: none; }
+
+    @media (max-width: 640px) {
+      border-right: none;
+      &:last-child { border-bottom: none; }
+      &:nth-last-child(-n+2) { border-bottom: 1px solid rgba(8, 238, 188, 0.06); }
+      &:last-child { border-bottom: none; }
+    }
+  }
+
+  .aq-pg-card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(8, 238, 188, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    i {
+      color: $color-neon-accent;
+      font-size: 0.95rem;
+    }
+  }
+
+  .aq-pg-card-content { flex: 1; }
+
+  .aq-pg-card-label {
+    display: block;
+    font-family: $font-family-title;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: $color-text-primary;
+    margin-bottom: 4px;
+  }
+
+  .aq-pg-card-desc {
+    font-family: $font-family-body;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: $color-text-secondary;
+    margin: 0;
+  }
+
+  // Conteudo original estilizado
+  .aq-pg-content {
+    max-width: 900px;
+    margin: 0 auto 60px !important;
+    padding: 40px !important;
+    border-radius: 16px !important;
+    border: 1px solid rgba(8, 238, 188, 0.1) !important;
+    background: $color-bg-primary !important;
+    box-shadow: none !important;
+    color: rgba(255, 255, 255, 0.88) !important;
+
+    h2, h3, h4, h5 {
+      color: $color-text-primary !important;
+      font-family: $font-family-title !important;
+      margin-top: 1.8em !important;
+      margin-bottom: 0.5em !important;
+    }
+
+    h3, h5 { color: $color-neon-accent !important; }
+
+    p, li { color: rgba(255, 255, 255, 0.85) !important; line-height: 1.8 !important; }
+    p { margin-bottom: 1.2em !important; }
+
+    a { color: $color-neon-accent !important; text-decoration: underline !important; text-underline-offset: 3px !important; }
+    strong, b { color: $color-text-primary !important; }
+
+    ul, ol { padding-left: 1.5em !important; margin-bottom: 1.2em !important; }
+    li { margin-bottom: 0.4em !important; }
+
+    table {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      margin-bottom: 1.5em !important;
+      td, th {
+        border: 1px solid rgba(8, 238, 188, 0.15) !important;
+        padding: 10px 14px !important;
+        color: rgba(255,255,255,0.82) !important;
+      }
+      th { background: rgba(8, 238, 188, 0.08) !important; color: $color-text-primary !important; }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .aq-pg-hero { padding: 50px 16px 36px; }
+    .aq-pg-summary { margin: 0 16px 24px; padding: 0; }
+    .aq-pg-content { padding: 24px !important; margin: 0 16px 40px !important; }
+  }
+}
