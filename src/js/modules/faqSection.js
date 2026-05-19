@@ -11,7 +11,7 @@ const FAQS = [
   { q: 'Qual o prazo de entrega habitual?',
     a: 'Para equipamento e produtos secos, o prazo habitual é de 2 a 5 dias úteis. Para encomendas com seres vivos, os envios são feitos às terças e quartas-feiras para evitar atrasos no fim de semana.' },
   { q: 'Posso visitar a vossa loja física?',
-    a: 'Claro! Temos loja física em Sintra onde podes ver os produtos ao vivo, pedir aconselhamento especializado e até trazer o teu aquário para diagnóstico. Consulta o nosso Google Maps para morada e horários.' },
+    a: 'Claro! A nossa loja física fica na Praceta José Afonso 3A, 2740-192 Porto Salvo, Portugal. Podes vir ver os produtos ao vivo, pedir aconselhamento especializado e até trazer o teu aquário para diagnóstico. Consulta o nosso perfil no Google Maps para horários atualizados.' },
   { q: 'Que marcas comercializam?',
     a: 'Trabalhamos com marcas de referência mundial como Tropica, ADA, JBL, Fluval, Oase, Dennerle, Eheim e Seachem, entre outras. Temos sempre stock renovado e acesso a encomenda especial.' },
   { q: 'Como escolher o filtro certo para o meu aquário?',

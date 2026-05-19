@@ -1,6 +1,6 @@
 @use '../base/variables' as *;
 
-// ── Espaçamento global entre seções premium ───────────────────────────────────
+// Espacamento global entre secoes premium
 #aq-categories,
 #aq-brands,
 #aq-blog-home,
@@ -15,13 +15,13 @@
   }
 }
 
-// Separador sutil entre seções
+// Separador sutil entre secoes
 #aq-brands      { border-top: 1px solid rgba(8, 238, 188, 0.06); }
 #aq-blog-home   { border-top: 1px solid rgba(8, 238, 188, 0.06); }
 #aq-store       { border-top: 1px solid rgba(8, 238, 188, 0.06); }
 #aq-faq         { border-top: 1px solid rgba(8, 238, 188, 0.06); }
 
-// ── Seção Blog na Home ────────────────────────────────────────────────────────
+// ── Secao Blog na Home ────────────────────────────────────────────────────────
 #aq-blog-home {
   padding: 100px 20px;
   position: relative;
@@ -189,17 +189,8 @@
   animation: aq-skeleton-pulse 1.6s ease-in-out infinite;
 }
 
-.aq-skel-img {
-  background: rgba(8, 238, 188, 0.07);
-}
-
-.aq-skel-line {
-  height: 14px;
-  border-radius: 6px;
-  background: rgba(8, 238, 188, 0.07);
-  margin-bottom: 10px;
-}
-
+.aq-skel-img   { background: rgba(8, 238, 188, 0.07); }
+.aq-skel-line  { height: 14px; border-radius: 6px; background: rgba(8, 238, 188, 0.07); margin-bottom: 10px; }
 .aq-skel-short  { width: 40%; }
 .aq-skel-full   { width: 100%; height: 18px; }
 .aq-skel-medium { width: 70%; }
@@ -226,15 +217,152 @@
   p { margin: 0 0 8px; font-size: 1rem; }
 }
 
-// ── Página de Listagem /blog ──────────────────────────────────────────────────
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// PAGINA /blog — Hero + Filtros + Cards Sofisticados
+// ═══════════════════════════════════════════════════════════════════════════════
+
 body.aq-page-blog {
-  .aq-blog-page-header {
+
+  // ── Hero ──────────────────────────────────────────────────────────────────
+  .aq-blog-hero {
+    position: relative;
+    padding: 100px 20px 80px;
     text-align: center;
-    padding: 60px 20px 40px;
-    max-width: 700px;
+    overflow: hidden;
+  }
+
+  .aq-blog-hero-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .aq-blog-hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.18;
+
+    &--1 {
+      width: 500px; height: 500px;
+      top: -180px; left: 50%;
+      transform: translateX(-50%);
+      background: radial-gradient(circle, #08EEBC, transparent 70%);
+    }
+    &--2 {
+      width: 300px; height: 300px;
+      top: 20px; right: -60px;
+      background: radial-gradient(circle, #00bfff, transparent 70%);
+      opacity: 0.12;
+    }
+    &--3 {
+      width: 250px; height: 250px;
+      bottom: -40px; left: -40px;
+      background: radial-gradient(circle, #08EEBC, transparent 70%);
+      opacity: 0.08;
+    }
+  }
+
+  .aq-blog-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
     margin: 0 auto;
   }
 
+  .aq-blog-hero-title {
+    font-family: $font-family-title;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 800;
+    color: $color-text-primary;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin: 16px 0 20px;
+  }
+
+  .aq-blog-hero-sub {
+    color: $color-text-secondary;
+    font-family: $font-family-body;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 560px;
+    margin: 0 auto 40px;
+  }
+
+  .aq-blog-hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .aq-blog-hero-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .aq-blog-hero-stat-num {
+    font-family: $font-family-title;
+    font-size: 2rem;
+    font-weight: 800;
+    background: $gradient-neon;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+  }
+
+  .aq-blog-hero-stat-label {
+    font-family: $font-family-body;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.45);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  // ── Filtros de categoria ──────────────────────────────────────────────────
+  .aq-blog-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 20px 56px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .aq-blog-filter-btn {
+    padding: 8px 20px;
+    border-radius: 40px;
+    border: 1.5px solid rgba(8, 238, 188, 0.2);
+    background: rgba(0, 21, 49, 0.4);
+    color: rgba(255, 255, 255, 0.55);
+    font-family: $font-family-title;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: $transition-fast;
+    backdrop-filter: blur(4px);
+
+    &:hover {
+      border-color: rgba(8, 238, 188, 0.45);
+      color: $color-text-primary;
+    }
+
+    &.active {
+      background: rgba(8, 238, 188, 0.12);
+      border-color: $color-neon-accent;
+      color: $color-neon-accent;
+      @include neon-glow;
+    }
+  }
+
+  // ── Cards nativos do Shopkit ──────────────────────────────────────────────
   .aq-blog-native-card,
   .post, .blog-item {
     background: rgba(0, 21, 49, 0.35) !important;
@@ -272,10 +400,101 @@ body.aq-page-blog {
         color: $color-bg-primary !important;
       }
     }
+
+    // Featured: primeiro card maior
+    &--featured {
+      grid-column: 1 / -1 !important;
+    }
+  }
+
+  // ── Pagina de listagem: header nativo oculto ──────────────────────────────
+  .aq-blog-page-header {
+    display: none !important;
   }
 }
 
-// ── Post Individual ───────────────────────────────────────────────────────────
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// POST INDIVIDUAL — Barra de Progresso + Tempo de Leitura
+// ═══════════════════════════════════════════════════════════════════════════════
+
+// ── Barra de progresso de leitura (sticky, topo) ──────────────────────────────
+#aq-read-progress {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: rgba(8, 238, 188, 0.08);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.aq-read-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: $gradient-neon;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 8px rgba(8, 238, 188, 0.6);
+}
+
+// ── Badge flutuante de % de conclusao ─────────────────────────────────────────
+#aq-read-pct {
+  position: fixed;
+  bottom: 32px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 10px 14px;
+  border-radius: 50px;
+  background: rgba(0, 21, 49, 0.85);
+  border: 1px solid rgba(8, 238, 188, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: $color-neon-accent;
+  font-family: $font-family-title;
+  font-weight: 700;
+  font-size: 0.9rem;
+  z-index: 9998;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #aq-read-pct-num {
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .aq-read-pct-label {
+    color: rgba(8, 238, 188, 0.6);
+    font-size: 0.75rem;
+  }
+}
+
+// ── Tempo de leitura no meta ───────────────────────────────────────────────────
+.aq-post-read-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 16px;
+  padding: 3px 10px 3px 6px;
+  border-radius: 20px;
+  background: rgba(8, 238, 188, 0.08);
+  border: 1px solid rgba(8, 238, 188, 0.15);
+  color: rgba(8, 238, 188, 0.75);
+  font-family: $font-family-body;
+  font-size: 0.75rem;
+  vertical-align: middle;
+
+  svg { width: 12px; height: 12px; flex-shrink: 0; }
+}
+
+// ── Post Individual: estilos base ─────────────────────────────────────────────
 body.aq-page-post {
   .aq-post-back-btn {
     display: inline-flex;
@@ -307,6 +526,10 @@ body.aq-page-post {
 
   .aq-post-meta,
   .post-date, .post-meta {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
     color: rgba(8, 238, 188, 0.7) !important;
     font-size: 0.82rem !important;
     font-family: $font-family-body !important;
@@ -325,28 +548,28 @@ body.aq-page-post {
 
   .aq-post-body,
   .post-body, .post-content, .article-body {
-    color: rgba(255, 255, 255, 0.85) !important;
+    color: rgba(255, 255, 255, 0.88) !important;
     font-family: $font-family-body !important;
-    font-size: 1rem !important;
-    line-height: 1.8 !important;
+    font-size: 1.05rem !important;
+    line-height: 1.85 !important;
     max-width: 780px !important;
     margin: 0 auto !important;
 
-    h2 { color: $color-text-primary !important; font-family: $font-family-title !important; font-size: 1.5rem !important; margin-top: 2em !important; }
-    h3 { color: $color-neon-accent !important; font-family: $font-family-title !important; font-size: 1.2rem !important; margin-top: 1.8em !important; }
-    p  { margin-bottom: 1.4em !important; }
+    h2 { color: $color-text-primary !important; font-family: $font-family-title !important; font-size: 1.55rem !important; margin-top: 2.2em !important; margin-bottom: 0.6em !important; }
+    h3 { color: $color-neon-accent !important; font-family: $font-family-title !important; font-size: 1.2rem !important; margin-top: 1.8em !important; margin-bottom: 0.5em !important; }
+    p  { margin-bottom: 1.5em !important; }
     a  { color: $color-neon-accent !important; text-decoration: underline !important; text-underline-offset: 3px !important; }
 
     ul, ol {
       padding-left: 1.5em !important;
       margin-bottom: 1.4em !important;
-      li { margin-bottom: 0.5em !important; color: rgba(255,255,255,0.8) !important; }
+      li { margin-bottom: 0.6em !important; color: rgba(255,255,255,0.82) !important; }
     }
 
     blockquote {
       border-left: 3px solid $color-neon-accent !important;
-      padding: 12px 20px !important;
-      margin: 2em 0 !important;
+      padding: 16px 24px !important;
+      margin: 2.2em 0 !important;
       background: rgba(8, 238, 188, 0.04) !important;
       border-radius: 0 8px 8px 0 !important;
       font-style: italic !important;
@@ -369,6 +592,7 @@ body.aq-page-post {
     }
   }
 }
+
 
 // ── Responsividade mobile ─────────────────────────────────────────────────────
 @media (max-width: 768px) {
@@ -393,10 +617,28 @@ body.aq-page-post {
       padding: 14px 20px;
     }
   }
+
+  body.aq-page-blog {
+    .aq-blog-hero { padding: 70px 16px 50px; }
+    .aq-blog-hero-title { font-size: 2rem; }
+    .aq-blog-hero-stats { gap: 24px; }
+    .aq-blog-hero-stat-num { font-size: 1.5rem; }
+    .aq-blog-filters { padding-bottom: 36px; }
+  }
+
+  #aq-read-pct {
+    bottom: 20px;
+    right: 16px;
+    padding: 8px 12px;
+  }
 }
 
 @media (max-width: 480px) {
   .aq-section-title {
     font-size: 1.6rem;
+  }
+
+  body.aq-page-blog .aq-blog-hero-stats {
+    gap: 16px;
   }
 }
