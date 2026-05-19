@@ -1,6 +1,5 @@
 @use '../base/variables' as *;
 
-// Espacamento global entre secoes
 #aq-categories, #aq-brands, #aq-blog-home, #aq-store, #aq-faq {
   & + #aq-categories, & + #aq-brands, & + #aq-blog-home, & + #aq-store, & + #aq-faq { margin-top: 0; }
 }
@@ -9,11 +8,9 @@
 #aq-store     { border-top: 1px solid rgba(8, 238, 188, 0.06); }
 #aq-faq       { border-top: 1px solid rgba(8, 238, 188, 0.06); }
 
-// Secao Blog na Home
 #aq-blog-home {
   padding: 100px 20px;
   position: relative;
-
   &::before {
     content: '';
     position: absolute;
@@ -23,23 +20,19 @@
     background: radial-gradient(ellipse, rgba(8, 238, 188, 0.05) 0%, transparent 70%);
     pointer-events: none;
   }
-
   .aq-section-header { margin-bottom: 56px; }
 }
 
-// Grid de cards
 .aq-blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
   max-width: 1200px;
   margin: 0 auto;
-
   @media (max-width: 992px) { grid-template-columns: repeat(2, 1fr); }
   @media (max-width: 600px) { grid-template-columns: 1fr; }
 }
 
-// Card de post
 .aq-blog-card {
   display: flex;
   flex-direction: column;
@@ -52,13 +45,12 @@
   text-decoration: none;
   transition: $transition-smooth;
   cursor: pointer;
-
   &:hover {
     border-color: rgba(8, 238, 188, 0.35);
     transform: translateY(-6px);
     @include neon-glow;
     .aq-blog-card-img img { transform: scale(1.06); }
-    .aq-blog-card-cta     { color: $color-neon-accent; gap: 10px; }
+    .aq-blog-card-cta { color: $color-neon-accent; gap: 10px; }
   }
 }
 
@@ -67,7 +59,6 @@
   aspect-ratio: 16/9;
   overflow: hidden;
   background: rgba(0, 8, 20, 0.6);
-
   img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
 }
 
@@ -145,19 +136,17 @@
   svg { width: 14px; height: 14px; transition: $transition-fast; }
 }
 
-// Skeleton
 @keyframes aq-skeleton-pulse {
   0%, 100% { opacity: 0.4; }
-  50%       { opacity: 0.8; }
+  50% { opacity: 0.8; }
 }
 .aq-blog-skeleton { pointer-events: none; animation: aq-skeleton-pulse 1.6s ease-in-out infinite; }
-.aq-skel-img      { background: rgba(8, 238, 188, 0.07); }
-.aq-skel-line     { height: 14px; border-radius: 6px; background: rgba(8, 238, 188, 0.07); margin-bottom: 10px; }
-.aq-skel-short    { width: 40%; }
-.aq-skel-full     { width: 100%; height: 18px; }
-.aq-skel-medium   { width: 70%; }
+.aq-skel-img { background: rgba(8, 238, 188, 0.07); }
+.aq-skel-line { height: 14px; border-radius: 6px; background: rgba(8, 238, 188, 0.07); margin-bottom: 10px; }
+.aq-skel-short { width: 40%; }
+.aq-skel-full { width: 100%; height: 18px; }
+.aq-skel-medium { width: 70%; }
 
-// CTA ver todos
 .aq-blog-home-cta {
   display: flex;
   justify-content: center;
@@ -174,10 +163,7 @@
   p { margin: 0 0 8px; font-size: 1rem; }
 }
 
-
-// ============================================================
-// BARRA DE PROGRESSO DE LEITURA (sticky topo)
-// ============================================================
+// Barra de progresso
 #aq-read-progress {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -195,7 +181,6 @@
   box-shadow: 0 0 8px rgba(8, 238, 188, 0.6);
 }
 
-// Badge flutuante de % de conclusao
 #aq-read-pct {
   position: fixed;
   bottom: 32px;
@@ -218,13 +203,11 @@
   transform: translateY(10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
-
   &.visible { opacity: 1; transform: translateY(0); }
   #aq-read-pct-num { font-size: 1rem; line-height: 1; }
   .aq-read-pct-label { color: rgba(8, 238, 188, 0.6); font-size: 0.75rem; }
 }
 
-// Tempo de leitura no meta
 .aq-post-read-time {
   display: inline-flex;
   align-items: center;
@@ -241,13 +224,8 @@
   svg { width: 12px; height: 12px; flex-shrink: 0; }
 }
 
-
-// ============================================================
-// POST INDIVIDUAL — body.aq-page-post
-// ============================================================
+// POST INDIVIDUAL
 body.aq-page-post {
-
-  // Fundo escuro em TODOS os containers do Shopkit Boxie (sobrepoe o #fff nativo)
   .main,
   .blog-post,
   .blog-post.section,
@@ -268,14 +246,15 @@ body.aq-page-post {
     box-shadow: none !important;
   }
 
-  // Breadcrumb
-  .breadcrumbs, .breadcrumb {
+  .breadcrumbs, .breadcrumb, .breadcrumbs.hidden-xs, [class*="breadcrumb"] {
     background: transparent !important;
-    a { color: rgba(8, 238, 188, 0.7) !important; text-decoration: none !important; }
-    li, span { color: rgba(255,255,255,0.4) !important; }
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    a, li, span { color: rgba(255,255,255,0.4) !important; text-decoration: none !important; }
+    a:hover { color: $color-neon-accent !important; }
   }
 
-  // Botao voltar
   .aq-post-back-btn {
     display: inline-flex;
     align-items: center;
@@ -293,9 +272,7 @@ body.aq-page-post {
     &:hover { opacity: 1; gap: 12px; }
   }
 
-  // Titulo do post
-  .aq-post-title,
-  .blog-post-title {
+  .aq-post-title, .blog-post-title {
     color: $color-text-primary !important;
     font-family: $font-family-title !important;
     font-size: clamp(1.6rem, 4vw, 2.8rem) !important;
@@ -305,10 +282,7 @@ body.aq-page-post {
     margin-bottom: 20px !important;
   }
 
-  // Meta (data, categoria)
-  .aq-post-meta,
-  .post-details,
-  .post-date, .post-meta {
+  .aq-post-meta, .post-details, .post-date, .post-meta {
     display: flex !important;
     align-items: center !important;
     flex-wrap: wrap !important;
@@ -320,10 +294,7 @@ body.aq-page-post {
     background: transparent !important;
   }
 
-  // Imagem destaque
-  .aq-post-featured-img,
-  .image-post,
-  .post-image, .post-thumbnail {
+  .aq-post-featured-img, .image-post, .post-image, .post-thumbnail {
     border-radius: 16px !important;
     overflow: hidden !important;
     border: 1px solid rgba(8, 238, 188, 0.12) !important;
@@ -333,9 +304,7 @@ body.aq-page-post {
     img { width: 100% !important; height: auto !important; display: block !important; border-radius: 16px !important; }
   }
 
-  // Corpo do artigo
-  .aq-post-body,
-  .post-content {
+  .aq-post-body, .post-content {
     color: rgba(255, 255, 255, 0.88) !important;
     font-family: $font-family-body !important;
     font-size: 1.05rem !important;
@@ -359,15 +328,13 @@ body.aq-page-post {
       margin-top: 1.8em !important;
       margin-bottom: 0.5em !important;
     }
-    p  { margin-bottom: 1.5em !important; color: rgba(255,255,255,0.88) !important; }
-    a  { color: $color-neon-accent !important; text-decoration: underline !important; text-underline-offset: 3px !important; }
-
+    p { margin-bottom: 1.5em !important; color: rgba(255,255,255,0.88) !important; }
+    a { color: $color-neon-accent !important; text-decoration: underline !important; text-underline-offset: 3px !important; }
     ul, ol {
       padding-left: 1.5em !important;
       margin-bottom: 1.4em !important;
       li { margin-bottom: 0.6em !important; color: rgba(255,255,255,0.82) !important; }
     }
-
     blockquote {
       border-left: 3px solid $color-neon-accent !important;
       padding: 16px 24px !important;
@@ -377,14 +344,12 @@ body.aq-page-post {
       font-style: italic !important;
       color: $color-text-secondary !important;
     }
-
     img {
       border-radius: 12px !important;
       max-width: 100% !important;
       border: 1px solid rgba(8, 238, 188, 0.08) !important;
       margin: 1.5em 0 !important;
     }
-
     code {
       background: rgba(8, 238, 188, 0.08) !important;
       color: $color-neon-accent !important;
@@ -395,63 +360,32 @@ body.aq-page-post {
   }
 }
 
-
-// Responsividade mobile
-@media (max-width: 768px) {
-  #aq-blog-home { padding: 60px 16px; }
-
-  .aq-blog-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .aq-blog-card-title { font-size: 1rem; }
-
-  .aq-blog-home-cta {
-    margin-top: 32px;
-    .aq-btn-outline { width: 100%; justify-content: center; padding: 14px 20px; }
-  }
-
-  #aq-read-pct { bottom: 20px; right: 16px; padding: 8px 12px; }
-}
-
-@media (max-width: 480px) {
-  .aq-section-title { font-size: 1.6rem; }
-}
-
-
-// ============================================================
-// PAGINA /blog — Redesign completo v9
-// ============================================================
-
+// PAGINA /blog
 body.aq-page-blog {
-
-  // Fundo escuro na pagina toda
-  .main, .blog-page, .blog-page.section,
-  .blog-row, .blog-col, .blog-page .container-fluid {
+  .main, .blog-page, .blog-page.section, .blog-row, .blog-col, .blog-page .container-fluid {
     background: $color-bg-primary !important;
     background-color: $color-bg-primary !important;
   }
 
-  // Ocultar elementos nativos do Shopkit
-  h1.blog-title,
-  .blog-row, .blog-col {
+  h1.blog-title, .blog-row, .blog-col {
     display: none !important;
   }
 
-  // Breadcrumb
-  .breadcrumbs, .breadcrumb {
+  .breadcrumbs, .breadcrumb, .breadcrumbs.hidden-xs, [class*="breadcrumb"] {
     background: transparent !important;
-    a { color: rgba(8, 238, 188, 0.7) !important; text-decoration: none !important; }
-    li, span { color: rgba(255,255,255,0.4) !important; }
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    a, li, span { color: rgba(255,255,255,0.4) !important; text-decoration: none !important; }
+    a:hover { color: $color-neon-accent !important; }
   }
 }
 
-// Hero do Blog
+// Hero do blog
 .aq-bl-hero {
   position: relative;
   text-align: center;
-  padding: 80px 20px 60px;
+  padding: 70px 20px 50px;
   overflow: hidden;
 }
 
@@ -465,7 +399,6 @@ body.aq-page-blog {
   position: absolute;
   border-radius: 50%;
   filter: blur(70px);
-
   &--1 {
     width: 600px; height: 600px;
     top: -250px; left: 50%;
@@ -502,47 +435,14 @@ body.aq-page-blog {
   font-size: 1rem;
   line-height: 1.7;
   max-width: 520px;
-  margin: 0 auto 36px;
+  margin: 0 auto;
 }
 
-.aq-bl-hero-stats {
-  display: flex;
-  justify-content: center;
-  gap: 48px;
-  flex-wrap: wrap;
-}
-
-.aq-bl-stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3px;
-}
-
-.aq-bl-stat-n {
-  font-family: $font-family-title;
-  font-size: 1.9rem;
-  font-weight: 800;
-  background: $gradient-neon;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1;
-}
-
-.aq-bl-stat-l {
-  font-family: $font-family-body;
-  font-size: 0.72rem;
-  color: rgba(255,255,255,0.4);
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-}
-
-// Wrapper e grid de cards
+// Grid e cards
 .aq-bl-wrap {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px 80px;
+  padding: 48px 20px 80px;
 }
 
 .aq-bl-grid {
@@ -550,26 +450,19 @@ body.aq-page-blog {
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
   margin-bottom: 40px;
-
   @media (max-width: 992px) { grid-template-columns: repeat(2, 1fr); }
   @media (max-width: 600px) { grid-template-columns: 1fr; }
 }
 
-// Cards ocultos (ver mais)
-.aq-bl-hidden {
-  display: none !important;
-}
-
-.aq-bl-revealed {
-  animation: aq-card-fadein 0.4s ease forwards;
-}
+.aq-bl-hidden { display: none !important; }
 
 @keyframes aq-card-fadein {
   from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-// Card individual
+.aq-bl-revealed { animation: aq-card-fadein 0.4s ease forwards; }
+
 .aq-bl-card {
   display: flex;
   flex-direction: column;
@@ -582,12 +475,10 @@ body.aq-page-blog {
   text-decoration: none;
   transition: $transition-smooth;
   cursor: pointer;
-
   &:hover {
     border-color: rgba(8, 238, 188, 0.4);
     transform: translateY(-6px);
     @include neon-glow;
-
     .aq-bl-card-img img { transform: scale(1.06); }
     .aq-bl-card-cta { color: $color-neon-accent; gap: 10px; }
   }
@@ -598,12 +489,7 @@ body.aq-page-blog {
   aspect-ratio: 16/9;
   overflow: hidden;
   background: rgba(0, 8, 20, 0.6);
-
-  img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
+  img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
 }
 
 .aq-bl-card-img-ph {
@@ -639,30 +525,19 @@ body.aq-page-blog {
   flex: 1;
 }
 
-.aq-bl-card-meta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
+.aq-bl-card-meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 
-.aq-bl-card-date,
-.aq-bl-card-rt {
+.aq-bl-card-date, .aq-bl-card-rt {
   display: inline-flex;
   align-items: center;
   gap: 5px;
   font-family: $font-family-body;
   font-size: 0.72rem;
-  letter-spacing: 0.3px;
   svg { width: 11px; height: 11px; flex-shrink: 0; }
 }
 
 .aq-bl-card-date { color: rgba(8, 238, 188, 0.65); }
-
-.aq-bl-card-rt {
-  color: rgba(255,255,255,0.35);
-  &::before { content: '\00B7'; margin-right: 4px; }
-}
+.aq-bl-card-rt { color: rgba(255,255,255,0.35); }
 
 .aq-bl-card-title {
   color: $color-text-primary;
@@ -671,9 +546,6 @@ body.aq-page-blog {
   font-weight: 600;
   line-height: 1.35;
   margin: 0;
-  transition: color 0.2s ease;
-
-  .aq-bl-card:hover & { color: $color-neon-accent; }
 }
 
 .aq-bl-card-excerpt {
@@ -700,11 +572,7 @@ body.aq-page-blog {
 }
 
 // Botao ver mais
-.aq-bl-more {
-  display: flex;
-  justify-content: center;
-  margin-top: 8px;
-}
+.aq-bl-more { display: flex; justify-content: center; margin-top: 8px; }
 
 .aq-bl-more-btn {
   display: inline-flex;
@@ -721,9 +589,7 @@ body.aq-page-blog {
   letter-spacing: 0.5px;
   cursor: pointer;
   transition: $transition-fast;
-
   svg { width: 16px; height: 16px; transition: transform 0.25s ease; }
-
   &:hover {
     background: rgba(8, 238, 188, 0.12);
     border-color: $color-neon-accent;
@@ -734,10 +600,20 @@ body.aq-page-blog {
 
 // Mobile
 @media (max-width: 768px) {
+  #aq-blog-home { padding: 60px 16px; }
+  .aq-blog-grid { grid-template-columns: 1fr; gap: 20px; }
+  .aq-blog-card-title { font-size: 1rem; }
+  .aq-blog-home-cta {
+    margin-top: 32px;
+    .aq-btn-outline { width: 100%; justify-content: center; padding: 14px 20px; }
+  }
+  #aq-read-pct { bottom: 20px; right: 16px; padding: 8px 12px; }
   .aq-bl-hero { padding: 60px 16px 40px; }
   .aq-bl-hero-title { font-size: 1.9rem; }
-  .aq-bl-hero-stats { gap: 24px; }
-  .aq-bl-stat-n { font-size: 1.5rem; }
-  .aq-bl-wrap { padding: 0 16px 60px; }
+  .aq-bl-wrap { padding: 32px 16px 60px; }
   .aq-bl-grid { gap: 20px; }
+}
+
+@media (max-width: 480px) {
+  .aq-section-title { font-size: 1.6rem; }
 }

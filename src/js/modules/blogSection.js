@@ -109,11 +109,6 @@ function redesignBlogListing() {
       '<span class="aq-section-tag">Blogue</span>' +
       '<h1 class="aq-bl-hero-title">Mundo do <span class="aq-neon">Aquarismo</span></h1>' +
       '<p class="aq-bl-hero-sub">Guias, dicas de especialistas e novidades do hobby — escritos por quem vive o aquarismo todos os dias.</p>' +
-      '<div class="aq-bl-hero-stats">' +
-        '<div class="aq-bl-stat"><span class="aq-bl-stat-n" id="aq-bl-count">' + (posts.length || '...') + '</span><span class="aq-bl-stat-l">Artigos</span></div>' +
-        '<div class="aq-bl-stat"><span class="aq-bl-stat-n">5+</span><span class="aq-bl-stat-l">Categorias</span></div>' +
-        '<div class="aq-bl-stat"><span class="aq-bl-stat-n">2+</span><span class="aq-bl-stat-l">Anos</span></div>' +
-      '</div>' +
     '</div>';
 
   // ── Grid ────────────────────────────────────────────────────────────────────
