@@ -1,89 +1,84 @@
 /**
- * pagesSection.js - v1
- * Redesign das paginas estaticas do Shopkit (/page/*)
- * - Forcca fundo escuro via JS (independente do CSS)
- * - Adiciona hero contextual por pagina
- * - Adiciona caixa resumo simples ("Em linguagem simples")
- * - Preserva o conteudo original intacto
+ * pagesSection.js - v2
+ * Redesign das páginas estáticas do Shopkit (/page/*)
+ * Português de Portugal com acentuação correcta.
  */
 
 var PAGE_CONFIG = {
   'politica-de-devolucao': {
     icon: 'fas fa-undo-alt',
-    title: 'Politica de Devolucao',
-    subtitle: 'Os teus direitos de devolucao e reembolso',
+    title: 'Política de Devolução',
+    subtitle: 'Os teus direitos de devolução e reembolso, explicados de forma simples.',
     summary: [
-      { icon: 'fas fa-calendar-check', label: '14 dias', desc: 'Tens 14 dias apos receber a encomenda para devolver qualquer produto, sem precisar de justificar.' },
-      { icon: 'fas fa-box', label: 'Embalagem original', desc: 'O produto deve ser devolvido na embalagem original, sem sinais de uso.' },
-      { icon: 'fas fa-money-bill-wave', label: 'Reembolso total', desc: 'Devolves o produto e nos devolvemos o dinheiro, incluindo os portes de envio originais.' },
-      { icon: 'fas fa-fish', label: 'Seres vivos', desc: 'Peixes, plantas e invertebrados nao podem ser devolvidos por razoes de bem-estar animal.' }
+      { icon: 'fas fa-calendar-check', label: '14 dias para devolver', desc: 'Tens 14 dias após receberes a encomenda para devolver qualquer produto, sem precisares de justificar o motivo.' },
+      { icon: 'fas fa-box', label: 'Embalagem original', desc: 'O produto deve ser devolvido na embalagem original e sem sinais de uso ou danos causados pelo cliente.' },
+      { icon: 'fas fa-money-bill-wave', label: 'Reembolso total', desc: 'Ao devolveres o produto em boas condições, reembolsamos o valor total da compra, incluindo os portes de envio originais.' },
+      { icon: 'fas fa-fish', label: 'Seres vivos excluídos', desc: 'Peixes, plantas e invertebrados não podem ser devolvidos por razões de bem-estar animal e legislação em vigor.' }
     ]
   },
   'politica-de-entrega': {
     icon: 'fas fa-shipping-fast',
-    title: 'Politica de Entrega',
-    subtitle: 'Como e quando recebes a tua encomenda',
+    title: 'Política de Entrega',
+    subtitle: 'Como e quando recebes a tua encomenda, sem surpresas.',
     summary: [
-      { icon: 'fas fa-clock', label: '2-5 dias uteis', desc: 'Equipamentos e produtos secos chegam entre 2 a 5 dias uteis apos o pagamento.' },
-      { icon: 'fas fa-leaf', label: 'Seres vivos', desc: 'Plantas, peixes e invertebrados sao enviados as teras e quartas para chegarem frescos.' },
-      { icon: 'fas fa-truck', label: 'Portes gratuitos', desc: 'Encomendas acima de 50 euros tem portes gratuitos para Portugal continental.' },
-      { icon: 'fas fa-map-marker-alt', label: 'Todo o pais', desc: 'Enviamos para Portugal continental, Madeira e Acores.' }
+      { icon: 'fas fa-clock', label: '2 a 5 dias úteis', desc: 'Equipamentos e produtos secos chegam entre 2 a 5 dias úteis após a confirmação do pagamento.' },
+      { icon: 'fas fa-leaf', label: 'Seres vivos: Terças e Quartas', desc: 'Plantas, peixes e invertebrados são enviados às Terças e Quartas-feiras para garantir que chegam frescos, evitando atrasos de fim de semana.' },
+      { icon: 'fas fa-truck', label: 'Portes gratuitos acima de 50€', desc: 'Encomendas com valor superior a 50€ têm portes gratuitos para Portugal continental.' },
+      { icon: 'fas fa-map-marker-alt', label: 'Enviamos para todo o país', desc: 'Entregamos em Portugal continental, Madeira e Açores. Os prazos e custos podem variar consoante o destino.' }
     ]
   },
   'politica-de-privacidade-e-cookies': {
     icon: 'fas fa-shield-alt',
     title: 'Privacidade e Cookies',
-    subtitle: 'Como protegemos os teus dados pessoais',
+    subtitle: 'Como protegemos os teus dados pessoais e respeitamos a tua privacidade.',
     summary: [
-      { icon: 'fas fa-lock', label: 'Dados seguros', desc: 'Os teus dados pessoais (nome, morada, email) sao usados apenas para processar as tuas encomendas.' },
-      { icon: 'fas fa-cookie', label: 'Cookies', desc: 'Usamos cookies para melhorar a tua experiencia de navegacao. Podes recusa-los nas definicoes do browser.' },
-      { icon: 'fas fa-ban', label: 'Sem partilha', desc: 'Nunca vendemos nem partilhamos os teus dados com terceiros para fins comerciais.' },
-      { icon: 'fas fa-user-shield', label: 'Os teus direitos', desc: 'Podes pedir a qualquer momento que apaguemos os teus dados ou que te enviemos uma copia.' }
+      { icon: 'fas fa-lock', label: 'Os teus dados estão seguros', desc: 'Os teus dados pessoais — nome, morada e e-mail — são usados exclusivamente para processar as tuas encomendas e contactar-te.' },
+      { icon: 'fas fa-cookie', label: 'O que são cookies?', desc: 'Cookies são pequenos ficheiros que melhoram a tua experiência de navegação. Podes recusá-los ou eliminá-los nas definições do teu browser.' },
+      { icon: 'fas fa-ban', label: 'Sem partilha com terceiros', desc: 'Nunca vendemos nem partilhamos os teus dados com terceiros para fins comerciais ou publicitários.' },
+      { icon: 'fas fa-user-shield', label: 'Os teus direitos', desc: 'Podes solicitar a qualquer momento que apaguemos os teus dados, que os corrijamos ou que te enviemos uma cópia completa.' }
     ]
   },
   'resolucao-de-litigios': {
     icon: 'fas fa-balance-scale',
-    title: 'Resolucao de Litigios',
-    subtitle: 'Como resolver um problema connosco',
+    title: 'Resolução de Litígios',
+    subtitle: 'O que fazer se tiveres algum problema connosco.',
     summary: [
-      { icon: 'fas fa-comments', label: '1. Fala connosco', desc: 'Primeiro contacta-nos diretamente. Resolvemos a maioria dos problemas rapidamente.' },
-      { icon: 'fas fa-handshake', label: '2. Mediacao', desc: 'Se nao chegarmos a acordo, podes recorrer a entidades de mediacao de conflitos de consumo.' },
-      { icon: 'fas fa-globe', label: 'Plataforma europeia', desc: 'Como loja europeia, tambem podes usar a plataforma online de resolucao de litigios da UE.' },
-      { icon: 'fas fa-gavel', label: 'Tribunal', desc: 'Em ultimo recurso, podes recorrer aos tribunais. O tribunal competente e o da tua area de residencia.' }
+      { icon: 'fas fa-comments', label: '1.º — Fala connosco', desc: 'O primeiro passo é contactares-nos directamente por e-mail ou telefone. Resolvemos a grande maioria dos problemas de forma rápida e amigável.' },
+      { icon: 'fas fa-handshake', label: '2.º — Mediação', desc: 'Se não chegarmos a acordo, podes recorrer a entidades de mediação de conflitos de consumo reconhecidas em Portugal.' },
+      { icon: 'fas fa-globe', label: 'Plataforma europeia (ODR)', desc: 'Enquanto loja europeia, também podes utilizar a plataforma online de resolução de litígios da União Europeia.' },
+      { icon: 'fas fa-gavel', label: '3.º — Tribunal', desc: 'Em último recurso, podes recorrer aos tribunais portugueses. O tribunal competente é o da tua área de residência.' }
     ]
   },
   'termos-e-condicoes': {
     icon: 'fas fa-file-contract',
-    title: 'Termos e Condicoes',
-    subtitle: 'As regras que regem as compras na nossa loja',
+    title: 'Termos e Condições',
+    subtitle: 'As regras que regem as compras na nossa loja, de forma transparente.',
     summary: [
-      { icon: 'fas fa-shopping-cart', label: 'Ao comprar', desc: 'Ao finalizar uma compra, aceitas estes termos e crias um contrato connosco.' },
-      { icon: 'fas fa-credit-card', label: 'Pagamento', desc: 'Aceitamos cartao de credito, debito, MB Way e transferencia bancaria.' },
-      { icon: 'fas fa-tag', label: 'Precos', desc: 'Os precos mostrados incluem IVA. Reservamo-nos o direito de alterar precos sem aviso previo.' },
-      { icon: 'fas fa-star', label: 'Qualidade', desc: 'Todos os produtos sao verificados antes do envio. Em caso de defeito, substituimos sem custo.' }
+      { icon: 'fas fa-shopping-cart', label: 'Ao finalizar uma compra', desc: 'Ao concluíres uma encomenda, estás a aceitar estes termos e a celebrar um contrato de compra e venda connosco.' },
+      { icon: 'fas fa-credit-card', label: 'Meios de pagamento', desc: 'Aceitamos cartão de crédito, cartão de débito, MB Way e transferência bancária. O pagamento é confirmado antes do envio.' },
+      { icon: 'fas fa-tag', label: 'Preços com IVA incluído', desc: 'Todos os preços apresentados incluem IVA à taxa legal em vigor. Reservamo-nos o direito de actualizar preços sem aviso prévio.' },
+      { icon: 'fas fa-star', label: 'Garantia de qualidade', desc: 'Todos os produtos são verificados antes do envio. Em caso de defeito da nossa parte, substituímos ou reembolsamos sem qualquer custo.' }
     ]
   },
   'livro-de-reclamacoes': {
     icon: 'fas fa-book-open',
-    title: 'Livro de Reclamacoes',
-    subtitle: 'A tua opiniao e importante para nos',
+    title: 'Livro de Reclamações',
+    subtitle: 'A tua opinião é importante para nós. Aqui explicamos como reclamar.',
     summary: [
-      { icon: 'fas fa-pencil-alt', label: 'Como reclamar', desc: 'Podes apresentar uma reclamacao diretamente nesta pagina ou pelo Livro de Reclamacoes Eletronico.' },
-      { icon: 'fas fa-reply', label: 'Resposta rapida', desc: 'Comprometemo-nos a responder a todas as reclamacoes em ate 5 dias uteis.' },
-      { icon: 'fas fa-heart', label: 'O nosso objetivo', desc: 'Queremos que fiques satisfeito. Uma reclamacao e uma oportunidade de melhorar.' },
-      { icon: 'fas fa-envelope', label: 'Contacto direto', desc: 'Podes tambem contactar-nos por email ou telefone para resolver o problema mais rapidamente.' }
+      { icon: 'fas fa-pencil-alt', label: 'Como apresentar uma reclamação', desc: 'Podes apresentar a tua reclamação através do Livro de Reclamações Electrónico ou presencialmente na nossa loja em Porto Salvo.' },
+      { icon: 'fas fa-reply', label: 'Resposta em 5 dias úteis', desc: 'Comprometemo-nos a analisar e responder a todas as reclamações no prazo máximo de 5 dias úteis.' },
+      { icon: 'fas fa-heart', label: 'O nosso compromisso', desc: 'Encaramos cada reclamação como uma oportunidade de melhorar. A tua satisfação é a nossa prioridade.' },
+      { icon: 'fas fa-envelope', label: 'Contacto directo', desc: 'Podes também contactar-nos por e-mail ou telefone para resolvermos o teu problema de forma mais rápida e personalizada.' }
     ]
   }
 };
 
 function getPageSlug() {
-  var path = window.location.pathname;
-  var match = path.match(/\/page\/([^\/]+)/);
+  var match = window.location.pathname.match(/\/page\/([^\/]+)/);
   return match ? match[1] : null;
 }
 
 function forceDarkBackground() {
-  // Forcar fundo escuro via JS inline style (ultrapassa qualquer CSS do Shopkit)
   var selectors = [
     '.main', '.page.section', '.page-content',
     '.well', '.well-featured', '.well-shadow',
@@ -109,60 +104,29 @@ function buildSummaryCard(item) {
   '</div>';
 }
 
-function buildHero(config) {
-  var hero = document.createElement('div');
-  hero.className = 'aq-pg-hero';
-  hero.innerHTML =
-    '<div class="aq-pg-hero-bg"></div>' +
-    '<div class="aq-pg-hero-inner">' +
-      '<div class="aq-pg-hero-icon"><i class="' + config.icon + '"></i></div>' +
-      '<h1 class="aq-pg-hero-title">' + config.title + '</h1>' +
-      '<p class="aq-pg-hero-sub">' + config.subtitle + '</p>' +
-    '</div>';
-  return hero;
-}
-
-function buildSummaryBox(config) {
-  var box = document.createElement('div');
-  box.className = 'aq-pg-summary';
-  box.innerHTML =
-    '<div class="aq-pg-summary-header">' +
-      '<i class="fas fa-lightbulb"></i>' +
-      '<span>Em linguagem simples</span>' +
-    '</div>' +
-    '<div class="aq-pg-summary-grid">' +
-      config.summary.map(buildSummaryCard).join('') +
-    '</div>';
-  return box;
-}
-
 function redesignPage() {
-  var path = window.location.pathname;
-  if (!path.startsWith('/page/')) return;
+  if (!window.location.pathname.startsWith('/page/')) return;
   if (document.body.classList.contains('aq-page-styled')) return;
   document.body.classList.add('aq-page-styled');
 
   var slug = getPageSlug();
   var config = slug ? PAGE_CONFIG[slug] : null;
 
-  // Forcar fundo escuro imediatamente
   forceDarkBackground();
 
-  // Ocultar titulo nativo (vamos substituir pelo hero)
+  // Ocultar título nativo
   var nativeTitle = document.querySelector('h1.page-title, h1.title');
   if (nativeTitle) nativeTitle.style.setProperty('display', 'none', 'important');
 
-  // Encontrar container
+  // Container principal
   var container = document.querySelector('.page.section .container-fluid, .page .container-fluid')
     || document.querySelector('.main')
     || document.body;
 
-  // Encontrar .page-content (conteudo original)
+  // Estilizar conteúdo original
   var pageContent = document.querySelector('.page-content');
   if (pageContent) {
-    // Estilizar o conteudo original
     pageContent.classList.add('aq-pg-content');
-    // Forcar estilos inline no conteudo
     pageContent.style.setProperty('background', '#00040D', 'important');
     pageContent.style.setProperty('color', 'rgba(255,255,255,0.88)', 'important');
     pageContent.style.setProperty('box-shadow', 'none', 'important');
@@ -170,7 +134,6 @@ function redesignPage() {
     pageContent.style.setProperty('border-radius', '16px', 'important');
     pageContent.style.setProperty('padding', '40px', 'important');
 
-    // Estilizar elementos internos
     Array.from(pageContent.querySelectorAll('h2,h3,h4,h5')).forEach(function(el) {
       el.style.setProperty('color', '#FFFFFF', 'important');
       el.style.setProperty('font-family', "'Poppins', sans-serif", 'important');
@@ -196,36 +159,40 @@ function redesignPage() {
 
   if (!config) return;
 
-  // Inserir hero antes do conteudo
-  var hero = buildHero(config);
+  // Hero
+  var hero = document.createElement('div');
+  hero.className = 'aq-pg-hero';
+  hero.innerHTML =
+    '<div class="aq-pg-hero-bg"></div>' +
+    '<div class="aq-pg-hero-inner">' +
+      '<div class="aq-pg-hero-icon"><i class="' + config.icon + '"></i></div>' +
+      '<h1 class="aq-pg-hero-title">' + config.title + '</h1>' +
+      '<p class="aq-pg-hero-sub">' + config.subtitle + '</p>' +
+    '</div>';
   container.insertBefore(hero, container.firstChild);
 
-  // Inserir caixa resumo antes do page-content
+  // Caixa resumo
   if (pageContent) {
-    var summaryBox = buildSummaryBox(config);
+    var summaryBox = document.createElement('div');
+    summaryBox.className = 'aq-pg-summary';
+    summaryBox.innerHTML =
+      '<div class="aq-pg-summary-header">' +
+        '<i class="fas fa-lightbulb"></i>' +
+        '<span>Em linguagem simples</span>' +
+      '</div>' +
+      '<div class="aq-pg-summary-grid">' +
+        config.summary.map(buildSummaryCard).join('') +
+      '</div>';
     pageContent.parentNode.insertBefore(summaryBox, pageContent);
   }
 
-  console.log('[AQ] Page redesign: ' + slug);
+  console.log('[AQ] Page redesign v2: ' + slug);
 }
 
 export function initPagesSection() {
   if (!window.location.pathname.startsWith('/page/')) return;
-
-  // Forcar fundo imediatamente
   forceDarkBackground();
-
-  // Aplicar redesign quando DOM estiver pronto
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() {
-      redesignPage();
-      // Retry para elementos que carregam depois
-      setTimeout(forceDarkBackground, 500);
-      setTimeout(forceDarkBackground, 1500);
-    });
-  } else {
-    redesignPage();
-    setTimeout(forceDarkBackground, 500);
-    setTimeout(forceDarkBackground, 1500);
-  }
+  redesignPage();
+  setTimeout(forceDarkBackground, 600);
+  setTimeout(forceDarkBackground, 1800);
 }
