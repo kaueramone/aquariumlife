@@ -391,18 +391,19 @@ section:has(.product-view),
 
 // -- Mobile: cards iguais em altura, titulo cresce, preco e botao sempre no fundo --
 @media (max-width: 768px) {
-  // Grid: alinhar items por stretch para todos da mesma linha terem igual altura
+  // Grid: stretch para altura igual + gap vertical entre linhas
   .products-list,
   .products.row,
   [class*="products-grid"] {
-    padding-left: 8px !important;
-    padding-right: 8px !important;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
     align-items: stretch !important;
+    row-gap: 12px !important;
   }
 
   // Wrapper .product ocupa toda a altura da celula da grelha
   .product {
-    padding: 0 4px !important;
+    padding: 0 3px !important;
     display: flex !important;
     flex-direction: column !important;
     height: 100% !important;
