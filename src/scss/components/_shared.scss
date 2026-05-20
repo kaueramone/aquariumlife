@@ -52,6 +52,21 @@ body.sticky-header .main,
   margin-top: 0 !important;
 }
 
+// Transparencia global em todas as sections e containers de produto/conteudo
+// para o efeito de luz ambient do .main ser visivel
+.main > .section,
+.main > div.section,
+.products.section,
+.products-full.section,
+.contacts.section,
+.main .container-fluid,
+.main .container,
+.section > .container-fluid,
+.section > .container {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
 // Neutralizar margin-bottom do header nativo do Shopkit
 header, .header, #header {
   margin-bottom: 0 !important;
