@@ -1127,6 +1127,43 @@
       return card;
     }
 
+    // Extrair post da home — estrutura diferente do /blog
+    // Na home: a.blog-item > div.blog-preview (bg-image) + h3.blog-info + div.blog-status
+    function extractHomePost(item) {
+      // O proprio item e o <a> na home
+      var href = item.href || BLOG_HREF;
+
+      // Titulo: h3.blog-info
+      var infoEl = item.querySelector('.blog-info, h3, h2');
+      var title = infoEl ? infoEl.textContent.trim() : '';
+
+      // Fallback: img title/alt
+      if (!title) {
+        var imgEl = item.querySelector('img');
+        if (imgEl) title = imgEl.getAttribute('title') || imgEl.getAttribute('alt') || '';
+      }
+
+      // Imagem: background-image no .blog-preview
+      var preview = item.querySelector('.blog-preview');
+      var img = '';
+      if (preview) {
+        var bg = preview.style.backgroundImage || '';
+        var match = bg.match(/url\(['"]?([^'"]+)['"]?\)/);
+        if (match) img = match[1];
+      }
+      // Fallback: img src/data-src
+      if (!img) {
+        var imgEl2 = item.querySelector('img');
+        if (imgEl2) img = imgEl2.getAttribute('data-src') || imgEl2.src || '';
+      }
+
+      // Data/categoria: div.blog-status
+      var statusEl = item.querySelector('.blog-status, .blog-date, time');
+      var date = statusEl ? statusEl.textContent.trim() : '';
+
+      return { href: href, title: title, img: img, date: date, excerpt: '' };
+    }
+
     async function buildBlogSection() {
       if (document.getElementById('aq-blog-home')) return null;
       var section = document.createElement('section');
@@ -1146,7 +1183,8 @@
 
       var grid = section.querySelector('#aq-blog-grid');
       var items = Array.from(document.querySelectorAll('.blog-item'));
-      var posts = items.map(extractPost).filter(function(p) { return !!p.title; });
+      // Usar extractHomePost pois na home o .blog-item e o proprio <a>
+      var posts = items.map(extractHomePost).filter(function(p) { return !!p.title; });
 
       if (posts.length) {
         posts.slice(0, 3).forEach(function(p) { grid.appendChild(buildHomeCard(p)); });
@@ -1911,6 +1949,12 @@
     // build Thu May 14 21:12:37 HVGMT 2026
     // build Thu May 14 21:19:10 HVGMT 2026
     // build Thu May 14 21:28:05 HVGMT 2026
-    // build Thu Ma
+    // build Thu May 14 21:35:19 HVGMT 2026
+    // build Thu May 14 21:42:27 HVGMT 2026
+    // build Thu May 14 21:46:56 HVGMT 2026
+    // Thu May 14 21:59:55 HVGMT 2026
+    // Thu May 14 22:11:14 HVGMT 2026
+    // Thu May 14 23:49:01 HVGMT 2026
+    // Thu May 14 23:52:33 HVGMT 2026
 
 })();

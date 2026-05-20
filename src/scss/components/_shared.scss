@@ -14,6 +14,21 @@ body:not(.aq-page-blog) {
   }
 }
 
+// Main content — padding global e reset de margin indesejado do Shopkit
+.main {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+  margin-top: 0 !important;
+}
+
+// Neutralizar margin que o Shopkit injeta no body/main quando header e fixed
+body.fixed-header .main,
+body.sticky-header .main,
+.main.container-fluid,
+.main.container {
+  margin-top: 0 !important;
+}
+
 // Breadcrumb global — remover fundo azul do Shopkit em todas as paginas
 .breadcrumbs,
 .breadcrumbs.hidden-xs,
