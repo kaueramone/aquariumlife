@@ -64,10 +64,6 @@
 // /SALES — Promoções
 // ============================================================
 .page-sales {
-  .products.section {
-    background: $color-bg-primary !important;
-  }
-
   // Ocultar titulo nativo
   .products-title {
     display: none !important;
@@ -109,10 +105,6 @@
 // /NEW — Novidades
 // ============================================================
 .page-new {
-  .products.section {
-    background: $color-bg-primary !important;
-  }
-
   .products-title {
     display: none !important;
   }
@@ -137,11 +129,12 @@
 
   // Ocultar estrutura nativa
   .contacts.section {
-    background: $color-bg-primary !important;
     padding: 0 !important;
   }
 
-  .contacts-title {
+  .contacts-title,
+  .contacts__title,
+  h2.contacts__title {
     display: none !important;
   }
 
