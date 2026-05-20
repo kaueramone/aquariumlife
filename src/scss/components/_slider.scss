@@ -17,9 +17,9 @@
   &:hover {
     background: $color-neon-accent !important;
     box-shadow: 0 0 20px rgba(8, 238, 188, 0.8) !important;
-    
+
     &::before {
-      color: #000 !important; // Seta preta sobre fundo neon
+      color: #000 !important;
     }
   }
 
@@ -33,17 +33,30 @@
 
 // Adjust positioning so arrows don't get cropped
 .slick-prev {
-  left: 12px !important; // Dentro do banner, não fora
+  left: 12px !important;
 }
 .slick-next {
   right: 12px !important;
 }
 
-// Ocultar setas no mobile
+// Ocultar setas no mobile e aumentar banner ~20%
 @media (max-width: 768px) {
   .slick-prev,
   .slick-next,
   .slick-arrow {
     display: none !important;
+  }
+
+  // Banner principal: aumentar altura ~20% no mobile (600px nativo -> 720px)
+  .slideshow-gallery,
+  .slideshow-gallery .slick-list,
+  .slideshow-gallery .slick-track,
+  .slideshow-gallery .slick-slide,
+  .home-slideshow .slideshow-gallery,
+  .home-slideshow .slick-list,
+  .home-slideshow .slick-track,
+  .home-slideshow .slick-slide {
+    height: 720px !important;
+    min-height: 720px !important;
   }
 }
