@@ -33,6 +33,15 @@
   }
 }
 
+// Forcar fundo escuro em qualquer container dentro do header (Bootstrap sobrescreve)
+header .container-fluid,
+header .container,
+.header .container-fluid,
+.header .container {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
 // Estrutura geral do header
 header, .header, #header {
   display: flex !important;
@@ -56,8 +65,8 @@ header, .header, #header {
     width: 100%;
     padding: 10px 20px !important;
     gap: 16px;
-    background: #00040d !important;
-    background-color: #00040d !important;
+    background: transparent !important;
+    background-color: transparent !important;
   }
 
   .logo, .header-logo, .navbar-brand, a.logo {
@@ -277,14 +286,4 @@ header, .header, #header {
   }
 }
 
-// Mobile: esconder nosso nav, mostrar nativo
-@media (max-width: 991px) {
-  #aq-nav-bar { display: none !important; }
-
-  header > nav:not(#aq-nav-bar),
-  .header > nav:not(#aq-nav-bar),
-  .header-menu, .trigger-wrapper {
-    display: block !important;
-    visibility: visible !important;
-  }
-}
+// Mobile: esconder noss
