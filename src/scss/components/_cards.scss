@@ -1,25 +1,25 @@
 @use '../base/variables' as *;
 
 // ============================================================
-// PRODUCT CARDS — v4
+// PRODUCT CARDS - v4
 // Estrutura real do Shopkit Boxie:
 //  .product
-//    └ .card-shadow-hover
-//        ├ .product-view
-//        │   ├ .product-badges > .badge
-//        │   ├ a.product-preview > img.product-pic
-//        ├ .product-category  (oculto)
-//        ├ a.product-name
-//        ├ .product-details
-//        │   ├ .product-category  (oculto)
-//        │   └ .product-price > .product-actual
-//        └ a.product-btn  (movido pelo JS)
+//    L .card-shadow-hover
+//        |-- .product-view
+//        |   |-- .product-badges > .badge
+//        |   L a.product-preview > img.product-pic
+//        |-- .product-category  (oculto)
+//        |-- a.product-name
+//        |-- .product-details
+//        |   |-- .product-category  (oculto)
+//        |   L .product-price > .product-actual
+//        L a.product-btn  (movido pelo JS)
 // ============================================================
 
 // Neutralizar helpers do Shopkit
 .hover-effect-floating { transform: none !important; }
 
-// ── Wrapper externo — sem visuais proprios ──────────────────
+// -- Wrapper externo -- sem visuais proprios --
 .product {
   background: transparent !important;
   border: none !important;
@@ -29,7 +29,7 @@
   padding: 0 !important;
 }
 
-// ── Card visual ─────────────────────────────────────────────
+// -- Card visual --
 .card-shadow-hover {
   background: linear-gradient(160deg, #001d3d 0%, #001531 100%) !important;
   border: 1px solid rgba(8, 238, 188, 0.1) !important;
@@ -57,7 +57,6 @@
     z-index: 1;
   }
 
-  // Hover: apenas lift — sem cor no card, so o botao muda de cor
   &:hover {
     transform: translateY(-5px) !important;
     box-shadow:
@@ -66,14 +65,13 @@
   }
 }
 
-// ── Area de imagem ──────────────────────────────────────────
+// -- Area de imagem --
 .product-view {
   position: relative;
   overflow: hidden !important;
   border-radius: 14px 14px 0 0 !important;
 }
 
-// Suprimir TODOS os pseudo-elementos de hover do Shopkit na area de imagem
 .product-view::before,
 .product-view::after,
 .hover-effect-floating .product-view::before,
@@ -96,7 +94,6 @@ a.product-preview {
   aspect-ratio: 1 / 1;
   text-decoration: none !important;
 
-  // Suprimir overlay de hover nativo do Shopkit (hover-effect-floating usa cor primaria)
   &::before, &::after {
     content: none !important;
     display: none !important;
@@ -118,8 +115,6 @@ a.product-preview {
   }
 }
 
-// Shopkit injeta background na product-preview via hover-effect-floating
-// Neutralizar em todos os estados com especificidade maxima
 .hover-effect-floating a.product-preview,
 .hover-effect-floating:hover a.product-preview,
 .hover-effect-floating .product-preview,
@@ -148,12 +143,12 @@ a.product-preview {
   transform: scale(1.06);
 }
 
-// ── Categoria — ocultar ─────────────────────────────────────
+// -- Categoria -- ocultar --
 .product-category {
   display: none !important;
 }
 
-// ── Nome do produto ─────────────────────────────────────────
+// -- Nome do produto --
 a.product-name {
   display: block !important;
   font-family: $font-family-body !important;
@@ -169,7 +164,7 @@ a.product-name {
   &:hover { color: #fff !important; }
 }
 
-// ── Preco ───────────────────────────────────────────────────
+// -- Preco --
 .product-details {
   display: flex !important;
   flex-direction: column !important;
@@ -198,8 +193,7 @@ a.product-name {
   }
 }
 
-// ── Botao comprar ───────────────────────────────────────────
-// ESCONDER em qualquer posicao dentro de .product-view (original do Shopkit)
+// -- Botao comprar --
 .product-view a.product-btn,
 .product-view .product-btn {
   display: none !important;
@@ -208,7 +202,6 @@ a.product-name {
   opacity: 0 !important;
 }
 
-// MOSTRAR quando o JS o mover para filho direto de .card-shadow-hover
 .card-shadow-hover > a.product-btn,
 .card-shadow-hover > a.product-btn.btn,
 .card-shadow-hover > a.product-btn.btn-primary,
@@ -283,9 +276,6 @@ a.product-name {
   }
 }
 
-// ── Neutralizar pseudo-elemento ::before do Bootstrap/Shopkit no botao ────
-// .btn::before, .btn-primary::before, .product-btn::before
-// injetam um overlay com content:"" que cria o efeito verde no card inteiro
 .btn::before,
 .btn-primary::before,
 .product-btn::before,
@@ -298,7 +288,7 @@ a.product-btn::before {
   background: none !important;
 }
 
-// ── Badges ───────────────────────────────────────────────────
+// -- Badges --
 .product-badges {
   position: absolute !important;
   top: -11px !important;
@@ -335,7 +325,7 @@ a.product-btn::before {
 }
 
 // ============================================================
-// SECCAO DE PRODUTOS — Titulo + espacamento
+// SECCAO DE PRODUTOS -- Titulo + espacamento
 // ============================================================
 
 section:has(.product-view) > .title,
@@ -399,37 +389,53 @@ section:has(.product-view),
   }
 }
 
-// ── Mobile: cards mais largos e compactos ─────────────────────
+// -- Mobile: cards iguais em altura, titulo cresce, preco e botao sempre no fundo --
 @media (max-width: 768px) {
-  // Grid nativo do Shopkit: forcar 2 colunas com menos margem lateral
+  // Grid: alinhar items por stretch para todos da mesma linha terem igual altura
   .products-list,
   .products.row,
   [class*="products-grid"] {
     padding-left: 8px !important;
     padding-right: 8px !important;
+    align-items: stretch !important;
   }
 
+  // Wrapper .product ocupa toda a altura da celula da grelha
   .product {
     padding: 0 4px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
   }
 
-  // Imagem mais compacta
+  // Card visual cresce para preencher o .product
+  .card-shadow-hover {
+    flex: 1 !important;
+    height: 100% !important;
+  }
+
+  // Imagem: aspect-ratio fixo, nao encolhe
   a.product-preview {
     aspect-ratio: 1 / 1;
+    flex-shrink: 0 !important;
   }
 
-  // Titulo mais junto da imagem
+  // Nome cresce para preencher espaco -- empurra preco e botao para baixo
   a.product-name {
     padding: 4px 8px 1px !important;
     font-size: 0.78rem !important;
+    flex: 1 !important;
   }
 
-  // Preco mais compacto
+  // Preco e botao ficam sempre colados ao fundo do card
+  .product-details {
+    margin-top: auto !important;
+  }
+
   .product-price {
     padding: 1px 8px 4px !important;
   }
 
-  // Botao comprar mais compacto
   .card-shadow-hover > a.product-btn {
     margin: 0 10px 10px !important;
     padding: 6px 8px !important;
