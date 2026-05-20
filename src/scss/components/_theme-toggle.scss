@@ -61,7 +61,7 @@ body.aq-light-mode {
 
   // Categorias: so o nome muda
   .aq-cat-name {
-    color: #00204A !important;
+    color: #00040d !important;
   }
 
   // Fundo da seccao de produtos
@@ -145,7 +145,7 @@ body.aq-light-mode {
   }
 
   .aq-faq-q {
-    color: #00204A !important;
+    color: #00040d !important;
     &:hover, &[aria-expanded="true"] { color: #007A5C !important; }
   }
 
@@ -324,7 +324,5 @@ body.aq-light-mode {
     color: rgba(0,32,74,0.5) !important;
   }
 
-  // Trust seals
-  .aq-trust-seals { background: #F0F8FF !important; }
-  .aq-trust-item  { color: rgba(0,32,74,0.75) !important; }
+  // Trust seals: manter identico ao dark mode, nao afectado pela lampada
 }
