@@ -14,11 +14,34 @@ body:not(.aq-page-blog) {
   }
 }
 
-// Main content — padding global e reset de margin indesejado do Shopkit
+// Main content — padding global, reset de margin e efeito de luz ambient
 .main {
   padding-top: 50px !important;
   padding-bottom: 50px !important;
   margin-top: 0 !important;
+  position: relative !important;
+
+  // Luz neon do topo (cima -> baixo)
+  &::before {
+    content: '' !important;
+    position: fixed !important;
+    top: 0; left: 0; right: 0;
+    height: 320px;
+    background: radial-gradient(ellipse 70% 100% at 50% 0%, rgba(8, 238, 188, 0.06) 0%, transparent 100%);
+    pointer-events: none !important;
+    z-index: 0 !important;
+  }
+
+  // Luz neon do rodape (baixo -> cima)
+  &::after {
+    content: '' !important;
+    position: fixed !important;
+    bottom: 0; left: 0; right: 0;
+    height: 280px;
+    background: radial-gradient(ellipse 70% 100% at 50% 100%, rgba(8, 238, 188, 0.05) 0%, transparent 100%);
+    pointer-events: none !important;
+    z-index: 0 !important;
+  }
 }
 
 // Neutralizar margin que o Shopkit injeta no body/main quando header e fixed

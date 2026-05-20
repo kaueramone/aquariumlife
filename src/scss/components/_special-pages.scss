@@ -8,24 +8,16 @@
 // -- Hero injetado via JS (partilhado) -----------------------
 .aq-sp-hero {
   position: relative;
-  overflow: hidden;
   padding: 64px 24px 56px;
   text-align: center;
   background: transparent;
 
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(8, 238, 188, 0.08) 0%, transparent 70%);
-    pointer-events: none;
-  }
-
+  // Linha separadora subtil no fundo
   &::after {
     content: '';
     position: absolute;
     bottom: 0; left: 10%; right: 10%; height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(8, 238, 188, 0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(8, 238, 188, 0.15), transparent);
     pointer-events: none;
   }
 }
