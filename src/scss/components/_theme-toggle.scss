@@ -126,7 +126,8 @@ body.aq-light-mode {
 
   .aq-faq-q {
     color: #00040d !important;
-    &:hover, &[aria-expanded="true"] { color: #007A5C !important; }
+    span { color: #00040d !important; }
+    &:hover, &[aria-expanded="true"] { color: #007A5C !important; span { color: #007A5C !important; } }
   }
 
   .aq-faq-icon { color: rgba(0,32,74,0.35) !important; }
