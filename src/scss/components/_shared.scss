@@ -29,6 +29,11 @@ body.sticky-header .main,
   margin-top: 0 !important;
 }
 
+// Neutralizar margin-bottom do header nativo do Shopkit
+header, .header, #header {
+  margin-bottom: 0 !important;
+}
+
 // Breadcrumb global — remover fundo azul do Shopkit em todas as paginas
 .breadcrumbs,
 .breadcrumbs.hidden-xs,
@@ -212,4 +217,9 @@ body.page-page {
       th { background: rgba(8, 238, 188, 0.08) !important; color: $color-text-primary !important; }
     }
   }
+}
+
+// Neutralizar margin-bottom do header nativo do Shopkit
+header, .header, #header {
+  margin-bottom: 0 !important;
 }
