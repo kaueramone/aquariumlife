@@ -44,7 +44,7 @@
 
 // ============================================================
 // MODO CLARO -- body.aq-light-mode
-// REGRA DE OURO: header, nav, footer NAO sao afectados
+// REGRA DE OURO: header, nav, footer, trust-seals NAO sao afectados
 // ============================================================
 body.aq-light-mode {
 
@@ -59,9 +59,10 @@ body.aq-light-mode {
     background: #F0F8FF !important;
   }
 
-  // Categorias: so o nome muda
-  .aq-cat-name {
+  // Categorias: ID selector para ganhar sobre #aq-categories .aq-cat-name
+  #aq-categories .aq-cat-name {
     color: #00040d !important;
+    text-shadow: none !important;
   }
 
   // Fundo da seccao de produtos
@@ -118,8 +119,8 @@ body.aq-light-mode {
     }
   }
 
-  // Secoes personalizadas
-  #aq-brands, #aq-store, #aq-faq, #aq-blog-home, #aq-categories, #aq-trust-seals {
+  // Secoes personalizadas (sem trust-seals)
+  #aq-brands, #aq-store, #aq-faq, #aq-blog-home, #aq-categories {
     background: #F0F8FF !important;
   }
 
@@ -323,6 +324,4 @@ body.aq-light-mode {
   .breadcrumbs a, .breadcrumbs li, .breadcrumbs span {
     color: rgba(0,32,74,0.5) !important;
   }
-
-  // Trust seals: manter identico ao dark mode, nao afectado pela lampada
 }
