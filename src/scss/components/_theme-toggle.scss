@@ -41,49 +41,34 @@
   100% { transform: scale(1) rotate(0deg); }
 }
 
-
-// ============================================================
-// MODO CLARO -- body.aq-light-mode
-// REGRA DE OURO: header, nav, footer, trust-seals NAO sao afectados
-// ============================================================
 body.aq-light-mode {
 
-  // Fundo da pagina e main
   &, .main {
     background: #F0F8FF !important;
     background-color: #F0F8FF !important;
   }
 
-  // Secoes genericas
   section.section:not(.blog-post):not(.page):not(.products) {
     background: #F0F8FF !important;
   }
 
-  // Categorias: ID selector para ganhar sobre #aq-categories .aq-cat-name
   #aq-categories .aq-cat-name {
     color: #00040d !important;
     text-shadow: none !important;
   }
 
-  // Fundo da seccao de produtos
   .products.section, .products-main {
     background: #F0F8FF !important;
   }
 
-  // Card do produto completo (imagem + categoria + nome + preco + botao)
   .card-shadow-hover {
     background: #FFFFFF !important;
     border-color: rgba(0, 122, 92, 0.15) !important;
     box-shadow: 0 6px 24px rgba(0, 32, 74, 0.1) !important;
-
     &::before { display: none !important; }
-
-    &:hover {
-      box-shadow: 0 18px 36px rgba(0, 32, 74, 0.15) !important;
-    }
+    &:hover { box-shadow: 0 18px 36px rgba(0, 32, 74, 0.15) !important; }
   }
 
-  // Area de imagem do produto
   .product-preview {
     background: rgba(240, 248, 255, 0.9) !important;
   }
@@ -94,7 +79,6 @@ body.aq-light-mode {
     a { color: #005FA3 !important; }
   }
 
-  // Nome e info do produto
   .product-name, .product-title, .product-info h2,
   .product-info h3, .product-info .title {
     color: #00204A !important;
@@ -107,19 +91,16 @@ body.aq-light-mode {
     color: rgba(0,32,74,0.7) !important;
   }
 
-  // Botao do produto
   .product-btn, .product .btn-primary {
     background: rgba(0,122,92,0.08) !important;
     border-color: #007A5C !important;
     color: #007A5C !important;
-
     &:hover {
       background: #007A5C !important;
       color: #FFFFFF !important;
     }
   }
 
-  // Secoes personalizadas (sem trust-seals)
   #aq-brands, #aq-store, #aq-faq, #aq-blog-home, #aq-categories {
     background: #F0F8FF !important;
   }
@@ -134,11 +115,9 @@ body.aq-light-mode {
     color: #007A5C !important;
   }
 
-  // FAQ
   .aq-faq-item {
     background: #FFFFFF !important;
     border-color: rgba(0,122,92,0.15) !important;
-
     &.open {
       border-color: #007A5C !important;
       box-shadow: 0 4px 20px rgba(0,122,92,0.1) !important;
@@ -153,26 +132,23 @@ body.aq-light-mode {
   .aq-faq-icon { color: rgba(0,32,74,0.35) !important; }
   .aq-faq-a p  { color: rgba(0,32,74,0.75) !important; }
 
-  // Loja fisica
   .aq-store-inner {
-    background: #FFFFFF !important;
-    border-color: rgba(0,122,92,0.15) !important;
+    background: transparent !important;
+    border-color: rgba(0,122,92,0.1) !important;
+    box-shadow: none !important;
   }
 
   .aq-store-details li span { color: rgba(0,32,74,0.75) !important; }
   .aq-store-details svg     { stroke: #007A5C !important; }
   .aq-store-header .aq-section-sub { color: rgba(0,32,74,0.7) !important; }
 
-  // Cards do blog na home
   .aq-blog-card {
     background: #FFFFFF !important;
     border-color: rgba(0,122,92,0.15) !important;
-
     .aq-blog-card-title   { color: #00204A !important; }
     .aq-blog-card-excerpt { color: rgba(0,32,74,0.7) !important; }
     .aq-blog-card-date    { color: #007A5C !important; }
     .aq-blog-card-cta     { color: rgba(0,32,74,0.4) !important; }
-
     &:hover {
       border-color: #007A5C !important;
       box-shadow: 0 8px 30px rgba(0,122,92,0.15) !important;
@@ -180,24 +156,19 @@ body.aq-light-mode {
     }
   }
 
-  // Pagina /blog
   &.aq-page-blog {
     .main, .blog-page, .blog-page.section, .blog-page .container-fluid {
       background: #F0F8FF !important;
     }
-
     .aq-bl-hero-title { color: #00204A !important; }
     .aq-bl-hero-sub   { color: rgba(0,32,74,0.7) !important; }
-
     .aq-bl-card {
       background: #FFFFFF !important;
       border-color: rgba(0,122,92,0.15) !important;
-
       .aq-bl-card-title   { color: #00204A !important; }
       .aq-bl-card-excerpt { color: rgba(0,32,74,0.7) !important; }
       .aq-bl-card-date    { color: #007A5C !important; }
       .aq-bl-card-cta     { color: rgba(0,32,74,0.4) !important; }
-
       &:hover {
         border-color: #007A5C !important;
         box-shadow: 0 8px 30px rgba(0,122,92,0.15) !important;
@@ -206,7 +177,6 @@ body.aq-light-mode {
     }
   }
 
-  // Post individual
   &.aq-page-post {
     .main, .blog-post, .post-detail, .well, .well-featured, .well-shadow,
     .content, .post-content, .blog-post .col, .blog-post .row,
@@ -214,20 +184,16 @@ body.aq-light-mode {
       background: #F0F8FF !important;
       color: #00204A !important;
     }
-
     .aq-post-title, .blog-post-title { color: #00204A !important; }
     .aq-post-meta, .post-details     { color: #007A5C !important; background: transparent !important; }
-
     .aq-post-body, .post-content {
       color: rgba(0,32,74,0.85) !important;
       background: transparent !important;
-
-      h2          { color: #00204A !important; }
-      h3          { color: #007A5C !important; }
-      p, li       { color: rgba(0,32,74,0.82) !important; }
-      a           { color: #007A5C !important; }
-      strong, b   { color: #00204A !important; }
-
+      h2        { color: #00204A !important; }
+      h3        { color: #007A5C !important; }
+      p, li     { color: rgba(0,32,74,0.82) !important; }
+      a         { color: #007A5C !important; }
+      strong, b { color: #00204A !important; }
       blockquote {
         border-left-color: #007A5C !important;
         background: rgba(0,122,92,0.04) !important;
@@ -235,52 +201,43 @@ body.aq-light-mode {
     }
   }
 
-  // Paginas estaticas /page/*
   &.aq-page-styled {
     .main, .page.section, .page-content, .well, .well-featured, .well-shadow,
     .page .col, .page .row, .page .container-fluid {
       background: #F0F8FF !important;
       color: #00204A !important;
     }
-
     .aq-pg-hero-title { color: #00204A !important; }
     .aq-pg-hero-sub   { color: rgba(0,32,74,0.7) !important; }
-
     .aq-pg-hero-icon {
       background: rgba(0,122,92,0.1) !important;
       border-color: rgba(0,122,92,0.3) !important;
       i { color: #007A5C !important; }
     }
-
     .aq-pg-summary {
       background: rgba(0,122,92,0.04) !important;
       border-color: rgba(0,122,92,0.15) !important;
     }
-
     .aq-pg-summary-header {
       border-bottom-color: rgba(0,122,92,0.1) !important;
       i, span { color: #007A5C !important; }
     }
-
     .aq-pg-card        { border-color: rgba(0,122,92,0.08) !important; }
     .aq-pg-card-icon   { background: rgba(0,122,92,0.08) !important; i { color: #007A5C !important; } }
     .aq-pg-card-label  { color: #00204A !important; }
     .aq-pg-card-desc   { color: rgba(0,32,74,0.7) !important; }
-
     .aq-pg-content {
       background: #FFFFFF !important;
       border-color: rgba(0,122,92,0.12) !important;
       color: rgba(0,32,74,0.85) !important;
-
-      h2, h4      { color: #00204A !important; }
-      h3, h5      { color: #007A5C !important; }
-      p, li       { color: rgba(0,32,74,0.82) !important; }
-      a           { color: #007A5C !important; }
-      strong, b   { color: #00204A !important; }
+      h2, h4    { color: #00204A !important; }
+      h3, h5    { color: #007A5C !important; }
+      p, li     { color: rgba(0,32,74,0.82) !important; }
+      a         { color: #007A5C !important; }
+      strong, b { color: #00204A !important; }
     }
   }
 
-  // Botoes globais
   .aq-btn-primary {
     background: linear-gradient(90deg, #007A5C, #005FA3) !important;
     color: #FFFFFF !important;
@@ -290,11 +247,9 @@ body.aq-light-mode {
   .aq-btn-outline {
     border-color: #007A5C !important;
     color: #007A5C !important;
-
     &:hover { background: #007A5C !important; color: #FFFFFF !important; }
   }
 
-  // Barra de progresso e badge %
   .aq-read-progress-fill {
     background: linear-gradient(90deg, #007A5C, #005FA3) !important;
   }
@@ -303,24 +258,20 @@ body.aq-light-mode {
     background: rgba(240,248,255,0.95) !important;
     border-color: rgba(0,122,92,0.3) !important;
     color: #007A5C !important;
-
-    #aq-read-pct-num    { color: #007A5C !important; }
-    .aq-read-pct-label  { color: rgba(0,122,92,0.6) !important; }
+    #aq-read-pct-num   { color: #007A5C !important; }
+    .aq-read-pct-label { color: rgba(0,122,92,0.6) !important; }
   }
 
-  // Botao toggle em modo claro
   #aq-theme-toggle {
     background: rgba(255,255,255,0.92) !important;
     border-color: rgba(0,122,92,0.35) !important;
     box-shadow: 0 4px 20px rgba(0,32,74,0.12) !important;
-
     &:hover {
       border-color: #007A5C !important;
       box-shadow: 0 0 20px rgba(0,122,92,0.25), 0 4px 20px rgba(0,32,74,0.12) !important;
     }
   }
 
-  // Breadcrumb
   .breadcrumbs a, .breadcrumbs li, .breadcrumbs span {
     color: rgba(0,32,74,0.5) !important;
   }
