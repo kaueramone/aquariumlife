@@ -1,0 +1,442 @@
+@use '../base/variables' as *;
+
+// ============================================================
+// PAGINAS ESPECIAIS: /sales, /new, /contact
+// Body classes: .page-sales, .page-new, .page-contact
+// ============================================================
+
+// -- Hero injetado via JS (partilhado) -----------------------
+.aq-sp-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 64px 24px 56px;
+  text-align: center;
+  background: transparent;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(8, 238, 188, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 10%; right: 10%; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(8, 238, 188, 0.2), transparent);
+    pointer-events: none;
+  }
+}
+
+.aq-sp-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(8, 238, 188, 0.08);
+  border: 1px solid rgba(8, 238, 188, 0.25);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-family: $font-family-title;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: $color-neon-accent;
+  margin-bottom: 18px;
+}
+
+.aq-sp-title {
+  font-family: $font-family-title;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: $color-text-primary;
+  line-height: 1.15;
+  margin: 0 0 14px;
+  letter-spacing: -0.5px;
+
+  span { color: $color-neon-accent; }
+}
+
+.aq-sp-sub {
+  font-family: $font-family-body;
+  font-size: 1rem;
+  color: $color-text-secondary;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+// ============================================================
+// /SALES — Promoções
+// ============================================================
+.page-sales {
+  .products.section {
+    background: $color-bg-primary !important;
+  }
+
+  // Ocultar titulo nativo
+  .products-title {
+    display: none !important;
+  }
+
+  // Estado vazio: "Não existem produtos"
+  .no-products {
+    width: 100%;
+    text-align: center;
+    padding: 60px 20px;
+
+    h2 {
+      color: $color-text-secondary !important;
+      font-family: $font-family-body !important;
+      font-size: 1.1rem !important;
+      font-weight: 400 !important;
+
+      &::before {
+        content: '🏷️  ';
+      }
+    }
+  }
+
+  // Badge de promoção em destaque
+  .badge.sale,
+  .badge.discount {
+    background: linear-gradient(135deg, #ff3d5c, #ff6b35) !important;
+    box-shadow: 0 0 12px rgba(255, 61, 92, 0.5) !important;
+    animation: aq-pulse-sale 2s ease-in-out infinite;
+  }
+}
+
+@keyframes aq-pulse-sale {
+  0%, 100% { box-shadow: 0 0 8px rgba(255, 61, 92, 0.4); }
+  50%       { box-shadow: 0 0 20px rgba(255, 61, 92, 0.8); }
+}
+
+// ============================================================
+// /NEW — Novidades
+// ============================================================
+.page-new {
+  .products.section {
+    background: $color-bg-primary !important;
+  }
+
+  .products-title {
+    display: none !important;
+  }
+
+  // Badge "Novidade" com brilho extra
+  .badge.new {
+    background: $color-neon-accent !important;
+    box-shadow: 0 0 12px rgba(8, 238, 188, 0.6) !important;
+    animation: aq-pulse-new 2.5s ease-in-out infinite;
+  }
+}
+
+@keyframes aq-pulse-new {
+  0%, 100% { box-shadow: 0 0 8px rgba(8, 238, 188, 0.4); }
+  50%       { box-shadow: 0 0 22px rgba(8, 238, 188, 0.9); }
+}
+
+// ============================================================
+// /CONTACT — Contactos
+// ============================================================
+.page-contact {
+
+  // Ocultar estrutura nativa
+  .contacts.section {
+    background: $color-bg-primary !important;
+    padding: 0 !important;
+  }
+
+  .contacts-title {
+    display: none !important;
+  }
+
+  // -- Layout de dois painéis --
+  .aq-contact-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 24px 64px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      padding: 32px 16px 48px;
+    }
+  }
+
+  // -- Painel esquerdo: info + horário --
+  .aq-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .aq-contact-card {
+    background: rgba(0, 21, 49, 0.6);
+    border: 1px solid rgba(8, 238, 188, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 16%; width: 68%; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(8, 238, 188, 0.3), transparent);
+    }
+  }
+
+  .aq-contact-card-title {
+    font-family: $font-family-title;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: $color-neon-accent;
+    margin: 0 0 16px;
+  }
+
+  .aq-contact-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+
+    &:last-child { border-bottom: none; }
+
+    i {
+      color: $color-neon-accent;
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    span, a {
+      font-family: $font-family-body;
+      font-size: 0.92rem;
+      color: $color-text-secondary;
+      text-decoration: none;
+      line-height: 1.5;
+
+      &:hover { color: $color-neon-accent; }
+    }
+  }
+
+  // Horário com dias
+  .aq-schedule-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    font-family: $font-family-body;
+    font-size: 0.88rem;
+
+    &:last-child { border-bottom: none; }
+
+    .aq-day   { color: $color-text-secondary; }
+    .aq-hours { color: $color-text-primary; font-weight: 600; }
+    .aq-closed { color: rgba(255, 61, 92, 0.8); font-weight: 600; }
+  }
+
+  // Redes sociais
+  .aq-contact-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 4px;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(8, 238, 188, 0.06);
+      border: 1px solid rgba(8, 238, 188, 0.2);
+      color: $color-neon-accent;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: $transition-fast;
+
+      &:hover {
+        background: rgba(8, 238, 188, 0.15);
+        border-color: $color-neon-accent;
+        box-shadow: 0 0 14px rgba(8, 238, 188, 0.3);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  // -- Painel direito: formulário --
+  .aq-contact-form-wrap {
+    background: rgba(0, 21, 49, 0.6);
+    border: 1px solid rgba(8, 238, 188, 0.1);
+    border-radius: 16px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 16%; width: 68%; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(8, 238, 188, 0.3), transparent);
+    }
+  }
+
+  // Formulário nativo do Shopkit dentro do nosso wrapper
+  .aq-contact-form-wrap form,
+  .contacts-form,
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .aq-form-title {
+    font-family: $font-family-title;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: $color-text-primary;
+    margin: 0 0 20px;
+
+    span { color: $color-neon-accent; }
+  }
+
+  // Inputs do formulário nativo
+  .contacts.section input[type="text"],
+  .contacts.section input[type="email"],
+  .contacts.section input[type="tel"],
+  .contacts.section textarea,
+  .contacts.section select {
+    width: 100% !important;
+    background: rgba(0, 4, 13, 0.6) !important;
+    border: 1px solid rgba(8, 238, 188, 0.2) !important;
+    border-radius: 10px !important;
+    color: $color-text-primary !important;
+    font-family: $font-family-body !important;
+    font-size: 0.92rem !important;
+    padding: 12px 16px !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+    box-sizing: border-box !important;
+
+    &::placeholder { color: rgba(255, 255, 255, 0.3) !important; }
+
+    &:focus {
+      outline: none !important;
+      border-color: $color-neon-accent !important;
+      box-shadow: 0 0 0 3px rgba(8, 238, 188, 0.1) !important;
+    }
+  }
+
+  .contacts.section textarea {
+    min-height: 130px !important;
+    resize: vertical !important;
+  }
+
+  // Labels
+  .contacts.section label {
+    font-family: $font-family-body !important;
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
+    margin-bottom: 4px !important;
+    display: block !important;
+  }
+
+  // Botão de envio
+  .contacts.section button[type="submit"],
+  .contacts.section input[type="submit"],
+  .contacts.section .btn-submit {
+    background: linear-gradient(90deg, $color-neon-accent, #05c99e) !important;
+    border: none !important;
+    border-radius: 10px !important;
+    color: #001531 !important;
+    font-family: $font-family-title !important;
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    padding: 14px 32px !important;
+    cursor: pointer !important;
+    width: 100% !important;
+    transition: opacity 0.2s ease, transform 0.2s ease !important;
+
+    &:hover {
+      opacity: 0.88 !important;
+      transform: translateY(-1px) !important;
+    }
+  }
+
+  // Mapa nativo
+  .contacts.section .contact-map,
+  .contacts.section iframe {
+    width: 100% !important;
+    height: 220px !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(8, 238, 188, 0.15) !important;
+    filter: grayscale(0.4) brightness(0.85) !important;
+    margin-top: 8px !important;
+  }
+
+  // Ocultar endereço nativo (vamos reinjetar via JS)
+  .contact-address,
+  .contacts-details .row:first-child {
+    display: none !important;
+  }
+}
+
+// -- Light mode overrides para paginas especiais --
+body.aq-light-mode {
+  .aq-contact-card,
+  .aq-contact-form-wrap {
+    background: #FFFFFF !important;
+    border-color: rgba(0, 122, 92, 0.15) !important;
+  }
+
+  .aq-contact-card-title { color: #007A5C !important; }
+
+  .aq-contact-row {
+    border-bottom-color: rgba(0, 32, 74, 0.06) !important;
+    i { color: #007A5C !important; }
+    span, a { color: rgba(0, 32, 74, 0.75) !important; }
+  }
+
+  .aq-schedule-row {
+    border-bottom-color: rgba(0, 32, 74, 0.06) !important;
+    .aq-day   { color: rgba(0, 32, 74, 0.6) !important; }
+    .aq-hours { color: #00204A !important; }
+  }
+
+  .aq-contact-social a {
+    background: rgba(0, 122, 92, 0.06) !important;
+    border-color: rgba(0, 122, 92, 0.2) !important;
+    color: #007A5C !important;
+    &:hover { background: rgba(0, 122, 92, 0.12) !important; border-color: #007A5C !important; }
+  }
+
+  .page-contact .contacts.section input,
+  .page-contact .contacts.section textarea,
+  .page-contact .contacts.section select {
+    background: #F0F8FF !important;
+    border-color: rgba(0, 122, 92, 0.2) !important;
+    color: #00204A !important;
+    &::placeholder { color: rgba(0, 32, 74, 0.35) !important; }
+    &:focus { border-color: #007A5C !important; box-shadow: 0 0 0 3px rgba(0, 122, 92, 0.08) !important; }
+  }
+
+  .page-contact .contacts.section label {
+    color: rgba(0, 32, 74, 0.6) !important;
+  }
+
+  .no-products h2 { color: rgba(0, 32, 74, 0.5) !important; }
+}

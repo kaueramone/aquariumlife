@@ -11,6 +11,7 @@ import { initBlogSection }     from './modules/blogSection.js';
 import { initPagesSection }    from './modules/pagesSection.js';
 import { initThemeToggle }     from './modules/themeToggle.js';
 import { initTrustSeals }      from './modules/trustSeals.js';
+import { initSpecialPages }    from './modules/specialPages.js';
 import { initHome }            from './modules/homeOrchestrator.js';
 
 function init() {
@@ -30,6 +31,9 @@ function init() {
 
   // Redesign de paginas estaticas /page/*
   initPagesSection();
+
+  // Redesign de /sales, /new e /contact
+  initSpecialPages();
 
   // Toggle dark/light mode (lampada flutuante)
   initThemeToggle();
