@@ -244,6 +244,7 @@ body.aq-page-post {
     background-color: $color-bg-primary !important;
     color: rgba(255, 255, 255, 0.88) !important;
     box-shadow: none !important;
+    border: none !important;
   }
 
   .breadcrumbs, .breadcrumb, .breadcrumbs.hidden-xs, [class*="breadcrumb"] {
@@ -615,5 +616,6 @@ body.aq-page-blog {
 }
 
 @media (max-width: 480px) {
-  .aq-section-title { font-size: 1.6rem; }
+  .aq-section-title { font-size: 1.5rem; }
+  .aq-bl-card-title { font-size: 0.95rem; }
 }

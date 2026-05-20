@@ -43,7 +43,7 @@
 
 
 // ============================================================
-// MODO CLARO — body.aq-light-mode
+// MODO CLARO -- body.aq-light-mode
 // REGRA DE OURO: header, nav, footer NAO sao afectados
 // ============================================================
 body.aq-light-mode {
@@ -59,19 +59,30 @@ body.aq-light-mode {
     background: #F0F8FF !important;
   }
 
-  // ── Categorias ────────────────────────────────────────────────────────────
-  // So o nome das categorias muda — o icone e o container nao
+  // Categorias: so o nome muda
   .aq-cat-name {
     color: #00204A !important;
   }
 
-  // ── Produtos do Shopkit ───────────────────────────────────────────────────
   // Fundo da seccao de produtos
   .products.section, .products-main {
     background: #F0F8FF !important;
   }
 
-  // Card do produto: preview (imagem) e categoria ficam claros
+  // Card do produto completo (imagem + categoria + nome + preco + botao)
+  .card-shadow-hover {
+    background: #FFFFFF !important;
+    border-color: rgba(0, 122, 92, 0.15) !important;
+    box-shadow: 0 6px 24px rgba(0, 32, 74, 0.1) !important;
+
+    &::before { display: none !important; }
+
+    &:hover {
+      box-shadow: 0 18px 36px rgba(0, 32, 74, 0.15) !important;
+    }
+  }
+
+  // Area de imagem do produto
   .product-preview {
     background: rgba(240, 248, 255, 0.9) !important;
   }
@@ -79,7 +90,6 @@ body.aq-light-mode {
   .product-category {
     background: #E0F0FF !important;
     color: #00204A !important;
-
     a { color: #005FA3 !important; }
   }
 
@@ -108,7 +118,7 @@ body.aq-light-mode {
     }
   }
 
-  // ── Secoes personalizadas ─────────────────────────────────────────────────
+  // Secoes personalizadas
   #aq-brands, #aq-store, #aq-faq, #aq-blog-home, #aq-categories, #aq-trust-seals {
     background: #F0F8FF !important;
   }
@@ -136,7 +146,6 @@ body.aq-light-mode {
 
   .aq-faq-q {
     color: #00204A !important;
-
     &:hover, &[aria-expanded="true"] { color: #007A5C !important; }
   }
 
@@ -170,7 +179,7 @@ body.aq-light-mode {
     }
   }
 
-  // ── Pagina /blog ──────────────────────────────────────────────────────────
+  // Pagina /blog
   &.aq-page-blog {
     .main, .blog-page, .blog-page.section, .blog-page .container-fluid {
       background: #F0F8FF !important;
@@ -196,7 +205,7 @@ body.aq-light-mode {
     }
   }
 
-  // ── Post individual ───────────────────────────────────────────────────────
+  // Post individual
   &.aq-page-post {
     .main, .blog-post, .post-detail, .well, .well-featured, .well-shadow,
     .content, .post-content, .blog-post .col, .blog-post .row,
@@ -225,7 +234,7 @@ body.aq-light-mode {
     }
   }
 
-  // ── Paginas estaticas /page/* ─────────────────────────────────────────────
+  // Paginas estaticas /page/*
   &.aq-page-styled {
     .main, .page.section, .page-content, .well, .well-featured, .well-shadow,
     .page .col, .page .row, .page .container-fluid {
@@ -270,7 +279,7 @@ body.aq-light-mode {
     }
   }
 
-  // ── Botoes globais ────────────────────────────────────────────────────────
+  // Botoes globais
   .aq-btn-primary {
     background: linear-gradient(90deg, #007A5C, #005FA3) !important;
     color: #FFFFFF !important;
@@ -284,7 +293,7 @@ body.aq-light-mode {
     &:hover { background: #007A5C !important; color: #FFFFFF !important; }
   }
 
-  // ── Barra de progresso e badge % ──────────────────────────────────────────
+  // Barra de progresso e badge %
   .aq-read-progress-fill {
     background: linear-gradient(90deg, #007A5C, #005FA3) !important;
   }
