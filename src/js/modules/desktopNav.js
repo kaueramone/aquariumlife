@@ -9,9 +9,9 @@ const MENU = [
     icon: 'fas fa-tools',
     href: '/category/equipamento',
     children: [
-      { label: 'Filtros Externos',  icon: 'fas fa-filter',             href: '/category/equipamento-filtros-externos' },
-      { label: 'Filtros Internos',  icon: 'fas fa-filter',             href: '/category/equipamento-filtros-internos' },
-      { label: 'Filtros Cascata',   icon: 'fas fa-water',              href: '/category/equipamento-filtros-cascata' },
+      { label: 'Filtros Externos',  icon: 'fas fa-recycle',            href: '/category/equipamento-filtros-externos' },
+      { label: 'Filtros Internos',  icon: 'fas fa-stream',             href: '/category/equipamento-filtros-internos' },
+      { label: 'Filtros Cascata',   icon: 'fas fa-tint',               href: '/category/equipamento-filtros-cascata' },
       { label: 'Medicacao',         icon: 'fas fa-pills',              href: '/category/equipamento-medicacao' },
       { label: 'Termostatos',       icon: 'fas fa-thermometer-half',   href: '/category/equipamento-termostatos' },
       { label: 'Fertilizantes',     icon: 'fas fa-flask',              href: '/category/equipamento-fertilizantes' },
