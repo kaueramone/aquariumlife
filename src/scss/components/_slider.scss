@@ -47,11 +47,14 @@
     display: none !important;
   }
 
-  // Banner principal: aumentar altura ~20% no mobile (600px nativo -> 720px)
-  .slideshow-gallery,
-  .slideshow-gallery .slick-list,
-  .slideshow-gallery .slick-track,
-  .slideshow-gallery .slick-slide,
+  // Banner principal: aumentar altura ~20% no mobile (600px -> 720px)
+  // Aplicar no container da seccao para o flow normal nao ser quebrado
+  .home-slideshow {
+    height: 720px !important;
+    min-height: 720px !important;
+    overflow: hidden !important;
+  }
+
   .home-slideshow .slideshow-gallery,
   .home-slideshow .slick-list,
   .home-slideshow .slick-track,
