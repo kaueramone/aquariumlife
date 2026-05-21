@@ -3,6 +3,7 @@
 // ============================================================
 // FILTROS DE CATEGORIA
 // Scope: .page-category (body class do Shopkit)
+// O Shopkit usa nice-select para o sort (div gerado por JS)
 // ============================================================
 
 .page-category {
@@ -64,7 +65,9 @@
     flex-wrap: wrap;
   }
 
-  // Dropdowns nativos (Preco + Categoria)
+  // --------------------------------------------------------
+  // Dropdowns nativos Bootstrap (Preco + Categoria)
+  // --------------------------------------------------------
   .dropdown.filter {
     position: relative;
 
@@ -73,9 +76,9 @@
       align-items: center;
       gap: 6px;
       padding: 7px 14px;
-      background: rgba(0, 4, 13, 0.5);
-      border: 1px solid rgba(8, 238, 188, 0.2);
-      border-radius: 8px;
+      background: rgba(0, 4, 13, 0.5) !important;
+      border: 1px solid rgba(8, 238, 188, 0.2) !important;
+      border-radius: 8px !important;
       font-family: $font-family-body;
       font-size: 0.84rem;
       font-weight: 600;
@@ -100,13 +103,12 @@
         border-top: 5px solid rgba(8, 238, 188, 0.7);
         margin-left: 4px;
         transition: transform 0.2s ease;
-        order: 99;
       }
 
       &:hover,
       &[aria-expanded="true"] {
-        background: rgba(8, 238, 188, 0.08);
-        border-color: rgba(8, 238, 188, 0.5);
+        background: rgba(8, 238, 188, 0.08) !important;
+        border-color: rgba(8, 238, 188, 0.5) !important;
         color: $color-neon-accent !important;
         &::before { border-top-color: $color-neon-accent; }
       }
@@ -147,61 +149,98 @@
     }
   }
 
-  // Select de ordenacao
+  // --------------------------------------------------------
+  // Nice-select (ordenacao) -- gerado por JS pelo Shopkit
+  // Classe: .nice-select.form-control.js-order-by
+  // --------------------------------------------------------
   .filters-field {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-left: auto;
 
-    label {
-      font-family: $font-family-body;
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: $color-text-secondary;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      white-space: nowrap;
-    }
-
-    select,
-    select.form-control,
-    select.js-order-by {
-      appearance: none !important;
-      -webkit-appearance: none !important;
-      -moz-appearance: none !important;
-      background-color: rgba(0, 4, 13, 0.5) !important;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%2308EEBC' opacity='0.8'/%3E%3C/svg%3E") !important;
-      background-repeat: no-repeat !important;
-      background-position: right 12px center !important;
+    // nice-select container
+    .nice-select {
+      background: rgba(0, 4, 13, 0.5) !important;
       border: 1px solid rgba(8, 238, 188, 0.2) !important;
       border-radius: 8px !important;
       color: $color-text-primary !important;
       font-family: $font-family-body !important;
       font-size: 0.84rem !important;
       font-weight: 600 !important;
-      padding: 7px 36px 7px 14px !important;
       height: auto !important;
       line-height: normal !important;
-      cursor: pointer;
-      transition: $transition-fast;
+      padding: 7px 36px 7px 14px !important;
       min-width: 150px;
+      float: none !important;
       box-shadow: none !important;
-      &:hover,
-      &:focus {
-        outline: none !important;
-        border-color: rgba(8, 238, 188, 0.5) !important;
-        background-color: rgba(8, 238, 188, 0.06) !important;
-        box-shadow: none !important;
+      transition: $transition-fast;
+
+      // Seta do nice-select
+      &::after {
+        border-bottom: 2px solid rgba(8, 238, 188, 0.7) !important;
+        border-right: 2px solid rgba(8, 238, 188, 0.7) !important;
+        height: 7px !important;
+        width: 7px !important;
+        right: 14px !important;
+        margin-top: -5px !important;
       }
-      option {
-        background: #001531 !important;
-        color: $color-text-primary;
+
+      &.open,
+      &:hover {
+        background: rgba(8, 238, 188, 0.06) !important;
+        border-color: rgba(8, 238, 188, 0.5) !important;
+        &::after {
+          border-color: $color-neon-accent !important;
+        }
+      }
+
+      // Texto selecionado
+      .current {
+        color: $color-text-primary !important;
+        font-family: $font-family-body !important;
+        font-size: 0.84rem !important;
+        font-weight: 600 !important;
+      }
+
+      // Dropdown de opcoes
+      .list {
+        background: rgba(0, 21, 49, 0.97) !important;
+        border: 1px solid rgba(8, 238, 188, 0.2) !important;
+        border-radius: 10px !important;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+        padding: 6px !important;
+        min-width: 180px;
+        margin-top: 4px !important;
+
+        .option {
+          font-family: $font-family-body !important;
+          font-size: 0.84rem !important;
+          color: $color-text-secondary !important;
+          border-radius: 6px !important;
+          padding: 8px 12px !important;
+          min-height: auto !important;
+          line-height: normal !important;
+          background: transparent !important;
+
+          &:hover,
+          &.focus,
+          &.selected {
+            background: rgba(8, 238, 188, 0.1) !important;
+            color: $color-neon-accent !important;
+          }
+
+          &.selected {
+            font-weight: 600 !important;
+          }
+        }
       }
     }
   }
 
+  // --------------------------------------------------------
   // Paginacao
+  // --------------------------------------------------------
   .pagination {
     display: flex;
     justify-content: center;
@@ -247,7 +286,9 @@
     }
   }
 
+  // --------------------------------------------------------
   // Light mode
+  // --------------------------------------------------------
   &.aq-light-mode {
     .filters.js-filters {
       background: rgba(240, 248, 255, 0.85);
@@ -260,13 +301,13 @@
       &:hover { background: rgba(0, 122, 92, 0.12); border-color: #007A5C; }
     }
     .dropdown.filter > a.dropdown-toggle {
-      background: #fff;
-      border-color: rgba(0, 122, 92, 0.2);
+      background: rgba(255,255,255,0.9) !important;
+      border-color: rgba(0, 122, 92, 0.2) !important;
       color: #00204A !important;
       &::before { border-top-color: #007A5C; }
       &:hover, &[aria-expanded="true"] {
-        background: rgba(0, 122, 92, 0.06);
-        border-color: #007A5C;
+        background: rgba(0, 122, 92, 0.06) !important;
+        border-color: #007A5C !important;
         color: #007A5C !important;
         &::before { border-top-color: #007A5C; }
       }
@@ -276,13 +317,17 @@
       color: rgba(0, 32, 74, 0.75) !important;
       &:hover, &.active { background: rgba(0, 122, 92, 0.08) !important; color: #007A5C !important; }
     }
-    .filters-field {
-      select, select.form-control, select.js-order-by {
-        background-color: #fff !important;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23007A5C' opacity='0.8'/%3E%3C/svg%3E") !important;
-        border-color: rgba(0, 122, 92, 0.2) !important;
-        color: #00204A !important;
-        &:hover, &:focus { border-color: #007A5C !important; background-color: rgba(0, 122, 92, 0.04) !important; }
+    .filters-field .nice-select {
+      background: #fff !important;
+      border-color: rgba(0, 122, 92, 0.2) !important;
+      color: #00204A !important;
+      &::after { border-color: #007A5C !important; }
+      &.open, &:hover { background: rgba(0, 122, 92, 0.04) !important; border-color: #007A5C !important; }
+      .current { color: #00204A !important; }
+      .list { background: #fff !important; border-color: rgba(0, 122, 92, 0.2) !important; }
+      .option {
+        color: rgba(0, 32, 74, 0.75) !important;
+        &:hover, &.focus, &.selected { background: rgba(0, 122, 92, 0.08) !important; color: #007A5C !important; }
       }
     }
     .pagination li {
@@ -301,7 +346,9 @@
     }
   }
 
+  // --------------------------------------------------------
   // Mobile
+  // --------------------------------------------------------
   @media (max-width: 768px) {
     .filters.js-filters { padding: 10px 12px; border-radius: 10px; }
     .filters-sorting { gap: 8px; }
@@ -309,7 +356,7 @@
       width: 100%;
       margin-left: 0;
       margin-top: 4px;
-      select { flex: 1; }
+      .nice-select { flex: 1; width: 100% !important; }
     }
     .dropdown.filter > a.dropdown-toggle { font-size: 0.8rem; padding: 6px 11px; }
   }
