@@ -12,6 +12,7 @@ import { initPagesSection }    from './modules/pagesSection.js';
 import { initThemeToggle }     from './modules/themeToggle.js';
 import { initTrustSeals }      from './modules/trustSeals.js';
 import { initSpecialPages }    from './modules/specialPages.js';
+import { initCategoryFilters } from './modules/categoryFilters.js';
 import { initHome }            from './modules/homeOrchestrator.js';
 
 function init() {
@@ -34,6 +35,9 @@ function init() {
 
   // Redesign de /sales, /new e /contact
   initSpecialPages();
+
+  // Slider de preco + layout filtros nas paginas de categoria
+  initCategoryFilters();
 
   // Toggle dark/light mode (lampada flutuante)
   initThemeToggle();
