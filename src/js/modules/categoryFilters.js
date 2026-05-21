@@ -1,20 +1,17 @@
-// categoryFilters.js
-// Slider de preco com dados reais da API Shopkit
-// Carrega todos os produtos da categoria em background, filtra sem reload
+// categoryFilters.js v2
+// Carrega produtos de JSON estatico no jsDelivr (sem CORS)
+// Slider 0.50EUR-370EUR, loader no grid, filtra sem reload
 
-const API_KEY = '8b7fe50a1dc3989465fadc39b7def6994c3d75fb';
-const PRICE_MIN_GLOBAL = 0.5;
-const PRICE_MAX_GLOBAL = 370;
+const REPO = 'kaueramone/aquariumlife';
+const JSON_FILE = 'dist/products-cat-527348.json';
 
 export function initCategoryFilters() {
   if (!document.body.classList.contains('page-category')) return;
+  const catId = getCategoryId();
+  if (!catId) return;
 
   const ready = () => {
-    const catId = getCategoryId();
-    if (!catId) return;
-
     injectPriceSlider(catId);
-    equalizeFilterLayout();
   };
 
   if (document.readyState === 'loading') {
@@ -24,10 +21,48 @@ export function initCategoryFilters() {
   }
 }
 
-// Extrair category ID do body class (ex: category-id-527348)
 function getCategoryId() {
-  const match = document.body.className.match(/category-id-(\d+)/);
-  return match ? match[1] : null;
+  const m = document.body.className.match(/category-id-(\d+)/);
+  return m ? m[1] : null;
+}
+
+// ----------------------------------------------------------------
+// Loader no grid de produtos
+// ----------------------------------------------------------------
+function showGridLoader() {
+  const grid = getProductsContainer();
+  if (!grid) return;
+  grid.style.opacity = '0.4';
+  grid.style.pointerEvents = 'none';
+
+  let loader = document.getElementById('aq-grid-loader');
+  if (!loader) {
+    loader = document.createElement('div');
+    loader.id = 'aq-grid-loader';
+    loader.innerHTML = `
+      <div class="aq-loader-spinner"></div>
+      <span>A filtrar...</span>
+    `;
+    grid.parentElement.style.position = 'relative';
+    grid.parentElement.appendChild(loader);
+  }
+  loader.style.display = 'flex';
+}
+
+function hideGridLoader() {
+  const grid = getProductsContainer();
+  if (grid) {
+    grid.style.opacity = '';
+    grid.style.pointerEvents = '';
+  }
+  const loader = document.getElementById('aq-grid-loader');
+  if (loader) loader.style.display = 'none';
+}
+
+function getProductsContainer() {
+  return document.querySelector('.products.section .row') ||
+         document.querySelector('.products-list') ||
+         document.querySelector('.products .row');
 }
 
 // ----------------------------------------------------------------
@@ -40,22 +75,21 @@ function injectPriceSlider(catId) {
   // Ocultar dropdown nativo
   priceDropdown.style.display = 'none';
 
-  // Criar slider com range global
   const wrap = document.createElement('div');
   wrap.id = 'aq-price-filter';
   wrap.innerHTML = `
     <div class="aq-pf-label">
       <span class="aq-pf-title">Preco</span>
-      <span class="aq-pf-range" id="aq-pf-range">${PRICE_MIN_GLOBAL.toFixed(0)}&#8364; &ndash; ${PRICE_MAX_GLOBAL.toFixed(0)}&#8364;</span>
+      <span class="aq-pf-range" id="aq-pf-range">0&#8364; &ndash; 370&#8364;</span>
     </div>
     <div class="aq-pf-track-wrap">
       <div class="aq-pf-track">
         <div class="aq-pf-fill" id="aq-pf-fill"></div>
       </div>
-      <input type="range" id="aq-pf-min" min="${PRICE_MIN_GLOBAL}" max="${PRICE_MAX_GLOBAL}" value="${PRICE_MIN_GLOBAL}" step="0.5">
-      <input type="range" id="aq-pf-max" min="${PRICE_MIN_GLOBAL}" max="${PRICE_MAX_GLOBAL}" value="${PRICE_MAX_GLOBAL}" step="0.5">
+      <input type="range" id="aq-pf-min" min="0" max="370" value="0" step="1">
+      <input type="range" id="aq-pf-max" min="0" max="370" value="370" step="1">
     </div>
-    <div class="aq-pf-status" id="aq-pf-status"></div>
+    <div class="aq-pf-status" id="aq-pf-status">A carregar produtos...</div>
   `;
 
   const filtersWrap = document.querySelector('.filters-wrap');
@@ -69,23 +103,22 @@ function injectPriceSlider(catId) {
   const fill = document.getElementById('aq-pf-fill');
   const status = document.getElementById('aq-pf-status');
 
-  // Estado
-  let allProducts = null; // null = ainda a carregar
-  let currentMin = PRICE_MIN_GLOBAL;
-  let currentMax = PRICE_MAX_GLOBAL;
+  let allProducts = null;
+  let globalMin = 0;
+  let globalMax = 370;
+  let currentMin = 0;
+  let currentMax = 370;
   let applyTimer = null;
-
-  // Guardar grid original para restaurar
-  const productsGrid = document.querySelector('.products.section, .products-list, [class*="products-grid"], .main .row');
+  let isFiltered = false;
 
   function updateFill() {
-    const pct = (v) => ((v - PRICE_MIN_GLOBAL) / (PRICE_MAX_GLOBAL - PRICE_MIN_GLOBAL)) * 100;
+    const pct = (v) => ((v - globalMin) / (globalMax - globalMin)) * 100;
     fill.style.left = pct(currentMin) + '%';
     fill.style.width = (pct(currentMax) - pct(currentMin)) + '%';
   }
 
   function updateLabel() {
-    rangeLabel.textContent = currentMin.toFixed(0) + '€ – ' + currentMax.toFixed(0) + '€';
+    rangeLabel.textContent = currentMin.toFixed(2).replace('.', ',') + '€ – ' + currentMax.toFixed(2).replace('.', ',') + '€';
   }
 
   function onSliderInput() {
@@ -100,132 +133,114 @@ function injectPriceSlider(catId) {
   }
 
   function onSliderChange() {
-    // Ao soltar -- aplicar filtro
     clearTimeout(applyTimer);
-    applyTimer = setTimeout(() => applyFilter(), 300);
+    applyTimer = setTimeout(() => applyFilter(), 400);
   }
 
   function applyFilter() {
     if (!allProducts) {
-      // Ainda a carregar -- aguardar
-      status.textContent = 'A carregar produtos...';
-      status.style.display = 'block';
+      status.textContent = 'Ainda a carregar...';
       return;
     }
+
     const filtered = allProducts.filter(p => p.price >= currentMin && p.price <= currentMax);
+    isFiltered = true;
     renderProducts(filtered);
   }
 
   function renderProducts(products) {
-    // Encontrar o container dos produtos
-    const grid = document.querySelector('.products.section');
-    if (!grid) return;
+    showGridLoader();
 
-    const container = grid.querySelector('.row, .products-grid, ul');
-    if (!container) return;
+    // Pequeno delay para o loader aparecer antes do render
+    setTimeout(() => {
+      const container = getProductsContainer();
+      if (!container) { hideGridLoader(); return; }
 
-    // Limpar e reinjetar
-    container.innerHTML = '';
+      container.innerHTML = '';
 
-    if (!products.length) {
-      container.innerHTML = '<div class="col-12" style="text-align:center;padding:60px 20px;color:rgba(255,255,255,0.5);font-family:Open Sans,sans-serif;">Nenhum produto neste intervalo de preco.</div>';
-      status.style.display = 'none';
-      return;
-    }
+      if (!products.length) {
+        container.innerHTML = `
+          <div style="flex:1;text-align:center;padding:60px 20px;color:rgba(255,255,255,0.5);font-family:'Open Sans',sans-serif;width:100%;">
+            <i class="fas fa-search" style="font-size:2rem;margin-bottom:12px;display:block;opacity:0.3;"></i>
+            Nenhum produto neste intervalo de preco.
+          </div>`;
+        hideGridLoader();
+        status.textContent = '0 produtos';
+        return;
+      }
 
-    products.forEach(p => {
-      const priceDisplay = p.price_promo
-        ? `<del style="opacity:0.5;font-size:0.85em;">${p.price_formatted}</del> <span class="price">${p.price_promo_formatted}</span>`
-        : `<span class="price">${p.price_formatted}</span>`;
+      const noImg = 'https://cdn-shopkit.com/assets/store/img/no-img.png';
 
-      const imgUrl = p.image_square || 'https://cdn-shopkit.com/assets/store/img/no-img.png';
+      products.forEach(p => {
+        const priceHTML = p.pp
+          ? `<del style="opacity:0.5;font-size:0.82em;margin-right:4px;">${p.pf}</del><span class="price" style="color:#08EEBC;">${p.ppf}</span>`
+          : `<span class="price">${p.pf}</span>`;
 
-      const col = document.createElement('div');
-      col.className = 'col-6 col-sm-4 col-md-4 col-lg-4';
-      col.innerHTML = `
-        <div class="product active hover-effect-floating fade-in-on-scroll" data-id="${p.id}">
-          <div class="card-shadow-hover">
-            <div class="product-view">
-              <a class="product-preview" href="${p.url}" data-thumbnail-type="square">
-                <img class="product-pic" src="${imgUrl}" alt="${p.title}">
-              </a>
-              <div class="product-info">
-                <a class="product-title" href="${p.url}">${p.title}</a>
-                <div class="product-price">${priceDisplay}</div>
-              </div>
-              <div class="product-actions">
-                <a class="btn btn-primary add-cart" href="${p.add_cart_url}">Comprar</a>
+        const col = document.createElement('div');
+        col.className = 'col-6 col-sm-4 col-md-4';
+        col.innerHTML = `
+          <div class="product active hover-effect-floating fade-in-on-scroll" data-id="${p.id}">
+            <div class="card-shadow-hover">
+              <div class="product-view">
+                <span class="product-badges" data-position="top-left"></span>
+                <a class="product-preview" href="${p.url}" data-thumbnail-type="square">
+                  <img class="product-pic" src="${p.img || noImg}" alt="${p.title}" loading="lazy">
+                </a>
+                <div class="product-info">
+                  <a class="product-title" href="${p.url}">${p.title}</a>
+                  <div class="product-price">${priceHTML}</div>
+                </div>
+                <div class="product-actions">
+                  <a class="btn btn-primary" href="${p.cart}">Comprar</a>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      `;
-      container.appendChild(col);
-    });
+          </div>`;
+        container.appendChild(col);
+      });
 
-    status.textContent = filtered.length + ' produto' + (filtered.length !== 1 ? 's' : '');
-    status.style.display = 'block';
+      hideGridLoader();
+      status.textContent = products.length + ' produto' + (products.length !== 1 ? 's' : '');
 
-    // Re-aplicar animacoes
-    setTimeout(() => {
-      container.querySelectorAll('.fade-in-on-scroll').forEach(el => el.classList.add('is-visible'));
-    }, 50);
+      // Trigger animacoes
+      setTimeout(() => {
+        container.querySelectorAll('.fade-in-on-scroll').forEach(el => el.classList.add('is-visible'));
+      }, 50);
+    }, 80);
   }
 
-  // Referencia para applyFilter apos carregar
-  let filtered = [];
-
-  // Carregar todos os produtos da API em background
-  async function loadAllProducts(catId) {
-    status.textContent = 'A carregar...';
-    status.style.display = 'block';
-
+  // Carregar JSON estatico via jsDelivr (sem CORS)
+  async function loadProducts() {
     try {
-      const products = [];
-      let page = 1;
-      const baseUrl = `https://api.shopk.it/v1/product?category=${catId}&limit=50`;
+      // Usar o hash mais recente via @latest -- jsDelivr resolve automaticamente
+      const url = `https://cdn.jsdelivr.net/gh/${REPO}@main/${JSON_FILE}?t=${Date.now()}`;
+      const res = await fetch(url);
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
 
-      while (true) {
-        const res = await fetch(`${baseUrl}&page=${page}`, {
-          headers: { 'X-API-KEY': API_KEY }
-        });
-        if (!res.ok) break;
-        const data = await res.json();
-        const items = Object.entries(data)
-          .filter(([k]) => !isNaN(k))
-          .map(([, v]) => v)
-          .filter(v => v.status === 1);
+      allProducts = data.products;
+      globalMin = Math.floor(data.min * 10) / 10;
+      globalMax = Math.ceil(data.max);
 
-        if (!items.length) break;
+      // Atualizar slider com valores reais
+      minInput.min = globalMin;
+      minInput.max = globalMax;
+      minInput.value = globalMin;
+      minInput.step = '0.5';
+      maxInput.min = globalMin;
+      maxInput.max = globalMax;
+      maxInput.value = globalMax;
+      maxInput.step = '0.5';
+      currentMin = globalMin;
+      currentMax = globalMax;
 
-        items.forEach(p => {
-          products.push({
-            id: p.id,
-            title: p.title,
-            price: p.price || 0,
-            price_formatted: p.price_formatted,
-            price_promo: p.price_promo,
-            price_promo_formatted: p.price_promo_formatted,
-            url: p.url,
-            add_cart_url: p.add_cart_url,
-            image_square: p.image && p.image.square ? p.image.square : null
-          });
-        });
+      updateFill();
+      updateLabel();
+      status.textContent = data.total + ' produtos';
 
-        if (!data.paging || !data.paging.next) break;
-        page++;
-      }
-
-      allProducts = products;
-      status.style.display = 'none';
-
-      // Se o utilizador ja moveu o slider, aplicar agora
-      if (currentMin > PRICE_MIN_GLOBAL || currentMax < PRICE_MAX_GLOBAL) {
-        applyFilter();
-      }
     } catch (e) {
-      status.textContent = 'Erro ao carregar produtos.';
-      console.warn('[AQ] categoryFilters API error:', e);
+      console.warn('[AQ] Erro ao carregar produtos:', e);
+      status.textContent = '';
     }
   }
 
@@ -235,14 +250,5 @@ function injectPriceSlider(catId) {
   maxInput.addEventListener('change', onSliderChange);
 
   updateFill();
-  updateLabel();
-  loadAllProducts(catId);
-}
-
-// ----------------------------------------------------------------
-// Layout igual para os 3 elementos da barra
-// ----------------------------------------------------------------
-function equalizeFilterLayout() {
-  const filtersOpen = document.querySelector('.filters-open.js-filters-open');
-  if (filtersOpen) filtersOpen.style.flex = '0 0 auto';
+  loadProducts();
 }
