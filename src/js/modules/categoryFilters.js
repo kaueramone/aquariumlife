@@ -1,5 +1,7 @@
-// categoryFilters.js v4
-// Fix: container = .products-list, col = .col, filtra todas as pages de categoria
+// categoryFilters.js v5
+// - Dropdown de categorias criado do zero em qualquer page-category
+// - Pre-selecciona a categoria da URL actual
+// - Slider filtra .products-list filhos diretos por data-id
 
 const REPO       = 'kaueramone/aquariumlife';
 const JSON_PRODS = 'dist/products-cat-527348.json';
@@ -56,21 +58,23 @@ function hideGridLoader() {
 }
 
 // ----------------------------------------------------------------
-// Dropdown de categorias — reconstruido com todas as categorias
-// Funciona em qualquer pagina /category/*
+// Dropdown de categorias
+// Cria o elemento se nao existir (ex: /category/alimentacao nao tem
+// o dropdown nativo porque nao tem subcategorias)
 // ----------------------------------------------------------------
 async function rebuildCategoryDropdown() {
-  const dropWrap = document.querySelector('.dropdown.filter[data-type="category"]');
-  if (!dropWrap) return;
+  const filtersSorting = document.querySelector('.filters-sorting');
+  if (!filtersSorting) return;
 
+  // Categoria activa: extraida da URL
   const currentHandle = window.location.pathname
     .replace(/^\/category\//, '')
     .replace(/\/$/, '');
 
+  // Carregar categorias do JSON estatico
   let cats = [];
   try {
-    const url = `https://cdn.jsdelivr.net/gh/${REPO}@main/${JSON_CATS}`;
-    const res = await fetch(url);
+    const res = await fetch(`https://cdn.jsdelivr.net/gh/${REPO}@main/${JSON_CATS}`);
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const data = await res.json();
     cats = data.categories || [];
@@ -79,15 +83,41 @@ async function rebuildCategoryDropdown() {
     return;
   }
 
-  let menu = dropWrap.querySelector('.dropdown-menu');
-  if (!menu) {
-    menu = document.createElement('div');
-    menu.className = 'dropdown-menu';
-    dropWrap.appendChild(menu);
+  // Determinar label da categoria activa
+  function findLabel(handle) {
+    for (const cat of cats) {
+      if (cat.handle === handle) return cat.title;
+      for (const ch of (cat.children || [])) {
+        if (ch.handle === handle) return ch.title;
+      }
+    }
+    return 'Categorias';
   }
-  menu.innerHTML = '';
+  const activeLabel = findLabel(currentHandle);
 
-  // "Todas" aponta para equipamento (categoria mais completa)
+  // Remover dropdown nativo de categoria se existir (vamos substituir)
+  const nativeCatDrop = document.querySelector('.dropdown.filter[data-type="category"]');
+  if (nativeCatDrop) nativeCatDrop.remove();
+
+  // Ocultar dropdown nativo de preco
+  const nativePriceDrop = document.querySelector('.dropdown.filter[data-type="price"]');
+  if (nativePriceDrop) nativePriceDrop.style.display = 'none';
+
+  // Construir o novo dropdown
+  const dropWrap = document.createElement('div');
+  dropWrap.className = 'dropdown filter aq-cat-dropdown';
+  dropWrap.setAttribute('data-type', 'category');
+
+  dropWrap.innerHTML = `
+    <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      ${activeLabel}
+    </a>
+    <div class="dropdown-menu"></div>
+  `;
+
+  const menu = dropWrap.querySelector('.dropdown-menu');
+
+  // "Todas" — aponta para equipamento (maior categoria)
   const allItem = document.createElement('a');
   allItem.className = 'dropdown-item' + (currentHandle === 'equipamento' ? ' active' : '');
   allItem.href = '/category/equipamento';
@@ -99,15 +129,17 @@ async function rebuildCategoryDropdown() {
   menu.appendChild(sep);
 
   cats.forEach(cat => {
+    const isActive = currentHandle === cat.handle;
     const item = document.createElement('a');
-    item.className = 'dropdown-item' + (currentHandle === cat.handle ? ' active' : '');
+    item.className = 'dropdown-item' + (isActive ? ' active' : '');
     item.href = cat.url;
     item.textContent = cat.title;
     menu.appendChild(item);
 
     (cat.children || []).forEach(ch => {
+      const chActive = currentHandle === ch.handle;
       const child = document.createElement('a');
-      child.className = 'dropdown-item' + (currentHandle === ch.handle ? ' active' : '');
+      child.className = 'dropdown-item' + (chActive ? ' active' : '');
       child.href = ch.url;
       child.style.paddingLeft = '22px';
       child.textContent = '↳ ' + ch.title;
@@ -115,25 +147,37 @@ async function rebuildCategoryDropdown() {
     });
   });
 
-  // Actualizar label do toggle
+  // Toggle manual (Bootstrap dropdown pode nao estar a funcionar para elementos injectados)
   const toggle = dropWrap.querySelector('.dropdown-toggle');
-  if (toggle) {
-    const active = menu.querySelector('.dropdown-item.active');
-    const label = active
-      ? active.textContent.replace(/^↳\s*/, '')
-      : 'Categorias';
-    toggle.childNodes.forEach(n => { if (n.nodeType === 3) n.remove(); });
-    toggle.insertAdjacentText('beforeend', label);
+  toggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', !expanded);
+    menu.classList.toggle('show', !expanded);
+    if (!expanded) {
+      const close = () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('show');
+        document.removeEventListener('click', close);
+      };
+      setTimeout(() => document.addEventListener('click', close), 0);
+    }
+  });
+
+  // Inserir antes do .filters-wrap (ou no inicio do .filters-sorting)
+  const filtersWrap = filtersSorting.querySelector('.filters-wrap');
+  if (filtersWrap) {
+    filtersSorting.insertBefore(dropWrap, filtersWrap);
+  } else {
+    filtersSorting.insertBefore(dropWrap, filtersSorting.firstChild);
   }
 }
 
 // ----------------------------------------------------------------
-// Slider de preco — filtra .col filhos de .products-list por data-id
+// Slider de preco — hide/show colunas nativas por data-id
 // ----------------------------------------------------------------
 function injectPriceSlider() {
-  const priceDropdown = document.querySelector('.dropdown.filter[data-type="price"]');
-  if (priceDropdown) priceDropdown.style.display = 'none';
-
   const wrap = document.createElement('div');
   wrap.id = 'aq-price-filter';
   wrap.innerHTML = `
@@ -150,12 +194,13 @@ function injectPriceSlider() {
     <div class="aq-pf-status" id="aq-pf-status">A carregar...</div>
   `;
 
-  const filtersWrap = document.querySelector('.filters-wrap');
+  // Inserir antes do .filters-wrap
+  const filtersSorting = document.querySelector('.filters-sorting');
+  const filtersWrap = filtersSorting && filtersSorting.querySelector('.filters-wrap');
   if (filtersWrap) {
-    filtersWrap.parentElement.insertBefore(wrap, filtersWrap);
-  } else {
-    const filtersSorting = document.querySelector('.filters-sorting');
-    if (filtersSorting) filtersSorting.prepend(wrap);
+    filtersSorting.insertBefore(wrap, filtersWrap);
+  } else if (filtersSorting) {
+    filtersSorting.appendChild(wrap);
   }
 
   const minInput   = document.getElementById('aq-pf-min');
@@ -165,22 +210,16 @@ function injectPriceSlider() {
   const status     = document.getElementById('aq-pf-status');
 
   let allProducts = null;
-  let globalMin = 0;
-  let globalMax = 370;
-  let currentMin = 0;
-  let currentMax = 370;
+  let globalMin = 0, globalMax = 370;
+  let currentMin = 0, currentMax = 370;
   let applyTimer = null;
 
-  function fmt(v) {
-    return v.toFixed(2).replace('.', ',') + '€';
-  }
+  function fmt(v) { return v.toFixed(2).replace('.', ',') + '€'; }
 
   function updateFill() {
     const range = globalMax - globalMin || 1;
-    const left  = ((currentMin - globalMin) / range) * 100;
-    const width = ((currentMax - currentMin) / range) * 100;
-    fill.style.left  = left + '%';
-    fill.style.width = Math.max(0, width) + '%';
+    fill.style.left  = ((currentMin - globalMin) / range * 100) + '%';
+    fill.style.width = (Math.max(0, currentMax - currentMin) / range * 100) + '%';
   }
 
   function updateLabel() {
@@ -218,15 +257,10 @@ function injectPriceSlider() {
       const list = getProductsList();
       if (!list) { hideGridLoader(); return; }
 
-      // Cada filho direto do .products-list e uma coluna .col
-      const cols = Array.from(list.children);
       let visible = 0;
-
-      cols.forEach(col => {
-        // O produto esta dentro da coluna com data-id
+      Array.from(list.children).forEach(col => {
         const prod = col.querySelector('[data-id]');
         const pid  = prod ? prod.getAttribute('data-id') : null;
-
         if (!pid || filteredIds.has(pid)) {
           col.style.display = '';
           visible++;
@@ -242,8 +276,7 @@ function injectPriceSlider() {
 
   async function loadProducts() {
     try {
-      const url = `https://cdn.jsdelivr.net/gh/${REPO}@main/${JSON_PRODS}`;
-      const res = await fetch(url);
+      const res = await fetch(`https://cdn.jsdelivr.net/gh/${REPO}@main/${JSON_PRODS}`);
       if (!res.ok) throw new Error('HTTP ' + res.status);
       const data = await res.json();
 
@@ -254,9 +287,7 @@ function injectPriceSlider() {
       currentMax  = globalMax;
 
       [minInput, maxInput].forEach(inp => {
-        inp.min  = globalMin;
-        inp.max  = globalMax;
-        inp.step = '0.5';
+        inp.min = globalMin; inp.max = globalMax; inp.step = '0.5';
       });
       minInput.value = globalMin;
       maxInput.value = globalMax;
@@ -264,7 +295,6 @@ function injectPriceSlider() {
       updateFill();
       updateLabel();
       status.textContent = data.total + ' produtos (loja)';
-
     } catch (e) {
       console.warn('[AQ] Erro ao carregar produtos:', e);
       status.textContent = 'Erro ao carregar';
