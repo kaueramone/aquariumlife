@@ -12,6 +12,8 @@
   .products-title.title { display: none !important; }
 
   .filters.js-filters {
+    position: relative;
+    z-index: 100;
     background: rgba(0, 21, 49, 0.5);
     border: 1px solid rgba(8, 238, 188, 0.1);
     border-radius: 14px;
@@ -47,6 +49,9 @@
     .dropdown.filter[data-type="price"] { display: none !important; }
   }
 
+  // ----------------------------------------------------------------
+  // Dropdown de categoria — inserido dinamicamente antes de .filters-wrap
+  // ----------------------------------------------------------------
   .dropdown.filter[data-type="category"] {
     flex: 1;
     min-width: 0;
@@ -97,7 +102,7 @@
       position: absolute;
       top: 100%;
       left: 0;
-      z-index: 1000;
+      z-index: 500;
       display: none;
       background: rgba(0, 21, 49, 0.97) !important;
       border: 1px solid rgba(8, 238, 188, 0.2) !important;
@@ -129,6 +134,9 @@
     }
   }
 
+  // ----------------------------------------------------------------
+  // Slider de preço
+  // ----------------------------------------------------------------
   #aq-price-filter {
     display: flex;
     flex-direction: column;
@@ -234,6 +242,9 @@
     }
   }
 
+  // ----------------------------------------------------------------
+  // Loader do grid
+  // ----------------------------------------------------------------
   #aq-grid-loader {
     display: none;
     position: absolute;
@@ -268,6 +279,9 @@
     to { transform: rotate(360deg); }
   }
 
+  // ----------------------------------------------------------------
+  // Nice-select (ordenação)
+  // ----------------------------------------------------------------
   .filters-field {
     display: flex;
     align-items: center;
@@ -319,6 +333,7 @@
         padding: 6px !important;
         width: 100%;
         margin-top: 4px !important;
+        z-index: 500 !important;
 
         .option {
           font-family: $font-family-body !important;
@@ -339,6 +354,9 @@
     }
   }
 
+  // ----------------------------------------------------------------
+  // Paginação
+  // ----------------------------------------------------------------
   .pagination {
     display: flex;
     justify-content: center;
@@ -387,8 +405,14 @@
     }
   }
 
+  // ----------------------------------------------------------------
+  // Mobile
+  // ----------------------------------------------------------------
   @media (max-width: 768px) {
-    .filters.js-filters { padding: 12px; border-radius: 10px; }
+    .filters.js-filters {
+      padding: 12px;
+      border-radius: 10px;
+    }
 
     .filters-open.js-filters-open {
       display: block;
