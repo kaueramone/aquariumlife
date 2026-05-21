@@ -1851,21 +1851,24 @@
       initContact();
     }
 
-    // categoryFilters.js v5
-    // - Dropdown de categorias criado do zero em qualquer page-category
-    // - Pre-selecciona a categoria da URL actual
-    // - Slider filtra .products-list filhos diretos por data-id
+    // categoryFilters.js v6
+    // - Carrega JSON da categoria actual (products-cat-{catId}.json)
+    // - Filtra todos os produtos, renderiza com paginação propria
+    // - Dropdown de categorias criado do zero com pre-seleccao
 
-    const REPO       = 'kaueramone/aquariumlife';
-    const JSON_PRODS = 'dist/products-cat-527348.json';
-    const JSON_CATS  = 'dist/categories.json';
+    const REPO     = 'kaueramone/aquariumlife';
+    const JSON_CATS = 'dist/categories.json';
+    const PER_PAGE  = 12;
 
     function initCategoryFilters() {
       if (!document.body.classList.contains('page-category')) return;
 
+      const catId = getCategoryId();
+      if (!catId) return;
+
       const ready = () => {
         rebuildCategoryDropdown();
-        injectPriceSlider();
+        initPriceFilter(catId);
       };
 
       if (document.readyState === 'loading') {
@@ -1875,8 +1878,13 @@
       }
     }
 
+    function getCategoryId() {
+      const m = document.body.className.match(/category-id-(\d+)/);
+      return m ? m[1] : null;
+    }
+
     // ----------------------------------------------------------------
-    // Container de produtos
+    // Container de produtos nativo
     // ----------------------------------------------------------------
     function getProductsList() {
       return document.querySelector('.products-list')
@@ -1897,8 +1905,9 @@
         loader = document.createElement('div');
         loader.id = 'aq-grid-loader';
         loader.innerHTML = '<div class="aq-loader-spinner"></div><span>A filtrar...</span>';
-        list.parentElement.style.position = 'relative';
-        list.parentElement.appendChild(loader);
+        const parent = list.parentElement;
+        parent.style.position = 'relative';
+        parent.appendChild(loader);
       }
       loader.style.display = 'flex';
     }
@@ -1912,31 +1921,24 @@
 
     // ----------------------------------------------------------------
     // Dropdown de categorias
-    // Cria o elemento se nao existir (ex: /category/alimentacao nao tem
-    // o dropdown nativo porque nao tem subcategorias)
     // ----------------------------------------------------------------
     async function rebuildCategoryDropdown() {
       const filtersSorting = document.querySelector('.filters-sorting');
       if (!filtersSorting) return;
 
-      // Categoria activa: extraida da URL
       const currentHandle = window.location.pathname
-        .replace(/^\/category\//, '')
-        .replace(/\/$/, '');
+        .replace(/^\/category\//, '').replace(/\/$/, '');
 
-      // Carregar categorias do JSON estatico
       let cats = [];
       try {
         const res = await fetch(`https://cdn.jsdelivr.net/gh/${REPO}@main/${JSON_CATS}`);
         if (!res.ok) throw new Error('HTTP ' + res.status);
-        const data = await res.json();
-        cats = data.categories || [];
+        cats = (await res.json()).categories || [];
       } catch (e) {
-        console.warn('[AQ] Erro ao carregar categorias:', e);
+        console.warn('[AQ] Erro categorias:', e);
         return;
       }
 
-      // Determinar label da categoria activa
       function findLabel(handle) {
         for (const cat of cats) {
           if (cat.handle === handle) return cat.title;
@@ -1946,31 +1948,31 @@
         }
         return 'Categorias';
       }
+
       const activeLabel = findLabel(currentHandle);
 
-      // Remover dropdown nativo de categoria se existir (vamos substituir)
-      const nativeCatDrop = document.querySelector('.dropdown.filter[data-type="category"]');
-      if (nativeCatDrop) nativeCatDrop.remove();
-
+      // Remover dropdown nativo de categoria se existir
+      const native = document.querySelector('.dropdown.filter[data-type="category"]');
+      if (native) native.remove();
       // Ocultar dropdown nativo de preco
-      const nativePriceDrop = document.querySelector('.dropdown.filter[data-type="price"]');
-      if (nativePriceDrop) nativePriceDrop.style.display = 'none';
+      const nativePrice = document.querySelector('.dropdown.filter[data-type="price"]');
+      if (nativePrice) nativePrice.style.display = 'none';
 
-      // Construir o novo dropdown
+      // Criar dropdown
       const dropWrap = document.createElement('div');
       dropWrap.className = 'dropdown filter aq-cat-dropdown';
       dropWrap.setAttribute('data-type', 'category');
 
-      dropWrap.innerHTML = `
-    <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      ${activeLabel}
-    </a>
-    <div class="dropdown-menu"></div>
-  `;
+      const toggle = document.createElement('a');
+      toggle.className = 'dropdown-toggle';
+      toggle.setAttribute('aria-haspopup', 'true');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.textContent = activeLabel;
 
-      const menu = dropWrap.querySelector('.dropdown-menu');
+      const menu = document.createElement('div');
+      menu.className = 'dropdown-menu';
 
-      // "Todas" — aponta para equipamento (maior categoria)
+      // Item "Todas"
       const allItem = document.createElement('a');
       allItem.className = 'dropdown-item' + (currentHandle === 'equipamento' ? ' active' : '');
       allItem.href = '/category/equipamento';
@@ -1982,17 +1984,14 @@
       menu.appendChild(sep);
 
       cats.forEach(cat => {
-        const isActive = currentHandle === cat.handle;
         const item = document.createElement('a');
-        item.className = 'dropdown-item' + (isActive ? ' active' : '');
+        item.className = 'dropdown-item' + (currentHandle === cat.handle ? ' active' : '');
         item.href = cat.url;
         item.textContent = cat.title;
         menu.appendChild(item);
-
         (cat.children || []).forEach(ch => {
-          const chActive = currentHandle === ch.handle;
           const child = document.createElement('a');
-          child.className = 'dropdown-item' + (chActive ? ' active' : '');
+          child.className = 'dropdown-item' + (currentHandle === ch.handle ? ' active' : '');
           child.href = ch.url;
           child.style.paddingLeft = '22px';
           child.textContent = '↳ ' + ch.title;
@@ -2000,25 +1999,27 @@
         });
       });
 
-      // Toggle manual (Bootstrap dropdown pode nao estar a funcionar para elementos injectados)
-      const toggle = dropWrap.querySelector('.dropdown-toggle');
+      // Toggle manual
       toggle.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        const expanded = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', !expanded);
-        menu.classList.toggle('show', !expanded);
-        if (!expanded) {
-          const close = () => {
-            toggle.setAttribute('aria-expanded', 'false');
+        const open = menu.classList.contains('show');
+        menu.classList.toggle('show', !open);
+        toggle.setAttribute('aria-expanded', String(!open));
+        if (!open) {
+          const close = function() {
             menu.classList.remove('show');
+            toggle.setAttribute('aria-expanded', 'false');
             document.removeEventListener('click', close);
           };
-          setTimeout(() => document.addEventListener('click', close), 0);
+          setTimeout(function() { document.addEventListener('click', close); }, 0);
         }
       });
 
-      // Inserir antes do .filters-wrap (ou no inicio do .filters-sorting)
+      dropWrap.appendChild(toggle);
+      dropWrap.appendChild(menu);
+
+      // Inserir antes do .filters-wrap
       const filtersWrap = filtersSorting.querySelector('.filters-wrap');
       if (filtersWrap) {
         filtersSorting.insertBefore(dropWrap, filtersWrap);
@@ -2028,9 +2029,14 @@
     }
 
     // ----------------------------------------------------------------
-    // Slider de preco — hide/show colunas nativas por data-id
+    // Filtro de preco + paginacao propria
     // ----------------------------------------------------------------
-    function injectPriceSlider() {
+    function initPriceFilter(catId) {
+      // Ocultar paginacao nativa do Shopkit
+      const nativePag = document.querySelector('.pagination');
+      if (nativePag) nativePag.style.display = 'none';
+
+      // Slider HTML
       const wrap = document.createElement('div');
       wrap.id = 'aq-price-filter';
       wrap.innerHTML = `
@@ -2041,13 +2047,12 @@
     <div class="aq-pf-track-wrap">
       <div class="aq-pf-track"></div>
       <div class="aq-pf-fill" id="aq-pf-fill"></div>
-      <input type="range" id="aq-pf-min" min="0" max="370" value="0" step="0.5">
-      <input type="range" id="aq-pf-max" min="0" max="370" value="370" step="0.5">
+      <input type="range" id="aq-pf-min" min="0" max="100" value="0" step="0.5">
+      <input type="range" id="aq-pf-max" min="0" max="100" value="100" step="0.5">
     </div>
     <div class="aq-pf-status" id="aq-pf-status">A carregar...</div>
   `;
 
-      // Inserir antes do .filters-wrap
       const filtersSorting = document.querySelector('.filters-sorting');
       const filtersWrap = filtersSorting && filtersSorting.querySelector('.filters-wrap');
       if (filtersWrap) {
@@ -2062,10 +2067,14 @@
       const fill       = document.getElementById('aq-pf-fill');
       const status     = document.getElementById('aq-pf-status');
 
-      let allProducts = null;
-      let globalMin = 0, globalMax = 370;
-      let currentMin = 0, currentMax = 370;
-      let applyTimer = null;
+      let allProducts  = [];
+      let filtered     = [];
+      let globalMin    = 0;
+      let globalMax    = 100;
+      let currentMin   = 0;
+      let currentMax   = 100;
+      let currentPage  = 1;
+      let applyTimer   = null;
 
       function fmt(v) { return v.toFixed(2).replace('.', ',') + '€'; }
 
@@ -2091,55 +2100,134 @@
       }
 
       function onSliderChange() {
+        currentPage = 1;
         clearTimeout(applyTimer);
         applyTimer = setTimeout(applyFilter, 400);
       }
 
       function applyFilter() {
-        if (!allProducts) { status.textContent = 'Ainda a carregar...'; return; }
+        filtered = allProducts.filter(p => p.price >= currentMin && p.price <= currentMax);
+        renderPage(currentPage);
+      }
 
-        const filteredIds = new Set(
-          allProducts
-            .filter(p => p.price >= currentMin && p.price <= currentMax)
-            .map(p => String(p.id))
-        );
-
+      // ---- Renderizar uma pagina de produtos ----
+      function renderPage(page) {
         showGridLoader();
-
-        setTimeout(() => {
+        setTimeout(function() {
           const list = getProductsList();
           if (!list) { hideGridLoader(); return; }
 
-          let visible = 0;
-          Array.from(list.children).forEach(col => {
-            const prod = col.querySelector('[data-id]');
-            const pid  = prod ? prod.getAttribute('data-id') : null;
-            if (!pid || filteredIds.has(pid)) {
-              col.style.display = '';
-              visible++;
-            } else {
-              col.style.display = 'none';
-            }
+          const totalPages = Math.ceil(filtered.length / PER_PAGE) || 1;
+          currentPage = Math.min(page, totalPages);
+
+          const start = (currentPage - 1) * PER_PAGE;
+          const slice = filtered.slice(start, start + PER_PAGE);
+
+          const noImg = 'https://cdn-shopkit.com/assets/store/img/no-img.png';
+
+          list.innerHTML = '';
+          slice.forEach(function(p) {
+            const priceHTML = p.pp
+              ? '<del style="opacity:0.5;font-size:0.82em;margin-right:4px;">' + p.pf + '</del>'
+                + '<span class="price" style="color:#08EEBC;">' + p.ppf + '</span>'
+              : '<span class="price">' + p.pf + '</span>';
+
+            const col = document.createElement('div');
+            col.className = 'col';
+            col.innerHTML =
+              '<div class="product active hover-effect-floating" data-id="' + p.id + '">'
+              + '<div class="card-shadow-hover">'
+              + '<div class="product-view">'
+              + '<span class="product-badges" data-position="top-left"></span>'
+              + '<a class="product-preview" href="' + p.url + '" data-thumbnail-type="square">'
+              + '<img class="product-pic" src="' + (p.img || noImg) + '" alt="' + p.title.replace(/"/g,'') + '" loading="lazy">'
+              + '</a>'
+              + '<div class="product-info">'
+              + '<a class="product-title" href="' + p.url + '">' + p.title + '</a>'
+              + '<div class="product-price">' + priceHTML + '</div>'
+              + '</div>'
+              + '<div class="product-actions">'
+              + '<a class="btn btn-primary" href="' + p.cart + '">Comprar</a>'
+              + '</div>'
+              + '</div></div></div>';
+            list.appendChild(col);
           });
 
+          // Actualizar status
+          status.textContent = filtered.length + ' produto' + (filtered.length !== 1 ? 's' : '');
+
+          // Renderizar paginacao
+          renderPagination(totalPages);
           hideGridLoader();
-          status.textContent = visible + ' produto' + (visible !== 1 ? 's' : '') + ' (página actual)';
         }, 80);
       }
 
+      // ---- Paginacao propria ----
+      function renderPagination(totalPages) {
+        let pag = document.getElementById('aq-pagination');
+        if (!pag) {
+          pag = document.createElement('ul');
+          pag.id = 'aq-pagination';
+          pag.className = 'pagination';
+          // Inserir apos o container de produtos
+          const list = getProductsList();
+          if (list && list.parentElement) {
+            list.parentElement.insertAdjacentElement('afterend', pag);
+          }
+        }
+
+        pag.innerHTML = '';
+        if (totalPages <= 1) return;
+
+        function pageBtn(label, page, disabled, active) {
+          const li = document.createElement('li');
+          if (active) li.className = 'active';
+          if (disabled) li.className = 'disabled';
+          const a = document.createElement('a');
+          a.href = '#';
+          a.innerHTML = label;
+          a.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (!disabled && !active) {
+              currentPage = page;
+              renderPage(currentPage);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          });
+          li.appendChild(a);
+          pag.appendChild(li);
+        }
+
+        pageBtn('&laquo;', currentPage - 1, currentPage === 1, false);
+
+        const maxButtons = 7;
+        let startP = Math.max(1, currentPage - Math.floor(maxButtons / 2));
+        let endP   = Math.min(totalPages, startP + maxButtons - 1);
+        if (endP - startP < maxButtons - 1) startP = Math.max(1, endP - maxButtons + 1);
+
+        for (let i = startP; i <= endP; i++) {
+          pageBtn(i, i, false, i === currentPage);
+        }
+
+        pageBtn('&raquo;', currentPage + 1, currentPage === totalPages, false);
+      }
+
+      // ---- Carregar JSON da categoria ----
       async function loadProducts() {
+        const jsonFile = 'dist/products-cat-' + catId + '.json';
+        const url = 'https://cdn.jsdelivr.net/gh/' + REPO + '@main/' + jsonFile;
         try {
-          const res = await fetch(`https://cdn.jsdelivr.net/gh/${REPO}@main/${JSON_PRODS}`);
+          const res = await fetch(url);
           if (!res.ok) throw new Error('HTTP ' + res.status);
           const data = await res.json();
 
-          allProducts = data.products;
-          globalMin   = Math.round(data.min * 10) / 10;
-          globalMax   = Math.ceil(data.max);
+          allProducts = data.products || [];
+          globalMin   = Math.round((data.min || 0) * 10) / 10;
+          globalMax   = Math.ceil(data.max || 100);
           currentMin  = globalMin;
           currentMax  = globalMax;
 
-          [minInput, maxInput].forEach(inp => {
+          [minInput, maxInput].forEach(function(inp) {
             inp.min = globalMin; inp.max = globalMax; inp.step = '0.5';
           });
           minInput.value = globalMin;
@@ -2147,7 +2235,9 @@
 
           updateFill();
           updateLabel();
-          status.textContent = data.total + ' produtos (loja)';
+
+          filtered = allProducts;
+          renderPage(1);
         } catch (e) {
           console.warn('[AQ] Erro ao carregar produtos:', e);
           status.textContent = 'Erro ao carregar';
