@@ -439,3 +439,66 @@ body.aq-light-mode {
 
   .no-products h2 { color: rgba(0, 32, 74, 0.5) !important; }
 }
+
+// ============================================================
+// ACCOUNT MENU (Dropdown no Header e Pagina /account)
+// ============================================================
+.account-menu, .dropdown-menu.account-menu {
+  background: rgba(0, 21, 49, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(8, 238, 188, 0.15) !important;
+  border-radius: 12px !important;
+  padding: 8px 0 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  overflow: hidden !important;
+
+  .list-group-item, a {
+    background: transparent !important;
+    color: #fff !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    padding: 12px 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    transition: background 0.2s, color 0.2s !important;
+    font-size: 0.9rem !important;
+    
+    &:last-child {
+      border-bottom: none !important;
+    }
+
+    &:hover, &:focus {
+      color: $color-neon-accent !important;
+      background: rgba(8, 238, 188, 0.1) !important;
+      text-decoration: none !important;
+    }
+    
+    svg, i, .fa { 
+      color: $color-neon-accent !important; 
+      font-size: 1.1rem !important;
+      width: 20px !important;
+      text-align: center !important;
+    }
+  }
+}
+
+// Light Mode Account Menu
+body.aq-light-mode {
+  .account-menu, .dropdown-menu.account-menu {
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 122, 92, 0.15) !important;
+    
+    .list-group-item, a {
+      color: #00204A !important;
+      border-bottom: 1px solid rgba(0, 32, 74, 0.05) !important;
+      
+      &:hover {
+        color: #007A5C !important;
+        background: rgba(0, 122, 92, 0.05) !important;
+      }
+      
+      svg, i, .fa { color: #007A5C !important; }
+    }
+  }
+}

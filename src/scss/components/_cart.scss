@@ -407,8 +407,8 @@ body.page-cart {
     margin-bottom: 24px !important;
   }
 
-  // Tabela de produtos
-  .cart.section .cart-table, .cart.section .table {
+  // Tabela de produtos / Layout de Linha
+  .cart.section .cart-table, .cart.section .table, .cart.section .cart-row {
     background: rgba(0, 21, 49, 0.4) !important;
     backdrop-filter: blur(8px) !important;
     border: 1px solid rgba(8, 238, 188, 0.1) !important;
@@ -419,7 +419,7 @@ body.page-cart {
       color: #fff !important;
     }
 
-    th {
+    th, .cart-category {
       border-bottom: 1px solid rgba(8, 238, 188, 0.2) !important;
       color: $color-neon-accent !important;
       font-family: $font-family-title !important;
@@ -428,7 +428,7 @@ body.page-cart {
       &:nth-child(3) { color: #fff !important; }
     }
     
-    td {
+    td, .cart-line {
       border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
       vertical-align: middle !important;
     }
@@ -439,20 +439,20 @@ body.page-cart {
       background: rgba(0, 8, 20, 0.5) !important;
     }
 
-    .item-title, a {
+    .item-title, a, a.cart-product, .cart-product {
       color: #fff !important;
       text-decoration: none !important;
       &:hover { color: $color-neon-accent !important; }
     }
 
-    .price, .item-price {
+    .price, .item-price, .cart-price {
       color: $color-neon-accent !important;
       font-weight: 700 !important;
     }
   }
 
   // Resumo (Subtotal / Total)
-  .cart.section .cart-summary, .cart.section .well {
+  .cart.section .cart-summary, .cart.section .well, .cart.section .cart-receipt {
     background: rgba(0, 21, 49, 0.4) !important; // mesmo que cart-table
     backdrop-filter: blur(8px) !important;
     border: 1px solid rgba(8, 238, 188, 0.15) !important;
@@ -460,13 +460,17 @@ body.page-cart {
     padding: 24px !important;
     color: #fff !important;
 
-    h3 {
+    h3, .cart-category {
       color: $color-text-primary !important;
       font-family: $font-family-title !important;
+      font-size: 1.25rem !important;
+      margin-bottom: 16px !important;
+      border-bottom: 1px solid rgba(8, 238, 188, 0.2) !important;
+      padding-bottom: 8px !important;
     }
 
-    .summary-row, th, td, span, div, p {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    .summary-row, th, td, span, div, p, .cart-line, .cart-text {
+      border-bottom-color: rgba(255, 255, 255, 0.05) !important;
       color: #fff !important; // Letras claras
     }
 
@@ -474,7 +478,7 @@ body.page-cart {
       color: $color-neon-accent !important; // Titulos a verde
     }
 
-    .total-price, .order-total {
+    .total-price, .order-total, .cart-line:last-of-type .cart-text:last-child {
       color: $color-neon-accent !important;
       font-size: 1.5rem !important;
       font-weight: 800 !important;

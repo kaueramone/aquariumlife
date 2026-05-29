@@ -648,9 +648,39 @@ body.aq-light-mode.page-product {
   }
 
   // Ocultar slider visual e limitar a 3 itens robustamente
-  .owl-nav, .owl-dots, .slick-arrow, .slick-dots { display: none !important; }
-  .related-products .owl-item:nth-child(n+4),
-  .related-products .item:nth-child(n+4) {
-    display: none !important;
+  .owl-nav, .owl-dots, .slick-arrow, .slick-dots, button.slick-prev, button.slick-next { display: none !important; }
+  
+  .related-products {
+    .slick-track, .owl-stage {
+      width: 100% !important;
+      transform: none !important;
+      display: flex !important;
+      justify-content: center !important;
+      gap: 16px;
+      flex-wrap: wrap !important;
+    }
+    .slick-slide, .owl-item {
+      width: calc(33.333% - 16px) !important;
+      float: none !important;
+      margin: 0 !important;
+    }
+    .slick-cloned, .owl-item.cloned {
+      display: none !important;
+    }
+    .slick-slide:nth-child(n+4):not(.slick-cloned),
+    .owl-item:nth-child(n+4):not(.cloned),
+    .item:nth-child(n+4) {
+      display: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .slick-slide, .owl-item {
+        width: 100% !important;
+      }
+      .slick-slide:nth-child(n+4):not(.slick-cloned),
+      .owl-item:nth-child(n+4):not(.cloned) {
+        display: none !important;
+      }
+    }
   }
 }
