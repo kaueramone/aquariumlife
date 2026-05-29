@@ -408,13 +408,17 @@ body.page-cart {
   }
 
   // Tabela de produtos
-  .cart-table, .table {
+  .cart.section .cart-table, .cart.section .table {
     background: rgba(0, 21, 49, 0.4) !important;
     backdrop-filter: blur(8px) !important;
     border: 1px solid rgba(8, 238, 188, 0.1) !important;
     border-radius: 16px !important;
     color: $color-text-primary !important;
     
+    th, td, p, span, a, div {
+      color: #fff !important;
+    }
+
     th {
       border-bottom: 1px solid rgba(8, 238, 188, 0.2) !important;
       color: $color-neon-accent !important;
@@ -448,19 +452,20 @@ body.page-cart {
   }
 
   // Resumo (Subtotal / Total)
-  .cart-summary, .well {
+  .cart.section .cart-summary, .cart.section .well {
     background: rgba(0, 21, 49, 0.4) !important; // mesmo que cart-table
     backdrop-filter: blur(8px) !important;
     border: 1px solid rgba(8, 238, 188, 0.15) !important;
     border-radius: 16px !important;
     padding: 24px !important;
+    color: #fff !important;
 
     h3 {
       color: $color-text-primary !important;
       font-family: $font-family-title !important;
     }
 
-    .summary-row, th, td {
+    .summary-row, th, td, span, div, p {
       border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
       color: #fff !important; // Letras claras
     }
@@ -473,6 +478,7 @@ body.page-cart {
       color: $color-neon-accent !important;
       font-size: 1.5rem !important;
       font-weight: 800 !important;
+      border: none !important;
     }
   }
 

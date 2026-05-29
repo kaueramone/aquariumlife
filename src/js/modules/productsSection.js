@@ -39,7 +39,7 @@ function hideProductsTitle() {
 
   ['.title', '.title_mb-lg', 'h1', 'h2', 'h3', '.section-title', '.block-title']
     .forEach(sel => section.querySelectorAll(sel).forEach(el => {
-      if (!el.closest('.card-shadow-hover')) {
+      if (!el.closest('.card-shadow-hover') && !el.closest('.related-products')) {
         el.style.setProperty('display', 'none', 'important');
       }
     }));

@@ -302,10 +302,16 @@ body.page-product {
     }
   }
 
-  // Ocultar todos os botoes de favoritos que aparecem extra
+  // Ocultar todos os botoes de favoritos que aparecem extra, e o botao contactar nativo
   .add-favorite-form ~ .add-favorite-form,
   form.add-cart + div > .add-favorite-form,
-  .btn-wishlist ~ .btn-wishlist {
+  form.add-cart + .add-favorite-form,
+  .btn-wishlist ~ .btn-wishlist,
+  .btn-wishlist:nth-of-type(n+2),
+  .card-favorite:nth-of-type(n+2),
+  a[href*="/contact"].btn-primary,
+  .btn-contact, 
+  .product-contact {
     display: none !important;
   }
 
@@ -641,6 +647,10 @@ body.aq-light-mode.page-product {
     a { color: #007A5C !important; &:hover { color: #00204A !important; } }
   }
 
-  // Ocultar slider visual
-  .owl-nav, .owl-dots { display: none !important; }
+  // Ocultar slider visual e limitar a 3 itens robustamente
+  .owl-nav, .owl-dots, .slick-arrow, .slick-dots { display: none !important; }
+  .related-products .owl-item:nth-child(n+4),
+  .related-products .item:nth-child(n+4) {
+    display: none !important;
+  }
 }
