@@ -1804,6 +1804,11 @@
           '<a href="https://www.facebook.com/aquariumlife.pt" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook-f"></i></a>' +
           '<a href="https://www.instagram.com/aquariumlife.pt" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>' +
           '<a href="https://www.youtube.com/@aquariumlifept" target="_blank" rel="noopener" title="YouTube"><i class="fab fa-youtube"></i></a>' +
+        '</div>' +
+        '<div class="aq-contact-card-title" style="margin-top:24px;">Contacto Rápido</div>' +
+        '<div class="aq-contact-buttons" style="display:flex; flex-direction:column; gap:12px;">' +
+          '<a href="https://wa.me/351964331915" target="_blank" class="btn btn-outline" style="border:1px solid #25D366; color:#25D366; width:100%; border-radius:8px; display:flex; align-items:center; justify-content:center; gap:8px;"><i class="fab fa-whatsapp"></i> Chamar no WhatsApp</a>' +
+          '<a href="https://m.me/aquariumlife.pt" target="_blank" class="btn btn-outline" style="border:1px solid #0084FF; color:#0084FF; width:100%; border-radius:8px; display:flex; align-items:center; justify-content:center; gap:8px;"><i class="fab fa-facebook-messenger"></i> Enviar Mensagem</a>' +
         '</div>';
       infoPanel.appendChild(socialCard);
 

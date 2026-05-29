@@ -47,23 +47,17 @@ body.page-product {
   // Imagem principal
   .card-wrap {
     flex: 1;
-    background: #001531 !important;
-    border: 1px solid rgba(8, 238, 188, 0.15) !important;
+    background: #FFFFFF !important;
+    border: none !important;
     border-radius: 20px !important;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(8, 238, 188, 0.1) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+    padding: 0 !important;
 
-    // Brilho de fundo
+    // Brilho de fundo removido pois o fundo é branco
     &::before {
-      content: '';
-      position: absolute;
-      top: 50%; left: 50%;
-      width: 60%; height: 60%;
-      background: radial-gradient(circle, rgba(8, 238, 188, 0.15) 0%, transparent 70%);
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      z-index: 0;
+      display: none !important;
     }
 
     .card-preview {
@@ -74,6 +68,7 @@ body.page-product {
       align-items: center;
       justify-content: center;
       min-height: 500px;
+      background: transparent !important;
       
       @media (max-width: 768px) {
         min-height: 300px;
@@ -85,9 +80,10 @@ body.page-product {
       max-height: 500px !important;
       width: 100% !important;
       height: 100% !important;
-      object-fit: cover !important;
-      border-radius: 20px !important;
-      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));
+      object-fit: contain !important;
+      border-radius: 0 !important;
+      filter: none !important;
+      mix-blend-mode: normal !important;
       transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 
       &:hover {
@@ -265,6 +261,7 @@ body.page-product {
     width: 120px !important;
 
     input, .counter-input {
+      flex: 1 !important;
       background: transparent !important;
       border: none !important;
       color: $color-text-primary !important;
@@ -272,19 +269,25 @@ body.page-product {
       font-weight: 700 !important;
       font-size: 1.1rem !important;
       text-align: center;
-      width: 40px !important;
       height: 100% !important;
       padding: 0 !important;
       margin: 0 !important;
       box-shadow: none !important;
+      -moz-appearance: textfield !important;
+      
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none !important;
+        margin: 0 !important;
+      }
     }
 
     button, .counter-btn {
+      flex: 0 0 35px !important;
       background: transparent !important;
       border: none !important;
       color: $color-neon-accent !important;
       font-size: 1.2rem !important;
-      width: 40px !important;
       height: 100% !important;
       cursor: pointer;
       display: flex;
@@ -299,8 +302,15 @@ body.page-product {
     }
   }
 
+  // Ocultar todos os botoes de favoritos que aparecem extra
+  .add-favorite-form ~ .add-favorite-form,
+  form.add-cart + div > .add-favorite-form,
+  .btn-wishlist ~ .btn-wishlist {
+    display: none !important;
+  }
+
   // Botão Comprar Gigante
-  .card-btn.btn-primary {
+  form.add-cart .btn-primary, .card-btn.btn-primary {
     flex: 1;
     min-width: 200px;
     height: 54px !important;
@@ -334,9 +344,19 @@ body.page-product {
     }
   }
 
-  // Ocultar wishlist redundante (Shopkit pode gerar várias)
-  .add-favorite-form ~ .add-favorite-form {
-    display: none !important;
+  // Botão Contactar (quando surge secundário)
+  .card-inner > .btn-primary:not(.card-btn),
+  .card-inner > div > .btn-primary:not(.card-btn) {
+    background: transparent !important;
+    border: 1px solid $color-neon-accent !important;
+    color: $color-neon-accent !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    margin-top: 16px !important;
+    &:hover {
+      background: rgba(8, 238, 188, 0.1) !important;
+      color: $color-neon-accent !important;
+    }
   }
 
   // Favoritos
@@ -352,6 +372,7 @@ body.page-product {
     color: $color-neon-accent !important;
     font-size: 1.2rem !important;
     cursor: pointer;
+    flex-shrink: 0 !important;
     transition: all 0.2s;
 
     &:hover {
@@ -620,8 +641,6 @@ body.aq-light-mode.page-product {
     a { color: #007A5C !important; &:hover { color: #00204A !important; } }
   }
 
-  // Ocultar navegação do slider de produtos relacionados
-  .owl-nav {
-    display: none !important;
-  }
+  // Ocultar slider visual
+  .owl-nav, .owl-dots { display: none !important; }
 }
