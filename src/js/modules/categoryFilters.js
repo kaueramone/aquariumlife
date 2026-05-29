@@ -215,6 +215,7 @@ function initPriceFilter(catId) {
   const status     = document.getElementById('aq-pf-status');
 
   let allProducts  = [];
+  let originalOrder = [];
   let filtered     = [];
   let globalMin    = 0;
   let globalMax    = 100;
@@ -367,6 +368,7 @@ function initPriceFilter(catId) {
       const data = await res.json();
 
       allProducts = data.products || [];
+      originalOrder = [...allProducts];
       globalMin   = Math.round((data.min || 0) * 10) / 10;
       globalMax   = Math.ceil(data.max || 100);
       currentMin  = globalMin;
@@ -394,6 +396,96 @@ function initPriceFilter(catId) {
   minInput.addEventListener('change', onSliderChange);
   maxInput.addEventListener('change', onSliderChange);
 
+  // ---- Ordenação ----
+  function initSortDropdown() {
+    const filtersField = document.querySelector('.filters-field');
+    if (!filtersField) return;
+
+    // Criar dropdown
+    const dropWrap = document.createElement('div');
+    dropWrap.className = 'dropdown filter aq-sort-dropdown';
+    dropWrap.setAttribute('data-type', 'sort');
+
+    const toggle = document.createElement('a');
+    toggle.className = 'dropdown-toggle';
+    toggle.setAttribute('aria-haspopup', 'true');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.textContent = 'Relevância';
+
+    const menu = document.createElement('div');
+    menu.className = 'dropdown-menu';
+
+    const options = [
+      { val: 'position', label: 'Relevância' },
+      { val: 'price_asc', label: 'Mais baratos' },
+      { val: 'price_desc', label: 'Mais caros' },
+      { val: 'title_asc', label: 'A - Z' },
+      { val: 'title_desc', label: 'Z - A' }
+    ];
+
+    options.forEach(opt => {
+      const item = document.createElement('a');
+      item.className = 'dropdown-item' + (opt.val === 'position' ? ' active' : '');
+      item.href = '#';
+      item.dataset.sort = opt.val;
+      item.textContent = opt.label;
+      menu.appendChild(item);
+    });
+
+    // Toggle manual
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const open = menu.classList.contains('show');
+      menu.classList.toggle('show', !open);
+      toggle.setAttribute('aria-expanded', String(!open));
+      if (!open) {
+        const close = function() {
+          menu.classList.remove('show');
+          toggle.setAttribute('aria-expanded', 'false');
+          document.removeEventListener('click', close);
+        };
+        setTimeout(function() { document.addEventListener('click', close); }, 0);
+      }
+    });
+
+    // Selecionar opcao
+    menu.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (!e.target.classList.contains('dropdown-item')) return;
+
+      const sortVal = e.target.dataset.sort;
+      toggle.textContent = e.target.textContent;
+
+      Array.from(menu.children).forEach(c => c.classList.remove('active'));
+      e.target.classList.add('active');
+
+      // Ordenar allProducts
+      if (sortVal === 'position') {
+        allProducts = [...originalOrder];
+      } else if (sortVal === 'price_asc') {
+        allProducts.sort((a,b) => a.price - b.price);
+      } else if (sortVal === 'price_desc') {
+        allProducts.sort((a,b) => b.price - a.price);
+      } else if (sortVal === 'title_asc') {
+        allProducts.sort((a,b) => a.title.localeCompare(b.title));
+      } else if (sortVal === 'title_desc') {
+        allProducts.sort((a,b) => b.title.localeCompare(a.title));
+      }
+
+      // Re-aplicar filtro e pagina1
+      currentPage = 1;
+      applyFilter();
+    });
+
+    dropWrap.appendChild(toggle);
+    dropWrap.appendChild(menu);
+
+    filtersField.innerHTML = '';
+    filtersField.appendChild(dropWrap);
+  }
+
+  initSortDropdown();
   updateFill();
   loadProducts();
 }

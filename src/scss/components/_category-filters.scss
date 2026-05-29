@@ -50,9 +50,10 @@
   }
 
   // ----------------------------------------------------------------
-  // Dropdown de categoria — inserido dinamicamente antes de .filters-wrap
+  // Dropdown de categoria e ordenação — inseridos dinamicamente
   // ----------------------------------------------------------------
-  .dropdown.filter[data-type="category"] {
+  .dropdown.filter[data-type="category"],
+  .dropdown.filter[data-type="sort"] {
     flex: 1;
     min-width: 0;
     width: 100%;
@@ -280,78 +281,12 @@
   }
 
   // ----------------------------------------------------------------
-  // Nice-select (ordenação)
+  // Dropdown de ordenação
   // ----------------------------------------------------------------
   .filters-field {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-
-    .nice-select {
-      background: rgba(0, 4, 13, 0.5) !important;
-      border: 1px solid rgba(8, 238, 188, 0.2) !important;
-      border-radius: 8px !important;
-      color: $color-text-primary !important;
-      font-family: $font-family-body !important;
-      font-size: 0.84rem !important;
-      font-weight: 600 !important;
-      height: auto !important;
-      line-height: normal !important;
-      padding: 9px 36px 9px 14px !important;
-      width: 100%;
-      float: none !important;
-      box-shadow: none !important;
-      transition: $transition-fast;
-
-      &::after {
-        border-bottom: 2px solid rgba(8, 238, 188, 0.7) !important;
-        border-right: 2px solid rgba(8, 238, 188, 0.7) !important;
-        height: 7px !important;
-        width: 7px !important;
-        right: 14px !important;
-        margin-top: -5px !important;
-      }
-
-      &.open, &:hover {
-        background: rgba(8, 238, 188, 0.06) !important;
-        border-color: rgba(8, 238, 188, 0.5) !important;
-        &::after { border-color: $color-neon-accent !important; }
-      }
-
-      .current {
-        color: $color-text-primary !important;
-        font-family: $font-family-body !important;
-        font-size: 0.84rem !important;
-        font-weight: 600 !important;
-      }
-
-      .list {
-        background: rgba(0, 21, 49, 0.97) !important;
-        border: 1px solid rgba(8, 238, 188, 0.2) !important;
-        border-radius: 10px !important;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
-        padding: 6px !important;
-        width: 100%;
-        margin-top: 4px !important;
-        z-index: 500 !important;
-
-        .option {
-          font-family: $font-family-body !important;
-          font-size: 0.84rem !important;
-          color: $color-text-secondary !important;
-          border-radius: 6px !important;
-          padding: 8px 12px !important;
-          min-height: auto !important;
-          line-height: normal !important;
-          background: transparent !important;
-          &:hover, &.focus, &.selected {
-            background: rgba(8, 238, 188, 0.1) !important;
-            color: $color-neon-accent !important;
-          }
-          &.selected { font-weight: 600 !important; }
-        }
-      }
-    }
   }
 
   // ----------------------------------------------------------------
