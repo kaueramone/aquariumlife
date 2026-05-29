@@ -215,3 +215,78 @@ body.page-client-account {
     }
   }
 }
+
+// ============================================================
+// LIGHT MODE OVERRIDES
+// ============================================================
+body.aq-light-mode.page-signin,
+body.aq-light-mode.page-signup,
+body.aq-light-mode.page-account,
+body.aq-light-mode.page-client-login,
+body.aq-light-mode.page-client-register,
+body.aq-light-mode.page-client-account {
+  background: #F0F8FF !important;
+
+  .breadcrumbs .breadcrumbs-item, .breadcrumbs .breadcrumbs-link { color: rgba(0, 32, 74, 0.6) !important; }
+  .breadcrumbs .breadcrumbs-link:hover { color: #007A5C !important; }
+
+  .user-login-register,
+  .shopkit-auth-form-register-info,
+  .well,
+  .well-default {
+    background: rgba(255, 255, 255, 0.85) !important;
+    border-color: rgba(0, 122, 92, 0.15) !important;
+    box-shadow: 0 15px 35px rgba(0, 32, 74, 0.08) !important;
+  }
+
+  .login-register-title {
+    h2.title { color: #00204A !important; }
+    p.desc, ul li { color: rgba(0, 32, 74, 0.7) !important; }
+    ul li i.fa-check { color: #007A5C !important; text-shadow: none !important; }
+  }
+
+  .shopkit-auth-form {
+    .form-control {
+      background: #FFFFFF !important;
+      border-color: rgba(0, 122, 92, 0.2) !important;
+      color: #00204A !important;
+      &::placeholder { color: rgba(0, 32, 74, 0.4) !important; }
+      &:focus { border-color: #007A5C !important; box-shadow: 0 0 0 3px rgba(0, 122, 92, 0.1) !important; }
+    }
+
+    a.text-dark, a.shopkit-auth-link-recover, a.shopkit-auth-link-login {
+      color: rgba(0, 32, 74, 0.6) !important;
+      &:hover { color: #007A5C !important; }
+    }
+  }
+
+  .btn.btn-primary, .btn.btn-secondary {
+    background: linear-gradient(90deg, #007A5C, #009973) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 8px 20px rgba(0, 122, 92, 0.2) !important;
+    &:hover { box-shadow: 0 12px 25px rgba(0, 122, 92, 0.3) !important; color: #FFFFFF !important; }
+  }
+
+  .account-sidebar {
+    background: #FFFFFF !important;
+    border-color: rgba(0, 122, 92, 0.15) !important;
+    .nav-pills li {
+      a {
+        color: rgba(0, 32, 74, 0.65) !important;
+        &:hover { background: rgba(0, 122, 92, 0.06) !important; color: #007A5C !important; }
+      }
+      &.active a { background: rgba(0, 122, 92, 0.1) !important; color: #007A5C !important; }
+    }
+  }
+
+  .account-content {
+    background: rgba(255, 255, 255, 0.85) !important;
+    border-color: rgba(0, 122, 92, 0.15) !important;
+    h2, h3, h4 { color: #00204A !important; }
+    p, span, div, td, th { color: rgba(0, 32, 74, 0.75) !important; }
+    .table {
+      th { border-bottom-color: rgba(0, 122, 92, 0.2) !important; color: #007A5C !important; }
+      td { border-bottom-color: rgba(0, 32, 74, 0.05) !important; }
+    }
+  }
+}

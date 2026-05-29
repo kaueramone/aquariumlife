@@ -497,3 +497,108 @@ body.page-product {
     }
   }
 }
+
+// ============================================================
+// LIGHT MODE OVERRIDES
+// ============================================================
+body.aq-light-mode.page-product {
+  background: #F0F8FF !important;
+
+  .breadcrumbs {
+    .breadcrumbs-item, .breadcrumbs-link { color: rgba(0, 32, 74, 0.6) !important; }
+    .breadcrumbs-link:hover { color: #007A5C !important; }
+  }
+
+  .card-wrap {
+    background: #FFFFFF !important;
+    border-color: rgba(0, 122, 92, 0.15) !important;
+    box-shadow: 0 10px 30px rgba(0, 32, 74, 0.08) !important;
+    &::before { display: none !important; }
+  }
+
+  #gallery.card-container a {
+    background: #FFFFFF !important;
+    border-color: rgba(0, 122, 92, 0.15) !important;
+    &:hover, &.active {
+      border-color: #007A5C !important;
+      box-shadow: 0 0 10px rgba(0, 122, 92, 0.2) !important;
+    }
+  }
+
+  .card-inner {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-color: rgba(0, 122, 92, 0.15) !important;
+    box-shadow: 0 15px 35px rgba(0, 32, 74, 0.08) !important;
+  }
+
+  h1.card-title, .product-title { color: #00204A !important; }
+  .card-details { border-bottom-color: rgba(0, 32, 74, 0.1) !important; }
+  
+  .card-actual {
+    color: #007A5C !important;
+    text-shadow: none !important;
+  }
+  .card-old { color: rgba(0, 32, 74, 0.4) !important; }
+  
+  .card-stock, .card-code {
+    color: rgba(0, 32, 74, 0.6) !important;
+    span { color: #00204A !important; }
+  }
+  .card-stock::before { background: #007A5C !important; box-shadow: none !important; }
+
+  .card-counter, .counter {
+    background: #FFFFFF !important;
+    border-color: rgba(0, 122, 92, 0.2) !important;
+    input { color: #00204A !important; }
+    button, .counter-btn {
+      color: #007A5C !important;
+      &:hover { background: rgba(0, 122, 92, 0.08) !important; }
+    }
+  }
+
+  .card-btn.btn-primary {
+    background: linear-gradient(90deg, #007A5C, #009973) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 8px 20px rgba(0, 122, 92, 0.25) !important;
+    &:hover { box-shadow: 0 12px 25px rgba(0, 122, 92, 0.35) !important; color: #FFFFFF !important; }
+  }
+
+  .card-favorite {
+    background: #FFFFFF !important;
+    border-color: rgba(0, 122, 92, 0.2) !important;
+    color: #007A5C !important;
+    &:hover { background: rgba(255, 61, 92, 0.1) !important; border-color: #ff3d5c !important; }
+  }
+
+  .table-product-attributes {
+    td, th { border-bottom-color: rgba(0, 32, 74, 0.05) !important; }
+    th { color: rgba(0, 32, 74, 0.6) !important; }
+    td { color: #00204A !important; }
+  }
+
+  .details.section { border-top-color: rgba(0, 122, 92, 0.15) !important; &::before { display: none !important; } }
+  
+  .nav-link {
+    border-color: rgba(0, 122, 92, 0.1) !important;
+    h2 { color: rgba(0, 32, 74, 0.6) !important; }
+    &:hover { background: #FFFFFF !important; }
+    &.active {
+      background: rgba(0, 122, 92, 0.05) !important;
+      border-color: #007A5C !important;
+      box-shadow: inset 4px 0 0 #007A5C !important;
+      h2 { color: #007A5C !important; }
+      @media (max-width: 991px) { box-shadow: inset 0 -4px 0 #007A5C !important; }
+    }
+  }
+
+  .details-list {
+    background: #FFFFFF !important;
+    border-color: rgba(0, 122, 92, 0.15) !important;
+  }
+  .details-text {
+    color: rgba(0, 32, 74, 0.75) !important;
+    h1, h2, h3, h4, h5 { color: #00204A !important; }
+    ul, ol { li::marker { color: #007A5C !important; } }
+    a { color: #007A5C !important; &:hover { color: #00204A !important; } }
+  }
+}

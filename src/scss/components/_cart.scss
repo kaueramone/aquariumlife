@@ -497,3 +497,45 @@ body.page-cart {
     p { color: rgba(255, 255, 255, 0.6) !important; }
   }
 }
+
+// ============================================================
+// LIGHT MODE OVERRIDES
+// ============================================================
+body.aq-light-mode.page-cart {
+  background: #F0F8FF !important;
+
+  h1.cart-title { color: #00204A !important; }
+
+  .cart-table, .table {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-color: rgba(0, 122, 92, 0.15) !important;
+    color: #00204A !important;
+    
+    th { border-bottom-color: rgba(0, 122, 92, 0.2) !important; color: #007A5C !important; }
+    td { border-bottom-color: rgba(0, 32, 74, 0.05) !important; }
+    img { background: #FFFFFF !important; border-color: rgba(0, 122, 92, 0.15) !important; }
+    .item-title, a { color: #00204A !important; &:hover { color: #007A5C !important; } }
+    .price, .item-price { color: #007A5C !important; }
+  }
+
+  .cart-summary, .well {
+    background: #FFFFFF !important;
+    border-color: rgba(0, 122, 92, 0.15) !important;
+    h3 { color: #00204A !important; }
+    .summary-row, th, td { border-bottom-color: rgba(0, 32, 74, 0.05) !important; color: rgba(0, 32, 74, 0.75) !important; }
+    .total-price, .order-total { color: #007A5C !important; }
+  }
+
+  .btn.btn-primary, .btn-checkout {
+    background: linear-gradient(90deg, #007A5C, #009973) !important;
+    color: #FFFFFF !important;
+    &:hover { box-shadow: 0 10px 20px rgba(0, 122, 92, 0.2) !important; }
+  }
+
+  .cart-no-products {
+    background: #FFFFFF !important;
+    border-color: rgba(0, 122, 92, 0.2) !important;
+    h2 { color: #00204A !important; }
+    p { color: rgba(0, 32, 74, 0.6) !important; }
+  }
+}
