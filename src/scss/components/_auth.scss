@@ -43,6 +43,12 @@ body.page-client-account {
   // ============================================================
   // PAINÉIS DE LOGIN / REGISTO
   // ============================================================
+  .shopkit-auth-form-login-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; // forçar caixas a terem a mesma altura
+  }
+
   .user-login-register,
   .shopkit-auth-form-register-info,
   .well,
@@ -55,9 +61,17 @@ body.page-client-account {
     padding: 40px !important;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4) !important;
     margin-bottom: 30px !important;
+    height: calc(100% - 30px) !important; // mesma altura
+    display: flex;
+    flex-direction: column;
+
+    .login-register-form, .text-center:last-child {
+      margin-top: auto; // empurra os botões para o fundo
+    }
 
     @media (max-width: 768px) {
       padding: 24px !important;
+      height: auto !important;
     }
   }
 

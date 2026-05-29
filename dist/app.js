@@ -1801,9 +1801,9 @@
       socialCard.innerHTML =
         '<div class="aq-contact-card-title">Redes Sociais</div>' +
         '<div class="aq-contact-social">' +
-          '<a href="https://www.facebook.com/aquariumlife.pt" target="_blank" rel="noopener" title="Facebook"><i class="ri-facebook-fill"></i></a>' +
-          '<a href="https://www.instagram.com/aquariumlife.pt" target="_blank" rel="noopener" title="Instagram"><i class="ri-instagram-line"></i></a>' +
-          '<a href="https://www.youtube.com/@aquariumlifept" target="_blank" rel="noopener" title="YouTube"><i class="ri-youtube-fill"></i></a>' +
+          '<a href="https://www.facebook.com/aquariumlife.pt" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook-f"></i></a>' +
+          '<a href="https://www.instagram.com/aquariumlife.pt" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>' +
+          '<a href="https://www.youtube.com/@aquariumlifept" target="_blank" rel="noopener" title="YouTube"><i class="fab fa-youtube"></i></a>' +
         '</div>';
       infoPanel.appendChild(socialCard);
 
@@ -1845,10 +1845,56 @@
       }
     }
 
+    // ── /PRODUCT ─────────────────────────────────────────────────
+    function initProductPage() {
+      if (!document.body.classList.contains('page-product')) return;
+      var relatedSection = document.querySelector('.related-products');
+      if (relatedSection) {
+        // 1. Mudar o título
+        var title = relatedSection.querySelector('.title, h1, h2, h3, .section-title');
+        if (title) {
+          title.textContent = 'Podes também gostar de:';
+          title.style.display = 'block'; // garantir que não foi oculto
+        }
+        
+        // 2. Limitar a 3 produtos e desligar as funções de slide visuais
+        // (Ocultar nav via CSS, mas aqui vamos forçar a remoção das setas e clones se possível)
+        setTimeout(function() {
+          var owlStage = relatedSection.querySelector('.owl-stage');
+          if (owlStage) {
+            // Desativar transform
+            owlStage.style.setProperty('transform', 'none', 'important');
+            owlStage.style.setProperty('width', '100%', 'important');
+            owlStage.style.setProperty('display', 'flex', 'important');
+            owlStage.style.setProperty('flex-wrap', 'wrap', 'important');
+            owlStage.style.setProperty('gap', '20px', 'important');
+
+            // Limpar clones e ocultar extras
+            var items = owlStage.children;
+            var realCount = 0;
+            for (var i = 0; i < items.length; i++) {
+              var item = items[i];
+              if (item.classList.contains('cloned')) {
+                item.style.setProperty('display', 'none', 'important');
+              } else {
+                realCount++;
+                if (realCount > 3) {
+                  item.style.setProperty('display', 'none', 'important');
+                } else {
+                  item.style.setProperty('width', 'calc(33.333% - 14px)', 'important');
+                }
+              }
+            }
+          }
+        }, 500); // aguardar o owlCarousel inicializar
+      }
+    }
+
     function initSpecialPages() {
       initSales();
       initNew();
       initContact();
+      initProductPage();
     }
 
     // categoryFilters.js v6

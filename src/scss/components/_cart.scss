@@ -419,6 +419,9 @@ body.page-cart {
       border-bottom: 1px solid rgba(8, 238, 188, 0.2) !important;
       color: $color-neon-accent !important;
       font-family: $font-family-title !important;
+
+      // Preço Unitário branco
+      &:nth-child(3) { color: #fff !important; }
     }
     
     td {
@@ -446,7 +449,8 @@ body.page-cart {
 
   // Resumo (Subtotal / Total)
   .cart-summary, .well {
-    background: rgba(0, 21, 49, 0.6) !important;
+    background: rgba(0, 21, 49, 0.4) !important; // mesmo que cart-table
+    backdrop-filter: blur(8px) !important;
     border: 1px solid rgba(8, 238, 188, 0.15) !important;
     border-radius: 16px !important;
     padding: 24px !important;
@@ -458,7 +462,11 @@ body.page-cart {
 
     .summary-row, th, td {
       border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-      color: rgba(255, 255, 255, 0.8) !important;
+      color: #fff !important; // Letras claras
+    }
+
+    th {
+      color: $color-neon-accent !important; // Titulos a verde
     }
 
     .total-price, .order-total {
@@ -511,7 +519,7 @@ body.aq-light-mode.page-cart {
     border-color: rgba(0, 122, 92, 0.15) !important;
     color: #00204A !important;
     
-    th { border-bottom-color: rgba(0, 122, 92, 0.2) !important; color: #007A5C !important; }
+    th { border-bottom-color: rgba(0, 122, 92, 0.2) !important; color: #007A5C !important; &:nth-child(3){ color: #00204A !important; } }
     td { border-bottom-color: rgba(0, 32, 74, 0.05) !important; }
     img { background: #FFFFFF !important; border-color: rgba(0, 122, 92, 0.15) !important; }
     .item-title, a { color: #00204A !important; &:hover { color: #007A5C !important; } }
@@ -519,10 +527,11 @@ body.aq-light-mode.page-cart {
   }
 
   .cart-summary, .well {
-    background: #FFFFFF !important;
+    background: rgba(255, 255, 255, 0.8) !important;
     border-color: rgba(0, 122, 92, 0.15) !important;
     h3 { color: #00204A !important; }
     .summary-row, th, td { border-bottom-color: rgba(0, 32, 74, 0.05) !important; color: rgba(0, 32, 74, 0.75) !important; }
+    th { color: #007A5C !important; }
     .total-price, .order-total { color: #007A5C !important; }
   }
 

@@ -139,6 +139,9 @@
     display: none !important;
   }
 
+  // Corrigir padding do topo
+  padding-top: 10px !important;
+
   // -- Layout de dois painéis --
   .aq-contact-body {
     display: grid;
@@ -294,6 +297,13 @@
     margin: 0 0 20px;
 
     span { color: $color-neon-accent; }
+  }
+
+  // Recaptcha fix
+  .g-recaptcha, .recaptcha-wrapper {
+    margin-bottom: 20px !important;
+    overflow: hidden;
+    width: 100%;
   }
 
   // Inputs do formulário nativo

@@ -69,7 +69,7 @@ body.page-product {
     .card-preview {
       position: relative;
       z-index: 1;
-      padding: 40px !important;
+      padding: 0 !important;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -77,19 +77,21 @@ body.page-product {
       
       @media (max-width: 768px) {
         min-height: 300px;
-        padding: 20px !important;
       }
     }
 
-    img.card-pic {
+    img.card-pic, .card-image img {
       max-width: 100% !important;
       max-height: 500px !important;
-      object-fit: contain !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      border-radius: 20px !important;
       filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));
       transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 
       &:hover {
-        transform: scale(1.05);
+        transform: scale(1.02);
       }
     }
   }
@@ -119,17 +121,19 @@ body.page-product {
 
     a {
       display: block;
-      background: #001531 !important;
+      background: transparent !important;
       border: 1.5px solid rgba(8, 238, 188, 0.2) !important;
       border-radius: 12px !important;
-      padding: 6px !important;
+      padding: 0 !important;
       opacity: 0.6;
       transition: all 0.3s ease !important;
+      overflow: hidden;
 
       img {
         width: 100% !important;
-        height: auto !important;
-        border-radius: 6px;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 10px;
       }
 
       &:hover, &.active {
@@ -255,10 +259,12 @@ body.page-product {
     border-radius: 12px !important;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     overflow: hidden;
     height: 54px !important;
+    width: 120px !important;
 
-    input {
+    input, .counter-input {
       background: transparent !important;
       border: none !important;
       color: $color-text-primary !important;
@@ -266,8 +272,11 @@ body.page-product {
       font-weight: 700 !important;
       font-size: 1.1rem !important;
       text-align: center;
-      width: 50px !important;
+      width: 40px !important;
       height: 100% !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      box-shadow: none !important;
     }
 
     button, .counter-btn {
@@ -278,7 +287,11 @@ body.page-product {
       width: 40px !important;
       height: 100% !important;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       transition: background 0.2s;
+      padding: 0 !important;
 
       &:hover {
         background: rgba(8, 238, 188, 0.1) !important;
@@ -321,8 +334,13 @@ body.page-product {
     }
   }
 
+  // Ocultar wishlist redundante (Shopkit pode gerar várias)
+  .add-favorite-form ~ .add-favorite-form {
+    display: none !important;
+  }
+
   // Favoritos
-  .card-favorite {
+  .card-favorite, .btn-wishlist {
     display: flex !important;
     align-items: center;
     justify-content: center;
@@ -517,7 +535,7 @@ body.aq-light-mode.page-product {
   }
 
   #gallery.card-container a {
-    background: #FFFFFF !important;
+    background: transparent !important;
     border-color: rgba(0, 122, 92, 0.15) !important;
     &:hover, &.active {
       border-color: #007A5C !important;
@@ -600,5 +618,10 @@ body.aq-light-mode.page-product {
     h1, h2, h3, h4, h5 { color: #00204A !important; }
     ul, ol { li::marker { color: #007A5C !important; } }
     a { color: #007A5C !important; &:hover { color: #00204A !important; } }
+  }
+
+  // Ocultar navegação do slider de produtos relacionados
+  .owl-nav {
+    display: none !important;
   }
 }
