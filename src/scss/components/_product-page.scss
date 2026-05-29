@@ -1,0 +1,499 @@
+@use '../base/variables' as *;
+
+// ============================================================
+// PÁGINA DE PRODUTO INDIVIDUAL
+// ============================================================
+
+body.page-product {
+  // Background imersivo
+  background: radial-gradient(circle at 50% 0%, rgba(8, 238, 188, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 50% 100%, rgba(8, 238, 188, 0.05) 0%, transparent 50%),
+              #00040D !important;
+
+  .main {
+    background: transparent !important;
+  }
+
+  // Ocultar navegação quebra-layout (breadcrumbs, etc se necessário)
+  .breadcrumbs {
+    background: transparent !important;
+    border: none !important;
+    .breadcrumbs-item, .breadcrumbs-link {
+      color: rgba(255,255,255,0.5) !important;
+      font-family: $font-family-body !important;
+    }
+    .breadcrumbs-link:hover {
+      color: $color-neon-accent !important;
+    }
+  }
+
+  // ============================================================
+  // COLUNA ESQUERDA: GALERIA DE IMAGENS (.col-xl-7)
+  // ============================================================
+  .product-detail {
+    padding-top: 20px !important;
+  }
+
+  .card-gallery {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    
+    @media (max-width: 991px) {
+      flex-direction: column;
+    }
+  }
+
+  // Imagem principal
+  .card-wrap {
+    flex: 1;
+    background: #001531 !important;
+    border: 1px solid rgba(8, 238, 188, 0.15) !important;
+    border-radius: 20px !important;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(8, 238, 188, 0.1) !important;
+
+    // Brilho de fundo
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 60%; height: 60%;
+      background: radial-gradient(circle, rgba(8, 238, 188, 0.15) 0%, transparent 70%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .card-preview {
+      position: relative;
+      z-index: 1;
+      padding: 40px !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 500px;
+      
+      @media (max-width: 768px) {
+        min-height: 300px;
+        padding: 20px !important;
+      }
+    }
+
+    img.card-pic {
+      max-width: 100% !important;
+      max-height: 500px !important;
+      object-fit: contain !important;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));
+      transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  // Thumbnails
+  #gallery.card-container {
+    width: 80px;
+    flex-shrink: 0;
+
+    @media (max-width: 991px) {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      gap: 12px;
+      padding-bottom: 10px;
+    }
+
+    .card-slide {
+      margin-bottom: 12px;
+      @media (max-width: 991px) {
+        margin-bottom: 0;
+        width: 80px;
+        flex-shrink: 0;
+      }
+    }
+
+    a {
+      display: block;
+      background: #001531 !important;
+      border: 1.5px solid rgba(8, 238, 188, 0.2) !important;
+      border-radius: 12px !important;
+      padding: 6px !important;
+      opacity: 0.6;
+      transition: all 0.3s ease !important;
+
+      img {
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 6px;
+      }
+
+      &:hover, &.active {
+        opacity: 1;
+        border-color: $color-neon-accent !important;
+        box-shadow: 0 0 15px rgba(8, 238, 188, 0.3) !important;
+      }
+    }
+  }
+
+  // Ícone de zoom nativo
+  .card-icon {
+    display: none !important;
+  }
+
+
+  // ============================================================
+  // COLUNA DIREITA: INFORMAÇÕES DO PRODUTO (.col-xl-5)
+  // ============================================================
+  .card-inner {
+    background: rgba(0, 21, 49, 0.5) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(8, 238, 188, 0.15) !important;
+    border-radius: 20px !important;
+    padding: 40px !important;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4) !important;
+
+    @media (max-width: 768px) {
+      padding: 24px !important;
+      margin-top: 20px;
+    }
+  }
+
+  // Título
+  h1.card-title, .product-title {
+    font-family: $font-family-title !important;
+    font-size: 2rem !important;
+    font-weight: 800 !important;
+    color: $color-text-primary !important;
+    line-height: 1.2 !important;
+    margin-bottom: 24px !important;
+    letter-spacing: -0.5px !important;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem !important;
+    }
+  }
+
+  // Preço
+  .card-details {
+    margin-bottom: 24px !important;
+    padding-bottom: 24px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  }
+
+  .card-prices {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .card-actual {
+    font-family: $font-family-title !important;
+    font-size: 2.5rem !important;
+    font-weight: 800 !important;
+    color: $color-neon-accent !important;
+    text-shadow: 0 0 20px rgba(8, 238, 188, 0.4) !important;
+    letter-spacing: -1px !important;
+  }
+
+  .card-old {
+    font-family: $font-family-body !important;
+    font-size: 1.2rem !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    text-decoration: line-through !important;
+  }
+
+  // Stock e Código (SKU)
+  .card-stock, .card-code {
+    font-family: $font-family-body !important;
+    font-size: 0.9rem !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    margin-bottom: 8px !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    span {
+      color: rgba(255, 255, 255, 0.8) !important;
+      font-weight: 600 !important;
+    }
+  }
+
+  // Ponto verde de "Em stock"
+  .card-stock::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $color-neon-accent;
+    box-shadow: 0 0 8px $color-neon-accent;
+  }
+
+  // Formulário Comprar
+  form.add-cart {
+    margin-top: 32px !important;
+  }
+
+  .card-control {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+    margin-bottom: 16px !important;
+    flex-wrap: wrap;
+  }
+
+  // Quantidade
+  .card-counter, .counter {
+    background: rgba(0, 4, 13, 0.6) !important;
+    border: 1px solid rgba(8, 238, 188, 0.2) !important;
+    border-radius: 12px !important;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 54px !important;
+
+    input {
+      background: transparent !important;
+      border: none !important;
+      color: $color-text-primary !important;
+      font-family: $font-family-title !important;
+      font-weight: 700 !important;
+      font-size: 1.1rem !important;
+      text-align: center;
+      width: 50px !important;
+      height: 100% !important;
+    }
+
+    button, .counter-btn {
+      background: transparent !important;
+      border: none !important;
+      color: $color-neon-accent !important;
+      font-size: 1.2rem !important;
+      width: 40px !important;
+      height: 100% !important;
+      cursor: pointer;
+      transition: background 0.2s;
+
+      &:hover {
+        background: rgba(8, 238, 188, 0.1) !important;
+      }
+    }
+  }
+
+  // Botão Comprar Gigante
+  .card-btn.btn-primary {
+    flex: 1;
+    min-width: 200px;
+    height: 54px !important;
+    background: linear-gradient(90deg, $color-neon-accent, #05c99e) !important;
+    border: none !important;
+    border-radius: 12px !important;
+    color: #001531 !important;
+    font-family: $font-family-title !important;
+    font-size: 1.1rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer !important;
+    box-shadow: 0 10px 25px rgba(8, 238, 188, 0.3) !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+
+    &::before, &::after { display: none !important; }
+
+    &:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: 0 15px 35px rgba(8, 238, 188, 0.5) !important;
+      color: #000 !important;
+    }
+
+    &:active {
+      transform: translateY(1px) !important;
+    }
+  }
+
+  // Favoritos
+  .card-favorite {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 54px !important;
+    height: 54px !important;
+    background: rgba(8, 238, 188, 0.05) !important;
+    border: 1px solid rgba(8, 238, 188, 0.2) !important;
+    border-radius: 12px !important;
+    color: $color-neon-accent !important;
+    font-size: 1.2rem !important;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background: rgba(255, 61, 92, 0.1) !important;
+      border-color: #ff3d5c !important;
+      color: #ff3d5c !important;
+      box-shadow: 0 0 15px rgba(255, 61, 92, 0.3) !important;
+    }
+  }
+
+  // Atributos e info extra na lateral
+  .table-product-attributes {
+    margin-top: 32px !important;
+    
+    table {
+      width: 100% !important;
+      border-collapse: collapse !important;
+    }
+    
+    td, th {
+      padding: 12px 0 !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+      font-family: $font-family-body !important;
+      font-size: 0.9rem !important;
+    }
+
+    th {
+      color: rgba(255, 255, 255, 0.5) !important;
+      font-weight: 400 !important;
+      width: 40%;
+    }
+
+    td {
+      color: $color-text-primary !important;
+      font-weight: 600 !important;
+      text-align: right !important;
+    }
+  }
+
+  // ============================================================
+  // SEÇÃO DE DETALHES / DESCRIÇÃO (.details)
+  // ============================================================
+  .details.section {
+    margin-top: 64px !important;
+    padding: 64px 0 !important;
+    background: transparent !important;
+    border-top: 1px solid rgba(8, 238, 188, 0.1) !important;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%;
+      width: 50%; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(8, 238, 188, 0.5), transparent);
+      transform: translateX(-50%);
+    }
+  }
+
+  // Títulos das abas
+  .nav {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    border: none !important;
+
+    @media (max-width: 991px) {
+      flex-direction: row !important;
+      overflow-x: auto;
+      margin-bottom: 24px;
+    }
+  }
+
+  .nav-item {
+    margin: 0 !important;
+  }
+
+  .nav-link {
+    background: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    padding: 16px 24px !important;
+    transition: all 0.3s ease !important;
+
+    h2 {
+      margin: 0 !important;
+      font-family: $font-family-title !important;
+      font-size: 1.1rem !important;
+      font-weight: 600 !important;
+      color: rgba(255, 255, 255, 0.6) !important;
+      letter-spacing: 1px !important;
+      text-transform: uppercase !important;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.02) !important;
+      border-color: rgba(8, 238, 188, 0.3) !important;
+    }
+
+    &.active {
+      background: rgba(8, 238, 188, 0.05) !important;
+      border-color: $color-neon-accent !important;
+      box-shadow: inset 4px 0 0 $color-neon-accent !important;
+
+      h2 {
+        color: $color-neon-accent !important;
+        font-weight: 800 !important;
+      }
+
+      @media (max-width: 991px) {
+        box-shadow: inset 0 -4px 0 $color-neon-accent !important;
+      }
+    }
+  }
+
+  // Conteúdo da aba
+  .details-list {
+    background: rgba(0, 21, 49, 0.4) !important;
+    border: 1px solid rgba(8, 238, 188, 0.1) !important;
+    border-radius: 20px !important;
+    padding: 40px !important;
+    min-height: 100%;
+
+    @media (max-width: 768px) {
+      padding: 24px !important;
+    }
+  }
+
+  .details-text {
+    font-family: $font-family-body !important;
+    font-size: 1rem !important;
+    line-height: 1.8 !important;
+    color: rgba(255, 255, 255, 0.75) !important;
+
+    p {
+      margin-bottom: 20px !important;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: $font-family-title !important;
+      color: $color-text-primary !important;
+      margin: 32px 0 16px !important;
+      font-weight: 700 !important;
+    }
+
+    ul, ol {
+      padding-left: 20px !important;
+      margin-bottom: 20px !important;
+      li {
+        margin-bottom: 8px !important;
+        &::marker {
+          color: $color-neon-accent !important;
+        }
+      }
+    }
+
+    a {
+      color: $color-neon-accent !important;
+      text-decoration: underline !important;
+      &:hover { color: #fff !important; }
+    }
+  }
+}

@@ -134,7 +134,8 @@
 
   .contacts-title,
   .contacts__title,
-  h2.contacts__title {
+  h2.contacts__title,
+  .contacts-container {
     display: none !important;
   }
 
@@ -300,7 +301,8 @@
   .contacts.section input[type="email"],
   .contacts.section input[type="tel"],
   .contacts.section textarea,
-  .contacts.section select {
+  .contacts.section select,
+  .contacts.section .form-control {
     width: 100% !important;
     background: rgba(0, 4, 13, 0.6) !important;
     border: 1px solid rgba(8, 238, 188, 0.2) !important;
@@ -321,7 +323,8 @@
     }
   }
 
-  .contacts.section textarea {
+  .contacts.section textarea,
+  .contacts.section textarea.form-control {
     min-height: 130px !important;
     resize: vertical !important;
   }
