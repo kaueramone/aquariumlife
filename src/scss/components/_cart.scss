@@ -392,9 +392,9 @@ body.modal-open {
 }
 
 // ============================================================
-// CART PAGE (/cart)
+// CART PAGE (/cart & checkout flow)
 // ============================================================
-body.page-cart {
+body.page-cart, body[class*="page-cart-"] {
   background: radial-gradient(circle at 50% 0%, rgba(8, 238, 188, 0.1) 0%, transparent 50%),
               #00040D !important;
 
@@ -486,6 +486,22 @@ body.page-cart {
     }
   }
 
+  // Checkout Forms (Inputs)
+  .form-group label { color: rgba(255, 255, 255, 0.7) !important; }
+  .form-control {
+    background: rgba(0, 21, 49, 0.4) !important;
+    border: 1px solid rgba(8, 238, 188, 0.2) !important;
+    color: #fff !important;
+    border-radius: 8px !important;
+    
+    &:focus {
+      border-color: $color-neon-accent !important;
+      box-shadow: 0 0 0 3px rgba(8, 238, 188, 0.15) !important;
+    }
+    
+    &::placeholder { color: rgba(255, 255, 255, 0.3) !important; }
+  }
+
   // Botoes
   .btn.btn-primary, .btn-checkout {
     background: linear-gradient(90deg, $color-neon-accent, #05c99e) !important;
@@ -519,30 +535,64 @@ body.page-cart {
 // ============================================================
 // LIGHT MODE OVERRIDES
 // ============================================================
-body.aq-light-mode.page-cart {
+body.aq-light-mode.page-cart, body.aq-light-mode[class*="page-cart-"] {
   background: #F0F8FF !important;
 
   h1.cart-title { color: #00204A !important; }
 
-  .cart-table, .table {
+  .cart.section .cart-table, .cart.section .table, .cart.section .cart-row {
     background: rgba(255, 255, 255, 0.8) !important;
     border-color: rgba(0, 122, 92, 0.15) !important;
     color: #00204A !important;
     
-    th { border-bottom-color: rgba(0, 122, 92, 0.2) !important; color: #007A5C !important; &:nth-child(3){ color: #00204A !important; } }
-    td { border-bottom-color: rgba(0, 32, 74, 0.05) !important; }
+    th, td, p, span, a, div, .cart-category {
+      color: #00204A !important;
+    }
+
+    th, .cart-category { 
+      border-bottom-color: rgba(0, 122, 92, 0.2) !important; 
+      color: #007A5C !important; 
+      &:nth-child(3){ color: #00204A !important; } 
+    }
+    td, .cart-line { border-bottom-color: rgba(0, 32, 74, 0.05) !important; }
     img { background: #FFFFFF !important; border-color: rgba(0, 122, 92, 0.15) !important; }
-    .item-title, a { color: #00204A !important; &:hover { color: #007A5C !important; } }
-    .price, .item-price { color: #007A5C !important; }
+    .item-title, a, a.cart-product, .cart-product { 
+      color: #00204A !important; 
+      &:hover { color: #007A5C !important; } 
+    }
+    .price, .item-price, .cart-price { color: #007A5C !important; }
   }
 
-  .cart-summary, .well {
+  .cart.section .cart-summary, .cart.section .well, .cart.section .cart-receipt {
     background: rgba(255, 255, 255, 0.8) !important;
     border-color: rgba(0, 122, 92, 0.15) !important;
-    h3 { color: #00204A !important; }
-    .summary-row, th, td { border-bottom-color: rgba(0, 32, 74, 0.05) !important; color: rgba(0, 32, 74, 0.75) !important; }
+    color: #00204A !important;
+
+    h3, .cart-category { 
+      color: #00204A !important; 
+      border-bottom-color: rgba(0, 122, 92, 0.2) !important;
+    }
+    .summary-row, th, td, span, div, p, .cart-line, .cart-text { 
+      border-bottom-color: rgba(0, 32, 74, 0.05) !important; 
+      color: rgba(0, 32, 74, 0.75) !important; 
+    }
     th { color: #007A5C !important; }
-    .total-price, .order-total { color: #007A5C !important; }
+    .total-price, .order-total, .cart-line:last-of-type .cart-text:last-child { color: #007A5C !important; border: none !important; }
+  }
+
+  // Checkout Forms (Light Mode)
+  .form-group label { color: rgba(0, 32, 74, 0.7) !important; }
+  .form-control {
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 122, 92, 0.2) !important;
+    color: #00204A !important;
+    
+    &:focus {
+      border-color: #007A5C !important;
+      box-shadow: 0 0 0 3px rgba(0, 122, 92, 0.1) !important;
+    }
+    
+    &::placeholder { color: rgba(0, 32, 74, 0.35) !important; }
   }
 
   .btn.btn-primary, .btn-checkout {
