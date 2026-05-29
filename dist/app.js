@@ -2128,9 +2128,8 @@
           list.innerHTML = '';
           slice.forEach(function(p) {
             const priceHTML = p.pp
-              ? '<del style="opacity:0.5;font-size:0.82em;margin-right:4px;">' + p.pf + '</del>'
-                + '<span class="price" style="color:#08EEBC;">' + p.ppf + '</span>'
-              : '<span class="price">' + p.pf + '</span>';
+              ? '<del>' + p.pf + '</del><span class="product-actual">' + p.ppf + '</span>'
+              : '<span class="product-actual">' + p.pf + '</span>';
 
             const col = document.createElement('div');
             col.className = 'col';
@@ -2142,14 +2141,13 @@
               + '<a class="product-preview" href="' + p.url + '" data-thumbnail-type="square">'
               + '<img class="product-pic" src="' + (p.img || noImg) + '" alt="' + p.title.replace(/"/g,'') + '" loading="lazy">'
               + '</a>'
-              + '<div class="product-info">'
-              + '<a class="product-title" href="' + p.url + '">' + p.title + '</a>'
+              + '</div>'
+              + '<a class="product-name" href="' + p.url + '">' + p.title + '</a>'
+              + '<div class="product-details">'
               + '<div class="product-price">' + priceHTML + '</div>'
               + '</div>'
-              + '<div class="product-actions">'
-              + '<a class="btn btn-primary" href="' + p.cart + '">Comprar</a>'
-              + '</div>'
-              + '</div></div></div>';
+              + '<a class="product-btn btn btn-primary" href="' + p.cart + '">Comprar</a>'
+              + '</div></div>';
             list.appendChild(col);
           });
 
