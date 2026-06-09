@@ -488,6 +488,15 @@ body.page-cart, body[class*="page-cart-"] {
 
   // Checkout Forms (Inputs)
   .form-group label { color: rgba(255, 255, 255, 0.7) !important; }
+
+  // Garante contraste em TODOS os rotulos do checkout, incluindo os de
+  // checkbox que nativamente saem num cinza-escuro quase ilegivel.
+  label,
+  .checkbox label,
+  .form-check-label,
+  .custom-control-label {
+    color: rgba(255, 255, 255, 0.85) !important;
+  }
   .form-control {
     background: rgba(0, 21, 49, 0.4) !important;
     border: 1px solid rgba(8, 238, 188, 0.2) !important;

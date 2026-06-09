@@ -77,22 +77,22 @@
           { label: 'Filtros Externos',  icon: 'fas fa-recycle',            href: '/category/equipamento-filtros-externos' },
           { label: 'Filtros Internos',  icon: 'fas fa-stream',             href: '/category/equipamento-filtros-internos' },
           { label: 'Filtros Cascata',   icon: 'fas fa-tint',               href: '/category/equipamento-filtros-cascata' },
-          { label: 'Medicacao',         icon: 'fas fa-pills',              href: '/category/equipamento-medicacao' },
+          { label: 'Medicação',         icon: 'fas fa-pills',              href: '/category/equipamento-medicacao' },
           { label: 'Termostatos',       icon: 'fas fa-thermometer-half',   href: '/category/equipamento-termostatos' },
           { label: 'Fertilizantes',     icon: 'fas fa-flask',              href: '/category/equipamento-fertilizantes' },
-          { label: 'Areao',             icon: 'fas fa-layer-group',        href: '/category/equipamento-areao-inerte' },
-          { label: 'Substrato Fertil',  icon: 'fas fa-seedling',           href: '/category/equipamento-areao-fertil' },
+          { label: 'Areão',             icon: 'fas fa-layer-group',        href: '/category/equipamento-areao-inerte' },
+          { label: 'Substrato Fértil',  icon: 'fas fa-seedling',           href: '/category/equipamento-areao-fertil' },
           { label: 'CO2',               icon: 'fas fa-wind',               href: '/category/equipamento-co2' },
           { label: 'LEDs',              icon: 'fas fa-lightbulb',          href: '/category/equipamento-led-s' },
-          { label: 'Media Filtrante',   icon: 'fas fa-recycle',            href: '/category/equipamento-media-filtrante' },
-          { label: 'Testes de Agua',    icon: 'fas fa-vial',               href: '/category/equipamento-testes-de-agua' },
+          { label: 'Média Filtrante',   icon: 'fas fa-recycle',            href: '/category/equipamento-media-filtrante' },
+          { label: 'Testes de Água',    icon: 'fas fa-vial',               href: '/category/equipamento-testes-de-agua' },
           { label: 'Lilly Pipes',       icon: 'fas fa-grip-lines-vertical', href: '/category/equipamento-lilly-pipes' },
-          { label: 'Aquarios',          icon: 'fas fa-cube',               href: '/category/equipamento-aquarios' },
-          { label: 'Acessorios',        icon: 'fas fa-toolbox',            href: '/category/equipamento-acessorios' },
-          { label: 'Bombas de Agua',    icon: 'fas fa-sync',               href: '/category/equipamento-bombas-de-agua' },
+          { label: 'Aquários',          icon: 'fas fa-cube',               href: '/category/equipamento-aquarios' },
+          { label: 'Acessórios',        icon: 'fas fa-toolbox',            href: '/category/equipamento-acessorios' },
+          { label: 'Bombas de Água',    icon: 'fas fa-sync',               href: '/category/equipamento-bombas-de-agua' },
         ]
       },
-      { label: 'Alimentacao',           icon: 'fas fa-utensils',  href: '/category/alimentacao',           children: [] },
+      { label: 'Alimentação',           icon: 'fas fa-utensils',  href: '/category/alimentacao',           children: [] },
       {
         label: 'Hardscape',
         icon: 'fas fa-mountain',
@@ -360,7 +360,7 @@
      * - Injeta botao "Ver todos os nossos produtos"
      */
 
-    const VER_TODOS_HREF = '/products';
+    const VER_TODOS_HREF = '/catalog';
 
     // Mover botoes ────────────────────────────────────────────────────────────────
     function moveComprarButtons() {
@@ -2393,6 +2393,111 @@
     }
 
     /**
+     * nativeFixes.js
+     * Correcoes de conteudo gerado nativamente pelo Shopkit que nao se conseguem
+     * fazer so com CSS. Cada fix e idempotente e seguro.
+     */
+
+    // 1. Concordancia singular/plural do stock
+    function fixStockText() {
+      if (!document.body.classList.contains('page-product')) return;
+      document.querySelectorAll('.stock-number, .stock, .card-stock .stock').forEach(function (el) {
+        var txt = el.textContent;
+        var fixed = txt.replace(/\b1\s+unidades\b/i, '1 unidade');
+        if (fixed !== txt) el.textContent = fixed;
+      });
+    }
+
+    // 2. Botao CHECKOUT -> Finalizar compra
+    function fixCheckoutButton() {
+      var candidates = document.querySelectorAll(
+        '.btn-checkout, a[href*="/cart/data"], a[href*="checkout"], .cart .btn-primary, .cart-summary a.btn'
+      );
+      candidates.forEach(function (el) {
+        var t = (el.textContent || '').trim();
+        if (/^check\s*out$/i.test(t)) {
+          el.textContent = 'Finalizar compra';
+        }
+      });
+    }
+
+    // 3. SEO: titulo / H1 / meta description da homepage
+    var SEO_TITLE = 'AquariumLife — Loja de Aquariofilia e Aquascaping em Portugal';
+    var SEO_DESC  = 'Equipamento, plantas, peixes, hardscape e acessorios para o teu aquario. '
+                  + 'As melhores marcas de aquarismo com envio para todo o pais.';
+
+    function fixHomeSeo() {
+      var path = window.location.pathname;
+      var isHome = path === '/' || path === '' || path === '/index';
+      if (!isHome) return;
+
+      if (/^aquariumlife$/i.test((document.title || '').trim())) {
+        document.title = SEO_TITLE;
+      }
+
+      var meta = document.querySelector('meta[name="description"]');
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('name', 'description');
+        document.head.appendChild(meta);
+      }
+      if (!meta.getAttribute('content')) {
+        meta.setAttribute('content', SEO_DESC);
+      }
+
+      var h1 = document.querySelector('h1');
+      if (h1 && /^aquariumlife$/i.test(h1.textContent.trim())) {
+        var sr = document.createElement('span');
+        sr.className = 'aq-visually-hidden';
+        sr.textContent = SEO_TITLE;
+        h1.appendChild(sr);
+      }
+    }
+
+    // 4. Pagina 404 — marca o body e injeta atalhos uteis (se o nosso codigo correr la)
+    function fixErrorPage() {
+      if (document.getElementById('aq-404-actions')) return;
+
+      var txt = (document.body.textContent || '').toLowerCase();
+      var looks404 = /ooops|p[áa]gina n[ãa]o encontrada|n[ãa]o se encontra dispon/i.test(txt)
+                  && !document.querySelector('header, .header, .aq-nav-bar');
+      if (!looks404) return;
+
+      document.body.classList.add('page-404');
+
+      var anchor = document.querySelector('.main, .container, body');
+      if (!anchor) return;
+
+      var box = document.createElement('div');
+      box.id = 'aq-404-actions';
+      box.className = 'aq-404-actions';
+      box.innerHTML =
+        '<a href="/">Voltar à página inicial</a>' +
+        '<a href="/catalog">Ver todos os produtos</a>' +
+        '<a href="/category/equipamento">Equipamento</a>' +
+        '<a href="/category/plantas">Plantas</a>' +
+        '<a href="/contact">Contactar-nos</a>';
+      anchor.appendChild(box);
+    }
+
+    function runFixes() {
+      fixStockText();
+      fixCheckoutButton();
+      fixHomeSeo();
+      fixErrorPage();
+    }
+
+    function initNativeFixes() {
+      runFixes();
+      var attempts = 0;
+      var interval = setInterval(function () {
+        attempts++;
+        runFixes();
+        if (attempts >= 15) clearInterval(interval);
+      }, 300);
+    }
+
+    /**
      * storeSection.js - v4
      * - Endereco correto: Praceta Jose Afonso 3A, 2740-192 Porto Salvo, Portugal
      * - Botao "Como chegar": abre rotas do Google Maps ate a loja
@@ -2631,6 +2736,9 @@
 
       // Slider de preco + layout filtros nas paginas de categoria
       initCategoryFilters();
+
+      // Correcoes de conteudo nativo Shopkit (stock, botao checkout, SEO home)
+      initNativeFixes();
 
       // Toggle dark/light mode (lampada flutuante)
       initThemeToggle();

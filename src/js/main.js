@@ -13,6 +13,7 @@ import { initThemeToggle }     from './modules/themeToggle.js';
 import { initTrustSeals }      from './modules/trustSeals.js';
 import { initSpecialPages }    from './modules/specialPages.js';
 import { initCategoryFilters } from './modules/categoryFilters.js';
+import { initNativeFixes }     from './modules/nativeFixes.js';
 import { initHome }            from './modules/homeOrchestrator.js';
 
 function init() {
@@ -38,6 +39,9 @@ function init() {
 
   // Slider de preco + layout filtros nas paginas de categoria
   initCategoryFilters();
+
+  // Correcoes de conteudo nativo Shopkit (stock, botao checkout, SEO home)
+  initNativeFixes();
 
   // Toggle dark/light mode (lampada flutuante)
   initThemeToggle();

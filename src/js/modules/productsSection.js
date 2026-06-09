@@ -5,7 +5,7 @@
  * - Injeta botao "Ver todos os nossos produtos"
  */
 
-const VER_TODOS_HREF = '/products';
+const VER_TODOS_HREF = '/catalog';
 
 // Mover botoes ────────────────────────────────────────────────────────────────
 function moveComprarButtons() {
