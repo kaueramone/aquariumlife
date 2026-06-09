@@ -541,6 +541,57 @@ body.page-product {
       &:hover { color: #fff !important; }
     }
   }
+
+  // ----------------------------------------------------------
+  // DESCRICAO: uma so coluna (titulo + conteudo no mesmo box)
+  // O Shopkit divide em .col-xl-6 (aba) + .col-xl-6 (conteudo),
+  // deixando metade da largura vazia. Forcamos largura total.
+  // ----------------------------------------------------------
+  .details-tabs .row,
+  .product-details-tabs .row,
+  .row:has(.details-list),
+  .row:has(.nav[role="tablist"]) {
+    > .col-xl-6,
+    > [class*="col-"] {
+      flex: 0 0 100% !important;
+      max-width: 100% !important;
+    }
+    // a aba/titulo fica como cabecalho compacto, nao um botao a meia largura
+    .nav[role="tablist"] {
+      flex-direction: row !important;
+      margin-bottom: 16px !important;
+    }
+    .nav-link {
+      display: inline-block !important;
+      width: auto !important;
+    }
+  }
+
+  // ----------------------------------------------------------
+  // SETAS DO SLIDER DE RELACIONADOS: centradas nos cards
+  // Nativamente vinham com top:-52px (acima da linha dos cards).
+  // Ancoramos ao container .product-related-products (relative) e
+  // centramos verticalmente nos cards, uma em cada lateral.
+  // ----------------------------------------------------------
+  .product-related-products {
+    position: relative !important;
+
+    .slick-arrow {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      position: absolute !important;
+      top: 50% !important;
+      bottom: auto !important;
+      transform: translateY(-50%) !important;
+      margin: 0 !important;
+      z-index: 30 !important;
+      width: 40px !important;
+      height: 40px !important;
+    }
+    .slick-prev { left: 0 !important; right: auto !important; }
+    .slick-next { right: 0 !important; left: auto !important; }
+  }
 }
 
 // ============================================================
