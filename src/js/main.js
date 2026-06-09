@@ -14,6 +14,7 @@ import { initTrustSeals }      from './modules/trustSeals.js';
 import { initSpecialPages }    from './modules/specialPages.js';
 import { initCategoryFilters } from './modules/categoryFilters.js';
 import { initNativeFixes }     from './modules/nativeFixes.js';
+import { initCartQuantity }   from './modules/cartQuantity.js';
 import { initHome }            from './modules/homeOrchestrator.js';
 
 function init() {
@@ -42,6 +43,9 @@ function init() {
 
   // Correcoes de conteudo nativo Shopkit (stock, botao checkout, SEO home)
   initNativeFixes();
+
+  // Recalculo de quantidade no carrinho
+  initCartQuantity();
 
   // Toggle dark/light mode (lampada flutuante)
   initThemeToggle();
