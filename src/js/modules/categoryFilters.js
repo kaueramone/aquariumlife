@@ -8,9 +8,12 @@ const JSON_CATS = 'dist/categories.json';
 const PER_PAGE  = 12;
 
 export function initCategoryFilters() {
-  if (!document.body.classList.contains('page-category')) return;
+  var isCategory = document.body.classList.contains('page-category');
+  var isCatalog  = document.body.classList.contains('page-catalog');
+  if (!isCategory && !isCatalog) return;
 
-  const catId = getCategoryId();
+  // No catalogo usamos o JSON global 'all'; na categoria usamos o catId.
+  const catId = isCatalog ? 'all' : getCategoryId();
   if (!catId) return;
 
   const ready = () => {
@@ -360,7 +363,9 @@ function initPriceFilter(catId) {
 
   // ---- Carregar JSON da categoria ----
   async function loadProducts() {
-    const jsonFile = 'dist/products-cat-' + catId + '.json';
+    const jsonFile = (catId === 'all')
+      ? 'dist/products-all.json'
+      : 'dist/products-cat-' + catId + '.json';
     const url = 'https://cdn.jsdelivr.net/gh/' + REPO + '@main/' + jsonFile;
     try {
       const res = await fetch(url);

@@ -1910,9 +1910,12 @@
     const PER_PAGE  = 12;
 
     function initCategoryFilters() {
-      if (!document.body.classList.contains('page-category')) return;
+      var isCategory = document.body.classList.contains('page-category');
+      var isCatalog  = document.body.classList.contains('page-catalog');
+      if (!isCategory && !isCatalog) return;
 
-      const catId = getCategoryId();
+      // No catalogo usamos o JSON global 'all'; na categoria usamos o catId.
+      const catId = isCatalog ? 'all' : getCategoryId();
       if (!catId) return;
 
       const ready = () => {
@@ -2262,7 +2265,9 @@
 
       // ---- Carregar JSON da categoria ----
       async function loadProducts() {
-        const jsonFile = 'dist/products-cat-' + catId + '.json';
+        const jsonFile = (catId === 'all')
+          ? 'dist/products-all.json'
+          : 'dist/products-cat-' + catId + '.json';
         const url = 'https://cdn.jsdelivr.net/gh/' + REPO + '@main/' + jsonFile;
         try {
           const res = await fetch(url);
@@ -2480,11 +2485,52 @@
       anchor.appendChild(box);
     }
 
+    // 5. Perfil/checkout: idioma PT-PT e Pais Portugal Continental por defeito,
+    //    e sincronizar os widgets niceSelect (que mostravam "vazio" por o texto
+    //    branco ficar sobre fundo branco / por nao refletirem o <select> nativo).
+    function setSelectDefault(id, preferredValues) {
+      var sel = document.getElementById(id);
+      if (!sel) return false;
+      var cur = sel.value;
+      // so define defeito se estiver vazio ou num valor que queremos corrigir
+      var needsDefault = !cur || preferredValues.indexOf(cur) === -1;
+      if (needsDefault) {
+        for (var i = 0; i < preferredValues.length; i++) {
+          var pv = preferredValues[i];
+          var opt = Array.prototype.find
+            ? Array.prototype.find.call(sel.options, function (o) { return o.value === pv; })
+            : null;
+          if (opt) { sel.value = pv; return true; }
+        }
+      }
+      return false;
+    }
+
+    function fixProfileDefaults() {
+      if (!document.body.classList.contains('page-account') &&
+          !document.body.classList.contains('page-cart')) return;
+
+      // Idioma: preferir pt_PT; corrigir se estiver vazio, pt_BR ou pt generico
+      setSelectDefault('locale', ['pt_PT']);
+      // Pais: preferir Portugal Continental (PRT)
+      setSelectDefault('delivery_country', ['PRT']);
+      setSelectDefault('billing_country', ['PRT']);
+
+      // Sincronizar os widgets niceSelect com os <select> nativos
+      var $ = window.jQuery;
+      if ($ && $.fn && $.fn.niceSelect) {
+        ['#locale', '#gender', '#delivery_country', '#billing_country'].forEach(function (sel) {
+          try { $(sel).niceSelect('update'); } catch (e) {}
+        });
+      }
+    }
+
     function runFixes() {
       fixStockText();
       fixCheckoutButton();
       fixHomeSeo();
       fixErrorPage();
+      fixProfileDefaults();
     }
 
     function initNativeFixes() {

@@ -1,0 +1,168 @@
+@use '../base/variables' as *;
+
+// ============================================================
+// CHECKOUT MULTI-PASSO (cart/data, cart/payment) + CONTA + CALLOUTS
+// O Shopkit gera estes paineis com .well-featured (fundo branco).
+// O _cart.scss ja trata o /cart, mas os passos data/payment usam
+// .checkout-container e .basket-checkout que ficavam brancos.
+// ============================================================
+
+// ---- DARK (padrao) ----------------------------------------
+body.page-cart,
+body.page-account {
+
+  // Paineis brancos do checkout e da conta
+  .checkout-container,
+  .basket.basket-checkout,
+  .basket-checkout,
+  .account-container,
+  .well-featured.well-shadow:not(.dropdown-menu):not(.cart-list) {
+    background: rgba(0, 21, 49, 0.55) !important;
+    border: 1px solid rgba(8, 238, 188, 0.12) !important;
+    border-radius: 16px !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45) !important;
+    color: #fff !important;
+  }
+
+  // Titulos e texto dentro dos paineis
+  .checkout-container, .basket-checkout, .account-container {
+    h1, h2, h3, h4, h5,
+    .title, label, p, span, a, div, td, th, strong, b {
+      color: #fff !important;
+    }
+    // valores e destaques a neon
+    .price, .product-actual, .basket-total, .total-value,
+    .checkout-total, strong.price { color: $color-neon-accent !important; }
+
+    a:not(.btn):hover { color: $color-neon-accent !important; }
+  }
+
+  // Indicador de passos (1-2-3): numeros legiveis
+  .checkout-steps, .steps, .wizard-steps {
+    .step, .step-number, li {
+      color: rgba(255, 255, 255, 0.7) !important;
+    }
+    .active .step-number, .step.active, li.active {
+      color: $color-neon-accent !important;
+    }
+  }
+
+  // Inputs/selects do checkout (igual ao resto da loja)
+  .form-control,
+  input.form-control,
+  textarea.form-control {
+    background: rgba(0, 21, 49, 0.4) !important;
+    border: 1px solid rgba(8, 238, 188, 0.25) !important;
+    color: #fff !important;
+    border-radius: 8px !important;
+
+    &::placeholder { color: rgba(255, 255, 255, 0.35) !important; }
+    &:focus {
+      border-color: $color-neon-accent !important;
+      box-shadow: 0 0 0 3px rgba(8, 238, 188, 0.15) !important;
+    }
+  }
+
+  // Widget nice-select tambem escuro (Idioma, Genero, Pais)
+  .nice-select {
+    background-color: rgba(0, 21, 49, 0.55) !important;
+    color: #fff !important;
+    border: 1px solid rgba(8, 238, 188, 0.3) !important;
+    border-radius: 8px !important;
+
+    &::after { border-bottom-color: $color-neon-accent !important; border-right-color: $color-neon-accent !important; }
+    .current { color: #fff !important; }
+    .list { background-color: #001531 !important; border: 1px solid rgba(8, 238, 188, 0.3) !important; }
+    .option { color: #fff !important; background: transparent !important;
+      &:hover, &.focus { background-color: rgba(8, 238, 188, 0.15) !important; }
+      &.selected { color: $color-neon-accent !important; font-weight: 600 !important; }
+    }
+  }
+
+  // labels sempre legiveis (inclui checkboxes)
+  label, .form-check-label, .custom-control-label {
+    color: rgba(255, 255, 255, 0.85) !important;
+  }
+}
+
+// ============================================================
+// CALLOUTS / MENSAGENS (sucesso, erro, aviso, info)
+// Nativo: .callout-success tem fundo verde-claro mas o nosso tema
+// forca texto branco -> ilegivel. Aqui damos contraste real.
+// ============================================================
+.callout,
+.alert {
+  border-radius: 12px !important;
+  font-family: $font-family-body !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+
+  // garante que TODO o texto interno herda a cor certa
+  *, p, span, a, strong, b { color: inherit !important; }
+}
+
+.callout-success, .alert-success {
+  background: rgba(8, 238, 188, 0.12) !important;
+  border-color: rgba(8, 238, 188, 0.5) !important;
+  color: #0a3d33 !important; // fallback escuro
+}
+
+// Em modo escuro (default da loja) o sucesso fica verde-neon sobre escuro
+body:not(.aq-light-mode) {
+  .callout-success, .alert-success {
+    background: rgba(8, 238, 188, 0.12) !important;
+    border-color: rgba(8, 238, 188, 0.5) !important;
+    color: $color-neon-accent !important;
+    *, p, span, a, strong { color: $color-neon-accent !important; }
+  }
+  .callout-danger, .alert-danger {
+    background: rgba(255, 70, 90, 0.12) !important;
+    border-color: rgba(255, 70, 90, 0.5) !important;
+    color: #ff8092 !important;
+    *, p, span, a, strong { color: #ff8092 !important; }
+  }
+  .callout-warning, .alert-warning {
+    background: rgba(255, 196, 0, 0.12) !important;
+    border-color: rgba(255, 196, 0, 0.45) !important;
+    color: #ffd24d !important;
+    *, p, span, a, strong { color: #ffd24d !important; }
+  }
+  .callout-info, .alert-info {
+    background: rgba(80, 170, 255, 0.12) !important;
+    border-color: rgba(80, 170, 255, 0.45) !important;
+    color: #9ccbff !important;
+    *, p, span, a, strong { color: #9ccbff !important; }
+  }
+}
+
+// ---- LIGHT MODE -------------------------------------------
+body.aq-light-mode.page-cart,
+body.aq-light-mode.page-account {
+
+  .checkout-container,
+  .basket-checkout,
+  .account-container,
+  .well-featured.well-shadow:not(.dropdown-menu):not(.cart-list) {
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 122, 92, 0.2) !important;
+    color: #00204A !important;
+  }
+
+  .checkout-container, .basket-checkout, .account-container {
+    h1,h2,h3,h4,h5,.title,label,p,span,a,div,td,th { color: #00204A !important; }
+    .price, .product-actual, .basket-total { color: #007A5C !important; }
+  }
+
+  .form-control { background: #FFFFFF !important; border: 1px solid rgba(0,122,92,0.3) !important; color: #00204A !important; }
+  .nice-select { background: #FFFFFF !important; color: #00204A !important; border: 1px solid rgba(0,122,92,0.3) !important;
+    .current { color: #00204A !important; }
+    .list { background: #FFFFFF !important; }
+    .option { color: #00204A !important; }
+  }
+
+  .callout-success, .alert-success { background: #E9F6EC !important; border-color: rgba(0,122,92,0.4) !important; color: #0a5c47 !important;
+    *, p, span, strong { color: #0a5c47 !important; }
+  }
+}

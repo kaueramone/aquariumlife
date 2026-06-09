@@ -1,10 +1,11 @@
 @use '../base/variables' as *;
 
 // ============================================================
-// FILTROS DE CATEGORIA - Scope: .page-category
+// FILTROS DE CATEGORIA - Scope: .page-category + .page-catalog
 // ============================================================
 
-.page-category {
+.page-category,
+.page-catalog {
 
   #aq-ver-todos,
   a[href="/products"] { display: none !important; }
