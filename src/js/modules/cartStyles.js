@@ -267,8 +267,69 @@ function listenBuyButtons() {
   }, true);
 }
 
+/* Garante que "Continuar a comprar" / qualquer [data-dismiss=modal] fecha
+   mesmo o modal de adicionado-ao-carrinho. O Bootstrap nem sempre processa
+   este modal (e o backdrop pode intercetar cliques), por isso fechamos a
+   mao via delegacao no document — robusto a timing e a re-renderizacoes. */
+var DISMISS_BOUND = false;
+function ensureModalDismiss() {
+  if (DISMISS_BOUND) return;
+  DISMISS_BOUND = true;
+
+  function closeCartModal(modal) {
+    if (!modal) return;
+    /* tentar via Bootstrap primeiro */
+    if (window.jQuery && window.jQuery.fn && window.jQuery.fn.modal) {
+      try { window.jQuery(modal).modal('hide'); } catch (e) {}
+    }
+    /* forcar o fecho via CSS/classes */
+    modal.classList.remove('show', 'in');
+    modal.style.setProperty('display', 'none', 'important');
+    /* remover backdrops residuais que bloqueiam cliques */
+    document.querySelectorAll('.modal-backdrop').forEach(function (b) {
+      b.style.setProperty('display', 'none', 'important');
+      if (b.parentNode) b.parentNode.removeChild(b);
+    });
+    /* restaurar o body */
+    document.body.classList.remove('modal-open');
+    document.body.style.removeProperty('overflow');
+    document.body.style.removeProperty('padding-right');
+  }
+
+  // Enquanto um modal do carrinho estiver aberto, garante que nenhum backdrop
+  // residual intercepta cliques (deixa o backdrop visivel mas "atravessavel").
+  function unblockBackdrops() {
+    var openModal = document.querySelector('.modal.show, .modal.in');
+    if (!openModal) return;
+    document.querySelectorAll('.modal-backdrop').forEach(function (b) {
+      b.style.setProperty('pointer-events', 'none', 'important');
+    });
+    // o proprio modal nao deve bloquear cliques fora do dialog
+    openModal.style.setProperty('pointer-events', 'auto', 'important');
+  }
+  setInterval(unblockBackdrops, 400);
+
+  document.addEventListener('click', function (e) {
+    var trigger = e.target.closest(
+      '[data-dismiss="modal"], .modal-footer .btn, .modal a, .modal button'
+    );
+    if (!trigger) return;
+    var txt = (trigger.textContent || '').trim().toLowerCase();
+    var isDismiss = trigger.getAttribute('data-dismiss') === 'modal'
+                 || /continuar a comprar/.test(txt);
+    /* "Ver carrinho" tem href proprio: deixamos navegar normalmente */
+    var isViewCart = /ver carrinho/.test(txt) || (trigger.getAttribute('href') || '').indexOf('/cart') !== -1;
+    if (isDismiss && !isViewCart) {
+      var modal = trigger.closest('.modal');
+      /* nao bloquear o comportamento nativo, so garantir o fecho a seguir */
+      setTimeout(function () { closeCartModal(modal); }, 0);
+    }
+  }, true);
+}
+
 export function initCartStyles() {
   killGeoModal();
+  ensureModalDismiss();
   document.querySelectorAll('.cart-list').forEach(applyDarkCart);
   document.querySelectorAll('.modal.show, .modal.in').forEach(applyDarkModal);
   updateBadge();
