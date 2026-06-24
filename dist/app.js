@@ -2603,25 +2603,44 @@
       return src.replace(SQUARE_SEG, '/media/images/');
     }
 
-    function analyze(imgEl) {
+    // Mede a espessura da moldura preta (linhas/colunas inteiras pretas) em cada lado.
+    function blackFrame(imgEl) {
       const w = imgEl.naturalWidth, h = imgEl.naturalHeight;
       if (!w || !h) return null;
       const c = document.createElement('canvas');
       c.width = w; c.height = h;
       const ctx = c.getContext('2d');
       ctx.drawImage(imgEl, 0, 0);
+      const D = ctx.getImageData(0, 0, w, h).data;
       const isBlack = function (x, y) {
-        const d = ctx.getImageData(x, y, 3, 3).data;
-        let n = 0;
-        for (let i = 0; i < d.length; i += 4) {
-          if (d[i + 3] > 200 && d[i] < 28 && d[i + 1] < 28 && d[i + 2] < 28) n++;
-        }
-        return n >= 6;
+        const i = (y * w + x) * 4;
+        return D[i + 3] > 200 && D[i] < 28 && D[i + 1] < 28 && D[i + 2] < 28;
       };
-      const corners = [[0, 0], [w - 3, 0], [0, h - 3], [w - 3, h - 3]]
-        .filter(function (p) { return isBlack(p[0], p[1]); }).length;
-      const centerBlack = isBlack((w >> 1) - 1, (h >> 1) - 1);
-      return { corners: corners, centerBlack: centerBlack };
+      const N = 20;
+      const rowBlack = function (y) {
+        for (let k = 0; k <= N; k++) { if (!isBlack(Math.min(w - 1, Math.round(k * (w - 1) / N)), y)) return false; }
+        return true;
+      };
+      const colBlack = function (x) {
+        for (let k = 0; k <= N; k++) { if (!isBlack(x, Math.min(h - 1, Math.round(k * (h - 1) / N)))) return false; }
+        return true;
+      };
+      let top = 0; while (top < h && rowBlack(top)) top++;
+      let bot = 0; while (bot < h && rowBlack(h - 1 - bot)) bot++;
+      let left = 0; while (left < w && colBlack(left)) left++;
+      let right = 0; while (right < w && colBlack(w - 1 - right)) right++;
+      return { w: w, h: h, top: top, bot: bot, left: left, right: right };
+    }
+
+    // E' "padding" do thumbnail quando ha' uma moldura preta uniforme e simetrica
+    // (cima/baixo e/ou esquerda/direita) ocupando < ~45% (logo ha' conteudo no meio).
+    // Baseia-se na MOLDURA, nao no centro -> funciona com produtos escuros.
+    function isPadded(r) {
+      if (!r) return false;
+      const sym = function (a, b) { return a >= 3 && b >= 3 && Math.abs(a - b) <= Math.max(4, 0.3 * Math.max(a, b)); };
+      const vert = sym(r.top, r.bot) && Math.max(r.top, r.bot) <= 0.45 * r.h;
+      const horiz = sym(r.left, r.right) && Math.max(r.left, r.right) <= 0.45 * r.w;
+      return vert || horiz;
     }
 
     function fixOne(img) {
@@ -2634,8 +2653,8 @@
       probe.crossOrigin = 'anonymous';
       probe.onload = function () {
         let r = null;
-        try { r = analyze(probe); } catch (e) { return; }   // CORS/tainted: ignora
-        if (!r || r.corners !== 4 || r.centerBlack) return;  // nao e' padding preto
+        try { r = blackFrame(probe); } catch (e) { return; }  // CORS/tainted: ignora
+        if (!isPadded(r)) return;                             // nao e' moldura preta (padding)
         const original = originalOf(src);
         if (original === src) return;
         img.style.background = '#fff';
