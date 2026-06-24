@@ -7,6 +7,130 @@ const REPO     = 'kaueramone/aquariumlife';
 const JSON_CATS = 'dist/categories.json';
 const PER_PAGE  = 12;
 
+// ================================================================
+// Self-heal de imagens (v7)
+// ----------------------------------------------------------------
+// Os JSON 'products-cat-*.json' guardam um campo 'img' fixo no momento
+// do crawl. Se um produto for criado sem foto (img = no-img) e a foto
+// for adicionada depois na loja, o JSON fica desactualizado e o card
+// mostra o placeholder. Para nunca mostrar no-img quando a imagem ja
+// existe, resolvemos a imagem real AO VIVO a partir da propria loja
+// (og:image da pagina do produto), com cache e fallback gracioso.
+// Funciona mesmo sem regenerar o JSON.
+// ================================================================
+const NO_IMG     = 'https://cdn-shopkit.com/assets/store/img/no-img.png';
+const NO_IMG_RE  = /no-img/;
+const SS_KEY     = 'aqImgCacheV1';
+
+const imgCache    = Object.create(null);  // path do produto -> URL real (positivos; persistido)
+const imgNeg      = Object.create(null);  // path -> true (sem imagem; so nesta carga de pagina)
+const imgInflight = Object.create(null);  // path -> Promise em curso
+
+try { Object.assign(imgCache, JSON.parse(sessionStorage.getItem(SS_KEY) || '{}')); } catch (e) {}
+function persistImgCache() { try { sessionStorage.setItem(SS_KEY, JSON.stringify(imgCache)); } catch (e) {} }
+
+function aqIsPlaceholder(src) { return !src || NO_IMG_RE.test(src); }
+function aqProductPath(u) {
+  try { return new URL(u, location.origin).pathname.replace(/\/$/, ''); }
+  catch (e) { return u || ''; }
+}
+// Thumbnail 'square' a partir da imagem cheia (mesmo padrao das cards nativas)
+function aqSquare(u) {
+  return (u && u.indexOf('/media/images/') !== -1 && u.indexOf('/square/') === -1)
+    ? u.replace('/media/images/', '/media/images/square/') : u;
+}
+
+// Reaproveita as imagens que o Shopkit ja renderizou nativamente (gratis, 0 pedidos)
+function seedNativeImages() {
+  document.querySelectorAll(
+    '.products-list .product-preview, .products .product-preview, [class*="products"] .product-preview'
+  ).forEach(function (a) {
+    const img = a.querySelector('img');
+    if (!img) return;
+    const real = img.getAttribute('data-src') || img.getAttribute('src') || '';
+    if (!aqIsPlaceholder(real)) imgCache[aqProductPath(a.getAttribute('href'))] = real;
+  });
+  persistImgCache();
+}
+
+// Resolve a imagem real de um produto pela sua propria pagina (og:image).
+function resolveProductImage(url) {
+  const key = aqProductPath(url);
+  if (imgCache[key])    return Promise.resolve(imgCache[key]);
+  if (imgNeg[key])      return Promise.resolve(null);
+  if (imgInflight[key]) return imgInflight[key];
+
+  const p = (async function () {
+    try {
+      const res = await fetch(url, { cache: 'no-store' });
+      if (!res.ok) { imgNeg[key] = true; return null; }
+      const html = await res.text();
+      const m = html.match(/property=["']og:image["'][^>]*content=["']([^"']+)["']/i)
+             || html.match(/content=["']([^"']+)["'][^>]*property=["']og:image["']/i);
+      const img = m && m[1];
+      if (img && !aqIsPlaceholder(img)) { imgCache[key] = img; persistImgCache(); return img; }
+      imgNeg[key] = true;
+      return null;
+    } catch (e) {
+      imgNeg[key] = true;
+      return null;
+    } finally {
+      delete imgInflight[key];
+    }
+  })();
+
+  imgInflight[key] = p;
+  return p;
+}
+
+// Aplica a imagem real: usa a thumbnail 'square' e cai para a imagem
+// cheia e depois para no-img se algo falhar (nunca icone partido).
+function applyHealedImage(img, real) {
+  img.dataset.aqFull = real;
+  img.src = aqSquare(real);
+}
+function aqOnImgError(img) {
+  const full = img.dataset.aqFull;
+  const cur  = img.getAttribute('src') || '';
+  if (full && full !== cur && !aqIsPlaceholder(full)) {
+    img.src = full;        // square falhou -> tenta a imagem cheia
+  } else if (!aqIsPlaceholder(cur)) {
+    img.src = NO_IMG;      // imagem cheia falhou -> placeholder (sem loop)
+  }
+}
+
+// Percorre os cards renderizados, garante fallback de erro e cura os placeholders.
+async function healCardImages(list) {
+  const cards = Array.from(list.querySelectorAll('.product-preview'))
+    .map(function (a) { return { a: a, img: a.querySelector('img.product-pic') }; })
+    .filter(function (o) { return o.img; });
+
+  cards.forEach(function (o) {
+    o.img.addEventListener('error', function () { aqOnImgError(o.img); });
+  });
+
+  const pending = cards.filter(function (o) { return aqIsPlaceholder(o.img.getAttribute('src')); });
+
+  // 1) Instantaneo via cache/seed
+  const toFetch = [];
+  pending.forEach(function (o) {
+    const cached = imgCache[aqProductPath(o.a.getAttribute('href'))];
+    if (cached) applyHealedImage(o.img, cached); else toFetch.push(o);
+  });
+
+  // 2) Restantes: og:image com concorrencia limitada
+  let i = 0;
+  const CONCURRENCY = 4;
+  async function worker() {
+    while (i < toFetch.length) {
+      const o = toFetch[i++];
+      const real = await resolveProductImage(o.a.getAttribute('href'));
+      if (real) applyHealedImage(o.img, real);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(CONCURRENCY, toFetch.length) }, worker));
+}
+
 export function initCategoryFilters() {
   var isCategory = document.body.classList.contains('page-category');
   var isCatalog  = document.body.classList.contains('page-catalog');
@@ -274,7 +398,7 @@ function initPriceFilter(catId) {
       const start = (currentPage - 1) * PER_PAGE;
       const slice = filtered.slice(start, start + PER_PAGE);
 
-      const noImg = 'https://cdn-shopkit.com/assets/store/img/no-img.png';
+      const noImg = NO_IMG;
 
       list.innerHTML = '';
       slice.forEach(function(p) {
@@ -301,6 +425,10 @@ function initPriceFilter(catId) {
           + '</div></div>';
         list.appendChild(col);
       });
+
+      // Self-heal: injecta a imagem real nos cards que ficaram com placeholder
+      // (JSON antigo / produto que ganhou foto depois). Nao bloqueia o render.
+      healCardImages(list);
 
       // Actualizar status
       status.textContent = filtered.length + ' produto' + (filtered.length !== 1 ? 's' : '');
@@ -387,6 +515,9 @@ function initPriceFilter(catId) {
 
       updateFill();
       updateLabel();
+
+      // Aproveita as imagens nativas do Shopkit antes de substituir a grelha
+      seedNativeImages();
 
       filtered = allProducts;
       renderPage(1);
