@@ -1,37 +1,13 @@
 {
-  "updated": "2026-05-21",
-  "total": 9,
+  "updated": "2026-06-24",
+  "total": 27,
   "categories": [
-    {
-      "id": 527349,
-      "title": "Alimentação",
-      "url": "https://www.aquariumlife.pt/category/alimentacao",
-      "handle": "alimentacao",
-      "count": 86,
-      "children": []
-    },
-    {
-      "id": 534408,
-      "title": "Aquascaping",
-      "url": "https://www.aquariumlife.pt/category/aquascaping",
-      "handle": "aquascaping",
-      "count": 15,
-      "children": []
-    },
-    {
-      "id": 527711,
-      "title": "Condicionadores de água",
-      "url": "https://www.aquariumlife.pt/category/condicionadores-de-agua",
-      "handle": "condicionadores-de-agua",
-      "count": 38,
-      "children": []
-    },
     {
       "id": 527348,
       "title": "Equipamento",
       "url": "https://www.aquariumlife.pt/category/equipamento",
       "handle": "equipamento",
-      "count": 523,
+      "count": 493,
       "children": [
         {
           "id": 527486,
@@ -73,7 +49,7 @@
           "title": "Fertilizantes",
           "url": "https://www.aquariumlife.pt/category/equipamento-fertilizantes",
           "handle": "equipamento-fertilizantes",
-          "count": 48
+          "count": 47
         },
         {
           "id": 527492,
@@ -94,14 +70,14 @@
           "title": "Co2",
           "url": "https://www.aquariumlife.pt/category/equipamento-co2",
           "handle": "equipamento-co2",
-          "count": 40
+          "count": 37
         },
         {
           "id": 527495,
           "title": "Led´s",
           "url": "https://www.aquariumlife.pt/category/equipamento-led-s",
           "handle": "equipamento-led-s",
-          "count": 38
+          "count": 30
         },
         {
           "id": 527496,
@@ -115,7 +91,7 @@
           "title": "Testes de água",
           "url": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua",
           "handle": "equipamento-testes-de-agua",
-          "count": 17
+          "count": 16
         },
         {
           "id": 527710,
@@ -129,14 +105,14 @@
           "title": "Aquários",
           "url": "https://www.aquariumlife.pt/category/equipamento-aquarios",
           "handle": "equipamento-aquarios",
-          "count": 14
+          "count": 0
         },
         {
           "id": 527713,
           "title": "Acessórios",
           "url": "https://www.aquariumlife.pt/category/equipamento-acessorios",
           "handle": "equipamento-acessorios",
-          "count": 65
+          "count": 63
         },
         {
           "id": 527722,
@@ -148,18 +124,26 @@
       ]
     },
     {
+      "id": 527349,
+      "title": "Alimentação",
+      "url": "https://www.aquariumlife.pt/category/alimentacao",
+      "handle": "alimentacao",
+      "count": 82,
+      "children": []
+    },
+    {
       "id": 527350,
       "title": "Hardscape",
       "url": "https://www.aquariumlife.pt/category/hardscape",
       "handle": "hardscape",
-      "count": 23,
+      "count": 17,
       "children": [
         {
           "id": 527498,
           "title": "Rochas",
           "url": "https://www.aquariumlife.pt/category/hardscape-rochas",
           "handle": "hardscape-rochas",
-          "count": 5
+          "count": 4
         },
         {
           "id": 527499,
@@ -171,11 +155,27 @@
       ]
     },
     {
+      "id": 527351,
+      "title": "Plantas",
+      "url": "https://www.aquariumlife.pt/category/plantas",
+      "handle": "plantas",
+      "count": 72,
+      "children": []
+    },
+    {
+      "id": 527352,
+      "title": "Peixes",
+      "url": "https://www.aquariumlife.pt/category/peixes",
+      "handle": "peixes",
+      "count": 96,
+      "children": []
+    },
+    {
       "id": 527353,
       "title": "Invertebrados",
       "url": "https://www.aquariumlife.pt/category/invertebrados",
       "handle": "invertebrados",
-      "count": 2,
+      "count": 1,
       "children": []
     },
     {
@@ -187,19 +187,19 @@
       "children": []
     },
     {
-      "id": 527352,
-      "title": "Peixes",
-      "url": "https://www.aquariumlife.pt/category/peixes",
-      "handle": "peixes",
-      "count": 99,
+      "id": 527711,
+      "title": "Condicionadores de água",
+      "url": "https://www.aquariumlife.pt/category/condicionadores-de-agua",
+      "handle": "condicionadores-de-agua",
+      "count": 31,
       "children": []
     },
     {
-      "id": 527351,
-      "title": "Plantas",
-      "url": "https://www.aquariumlife.pt/category/plantas",
-      "handle": "plantas",
-      "count": 84,
+      "id": 534408,
+      "title": "Aquascaping",
+      "url": "https://www.aquariumlife.pt/category/aquascaping",
+      "handle": "aquascaping",
+      "count": 14,
       "children": []
     }
   ]

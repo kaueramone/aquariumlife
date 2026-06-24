@@ -1,1 +1,131 @@
-{"updated": "2026-05-21", "cat": 527490, "slug": "termostatos", "total": 11, "min": 15.5964, "max": 36.9861, "products": [{"id": 5445128, "title": "Dennerle Heater Constant (75 W)", "price": 36.9861, "pf": "36,99 €", "pp": null, "ppf": null, "url": "https://www.aquariumlife.pt/product/dennerle-heater-constant-75-w", "cart": "https://www.aquariumlife.pt/cart/add/dennerle-heater-constant-75-w", "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"}, {"id": 5445060, "title": "Aquael PLATINIUM HEATER 100 W", "price": 23.000999999999998, "pf": "23,00 €", "pp": null, "ppf": null, "url": "https://www.aquariumlife.pt/product/aquael-platinium-heater-100-w-", "cart": "https://www.aquariumlife.pt/cart/add/aquael-platinium-heater-100-w-", "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"}, {"id": 5445059, "title": "Aquael PLATINIUM HEATER 200 W", "price": 26.002200000000002, "pf": "26,00 €", "pp": null, "ppf": null, "url": "https://www.aquariumlife.pt/product/aquael-platinium-heater-200-w", "cart": "https://www.aquariumlife.pt/cart/add/aquael-platinium-heater-200-w", "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"}, {"id": 5445058, "title": "Aquael PLATINIUM HEATER 300 W", "price": 29.0034, "pf": "29,00 €", "pp": null, "ppf": null, "url": "https://www.aquariumlife.pt/product/aquael-platinium-heater-300-w", "cart": "https://www.aquariumlife.pt/cart/add/aquael-platinium-heater-300-w", "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"}, {"id": 5445015, "title": "SF PRO HEATER 300 WATT 125-300 L (35 CM)", "price": 20.5041, "pf": "20,50 €", "pp": null, "ppf": null, "url": "https://www.aquariumlife.pt/product/sf-pro-heater-300-watt-125-300-l-35-cm", "cart": "https://www.aquariumlife.pt/cart/add/sf-pro-heater-300-watt-125-300-l-35-cm", "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"}, {"id": 5445014, "title": "SF PRO HEATER 200 WATT 60-200 L (35 CM)", "price": 19.5447, "pf": "19,54 €", "pp": null, "ppf": null, "url": "https://www.aquariumlife.pt/product/sf-pro-heater-200-watt-60-200-l-35-cm", "cart": "https://www.aquariumlife.pt/cart/add/sf-pro-heater-200-watt-60-200-l-35-cm", "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"}, {"id": 5445013, "title": "SF PRO HEATER 100 WATT 20-100 L (21 CM)", "price": 17.6505, "pf": "17,65 €", "pp": null, "ppf": null, "url": "https://www.aquariumlife.pt/product/sf-pro-heater-100-watt-20-100-l-21-cm", "cart": "https://www.aquariumlife.pt/cart/add/sf-pro-heater-100-watt-20-100-l-21-cm", "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"}, {"id": 5445012, "title": "SF PRO HEATER 50 WATT 20-50 L (17 CM)", "price": 15.5964, "pf": "15,60 €", "pp": null, "ppf": null, "url": "https://www.aquariumlife.pt/product/sf-pro-heater-50-watt-20-50-l-17-cm", "cart": "https://www.aquariumlife.pt/cart/add/sf-pro-heater-50-watt-20-50-l-17-cm", "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"}, {"id": 5444967, "title": "Eheim thermo control e 50W", "price": 32.951699999999995, "pf": "32,95 €", "pp": null, "ppf": null, "url": "https://www.aquariumlife.pt/product/eheim-thermo-control-e-50w", "cart": "https://www.aquariumlife.pt/cart/add/eheim-thermo-control-e-50w", "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"}, {"id": 5444966, "title": "AS Visitherm 25W", "price": 18.204, "pf": "18,20 €", "pp": null, "ppf": null, "url": "https://www.aquariumlife.pt/product/as-visitherm-25w", "cart": "https://www.aquariumlife.pt/cart/add/as-visitherm-25w", "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"}, {"id": 5444965, "title": "AS Visitherm 300W", "price": 21.5004, "pf": "21,50 €", "pp": null, "ppf": null, "url": "https://www.aquariumlife.pt/product/as-visitherm-300w", "cart": "https://www.aquariumlife.pt/cart/add/as-visitherm-300w", "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"}]}
+{
+  "updated": "2026-06-24",
+  "cat": 527490,
+  "slug": "equipamento-termostatos",
+  "total": 11,
+  "min": 15.5964,
+  "max": 36.9861,
+  "products": [
+    {
+      "id": 5444965,
+      "title": "AS Visitherm 300W",
+      "price": 21.5004,
+      "pf": "21,50 €",
+      "pp": null,
+      "ppf": null,
+      "url": "https://www.aquariumlife.pt/product/as-visitherm-300w",
+      "cart": "https://www.aquariumlife.pt/cart/add/as-visitherm-300w",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+    },
+    {
+      "id": 5444966,
+      "title": "AS Visitherm 25W",
+      "price": 18.204,
+      "pf": "18,20 €",
+      "pp": null,
+      "ppf": null,
+      "url": "https://www.aquariumlife.pt/product/as-visitherm-25w",
+      "cart": "https://www.aquariumlife.pt/cart/add/as-visitherm-25w",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+    },
+    {
+      "id": 5444967,
+      "title": "Eheim thermo control e 50W",
+      "price": 32.951699999999995,
+      "pf": "32,95 €",
+      "pp": null,
+      "ppf": null,
+      "url": "https://www.aquariumlife.pt/product/eheim-thermo-control-e-50w",
+      "cart": "https://www.aquariumlife.pt/cart/add/eheim-thermo-control-e-50w",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+    },
+    {
+      "id": 5445012,
+      "title": "SF PRO HEATER 50 WATT 20-50 L (17 CM)",
+      "price": 15.5964,
+      "pf": "15,60 €",
+      "pp": null,
+      "ppf": null,
+      "url": "https://www.aquariumlife.pt/product/sf-pro-heater-50-watt-20-50-l-17-cm",
+      "cart": "https://www.aquariumlife.pt/cart/add/sf-pro-heater-50-watt-20-50-l-17-cm",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/6a2e774-152319-sf-pro-heater-50-watt-20-50-l-17-cm.png"
+    },
+    {
+      "id": 5445013,
+      "title": "SF PRO HEATER 100 WATT 20-100 L (21 CM)",
+      "price": 17.6505,
+      "pf": "17,65 €",
+      "pp": null,
+      "ppf": null,
+      "url": "https://www.aquariumlife.pt/product/sf-pro-heater-100-watt-20-100-l-21-cm",
+      "cart": "https://www.aquariumlife.pt/cart/add/sf-pro-heater-100-watt-20-100-l-21-cm",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/71103f6-151927-sf-pro-heater-100-watt-20-100-l-21-cm.png"
+    },
+    {
+      "id": 5445014,
+      "title": "SF PRO HEATER 200 WATT 60-200 L (35 CM)",
+      "price": 19.5447,
+      "pf": "19,54 €",
+      "pp": null,
+      "ppf": null,
+      "url": "https://www.aquariumlife.pt/product/sf-pro-heater-200-watt-60-200-l-35-cm",
+      "cart": "https://www.aquariumlife.pt/cart/add/sf-pro-heater-200-watt-60-200-l-35-cm",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/fec71f8-151721-sf-pro-heater-200-watt-60-200-l-35-cm.png"
+    },
+    {
+      "id": 5445015,
+      "title": "SF PRO HEATER 300 WATT 125-300 L (35 CM)",
+      "price": 20.5041,
+      "pf": "20,50 €",
+      "pp": null,
+      "ppf": null,
+      "url": "https://www.aquariumlife.pt/product/sf-pro-heater-300-watt-125-300-l-35-cm",
+      "cart": "https://www.aquariumlife.pt/cart/add/sf-pro-heater-300-watt-125-300-l-35-cm",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/1191a0a-151551-sf-pro-heater-300-watt-125-300-l-35-cm.png"
+    },
+    {
+      "id": 5445058,
+      "title": "Aquael PLATINIUM HEATER 300 W",
+      "price": 29.0034,
+      "pf": "29,00 €",
+      "pp": null,
+      "ppf": null,
+      "url": "https://www.aquariumlife.pt/product/aquael-platinium-heater-300-w",
+      "cart": "https://www.aquariumlife.pt/cart/add/aquael-platinium-heater-300-w",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3558047-150959-aquael-platinium-heater.png"
+    },
+    {
+      "id": 5445059,
+      "title": "Aquael PLATINIUM HEATER 200 W",
+      "price": 26.002200000000002,
+      "pf": "26,00 €",
+      "pp": null,
+      "ppf": null,
+      "url": "https://www.aquariumlife.pt/product/aquael-platinium-heater-200-w",
+      "cart": "https://www.aquariumlife.pt/cart/add/aquael-platinium-heater-200-w",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3558047-150959-aquael-platinium-heater.png"
+    },
+    {
+      "id": 5445060,
+      "title": "Aquael PLATINIUM HEATER 100 W",
+      "price": 23.000999999999998,
+      "pf": "23,00 €",
+      "pp": null,
+      "ppf": null,
+      "url": "https://www.aquariumlife.pt/product/aquael-platinium-heater-100-w-",
+      "cart": "https://www.aquariumlife.pt/cart/add/aquael-platinium-heater-100-w-",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3558047-150959-aquael-platinium-heater.png"
+    },
+    {
+      "id": 5445128,
+      "title": "Dennerle Heater Constant (75 W)",
+      "price": 36.9861,
+      "pf": "36,99 €",
+      "pp": null,
+      "ppf": null,
+      "url": "https://www.aquariumlife.pt/product/dennerle-heater-constant-75-w",
+      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-heater-constant-75-w",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/887dad4-174103-dennerle-heater-constant-75-w.png"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+name: Refresh product data
+
+# Regenera os JSON (dist/products-*.json, categories.json) a partir da API
+# Shopkit e faz commit no main. Mantem a grelha de categorias actualizada
+# (produtos novos + imagens) sem intervencao manual.
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'      # a cada 6 horas (UTC)
+  workflow_dispatch: {}         # permite correr manualmente no separador "Actions"
+
+permissions:
+  contents: write               # necessario para o push
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Gerar JSON a partir da API Shopkit
+        env:
+          SHOPKIT_API_KEY: ${{ secrets.SHOPKIT_API_KEY }}
+        run: node generate-data.cjs
+
+      - name: Commit e push (so se houver alteracoes)
+        run: |
+          git config user.name "aquariumlife-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dist/products-all.json dist/categories.json dist/products-cat-*.json
+          if git diff --staged --quiet; then
+            echo "Sem alteracoes nos dados."
+          else
+            git commit -m "chore(data): refresh product JSON [skip ci]"
+            git push
+          fi
+
+      - name: Purga cache jsDelivr (best-effort)
+        if: success()
+        run: |
+          for f in dist/products-all.json dist/categories.json dist/products-cat-*.json; do
+            curl -s "https://purge.jsdelivr.net/gh/kaueramone/aquariumlife@main/$f" > /dev/null || true
+          done

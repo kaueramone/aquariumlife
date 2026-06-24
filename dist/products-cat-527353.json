@@ -1,1 +1,21 @@
-{"updated": "2026-05-21", "cat": 527353, "slug": "invertebrados", "total": 1, "min": 3.5055, "max": 3.5055, "products": [{"id": 5445166, "title": "Caridina Japonica 2-2.5cm", "price": 3.5055, "pf": "3,51 €", "pp": null, "ppf": null, "url": "https://www.aquariumlife.pt/product/caridina-japonica-2-25cm", "cart": "https://www.aquariumlife.pt/cart/add/caridina-japonica-2-25cm", "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"}]}
+{
+  "updated": "2026-06-24",
+  "cat": 527353,
+  "slug": "invertebrados",
+  "total": 1,
+  "min": 3.5055,
+  "max": 3.5055,
+  "products": [
+    {
+      "id": 5445166,
+      "title": "Caridina Japonica 2-2.5cm",
+      "price": 3.5055,
+      "pf": "3,51 €",
+      "pp": null,
+      "ppf": null,
+      "url": "https://www.aquariumlife.pt/product/caridina-japonica-2-25cm",
+      "cart": "https://www.aquariumlife.pt/cart/add/caridina-japonica-2-25cm",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/0dd5843-151039-caridina-japonica.png"
+    }
+  ]
+}

@@ -1,1 +1,98 @@
-{"updated": "2026-05-21", "cat": 527489, "slug": "medicacao", "total": 8, "min": 5.448899999999999, "max": 17.601300000000002, "products": [{"id": 5532638, "title": "Easy Life Voogle 500ml", "price": 17.601300000000002, "pf": "17,60 €", "pp": null, "ppf": null, "url": "https://www.aquariumlife.pt/product/easy-life-voogle-500ml", "cart": "https://www.aquariumlife.pt/cart/add/easy-life-voogle-500ml", "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"}, {"id": 5532637, "title": "Easy Life Voogle 250ml", "price": 10.147499999999999, "pf": "10,15 €", "pp": null, "ppf": null, "url": "https://www.aquariumlife.pt/product/easy-life-voogle-250ml", "cart": "https://www.aquariumlife.pt/cart/add/easy-life-voogle-250ml", "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"}, {"id": 5532636, "title": "Easy Life Voogle 100ml", "price": 5.448899999999999, "pf": "5,45 €", "pp": null, "ppf": null, "url": "https://www.aquariumlife.pt/product/easy-life-voogle-100ml", "cart": "https://www.aquariumlife.pt/cart/add/easy-life-voogle-100ml", "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"}, {"id": 5513028, "title": "Esha ndx 20ml", "price": 13.9482, "pf": "13,95 €", "pp": null, "ppf": null, "url": "https://www.aquariumlife.pt/product/esha-ndx-20ml", "cart": "https://www.aquariumlife.pt/cart/add/esha-ndx-20ml", "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"}, {"id": 5445494, "title": "Esha Exit 20ml", "price": 9.347999999999999, "pf": "9,35 €", "pp": null, "ppf": null, "url": "https://www.aquariumlife.pt/product/esha-exit-20ml", "cart": "https://www.aquariumlife.pt/cart/add/esha-exit-20ml", "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"}, {"id": 5445178, "title": "Esha Gdex 20ml", "price": 13.9974, "pf": "14,00 €", "pp": null, "ppf": null, "url": "https://www.aquariumlife.pt/product/esha-gdex-20ml", "cart": "https://www.aquariumlife.pt/cart/add/esha-gdex-20ml", "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"}, {"id": 5445177, "title": "Esha Hexamita 20ml", "price": 12.349199999999998, "pf": "12,35 €", "pp": null, "ppf": null, "url": "https://www.aquariumlife.pt/product/esha-hexamita-20ml", "cart": "https://www.aquariumlife.pt/cart/add/esha-hexamita-20ml", "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"}, {"id": 5445176, "title": "Esha 2000 20ml", "price": 9.2004, "pf": "9,20 €", "pp": null, "ppf": null, "url": "https://www.aquariumlife.pt/product/esha-2000-20ml", "cart": "https://www.aquariumlife.pt/cart/add/esha-2000-20ml", "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"}]}
+{
+  "updated": "2026-06-24",
+  "cat": 527489,
+  "slug": "equipamento-medicacao",
+  "total": 8,
+  "min": 5.448899999999999,
+  "max": 17.601300000000002,
+  "products": [
+    {
+      "id": 5445176,
+      "title": "Esha 2000 20ml",
+      "price": 9.2004,
+      "pf": "9,20 €",
+      "pp": null,
+      "ppf": null,
+      "url": "https://www.aquariumlife.pt/product/esha-2000-20ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/esha-2000-20ml",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/d7ce7ff-163434-esha-2000.png"
+    },
+    {
+      "id": 5445177,
+      "title": "Esha Hexamita 20ml",
+      "price": 12.349199999999998,
+      "pf": "12,35 €",
+      "pp": null,
+      "ppf": null,
+      "url": "https://www.aquariumlife.pt/product/esha-hexamita-20ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/esha-hexamita-20ml",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/fe19399-163320-esha-hexamita.png"
+    },
+    {
+      "id": 5445178,
+      "title": "Esha Gdex 20ml",
+      "price": 13.9974,
+      "pf": "14,00 €",
+      "pp": null,
+      "ppf": null,
+      "url": "https://www.aquariumlife.pt/product/esha-gdex-20ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/esha-gdex-20ml",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/ecd2484-162421-esha-gdex.png"
+    },
+    {
+      "id": 5445494,
+      "title": "Esha Exit 20ml",
+      "price": 9.347999999999999,
+      "pf": "9,35 €",
+      "pp": null,
+      "ppf": null,
+      "url": "https://www.aquariumlife.pt/product/esha-exit-20ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/esha-exit-20ml",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/cb6c5d8-163438-esha-exit.png"
+    },
+    {
+      "id": 5513028,
+      "title": "Esha ndx 20ml",
+      "price": 13.9482,
+      "pf": "13,95 €",
+      "pp": null,
+      "ppf": null,
+      "url": "https://www.aquariumlife.pt/product/esha-ndx-20ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/esha-ndx-20ml",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+    },
+    {
+      "id": 5532636,
+      "title": "Easy Life Voogle 100ml",
+      "price": 5.448899999999999,
+      "pf": "5,45 €",
+      "pp": null,
+      "ppf": null,
+      "url": "https://www.aquariumlife.pt/product/easy-life-voogle-100ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-voogle-100ml",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/91d9599-112930-easy-life-voogle.png"
+    },
+    {
+      "id": 5532637,
+      "title": "Easy Life Voogle 250ml",
+      "price": 10.147499999999999,
+      "pf": "10,15 €",
+      "pp": null,
+      "ppf": null,
+      "url": "https://www.aquariumlife.pt/product/easy-life-voogle-250ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-voogle-250ml",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/91d9599-112930-easy-life-voogle.png"
+    },
+    {
+      "id": 5532638,
+      "title": "Easy Life Voogle 500ml",
+      "price": 17.601300000000002,
+      "pf": "17,60 €",
+      "pp": null,
+      "ppf": null,
+      "url": "https://www.aquariumlife.pt/product/easy-life-voogle-500ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-voogle-500ml",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/91d9599-112930-easy-life-voogle.png"
+    }
+  ]
+}

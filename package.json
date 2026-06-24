@@ -7,6 +7,7 @@
     "build:css": "vite build",
     "build:js": "rollup src/js/main.js --file dist/app.js --format iife --name AquariumLife",
     "build": "npm run build:css && npm run build:js",
+    "data": "node generate-data.cjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,9 +15,17 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@google/genai": "^2.7.0",
+    "axios": "^1.16.1",
     "cheerio": "^1.2.0",
+    "dotenv": "^17.4.2",
+    "duckduckgo-images-api": "^1.0.5",
+    "g-i-s": "^2.1.7",
+    "googleapis": "^173.0.0",
+    "googlethis": "^1.8.0",
     "playwright": "^1.59.1",
     "sass": "^1.99.0",
+    "tslib": "^2.8.1",
     "vite": "^8.0.11"
   },
   "devDependencies": {
