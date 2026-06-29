@@ -735,3 +735,52 @@ body.aq-light-mode.page-product {
     }
   }
 }
+
+// ============================================================
+// SELETOR DE VARIANTE (nice-select) — legivel no tema escuro
+// O Shopkit substitui o <select> de opcoes por um .nice-select
+// que nativamente sai branco-sobre-branco. Aqui damos-lhe o tema.
+// ============================================================
+body.page-product {
+  .nice-select,
+  select.select-product-options {
+    background-color: rgba(0, 21, 49, 0.9) !important;
+    color: #fff !important;
+    border: 1px solid rgba(8, 238, 188, 0.35) !important;
+    border-radius: 10px !important;
+    font-family: $font-family-body !important;
+
+    &::after {
+      border-bottom-color: $color-neon-accent !important;
+      border-right-color: $color-neon-accent !important;
+    }
+    .current { color: #fff !important; }
+    .list {
+      background-color: #001531 !important;
+      border: 1px solid rgba(8, 238, 188, 0.3) !important;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
+    }
+    .option {
+      color: #fff !important;
+      background: transparent !important;
+      &:hover, &.focus { background-color: rgba(8, 238, 188, 0.15) !important; }
+      &.selected { color: $color-neon-accent !important; font-weight: 600 !important; }
+    }
+  }
+  select.select-product-options option {
+    background-color: #001531 !important;
+    color: #fff !important;
+  }
+}
+
+// Light mode: seletor de variante claro e legivel
+body.aq-light-mode.page-product {
+  .nice-select, select.select-product-options {
+    background-color: #FFFFFF !important;
+    color: #00204A !important;
+    border: 1px solid rgba(0, 122, 92, 0.3) !important;
+    .current { color: #00204A !important; }
+    .list { background-color: #FFFFFF !important; }
+    .option { color: #00204A !important; }
+  }
+}
