@@ -41,20 +41,56 @@ if (!API_KEY) {
   process.exit(1);
 }
 
+const MAX_RETRIES = 5;       // tentativas por pedido
+const REQ_TIMEOUT = 30000;   // 30s por tentativa
+const sleep = function (ms) { return new Promise(function (r) { setTimeout(r, ms); }); };
+
 async function api(endpoint, params) {
   const url = new URL(API + endpoint);
   Object.entries(params || {}).forEach(function (e) {
     if (e[1] != null) url.searchParams.set(e[0], e[1]);
   });
-  const res = await fetch(url, {
-    headers: { 'X-API-KEY': API_KEY, 'Accept': 'application/json', 'User-Agent': 'AquariumLifeDataGen/1.0' }
-  });
-  if (!res.ok) {
-    const body = await res.text().catch(function () { return ''; });
-    throw new Error('API ' + endpoint + ' -> HTTP ' + res.status + ' ' + body.slice(0, 200));
+
+  let lastErr;
+  for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+    const ctrl = new AbortController();
+    const timer = setTimeout(function () { ctrl.abort(); }, REQ_TIMEOUT);
+    try {
+      const res = await fetch(url, {
+        headers: { 'X-API-KEY': API_KEY, 'Accept': 'application/json', 'User-Agent': 'AquariumLifeDataGen/1.0' },
+        signal: ctrl.signal
+      });
+      clearTimeout(timer);
+
+      // 429/5xx: erro temporario -> repetir
+      if (res.status === 429 || res.status >= 500) {
+        throw new Error('HTTP ' + res.status);
+      }
+      // outros 4xx (ex: 401 chave invalida): erro definitivo -> nao repetir
+      if (!res.ok) {
+        const body = await res.text().catch(function () { return ''; });
+        throw Object.assign(
+          new Error('API ' + endpoint + ' -> HTTP ' + res.status + ' ' + body.slice(0, 200)),
+          { fatal: true }
+        );
+      }
+      const total = parseInt(res.headers.get('x-total-count') || '', 10);
+      return { data: await res.json(), total: isNaN(total) ? null : total };
+    } catch (err) {
+      clearTimeout(timer);
+      if (err && err.fatal) throw err;           // 4xx definitivo: aborta ja
+      lastErr = err;
+      if (attempt < MAX_RETRIES) {
+        const wait = Math.min(1000 * Math.pow(2, attempt - 1), 8000); // 1s,2s,4s,8s
+        const why = (err && (err.code || err.message)) || 'erro de rede';
+        console.warn('  aviso: ' + endpoint + ' tentativa ' + attempt + '/' + MAX_RETRIES +
+                     ' falhou (' + why + '); nova tentativa em ' + wait + 'ms');
+        await sleep(wait);
+      }
+    }
   }
-  const total = parseInt(res.headers.get('x-total-count') || '', 10);
-  return { data: await res.json(), total: isNaN(total) ? null : total };
+  throw new Error('API ' + endpoint + ' falhou apos ' + MAX_RETRIES +
+                  ' tentativas: ' + (lastErr && (lastErr.message || lastErr.code || lastErr)));
 }
 
 function asList(data) {
