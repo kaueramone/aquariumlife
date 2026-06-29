@@ -1,14 +1,14 @@
 {
-  "updated": "2026-06-24",
+  "updated": "2026-06-29",
   "cat": 527496,
   "slug": "equipamento-media-filtrante",
-  "total": 20,
+  "total": 14,
   "min": 2.0048999999999997,
   "max": 35.0058,
   "products": [
     {
       "id": 5444752,
-      "title": "Hydra Biomax 400ml",
+      "title": "Hydra Biomax",
       "price": 7.502999999999999,
       "pf": "7,50 €",
       "pp": null,
@@ -16,17 +16,6 @@
       "url": "https://www.aquariumlife.pt/product/hydra-biomax-400ml",
       "cart": "https://www.aquariumlife.pt/cart/add/hydra-biomax-400ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f892619-140805-hydra-biomax400ml.webp"
-    },
-    {
-      "id": 5444753,
-      "title": "Hydra Biomax 1000ml",
-      "price": 12.951899999999998,
-      "pf": "12,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/hydra-biomax-1000ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/hydra-biomax-1000ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/074b297-145616-biomax-min.png"
     },
     {
       "id": 5444864,
@@ -41,7 +30,7 @@
     },
     {
       "id": 5445037,
-      "title": "SF FILTER COTTON WHITE 100 GRAM",
+      "title": "SF FILTER COTTON WHITE GRAM",
       "price": 2.1525,
       "pf": "2,15 €",
       "pp": null,
@@ -49,28 +38,6 @@
       "url": "https://www.aquariumlife.pt/product/sf-filter-cotton-white-100-gram",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-filter-cotton-white-100-gram",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/40f36c5-142418-filter-cotton-white-100-gram.png"
-    },
-    {
-      "id": 5445038,
-      "title": "SF FILTER COTTON WHITE 250 GRAM",
-      "price": 4.6002,
-      "pf": "4,60 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-filter-cotton-white-250-gram",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-filter-cotton-white-250-gram",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/ac9d2c8-142239-filter-cotton-white-250-gram.png"
-    },
-    {
-      "id": 5445039,
-      "title": "SF FILTER COTTON WHITE 500 GRAM",
-      "price": 8.4501,
-      "pf": "8,45 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-filter-cotton-white-500-gram",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-filter-cotton-white-500-gram",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/d7e341a-142001-filter-cotton-white-500-gram.png"
     },
     {
       "id": 5445061,
@@ -107,7 +74,7 @@
     },
     {
       "id": 5445064,
-      "title": "Aquael media BIOCERAMAX 1200 (1000 ml)",
+      "title": "Aquael media BIOCERAMAX (1000 ml)",
       "price": 12.3984,
       "pf": "12,40 €",
       "pp": null,
@@ -117,47 +84,14 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/93237d1-145607-aquael-media-bioceramax-1200.png"
     },
     {
-      "id": 5445065,
-      "title": "Aquael media BIOCERAMAX 1600 (1000 ml)",
-      "price": 13.800600000000001,
-      "pf": "13,80 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aquael-media-bioceramax-1600-1000-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/aquael-media-bioceramax-1600-1000-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/811cfa0-145039-aquael-media-bioceramax-1600.png"
-    },
-    {
-      "id": 5445066,
-      "title": "Aquael media BIOCERAMAX 600 (1000 ml)",
-      "price": 6.9003000000000005,
-      "pf": "6,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aquael-media-bioceramax-600-1000-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/aquael-media-bioceramax-600-1000-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/543fb75-144256-aquael-media-bioceramax-600.png"
-    },
-    {
       "id": 5445098,
-      "title": "PP Filter fleece branco (50 x 50 x 2,5 cm)",
+      "title": "PP Filter fleece branco",
       "price": 4.0959,
       "pf": "4,10 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/pp-filter-fleece-branco-50-x-50-x-25-cm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-filter-fleece-branco-50-x-50-x-25-cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5445099,
-      "title": "PP Filter fleece branco (100 x 100 x 2,5 cm)",
-      "price": 13.2963,
-      "pf": "13,30 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/pp-filter-fleece-branco-100-x-100-x-25-cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/pp-filter-fleece-branco-100-x-100-x-25-cm",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {

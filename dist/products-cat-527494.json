@@ -1,10 +1,10 @@
 {
-  "updated": "2026-06-24",
+  "updated": "2026-06-29",
   "cat": 527494,
   "slug": "equipamento-co2",
-  "total": 37,
+  "total": 29,
   "min": 0.5043,
-  "max": 99.00269999999999,
+  "max": 92.9511,
   "products": [
     {
       "id": 5444754,
@@ -52,7 +52,7 @@
     },
     {
       "id": 5444794,
-      "title": "AA C02 difusor M",
+      "title": "AA C02 difusor",
       "price": 13.800600000000001,
       "pf": "13,80 €",
       "pp": null,
@@ -85,7 +85,7 @@
     },
     {
       "id": 5444798,
-      "title": "AA Co2 Slim Steel Diffusor 20cm",
+      "title": "AA Co2 Slim Steel Diffusor",
       "price": 16.3467,
       "pf": "16,35 €",
       "pp": null,
@@ -95,30 +95,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/6a18305-154805-aa-co2-slim-steel-diffusor-30cm.png"
     },
     {
-      "id": 5444799,
-      "title": "AA Co2 Slim Steel Diffusor 40cm",
-      "price": 21.844800000000003,
-      "pf": "21,84 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aa-co2-slim-steel-diffusor-40cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/aa-co2-slim-steel-diffusor-40cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/6a18305-154805-aa-co2-slim-steel-diffusor-30cm.png"
-    },
-    {
-      "id": 5444800,
-      "title": "AA Co2 Slim Steel Diffusor 30cm",
-      "price": 18.204,
-      "pf": "18,20 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aa-co2-slim-steel-diffusor-30cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/aa-co2-slim-steel-diffusor-30cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/6a18305-154805-aa-co2-slim-steel-diffusor-30cm.png"
-    },
-    {
       "id": 5444813,
-      "title": "Dennerle Carbo Bio Depot 60/80",
+      "title": "Dennerle Carbo Bio Depot",
       "price": 16.605,
       "pf": "16,61 €",
       "pp": null,
@@ -137,17 +115,6 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-carbo-bio-style-120",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-carbo-bio-style-120",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3c60900-103902-dennerle-carbo-bio-style-120.png"
-    },
-    {
-      "id": 5444815,
-      "title": "Dennerle Carbo Bio Depot 120",
-      "price": 6.4452,
-      "pf": "6,45 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-carbo-bio-depot-120",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-carbo-bio-depot-120",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/dfa4e25-103548-dennerle-carbo-bio-depot-120.png"
     },
     {
       "id": 5445016,
@@ -173,24 +140,13 @@
     },
     {
       "id": 5445114,
-      "title": "AS Garrafa de Co2 recarregável (500G)",
+      "title": "AS Garrafa de Co2 recarregável",
       "price": 69.003,
       "pf": "69,00 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/as-garrafa-de-co2-recarregavel-500g",
       "cart": "https://www.aquariumlife.pt/cart/add/as-garrafa-de-co2-recarregavel-500g",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5445115,
-      "title": "AS Garrafa de Co2 recarregável (2KG)",
-      "price": 99.00269999999999,
-      "pf": "99,00 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/as-garrafa-de-co2-recarregavel-2kg",
-      "cart": "https://www.aquariumlife.pt/cart/add/as-garrafa-de-co2-recarregavel-2kg",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
@@ -206,7 +162,7 @@
     },
     {
       "id": 5445181,
-      "title": "Twinstar difusor CO2 S",
+      "title": "Twinstar difusor CO2",
       "price": 7.896599999999999,
       "pf": "7,90 €",
       "pp": null,
@@ -305,24 +261,13 @@
     },
     {
       "id": 5445987,
-      "title": "Chihiros Difusor C02 externo mangueira 12/16mm",
+      "title": "Chihiros Difusor C02 externo mangueira",
       "price": 26.9493,
       "pf": "26,95 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/chihiros-difusor-c02-externo-mangueira-12-16mm",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-difusor-c02-externo-mangueira-12-16mm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/76930cd-171724-chihiros-difusor-c02-externo-mangueira-16_22mm.png"
-    },
-    {
-      "id": 5445988,
-      "title": "Chihiros Difusor C02 externo mangueira 16/22mm",
-      "price": 29.9505,
-      "pf": "29,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-difusor-c02-externo-mangueira-16-22mm",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-difusor-c02-externo-mangueira-16-22mm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/76930cd-171724-chihiros-difusor-c02-externo-mangueira-16_22mm.png"
     },
     {
@@ -359,47 +304,14 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/0ebf2da-160813-aa-c02-difusor-m.png"
     },
     {
-      "id": 5458965,
-      "title": "AA C02 difusor L",
-      "price": 13.9851,
-      "pf": "13,99 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aa-c02-difusor-l",
-      "cart": "https://www.aquariumlife.pt/cart/add/aa-c02-difusor-l",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/0ebf2da-160813-aa-c02-difusor-m.png"
-    },
-    {
       "id": 5549681,
-      "title": "Chihiros Nano CO2 Diffuser L",
+      "title": "Chihiros Nano CO2 Diffuser",
       "price": 12.951899999999998,
       "pf": "12,95 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/chihiros-nano-co2-diffuser-l",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-nano-co2-diffuser-l",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5549682,
-      "title": "Chihiros Nano CO2 Diffuser M",
-      "price": 11.9556,
-      "pf": "11,96 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-nano-co2-diffuser-m",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-nano-co2-diffuser-m",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5549683,
-      "title": "Chihiros Nano CO2 Diffuser S",
-      "price": 11.2545,
-      "pf": "11,25 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-nano-co2-diffuser-s",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-nano-co2-diffuser-s",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {

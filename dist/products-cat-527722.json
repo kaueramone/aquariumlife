@@ -1,14 +1,14 @@
 {
-  "updated": "2026-06-24",
+  "updated": "2026-06-29",
   "cat": 527722,
   "slug": "equipamento-bombas-de-agua",
-  "total": 2,
+  "total": 1,
   "min": 13.800600000000001,
-  "max": 21.205199999999998,
+  "max": 13.800600000000001,
   "products": [
     {
       "id": 5445025,
-      "title": "SF AQUAPOWER 450 - 450 L/H",
+      "title": "SF AQUAPOWER",
       "price": 13.800600000000001,
       "pf": "13,80 €",
       "pp": null,
@@ -16,17 +16,6 @@
       "url": "https://www.aquariumlife.pt/product/sf-aquapower-450-450-l-h",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-aquapower-450-450-l-h",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/e253d02-144703-sf-aquapower-450-450-l_h.png"
-    },
-    {
-      "id": 5445026,
-      "title": "SF AQUAPOWER 900 - 920 L/H",
-      "price": 21.205199999999998,
-      "pf": "21,21 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-aquapower-900-920-l-h",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-aquapower-900-920-l-h",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/a5c65a9-144301-sf-aquapower-900-920-l_h.png"
     }
   ]
 }

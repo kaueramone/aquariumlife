@@ -1,10 +1,10 @@
 {
-  "updated": "2026-06-24",
+  "updated": "2026-06-29",
   "cat": 527489,
   "slug": "equipamento-medicacao",
-  "total": 8,
+  "total": 6,
   "min": 5.448899999999999,
-  "max": 17.601300000000002,
+  "max": 13.9974,
   "products": [
     {
       "id": 5445176,
@@ -63,35 +63,13 @@
     },
     {
       "id": 5532636,
-      "title": "Easy Life Voogle 100ml",
+      "title": "Easy Life Voogle",
       "price": 5.448899999999999,
       "pf": "5,45 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/easy-life-voogle-100ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-voogle-100ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/91d9599-112930-easy-life-voogle.png"
-    },
-    {
-      "id": 5532637,
-      "title": "Easy Life Voogle 250ml",
-      "price": 10.147499999999999,
-      "pf": "10,15 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-voogle-250ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-voogle-250ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/91d9599-112930-easy-life-voogle.png"
-    },
-    {
-      "id": 5532638,
-      "title": "Easy Life Voogle 500ml",
-      "price": 17.601300000000002,
-      "pf": "17,60 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-voogle-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-voogle-500ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/91d9599-112930-easy-life-voogle.png"
     }
   ]

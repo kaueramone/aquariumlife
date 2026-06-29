@@ -1,8 +1,8 @@
 {
-  "updated": "2026-06-24",
+  "updated": "2026-06-29",
   "cat": 527349,
   "slug": "alimentacao",
-  "total": 82,
+  "total": 60,
   "min": 2.3493,
   "max": 153.1473,
   "products": [
@@ -74,7 +74,7 @@
     },
     {
       "id": 5444913,
-      "title": "Bassleer Biofish Garlic M 60g",
+      "title": "Bassleer Biofish Garlic",
       "price": 6.1008,
       "pf": "6,10 €",
       "pp": null,
@@ -84,52 +84,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/933c815-110736-bassleer-biofish-garlic-l-150g.png"
     },
     {
-      "id": 5444914,
-      "title": "Bassleer Biofish Garlic M 150g",
-      "price": 10.455,
-      "pf": "10,46 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-garlic-m-150g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-garlic-m-150g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/933c815-110736-bassleer-biofish-garlic-l-150g.png"
-    },
-    {
-      "id": 5444915,
-      "title": "Bassleer Biofish Garlic M 600g",
-      "price": 33.3453,
-      "pf": "33,35 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-garlic-m-600g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-garlic-m-600g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/933c815-110736-bassleer-biofish-garlic-l-150g.png"
-    },
-    {
-      "id": 5444916,
-      "title": "Bassleer Biofish Garlic L 60g",
-      "price": 6.1008,
-      "pf": "6,10 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-garlic-l-60g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-garlic-l-60g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/933c815-110736-bassleer-biofish-garlic-l-150g.png"
-    },
-    {
-      "id": 5444917,
-      "title": "Bassleer Biofish Garlic L 150g",
-      "price": 10.455,
-      "pf": "10,46 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-garlic-l-150g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-garlic-l-150g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/933c815-110736-bassleer-biofish-garlic-l-150g.png"
-    },
-    {
       "id": 5444918,
-      "title": "Bassleer Biofish Regular M 60g",
+      "title": "Bassleer Biofish Regular M",
       "price": 5.5473,
       "pf": "5,55 €",
       "pp": null,
@@ -139,19 +95,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/59efb36-110234-bassleer-biofish-regular-m-600g.png"
     },
     {
-      "id": 5444919,
-      "title": "Bassleer Biofish Regular M 150g",
-      "price": 9.151200000000001,
-      "pf": "9,15 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-regular-m-150g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-regular-m-150g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/59efb36-110234-bassleer-biofish-regular-m-600g.png"
-    },
-    {
       "id": 5444920,
-      "title": "Bassleer Biofish Green L 60g",
+      "title": "Bassleer Biofish Green",
       "price": 6.1008,
       "pf": "6,10 €",
       "pp": null,
@@ -161,91 +106,14 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f9de311-160858-bassleer-biofish-green-3xl-68g.png"
     },
     {
-      "id": 5444921,
-      "title": "Bassleer Biofish Green L 150g",
-      "price": 10.455,
-      "pf": "10,46 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-green-l-150g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-green-l-150g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f9de311-160858-bassleer-biofish-green-3xl-68g.png"
-    },
-    {
-      "id": 5444922,
-      "title": "Bassleer Biofish Regular M 600g",
-      "price": 26.9493,
-      "pf": "26,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-regular-m-600g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-regular-m-600g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/59efb36-110234-bassleer-biofish-regular-m-600g.png"
-    },
-    {
-      "id": 5444923,
-      "title": "Bassleer Biofish Green XXL 680g",
-      "price": 33.3453,
-      "pf": "33,35 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-green-xxl-680g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-green-xxl-680g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f9de311-160858-bassleer-biofish-green-3xl-68g.png"
-    },
-    {
-      "id": 5444924,
-      "title": "Bassleer Biofish Green M 60g",
-      "price": 6.1008,
-      "pf": "6,10 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-green-m-60g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-green-m-60g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f9de311-160858-bassleer-biofish-green-3xl-68g.png"
-    },
-    {
-      "id": 5444925,
-      "title": "Bassleer Biofish Green XL 68g",
-      "price": 6.1008,
-      "pf": "6,10 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-green-xl-68g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-green-xl-68g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f9de311-160858-bassleer-biofish-green-3xl-68g.png"
-    },
-    {
-      "id": 5444926,
-      "title": "Bassleer Biofish Green 3XL 68g",
-      "price": 6.1008,
-      "pf": "6,10 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-green-3xl-68g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-green-3xl-68g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f9de311-160858-bassleer-biofish-green-3xl-68g.png"
-    },
-    {
       "id": 5444927,
-      "title": "Bassleer Biofish Regular Flake 35G",
+      "title": "Bassleer Biofish Regular Flake",
       "price": 5.6457,
       "pf": "5,65 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/bassleer-biofish-regular-flake-35g",
       "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-regular-flake-35g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/bc4e070-161051-bassleer-biofish-regular-flake-70g.png"
-    },
-    {
-      "id": 5444928,
-      "title": "Bassleer Biofish Regular Flake 70g",
-      "price": 8.5977,
-      "pf": "8,60 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-regular-flake-70g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-regular-flake-70g",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/bc4e070-161051-bassleer-biofish-regular-flake-70g.png"
     },
     {
@@ -261,7 +129,7 @@
     },
     {
       "id": 5445067,
-      "title": "Tropical Welsi Gran (1000 ml)",
+      "title": "Tropical Welsi Gran",
       "price": 16.605,
       "pf": "16,61 €",
       "pp": null,
@@ -283,7 +151,7 @@
     },
     {
       "id": 5445069,
-      "title": "Tropical Supervit Granulat (1000 ml)",
+      "title": "Tropical Supervit Granulat",
       "price": 18.204,
       "pf": "18,20 €",
       "pp": null,
@@ -294,7 +162,7 @@
     },
     {
       "id": 5445070,
-      "title": "Tropical Cichlid Gran (1000 ml)",
+      "title": "Tropical Cichlid Gran",
       "price": 19.9014,
       "pf": "19,90 €",
       "pp": null,
@@ -305,7 +173,7 @@
     },
     {
       "id": 5445071,
-      "title": "Tropical Discus Granulat D-50 Plus (1000 ml)",
+      "title": "Tropical Discus Granulat D-50 Plus",
       "price": 19.950599999999998,
       "pf": "19,95 €",
       "pp": null,
@@ -316,7 +184,7 @@
     },
     {
       "id": 5445072,
-      "title": "Tropical Supervit Flakes (1000 ml)",
+      "title": "Tropical Supervit Flakes",
       "price": 14.0466,
       "pf": "14,05 €",
       "pp": null,
@@ -360,7 +228,7 @@
     },
     {
       "id": 5445076,
-      "title": "Tropical Pleco's Tablets (50 ml)",
+      "title": "Tropical Pleco's Tablets",
       "price": 7.6014,
       "pf": "7,60 €",
       "pp": null,
@@ -370,19 +238,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3152d0a-154946-tropical-plecos-tablets-250-ml.png"
     },
     {
-      "id": 5445077,
-      "title": "Tropical Pleco's Tablets (250 ml)",
-      "price": 17.9457,
-      "pf": "17,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropical-plecos-tablets-250-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropical-plecos-tablets-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3152d0a-154946-tropical-plecos-tablets-250-ml.png"
-    },
-    {
       "id": 5445078,
-      "title": "Tropical 3-Algae Tablets B (50 ml)",
+      "title": "Tropical 3-Algae Tablets B",
       "price": 6.1008,
       "pf": "6,10 €",
       "pp": null,
@@ -392,19 +249,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/1fefe72-154632-tropical-3-algae-tablets-b-250-ml.png"
     },
     {
-      "id": 5445079,
-      "title": "Tropical 3-Algae Tablets B (250 ml)",
-      "price": 14.6001,
-      "pf": "14,60 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropical-3-algae-tablets-b-250-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropical-3-algae-tablets-b-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/1fefe72-154632-tropical-3-algae-tablets-b-250-ml.png"
-    },
-    {
       "id": 5445080,
-      "title": "Tropical Supervit Tablets B (50 ml)",
+      "title": "Tropical Supervit Tablets B",
       "price": 4.944599999999999,
       "pf": "4,94 €",
       "pp": null,
@@ -412,39 +258,6 @@
       "url": "https://www.aquariumlife.pt/product/tropical-supervit-tablets-b-50-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-supervit-tablets-b-50-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/305b24f-154353-tropical-supervit-tablets-b-250-ml.png"
-    },
-    {
-      "id": 5445081,
-      "title": "Tropical Supervit Tablets B (250 ml)",
-      "price": 11.746500000000001,
-      "pf": "11,75 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropical-supervit-tablets-b-250-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropical-supervit-tablets-b-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/305b24f-154353-tropical-supervit-tablets-b-250-ml.png"
-    },
-    {
-      "id": 5445084,
-      "title": "Tropical Supervit Granulat (100 ml)",
-      "price": 3.8991,
-      "pf": "3,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropical-supervit-granulat-100-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropical-supervit-granulat-100-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/e88cb0c-153441-tropical-supervit-granulat-250-ml.png"
-    },
-    {
-      "id": 5445085,
-      "title": "Tropical Supervit Granulat (250 ml)",
-      "price": 7.7982,
-      "pf": "7,80 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropical-supervit-granulat-250-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropical-supervit-granulat-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/e88cb0c-153441-tropical-supervit-granulat-250-ml.png"
     },
     {
       "id": 5445086,
@@ -456,28 +269,6 @@
       "url": "https://www.aquariumlife.pt/product/tropical-d-50-plus-flakes-250-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-d-50-plus-flakes-250-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/c5aed14-153257-tropical-d-50-plus-flakes-250-ml.png"
-    },
-    {
-      "id": 5445087,
-      "title": "Tropical Discus Granulat D-50 Plus (100 ml)",
-      "price": 4.305,
-      "pf": "4,31 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropical-discus-granulat-d-50-plus-100-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropical-discus-granulat-d-50-plus-100-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/bfafffb-152744-tropical-discus-granulat-d-50-plus-250-ml.png"
-    },
-    {
-      "id": 5445088,
-      "title": "Tropical Discus Granulat D-50 Plus (250 ml)",
-      "price": 8.5485,
-      "pf": "8,55 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropical-discus-granulat-d-50-plus-250-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropical-discus-granulat-d-50-plus-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/bfafffb-152744-tropical-discus-granulat-d-50-plus-250-ml.png"
     },
     {
       "id": 5445089,
@@ -503,7 +294,7 @@
     },
     {
       "id": 5445091,
-      "title": "Tropical Vitality & Color Granulat 100ml",
+      "title": "Tropical Vitality & Color Granulat",
       "price": 4.4526,
       "pf": "4,45 €",
       "pp": null,
@@ -511,28 +302,6 @@
       "url": "https://www.aquariumlife.pt/product/tropical-vitality-color-granulat-100ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-vitality-color-granulat-100ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/ef93cdc-151443-tropical-vitality-color-granulat-250ml.png"
-    },
-    {
-      "id": 5445092,
-      "title": "Tropical Vitality & Color Granulat 250ml",
-      "price": 8.7453,
-      "pf": "8,75 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropical-vitality-color-granulat-250ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropical-vitality-color-granulat-250ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/ef93cdc-151443-tropical-vitality-color-granulat-250ml.png"
-    },
-    {
-      "id": 5445102,
-      "title": "Tropical Cichlid Gran (250 ml)",
-      "price": 8.4993,
-      "pf": "8,50 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropical-cichlid-gran-250-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropical-cichlid-gran-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/4ab042b-151214-tropical-cichlid-gran-250-ml.png"
     },
     {
       "id": 5445103,
@@ -577,17 +346,6 @@
       "url": "https://www.aquariumlife.pt/product/tropical-spirulina-flakes-250-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-spirulina-flakes-250-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/a260578-150413-tropical-spirulina-flakes-250-ml.png"
-    },
-    {
-      "id": 5445107,
-      "title": "Tropical Welsi Gran (250 ml)",
-      "price": 7.097099999999999,
-      "pf": "7,10 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropical-welsi-gran-250-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropical-welsi-gran-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/76e300f-150205-tropical-welsi-gran-250-ml.png"
     },
     {
       "id": 5445108,

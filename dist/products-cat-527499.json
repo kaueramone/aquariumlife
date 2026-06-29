@@ -1,31 +1,20 @@
 {
-  "updated": "2026-06-24",
+  "updated": "2026-06-29",
   "cat": 527499,
   "slug": "hardscape-troncos",
-  "total": 12,
-  "min": 5.0061,
+  "total": 7,
+  "min": 6.1992,
   "max": 87.9942,
   "products": [
     {
       "id": 5444822,
-      "title": "AD Black Slim wood M",
+      "title": "AD Black Slim wood",
       "price": 10.2951,
       "pf": "10,30 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/ad-black-slim-wood-m",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-black-slim-wood-m",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/5216b40-153900-black-slim-wood.png"
-    },
-    {
-      "id": 5444823,
-      "title": "AD Black Slim wood S",
-      "price": 5.8548,
-      "pf": "5,85 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ad-black-slim-wood-s",
-      "cart": "https://www.aquariumlife.pt/cart/add/ad-black-slim-wood-s",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/5216b40-153900-black-slim-wood.png"
     },
     {
@@ -41,7 +30,7 @@
     },
     {
       "id": 5444828,
-      "title": "AD Black Root M",
+      "title": "AD Black Root",
       "price": 20.344199999999997,
       "pf": "20,34 €",
       "pp": null,
@@ -51,19 +40,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/8dea0f8-151950-ad-black-root-xs.png"
     },
     {
-      "id": 5444829,
-      "title": "AD Black Root S",
-      "price": 11.2053,
-      "pf": "11,21 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ad-black-root-s",
-      "cart": "https://www.aquariumlife.pt/cart/add/ad-black-root-s",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/8dea0f8-151950-ad-black-root-xs.png"
-    },
-    {
       "id": 5444830,
-      "title": "AD Talawa wood M",
+      "title": "AD Talawa wood",
       "price": 15.3504,
       "pf": "15,35 €",
       "pp": null,
@@ -71,28 +49,6 @@
       "url": "https://www.aquariumlife.pt/product/ad-talawa-wood-m",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-talawa-wood-m",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/5360e79-152430-ad-talawa-wood-l.png"
-    },
-    {
-      "id": 5444831,
-      "title": "AD Talawa wood L",
-      "price": 30.2457,
-      "pf": "30,25 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ad-talawa-wood-l",
-      "cart": "https://www.aquariumlife.pt/cart/add/ad-talawa-wood-l",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/5360e79-152430-ad-talawa-wood-l.png"
-    },
-    {
-      "id": 5444832,
-      "title": "AD Black Root XS",
-      "price": 5.0061,
-      "pf": "5,01 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ad-black-root-xs",
-      "cart": "https://www.aquariumlife.pt/cart/add/ad-black-root-xs",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/8dea0f8-151950-ad-black-root-xs.png"
     },
     {
       "id": 5444834,
@@ -107,24 +63,13 @@
     },
     {
       "id": 5444835,
-      "title": "AD Aqua Bonsai L",
+      "title": "AD Aqua Bonsai",
       "price": 87.9942,
       "pf": "87,99 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/ad-aqua-bonsai-l",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-aqua-bonsai-l",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/347def9-151150-bonsai-tree.png"
-    },
-    {
-      "id": 5444836,
-      "title": "AD Aqua Bonsai M",
-      "price": 49.9011,
-      "pf": "49,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ad-aqua-bonsai-m",
-      "cart": "https://www.aquariumlife.pt/cart/add/ad-aqua-bonsai-m",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/347def9-151150-bonsai-tree.png"
     },
     {

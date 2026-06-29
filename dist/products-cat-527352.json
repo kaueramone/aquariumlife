@@ -1,8 +1,8 @@
 {
-  "updated": "2026-06-24",
+  "updated": "2026-06-29",
   "cat": 527352,
   "slug": "peixes",
-  "total": 96,
+  "total": 94,
   "min": 1.2054,
   "max": 16.3344,
   "products": [
@@ -93,6 +93,17 @@
       "url": "https://www.aquariumlife.pt/product/apistogramma-macmasteri-3-4cm",
       "cart": "https://www.aquariumlife.pt/cart/add/apistogramma-macmasteri-3-4cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/6c158b2-113521-apistogramma-macmasteri.png"
+    },
+    {
+      "id": 5445150,
+      "title": "Microgeophagus Ramirezi",
+      "price": 6.2976,
+      "pf": "6,30 €",
+      "pp": null,
+      "ppf": null,
+      "url": "https://www.aquariumlife.pt/product/microgeophagus-ramirezi-5-55cm",
+      "cart": "https://www.aquariumlife.pt/cart/add/microgeophagus-ramirezi-5-55cm",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/1bb0253-113225-microgeophagus-ramirezi.png"
     },
     {
       "id": 5445151,
@@ -733,17 +744,6 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/45c681f-140913-colisa-chuna-mel.png"
     },
     {
-      "id": 5532604,
-      "title": "Microgeophagus Ramirezi 3-3.5cm",
-      "price": 4.8462,
-      "pf": "4,85 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/microgeophagus-ramirezi-3-35cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/microgeophagus-ramirezi-3-35cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/1bb0253-113225-microgeophagus-ramirezi.png"
-    },
-    {
       "id": 5532605,
       "title": "Tylomenalia sp. 3-4cm",
       "price": 5.8548,
@@ -753,17 +753,6 @@
       "url": "https://www.aquariumlife.pt/product/tylomenalia-sp-3-4cm",
       "cart": "https://www.aquariumlife.pt/cart/add/tylomenalia-sp-3-4cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/87e5962-123419-tylomenalia-sp.png"
-    },
-    {
-      "id": 5536077,
-      "title": "Microgeophagus Ramirezi 3-4cm",
-      "price": 6.2976,
-      "pf": "6,30 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/microgeophagus-ramirezi-3-4cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/microgeophagus-ramirezi-3-4cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/1bb0253-113225-microgeophagus-ramirezi.png"
     },
     {
       "id": 5536078,
@@ -1049,17 +1038,6 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/molly-lyra-preta-45-50cm",
       "cart": "https://www.aquariumlife.pt/cart/add/molly-lyra-preta-45-50cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5568868,
-      "title": "Physoschistura mango 3-4cm",
-      "price": 3.9482999999999997,
-      "pf": "3,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/physoschistura-mango-3-4cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/physoschistura-mango-3-4cm",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     }
   ]

@@ -1,8 +1,8 @@
 {
-  "updated": "2026-06-24",
+  "updated": "2026-06-29",
   "cat": 527713,
   "slug": "equipamento-acessorios",
-  "total": 63,
+  "total": 56,
   "min": 1.0947,
   "max": 82.9512,
   "products": [
@@ -327,35 +327,13 @@
     },
     {
       "id": 5444891,
-      "title": "PP rede aquário 8cm",
+      "title": "PP rede aquário",
       "price": 2.4968999999999997,
       "pf": "2,50 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/pp-rede-aquario-8cm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-rede-aquario-8cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5444892,
-      "title": "PP rede aquário 17cm",
-      "price": 3.1488,
-      "pf": "3,15 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/pp-rede-aquario-17cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/pp-rede-aquario-17cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5444893,
-      "title": "PP rede aquário 21cm",
-      "price": 3.9975,
-      "pf": "4,00 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/pp-rede-aquario-21cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/pp-rede-aquario-21cm",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
@@ -448,7 +426,7 @@
     },
     {
       "id": 5445052,
-      "title": "Aquael Magnetic cleaner S (vidro 3-6 mm)",
+      "title": "Aquael Magnetic cleaner",
       "price": 11.598899999999999,
       "pf": "11,60 €",
       "pp": null,
@@ -458,30 +436,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/ef266a9-152701-aquael-magnetic-cleaner-l.png"
     },
     {
-      "id": 5445053,
-      "title": "Aquael Magnetic cleaner M (vidro 6-10 mm)",
-      "price": 13.1979,
-      "pf": "13,20 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aquael-magnetic-cleaner-m-vidro-6-10-mm",
-      "cart": "https://www.aquariumlife.pt/cart/add/aquael-magnetic-cleaner-m-vidro-6-10-mm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/ef266a9-152701-aquael-magnetic-cleaner-l.png"
-    },
-    {
-      "id": 5445054,
-      "title": "Aquael Magnetic cleaner L (vidro 10-15 mm)",
-      "price": 14.3049,
-      "pf": "14,30 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aquael-magnetic-cleaner-l-vidro-10-15-mm",
-      "cart": "https://www.aquariumlife.pt/cart/add/aquael-magnetic-cleaner-l-vidro-10-15-mm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/ef266a9-152701-aquael-magnetic-cleaner-l.png"
-    },
-    {
       "id": 5445055,
-      "title": "Aquael AIR TUBE 4/6 mm (3 m)",
+      "title": "Aquael AIR TUBE 4/6 mm",
       "price": 1.8942,
       "pf": "1,89 €",
       "pp": null,
@@ -491,36 +447,14 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f5537ba-152350-aquael-air-tube-4_6-mm-3.png"
     },
     {
-      "id": 5445056,
-      "title": "Aquael AIR TUBE 4/6 mm (6 m)",
-      "price": 3.6039000000000003,
-      "pf": "3,60 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aquael-air-tube-4-6-mm-6-m",
-      "cart": "https://www.aquariumlife.pt/cart/add/aquael-air-tube-4-6-mm-6-m",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/861a75c-152119-aquael-air-tube-4_6-mm.png"
-    },
-    {
       "id": 5445982,
-      "title": "WA conexão rápida para tubo 12/16mm",
+      "title": "WA conexão rápida para tubo",
       "price": 11.746500000000001,
       "pf": "11,75 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/wa-conexao-rapida-para-tubo-12-16mm",
       "cart": "https://www.aquariumlife.pt/cart/add/wa-conexao-rapida-para-tubo-12-16mm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/7a1d2ac-154739-wa-conexao-rapida-para-tubo.png"
-    },
-    {
-      "id": 5445983,
-      "title": "WA conexão rápida para tubo 16/22mm",
-      "price": 15.805499999999999,
-      "pf": "15,81 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/wa-conexao-rapida-para-tubo-16-22mm",
-      "cart": "https://www.aquariumlife.pt/cart/add/wa-conexao-rapida-para-tubo-16-22mm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/7a1d2ac-154739-wa-conexao-rapida-para-tubo.png"
     },
     {
@@ -668,24 +602,13 @@
     },
     {
       "id": 5559884,
-      "title": "SF rede para aquário 8cm",
+      "title": "SF rede para aquário",
       "price": 1.5498,
       "pf": "1,55 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/sf-rede-para-aquario-8cm",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-rede-para-aquario-8cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559885,
-      "title": "SF rede para aquário 15cm",
-      "price": 2.4476999999999998,
-      "pf": "2,45 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-rede-para-aquario-15cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-rede-para-aquario-15cm",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {

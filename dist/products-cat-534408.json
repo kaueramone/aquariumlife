@@ -1,8 +1,8 @@
 {
-  "updated": "2026-06-24",
+  "updated": "2026-06-29",
   "cat": 534408,
   "slug": "aquascaping",
-  "total": 14,
+  "total": 10,
   "min": 1.599,
   "max": 16.4943,
   "products": [
@@ -41,7 +41,7 @@
     },
     {
       "id": 5559852,
-      "title": "SF aquascaping pinça direita inox 27cm",
+      "title": "SF aquascaping pinça direita inox",
       "price": 5.2029000000000005,
       "pf": "5,20 €",
       "pp": null,
@@ -52,57 +52,13 @@
     },
     {
       "id": 5559853,
-      "title": "SF aquascaping pinça curva inox 27cm",
+      "title": "SF aquascaping pinça curva inox",
       "price": 5.2029000000000005,
       "pf": "5,20 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/sf-aquascaping-pinca-curva-inox-27cm",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-aquascaping-pinca-curva-inox-27cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559854,
-      "title": "SF aquascaping pinça direita inox 37cm",
-      "price": 6.6543,
-      "pf": "6,65 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-aquascaping-pinca-direita-inox-37cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-aquascaping-pinca-direita-inox-37cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559855,
-      "title": "SF aquascaping pinça curva inox 37cm",
-      "price": 6.6543,
-      "pf": "6,65 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-aquascaping-pinca-curva-inox-37cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-aquascaping-pinca-curva-inox-37cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559856,
-      "title": "SF aquascaping pinça direita inox 48cm",
-      "price": 11.0946,
-      "pf": "11,09 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-aquascaping-pinca-direita-inox-48cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-aquascaping-pinca-direita-inox-48cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559857,
-      "title": "SF aquascaping pinça curva inox 48cm",
-      "price": 11.0946,
-      "pf": "11,09 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-aquascaping-pinca-curva-inox-48cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-aquascaping-pinca-curva-inox-48cm",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {

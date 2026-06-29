@@ -1,14 +1,14 @@
 {
-  "updated": "2026-06-24",
+  "updated": "2026-06-29",
   "cat": 527498,
   "slug": "hardscape-rochas",
-  "total": 4,
+  "total": 3,
   "min": 7.6506,
   "max": 34.2555,
   "products": [
     {
       "id": 5445093,
-      "title": "AD Deko-Set Dragon stone (60 L Aquarium)",
+      "title": "AD Deko-Set Dragon stone",
       "price": 27.305999999999997,
       "pf": "27,31 €",
       "pp": null,
@@ -18,26 +18,15 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3f9fc4b-150240-dragon-stone-set.png"
     },
     {
-      "id": 5445095,
-      "title": "AD Deko-Set Mini-Scape (80 L Aquarium)",
+      "id": 5445094,
+      "title": "AD Deko-Set Mini-Scape",
       "price": 34.2555,
       "pf": "34,26 €",
       "pp": null,
       "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ad-deko-set-mini-scape-80-l-aquarium",
-      "cart": "https://www.aquariumlife.pt/cart/add/ad-deko-set-mini-scape-80-l-aquarium",
+      "url": "https://www.aquariumlife.pt/product/ad-deko-set-mini-scape-60-l-aquarium",
+      "cart": "https://www.aquariumlife.pt/cart/add/ad-deko-set-mini-scape-60-l-aquarium",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/b7685a3-150644-ad-deko-set-seiryu-rock-80-l-aquarium.png"
-    },
-    {
-      "id": 5445096,
-      "title": "AD Deko-Set Dragon stone (80 L Aquarium)",
-      "price": 34.2555,
-      "pf": "34,26 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ad-deko-set-dragon-stone-80-l-aquarium",
-      "cart": "https://www.aquariumlife.pt/cart/add/ad-deko-set-dragon-stone-80-l-aquarium",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3f9fc4b-150240-dragon-stone-set.png"
     },
     {
       "id": 5532579,

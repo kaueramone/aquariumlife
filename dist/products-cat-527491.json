@@ -1,8 +1,8 @@
 {
-  "updated": "2026-06-24",
+  "updated": "2026-06-29",
   "cat": 527491,
   "slug": "equipamento-fertilizantes",
-  "total": 47,
+  "total": 25,
   "min": 4.305,
   "max": 34.5999,
   "products": [
@@ -19,7 +19,7 @@
     },
     {
       "id": 5444756,
-      "title": "Hydra Fert. Micros 250ml",
+      "title": "Hydra Fert. Micros",
       "price": 9.446399999999999,
       "pf": "9,45 €",
       "pp": null,
@@ -29,19 +29,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/9e94aed-145431-micros-min.png"
     },
     {
-      "id": 5444757,
-      "title": "Hydra Fert. Micros 500ml",
-      "price": 15.4488,
-      "pf": "15,45 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/hydra-fert-micros-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/hydra-fert-micros-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/9e94aed-145431-micros-min.png"
-    },
-    {
       "id": 5444758,
-      "title": "Hydra Fert. Macros 250ml",
+      "title": "Hydra Fert. Macros",
       "price": 9.446399999999999,
       "pf": "9,45 €",
       "pp": null,
@@ -51,19 +40,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/22832ac-145340-macros-min.png"
     },
     {
-      "id": 5444759,
-      "title": "Hydra Fert. Macros 500ml",
-      "price": 15.4488,
-      "pf": "15,45 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/hydra-fert-macros-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/hydra-fert-macros-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/22832ac-145340-macros-min.png"
-    },
-    {
       "id": 5444760,
-      "title": "Hydra liquid carbon 250ml",
+      "title": "Hydra liquid carbon",
       "price": 12.951899999999998,
       "pf": "12,95 €",
       "pp": null,
@@ -73,36 +51,14 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/81dc819-145301-carbon-min.png"
     },
     {
-      "id": 5444761,
-      "title": "Hydra liquid carbon 500ml",
-      "price": 19.950599999999998,
-      "pf": "19,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/hydra-liquid-carbon-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/hydra-liquid-carbon-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/81dc819-145301-carbon-min.png"
-    },
-    {
       "id": 5444808,
-      "title": "Dennerle Plant Sytem V30 500ml",
+      "title": "Dennerle Plant Sytem V30",
       "price": 34.5999,
       "pf": "34,60 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/dennerle-plant-sytem-v30-500ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-sytem-v30-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/acf3db8-105511-dennerle-plant-system-v30-100ml.png"
-    },
-    {
-      "id": 5444809,
-      "title": "Dennerle Plant Sytem V30 250ml",
-      "price": 23.5053,
-      "pf": "23,51 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-plant-sytem-v30-250ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-sytem-v30-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/acf3db8-105511-dennerle-plant-system-v30-100ml.png"
     },
     {
@@ -140,7 +96,7 @@
     },
     {
       "id": 5445118,
-      "title": "Dennerle Plant System S7 (250 ml)",
+      "title": "Dennerle Plant System S7",
       "price": 23.099400000000003,
       "pf": "23,10 €",
       "pp": null,
@@ -151,35 +107,13 @@
     },
     {
       "id": 5445119,
-      "title": "Dennerle Carbo Care Bio (100 ml)",
+      "title": "Dennerle Carbo Care Bio",
       "price": 8.3025,
       "pf": "8,30 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/dennerle-carbo-care-bio-100-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-carbo-care-bio-100-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/945bb06-175823-dennerle-carbo-care-bio-500-ml.png"
-    },
-    {
-      "id": 5445120,
-      "title": "Dennerle Carbo Care Bio (250 ml)",
-      "price": 11.2914,
-      "pf": "11,29 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-carbo-care-bio-250-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-carbo-care-bio-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/945bb06-175823-dennerle-carbo-care-bio-500-ml.png"
-    },
-    {
-      "id": 5445121,
-      "title": "Dennerle Carbo Care Bio (500 ml)",
-      "price": 15.953100000000001,
-      "pf": "15,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-carbo-care-bio-500-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-carbo-care-bio-500-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/945bb06-175823-dennerle-carbo-care-bio-500-ml.png"
     },
     {
@@ -206,7 +140,7 @@
     },
     {
       "id": 5445124,
-      "title": "Dennerle Plant Care Basic Root (10 Stück)",
+      "title": "Dennerle Plant Care Basic Root",
       "price": 6.0024,
       "pf": "6,00 €",
       "pp": null,
@@ -216,19 +150,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/e86bbc4-174451-dennerle-plant-care-basic-root-10x.png"
     },
     {
-      "id": 5445125,
-      "title": "Dennerle Plant Care Basic Root (40x)",
-      "price": 13.8498,
-      "pf": "13,85 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-plant-care-basic-root-40x",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-care-basic-root-40x",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/d984e15-174248-dennerle-plant-care-basic-root-40x.png"
-    },
-    {
       "id": 5512994,
-      "title": "Tropica Premium Nutrition 125ML",
+      "title": "Tropica Premium Nutrition",
       "price": 6.494400000000001,
       "pf": "6,49 €",
       "pp": null,
@@ -238,19 +161,8 @@
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
-      "id": 5512995,
-      "title": "Tropica Premium Nutrition 300ml",
-      "price": 11.2053,
-      "pf": "11,21 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropica-premium-nutrition-300ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropica-premium-nutrition-300ml",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
       "id": 5512996,
-      "title": "Tropica Specialised Nutrition 125ml",
+      "title": "Tropica Specialised Nutrition",
       "price": 6.494400000000001,
       "pf": "6,49 €",
       "pp": null,
@@ -260,30 +172,8 @@
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
-      "id": 5512997,
-      "title": "Tropica Specialised Nutrition 300ml",
-      "price": 11.2053,
-      "pf": "11,21 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropica-specialised-nutrition-300ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropica-specialised-nutrition-300ml",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5532580,
-      "title": "Dennerle Plant System S7 100ml",
-      "price": 12.988800000000001,
-      "pf": "12,99 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-plant-system-s7-100ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-system-s7-100ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/978cd55-181137-dennerle-plant-system-s7-250-ml.png"
-    },
-    {
       "id": 5532581,
-      "title": "Dennerle Plant System E15 (250 ml)",
+      "title": "Dennerle Plant System E15",
       "price": 24.9936,
       "pf": "24,99 €",
       "pp": null,
@@ -293,19 +183,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3776016-145959-dennerle-plant-system-e15.png"
     },
     {
-      "id": 5532582,
-      "title": "Dennerle Plant System E15 (100 ml)",
-      "price": 12.988800000000001,
-      "pf": "12,99 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-plant-system-e15-100-ml-",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-system-e15-100-ml-",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3776016-145959-dennerle-plant-system-e15.png"
-    },
-    {
       "id": 5532612,
-      "title": "Easy life GreenScape 250ml",
+      "title": "Easy life GreenScape",
       "price": 9.0528,
       "pf": "9,05 €",
       "pp": null,
@@ -315,19 +194,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/247129a-175354-easy-life-greenscape.png"
     },
     {
-      "id": 5532613,
-      "title": "Easy life GreenScape 500ml",
-      "price": 15.6456,
-      "pf": "15,65 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-greenscape-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-greenscape-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/247129a-175354-easy-life-greenscape.png"
-    },
-    {
       "id": 5532614,
-      "title": "Easy life RedScape 500ml",
+      "title": "Easy life RedScape",
       "price": 15.6456,
       "pf": "15,65 €",
       "pp": null,
@@ -337,19 +205,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/2248bca-174812-easy-life-redscape.png"
     },
     {
-      "id": 5532615,
-      "title": "Easy life RedScape 250ml",
-      "price": 9.0528,
-      "pf": "9,05 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-redscape-250ml-",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-redscape-250ml-",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/2248bca-174812-easy-life-redscape.png"
-    },
-    {
       "id": 5532616,
-      "title": "Easy life Nitro 250ml",
+      "title": "Easy life Nitro",
       "price": 7.6014,
       "pf": "7,60 €",
       "pp": null,
@@ -359,19 +216,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/2b2b88a-121240-easy-life-nitro.png"
     },
     {
-      "id": 5532617,
-      "title": "Easy life Nitro 500ml",
-      "price": 12.0048,
-      "pf": "12,00 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-nitro-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-nitro-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/2b2b88a-121240-easy-life-nitro.png"
-    },
-    {
       "id": 5532618,
-      "title": "Easy life Ferro 250ml",
+      "title": "Easy life Ferro",
       "price": 7.6014,
       "pf": "7,60 €",
       "pp": null,
@@ -381,19 +227,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/2834589-121015-easy-life-ferro.png"
     },
     {
-      "id": 5532619,
-      "title": "Easy life Ferro 500ml",
-      "price": 12.0048,
-      "pf": "12,00 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-ferro-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-ferro-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/2834589-121015-easy-life-ferro.png"
-    },
-    {
       "id": 5532620,
-      "title": "Easy life Fosfo 250ml",
+      "title": "Easy life Fosfo",
       "price": 7.6014,
       "pf": "7,60 €",
       "pp": null,
@@ -403,19 +238,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/e368e3c-115644-easy-life-fosfo.png"
     },
     {
-      "id": 5532621,
-      "title": "Easy life Fosfo 500ml",
-      "price": 12.0048,
-      "pf": "12,00 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-fosfo-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-fosfo-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/e368e3c-115644-easy-life-fosfo.png"
-    },
-    {
       "id": 5532622,
-      "title": "Easy life ProFito 250ml",
+      "title": "Easy life ProFito",
       "price": 7.6998,
       "pf": "7,70 €",
       "pp": null,
@@ -425,30 +249,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/7334c53-180529-easy-life-profito.png"
     },
     {
-      "id": 5532623,
-      "title": "Easy life ProFito 500ml",
-      "price": 12.3,
-      "pf": "12,30 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-profito-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-profito-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/7334c53-180529-easy-life-profito.png"
-    },
-    {
-      "id": 5532624,
-      "title": "Easy life ProFito 1L",
-      "price": 20.848499999999998,
-      "pf": "20,85 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-profito-1l",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-profito-1l",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/7334c53-180529-easy-life-profito.png"
-    },
-    {
       "id": 5532625,
-      "title": "Easy Life Carbo 250ml",
+      "title": "Easy Life Carbo",
       "price": 8.794500000000001,
       "pf": "8,79 €",
       "pp": null,
@@ -478,50 +280,6 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-root-sticks-25x",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-root-sticks-25x",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/d710683-113204-easy-life-root-sticks.png"
-    },
-    {
-      "id": 5532639,
-      "title": "Easy Life Carbo 100ml",
-      "price": 5.2520999999999995,
-      "pf": "5,25 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-carbo-100ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-carbo-100ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/7a9fd97-112504-easy-life-carbo.png"
-    },
-    {
-      "id": 5532644,
-      "title": "Easy life ProFito 100ml",
-      "price": 5.2520999999999995,
-      "pf": "5,25 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-profito-100ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-profito-100ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/7334c53-180529-easy-life-profito.png"
-    },
-    {
-      "id": 5532645,
-      "title": "Easy life GreenScape 100ml",
-      "price": 6.15,
-      "pf": "6,15 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-greenscape-100ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-greenscape-100ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/247129a-175354-easy-life-greenscape.png"
-    },
-    {
-      "id": 5532646,
-      "title": "Easy life RedScape 100ml",
-      "price": 6.15,
-      "pf": "6,15 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-redscape-100ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-redscape-100ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/2248bca-174812-easy-life-redscape.png"
     }
   ]
 }

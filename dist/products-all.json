@@ -1,14 +1,14 @@
 {
-  "updated": "2026-06-24",
+  "updated": "2026-06-29",
   "cat": "all",
   "slug": "all",
-  "total": 769,
+  "total": 579,
   "min": 0.5043,
   "max": 369.9471,
   "products": [
     {
       "id": 5444752,
-      "title": "Hydra Biomax 400ml",
+      "title": "Hydra Biomax",
       "price": 7.502999999999999,
       "pf": "7,50 €",
       "pp": null,
@@ -16,17 +16,6 @@
       "url": "https://www.aquariumlife.pt/product/hydra-biomax-400ml",
       "cart": "https://www.aquariumlife.pt/cart/add/hydra-biomax-400ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f892619-140805-hydra-biomax400ml.webp"
-    },
-    {
-      "id": 5444753,
-      "title": "Hydra Biomax 1000ml",
-      "price": 12.951899999999998,
-      "pf": "12,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/hydra-biomax-1000ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/hydra-biomax-1000ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/074b297-145616-biomax-min.png"
     },
     {
       "id": 5444754,
@@ -52,7 +41,7 @@
     },
     {
       "id": 5444756,
-      "title": "Hydra Fert. Micros 250ml",
+      "title": "Hydra Fert. Micros",
       "price": 9.446399999999999,
       "pf": "9,45 €",
       "pp": null,
@@ -62,19 +51,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/9e94aed-145431-micros-min.png"
     },
     {
-      "id": 5444757,
-      "title": "Hydra Fert. Micros 500ml",
-      "price": 15.4488,
-      "pf": "15,45 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/hydra-fert-micros-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/hydra-fert-micros-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/9e94aed-145431-micros-min.png"
-    },
-    {
       "id": 5444758,
-      "title": "Hydra Fert. Macros 250ml",
+      "title": "Hydra Fert. Macros",
       "price": 9.446399999999999,
       "pf": "9,45 €",
       "pp": null,
@@ -84,19 +62,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/22832ac-145340-macros-min.png"
     },
     {
-      "id": 5444759,
-      "title": "Hydra Fert. Macros 500ml",
-      "price": 15.4488,
-      "pf": "15,45 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/hydra-fert-macros-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/hydra-fert-macros-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/22832ac-145340-macros-min.png"
-    },
-    {
       "id": 5444760,
-      "title": "Hydra liquid carbon 250ml",
+      "title": "Hydra liquid carbon",
       "price": 12.951899999999998,
       "pf": "12,95 €",
       "pp": null,
@@ -106,25 +73,14 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/81dc819-145301-carbon-min.png"
     },
     {
-      "id": 5444761,
-      "title": "Hydra liquid carbon 500ml",
-      "price": 19.950599999999998,
-      "pf": "19,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/hydra-liquid-carbon-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/hydra-liquid-carbon-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/81dc819-145301-carbon-min.png"
-    },
-    {
-      "id": 5444763,
-      "title": "Hydra safe water 250ml",
+      "id": 5444762,
+      "title": "Hydra safe water",
       "price": 12.4968,
       "pf": "12,50 €",
       "pp": null,
       "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/hydra-safe-water-250ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/hydra-safe-water-250ml",
+      "url": "https://www.aquariumlife.pt/product/hydra-safe-water-125ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/hydra-safe-water-125ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/b76d125-145214-safe-min.png"
     },
     {
@@ -140,7 +96,7 @@
     },
     {
       "id": 5444765,
-      "title": "Hydra Gh+ 250ml",
+      "title": "Hydra Gh+",
       "price": 9.9507,
       "pf": "9,95 €",
       "pp": null,
@@ -150,36 +106,14 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/a82a492-145053-gh-min.png"
     },
     {
-      "id": 5444766,
-      "title": "Hydra Gh+ 500ml",
-      "price": 15.953100000000001,
-      "pf": "15,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/hydra-gh-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/hydra-gh-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/a82a492-145053-gh-min.png"
-    },
-    {
       "id": 5444767,
-      "title": "Hydra Kh+ 250ml",
+      "title": "Hydra Kh+",
       "price": 9.9507,
       "pf": "9,95 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/hydra-kh-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/hydra-kh-250ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/babeb99-145006-kh-min.png"
-    },
-    {
-      "id": 5444768,
-      "title": "Hydra Kh+ 500ml",
-      "price": 15.953100000000001,
-      "pf": "15,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/hydra-kh-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/hydra-kh-500ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/babeb99-145006-kh-min.png"
     },
     {
@@ -250,7 +184,7 @@
     },
     {
       "id": 5444780,
-      "title": "AA Poppy Pipe vidro  12/16",
+      "title": "AA Poppy Pipe vidro",
       "price": 25.7439,
       "pf": "25,74 €",
       "pp": null,
@@ -261,7 +195,7 @@
     },
     {
       "id": 5444781,
-      "title": "AA Violet Pipe vidro 12/16",
+      "title": "AA Violet Pipe vidro",
       "price": 26.445,
       "pf": "26,45 €",
       "pp": null,
@@ -272,46 +206,13 @@
     },
     {
       "id": 5444782,
-      "title": "AA Lilly Pipe vidro 12/16",
+      "title": "AA Lilly Pipe vidro",
       "price": 25.7439,
       "pf": "25,74 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/aa-lilly-pipe-vidro-12-16",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-lilly-pipe-vidro-12-16",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/4ed308c-165017-aa-lilly-pipe-vidro-16_22.png"
-    },
-    {
-      "id": 5444783,
-      "title": "AA Poppy Pipe vidro  16/22",
-      "price": 26.445,
-      "pf": "26,45 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aa-poppy-pipe-vidro-16-22",
-      "cart": "https://www.aquariumlife.pt/cart/add/aa-poppy-pipe-vidro-16-22",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/ff3a685-165856-aa-poppy-pipe-vidro-16_22.png"
-    },
-    {
-      "id": 5444784,
-      "title": "AA Violet Pipe vidro 16/22",
-      "price": 29.2494,
-      "pf": "29,25 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aa-violet-pipe-vidro-16-22",
-      "cart": "https://www.aquariumlife.pt/cart/add/aa-violet-pipe-vidro-16-22",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/a4f1235-165445-aa-violet-pipe-vidro-16_22.png"
-    },
-    {
-      "id": 5444785,
-      "title": "AA Lilly Pipe vidro 16/22",
-      "price": 27.8472,
-      "pf": "27,85 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aa-lilly-pipe-vidro-16-22",
-      "cart": "https://www.aquariumlife.pt/cart/add/aa-lilly-pipe-vidro-16-22",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/4ed308c-165017-aa-lilly-pipe-vidro-16_22.png"
     },
     {
@@ -404,7 +305,7 @@
     },
     {
       "id": 5444794,
-      "title": "AA C02 difusor M",
+      "title": "AA C02 difusor",
       "price": 13.800600000000001,
       "pf": "13,80 €",
       "pp": null,
@@ -437,35 +338,13 @@
     },
     {
       "id": 5444798,
-      "title": "AA Co2 Slim Steel Diffusor 20cm",
+      "title": "AA Co2 Slim Steel Diffusor",
       "price": 16.3467,
       "pf": "16,35 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/aa-co2-slim-steel-diffusor-20cm",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-co2-slim-steel-diffusor-20cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/6a18305-154805-aa-co2-slim-steel-diffusor-30cm.png"
-    },
-    {
-      "id": 5444799,
-      "title": "AA Co2 Slim Steel Diffusor 40cm",
-      "price": 21.844800000000003,
-      "pf": "21,84 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aa-co2-slim-steel-diffusor-40cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/aa-co2-slim-steel-diffusor-40cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/6a18305-154805-aa-co2-slim-steel-diffusor-30cm.png"
-    },
-    {
-      "id": 5444800,
-      "title": "AA Co2 Slim Steel Diffusor 30cm",
-      "price": 18.204,
-      "pf": "18,20 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aa-co2-slim-steel-diffusor-30cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/aa-co2-slim-steel-diffusor-30cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/6a18305-154805-aa-co2-slim-steel-diffusor-30cm.png"
     },
     {
@@ -536,24 +415,13 @@
     },
     {
       "id": 5444808,
-      "title": "Dennerle Plant Sytem V30 500ml",
+      "title": "Dennerle Plant Sytem V30",
       "price": 34.5999,
       "pf": "34,60 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/dennerle-plant-sytem-v30-500ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-sytem-v30-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/acf3db8-105511-dennerle-plant-system-v30-100ml.png"
-    },
-    {
-      "id": 5444809,
-      "title": "Dennerle Plant Sytem V30 250ml",
-      "price": 23.5053,
-      "pf": "23,51 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-plant-sytem-v30-250ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-sytem-v30-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/acf3db8-105511-dennerle-plant-system-v30-100ml.png"
     },
     {
@@ -580,7 +448,7 @@
     },
     {
       "id": 5444813,
-      "title": "Dennerle Carbo Bio Depot 60/80",
+      "title": "Dennerle Carbo Bio Depot",
       "price": 16.605,
       "pf": "16,61 €",
       "pp": null,
@@ -601,17 +469,6 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3c60900-103902-dennerle-carbo-bio-style-120.png"
     },
     {
-      "id": 5444815,
-      "title": "Dennerle Carbo Bio Depot 120",
-      "price": 6.4452,
-      "pf": "6,45 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-carbo-bio-depot-120",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-carbo-bio-depot-120",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/dfa4e25-103548-dennerle-carbo-bio-depot-120.png"
-    },
-    {
       "id": 5444817,
       "title": "Dennerle 3x Corner Filter Element 40/60",
       "price": 14.7477,
@@ -624,7 +481,7 @@
     },
     {
       "id": 5444818,
-      "title": "Dennerle Corner Filter 40",
+      "title": "Dennerle Corner Filter",
       "price": 23.000999999999998,
       "pf": "23,00 €",
       "pp": null,
@@ -645,17 +502,6 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/7e79e07-182612-dennerle-1x-corner-filter-element-40_60.png"
     },
     {
-      "id": 5444820,
-      "title": "Dennerle Corner Filter 60",
-      "price": 32.2506,
-      "pf": "32,25 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-corner-filter-60",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-corner-filter-60",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/ea00fb9-165339-dennerle-corner-filter-60.png"
-    },
-    {
       "id": 5444821,
       "title": "AD Dark moor wood 1.2KG",
       "price": 23.898899999999998,
@@ -668,7 +514,7 @@
     },
     {
       "id": 5444822,
-      "title": "AD Black Slim wood M",
+      "title": "AD Black Slim wood",
       "price": 10.2951,
       "pf": "10,30 €",
       "pp": null,
@@ -678,36 +524,14 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/5216b40-153900-black-slim-wood.png"
     },
     {
-      "id": 5444823,
-      "title": "AD Black Slim wood S",
-      "price": 5.8548,
-      "pf": "5,85 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ad-black-slim-wood-s",
-      "cart": "https://www.aquariumlife.pt/cart/add/ad-black-slim-wood-s",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/5216b40-153900-black-slim-wood.png"
-    },
-    {
       "id": 5444824,
-      "title": "AD Black normal Soil 10L",
+      "title": "AD Black normal Soil",
       "price": 41.9061,
       "pf": "41,91 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/ad-black-normal-soil-10l",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-black-normal-soil-10l",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/2f6eb8c-153537-aquadeco-black-soil.png"
-    },
-    {
-      "id": 5444825,
-      "title": "AD Black normal Soil 3L",
-      "price": 21.094499999999996,
-      "pf": "21,09 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ad-black-normal-soil-3l",
-      "cart": "https://www.aquariumlife.pt/cart/add/ad-black-normal-soil-3l",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/2f6eb8c-153537-aquadeco-black-soil.png"
     },
     {
@@ -734,7 +558,7 @@
     },
     {
       "id": 5444828,
-      "title": "AD Black Root M",
+      "title": "AD Black Root",
       "price": 20.344199999999997,
       "pf": "20,34 €",
       "pp": null,
@@ -744,19 +568,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/8dea0f8-151950-ad-black-root-xs.png"
     },
     {
-      "id": 5444829,
-      "title": "AD Black Root S",
-      "price": 11.2053,
-      "pf": "11,21 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ad-black-root-s",
-      "cart": "https://www.aquariumlife.pt/cart/add/ad-black-root-s",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/8dea0f8-151950-ad-black-root-xs.png"
-    },
-    {
       "id": 5444830,
-      "title": "AD Talawa wood M",
+      "title": "AD Talawa wood",
       "price": 15.3504,
       "pf": "15,35 €",
       "pp": null,
@@ -764,28 +577,6 @@
       "url": "https://www.aquariumlife.pt/product/ad-talawa-wood-m",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-talawa-wood-m",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/5360e79-152430-ad-talawa-wood-l.png"
-    },
-    {
-      "id": 5444831,
-      "title": "AD Talawa wood L",
-      "price": 30.2457,
-      "pf": "30,25 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ad-talawa-wood-l",
-      "cart": "https://www.aquariumlife.pt/cart/add/ad-talawa-wood-l",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/5360e79-152430-ad-talawa-wood-l.png"
-    },
-    {
-      "id": 5444832,
-      "title": "AD Black Root XS",
-      "price": 5.0061,
-      "pf": "5,01 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ad-black-root-xs",
-      "cart": "https://www.aquariumlife.pt/cart/add/ad-black-root-xs",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/8dea0f8-151950-ad-black-root-xs.png"
     },
     {
       "id": 5444834,
@@ -800,7 +591,7 @@
     },
     {
       "id": 5444835,
-      "title": "AD Aqua Bonsai L",
+      "title": "AD Aqua Bonsai",
       "price": 87.9942,
       "pf": "87,99 €",
       "pp": null,
@@ -810,19 +601,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/347def9-151150-bonsai-tree.png"
     },
     {
-      "id": 5444836,
-      "title": "AD Aqua Bonsai M",
-      "price": 49.9011,
-      "pf": "49,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ad-aqua-bonsai-m",
-      "cart": "https://www.aquariumlife.pt/cart/add/ad-aqua-bonsai-m",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/347def9-151150-bonsai-tree.png"
-    },
-    {
       "id": 5444837,
-      "title": "Ceramica Nature Catfish Cave L",
+      "title": "Ceramica Nature Catfish Cave",
       "price": 16.3467,
       "pf": "16,35 €",
       "pp": null,
@@ -832,41 +612,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/fc213a1-161808-ceramica-nature-catfish-cave-red.png"
     },
     {
-      "id": 5444838,
-      "title": "Ceramica Nature Catfish Cave M",
-      "price": 10.455,
-      "pf": "10,46 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ceramica-nature-catfish-cave-m",
-      "cart": "https://www.aquariumlife.pt/cart/add/ceramica-nature-catfish-cave-m",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/fc213a1-161808-ceramica-nature-catfish-cave-red.png"
-    },
-    {
-      "id": 5444839,
-      "title": "Ceramica Nature Catfish Cave S",
-      "price": 8.1549,
-      "pf": "8,15 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ceramica-nature-catfish-cave-s",
-      "cart": "https://www.aquariumlife.pt/cart/add/ceramica-nature-catfish-cave-s",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/fc213a1-161808-ceramica-nature-catfish-cave-red.png"
-    },
-    {
-      "id": 5444840,
-      "title": "Ceramica Nature Catfish Cave XS",
-      "price": 7.3554,
-      "pf": "7,36 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ceramica-nature-catfish-cave-xs",
-      "cart": "https://www.aquariumlife.pt/cart/add/ceramica-nature-catfish-cave-xs",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/fc213a1-161808-ceramica-nature-catfish-cave-red.png"
-    },
-    {
       "id": 5444841,
-      "title": "Ceramica Nature Catfish Cave Red XXL",
+      "title": "Ceramica Nature Catfish Cave Red",
       "price": 10.0491,
       "pf": "10,05 €",
       "pp": null,
@@ -876,30 +623,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/371d16c-162437-ceramica-nature-catfish-cave-red-2.png"
     },
     {
-      "id": 5444842,
-      "title": "Ceramica Nature Catfish Cave Red L",
-      "price": 5.6457,
-      "pf": "5,65 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ceramica-nature-catfish-cave-red-l",
-      "cart": "https://www.aquariumlife.pt/cart/add/ceramica-nature-catfish-cave-red-l",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/371d16c-162437-ceramica-nature-catfish-cave-red-2.png"
-    },
-    {
-      "id": 5444843,
-      "title": "Ceramica Nature Catfish Cave Red M",
-      "price": 4.4034,
-      "pf": "4,40 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ceramica-nature-catfish-cave-red-m",
-      "cart": "https://www.aquariumlife.pt/cart/add/ceramica-nature-catfish-cave-red-m",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/371d16c-162437-ceramica-nature-catfish-cave-red-2.png"
-    },
-    {
       "id": 5444844,
-      "title": "ADA Power Sand Basic S (1L)",
+      "title": "ADA Power Sand Basic S",
       "price": 14.354099999999999,
       "pf": "14,35 €",
       "pp": null,
@@ -909,19 +634,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/1b31dd4-163954-ada-power-sand-basic-s-2l.png"
     },
     {
-      "id": 5444845,
-      "title": "ADA Power Sand Basic S (2L)",
-      "price": 20.5041,
-      "pf": "20,50 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ada-power-sand-basic-s-2l",
-      "cart": "https://www.aquariumlife.pt/cart/add/ada-power-sand-basic-s-2l",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/1b31dd4-163954-ada-power-sand-basic-s-2l.png"
-    },
-    {
       "id": 5444846,
-      "title": "ADA Power Sand Advance S (2L)",
+      "title": "ADA Power Sand Advance",
       "price": 25.0551,
       "pf": "25,06 €",
       "pp": null,
@@ -931,47 +645,14 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/0abb383-163636-ada-power-sand-advance-l-6l.png"
     },
     {
-      "id": 5444847,
-      "title": "ADA Power Sand Advance M (6L)",
-      "price": 66.6537,
-      "pf": "66,65 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ada-power-sand-advance-m-6l",
-      "cart": "https://www.aquariumlife.pt/cart/add/ada-power-sand-advance-m-6l",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/0abb383-163636-ada-power-sand-advance-l-6l.png"
-    },
-    {
-      "id": 5444848,
-      "title": "ADA Power Sand Advance L (6L)",
-      "price": 66.6537,
-      "pf": "66,65 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ada-power-sand-advance-l-6l",
-      "cart": "https://www.aquariumlife.pt/cart/add/ada-power-sand-advance-l-6l",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/0abb383-163636-ada-power-sand-advance-l-6l.png"
-    },
-    {
       "id": 5444849,
-      "title": "ADA Amazonia Ver.2 (9l)",
+      "title": "ADA Amazonia Ver.2",
       "price": 40.9959,
       "pf": "41,00 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/ada-amazonia-ver2-9l-",
       "cart": "https://www.aquariumlife.pt/cart/add/ada-amazonia-ver2-9l-",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/ab0b24b-163227-ada-amazonia-ver2-3l.png"
-    },
-    {
-      "id": 5444850,
-      "title": "ADA Amazonia Ver.2 (3l)",
-      "price": 19.9014,
-      "pf": "19,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ada-amazonia-ver2-3l",
-      "cart": "https://www.aquariumlife.pt/cart/add/ada-amazonia-ver2-3l",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/ab0b24b-163227-ada-amazonia-ver2-3l.png"
     },
     {
@@ -1042,7 +723,7 @@
     },
     {
       "id": 5444858,
-      "title": "ADA Aqua Gravel  (8kg.)",
+      "title": "ADA Aqua Gravel",
       "price": 19.9014,
       "pf": "19,90 €",
       "pp": null,
@@ -1052,19 +733,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/db674f1-160456-ada-aqua-gravel-2kg.png"
     },
     {
-      "id": 5444859,
-      "title": "ADA Aqua Gravel  (2kg.)",
-      "price": 8.856,
-      "pf": "8,86 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ada-aqua-gravel-2kg",
-      "cart": "https://www.aquariumlife.pt/cart/add/ada-aqua-gravel-2kg",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/db674f1-160456-ada-aqua-gravel-2kg.png"
-    },
-    {
       "id": 5444860,
-      "title": "ADA La Plata sand 2kg",
+      "title": "ADA La Plata sand",
       "price": 13.9482,
       "pf": "13,95 €",
       "pp": null,
@@ -1074,19 +744,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f03bb74-110853-3047-tm_large_default.jpg"
     },
     {
-      "id": 5444861,
-      "title": "ADA La Plata sand 8kg",
-      "price": 39.950399999999995,
-      "pf": "39,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ada-la-plata-sand-8kg",
-      "cart": "https://www.aquariumlife.pt/cart/add/ada-la-plata-sand-8kg",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/6d114b4-163544-ada-la-plata-sand-8kg.webp"
-    },
-    {
       "id": 5444862,
-      "title": "ADA Colorado sand 2kg",
+      "title": "ADA Colorado sand",
       "price": 13.9482,
       "pf": "13,95 €",
       "pp": null,
@@ -1094,17 +753,6 @@
       "url": "https://www.aquariumlife.pt/product/ada-colorado-sand-2kg",
       "cart": "https://www.aquariumlife.pt/cart/add/ada-colorado-sand-2kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/e1bd37f-152347-ada-colorado-sand-2kg.webp"
-    },
-    {
-      "id": 5444863,
-      "title": "ADA Colorado sand 8kg",
-      "price": 39.950399999999995,
-      "pf": "39,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ada-colorado-sand-8kg",
-      "cart": "https://www.aquariumlife.pt/cart/add/ada-colorado-sand-8kg",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/7614e58-151952-ada-colorado-sand-8kg.webp"
     },
     {
       "id": 5444864,
@@ -1394,7 +1042,7 @@
     },
     {
       "id": 5444891,
-      "title": "PP rede aquário 8cm",
+      "title": "PP rede aquário",
       "price": 2.4968999999999997,
       "pf": "2,50 €",
       "pp": null,
@@ -1404,30 +1052,8 @@
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
-      "id": 5444892,
-      "title": "PP rede aquário 17cm",
-      "price": 3.1488,
-      "pf": "3,15 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/pp-rede-aquario-17cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/pp-rede-aquario-17cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5444893,
-      "title": "PP rede aquário 21cm",
-      "price": 3.9975,
-      "pf": "4,00 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/pp-rede-aquario-21cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/pp-rede-aquario-21cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
       "id": 5444894,
-      "title": "Chihiros B SERIES LED 30cm",
+      "title": "Chihiros B SERIES LED",
       "price": 39.950399999999995,
       "pf": "39,95 €",
       "pp": null,
@@ -1437,85 +1063,19 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/859274f-181150-chihiros-b-series-led-120cm.png"
     },
     {
-      "id": 5444895,
-      "title": "Chihiros B SERIES LED 20cm",
-      "price": 32.951699999999995,
-      "pf": "32,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-b-series-led-20cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-b-series-led-20cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/859274f-181150-chihiros-b-series-led-120cm.png"
-    },
-    {
-      "id": 5444896,
-      "title": "Chihiros B SERIES LED 45cm",
-      "price": 49.9503,
-      "pf": "49,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-b-series-led-45cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-b-series-led-45cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/859274f-181150-chihiros-b-series-led-120cm.png"
-    },
-    {
-      "id": 5444897,
-      "title": "Chihiros B SERIES LED 60cm",
-      "price": 62.9514,
-      "pf": "62,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-b-series-led-60cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-b-series-led-60cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/859274f-181150-chihiros-b-series-led-120cm.png"
-    },
-    {
-      "id": 5444901,
-      "title": "Chihiros WRGB II SLIM  45cm",
+      "id": 5444900,
+      "title": "Chihiros WRGB II SLIM",
       "price": 122.95079999999999,
       "pf": "122,95 €",
       "pp": null,
       "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-wrgb-ii-slim-45cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-wrgb-ii-slim-45cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/049c157-174809-chihiros-wrgb-ii-slim-120cm.png"
-    },
-    {
-      "id": 5444902,
-      "title": "Chihiros WRGB II SLIM  60cm",
-      "price": 157.9443,
-      "pf": "157,94 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-wrgb-ii-slim-60cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-wrgb-ii-slim-60cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/049c157-174809-chihiros-wrgb-ii-slim-120cm.png"
-    },
-    {
-      "id": 5444903,
-      "title": "Chihiros WRGB II SLIM  90cm",
-      "price": 212.94989999999999,
-      "pf": "212,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-wrgb-ii-slim-90cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-wrgb-ii-slim-90cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/049c157-174809-chihiros-wrgb-ii-slim-120cm.png"
-    },
-    {
-      "id": 5444904,
-      "title": "Chihiros WRGB II SLIM  120cm",
-      "price": 274.9542,
-      "pf": "274,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-wrgb-ii-slim-120cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-wrgb-ii-slim-120cm",
+      "url": "https://www.aquariumlife.pt/product/chihiros-wrgb-ii-slim-30-cm",
+      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-wrgb-ii-slim-30-cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/049c157-174809-chihiros-wrgb-ii-slim-120cm.png"
     },
     {
       "id": 5444905,
-      "title": "Chihiros WRGB II 30cm",
+      "title": "Chihiros WRGB II",
       "price": 138.9531,
       "pf": "138,95 €",
       "pp": null,
@@ -1525,52 +1085,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/a403846-173500-chihiros-wrgb-ii-120cm.png"
     },
     {
-      "id": 5444906,
-      "title": "Chihiros WRGB II 45cm",
-      "price": 173.9466,
-      "pf": "173,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-wrgb-ii-45cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-wrgb-ii-45cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/a403846-173500-chihiros-wrgb-ii-120cm.png"
-    },
-    {
-      "id": 5444907,
-      "title": "Chihiros WRGB II 60cm",
-      "price": 208.95239999999998,
-      "pf": "208,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-wrgb-ii-60cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-wrgb-ii-60cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/a403846-173500-chihiros-wrgb-ii-120cm.png"
-    },
-    {
-      "id": 5444908,
-      "title": "Chihiros WRGB II 90cm",
-      "price": 274.9542,
-      "pf": "274,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-wrgb-ii-90cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-wrgb-ii-90cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/a403846-173500-chihiros-wrgb-ii-120cm.png"
-    },
-    {
-      "id": 5444909,
-      "title": "Chihiros WRGB II 120cm",
-      "price": 315.9501,
-      "pf": "315,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-wrgb-ii-120cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-wrgb-ii-120cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/a403846-173500-chihiros-wrgb-ii-120cm.png"
-    },
-    {
       "id": 5444913,
-      "title": "Bassleer Biofish Garlic M 60g",
+      "title": "Bassleer Biofish Garlic",
       "price": 6.1008,
       "pf": "6,10 €",
       "pp": null,
@@ -1580,52 +1096,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/933c815-110736-bassleer-biofish-garlic-l-150g.png"
     },
     {
-      "id": 5444914,
-      "title": "Bassleer Biofish Garlic M 150g",
-      "price": 10.455,
-      "pf": "10,46 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-garlic-m-150g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-garlic-m-150g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/933c815-110736-bassleer-biofish-garlic-l-150g.png"
-    },
-    {
-      "id": 5444915,
-      "title": "Bassleer Biofish Garlic M 600g",
-      "price": 33.3453,
-      "pf": "33,35 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-garlic-m-600g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-garlic-m-600g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/933c815-110736-bassleer-biofish-garlic-l-150g.png"
-    },
-    {
-      "id": 5444916,
-      "title": "Bassleer Biofish Garlic L 60g",
-      "price": 6.1008,
-      "pf": "6,10 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-garlic-l-60g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-garlic-l-60g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/933c815-110736-bassleer-biofish-garlic-l-150g.png"
-    },
-    {
-      "id": 5444917,
-      "title": "Bassleer Biofish Garlic L 150g",
-      "price": 10.455,
-      "pf": "10,46 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-garlic-l-150g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-garlic-l-150g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/933c815-110736-bassleer-biofish-garlic-l-150g.png"
-    },
-    {
       "id": 5444918,
-      "title": "Bassleer Biofish Regular M 60g",
+      "title": "Bassleer Biofish Regular M",
       "price": 5.5473,
       "pf": "5,55 €",
       "pp": null,
@@ -1635,19 +1107,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/59efb36-110234-bassleer-biofish-regular-m-600g.png"
     },
     {
-      "id": 5444919,
-      "title": "Bassleer Biofish Regular M 150g",
-      "price": 9.151200000000001,
-      "pf": "9,15 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-regular-m-150g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-regular-m-150g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/59efb36-110234-bassleer-biofish-regular-m-600g.png"
-    },
-    {
       "id": 5444920,
-      "title": "Bassleer Biofish Green L 60g",
+      "title": "Bassleer Biofish Green",
       "price": 6.1008,
       "pf": "6,10 €",
       "pp": null,
@@ -1657,91 +1118,14 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f9de311-160858-bassleer-biofish-green-3xl-68g.png"
     },
     {
-      "id": 5444921,
-      "title": "Bassleer Biofish Green L 150g",
-      "price": 10.455,
-      "pf": "10,46 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-green-l-150g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-green-l-150g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f9de311-160858-bassleer-biofish-green-3xl-68g.png"
-    },
-    {
-      "id": 5444922,
-      "title": "Bassleer Biofish Regular M 600g",
-      "price": 26.9493,
-      "pf": "26,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-regular-m-600g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-regular-m-600g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/59efb36-110234-bassleer-biofish-regular-m-600g.png"
-    },
-    {
-      "id": 5444923,
-      "title": "Bassleer Biofish Green XXL 680g",
-      "price": 33.3453,
-      "pf": "33,35 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-green-xxl-680g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-green-xxl-680g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f9de311-160858-bassleer-biofish-green-3xl-68g.png"
-    },
-    {
-      "id": 5444924,
-      "title": "Bassleer Biofish Green M 60g",
-      "price": 6.1008,
-      "pf": "6,10 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-green-m-60g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-green-m-60g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f9de311-160858-bassleer-biofish-green-3xl-68g.png"
-    },
-    {
-      "id": 5444925,
-      "title": "Bassleer Biofish Green XL 68g",
-      "price": 6.1008,
-      "pf": "6,10 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-green-xl-68g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-green-xl-68g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f9de311-160858-bassleer-biofish-green-3xl-68g.png"
-    },
-    {
-      "id": 5444926,
-      "title": "Bassleer Biofish Green 3XL 68g",
-      "price": 6.1008,
-      "pf": "6,10 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-green-3xl-68g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-green-3xl-68g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f9de311-160858-bassleer-biofish-green-3xl-68g.png"
-    },
-    {
       "id": 5444927,
-      "title": "Bassleer Biofish Regular Flake 35G",
+      "title": "Bassleer Biofish Regular Flake",
       "price": 5.6457,
       "pf": "5,65 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/bassleer-biofish-regular-flake-35g",
       "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-regular-flake-35g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/bc4e070-161051-bassleer-biofish-regular-flake-70g.png"
-    },
-    {
-      "id": 5444928,
-      "title": "Bassleer Biofish Regular Flake 70g",
-      "price": 8.5977,
-      "pf": "8,60 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/bassleer-biofish-regular-flake-70g",
-      "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-regular-flake-70g",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/bc4e070-161051-bassleer-biofish-regular-flake-70g.png"
     },
     {
@@ -1878,7 +1262,7 @@
     },
     {
       "id": 5444941,
-      "title": "G Nature colour Black Star 1-2 mm 10Kg",
+      "title": "G Nature colour Black Star 1-2 mm",
       "price": 21.205199999999998,
       "pf": "21,21 €",
       "pp": null,
@@ -1900,7 +1284,7 @@
     },
     {
       "id": 5444943,
-      "title": "G Nature colour Mountain Grey 1-2 mm 10Kg",
+      "title": "G Nature colour Mountain Grey 1-2 mm",
       "price": 21.205199999999998,
       "pf": "21,21 €",
       "pp": null,
@@ -1911,7 +1295,7 @@
     },
     {
       "id": 5444944,
-      "title": "G Nature colour Snow White 1-2 mm 10Kg",
+      "title": "G Nature colour Snow White 1-2 mm",
       "price": 21.205199999999998,
       "pf": "21,21 €",
       "pp": null,
@@ -1919,39 +1303,6 @@
       "url": "https://www.aquariumlife.pt/product/g-nature-colour-snow-white-1-2-mm-10kg",
       "cart": "https://www.aquariumlife.pt/cart/add/g-nature-colour-snow-white-1-2-mm-10kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/a52a135-183345-g-nature-colour-snow-white-1-2-mm-5kg.png"
-    },
-    {
-      "id": 5444945,
-      "title": "G Nature colour Snow White 1-2 mm 5Kg",
-      "price": 11.9556,
-      "pf": "11,96 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/g-nature-colour-snow-white-1-2-mm-5kg",
-      "cart": "https://www.aquariumlife.pt/cart/add/g-nature-colour-snow-white-1-2-mm-5kg",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/a52a135-183345-g-nature-colour-snow-white-1-2-mm-5kg.png"
-    },
-    {
-      "id": 5444946,
-      "title": "G Nature colour  Mountain Grey 1-2 mm 5Kg",
-      "price": 11.9556,
-      "pf": "11,96 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/g-nature-colour-mountain-grey-1-2-mm-5kg",
-      "cart": "https://www.aquariumlife.pt/cart/add/g-nature-colour-mountain-grey-1-2-mm-5kg",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/abcb4b4-183122-g-nature-colour-mountain-grey-1-2-mm-5kg.png"
-    },
-    {
-      "id": 5444947,
-      "title": "G Nature colour Black Star 1-2 mm 5Kg",
-      "price": 11.9556,
-      "pf": "11,96 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/g-nature-colour-black-star-1-2-mm-5kg",
-      "cart": "https://www.aquariumlife.pt/cart/add/g-nature-colour-black-star-1-2-mm-5kg",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/8f387a6-182931-g-nature-colour-black-star-1-2-mm-5kg.png"
     },
     {
       "id": 5444948,
@@ -1966,7 +1317,7 @@
     },
     {
       "id": 5444949,
-      "title": "G Nature colour Black Pebbles Mini 3-5 mm 10Kg",
+      "title": "G Nature colour Black Pebbles Mini 3-5 mm",
       "price": 23.000999999999998,
       "pf": "23,00 €",
       "pp": null,
@@ -1976,36 +1327,14 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/db5466c-181454-g-nature-colour-black-pebbles-mini-3-5-mm-5kg.png"
     },
     {
-      "id": 5444950,
-      "title": "G Nature colour Black Pebbles Mini 3-5 mm 5Kg",
-      "price": 12.7059,
-      "pf": "12,71 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/g-nature-colour-black-pebbles-mini-3-5-mm-5kg",
-      "cart": "https://www.aquariumlife.pt/cart/add/g-nature-colour-black-pebbles-mini-3-5-mm-5kg",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/db5466c-181454-g-nature-colour-black-pebbles-mini-3-5-mm-5kg.png"
-    },
-    {
       "id": 5444951,
-      "title": "G Nature colour River Sand 04-0.6 mm 5Kg",
+      "title": "G Nature colour River Sand 04-0.6 mm",
       "price": 6.1008,
       "pf": "6,10 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/g-nature-colour-river-sand-04-06-mm-5kg",
       "cart": "https://www.aquariumlife.pt/cart/add/g-nature-colour-river-sand-04-06-mm-5kg",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3abb461-181116-g-nature-colour-river-sand-04-06-mm-10kg.png"
-    },
-    {
-      "id": 5444952,
-      "title": "G Nature colour River Sand 04-0.6 mm 10Kg",
-      "price": 10.504199999999999,
-      "pf": "10,50 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/g-nature-colour-river-sand-04-06-mm-10kg",
-      "cart": "https://www.aquariumlife.pt/cart/add/g-nature-colour-river-sand-04-06-mm-10kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3abb461-181116-g-nature-colour-river-sand-04-06-mm-10kg.png"
     },
     {
@@ -2054,7 +1383,7 @@
     },
     {
       "id": 5444960,
-      "title": "PP areia de rio 2-3.5 25Kg",
+      "title": "PP areia de rio",
       "price": 18.204,
       "pf": "18,20 €",
       "pp": null,
@@ -2064,36 +1393,14 @@
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
-      "id": 5444961,
-      "title": "PP areia de rio 1-2.2 25Kg",
-      "price": 18.204,
-      "pf": "18,20 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/pp-areia-de-rio-1-22-25kg",
-      "cart": "https://www.aquariumlife.pt/cart/add/pp-areia-de-rio-1-22-25kg",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
       "id": 5444962,
-      "title": "Duplarit G 500g",
+      "title": "Duplarit G",
       "price": 18.8559,
       "pf": "18,86 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/duplarit-g-500g",
       "cart": "https://www.aquariumlife.pt/cart/add/duplarit-g-500g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/6b05a3f-185901-duplarit-g-250g.png"
-    },
-    {
-      "id": 5444963,
-      "title": "Duplarit G 250g",
-      "price": 9.9507,
-      "pf": "9,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/duplarit-g-250g",
-      "cart": "https://www.aquariumlife.pt/cart/add/duplarit-g-250g",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/6b05a3f-185901-duplarit-g-250g.png"
     },
     {
@@ -2109,24 +1416,13 @@
     },
     {
       "id": 5444965,
-      "title": "AS Visitherm 300W",
+      "title": "AS Visitherm",
       "price": 21.5004,
       "pf": "21,50 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/as-visitherm-300w",
       "cart": "https://www.aquariumlife.pt/cart/add/as-visitherm-300w",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5444966,
-      "title": "AS Visitherm 25W",
-      "price": 18.204,
-      "pf": "18,20 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/as-visitherm-25w",
-      "cart": "https://www.aquariumlife.pt/cart/add/as-visitherm-25w",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
@@ -2362,7 +1658,7 @@
     },
     {
       "id": 5445000,
-      "title": "SF X PRO 1500 (400 L)",
+      "title": "SF X PRO",
       "price": 152.0034,
       "pf": "152,00 €",
       "pp": null,
@@ -2372,30 +1668,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f25d0d2-105934-superfish-x-pro-1500-400l.jpg"
     },
     {
-      "id": 5445001,
-      "title": "SF X PRO 1000 (250 L)",
-      "price": 107.994,
-      "pf": "107,99 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-x-pro-1000-250-l",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-x-pro-1000-250-l",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/1fe1858-165533-superfish-x-pro-1000-250l.webp"
-    },
-    {
-      "id": 5445002,
-      "title": "SF X PRO 400 (100 L)",
-      "price": 86.0016,
-      "pf": "86,00 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-x-pro-400-100-l",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-x-pro-400-100-l",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/14f69b2-164807-superfish-x-pro-high-performance-aquarium-filter-product-img.webp"
-    },
-    {
       "id": 5445003,
-      "title": "SF ECO FLOW 240",
+      "title": "SF ECO FLOW",
       "price": 65.4975,
       "pf": "65,50 €",
       "pp": null,
@@ -2405,19 +1679,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/fecb5f9-153934-sf-eco-flow-240.png"
     },
     {
-      "id": 5445004,
-      "title": "SF ECO FLOW 120",
-      "price": 41.795399999999994,
-      "pf": "41,80 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-eco-flow-120",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-eco-flow-120",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/7ff51aa-153510-sf-eco-flow-120.png"
-    },
-    {
       "id": 5445005,
-      "title": "SF ECO LED 14-24 CM / 6 WATT",
+      "title": "SF ECO LED",
       "price": 19.4463,
       "pf": "19,45 €",
       "pp": null,
@@ -2427,30 +1690,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/8958dc0-152841-sf-eco-led.png"
     },
     {
-      "id": 5445007,
-      "title": "SF ECO LED 34-44 CM / 14 WATT",
-      "price": 28.4499,
-      "pf": "28,45 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-eco-led-34-44-cm-14-watt",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-eco-led-34-44-cm-14-watt",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/8958dc0-152841-sf-eco-led.png"
-    },
-    {
-      "id": 5445010,
-      "title": "SF ECO LED 64-74 CM / 24 WATT",
-      "price": 42.803999999999995,
-      "pf": "42,80 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-eco-led-64-74-cm-24-watt",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-eco-led-64-74-cm-24-watt",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/8958dc0-152841-sf-eco-led.png"
-    },
-    {
       "id": 5445012,
-      "title": "SF PRO HEATER 50 WATT 20-50 L (17 CM)",
+      "title": "SF PRO HEATER",
       "price": 15.5964,
       "pf": "15,60 €",
       "pp": null,
@@ -2458,39 +1699,6 @@
       "url": "https://www.aquariumlife.pt/product/sf-pro-heater-50-watt-20-50-l-17-cm",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-pro-heater-50-watt-20-50-l-17-cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/6a2e774-152319-sf-pro-heater-50-watt-20-50-l-17-cm.png"
-    },
-    {
-      "id": 5445013,
-      "title": "SF PRO HEATER 100 WATT 20-100 L (21 CM)",
-      "price": 17.6505,
-      "pf": "17,65 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-pro-heater-100-watt-20-100-l-21-cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-pro-heater-100-watt-20-100-l-21-cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/71103f6-151927-sf-pro-heater-100-watt-20-100-l-21-cm.png"
-    },
-    {
-      "id": 5445014,
-      "title": "SF PRO HEATER 200 WATT 60-200 L (35 CM)",
-      "price": 19.5447,
-      "pf": "19,54 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-pro-heater-200-watt-60-200-l-35-cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-pro-heater-200-watt-60-200-l-35-cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/fec71f8-151721-sf-pro-heater-200-watt-60-200-l-35-cm.png"
-    },
-    {
-      "id": 5445015,
-      "title": "SF PRO HEATER 300 WATT 125-300 L (35 CM)",
-      "price": 20.5041,
-      "pf": "20,50 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-pro-heater-300-watt-125-300-l-35-cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-pro-heater-300-watt-125-300-l-35-cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/1191a0a-151551-sf-pro-heater-300-watt-125-300-l-35-cm.png"
     },
     {
       "id": 5445016,
@@ -2549,7 +1757,7 @@
     },
     {
       "id": 5445021,
-      "title": "SF HANG ON FILTER 50",
+      "title": "SF HANG ON FILTER",
       "price": 19.4955,
       "pf": "19,50 €",
       "pp": null,
@@ -2557,17 +1765,6 @@
       "url": "https://www.aquariumlife.pt/product/sf-hang-on-filter-50",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-hang-on-filter-50",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/d7c79c4-150707-sf-hang-on-filter-50.png"
-    },
-    {
-      "id": 5445022,
-      "title": "SF HANG ON FILTER 200",
-      "price": 24.501600000000003,
-      "pf": "24,50 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-hang-on-filter-200-",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-hang-on-filter-200-",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/778990c-150159-sf-hang-on-filter-200.png"
     },
     {
       "id": 5445023,
@@ -2593,7 +1790,7 @@
     },
     {
       "id": 5445025,
-      "title": "SF AQUAPOWER 450 - 450 L/H",
+      "title": "SF AQUAPOWER",
       "price": 13.800600000000001,
       "pf": "13,80 €",
       "pp": null,
@@ -2603,19 +1800,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/e253d02-144703-sf-aquapower-450-450-l_h.png"
     },
     {
-      "id": 5445026,
-      "title": "SF AQUAPOWER 900 - 920 L/H",
-      "price": 21.205199999999998,
-      "pf": "21,21 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-aquapower-900-920-l-h",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-aquapower-900-920-l-h",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/a5c65a9-144301-sf-aquapower-900-920-l_h.png"
-    },
-    {
       "id": 5445027,
-      "title": "SF AQUAFLOW 300 FILTER 540 L/H",
+      "title": "SF AQUAFLOW",
       "price": 27.5028,
       "pf": "27,50 €",
       "pp": null,
@@ -2623,39 +1809,6 @@
       "url": "https://www.aquariumlife.pt/product/sf-aquaflow-300-filter-540-l-h",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-aquaflow-300-filter-540-l-h",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/33272c7-170909-aqua-flow-300.png"
-    },
-    {
-      "id": 5445029,
-      "title": "SF AQUAFLOW 200 FILTER 500 L/H",
-      "price": 22.2015,
-      "pf": "22,20 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-aquaflow-200-filter-500-l-h",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-aquaflow-200-filter-500-l-h",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/a2618c9-171411-aqua-flow-200.png"
-    },
-    {
-      "id": 5445030,
-      "title": "SF AQUAFLOW 150 FILTER 200 L/H",
-      "price": 17.6505,
-      "pf": "17,65 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-aquaflow-150-filter-200-l-h",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-aquaflow-150-filter-200-l-h",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/dd7c676-170731-aqua-flow-150.png"
-    },
-    {
-      "id": 5445031,
-      "title": "SF AQUAFLOW 50 FILTER 100 L/H",
-      "price": 12.755099999999999,
-      "pf": "12,76 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-aquaflow-50-filter-100-l-h",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-aquaflow-50-filter-100-l-h",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/179e706-165736-aqua-flow-50.png"
     },
     {
       "id": 5445033,
@@ -2703,7 +1856,7 @@
     },
     {
       "id": 5445037,
-      "title": "SF FILTER COTTON WHITE 100 GRAM",
+      "title": "SF FILTER COTTON WHITE GRAM",
       "price": 2.1525,
       "pf": "2,15 €",
       "pp": null,
@@ -2711,28 +1864,6 @@
       "url": "https://www.aquariumlife.pt/product/sf-filter-cotton-white-100-gram",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-filter-cotton-white-100-gram",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/40f36c5-142418-filter-cotton-white-100-gram.png"
-    },
-    {
-      "id": 5445038,
-      "title": "SF FILTER COTTON WHITE 250 GRAM",
-      "price": 4.6002,
-      "pf": "4,60 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-filter-cotton-white-250-gram",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-filter-cotton-white-250-gram",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/ac9d2c8-142239-filter-cotton-white-250-gram.png"
-    },
-    {
-      "id": 5445039,
-      "title": "SF FILTER COTTON WHITE 500 GRAM",
-      "price": 8.4501,
-      "pf": "8,45 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-filter-cotton-white-500-gram",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-filter-cotton-white-500-gram",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/d7e341a-142001-filter-cotton-white-500-gram.png"
     },
     {
       "id": 5445050,
@@ -2758,7 +1889,7 @@
     },
     {
       "id": 5445052,
-      "title": "Aquael Magnetic cleaner S (vidro 3-6 mm)",
+      "title": "Aquael Magnetic cleaner",
       "price": 11.598899999999999,
       "pf": "11,60 €",
       "pp": null,
@@ -2768,30 +1899,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/ef266a9-152701-aquael-magnetic-cleaner-l.png"
     },
     {
-      "id": 5445053,
-      "title": "Aquael Magnetic cleaner M (vidro 6-10 mm)",
-      "price": 13.1979,
-      "pf": "13,20 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aquael-magnetic-cleaner-m-vidro-6-10-mm",
-      "cart": "https://www.aquariumlife.pt/cart/add/aquael-magnetic-cleaner-m-vidro-6-10-mm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/ef266a9-152701-aquael-magnetic-cleaner-l.png"
-    },
-    {
-      "id": 5445054,
-      "title": "Aquael Magnetic cleaner L (vidro 10-15 mm)",
-      "price": 14.3049,
-      "pf": "14,30 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aquael-magnetic-cleaner-l-vidro-10-15-mm",
-      "cart": "https://www.aquariumlife.pt/cart/add/aquael-magnetic-cleaner-l-vidro-10-15-mm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/ef266a9-152701-aquael-magnetic-cleaner-l.png"
-    },
-    {
       "id": 5445055,
-      "title": "Aquael AIR TUBE 4/6 mm (3 m)",
+      "title": "Aquael AIR TUBE 4/6 mm",
       "price": 1.8942,
       "pf": "1,89 €",
       "pp": null,
@@ -2801,47 +1910,14 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f5537ba-152350-aquael-air-tube-4_6-mm-3.png"
     },
     {
-      "id": 5445056,
-      "title": "Aquael AIR TUBE 4/6 mm (6 m)",
-      "price": 3.6039000000000003,
-      "pf": "3,60 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aquael-air-tube-4-6-mm-6-m",
-      "cart": "https://www.aquariumlife.pt/cart/add/aquael-air-tube-4-6-mm-6-m",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/861a75c-152119-aquael-air-tube-4_6-mm.png"
-    },
-    {
       "id": 5445058,
-      "title": "Aquael PLATINIUM HEATER 300 W",
+      "title": "Aquael PLATINIUM HEATER W",
       "price": 29.0034,
       "pf": "29,00 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/aquael-platinium-heater-300-w",
       "cart": "https://www.aquariumlife.pt/cart/add/aquael-platinium-heater-300-w",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3558047-150959-aquael-platinium-heater.png"
-    },
-    {
-      "id": 5445059,
-      "title": "Aquael PLATINIUM HEATER 200 W",
-      "price": 26.002200000000002,
-      "pf": "26,00 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aquael-platinium-heater-200-w",
-      "cart": "https://www.aquariumlife.pt/cart/add/aquael-platinium-heater-200-w",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3558047-150959-aquael-platinium-heater.png"
-    },
-    {
-      "id": 5445060,
-      "title": "Aquael PLATINIUM HEATER 100 W",
-      "price": 23.000999999999998,
-      "pf": "23,00 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aquael-platinium-heater-100-w-",
-      "cart": "https://www.aquariumlife.pt/cart/add/aquael-platinium-heater-100-w-",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3558047-150959-aquael-platinium-heater.png"
     },
     {
@@ -2879,7 +1955,7 @@
     },
     {
       "id": 5445064,
-      "title": "Aquael media BIOCERAMAX 1200 (1000 ml)",
+      "title": "Aquael media BIOCERAMAX (1000 ml)",
       "price": 12.3984,
       "pf": "12,40 €",
       "pp": null,
@@ -2889,30 +1965,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/93237d1-145607-aquael-media-bioceramax-1200.png"
     },
     {
-      "id": 5445065,
-      "title": "Aquael media BIOCERAMAX 1600 (1000 ml)",
-      "price": 13.800600000000001,
-      "pf": "13,80 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aquael-media-bioceramax-1600-1000-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/aquael-media-bioceramax-1600-1000-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/811cfa0-145039-aquael-media-bioceramax-1600.png"
-    },
-    {
-      "id": 5445066,
-      "title": "Aquael media BIOCERAMAX 600 (1000 ml)",
-      "price": 6.9003000000000005,
-      "pf": "6,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aquael-media-bioceramax-600-1000-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/aquael-media-bioceramax-600-1000-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/543fb75-144256-aquael-media-bioceramax-600.png"
-    },
-    {
       "id": 5445067,
-      "title": "Tropical Welsi Gran (1000 ml)",
+      "title": "Tropical Welsi Gran",
       "price": 16.605,
       "pf": "16,61 €",
       "pp": null,
@@ -2934,7 +1988,7 @@
     },
     {
       "id": 5445069,
-      "title": "Tropical Supervit Granulat (1000 ml)",
+      "title": "Tropical Supervit Granulat",
       "price": 18.204,
       "pf": "18,20 €",
       "pp": null,
@@ -2945,7 +1999,7 @@
     },
     {
       "id": 5445070,
-      "title": "Tropical Cichlid Gran (1000 ml)",
+      "title": "Tropical Cichlid Gran",
       "price": 19.9014,
       "pf": "19,90 €",
       "pp": null,
@@ -2956,7 +2010,7 @@
     },
     {
       "id": 5445071,
-      "title": "Tropical Discus Granulat D-50 Plus (1000 ml)",
+      "title": "Tropical Discus Granulat D-50 Plus",
       "price": 19.950599999999998,
       "pf": "19,95 €",
       "pp": null,
@@ -2967,7 +2021,7 @@
     },
     {
       "id": 5445072,
-      "title": "Tropical Supervit Flakes (1000 ml)",
+      "title": "Tropical Supervit Flakes",
       "price": 14.0466,
       "pf": "14,05 €",
       "pp": null,
@@ -3011,7 +2065,7 @@
     },
     {
       "id": 5445076,
-      "title": "Tropical Pleco's Tablets (50 ml)",
+      "title": "Tropical Pleco's Tablets",
       "price": 7.6014,
       "pf": "7,60 €",
       "pp": null,
@@ -3021,19 +2075,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3152d0a-154946-tropical-plecos-tablets-250-ml.png"
     },
     {
-      "id": 5445077,
-      "title": "Tropical Pleco's Tablets (250 ml)",
-      "price": 17.9457,
-      "pf": "17,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropical-plecos-tablets-250-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropical-plecos-tablets-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3152d0a-154946-tropical-plecos-tablets-250-ml.png"
-    },
-    {
       "id": 5445078,
-      "title": "Tropical 3-Algae Tablets B (50 ml)",
+      "title": "Tropical 3-Algae Tablets B",
       "price": 6.1008,
       "pf": "6,10 €",
       "pp": null,
@@ -3043,19 +2086,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/1fefe72-154632-tropical-3-algae-tablets-b-250-ml.png"
     },
     {
-      "id": 5445079,
-      "title": "Tropical 3-Algae Tablets B (250 ml)",
-      "price": 14.6001,
-      "pf": "14,60 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropical-3-algae-tablets-b-250-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropical-3-algae-tablets-b-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/1fefe72-154632-tropical-3-algae-tablets-b-250-ml.png"
-    },
-    {
       "id": 5445080,
-      "title": "Tropical Supervit Tablets B (50 ml)",
+      "title": "Tropical Supervit Tablets B",
       "price": 4.944599999999999,
       "pf": "4,94 €",
       "pp": null,
@@ -3063,39 +2095,6 @@
       "url": "https://www.aquariumlife.pt/product/tropical-supervit-tablets-b-50-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-supervit-tablets-b-50-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/305b24f-154353-tropical-supervit-tablets-b-250-ml.png"
-    },
-    {
-      "id": 5445081,
-      "title": "Tropical Supervit Tablets B (250 ml)",
-      "price": 11.746500000000001,
-      "pf": "11,75 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropical-supervit-tablets-b-250-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropical-supervit-tablets-b-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/305b24f-154353-tropical-supervit-tablets-b-250-ml.png"
-    },
-    {
-      "id": 5445084,
-      "title": "Tropical Supervit Granulat (100 ml)",
-      "price": 3.8991,
-      "pf": "3,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropical-supervit-granulat-100-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropical-supervit-granulat-100-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/e88cb0c-153441-tropical-supervit-granulat-250-ml.png"
-    },
-    {
-      "id": 5445085,
-      "title": "Tropical Supervit Granulat (250 ml)",
-      "price": 7.7982,
-      "pf": "7,80 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropical-supervit-granulat-250-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropical-supervit-granulat-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/e88cb0c-153441-tropical-supervit-granulat-250-ml.png"
     },
     {
       "id": 5445086,
@@ -3107,28 +2106,6 @@
       "url": "https://www.aquariumlife.pt/product/tropical-d-50-plus-flakes-250-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-d-50-plus-flakes-250-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/c5aed14-153257-tropical-d-50-plus-flakes-250-ml.png"
-    },
-    {
-      "id": 5445087,
-      "title": "Tropical Discus Granulat D-50 Plus (100 ml)",
-      "price": 4.305,
-      "pf": "4,31 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropical-discus-granulat-d-50-plus-100-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropical-discus-granulat-d-50-plus-100-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/bfafffb-152744-tropical-discus-granulat-d-50-plus-250-ml.png"
-    },
-    {
-      "id": 5445088,
-      "title": "Tropical Discus Granulat D-50 Plus (250 ml)",
-      "price": 8.5485,
-      "pf": "8,55 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropical-discus-granulat-d-50-plus-250-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropical-discus-granulat-d-50-plus-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/bfafffb-152744-tropical-discus-granulat-d-50-plus-250-ml.png"
     },
     {
       "id": 5445089,
@@ -3154,7 +2131,7 @@
     },
     {
       "id": 5445091,
-      "title": "Tropical Vitality & Color Granulat 100ml",
+      "title": "Tropical Vitality & Color Granulat",
       "price": 4.4526,
       "pf": "4,45 €",
       "pp": null,
@@ -3164,19 +2141,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/ef93cdc-151443-tropical-vitality-color-granulat-250ml.png"
     },
     {
-      "id": 5445092,
-      "title": "Tropical Vitality & Color Granulat 250ml",
-      "price": 8.7453,
-      "pf": "8,75 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropical-vitality-color-granulat-250ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropical-vitality-color-granulat-250ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/ef93cdc-151443-tropical-vitality-color-granulat-250ml.png"
-    },
-    {
       "id": 5445093,
-      "title": "AD Deko-Set Dragon stone (60 L Aquarium)",
+      "title": "AD Deko-Set Dragon stone",
       "price": 27.305999999999997,
       "pf": "27,31 €",
       "pp": null,
@@ -3186,30 +2152,19 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3f9fc4b-150240-dragon-stone-set.png"
     },
     {
-      "id": 5445095,
-      "title": "AD Deko-Set Mini-Scape (80 L Aquarium)",
+      "id": 5445094,
+      "title": "AD Deko-Set Mini-Scape",
       "price": 34.2555,
       "pf": "34,26 €",
       "pp": null,
       "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ad-deko-set-mini-scape-80-l-aquarium",
-      "cart": "https://www.aquariumlife.pt/cart/add/ad-deko-set-mini-scape-80-l-aquarium",
+      "url": "https://www.aquariumlife.pt/product/ad-deko-set-mini-scape-60-l-aquarium",
+      "cart": "https://www.aquariumlife.pt/cart/add/ad-deko-set-mini-scape-60-l-aquarium",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/b7685a3-150644-ad-deko-set-seiryu-rock-80-l-aquarium.png"
     },
     {
-      "id": 5445096,
-      "title": "AD Deko-Set Dragon stone (80 L Aquarium)",
-      "price": 34.2555,
-      "pf": "34,26 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ad-deko-set-dragon-stone-80-l-aquarium",
-      "cart": "https://www.aquariumlife.pt/cart/add/ad-deko-set-dragon-stone-80-l-aquarium",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3f9fc4b-150240-dragon-stone-set.png"
-    },
-    {
       "id": 5445098,
-      "title": "PP Filter fleece branco (50 x 50 x 2,5 cm)",
+      "title": "PP Filter fleece branco",
       "price": 4.0959,
       "pf": "4,10 €",
       "pp": null,
@@ -3219,19 +2174,8 @@
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
-      "id": 5445099,
-      "title": "PP Filter fleece branco (100 x 100 x 2,5 cm)",
-      "price": 13.2963,
-      "pf": "13,30 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/pp-filter-fleece-branco-100-x-100-x-25-cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/pp-filter-fleece-branco-100-x-100-x-25-cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
       "id": 5445100,
-      "title": "Hobby Sponge Filter 2",
+      "title": "Hobby Sponge Filter",
       "price": 6.4452,
       "pf": "6,45 €",
       "pp": null,
@@ -3239,28 +2183,6 @@
       "url": "https://www.aquariumlife.pt/product/hobby-sponge-filter-2",
       "cart": "https://www.aquariumlife.pt/cart/add/hobby-sponge-filter-2",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3b456f7-163627-hobby-sponge-filter-2_1.png"
-    },
-    {
-      "id": 5445101,
-      "title": "Hobby Sponge Filter 3",
-      "price": 9.2004,
-      "pf": "9,20 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/hobby-sponge-filter-3",
-      "cart": "https://www.aquariumlife.pt/cart/add/hobby-sponge-filter-3",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/a58caa1-163331-hobby-sponge-filter-3.png"
-    },
-    {
-      "id": 5445102,
-      "title": "Tropical Cichlid Gran (250 ml)",
-      "price": 8.4993,
-      "pf": "8,50 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropical-cichlid-gran-250-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropical-cichlid-gran-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/4ab042b-151214-tropical-cichlid-gran-250-ml.png"
     },
     {
       "id": 5445103,
@@ -3305,17 +2227,6 @@
       "url": "https://www.aquariumlife.pt/product/tropical-spirulina-flakes-250-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-spirulina-flakes-250-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/a260578-150413-tropical-spirulina-flakes-250-ml.png"
-    },
-    {
-      "id": 5445107,
-      "title": "Tropical Welsi Gran (250 ml)",
-      "price": 7.097099999999999,
-      "pf": "7,10 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropical-welsi-gran-250-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropical-welsi-gran-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/76e300f-150205-tropical-welsi-gran-250-ml.png"
     },
     {
       "id": 5445108,
@@ -3363,24 +2274,13 @@
     },
     {
       "id": 5445114,
-      "title": "AS Garrafa de Co2 recarregável (500G)",
+      "title": "AS Garrafa de Co2 recarregável",
       "price": 69.003,
       "pf": "69,00 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/as-garrafa-de-co2-recarregavel-500g",
       "cart": "https://www.aquariumlife.pt/cart/add/as-garrafa-de-co2-recarregavel-500g",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5445115,
-      "title": "AS Garrafa de Co2 recarregável (2KG)",
-      "price": 99.00269999999999,
-      "pf": "99,00 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/as-garrafa-de-co2-recarregavel-2kg",
-      "cart": "https://www.aquariumlife.pt/cart/add/as-garrafa-de-co2-recarregavel-2kg",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
@@ -3407,7 +2307,7 @@
     },
     {
       "id": 5445118,
-      "title": "Dennerle Plant System S7 (250 ml)",
+      "title": "Dennerle Plant System S7",
       "price": 23.099400000000003,
       "pf": "23,10 €",
       "pp": null,
@@ -3418,35 +2318,13 @@
     },
     {
       "id": 5445119,
-      "title": "Dennerle Carbo Care Bio (100 ml)",
+      "title": "Dennerle Carbo Care Bio",
       "price": 8.3025,
       "pf": "8,30 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/dennerle-carbo-care-bio-100-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-carbo-care-bio-100-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/945bb06-175823-dennerle-carbo-care-bio-500-ml.png"
-    },
-    {
-      "id": 5445120,
-      "title": "Dennerle Carbo Care Bio (250 ml)",
-      "price": 11.2914,
-      "pf": "11,29 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-carbo-care-bio-250-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-carbo-care-bio-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/945bb06-175823-dennerle-carbo-care-bio-500-ml.png"
-    },
-    {
-      "id": 5445121,
-      "title": "Dennerle Carbo Care Bio (500 ml)",
-      "price": 15.953100000000001,
-      "pf": "15,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-carbo-care-bio-500-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-carbo-care-bio-500-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/945bb06-175823-dennerle-carbo-care-bio-500-ml.png"
     },
     {
@@ -3473,7 +2351,7 @@
     },
     {
       "id": 5445124,
-      "title": "Dennerle Plant Care Basic Root (10 Stück)",
+      "title": "Dennerle Plant Care Basic Root",
       "price": 6.0024,
       "pf": "6,00 €",
       "pp": null,
@@ -3481,17 +2359,6 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-plant-care-basic-root-10-stueck",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-care-basic-root-10-stueck",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/e86bbc4-174451-dennerle-plant-care-basic-root-10x.png"
-    },
-    {
-      "id": 5445125,
-      "title": "Dennerle Plant Care Basic Root (40x)",
-      "price": 13.8498,
-      "pf": "13,85 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-plant-care-basic-root-40x",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-care-basic-root-40x",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/d984e15-174248-dennerle-plant-care-basic-root-40x.png"
     },
     {
       "id": 5445126,
@@ -3539,7 +2406,7 @@
     },
     {
       "id": 5445131,
-      "title": "Dennerle DeponitMix Professional 10in1 (2,4 kg)",
+      "title": "Dennerle DeponitMix Professional 10in1",
       "price": 15.694799999999999,
       "pf": "15,69 €",
       "pp": null,
@@ -3561,7 +2428,7 @@
     },
     {
       "id": 5445133,
-      "title": "Dennerle NutriBasis 6in1 (2,4 kg)",
+      "title": "Dennerle NutriBasis 6in1",
       "price": 9.987599999999999,
       "pf": "9,99 €",
       "pp": null,
@@ -3569,28 +2436,6 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-nutribasis-6in1-24-kg",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-nutribasis-6in1-24-kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/185e75b-172441-dennerle-nutribasis-6in1-48-kg.png"
-    },
-    {
-      "id": 5445134,
-      "title": "Dennerle NutriBasis 6in1 (4,8 kg)",
-      "price": 14.993699999999999,
-      "pf": "14,99 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-nutribasis-6in1-48-kg",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-nutribasis-6in1-48-kg",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/185e75b-172441-dennerle-nutribasis-6in1-48-kg.png"
-    },
-    {
-      "id": 5445135,
-      "title": "Dennerle DeponitMix Professional 10in1 (9,6 kg)",
-      "price": 39.606,
-      "pf": "39,61 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-deponitmix-professional-10in1-96-kg",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-deponitmix-professional-10in1-96-kg",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/fcd8474-172130-dennerle-deponitmix-professional-10in1-96-kg.png"
     },
     {
       "id": 5445136,
@@ -3734,6 +2579,17 @@
       "url": "https://www.aquariumlife.pt/product/apistogramma-macmasteri-3-4cm",
       "cart": "https://www.aquariumlife.pt/cart/add/apistogramma-macmasteri-3-4cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/6c158b2-113521-apistogramma-macmasteri.png"
+    },
+    {
+      "id": 5445150,
+      "title": "Microgeophagus Ramirezi",
+      "price": 6.2976,
+      "pf": "6,30 €",
+      "pp": null,
+      "ppf": null,
+      "url": "https://www.aquariumlife.pt/product/microgeophagus-ramirezi-5-55cm",
+      "cart": "https://www.aquariumlife.pt/cart/add/microgeophagus-ramirezi-5-55cm",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/1bb0253-113225-microgeophagus-ramirezi.png"
     },
     {
       "id": 5445151,
@@ -3957,24 +2813,13 @@
     },
     {
       "id": 5445174,
-      "title": "ICA Mangueira cinza 12/16mm",
+      "title": "ICA Mangueira cinza",
       "price": 3.2472000000000003,
       "pf": "3,25 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/ica-mangueira-cinza-12-16mm",
       "cart": "https://www.aquariumlife.pt/cart/add/ica-mangueira-cinza-12-16mm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5445175,
-      "title": "ICA Mangueira cinza 16/22mm",
-      "price": 5.2029000000000005,
-      "pf": "5,20 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ica-mangueira-cinza-16-22mm",
-      "cart": "https://www.aquariumlife.pt/cart/add/ica-mangueira-cinza-16-22mm",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
@@ -4012,7 +2857,7 @@
     },
     {
       "id": 5445181,
-      "title": "Twinstar difusor CO2 S",
+      "title": "Twinstar difusor CO2",
       "price": 7.896599999999999,
       "pf": "7,90 €",
       "pp": null,
@@ -4122,24 +2967,13 @@
     },
     {
       "id": 5445982,
-      "title": "WA conexão rápida para tubo 12/16mm",
+      "title": "WA conexão rápida para tubo",
       "price": 11.746500000000001,
       "pf": "11,75 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/wa-conexao-rapida-para-tubo-12-16mm",
       "cart": "https://www.aquariumlife.pt/cart/add/wa-conexao-rapida-para-tubo-12-16mm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/7a1d2ac-154739-wa-conexao-rapida-para-tubo.png"
-    },
-    {
-      "id": 5445983,
-      "title": "WA conexão rápida para tubo 16/22mm",
-      "price": 15.805499999999999,
-      "pf": "15,81 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/wa-conexao-rapida-para-tubo-16-22mm",
-      "cart": "https://www.aquariumlife.pt/cart/add/wa-conexao-rapida-para-tubo-16-22mm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/7a1d2ac-154739-wa-conexao-rapida-para-tubo.png"
     },
     {
@@ -4177,24 +3011,13 @@
     },
     {
       "id": 5445987,
-      "title": "Chihiros Difusor C02 externo mangueira 12/16mm",
+      "title": "Chihiros Difusor C02 externo mangueira",
       "price": 26.9493,
       "pf": "26,95 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/chihiros-difusor-c02-externo-mangueira-12-16mm",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-difusor-c02-externo-mangueira-12-16mm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/76930cd-171724-chihiros-difusor-c02-externo-mangueira-16_22mm.png"
-    },
-    {
-      "id": 5445988,
-      "title": "Chihiros Difusor C02 externo mangueira 16/22mm",
-      "price": 29.9505,
-      "pf": "29,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-difusor-c02-externo-mangueira-16-22mm",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-difusor-c02-externo-mangueira-16-22mm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/76930cd-171724-chihiros-difusor-c02-externo-mangueira-16_22mm.png"
     },
     {
@@ -4228,17 +3051,6 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/aa-difusor-co2-s-2",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-difusor-co2-s-2",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/0ebf2da-160813-aa-c02-difusor-m.png"
-    },
-    {
-      "id": 5458965,
-      "title": "AA C02 difusor L",
-      "price": 13.9851,
-      "pf": "13,99 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aa-c02-difusor-l",
-      "cart": "https://www.aquariumlife.pt/cart/add/aa-c02-difusor-l",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/0ebf2da-160813-aa-c02-difusor-m.png"
     },
     {
@@ -4650,7 +3462,7 @@
     },
     {
       "id": 5512992,
-      "title": "Tropica Aquarium Soil 9L",
+      "title": "Tropica Aquarium Soil",
       "price": 37.8963,
       "pf": "37,90 €",
       "pp": null,
@@ -4660,19 +3472,8 @@
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
-      "id": 5512993,
-      "title": "Tropica Aquarium Soil 3L",
-      "price": 17.9949,
-      "pf": "17,99 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropica-aquarium-soil-3l",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropica-aquarium-soil-3l",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
       "id": 5512994,
-      "title": "Tropica Premium Nutrition 125ML",
+      "title": "Tropica Premium Nutrition",
       "price": 6.494400000000001,
       "pf": "6,49 €",
       "pp": null,
@@ -4682,36 +3483,14 @@
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
-      "id": 5512995,
-      "title": "Tropica Premium Nutrition 300ml",
-      "price": 11.2053,
-      "pf": "11,21 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropica-premium-nutrition-300ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropica-premium-nutrition-300ml",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
       "id": 5512996,
-      "title": "Tropica Specialised Nutrition 125ml",
+      "title": "Tropica Specialised Nutrition",
       "price": 6.494400000000001,
       "pf": "6,49 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/tropica-specialised-nutrition-125ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-specialised-nutrition-125ml",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5512997,
-      "title": "Tropica Specialised Nutrition 300ml",
-      "price": 11.2053,
-      "pf": "11,21 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/tropica-specialised-nutrition-300ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/tropica-specialised-nutrition-300ml",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
@@ -5265,36 +4044,14 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/bce33e0-150550-ad-pedras-hakkai.png"
     },
     {
-      "id": 5532580,
-      "title": "Dennerle Plant System S7 100ml",
-      "price": 12.988800000000001,
-      "pf": "12,99 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-plant-system-s7-100ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-system-s7-100ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/978cd55-181137-dennerle-plant-system-s7-250-ml.png"
-    },
-    {
       "id": 5532581,
-      "title": "Dennerle Plant System E15 (250 ml)",
+      "title": "Dennerle Plant System E15",
       "price": 24.9936,
       "pf": "24,99 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/dennerle-plant-system-e15-250-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-system-e15-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3776016-145959-dennerle-plant-system-e15.png"
-    },
-    {
-      "id": 5532582,
-      "title": "Dennerle Plant System E15 (100 ml)",
-      "price": 12.988800000000001,
-      "pf": "12,99 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-plant-system-e15-100-ml-",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-system-e15-100-ml-",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/3776016-145959-dennerle-plant-system-e15.png"
     },
     {
@@ -5310,24 +4067,13 @@
     },
     {
       "id": 5532584,
-      "title": "Dennerle Bacto Elixir FB7 250ml",
+      "title": "Dennerle Bacto Elixir FB7",
       "price": 15.99,
       "pf": "15,99 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/dennerle-bacto-elixir-fb7-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-bacto-elixir-fb7-250ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/70de351-145436-dennerle-bacto-elixir-fb7.png"
-    },
-    {
-      "id": 5532585,
-      "title": "Dennerle Bacto Elixir FB7 500ml",
-      "price": 20.9961,
-      "pf": "21,00 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-bacto-elixir-fb7-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-bacto-elixir-fb7-500ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/70de351-145436-dennerle-bacto-elixir-fb7.png"
     },
     {
@@ -5362,17 +4108,6 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-deponitmix-black-10in1-48-kg-",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-deponitmix-black-10in1-48-kg-",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/4f80737-144618-dennerle-deponitmix-black-10in1.png"
-    },
-    {
-      "id": 5532589,
-      "title": "Dennerle NutriBasis 6in1 (9,6 kg)",
-      "price": 24.9936,
-      "pf": "24,99 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-nutribasis-6in1-96-kg-",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-nutribasis-6in1-96-kg-",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/185e75b-172441-dennerle-nutribasis-6in1-48-kg.png"
     },
     {
       "id": 5532590,
@@ -5518,17 +4253,6 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/45c681f-140913-colisa-chuna-mel.png"
     },
     {
-      "id": 5532604,
-      "title": "Microgeophagus Ramirezi 3-3.5cm",
-      "price": 4.8462,
-      "pf": "4,85 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/microgeophagus-ramirezi-3-35cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/microgeophagus-ramirezi-3-35cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/1bb0253-113225-microgeophagus-ramirezi.png"
-    },
-    {
       "id": 5532605,
       "title": "Tylomenalia sp. 3-4cm",
       "price": 5.8548,
@@ -5552,24 +4276,13 @@
     },
     {
       "id": 5532607,
-      "title": "Easy life Bio Exit Blue 250ml",
+      "title": "Easy life Bio Exit Blue",
       "price": 8.7453,
       "pf": "8,75 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/easy-life-bio-exit-blue-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-bio-exit-blue-250ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/c7b7840-122307-easy-life-bio-exit-blue.png"
-    },
-    {
-      "id": 5532608,
-      "title": "Easy life Bio Exit Blue 500ml",
-      "price": 14.4525,
-      "pf": "14,45 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-bio-exit-blue-500ml-",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-bio-exit-blue-500ml-",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/c7b7840-122307-easy-life-bio-exit-blue.png"
     },
     {
@@ -5585,7 +4298,7 @@
     },
     {
       "id": 5532610,
-      "title": "Easy life Bio Exit Green 250ml",
+      "title": "Easy life Bio Exit Green",
       "price": 8.7453,
       "pf": "8,75 €",
       "pp": null,
@@ -5595,19 +4308,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/eb603f5-121622-easy-life-bio-exit-green.png"
     },
     {
-      "id": 5532611,
-      "title": "Easy life Bio Exit Green 500ml",
-      "price": 14.4525,
-      "pf": "14,45 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-bio-exit-green-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-bio-exit-green-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/eb603f5-121622-easy-life-bio-exit-green.png"
-    },
-    {
       "id": 5532612,
-      "title": "Easy life GreenScape 250ml",
+      "title": "Easy life GreenScape",
       "price": 9.0528,
       "pf": "9,05 €",
       "pp": null,
@@ -5617,19 +4319,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/247129a-175354-easy-life-greenscape.png"
     },
     {
-      "id": 5532613,
-      "title": "Easy life GreenScape 500ml",
-      "price": 15.6456,
-      "pf": "15,65 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-greenscape-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-greenscape-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/247129a-175354-easy-life-greenscape.png"
-    },
-    {
       "id": 5532614,
-      "title": "Easy life RedScape 500ml",
+      "title": "Easy life RedScape",
       "price": 15.6456,
       "pf": "15,65 €",
       "pp": null,
@@ -5639,19 +4330,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/2248bca-174812-easy-life-redscape.png"
     },
     {
-      "id": 5532615,
-      "title": "Easy life RedScape 250ml",
-      "price": 9.0528,
-      "pf": "9,05 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-redscape-250ml-",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-redscape-250ml-",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/2248bca-174812-easy-life-redscape.png"
-    },
-    {
       "id": 5532616,
-      "title": "Easy life Nitro 250ml",
+      "title": "Easy life Nitro",
       "price": 7.6014,
       "pf": "7,60 €",
       "pp": null,
@@ -5661,19 +4341,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/2b2b88a-121240-easy-life-nitro.png"
     },
     {
-      "id": 5532617,
-      "title": "Easy life Nitro 500ml",
-      "price": 12.0048,
-      "pf": "12,00 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-nitro-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-nitro-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/2b2b88a-121240-easy-life-nitro.png"
-    },
-    {
       "id": 5532618,
-      "title": "Easy life Ferro 250ml",
+      "title": "Easy life Ferro",
       "price": 7.6014,
       "pf": "7,60 €",
       "pp": null,
@@ -5683,19 +4352,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/2834589-121015-easy-life-ferro.png"
     },
     {
-      "id": 5532619,
-      "title": "Easy life Ferro 500ml",
-      "price": 12.0048,
-      "pf": "12,00 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-ferro-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-ferro-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/2834589-121015-easy-life-ferro.png"
-    },
-    {
       "id": 5532620,
-      "title": "Easy life Fosfo 250ml",
+      "title": "Easy life Fosfo",
       "price": 7.6014,
       "pf": "7,60 €",
       "pp": null,
@@ -5705,19 +4363,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/e368e3c-115644-easy-life-fosfo.png"
     },
     {
-      "id": 5532621,
-      "title": "Easy life Fosfo 500ml",
-      "price": 12.0048,
-      "pf": "12,00 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-fosfo-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-fosfo-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/e368e3c-115644-easy-life-fosfo.png"
-    },
-    {
       "id": 5532622,
-      "title": "Easy life ProFito 250ml",
+      "title": "Easy life ProFito",
       "price": 7.6998,
       "pf": "7,70 €",
       "pp": null,
@@ -5727,30 +4374,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/7334c53-180529-easy-life-profito.png"
     },
     {
-      "id": 5532623,
-      "title": "Easy life ProFito 500ml",
-      "price": 12.3,
-      "pf": "12,30 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-profito-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-profito-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/7334c53-180529-easy-life-profito.png"
-    },
-    {
-      "id": 5532624,
-      "title": "Easy life ProFito 1L",
-      "price": 20.848499999999998,
-      "pf": "20,85 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-profito-1l",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-profito-1l",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/7334c53-180529-easy-life-profito.png"
-    },
-    {
       "id": 5532625,
-      "title": "Easy Life Carbo 250ml",
+      "title": "Easy Life Carbo",
       "price": 8.794500000000001,
       "pf": "8,79 €",
       "pp": null,
@@ -5761,7 +4386,7 @@
     },
     {
       "id": 5532627,
-      "title": "Easy Life Filter Medium 250ml",
+      "title": "Easy Life Filter Medium",
       "price": 8.794500000000001,
       "pf": "8,79 €",
       "pp": null,
@@ -5771,19 +4396,19 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f29e1f6-181741-easy-life-filter-medium.png"
     },
     {
-      "id": 5532629,
-      "title": "Easy Life EasyStart 500ml",
+      "id": 5532628,
+      "title": "Easy Life EasyStart",
       "price": 15.0552,
       "pf": "15,06 €",
       "pp": null,
       "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-easystart-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-easystart-500ml",
+      "url": "https://www.aquariumlife.pt/product/easy-life-easystart-250ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-easystart-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/4cc94ab-111152-easy-life-easystart.png"
     },
     {
       "id": 5532630,
-      "title": "Easy Life Aquamaker 250ml",
+      "title": "Easy Life Aquamaker",
       "price": 9.3972,
       "pf": "9,40 €",
       "pp": null,
@@ -5849,7 +4474,7 @@
     },
     {
       "id": 5532636,
-      "title": "Easy Life Voogle 100ml",
+      "title": "Easy Life Voogle",
       "price": 5.448899999999999,
       "pf": "5,45 €",
       "pp": null,
@@ -5857,39 +4482,6 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-voogle-100ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-voogle-100ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/91d9599-112930-easy-life-voogle.png"
-    },
-    {
-      "id": 5532637,
-      "title": "Easy Life Voogle 250ml",
-      "price": 10.147499999999999,
-      "pf": "10,15 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-voogle-250ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-voogle-250ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/91d9599-112930-easy-life-voogle.png"
-    },
-    {
-      "id": 5532638,
-      "title": "Easy Life Voogle 500ml",
-      "price": 17.601300000000002,
-      "pf": "17,60 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-voogle-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-voogle-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/91d9599-112930-easy-life-voogle.png"
-    },
-    {
-      "id": 5532639,
-      "title": "Easy Life Carbo 100ml",
-      "price": 5.2520999999999995,
-      "pf": "5,25 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-carbo-100ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-carbo-100ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/7a9fd97-112504-easy-life-carbo.png"
     },
     {
       "id": 5532640,
@@ -5901,50 +4493,6 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-neo-100ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-neo-100ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/9276742-112159-easy-life-easy-neo.png"
-    },
-    {
-      "id": 5532642,
-      "title": "Easy Life Filter Medium 100ml",
-      "price": 5.104500000000001,
-      "pf": "5,10 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-filter-medium-100ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-filter-medium-100ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f29e1f6-181741-easy-life-filter-medium.png"
-    },
-    {
-      "id": 5532644,
-      "title": "Easy life ProFito 100ml",
-      "price": 5.2520999999999995,
-      "pf": "5,25 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-profito-100ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-profito-100ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/7334c53-180529-easy-life-profito.png"
-    },
-    {
-      "id": 5532645,
-      "title": "Easy life GreenScape 100ml",
-      "price": 6.15,
-      "pf": "6,15 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-greenscape-100ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-greenscape-100ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/247129a-175354-easy-life-greenscape.png"
-    },
-    {
-      "id": 5532646,
-      "title": "Easy life RedScape 100ml",
-      "price": 6.15,
-      "pf": "6,15 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-redscape-100ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-redscape-100ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/2248bca-174812-easy-life-redscape.png"
     },
     {
       "id": 5532647,
@@ -6068,17 +4616,6 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/aaaf9c8-171842-cola-me-liquida-para-hardscape.png"
     },
     {
-      "id": 5536077,
-      "title": "Microgeophagus Ramirezi 3-4cm",
-      "price": 6.2976,
-      "pf": "6,30 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/microgeophagus-ramirezi-3-4cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/microgeophagus-ramirezi-3-4cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/1bb0253-113225-microgeophagus-ramirezi.png"
-    },
-    {
       "id": 5536078,
       "title": "Guppy Endler mix 2cm",
       "price": 2.2017,
@@ -6190,7 +4727,7 @@
     },
     {
       "id": 5548437,
-      "title": "Chihiros Aqua Soil 3L",
+      "title": "Chihiros Aqua Soil",
       "price": 11.9556,
       "pf": "11,96 €",
       "pp": null,
@@ -6256,35 +4793,13 @@
     },
     {
       "id": 5549681,
-      "title": "Chihiros Nano CO2 Diffuser L",
+      "title": "Chihiros Nano CO2 Diffuser",
       "price": 12.951899999999998,
       "pf": "12,95 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/chihiros-nano-co2-diffuser-l",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-nano-co2-diffuser-l",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5549682,
-      "title": "Chihiros Nano CO2 Diffuser M",
-      "price": 11.9556,
-      "pf": "11,96 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-nano-co2-diffuser-m",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-nano-co2-diffuser-m",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5549683,
-      "title": "Chihiros Nano CO2 Diffuser S",
-      "price": 11.2545,
-      "pf": "11,25 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-nano-co2-diffuser-s",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-nano-co2-diffuser-s",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
@@ -6344,24 +4859,13 @@
     },
     {
       "id": 5549689,
-      "title": "Chihiros Shade para WRGB II e WRGB SLIM 30cm",
+      "title": "Chihiros Shade para WRGB II e WRGB SLIM",
       "price": 32.951699999999995,
       "pf": "32,95 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/chihiros-shade-para-wrgb-ii-e-wrgb-slim-30cm",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-shade-para-wrgb-ii-e-wrgb-slim-30cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5549690,
-      "title": "Chihiros Shade para WRGB II e WRGB SLIM 60cm",
-      "price": 46.9491,
-      "pf": "46,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-shade-para-wrgb-ii-e-wrgb-slim-60cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-shade-para-wrgb-ii-e-wrgb-slim-60cm",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
@@ -6596,17 +5100,6 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/631791b-102936-rotala-rotundifolia-blood-red.png"
     },
     {
-      "id": 5549713,
-      "title": "Chihiros Aqua Soil 9L",
-      "price": 32.004599999999996,
-      "pf": "32,00 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-aqua-soil-9l",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-aqua-soil-9l",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f53f1fc-172746-chihiros-aqua-soil-9l.png"
-    },
-    {
       "id": 5559760,
       "title": "Colisa Lalia fêmea 3.5-4cm",
       "price": 4.4526,
@@ -6839,7 +5332,7 @@
     },
     {
       "id": 5559781,
-      "title": "Green Brighty Mineral (180 ml)",
+      "title": "Green Brighty Mineral",
       "price": 13.899000000000001,
       "pf": "13,90 €",
       "pp": null,
@@ -6849,19 +5342,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f83fa73-151429-ada-green-brighty-mineral-300ml.webp"
     },
     {
-      "id": 5559782,
-      "title": "Green Brighty Mineral (300 ml)",
-      "price": 18.905099999999997,
-      "pf": "18,91 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/green-brighty-mineral-300-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/green-brighty-mineral-300-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f83fa73-151429-ada-green-brighty-mineral-300ml.webp"
-    },
-    {
       "id": 5559783,
-      "title": "Green Brighty Nitrogen (300 ml)",
+      "title": "Green Brighty Nitrogen",
       "price": 18.905099999999997,
       "pf": "18,91 €",
       "pp": null,
@@ -6872,7 +5354,7 @@
     },
     {
       "id": 5559784,
-      "title": "Green Brighty Iron (300 ml)",
+      "title": "Green Brighty Iron",
       "price": 18.905099999999997,
       "pf": "18,91 €",
       "pp": null,
@@ -6883,7 +5365,7 @@
     },
     {
       "id": 5559785,
-      "title": "Green Brighty Neutral K (300 ml)",
+      "title": "Green Brighty Neutral K",
       "price": 18.905099999999997,
       "pf": "18,91 €",
       "pp": null,
@@ -6893,41 +5375,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/63395fc-151041-ada-green-brighty-neutral-k-180ml.webp"
     },
     {
-      "id": 5559786,
-      "title": "Green Brighty Neutral K (180 ml)",
-      "price": 13.899000000000001,
-      "pf": "13,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/green-brighty-neutral-k-180-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/green-brighty-neutral-k-180-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/63395fc-151041-ada-green-brighty-neutral-k-180ml.webp"
-    },
-    {
-      "id": 5559787,
-      "title": "Green Brighty Nitrogen (180 ml)",
-      "price": 13.899000000000001,
-      "pf": "13,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/green-brighty-nitrogen-180-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/green-brighty-nitrogen-180-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/17456af-151015-ada-green-brighty-nitrogen-180ml.webp"
-    },
-    {
-      "id": 5559788,
-      "title": "Green Brighty Iron (180 ml)",
-      "price": 13.899000000000001,
-      "pf": "13,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/green-brighty-iron-180-ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/green-brighty-iron-180-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f1ff95b-150953-ada-green-brighty-iron-180ml.webp"
-    },
-    {
       "id": 5559789,
-      "title": "Neo Plants Soil 8 Liter Normal",
+      "title": "Neo Plants Soil Liter Normal",
       "price": 39.950399999999995,
       "pf": "39,95 €",
       "pp": null,
@@ -6937,36 +5386,14 @@
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
-      "id": 5559790,
-      "title": "Neo Plants Soil 3 Liter Normal",
-      "price": 18.9543,
-      "pf": "18,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/neo-plants-soil-3-liter-normal",
-      "cart": "https://www.aquariumlife.pt/cart/add/neo-plants-soil-3-liter-normal",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
       "id": 5559791,
-      "title": "Neo Plants Soil 8 Liter NO CO2",
+      "title": "Neo Plants Soil Liter NO CO2",
       "price": 39.950399999999995,
       "pf": "39,95 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/neo-plants-soil-8-liter-no-co2",
       "cart": "https://www.aquariumlife.pt/cart/add/neo-plants-soil-8-liter-no-co2",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559792,
-      "title": "Neo Plants Soil 3 Liter NO CO2",
-      "price": 18.9543,
-      "pf": "18,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/neo-plants-soil-3-liter-no-co2",
-      "cart": "https://www.aquariumlife.pt/cart/add/neo-plants-soil-3-liter-no-co2",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
@@ -7015,7 +5442,7 @@
     },
     {
       "id": 5559797,
-      "title": "UNS DELTA 30 Filter",
+      "title": "UNS DELTA Filter",
       "price": 99.9006,
       "pf": "99,90 €",
       "pp": null,
@@ -7025,19 +5452,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/966a766-164237-uns-delta-60-filter.png"
     },
     {
-      "id": 5559798,
-      "title": "UNS DELTA 60 Filter",
-      "price": 129.9003,
-      "pf": "129,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/uns-delta-60-filter",
-      "cart": "https://www.aquariumlife.pt/cart/add/uns-delta-60-filter",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/966a766-164237-uns-delta-60-filter.png"
-    },
-    {
       "id": 5559799,
-      "title": "UNS DELTA 60 Impeller Set",
+      "title": "UNS DELTA Impeller Set",
       "price": 9.9015,
       "pf": "9,90 €",
       "pp": null,
@@ -7069,19 +5485,8 @@
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
-      "id": 5559802,
-      "title": "UNS DELTA 90 Filter",
-      "price": 179.8998,
-      "pf": "179,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/uns-delta-90-filter",
-      "cart": "https://www.aquariumlife.pt/cart/add/uns-delta-90-filter",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/02fc84e-163532-uns-delta-120-filter.png"
-    },
-    {
       "id": 5559803,
-      "title": "UNS DELTA 90 Black Sponge",
+      "title": "UNS DELTA Black Sponge",
       "price": 9.9015,
       "pf": "9,90 €",
       "pp": null,
@@ -7092,7 +5497,7 @@
     },
     {
       "id": 5559804,
-      "title": "UNS DELTA 90 Green Sponge",
+      "title": "UNS DELTA Green Sponge",
       "price": 9.9015,
       "pf": "9,90 €",
       "pp": null,
@@ -7102,19 +5507,8 @@
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
-      "id": 5559805,
-      "title": "UNS DELTA 90 Impeller Set",
-      "price": 9.9015,
-      "pf": "9,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/uns-delta-90-impeller-set",
-      "cart": "https://www.aquariumlife.pt/cart/add/uns-delta-90-impeller-set",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
       "id": 5559806,
-      "title": "UNS DELTA 90 Gasket und O-Ring Set",
+      "title": "UNS DELTA Gasket und O-Ring Set",
       "price": 9.9015,
       "pf": "9,90 €",
       "pp": null,
@@ -7124,80 +5518,14 @@
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
-      "id": 5559807,
-      "title": "UNS DELTA 120 Filter",
-      "price": 229.89929999999998,
-      "pf": "229,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/uns-delta-120-filter",
-      "cart": "https://www.aquariumlife.pt/cart/add/uns-delta-120-filter",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/02fc84e-163532-uns-delta-120-filter.png"
-    },
-    {
-      "id": 5559808,
-      "title": "UNS DELTA 120 Black Sponge",
-      "price": 10.897799999999998,
-      "pf": "10,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/uns-delta-120-black-sponge",
-      "cart": "https://www.aquariumlife.pt/cart/add/uns-delta-120-black-sponge",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559809,
-      "title": "UNS DELTA 120 Green Sponge",
-      "price": 10.897799999999998,
-      "pf": "10,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/uns-delta-120-green-sponge",
-      "cart": "https://www.aquariumlife.pt/cart/add/uns-delta-120-green-sponge",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559810,
-      "title": "UNS DELTA 120 Impeller Set",
-      "price": 10.897799999999998,
-      "pf": "10,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/uns-delta-120-impeller-set",
-      "cart": "https://www.aquariumlife.pt/cart/add/uns-delta-120-impeller-set",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559811,
-      "title": "UNS DELTA 120 Gasket und O-Ring Set",
-      "price": 10.897799999999998,
-      "pf": "10,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/uns-delta-120-gasket-und-o-ring-set",
-      "cart": "https://www.aquariumlife.pt/cart/add/uns-delta-120-gasket-und-o-ring-set",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
       "id": 5559812,
-      "title": "UNS DELTA Quick Release Double Tap Valves Size 12/16mm",
+      "title": "UNS DELTA Quick Release Double Tap Valves",
       "price": 15.9039,
       "pf": "15,90 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/uns-delta-quick-release-double-tap-valves-size-12-16mm",
       "cart": "https://www.aquariumlife.pt/cart/add/uns-delta-quick-release-double-tap-valves-size-12-16mm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559813,
-      "title": "UNS DELTA Quick Release Double Tap Valves Size 16/22mm",
-      "price": 22.9026,
-      "pf": "22,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/uns-delta-quick-release-double-tap-valves-size-16-22mm",
-      "cart": "https://www.aquariumlife.pt/cart/add/uns-delta-quick-release-double-tap-valves-size-16-22mm",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
@@ -7356,24 +5684,13 @@
     },
     {
       "id": 5559828,
-      "title": "SF Limpa vidros magnético float S  (4mm)",
+      "title": "SF Limpa vidros magnético float",
       "price": 5.2029000000000005,
       "pf": "5,20 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/sf-limpa-vidros-magnetico-float-s-4mm",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-limpa-vidros-magnetico-float-s-4mm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559829,
-      "title": "SF Limpa vidros magnético float M (8mm)",
-      "price": 6.7035,
-      "pf": "6,70 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-limpa-vidros-magnetico-float-m-8mm",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-limpa-vidros-magnetico-float-m-8mm",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
@@ -7422,7 +5739,7 @@
     },
     {
       "id": 5559834,
-      "title": "SF  2 Folhas para descanso de Bettas",
+      "title": "SF Folhas para descanso de Bettas",
       "price": 2.4476999999999998,
       "pf": "2,45 €",
       "pp": null,
@@ -7432,19 +5749,8 @@
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
-      "id": 5559835,
-      "title": "SF  3 Folhas para descanso de Bettas",
-      "price": 2.8044,
-      "pf": "2,80 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-3-folhas-para-descanso-de-bettas",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-3-folhas-para-descanso-de-bettas",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
       "id": 5559836,
-      "title": "SF caverna para peixes debaixo do areão S",
+      "title": "SF caverna para peixes debaixo do areão",
       "price": 8.4993,
       "pf": "8,50 €",
       "pp": null,
@@ -7454,69 +5760,14 @@
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
-      "id": 5559837,
-      "title": "SF caverna para peixes debaixo do areão M",
-      "price": 12.2016,
-      "pf": "12,20 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-caverna-para-peixes-debaixo-do-areao-m",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-caverna-para-peixes-debaixo-do-areao-m",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
       "id": 5559838,
-      "title": "SF caverna em cerâmica S",
+      "title": "SF caverna em cerâmica",
       "price": 5.5473,
       "pf": "5,55 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/sf-caverna-em-ceramica-s",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-caverna-em-ceramica-s",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559839,
-      "title": "SF caverna em cerâmica M",
-      "price": 5.805599999999999,
-      "pf": "5,81 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-caverna-em-ceramica-m",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-caverna-em-ceramica-m",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559840,
-      "title": "SF caverna em cerâmica L",
-      "price": 7.097099999999999,
-      "pf": "7,10 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-caverna-em-ceramica-l",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-caverna-em-ceramica-l",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559842,
-      "title": "SF caverna em cerâmica XL",
-      "price": 7.404599999999999,
-      "pf": "7,40 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-caverna-em-ceramica-xl",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-caverna-em-ceramica-xl",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559843,
-      "title": "SF caverna em cerâmica XXL",
-      "price": 7.7982,
-      "pf": "7,80 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-caverna-em-ceramica-xxl",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-caverna-em-ceramica-xxl",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
@@ -7609,7 +5860,7 @@
     },
     {
       "id": 5559852,
-      "title": "SF aquascaping pinça direita inox 27cm",
+      "title": "SF aquascaping pinça direita inox",
       "price": 5.2029000000000005,
       "pf": "5,20 €",
       "pp": null,
@@ -7620,57 +5871,13 @@
     },
     {
       "id": 5559853,
-      "title": "SF aquascaping pinça curva inox 27cm",
+      "title": "SF aquascaping pinça curva inox",
       "price": 5.2029000000000005,
       "pf": "5,20 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/sf-aquascaping-pinca-curva-inox-27cm",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-aquascaping-pinca-curva-inox-27cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559854,
-      "title": "SF aquascaping pinça direita inox 37cm",
-      "price": 6.6543,
-      "pf": "6,65 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-aquascaping-pinca-direita-inox-37cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-aquascaping-pinca-direita-inox-37cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559855,
-      "title": "SF aquascaping pinça curva inox 37cm",
-      "price": 6.6543,
-      "pf": "6,65 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-aquascaping-pinca-curva-inox-37cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-aquascaping-pinca-curva-inox-37cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559856,
-      "title": "SF aquascaping pinça direita inox 48cm",
-      "price": 11.0946,
-      "pf": "11,09 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-aquascaping-pinca-direita-inox-48cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-aquascaping-pinca-direita-inox-48cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559857,
-      "title": "SF aquascaping pinça curva inox 48cm",
-      "price": 11.0946,
-      "pf": "11,09 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-aquascaping-pinca-curva-inox-48cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-aquascaping-pinca-curva-inox-48cm",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
@@ -7708,24 +5915,13 @@
     },
     {
       "id": 5559861,
-      "title": "SF tubo para alimentação de camarões 30cm",
+      "title": "SF tubo para alimentação de camarões",
       "price": 6.7035,
       "pf": "6,70 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/sf-tubo-para-alimentacao-de-camaroes-30cm",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-tubo-para-alimentacao-de-camaroes-30cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559862,
-      "title": "SF tubo para alimentação de camarões 45cm",
-      "price": 8.856,
-      "pf": "8,86 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-tubo-para-alimentacao-de-camaroes-45cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-tubo-para-alimentacao-de-camaroes-45cm",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
@@ -7884,7 +6080,7 @@
     },
     {
       "id": 5559877,
-      "title": "SF reposição cartucho carvão + zeolite aqua flow 100-150",
+      "title": "SF reposição cartucho carvão+zeolite aqua flow",
       "price": 7.749,
       "pf": "7,75 €",
       "pp": null,
@@ -7895,57 +6091,13 @@
     },
     {
       "id": 5559878,
-      "title": "SF reposição esponja aqua flow 100-150",
+      "title": "SF reposição esponja aqua flow",
       "price": 6.3468,
       "pf": "6,35 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/sf-reposicao-esponja-aqua-flow-100-150",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-reposicao-esponja-aqua-flow-100-150",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559879,
-      "title": "SF reposição esponja aqua flow 200-300",
-      "price": 6.3468,
-      "pf": "6,35 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-reposicao-esponja-aqua-flow-200-300",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-reposicao-esponja-aqua-flow-200-300",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559880,
-      "title": "SF reposição cartucho carvão+zeolite aqua flow 200-300",
-      "price": 7.749,
-      "pf": "7,75 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-reposicao-cartucho-carvaozeolite-aqua-flow-200-300",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-reposicao-cartucho-carvaozeolite-aqua-flow-200-300",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559881,
-      "title": "SF reposição cartucho carvão+zeolite aqua flow 400",
-      "price": 7.749,
-      "pf": "7,75 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-reposicao-cartucho-carvaozeolite-aqua-flow-400",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-reposicao-cartucho-carvaozeolite-aqua-flow-400",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559882,
-      "title": "SF reposição esponja aqua flow 400",
-      "price": 6.3468,
-      "pf": "6,35 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-reposicao-esponja-aqua-flow-400",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-reposicao-esponja-aqua-flow-400",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
@@ -7961,7 +6113,7 @@
     },
     {
       "id": 5559884,
-      "title": "SF rede para aquário 8cm",
+      "title": "SF rede para aquário",
       "price": 1.5498,
       "pf": "1,55 €",
       "pp": null,
@@ -7971,30 +6123,8 @@
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
-      "id": 5559885,
-      "title": "SF rede para aquário 15cm",
-      "price": 2.4476999999999998,
-      "pf": "2,45 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-rede-para-aquario-15cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-rede-para-aquario-15cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559886,
-      "title": "SF X PRO 2000 (2000/H)",
-      "price": 185.0043,
-      "pf": "185,00 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-x-pro-2000-2000-h",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-x-pro-2000-2000-h",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/c94ba27-103636-sf-x-pro-2000.png"
-    },
-    {
       "id": 5559887,
-      "title": "SF X PRO thermo 1000",
+      "title": "SF X PRO thermo",
       "price": 133.9962,
       "pf": "134,00 €",
       "pp": null,
@@ -8002,28 +6132,6 @@
       "url": "https://www.aquariumlife.pt/product/sf-x-pro-thermo-1000",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-x-pro-thermo-1000",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/992a1c4-103012-superfish-x-pro-thermo-1000.png"
-    },
-    {
-      "id": 5559888,
-      "title": "SF X PRO thermo 1500",
-      "price": 180.99450000000002,
-      "pf": "180,99 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-x-pro-thermo-1500",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-x-pro-thermo-1500",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/b4bcee4-102536-superfish-x-pro-thermo-1500.png"
-    },
-    {
-      "id": 5559889,
-      "title": "SF X PRO thermo 2000",
-      "price": 209.9979,
-      "pf": "210,00 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-x-pro-thermo-2000",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-x-pro-thermo-2000",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/d43cdbe-102219-superfish-x-pro-thermo-2000.png"
     },
     {
       "id": 5559890,
@@ -8048,17 +6156,6 @@
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
-      "id": 5568868,
-      "title": "Physoschistura mango 3-4cm",
-      "price": 3.9482999999999997,
-      "pf": "3,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/physoschistura-mango-3-4cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/physoschistura-mango-3-4cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
       "id": 5568876,
       "title": "Esponja laranja 30 ppi para Biomaster 2",
       "price": 12.951899999999998,
@@ -8078,7 +6175,7 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/2-esponjas-azuis-para-filtosmart-100",
       "cart": "https://www.aquariumlife.pt/cart/add/2-esponjas-azuis-para-filtosmart-100",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/5197ef8-141024-2-esponjas-azuis-para-filtosmart-100.webp"
     },
     {
       "id": 5568878,
@@ -8089,183 +6186,62 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/kit-acessorios-para-filtosmart-60",
       "cart": "https://www.aquariumlife.pt/cart/add/kit-acessorios-para-filtosmart-60",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/98a2af5-140712-kit-acessorios-para-filtosmart-60.jpg"
     },
     {
       "id": 5568879,
-      "title": "Rotor para Filtosmart 60",
+      "title": "Rotor para Filtosmart",
       "price": 7.995,
       "pf": "8,00 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/rotor-para-filtosmart-60",
       "cart": "https://www.aquariumlife.pt/cart/add/rotor-para-filtosmart-60",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f362915-121554-oase-ersatz-rotor-filtosmart-60.jpg"
     },
     {
       "id": 5568880,
-      "title": "Filtosmart 60",
+      "title": "FiltoSmart",
       "price": 66.9489,
       "pf": "66,95 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/filtosmart-60",
       "cart": "https://www.aquariumlife.pt/cart/add/filtosmart-60",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5568881,
-      "title": "Filtosmart 100",
-      "price": 99.94980000000001,
-      "pf": "99,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/filtosmart-100",
-      "cart": "https://www.aquariumlife.pt/cart/add/filtosmart-100",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5568882,
-      "title": "Filtosmart 200",
-      "price": 113.9472,
-      "pf": "113,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/filtosmart-200",
-      "cart": "https://www.aquariumlife.pt/cart/add/filtosmart-200",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5568883,
-      "title": "Filtosmart 300",
-      "price": 123.94709999999999,
-      "pf": "123,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/filtosmart-300",
-      "cart": "https://www.aquariumlife.pt/cart/add/filtosmart-300",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/56bcf65-140048-filtosmart-60.webp"
     },
     {
       "id": 5568884,
-      "title": "Filtosmart thermo 100",
+      "title": "Filtosmart thermo",
       "price": 133.947,
       "pf": "133,95 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/filtosmart-thermo-100",
       "cart": "https://www.aquariumlife.pt/cart/add/filtosmart-thermo-100",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5568885,
-      "title": "Filtosmart thermo 200",
-      "price": 144.9555,
-      "pf": "144,96 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/filtosmart-thermo-200",
-      "cart": "https://www.aquariumlife.pt/cart/add/filtosmart-thermo-200",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5568886,
-      "title": "Filtosmart thermo 300",
-      "price": 164.95530000000002,
-      "pf": "164,96 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/filtosmart-thermo-300",
-      "cart": "https://www.aquariumlife.pt/cart/add/filtosmart-thermo-300",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/ffeb867-135841-filtosmart-thermo-100.jpg"
     },
     {
       "id": 5568887,
-      "title": "Biomaster 2 thermo 850",
+      "title": "Biomaster 2 thermo",
       "price": 369.9471,
       "pf": "369,95 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/biomaster-2-thermo-850",
       "cart": "https://www.aquariumlife.pt/cart/add/biomaster-2-thermo-850",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5568888,
-      "title": "Biomaster 2 thermo 600",
-      "price": 299.94780000000003,
-      "pf": "299,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/biomaster-2-thermo-600",
-      "cart": "https://www.aquariumlife.pt/cart/add/biomaster-2-thermo-600",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5568889,
-      "title": "Biomaster 2 thermo 350",
-      "price": 244.9545,
-      "pf": "244,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/biomaster-2-thermo-350",
-      "cart": "https://www.aquariumlife.pt/cart/add/biomaster-2-thermo-350",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5568890,
-      "title": "Biomaster 2 thermo 250",
-      "price": 219.9486,
-      "pf": "219,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/biomaster-2-thermo-250",
-      "cart": "https://www.aquariumlife.pt/cart/add/biomaster-2-thermo-250",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/b98007f-135406-biomaster-2-thermo-850.jpg"
     },
     {
       "id": 5568891,
-      "title": "Biomaster 2 850",
+      "title": "Biomaster 2",
       "price": 339.9474,
       "pf": "339,95 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/biomaster-2-850",
       "cart": "https://www.aquariumlife.pt/cart/add/biomaster-2-850",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5568892,
-      "title": "Biomaster 2 600",
-      "price": 265.9506,
-      "pf": "265,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/biomaster-2-600",
-      "cart": "https://www.aquariumlife.pt/cart/add/biomaster-2-600",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5568893,
-      "title": "Biomaster 2 350",
-      "price": 215.9511,
-      "pf": "215,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/biomaster-2-350",
-      "cart": "https://www.aquariumlife.pt/cart/add/biomaster-2-350",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5568894,
-      "title": "Biomaster 2 250",
-      "price": 189.9489,
-      "pf": "189,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/biomaster-2-250",
-      "cart": "https://www.aquariumlife.pt/cart/add/biomaster-2-250",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/7047b6e-123254-biomaster-2-600-2.jpg"
     },
     {
       "id": 5568895,
@@ -8276,51 +6252,29 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/esponja-azul-para-filtosmart-60-",
       "cart": "https://www.aquariumlife.pt/cart/add/esponja-azul-para-filtosmart-60-",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/a8c8929-134859-filtro-filtosmart-60-oase.webp"
     },
     {
       "id": 5568896,
-      "title": "Set 4 esponjas (pretas) prefiltro BioMaster 60ppi",
+      "title": "Set esponjas (pretas) prefiltro BioMaster 60ppi",
       "price": 14.9445,
       "pf": "14,94 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/set-4-esponjas-pretas-prefiltro-biomaster-60ppi",
       "cart": "https://www.aquariumlife.pt/cart/add/set-4-esponjas-pretas-prefiltro-biomaster-60ppi",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/6d2b86a-122420-set-4-esponjas-pretas-prefiltro-biomaster-60ppi.webp"
     },
     {
       "id": 5568897,
-      "title": "Set 4 esponjas (azuis) prefiltro BioMaster 45ppi",
+      "title": "Set esponjas (azuis) prefiltro BioMaster 45ppi",
       "price": 14.9445,
       "pf": "14,94 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/set-4-esponjas-azuis-prefiltro-biomaster-45ppi",
       "cart": "https://www.aquariumlife.pt/cart/add/set-4-esponjas-azuis-prefiltro-biomaster-45ppi",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5568898,
-      "title": "Set 6 esponjas (azuis) prefiltro BioMaster 45ppi",
-      "price": 17.9457,
-      "pf": "17,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/set-6-esponjas-azuis-prefiltro-biomaster-45ppi",
-      "cart": "https://www.aquariumlife.pt/cart/add/set-6-esponjas-azuis-prefiltro-biomaster-45ppi",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5568899,
-      "title": "Set 6 esponjas (pretas) prefiltro BioMaster 60ppi",
-      "price": 16.9494,
-      "pf": "16,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/set-6-esponjas-pretas-prefiltro-biomaster-60ppi",
-      "cart": "https://www.aquariumlife.pt/cart/add/set-6-esponjas-pretas-prefiltro-biomaster-60ppi",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/045b607-122318-set-4-esponjas-azuis-prefiltro-biomaster-45ppi.png"
     },
     {
       "id": 5568900,
@@ -8331,7 +6285,7 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/esponja-filtrante-biomaster-20-ppi-azul",
       "cart": "https://www.aquariumlife.pt/cart/add/esponja-filtrante-biomaster-20-ppi-azul",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/665c729-121809-esponja-filtrante-biomaster-20-ppi-azul.webp"
     },
     {
       "id": 5568901,
@@ -8342,62 +6296,18 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/set-esponjas-filtrantes-200",
       "cart": "https://www.aquariumlife.pt/cart/add/set-esponjas-filtrantes-200",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5568902,
-      "title": "Rotor para FiltoSmart 100",
-      "price": 9.803099999999999,
-      "pf": "9,80 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/rotor-para-filtosmart-100",
-      "cart": "https://www.aquariumlife.pt/cart/add/rotor-para-filtosmart-100",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5568903,
-      "title": "Rotor para FiltoSmart 300",
-      "price": 11.6973,
-      "pf": "11,70 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/rotor-para-filtosmart-300",
-      "cart": "https://www.aquariumlife.pt/cart/add/rotor-para-filtosmart-300",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/2835376-121711-set-esponjas-filtrantes-200.jpg"
     },
     {
       "id": 5568904,
-      "title": "Rotor para BioMaster 850",
+      "title": "Rotor para BioMaster",
       "price": 38.991,
       "pf": "38,99 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/rotor-para-biomaster-850",
       "cart": "https://www.aquariumlife.pt/cart/add/rotor-para-biomaster-850",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5568905,
-      "title": "Rotor para FiltoSmart 200",
-      "price": 11.6973,
-      "pf": "11,70 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/rotor-para-filtosmart-200",
-      "cart": "https://www.aquariumlife.pt/cart/add/rotor-para-filtosmart-200",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5568906,
-      "title": "Rotor para BioMaster 250/350",
-      "price": 14.3049,
-      "pf": "14,30 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/rotor-para-biomaster-250-350",
-      "cart": "https://www.aquariumlife.pt/cart/add/rotor-para-biomaster-250-350",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/66c4e66-121004-rotor-para-biomaster-850.jpg"
     },
     {
       "id": 5568907,
@@ -8408,7 +6318,7 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/rotorpara-biomaster-600",
       "cart": "https://www.aquariumlife.pt/cart/add/rotorpara-biomaster-600",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/882bb4d-115949-rotorpara-biomaster-600.webp"
     },
     {
       "id": 5568908,

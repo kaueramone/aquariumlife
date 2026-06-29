@@ -1,14 +1,14 @@
 {
-  "updated": "2026-06-24",
+  "updated": "2026-06-29",
   "cat": 527493,
   "slug": "equipamento-areao-fertil",
-  "total": 16,
+  "total": 9,
   "min": 9.2496,
-  "max": 66.6537,
+  "max": 26.9862,
   "products": [
     {
       "id": 5444844,
-      "title": "ADA Power Sand Basic S (1L)",
+      "title": "ADA Power Sand Basic S",
       "price": 14.354099999999999,
       "pf": "14,35 €",
       "pp": null,
@@ -18,47 +18,14 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/1b31dd4-163954-ada-power-sand-basic-s-2l.png"
     },
     {
-      "id": 5444845,
-      "title": "ADA Power Sand Basic S (2L)",
-      "price": 20.5041,
-      "pf": "20,50 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ada-power-sand-basic-s-2l",
-      "cart": "https://www.aquariumlife.pt/cart/add/ada-power-sand-basic-s-2l",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/1b31dd4-163954-ada-power-sand-basic-s-2l.png"
-    },
-    {
       "id": 5444846,
-      "title": "ADA Power Sand Advance S (2L)",
+      "title": "ADA Power Sand Advance",
       "price": 25.0551,
       "pf": "25,06 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/-ada-power-sand-advance-s-2l",
       "cart": "https://www.aquariumlife.pt/cart/add/-ada-power-sand-advance-s-2l",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/0abb383-163636-ada-power-sand-advance-l-6l.png"
-    },
-    {
-      "id": 5444847,
-      "title": "ADA Power Sand Advance M (6L)",
-      "price": 66.6537,
-      "pf": "66,65 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ada-power-sand-advance-m-6l",
-      "cart": "https://www.aquariumlife.pt/cart/add/ada-power-sand-advance-m-6l",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/0abb383-163636-ada-power-sand-advance-l-6l.png"
-    },
-    {
-      "id": 5444848,
-      "title": "ADA Power Sand Advance L (6L)",
-      "price": 66.6537,
-      "pf": "66,65 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/ada-power-sand-advance-l-6l",
-      "cart": "https://www.aquariumlife.pt/cart/add/ada-power-sand-advance-l-6l",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/0abb383-163636-ada-power-sand-advance-l-6l.png"
     },
     {
@@ -74,24 +41,13 @@
     },
     {
       "id": 5444962,
-      "title": "Duplarit G 500g",
+      "title": "Duplarit G",
       "price": 18.8559,
       "pf": "18,86 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/duplarit-g-500g",
       "cart": "https://www.aquariumlife.pt/cart/add/duplarit-g-500g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/6b05a3f-185901-duplarit-g-250g.png"
-    },
-    {
-      "id": 5444963,
-      "title": "Duplarit G 250g",
-      "price": 9.9507,
-      "pf": "9,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/duplarit-g-250g",
-      "cart": "https://www.aquariumlife.pt/cart/add/duplarit-g-250g",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/6b05a3f-185901-duplarit-g-250g.png"
     },
     {
@@ -107,7 +63,7 @@
     },
     {
       "id": 5445131,
-      "title": "Dennerle DeponitMix Professional 10in1 (2,4 kg)",
+      "title": "Dennerle DeponitMix Professional 10in1",
       "price": 15.694799999999999,
       "pf": "15,69 €",
       "pp": null,
@@ -129,7 +85,7 @@
     },
     {
       "id": 5445133,
-      "title": "Dennerle NutriBasis 6in1 (2,4 kg)",
+      "title": "Dennerle NutriBasis 6in1",
       "price": 9.987599999999999,
       "pf": "9,99 €",
       "pp": null,
@@ -137,28 +93,6 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-nutribasis-6in1-24-kg",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-nutribasis-6in1-24-kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/185e75b-172441-dennerle-nutribasis-6in1-48-kg.png"
-    },
-    {
-      "id": 5445134,
-      "title": "Dennerle NutriBasis 6in1 (4,8 kg)",
-      "price": 14.993699999999999,
-      "pf": "14,99 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-nutribasis-6in1-48-kg",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-nutribasis-6in1-48-kg",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/185e75b-172441-dennerle-nutribasis-6in1-48-kg.png"
-    },
-    {
-      "id": 5445135,
-      "title": "Dennerle DeponitMix Professional 10in1 (9,6 kg)",
-      "price": 39.606,
-      "pf": "39,61 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-deponitmix-professional-10in1-96-kg",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-deponitmix-professional-10in1-96-kg",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/fcd8474-172130-dennerle-deponitmix-professional-10in1-96-kg.png"
     },
     {
       "id": 5532588,
@@ -170,17 +104,6 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-deponitmix-black-10in1-48-kg-",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-deponitmix-black-10in1-48-kg-",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/4f80737-144618-dennerle-deponitmix-black-10in1.png"
-    },
-    {
-      "id": 5532589,
-      "title": "Dennerle NutriBasis 6in1 (9,6 kg)",
-      "price": 24.9936,
-      "pf": "24,99 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-nutribasis-6in1-96-kg-",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-nutribasis-6in1-96-kg-",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/185e75b-172441-dennerle-nutribasis-6in1-48-kg.png"
     }
   ]
 }

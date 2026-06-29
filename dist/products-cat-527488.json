@@ -1,14 +1,14 @@
 {
-  "updated": "2026-06-24",
+  "updated": "2026-06-29",
   "cat": 527488,
   "slug": "equipamento-filtros-cascata",
-  "total": 5,
+  "total": 4,
   "min": 2.2017,
-  "max": 24.501600000000003,
+  "max": 19.4955,
   "products": [
     {
       "id": 5445021,
-      "title": "SF HANG ON FILTER 50",
+      "title": "SF HANG ON FILTER",
       "price": 19.4955,
       "pf": "19,50 €",
       "pp": null,
@@ -16,17 +16,6 @@
       "url": "https://www.aquariumlife.pt/product/sf-hang-on-filter-50",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-hang-on-filter-50",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/d7c79c4-150707-sf-hang-on-filter-50.png"
-    },
-    {
-      "id": 5445022,
-      "title": "SF HANG ON FILTER 200",
-      "price": 24.501600000000003,
-      "pf": "24,50 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-hang-on-filter-200-",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-hang-on-filter-200-",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/778990c-150159-sf-hang-on-filter-200.png"
     },
     {
       "id": 5559844,

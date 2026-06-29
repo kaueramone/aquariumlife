@@ -1,20 +1,20 @@
 {
-  "updated": "2026-06-24",
+  "updated": "2026-06-29",
   "cat": 527711,
   "slug": "condicionadores-de-agua",
-  "total": 31,
+  "total": 25,
   "min": 4.305,
   "max": 24.6,
   "products": [
     {
-      "id": 5444763,
-      "title": "Hydra safe water 250ml",
+      "id": 5444762,
+      "title": "Hydra safe water",
       "price": 12.4968,
       "pf": "12,50 €",
       "pp": null,
       "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/hydra-safe-water-250ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/hydra-safe-water-250ml",
+      "url": "https://www.aquariumlife.pt/product/hydra-safe-water-125ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/hydra-safe-water-125ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/b76d125-145214-safe-min.png"
     },
     {
@@ -30,7 +30,7 @@
     },
     {
       "id": 5444765,
-      "title": "Hydra Gh+ 250ml",
+      "title": "Hydra Gh+",
       "price": 9.9507,
       "pf": "9,95 €",
       "pp": null,
@@ -40,36 +40,14 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/a82a492-145053-gh-min.png"
     },
     {
-      "id": 5444766,
-      "title": "Hydra Gh+ 500ml",
-      "price": 15.953100000000001,
-      "pf": "15,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/hydra-gh-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/hydra-gh-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/a82a492-145053-gh-min.png"
-    },
-    {
       "id": 5444767,
-      "title": "Hydra Kh+ 250ml",
+      "title": "Hydra Kh+",
       "price": 9.9507,
       "pf": "9,95 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/hydra-kh-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/hydra-kh-250ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/babeb99-145006-kh-min.png"
-    },
-    {
-      "id": 5444768,
-      "title": "Hydra Kh+ 500ml",
-      "price": 15.953100000000001,
-      "pf": "15,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/hydra-kh-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/hydra-kh-500ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/babeb99-145006-kh-min.png"
     },
     {
@@ -140,24 +118,13 @@
     },
     {
       "id": 5532584,
-      "title": "Dennerle Bacto Elixir FB7 250ml",
+      "title": "Dennerle Bacto Elixir FB7",
       "price": 15.99,
       "pf": "15,99 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/dennerle-bacto-elixir-fb7-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-bacto-elixir-fb7-250ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/70de351-145436-dennerle-bacto-elixir-fb7.png"
-    },
-    {
-      "id": 5532585,
-      "title": "Dennerle Bacto Elixir FB7 500ml",
-      "price": 20.9961,
-      "pf": "21,00 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/dennerle-bacto-elixir-fb7-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-bacto-elixir-fb7-500ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/70de351-145436-dennerle-bacto-elixir-fb7.png"
     },
     {
@@ -206,24 +173,13 @@
     },
     {
       "id": 5532607,
-      "title": "Easy life Bio Exit Blue 250ml",
+      "title": "Easy life Bio Exit Blue",
       "price": 8.7453,
       "pf": "8,75 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/easy-life-bio-exit-blue-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-bio-exit-blue-250ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/c7b7840-122307-easy-life-bio-exit-blue.png"
-    },
-    {
-      "id": 5532608,
-      "title": "Easy life Bio Exit Blue 500ml",
-      "price": 14.4525,
-      "pf": "14,45 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-bio-exit-blue-500ml-",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-bio-exit-blue-500ml-",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/c7b7840-122307-easy-life-bio-exit-blue.png"
     },
     {
@@ -239,7 +195,7 @@
     },
     {
       "id": 5532610,
-      "title": "Easy life Bio Exit Green 250ml",
+      "title": "Easy life Bio Exit Green",
       "price": 8.7453,
       "pf": "8,75 €",
       "pp": null,
@@ -249,19 +205,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/eb603f5-121622-easy-life-bio-exit-green.png"
     },
     {
-      "id": 5532611,
-      "title": "Easy life Bio Exit Green 500ml",
-      "price": 14.4525,
-      "pf": "14,45 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-bio-exit-green-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-bio-exit-green-500ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/eb603f5-121622-easy-life-bio-exit-green.png"
-    },
-    {
       "id": 5532627,
-      "title": "Easy Life Filter Medium 250ml",
+      "title": "Easy Life Filter Medium",
       "price": 8.794500000000001,
       "pf": "8,79 €",
       "pp": null,
@@ -271,19 +216,19 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f29e1f6-181741-easy-life-filter-medium.png"
     },
     {
-      "id": 5532629,
-      "title": "Easy Life EasyStart 500ml",
+      "id": 5532628,
+      "title": "Easy Life EasyStart",
       "price": 15.0552,
       "pf": "15,06 €",
       "pp": null,
       "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-easystart-500ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-easystart-500ml",
+      "url": "https://www.aquariumlife.pt/product/easy-life-easystart-250ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-easystart-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/4cc94ab-111152-easy-life-easystart.png"
     },
     {
       "id": 5532630,
-      "title": "Easy Life Aquamaker 250ml",
+      "title": "Easy Life Aquamaker",
       "price": 9.3972,
       "pf": "9,40 €",
       "pp": null,
@@ -335,17 +280,6 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-neo-100ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-neo-100ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/9276742-112159-easy-life-easy-neo.png"
-    },
-    {
-      "id": 5532642,
-      "title": "Easy Life Filter Medium 100ml",
-      "price": 5.104500000000001,
-      "pf": "5,10 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-filter-medium-100ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-filter-medium-100ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/square/f29e1f6-181741-easy-life-filter-medium.png"
     }
   ]
 }

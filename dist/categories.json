@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24",
+  "updated": "2026-06-29",
   "total": 27,
   "categories": [
     {
@@ -7,84 +7,84 @@
       "title": "Equipamento",
       "url": "https://www.aquariumlife.pt/category/equipamento",
       "handle": "equipamento",
-      "count": 493,
+      "count": 334,
       "children": [
         {
           "id": 527486,
           "title": "Filtros Externos",
           "url": "https://www.aquariumlife.pt/category/equipamento-filtros-externos",
           "handle": "equipamento-filtros-externos",
-          "count": 52
+          "count": 25
         },
         {
           "id": 527487,
           "title": "Filtros internos",
           "url": "https://www.aquariumlife.pt/category/equipamento-filtros-internos",
           "handle": "equipamento-filtros-internos",
-          "count": 21
+          "count": 12
         },
         {
           "id": 527488,
           "title": "Filtros Cascata",
           "url": "https://www.aquariumlife.pt/category/equipamento-filtros-cascata",
           "handle": "equipamento-filtros-cascata",
-          "count": 5
+          "count": 4
         },
         {
           "id": 527489,
           "title": "Medicação",
           "url": "https://www.aquariumlife.pt/category/equipamento-medicacao",
           "handle": "equipamento-medicacao",
-          "count": 8
+          "count": 6
         },
         {
           "id": 527490,
           "title": "Termostatos",
           "url": "https://www.aquariumlife.pt/category/equipamento-termostatos",
           "handle": "equipamento-termostatos",
-          "count": 11
+          "count": 5
         },
         {
           "id": 527491,
           "title": "Fertilizantes",
           "url": "https://www.aquariumlife.pt/category/equipamento-fertilizantes",
           "handle": "equipamento-fertilizantes",
-          "count": 47
+          "count": 25
         },
         {
           "id": 527492,
           "title": "Areão",
           "url": "https://www.aquariumlife.pt/category/equipamento-areao-inerte",
           "handle": "equipamento-areao-inerte",
-          "count": 41
+          "count": 28
         },
         {
           "id": 527493,
           "title": "Substrato Fértil",
           "url": "https://www.aquariumlife.pt/category/equipamento-areao-fertil",
           "handle": "equipamento-areao-fertil",
-          "count": 16
+          "count": 9
         },
         {
           "id": 527494,
           "title": "Co2",
           "url": "https://www.aquariumlife.pt/category/equipamento-co2",
           "handle": "equipamento-co2",
-          "count": 37
+          "count": 29
         },
         {
           "id": 527495,
           "title": "Led´s",
           "url": "https://www.aquariumlife.pt/category/equipamento-led-s",
           "handle": "equipamento-led-s",
-          "count": 30
+          "count": 17
         },
         {
           "id": 527496,
           "title": "Media Filtrante",
           "url": "https://www.aquariumlife.pt/category/equipamento-media-filtrante",
           "handle": "equipamento-media-filtrante",
-          "count": 20
+          "count": 14
         },
         {
           "id": 527497,
@@ -98,7 +98,7 @@
           "title": "Lilly Pipes",
           "url": "https://www.aquariumlife.pt/category/equipamento-lilly-pipes",
           "handle": "equipamento-lilly-pipes",
-          "count": 7
+          "count": 4
         },
         {
           "id": 527712,
@@ -112,14 +112,14 @@
           "title": "Acessórios",
           "url": "https://www.aquariumlife.pt/category/equipamento-acessorios",
           "handle": "equipamento-acessorios",
-          "count": 63
+          "count": 56
         },
         {
           "id": 527722,
           "title": "Bombas de água",
           "url": "https://www.aquariumlife.pt/category/equipamento-bombas-de-agua",
           "handle": "equipamento-bombas-de-agua",
-          "count": 2
+          "count": 1
         }
       ]
     },
@@ -128,7 +128,7 @@
       "title": "Alimentação",
       "url": "https://www.aquariumlife.pt/category/alimentacao",
       "handle": "alimentacao",
-      "count": 82,
+      "count": 60,
       "children": []
     },
     {
@@ -136,21 +136,21 @@
       "title": "Hardscape",
       "url": "https://www.aquariumlife.pt/category/hardscape",
       "handle": "hardscape",
-      "count": 17,
+      "count": 11,
       "children": [
         {
           "id": 527498,
           "title": "Rochas",
           "url": "https://www.aquariumlife.pt/category/hardscape-rochas",
           "handle": "hardscape-rochas",
-          "count": 4
+          "count": 3
         },
         {
           "id": 527499,
           "title": "Troncos",
           "url": "https://www.aquariumlife.pt/category/hardscape-troncos",
           "handle": "hardscape-troncos",
-          "count": 12
+          "count": 7
         }
       ]
     },
@@ -167,7 +167,7 @@
       "title": "Peixes",
       "url": "https://www.aquariumlife.pt/category/peixes",
       "handle": "peixes",
-      "count": 96,
+      "count": 94,
       "children": []
     },
     {
@@ -183,7 +183,7 @@
       "title": "Outros",
       "url": "https://www.aquariumlife.pt/category/outros",
       "handle": "outros",
-      "count": 27,
+      "count": 15,
       "children": []
     },
     {
@@ -191,7 +191,7 @@
       "title": "Condicionadores de água",
       "url": "https://www.aquariumlife.pt/category/condicionadores-de-agua",
       "handle": "condicionadores-de-agua",
-      "count": 31,
+      "count": 25,
       "children": []
     },
     {
@@ -199,7 +199,7 @@
       "title": "Aquascaping",
       "url": "https://www.aquariumlife.pt/category/aquascaping",
       "handle": "aquascaping",
-      "count": 14,
+      "count": 10,
       "children": []
     }
   ]
