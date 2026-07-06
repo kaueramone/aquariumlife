@@ -617,3 +617,9 @@ body.aq-light-mode.page-cart, body.aq-light-mode[class*="page-cart-"] {
     p { color: rgba(0, 32, 74, 0.6) !important; }
   }
 }
+
+/* === Carrinho: miniatura em quadrado branco === */
+.cart-list .item-image img {
+  background: #fff !important;
+  object-fit: contain !important;
+}

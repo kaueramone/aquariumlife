@@ -784,3 +784,19 @@ body.aq-light-mode.page-product {
     .option { color: #00204A !important; }
   }
 }
+
+/* === Pagina de produto: imagem principal em quadrado 1:1 branco === */
+body.page-product .card-preview {
+  background: #fff !important;
+  border-radius: 16px !important;
+  aspect-ratio: 1 / 1;
+  min-height: auto !important;
+}
+body.page-product img.card-pic,
+body.page-product .card-image img {
+  object-fit: contain !important;
+  max-height: none !important;
+  background: #fff !important;
+}
+body.page-product #gallery.card-container a { background: #fff !important; }
+body.page-product #gallery.card-container a img { object-fit: contain !important; }

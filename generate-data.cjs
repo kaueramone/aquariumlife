@@ -123,7 +123,7 @@ function fmtPrice(v) {
 
 function mapProduct(p) {
   const handle = p.handle || '';
-  const img = (p.image && (p.image.square || p.image.thumb)) || NO_IMG;
+  const img = (p.image && (p.image.full || p.image.square || p.image.thumb)) || NO_IMG;
   return {
     id:    p.id,
     title: p.title,

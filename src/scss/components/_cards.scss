@@ -448,3 +448,19 @@ section:has(.product-view),
     font-size: 0.74rem !important;
   }
 }
+
+/* === Fotos de produto: quadrado 1:1 com fundo branco (contain, sem corte) === */
+:root { --aq-img-square: 1; }
+a.product-preview,
+.hover-effect-floating a.product-preview,
+.hover-effect-floating:hover a.product-preview,
+.hover-effect-floating .product-preview {
+  background: #fff !important;
+  background-color: #fff !important;
+  background-image: none !important;
+}
+a.product-preview img.product-pic,
+a.product-preview img {
+  object-fit: contain !important;
+  background: #fff !important;
+}
