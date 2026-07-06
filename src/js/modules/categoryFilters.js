@@ -86,8 +86,10 @@ function resolveProductImage(url) {
 // Aplica a imagem real: usa a thumbnail 'square' e cai para a imagem
 // cheia e depois para no-img se algo falhar (nunca icone partido).
 function applyHealedImage(img, real) {
-  img.dataset.aqFull = real;
-  img.src = aqSquare(real);
+  // Mostrar a imagem CHEIA (sem corte); o CSS trata do quadrado branco 1:1.
+  var full = real.replace('/media/images/square/', '/media/images/');
+  img.dataset.aqFull = full;
+  img.src = full;
 }
 function aqOnImgError(img) {
   const full = img.dataset.aqFull;

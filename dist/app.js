@@ -1997,11 +1997,6 @@
       try { return new URL(u, location.origin).pathname.replace(/\/$/, ''); }
       catch (e) { return u || ''; }
     }
-    // Thumbnail 'square' a partir da imagem cheia (mesmo padrao das cards nativas)
-    function aqSquare(u) {
-      return (u && u.indexOf('/media/images/') !== -1 && u.indexOf('/square/') === -1)
-        ? u.replace('/media/images/', '/media/images/square/') : u;
-    }
 
     // Reaproveita as imagens que o Shopkit ja renderizou nativamente (gratis, 0 pedidos)
     function seedNativeImages() {
@@ -2049,8 +2044,10 @@
     // Aplica a imagem real: usa a thumbnail 'square' e cai para a imagem
     // cheia e depois para no-img se algo falhar (nunca icone partido).
     function applyHealedImage(img, real) {
-      img.dataset.aqFull = real;
-      img.src = aqSquare(real);
+      // Mostrar a imagem CHEIA (sem corte); o CSS trata do quadrado branco 1:1.
+      var full = real.replace('/media/images/square/', '/media/images/');
+      img.dataset.aqFull = full;
+      img.src = full;
     }
     function aqOnImgError(img) {
       const full = img.dataset.aqFull;
