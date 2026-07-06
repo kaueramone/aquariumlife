@@ -1968,6 +1968,22 @@
 
     const REPO     = 'kaueramone/aquariumlife';
     const JSON_CATS = 'dist/categories.json';
+
+    // Carrega os dados pelo commit exacto (evita o atraso de cache do @main do jsDelivr).
+    let _aqDataRef = null;
+    function aqGetDataRef() {
+      if (_aqDataRef) return _aqDataRef;
+      _aqDataRef = (async function () {
+        try { const c = sessionStorage.getItem('aqDataRef'); if (c) return c; } catch (e) {}
+        try {
+          const r = await fetch('https://api.github.com/repos/' + REPO + '/commits/main', { headers: { 'Accept': 'application/vnd.github.sha' } });
+          if (r.ok) { const sha = (await r.text()).trim(); if (/^[0-9a-f]{7,40}$/i.test(sha)) { try { sessionStorage.setItem('aqDataRef', sha); } catch (e) {} return sha; } }
+        } catch (e) {}
+        return 'main';
+      })();
+      return _aqDataRef;
+    }
+    async function aqDataUrl(file) { return 'https://cdn.jsdelivr.net/gh/' + REPO + '@' + (await aqGetDataRef()) + '/' + file; }
     const PER_PAGE  = 12;
 
     // ================================================================
@@ -2165,7 +2181,7 @@
 
       let cats = [];
       try {
-        const res = await fetch(`https://cdn.jsdelivr.net/gh/${REPO}@main/${JSON_CATS}`);
+        const res = await fetch(await aqDataUrl(JSON_CATS));
         if (!res.ok) throw new Error('HTTP ' + res.status);
         cats = (await res.json()).categories || [];
       } catch (e) {
@@ -2454,7 +2470,7 @@
         const jsonFile = (catId === 'all')
           ? 'dist/products-all.json'
           : 'dist/products-cat-' + catId + '.json';
-        const url = 'https://cdn.jsdelivr.net/gh/' + REPO + '@main/' + jsonFile;
+        const url = await aqDataUrl(jsonFile);
         try {
           const res = await fetch(url);
           if (!res.ok) throw new Error('HTTP ' + res.status);
