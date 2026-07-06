@@ -2,7 +2,7 @@
   "updated": "2026-07-06",
   "cat": 527494,
   "slug": "equipamento-co2",
-  "total": 29,
+  "total": 27,
   "min": 0.5043,
   "max": 92.9511,
   "products": [
@@ -16,17 +16,6 @@
       "url": "https://www.aquariumlife.pt/product/hydra-co2-drop-checker-20ml",
       "cart": "https://www.aquariumlife.pt/cart/add/hydra-co2-drop-checker-20ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5d4b3e0-145547-drop-checker-solution.png"
-    },
-    {
-      "id": 5444791,
-      "title": "AA Mini C02 difusor",
-      "price": 8.991299999999999,
-      "pf": "8,99 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aa-mini-c02-difusor",
-      "cart": "https://www.aquariumlife.pt/cart/add/aa-mini-c02-difusor",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5ab1214-162812-aa-mini-c02-difusor.png"
     },
     {
       "id": 5444792,
@@ -312,17 +301,6 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/chihiros-nano-co2-diffuser-l",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-nano-co2-diffuser-l",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5549684,
-      "title": "Chihiros Nano CO2 Diffuser Tiny",
-      "price": 11.2545,
-      "pf": "11,25 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-nano-co2-diffuser-tiny",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-nano-co2-diffuser-tiny",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     }
   ]

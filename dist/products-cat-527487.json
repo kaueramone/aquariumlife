@@ -2,7 +2,7 @@
   "updated": "2026-07-06",
   "cat": 527487,
   "slug": "equipamento-filtros-internos",
-  "total": 12,
+  "total": 10,
   "min": 6.3468,
   "max": 27.5028,
   "products": [
@@ -82,28 +82,6 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-nano-babyprotect",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-nano-babyprotect",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/db43366-180920-dennerle-nano-babyprotect.png"
-    },
-    {
-      "id": 5559875,
-      "title": "SF reposição esponja filtrante para Aqua flow 50",
-      "price": 6.3468,
-      "pf": "6,35 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-reposicao-esponja-filtrante-para-aqua-flow-50",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-reposicao-esponja-filtrante-para-aqua-flow-50",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559876,
-      "title": "SF reposição esponja c/carvão+zeolite para Aqua flow 50",
-      "price": 7.749,
-      "pf": "7,75 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-reposicao-esponja-c-carvaozeolite-para-aqua-flow-50",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-reposicao-esponja-c-carvaozeolite-para-aqua-flow-50",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
       "id": 5559877,

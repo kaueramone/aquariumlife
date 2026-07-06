@@ -2,7 +2,7 @@
   "updated": "2026-07-06",
   "cat": "all",
   "slug": "all",
-  "total": 579,
+  "total": 572,
   "min": 0.5043,
   "max": 369.9471,
   "products": [
@@ -269,17 +269,6 @@
       "url": "https://www.aquariumlife.pt/product/aa-copos-de-vidro-plantas",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-copos-de-vidro-plantas",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/af734eb-163047-aa-copos-de-vidro-plantas.png"
-    },
-    {
-      "id": 5444791,
-      "title": "AA Mini C02 difusor",
-      "price": 8.991299999999999,
-      "pf": "8,99 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/aa-mini-c02-difusor",
-      "cart": "https://www.aquariumlife.pt/cart/add/aa-mini-c02-difusor",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5ab1214-162812-aa-mini-c02-difusor.png"
     },
     {
       "id": 5444792,
@@ -1248,17 +1237,6 @@
       "url": "https://www.aquariumlife.pt/product/g-nature-red-star-8-16mm-2kg",
       "cart": "https://www.aquariumlife.pt/cart/add/g-nature-red-star-8-16mm-2kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0a555be-183751-g-nature-red-star-8-16mm-2kg.png"
-    },
-    {
-      "id": 5444940,
-      "title": "G Nature River Sand 0.4-0.6mm 2Kg",
-      "price": 4.6002,
-      "pf": "4,60 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/g-nature-river-sand-04-06mm-2kg",
-      "cart": "https://www.aquariumlife.pt/cart/add/g-nature-river-sand-04-06mm-2kg",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3abb461-181116-g-nature-colour-river-sand-04-06-mm-10kg.png"
     },
     {
       "id": 5444941,
@@ -2820,7 +2798,7 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/ica-mangueira-cinza-12-16mm",
       "cart": "https://www.aquariumlife.pt/cart/add/ica-mangueira-cinza-12-16mm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/8873efe-105755-ica-magueiracinz.jpg"
     },
     {
       "id": 5445176,
@@ -4264,17 +4242,6 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/87e5962-123419-tylomenalia-sp.png"
     },
     {
-      "id": 5532606,
-      "title": "Easy life Blue Exit 250ml",
-      "price": 8.856,
-      "pf": "8,86 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-blue-exit-250ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-blue-exit-250ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/44b3d5c-122939-easy-life-blue-exit.png"
-    },
-    {
       "id": 5532607,
       "title": "Easy life Bio Exit Blue",
       "price": 8.7453,
@@ -4800,17 +4767,6 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/chihiros-nano-co2-diffuser-l",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-nano-co2-diffuser-l",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5549684,
-      "title": "Chihiros Nano CO2 Diffuser Tiny",
-      "price": 11.2545,
-      "pf": "11,25 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-nano-co2-diffuser-tiny",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-nano-co2-diffuser-tiny",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
@@ -5463,17 +5419,6 @@
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
-      "id": 5559800,
-      "title": "UNS DELTA 30 und 60 Black Sponge",
-      "price": 7.896599999999999,
-      "pf": "7,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/uns-delta-30-und-60-black-sponge",
-      "cart": "https://www.aquariumlife.pt/cart/add/uns-delta-30-und-60-black-sponge",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
       "id": 5559801,
       "title": "UNS DELTA 30 und 60 Activated Carbon Catridge",
       "price": 9.9015,
@@ -6057,28 +6002,6 @@
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
     },
     {
-      "id": 5559875,
-      "title": "SF reposição esponja filtrante para Aqua flow 50",
-      "price": 6.3468,
-      "pf": "6,35 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-reposicao-esponja-filtrante-para-aqua-flow-50",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-reposicao-esponja-filtrante-para-aqua-flow-50",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
-      "id": 5559876,
-      "title": "SF reposição esponja c/carvão+zeolite para Aqua flow 50",
-      "price": 7.749,
-      "pf": "7,75 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/sf-reposicao-esponja-c-carvaozeolite-para-aqua-flow-50",
-      "cart": "https://www.aquariumlife.pt/cart/add/sf-reposicao-esponja-c-carvaozeolite-para-aqua-flow-50",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
-    },
-    {
       "id": 5559877,
       "title": "SF reposição cartucho carvão+zeolite aqua flow",
       "price": 7.749,
@@ -6164,7 +6087,7 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/esponja-laranja-30-ppi-para-biomaster-2",
       "cart": "https://www.aquariumlife.pt/cart/add/esponja-laranja-30-ppi-para-biomaster-2",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/69b3191-105901-biomaster30ppi-orange-001.webp"
     },
     {
       "id": 5568877,

@@ -2,7 +2,7 @@
   "updated": "2026-07-06",
   "cat": 527492,
   "slug": "equipamento-areao-inerte",
-  "total": 28,
+  "total": 27,
   "min": 4.6002,
   "max": 41.9061,
   "products": [
@@ -192,17 +192,6 @@
       "url": "https://www.aquariumlife.pt/product/g-nature-red-star-8-16mm-2kg",
       "cart": "https://www.aquariumlife.pt/cart/add/g-nature-red-star-8-16mm-2kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0a555be-183751-g-nature-red-star-8-16mm-2kg.png"
-    },
-    {
-      "id": 5444940,
-      "title": "G Nature River Sand 0.4-0.6mm 2Kg",
-      "price": 4.6002,
-      "pf": "4,60 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/g-nature-river-sand-04-06mm-2kg",
-      "cart": "https://www.aquariumlife.pt/cart/add/g-nature-river-sand-04-06mm-2kg",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3abb461-181116-g-nature-colour-river-sand-04-06-mm-10kg.png"
     },
     {
       "id": 5444941,

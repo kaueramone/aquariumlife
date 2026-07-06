@@ -2,7 +2,7 @@
   "updated": "2026-07-06",
   "cat": 527711,
   "slug": "condicionadores-de-agua",
-  "total": 25,
+  "total": 24,
   "min": 4.305,
   "max": 24.6,
   "products": [
@@ -159,17 +159,6 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-bacto-elixir-bio-50ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-bacto-elixir-bio-50ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d536295-142629-dennerle-bacto-elixir-bio.png"
-    },
-    {
-      "id": 5532606,
-      "title": "Easy life Blue Exit 250ml",
-      "price": 8.856,
-      "pf": "8,86 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/easy-life-blue-exit-250ml",
-      "cart": "https://www.aquariumlife.pt/cart/add/easy-life-blue-exit-250ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/44b3d5c-122939-easy-life-blue-exit.png"
     },
     {
       "id": 5532607,
