@@ -52,26 +52,23 @@ function isPadded(r) {
   return vert || horiz;
 }
 
+// Qualquer miniatura cortada (square/thumb) do CDN -> imagem CHEIA (sem corte).
+// O CSS (object-fit: contain + fundo branco) trata do enquadramento 1:1.
 function fixOne(img) {
   const src = img.getAttribute('src') || '';
-  if (src.indexOf(SQUARE_SEG) === -1) return;     // so' miniaturas /square/
-  if (img.dataset.aqBorder === src) return;        // ja' verificado este src
-  img.dataset.aqBorder = src;
-
-  const probe = new Image();
-  probe.crossOrigin = 'anonymous';
-  probe.onload = function () {
-    let r = null;
-    try { r = blackFrame(probe); } catch (e) { return; }  // CORS/tainted: ignora
-    if (!isPadded(r)) return;                             // nao e' moldura preta (padding)
-    const original = originalOf(src);
-    if (original === src) return;
-    img.style.background = '#fff';
-    img.style.objectFit = 'contain';
-    img.src = original;                 // imagem original, sem o padding preto
-  };
-  probe.onerror = function () {};
-  probe.src = src;                      // mesmo URL ja' carregado pelo <img> visivel
+  const full = src
+    .replace('/media/images/square/', '/media/images/')
+    .replace('/media/images/thumb/', '/media/images/');
+  if (full === src) return;               // ja' e' a imagem cheia (ou nao e' do CDN)
+  if (img.dataset.aqFullDone === full) return;
+  img.dataset.aqFullDone = full;
+  img.style.background = '#fff';
+  img.style.objectFit = 'contain';
+  img.addEventListener('error', function onerr() {
+    img.removeEventListener('error', onerr);
+    img.src = src;                        // se a cheia falhar, volta a' square
+  }, { once: true });
+  img.src = full;
 }
 
 function scan() {
