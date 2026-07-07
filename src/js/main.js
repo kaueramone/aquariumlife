@@ -13,6 +13,7 @@ import { initThemeToggle }     from './modules/themeToggle.js';
 import { initTrustSeals }      from './modules/trustSeals.js';
 import { initSpecialPages }    from './modules/specialPages.js';
 import { initCategoryFilters } from './modules/categoryFilters.js';
+import { initNativeVariants }  from './modules/nativeVariants.js';
 import { initImageFix }        from './modules/imageFix.js';
 import { initNativeFixes }     from './modules/nativeFixes.js';
 import { initCartQuantity }   from './modules/cartQuantity.js';
@@ -41,6 +42,9 @@ function init() {
 
   // Slider de preco + layout filtros nas paginas de categoria
   initCategoryFilters();
+
+  // Cards nativos (home/relacionados) com "desde" + fallback de imagem no carrinho
+  initNativeVariants();
 
   // Corrige a borda preta das miniaturas (thumbnails /square/ de fotos pequenas)
   initImageFix();
