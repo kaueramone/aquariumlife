@@ -191,6 +191,20 @@ a.product-name {
     text-decoration: line-through !important;
     margin-right: 8px;
   }
+
+  // "A partir de" (produtos com variantes): rotulo pequeno e discreto,
+  // por cima do preco da variante mais barata (que fica com o neon grande).
+  .product-from {
+    display: block !important;
+    font-family: $font-family-body !important;
+    font-size: 0.62rem !important;
+    font-weight: 600 !important;
+    color: rgba(205, 228, 248, 0.55) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.6px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1px !important;
+  }
 }
 
 // -- Botao comprar --

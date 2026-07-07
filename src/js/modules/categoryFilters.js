@@ -420,9 +420,13 @@ function initPriceFilter(catId) {
 
       list.innerHTML = '';
       slice.forEach(function(p) {
-        const priceHTML = p.pp
-          ? '<del>' + p.pf + '</del><span class="product-actual">' + p.ppf + '</span>'
-          : '<span class="product-actual">' + p.pf + '</span>';
+        // Produtos com variantes: "A partir de" + preco da variante mais barata.
+        // Caso contrario, preco normal (com promo, se existir).
+        const priceHTML = p.af
+          ? '<span class="product-from">A partir de</span> <span class="product-actual">' + p.af + '</span>'
+          : (p.pp
+              ? '<del>' + p.pf + '</del><span class="product-actual">' + p.ppf + '</span>'
+              : '<span class="product-actual">' + p.pf + '</span>');
 
         const col = document.createElement('div');
         col.className = 'col';

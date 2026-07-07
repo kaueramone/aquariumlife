@@ -121,6 +121,38 @@ function fmtPrice(v) {
   return (typeof v === 'number') ? v.toFixed(2).replace('.', ',') + ' €' : null;
 }
 
+// Numero a partir de um preco que pode vir number ou string ("14,30")
+function toNum(v) {
+  if (typeof v === 'number') return v;
+  if (typeof v === 'string') { const n = parseFloat(v.replace(',', '.')); return isNaN(n) ? null : n; }
+  return null;
+}
+
+// "A partir de": preco (formatado) da variante mais barata, so' quando o
+// produto tem variantes com AMPLITUDE real de preco (min < max). Usa o
+// price_formatted da propria opcao (formato identico ao do Shopkit); recorre
+// a price_min/fmtPrice se as options nao trouxerem formatado.
+function aPartirDe(p) {
+  const groups = Array.isArray(p.option_groups) ? p.option_groups : [];
+  const opts   = Array.isArray(p.options) ? p.options : [];
+  const isVariant = groups.length > 0 || opts.length > 1;
+  if (!isVariant) return null;
+
+  let lo = null, hi = null;
+  for (const o of opts) {
+    const n = toNum(o.price);
+    if (n == null) continue;
+    if (lo == null || n < lo.n) lo = { n: n, f: o.price_formatted || fmtPrice(n) };
+    if (hi == null || n > hi)   hi = n;
+  }
+  if (lo != null && hi != null && lo.n < hi - 1e-6) return lo.f;
+
+  // fallback: sem options utilizaveis, usa o intervalo do produto
+  const pmin = toNum(p.price_min), pmax = toNum(p.price_max);
+  if (pmin != null && pmax != null && pmin < pmax - 1e-6) return fmtPrice(pmin);
+  return null;
+}
+
 function mapProduct(p) {
   const handle = p.handle || '';
   const img = (p.image && (p.image.full || p.image.square || p.image.thumb)) || NO_IMG;
@@ -131,6 +163,7 @@ function mapProduct(p) {
     pf:    p.price_formatted || fmtPrice(p.price),
     pp:    (p.price_promo != null) ? p.price_promo : null,
     ppf:   p.price_promo_formatted || null,
+    af:    aPartirDe(p),   // "A partir de" (variante mais barata) ou null
     url:   p.url || (SITE + '/product/' + handle),
     cart:  p.add_cart_url || (SITE + '/cart/add/' + handle),
     img:   img
