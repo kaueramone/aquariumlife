@@ -128,29 +128,42 @@ function toNum(v) {
   return null;
 }
 
-// "A partir de": preco (formatado) da variante mais barata, so' quando o
-// produto tem variantes com AMPLITUDE real de preco (min < max). Usa o
-// price_formatted da propria opcao (formato identico ao do Shopkit); recorre
-// a price_min/fmtPrice se as options nao trouxerem formatado.
+// Uma variante conta para o "desde" so' se estiver DISPONIVEL e com preco
+// valido: preco > 0 (nunca 0,00 nem "sob consulta") e com stock. No payload
+// de lista, o stock da variante vem como NUMERO (qty); no de detalhe pode vir
+// como objecto {stock_qty, stock_enabled, stock_backorder}.
+function optAvailable(o) {
+  const n = toNum(o.price);
+  if (n == null || n <= 0) return false;     // sem preco ou 0,00 -> ignorar
+  if (o.price_on_request) return false;
+  if (o.active === false) return false;
+  if (o.is_vendible === false) return false;
+  const s = o.stock;
+  if (typeof s === 'number') {
+    if (s <= 0) return false;                // qty <= 0 -> sem stock
+  } else if (s && typeof s === 'object') {
+    const q = toNum(s.stock_qty);
+    if (s.stock_enabled && !s.stock_backorder && (q == null || q <= 0)) return false;
+  }
+  return true;
+}
+
+// "desde": preco (formatado) da variante DISPONIVEL mais barata. Usa o
+// price_formatted da propria opcao (formato identico ao do Shopkit). Devolve
+// null se o produto nao tiver variantes ou se nenhuma estiver disponivel.
 function aPartirDe(p) {
   const groups = Array.isArray(p.option_groups) ? p.option_groups : [];
   const opts   = Array.isArray(p.options) ? p.options : [];
   const isVariant = groups.length > 0 || opts.length > 1;
   if (!isVariant) return null;
 
-  let lo = null, hi = null;
+  let lo = null;
   for (const o of opts) {
+    if (!optAvailable(o)) continue;          // salta sem stock / 0,00
     const n = toNum(o.price);
-    if (n == null) continue;
     if (lo == null || n < lo.n) lo = { n: n, f: o.price_formatted || fmtPrice(n) };
-    if (hi == null || n > hi)   hi = n;
   }
-  if (lo != null && hi != null && lo.n < hi - 1e-6) return lo.f;
-
-  // fallback: sem options utilizaveis, usa o intervalo do produto
-  const pmin = toNum(p.price_min), pmax = toNum(p.price_max);
-  if (pmin != null && pmax != null && pmin < pmax - 1e-6) return fmtPrice(pmin);
-  return null;
+  return lo ? lo.f : null;                    // nenhuma disponivel -> sem "desde"
 }
 
 function mapProduct(p) {

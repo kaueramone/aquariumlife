@@ -2378,10 +2378,12 @@
 
           list.innerHTML = '';
           slice.forEach(function(p) {
-            // Produtos com variantes: "A partir de" + preco da variante mais barata.
-            // Caso contrario, preco normal (com promo, se existir).
-            const priceHTML = p.af
-              ? '<span class="product-from">A partir de</span> <span class="product-actual">' + p.af + '</span>'
+            // Produtos com variantes: "desde" + preco da variante disponivel mais
+            // barata. Ignora valores 0,00 (variante sem stock). Caso contrario,
+            // preco normal (com promo, se existir).
+            const afVal = (p.af && !/^0([.,]0+)?\s*€?$/.test(String(p.af).trim())) ? p.af : null;
+            const priceHTML = afVal
+              ? '<span class="product-from">desde</span> <span class="product-actual">' + afVal + '</span>'
               : (p.pp
                   ? '<del>' + p.pf + '</del><span class="product-actual">' + p.ppf + '</span>'
                   : '<span class="product-actual">' + p.pf + '</span>');
