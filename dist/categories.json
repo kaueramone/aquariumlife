@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06",
+  "updated": "2026-07-07",
   "total": 27,
   "categories": [
     {
@@ -7,7 +7,7 @@
       "title": "Equipamento",
       "url": "https://www.aquariumlife.pt/category/equipamento",
       "handle": "equipamento",
-      "count": 327,
+      "count": 320,
       "children": [
         {
           "id": 527486,
@@ -77,7 +77,7 @@
           "title": "Led´s",
           "url": "https://www.aquariumlife.pt/category/equipamento-led-s",
           "handle": "equipamento-led-s",
-          "count": 17
+          "count": 10
         },
         {
           "id": 527496,

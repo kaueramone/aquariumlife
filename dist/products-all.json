@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-06",
+  "updated": "2026-07-07",
   "cat": "all",
   "slug": "all",
-  "total": 572,
+  "total": 565,
   "min": 0.5043,
   "max": 369.9471,
   "products": [
@@ -117,19 +117,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/babeb99-145006-kh-min.png"
     },
     {
-      "id": 5444769,
-      "title": "Twinstar Led 60B II",
-      "price": 69.9009,
-      "pf": "69,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/twinstar-led-60b-ii",
-      "cart": "https://www.aquariumlife.pt/cart/add/twinstar-led-60b-ii",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/095b579-113427-twinstar-led.png"
-    },
-    {
       "id": 5444770,
-      "title": "Twinstar led 30B II",
+      "title": "Twinstar LED B II",
       "price": 47.89619999999999,
       "pf": "47,90 €",
       "pp": null,
@@ -140,7 +129,7 @@
     },
     {
       "id": 5444771,
-      "title": "Twinstar Led 90A",
+      "title": "Twinstar LED A",
       "price": 69.003,
       "pf": "69,00 €",
       "pp": null,
@@ -150,36 +139,14 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/095b579-113427-twinstar-led.png"
     },
     {
-      "id": 5444772,
-      "title": "Twinstar led 600EA IV",
-      "price": 109.9005,
-      "pf": "109,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/twinstar-led-600ea-iv",
-      "cart": "https://www.aquariumlife.pt/cart/add/twinstar-led-600ea-iv",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/095b579-113427-twinstar-led.png"
-    },
-    {
       "id": 5444773,
-      "title": "Twinstar led IV 300EA",
+      "title": "Twinstar LED EA IV",
       "price": 76.8996,
       "pf": "76,90 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/twinstar-led-iv-300ea",
       "cart": "https://www.aquariumlife.pt/cart/add/twinstar-led-iv-300ea",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/095b579-113427-twinstar-led.png"
-    },
-    {
-      "id": 5444774,
-      "title": "Twinstar 120 led II 120A",
-      "price": 86.8995,
-      "pf": "86,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/twinstar-120-led-ii-120a",
-      "cart": "https://www.aquariumlife.pt/cart/add/twinstar-120-led-ii-120a",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/095b579-113427-twinstar-led.png"
     },
     {
@@ -1316,19 +1283,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3abb461-181116-g-nature-colour-river-sand-04-06-mm-10kg.png"
     },
     {
-      "id": 5444954,
-      "title": "Chihiros Hanging kit WRGBII Slim",
-      "price": 24.7968,
-      "pf": "24,80 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-hanging-kit-wrgbii-slim",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-hanging-kit-wrgbii-slim",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d3633c5-172710-chihiros-hanging-kit-b-series.png"
-    },
-    {
       "id": 5444955,
-      "title": "Chihiros Hanging kit WRGBII",
+      "title": "Chihiros Hanging kit",
       "price": 11.9556,
       "pf": "11,96 €",
       "pp": null,
@@ -1368,7 +1324,7 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/pp-areia-de-rio-2-35-25kg",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-areia-de-rio-2-35-25kg",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3bfeed1-104142-areao-de-rio-.jpg"
     },
     {
       "id": 5444962,
@@ -1401,7 +1357,7 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/as-visitherm-300w",
       "cart": "https://www.aquariumlife.pt/cart/add/as-visitherm-300w",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a3cf952-103124-as-visitherm300.jpg"
     },
     {
       "id": 5444967,
@@ -1412,7 +1368,7 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/eheim-thermo-control-e-50w",
       "cart": "https://www.aquariumlife.pt/cart/add/eheim-thermo-control-e-50w",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0718d4d-103342-eheim-thermo-control-e-50w.jpg"
     },
     {
       "id": 5444972,
@@ -2270,7 +2226,7 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/ma955-solenoide-valve",
       "cart": "https://www.aquariumlife.pt/cart/add/ma955-solenoide-valve",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6273223-104704-ma955_1920x1920.png"
     },
     {
       "id": 5445117,
@@ -2853,7 +2809,7 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/tubo-co2-poliuretano",
       "cart": "https://www.aquariumlife.pt/cart/add/tubo-co2-poliuretano",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bedca2d-104939-download.webp"
     },
     {
       "id": 5445188,
@@ -3447,7 +3403,7 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/tropica-aquarium-soil-9l-",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-aquarium-soil-9l-",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1337227-104328-711-tropica-aquarium-soil-9-lt.png"
     },
     {
       "id": 5512994,
@@ -3458,7 +3414,7 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/tropica-premium-nutrition-125ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-premium-nutrition-125ml",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/efc4f03-103550-plant-growth-system-nano-nachfuellflasche.webp"
     },
     {
       "id": 5512996,
@@ -3469,7 +3425,7 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/tropica-specialised-nutrition-125ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-specialised-nutrition-125ml",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/53c5c10-103849-fertilizante-liquido-specialised-tropica.jpg"
     },
     {
       "id": 5512998,
@@ -3799,7 +3755,7 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/esha-ndx-20ml",
       "cart": "https://www.aquariumlife.pt/cart/add/esha-ndx-20ml",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3bf1faa-102741-ndx-tratamento-parasitas-nematodes-20ml.jpg"
     },
     {
       "id": 5521450,
@@ -4650,46 +4606,13 @@
     },
     {
       "id": 5548433,
-      "title": "Chihiros WRGB W60 (55-75cm)",
+      "title": "Chihiros WRGB W",
       "price": 89.9499,
       "pf": "89,95 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/chihiros-wrgb-w60-55-75cm",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-wrgb-w60-55-75cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6581e22-153025-chihiros-series-w.png"
-    },
-    {
-      "id": 5548434,
-      "title": "Chihiros WRGB W75 (70-90cm)",
-      "price": 105.9522,
-      "pf": "105,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-wrgb-w75-70-90cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-wrgb-w75-70-90cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6581e22-153025-chihiros-series-w.png"
-    },
-    {
-      "id": 5548435,
-      "title": "Chihiros WRGB W100 (95-110cm)",
-      "price": 139.9494,
-      "pf": "139,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-wrgb-w100-95-110cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-wrgb-w100-95-110cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6581e22-153025-chihiros-series-w.png"
-    },
-    {
-      "id": 5548436,
-      "title": "Chihiros WRGB W120 (115-130cm)",
-      "price": 154.9554,
-      "pf": "154,96 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-wrgb-w120-115-130cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-wrgb-w120-115-130cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6581e22-153025-chihiros-series-w.png"
     },
     {
@@ -4767,7 +4690,7 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/chihiros-nano-co2-diffuser-l",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-nano-co2-diffuser-l",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b90cf90-105101-chihiros-nano-co2-diffuser-chihiros-aquatic-studio-1681434499.webp"
     },
     {
       "id": 5549685,
@@ -4822,7 +4745,7 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/chihiros-shade-para-wrgb-ii-e-wrgb-slim-30cm",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-shade-para-wrgb-ii-e-wrgb-slim-30cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/62b195c-105450-chihirosshadevivid.png"
     },
     {
       "id": 5549691,
@@ -6010,7 +5933,7 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/sf-reposicao-cartucho-carvao-zeolite-aqua-flow-100-150",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-reposicao-cartucho-carvao-zeolite-aqua-flow-100-150",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/eb5f0fc-100438-recargas-para-filtro-aquaflow-superfish.jpg"
     },
     {
       "id": 5559878,
@@ -6032,7 +5955,7 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/sf-reposicao-esponja-c2-carvao-activado-para-aqua-flow-xl",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-reposicao-esponja-c2-carvao-activado-para-aqua-flow-xl",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/529aa8f-101544-esponja-aquaflow-sf.jpg"
     },
     {
       "id": 5559884,

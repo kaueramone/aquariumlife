@@ -1,25 +1,14 @@
 {
-  "updated": "2026-07-06",
+  "updated": "2026-07-07",
   "cat": 527495,
   "slug": "equipamento-led-s",
-  "total": 17,
+  "total": 10,
   "min": 11.9556,
-  "max": 154.9554,
+  "max": 138.9531,
   "products": [
     {
-      "id": 5444769,
-      "title": "Twinstar Led 60B II",
-      "price": 69.9009,
-      "pf": "69,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/twinstar-led-60b-ii",
-      "cart": "https://www.aquariumlife.pt/cart/add/twinstar-led-60b-ii",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/095b579-113427-twinstar-led.png"
-    },
-    {
       "id": 5444770,
-      "title": "Twinstar led 30B II",
+      "title": "Twinstar LED B II",
       "price": 47.89619999999999,
       "pf": "47,90 €",
       "pp": null,
@@ -30,7 +19,7 @@
     },
     {
       "id": 5444771,
-      "title": "Twinstar Led 90A",
+      "title": "Twinstar LED A",
       "price": 69.003,
       "pf": "69,00 €",
       "pp": null,
@@ -40,36 +29,14 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/095b579-113427-twinstar-led.png"
     },
     {
-      "id": 5444772,
-      "title": "Twinstar led 600EA IV",
-      "price": 109.9005,
-      "pf": "109,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/twinstar-led-600ea-iv",
-      "cart": "https://www.aquariumlife.pt/cart/add/twinstar-led-600ea-iv",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/095b579-113427-twinstar-led.png"
-    },
-    {
       "id": 5444773,
-      "title": "Twinstar led IV 300EA",
+      "title": "Twinstar LED EA IV",
       "price": 76.8996,
       "pf": "76,90 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/twinstar-led-iv-300ea",
       "cart": "https://www.aquariumlife.pt/cart/add/twinstar-led-iv-300ea",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/095b579-113427-twinstar-led.png"
-    },
-    {
-      "id": 5444774,
-      "title": "Twinstar 120 led II 120A",
-      "price": 86.8995,
-      "pf": "86,90 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/twinstar-120-led-ii-120a",
-      "cart": "https://www.aquariumlife.pt/cart/add/twinstar-120-led-ii-120a",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/095b579-113427-twinstar-led.png"
     },
     {
@@ -106,19 +73,8 @@
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a403846-173500-chihiros-wrgb-ii-120cm.png"
     },
     {
-      "id": 5444954,
-      "title": "Chihiros Hanging kit WRGBII Slim",
-      "price": 24.7968,
-      "pf": "24,80 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-hanging-kit-wrgbii-slim",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-hanging-kit-wrgbii-slim",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d3633c5-172710-chihiros-hanging-kit-b-series.png"
-    },
-    {
       "id": 5444955,
-      "title": "Chihiros Hanging kit WRGBII",
+      "title": "Chihiros Hanging kit",
       "price": 11.9556,
       "pf": "11,96 €",
       "pp": null,
@@ -140,46 +96,13 @@
     },
     {
       "id": 5548433,
-      "title": "Chihiros WRGB W60 (55-75cm)",
+      "title": "Chihiros WRGB W",
       "price": 89.9499,
       "pf": "89,95 €",
       "pp": null,
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/chihiros-wrgb-w60-55-75cm",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-wrgb-w60-55-75cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6581e22-153025-chihiros-series-w.png"
-    },
-    {
-      "id": 5548434,
-      "title": "Chihiros WRGB W75 (70-90cm)",
-      "price": 105.9522,
-      "pf": "105,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-wrgb-w75-70-90cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-wrgb-w75-70-90cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6581e22-153025-chihiros-series-w.png"
-    },
-    {
-      "id": 5548435,
-      "title": "Chihiros WRGB W100 (95-110cm)",
-      "price": 139.9494,
-      "pf": "139,95 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-wrgb-w100-95-110cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-wrgb-w100-95-110cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6581e22-153025-chihiros-series-w.png"
-    },
-    {
-      "id": 5548436,
-      "title": "Chihiros WRGB W120 (115-130cm)",
-      "price": 154.9554,
-      "pf": "154,96 €",
-      "pp": null,
-      "ppf": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-wrgb-w120-115-130cm",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-wrgb-w120-115-130cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6581e22-153025-chihiros-series-w.png"
     },
     {
@@ -191,7 +114,7 @@
       "ppf": null,
       "url": "https://www.aquariumlife.pt/product/chihiros-shade-para-wrgb-ii-e-wrgb-slim-30cm",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-shade-para-wrgb-ii-e-wrgb-slim-30cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/62b195c-105450-chihirosshadevivid.png"
     }
   ]
 }
