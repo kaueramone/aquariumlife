@@ -94,9 +94,9 @@ function initContact() {
   scheduleCard.className = 'aq-contact-card';
   scheduleCard.innerHTML =
     '<div class="aq-contact-card-title">Horário de Funcionamento</div>' +
-    '<div class="aq-schedule-row"><span class="aq-day">Segunda – Sexta</span><span class="aq-hours">14:00 – 18:00</span></div>' +
-    '<div class="aq-schedule-row"><span class="aq-day">Sábado</span><span class="aq-hours">10:00 – 13:00</span></div>' +
-    '<div class="aq-schedule-row"><span class="aq-day">Domingo</span><span class="aq-closed">Encerrado</span></div>';
+    '<div class="aq-schedule-row"><span class="aq-day">Terça – Sexta</span><span class="aq-hours">14:00 – 18:00</span></div>' +
+    '<div class="aq-schedule-row"><span class="aq-day">Sábado</span><span class="aq-hours">10:00 – 12:00<br>14:00 – 17:00</span></div>' +
+    '<div class="aq-schedule-row"><span class="aq-day">Segunda e Domingo</span><span class="aq-closed">Encerrado</span></div>';
   infoPanel.appendChild(scheduleCard);
 
   // Card: redes sociais

@@ -231,7 +231,7 @@
     &:last-child { border-bottom: none; }
 
     .aq-day   { color: $color-text-secondary; }
-    .aq-hours { color: $color-text-primary; font-weight: 600; }
+    .aq-hours { color: $color-text-primary; font-weight: 600; text-align: right; line-height: 1.35; }
     .aq-closed { color: rgba(255, 61, 92, 0.8); font-weight: 600; }
   }
 
