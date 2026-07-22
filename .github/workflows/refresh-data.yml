@@ -18,7 +18,10 @@ concurrency:
 
 jobs:
   refresh:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted        # corre na tua maquina (IP que a Shopkit aceita)
+    defaults:
+      run:
+        shell: bash             # passos 'run' usam bash (Git Bash no Windows)
     steps:
       - name: Checkout
         uses: actions/checkout@v4

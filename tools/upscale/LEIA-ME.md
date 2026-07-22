@@ -1,22 +1,33 @@
-# Upscale de imagens com Real-ESRGAN (Windows)
+# Upscale de imagens — Real-ESRGAN
 
-Ferramenta para a **Camada B** do PLANO_QUALIDADE_IMAGENS.md — só para imagens sem fonte oficial melhor.
+Camada B do `PLANO_QUALIDADE_IMAGENS.md` — só para imagens sem fonte oficial melhor.
 
-## Instalação (uma vez)
+## Modo padrão: GitHub Actions (nada para instalar)
 
-1. Descarregue o executável Windows: https://github.com/xinntao/Real-ESRGAN/releases (ficheiro `realesrgan-ncnn-vulkan-*-windows.zip`);
-2. Extraia o conteúdo para esta pasta (`tools\upscale\`) — deve ficar `realesrgan-ncnn-vulkan.exe` ao lado deste ficheiro;
-3. Funciona em qualquer placa gráfica razoável (NVIDIA/AMD/Intel, via Vulkan). Sem GPU dedicada também corre, só mais lento.
+Tudo roda na nuvem do GitHub, dentro do repositório:
 
-## Uso
+1. **Uma vez só:** adicionar o secret `SHOPKIT_API_KEY` no GitHub
+   (repositório → Settings → Secrets and variables → Actions → New repository secret
+   — o valor é o mesmo do `.env.local`). *Este secret também destrava o refresh
+   automático dos JSONs de 6 em 6 horas (`refresh-data.yml`).*
+2. GitHub → aba **Actions** → workflow **"Upscale de imagens (Real-ESRGAN)"** → **Run workflow**:
+   - campo `ids`: os produtos a ampliar (ex.: `5444865,5444866,5444891`), ou
+   - vazio: modo automático (qualquer imagem do catálogo com lado menor < 300 px).
+3. A Action busca as imagens na API, amplia 4× e **commita sozinha** em `dist/img-hd/`
+   (já publicado via jsDelivr, com purge).
+4. Avise o Fable: ele valida cada resultado (texto de rótulo derretido = rejeitado)
+   e aplica nos produtos via API.
 
-1. Coloque as imagens pequenas na pasta `entrada\` (eu preparo este lote para si quando chegarmos à fase 4);
-2. Dê dois cliques em `upscale.bat`;
-3. Os resultados saem em `..\..\dist\img-hd\` já no sítio certo para publicar;
-4. Corra o `publicar_dados.bat` da raiz → as imagens ficam servidas via jsDelivr → eu aplico nos produtos via API e valido uma a uma.
+## Modo alternativo: local no Windows (offline/fallback)
+
+1. Baixar https://github.com/xinntao/Real-ESRGAN/releases (`realesrgan-ncnn-vulkan-*-windows.zip`)
+   e extrair o `.exe` para esta pasta;
+2. Colocar as imagens em `entrada\`;
+3. Dois cliques em `upscale.bat` → resultados em `..\..\dist\img-hd\`;
+4. `publicar_dados.bat` na raiz → avisar o Fable.
 
 ## Notas
 
-- Modelo usado: `realesrgan-x4plus` (4×). Um 300×300 vira 1200×1200;
-- Rótulos com texto pequeno podem sair "derretidos" — a minha validação visual apanha e devolve esses para substituição manual;
-- Não use nas fotos que têm fonte oficial melhor — substituir é sempre superior a inventar pixels.
+- Modelo `realesrgan-x4plus` (300×300 → 1200×1200). CPU da Action = mesma qualidade da GPU, só mais lenta;
+- Substituir por packshot oficial é sempre superior a ampliar — o upscale é o último recurso;
+- Nunca aplicar sem a validação visual do Fable.

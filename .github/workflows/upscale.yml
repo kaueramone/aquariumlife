@@ -1,0 +1,70 @@
+name: Upscale de imagens (Real-ESRGAN)
+
+# Amplia imagens pequenas do catálogo em 4x e publica em dist/img-hd/ (servido via jsDelivr).
+# Disparo manual (Run workflow). Depois do commit, o Fable valida e aplica nos produtos via API.
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: 'IDs de produtos separados por vírgula (vazio = automático: lado menor < 300px)'
+        required: false
+        default: ''
+      limiar:
+        description: 'Limiar em px para o modo automático'
+        required: false
+        default: '300'
+
+permissions:
+  contents: write
+
+jobs:
+  upscale:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Preparar entradas (API Shopkit)
+        env:
+          SHOPKIT_API_KEY: ${{ secrets.SHOPKIT_API_KEY }}
+          IDS: ${{ github.event.inputs.ids }}
+          LIMIAR: ${{ github.event.inputs.limiar }}
+        run: |
+          npm i --no-fund --no-audit image-size@1
+          node tools/upscale/selecionar-pequenas.cjs
+          ls -la tools/upscale/entrada/ || true
+
+      - name: Instalar Real-ESRGAN (ncnn)
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q libvulkan1 mesa-vulkan-drivers unzip
+          curl -sL -o re.zip https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesrgan-ncnn-vulkan-20220424-ubuntu.zip
+          unzip -q re.zip -d re
+          chmod +x re/realesrgan-ncnn-vulkan
+
+      - name: Ampliar 4x
+        run: |
+          shopt -s nullglob
+          files=(tools/upscale/entrada/*)
+          if [ ${#files[@]} -eq 0 ]; then echo "Sem entradas — nada a fazer."; exit 0; fi
+          mkdir -p dist/img-hd
+          ./re/realesrgan-ncnn-vulkan -i tools/upscale/entrada -o dist/img-hd -n realesrgan-x4plus -f jpg || \
+          ./re/realesrgan-ncnn-vulkan -g -1 -i tools/upscale/entrada -o dist/img-hd -n realesrgan-x4plus -f jpg
+          ls -la dist/img-hd/
+
+      - name: Commit e purge jsDelivr
+        run: |
+          git config user.name "upscale-bot"
+          git config user.email "actions@github.com"
+          git add dist/img-hd
+          if git diff --cached --quiet; then echo "Nada novo."; exit 0; fi
+          git commit -m "img: upscale 4x Real-ESRGAN ($(date -u +%F))"
+          git push
+          for f in dist/img-hd/*; do
+            curl -s "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/$f" > /dev/null || true
+          done
+          echo "Publicado. URLs: https://cdn.jsdelivr.net/gh/${{ github.repository }}@main/dist/img-hd/<id>.jpg"
