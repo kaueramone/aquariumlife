@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-13",
+  "updated": "2026-07-22",
   "cat": 527713,
   "slug": "equipamento-acessorios",
-  "total": 56,
+  "total": 58,
   "min": 1.0947,
   "max": 82.9512,
   "products": [
@@ -16,7 +16,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/aa-armadilha-planarias-1buraco",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-armadilha-planarias-1buraco",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/de3af4f-163543-aa-armadilha-planarias-3buracos.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/de3af4f-163543-aa-armadilha-planarias-3buracos.png",
+      "st": 1
     },
     {
       "id": 5444788,
@@ -28,7 +29,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/aa-armadilha-planarias-2buracos",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-armadilha-planarias-2buracos",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/de3af4f-163543-aa-armadilha-planarias-3buracos.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/de3af4f-163543-aa-armadilha-planarias-3buracos.png",
+      "st": 1
     },
     {
       "id": 5444789,
@@ -40,7 +42,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/aa-armadilha-planarias-3buracos",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-armadilha-planarias-3buracos",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/de3af4f-163543-aa-armadilha-planarias-3buracos.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/de3af4f-163543-aa-armadilha-planarias-3buracos.png",
+      "st": 1
     },
     {
       "id": 5444790,
@@ -52,7 +55,21 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/aa-copos-de-vidro-plantas",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-copos-de-vidro-plantas",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/af734eb-163047-aa-copos-de-vidro-plantas.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/af734eb-163047-aa-copos-de-vidro-plantas.png",
+      "st": 1
+    },
+    {
+      "id": 5444816,
+      "title": "Dennerle Scaper´s Tool Set",
+      "price": 36.9,
+      "pf": "36,90 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/dennerle-scapers-tool-set",
+      "cart": "https://www.aquariumlife.pt/cart/add/dennerle-scapers-tool-set",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1e0d74f-103134-dennerle-scapers-tool-set.png",
+      "st": 0
     },
     {
       "id": 5444865,
@@ -64,7 +81,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-algae-magnet-floating-16mm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-algae-magnet-floating-16mm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0091e4a-105503-pp-algae-magnet-floating-16mm.jpg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0091e4a-105503-pp-algae-magnet-floating-16mm.jpg",
+      "st": 1
     },
     {
       "id": 5444866,
@@ -76,7 +94,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-nano-thermometer",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-nano-thermometer",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fb3ebde-105607-pp-nano-thermometer.jpg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fb3ebde-105607-pp-nano-thermometer.jpg",
+      "st": 1
     },
     {
       "id": 5444867,
@@ -88,7 +107,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-thermometer",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-thermometer",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/cab883d-105740-pp-thermometer.jpg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/cab883d-105740-pp-thermometer.jpg",
+      "st": 1
     },
     {
       "id": 5444868,
@@ -100,7 +120,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-digital-thermometer",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-digital-thermometer",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2a2a192-110107-papillon-digital-thermometer.webp"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2a2a192-110107-papillon-digital-thermometer.webp",
+      "st": 1
     },
     {
       "id": 5444869,
@@ -112,7 +133,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-cotovelo-ar",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-cotovelo-ar",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
     },
     {
       "id": 5444871,
@@ -124,7 +146,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-torneira-de-ar-simples",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-torneira-de-ar-simples",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
     },
     {
       "id": 5444872,
@@ -136,7 +159,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-torneira-de-ar-em-linha",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-torneira-de-ar-em-linha",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
     },
     {
       "id": 5444873,
@@ -148,7 +172,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-torneira-de-ar-dupla",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-torneira-de-ar-dupla",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/04d226e-183410-74p03362.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/04d226e-183410-74p03362.jpeg",
+      "st": 1
     },
     {
       "id": 5444874,
@@ -160,7 +185,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-torneira-de-ar-em-cruz",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-torneira-de-ar-em-cruz",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0bdca94-183407-74p03353.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0bdca94-183407-74p03353.jpeg",
+      "st": 1
     },
     {
       "id": 5444875,
@@ -172,7 +198,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-torneira-de-ar-em-x",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-torneira-de-ar-em-x",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
     },
     {
       "id": 5444876,
@@ -184,7 +211,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-pedra-difusora-25x50-mm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-pedra-difusora-25x50-mm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/572ca61-183404-74p03245.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/572ca61-183404-74p03245.jpeg",
+      "st": 1
     },
     {
       "id": 5444877,
@@ -196,7 +224,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-pedra-difusora-18x50-mm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-pedra-difusora-18x50-mm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bc72078-183401-74p03242.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bc72078-183401-74p03242.jpeg",
+      "st": 1
     },
     {
       "id": 5444878,
@@ -208,7 +237,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-pedra-difusora-15x25-mm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-pedra-difusora-15x25-mm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/99f95b4-183320-74p03239.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/99f95b4-183320-74p03239.jpeg",
+      "st": 1
     },
     {
       "id": 5444879,
@@ -220,7 +250,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-pedra-difusora-cor-16x65-mm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-pedra-difusora-cor-16x65-mm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9e4bb08-183316-74p03248.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9e4bb08-183316-74p03248.jpeg",
+      "st": 1
     },
     {
       "id": 5444880,
@@ -232,7 +263,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-pedra-difusora-cor-17x285-mm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-pedra-difusora-cor-17x285-mm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
     },
     {
       "id": 5444881,
@@ -244,7 +276,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-pedra-difusora-branca-24x45-mm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-pedra-difusora-branca-24x45-mm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3ee368d-183314-74p03236.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3ee368d-183314-74p03236.jpeg",
+      "st": 1
     },
     {
       "id": 5444882,
@@ -256,7 +289,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-pedra-difusora-branca-15x32-mm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-pedra-difusora-branca-15x32-mm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
     },
     {
       "id": 5444883,
@@ -268,7 +302,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-pedra-difusora-branca-25x25-mm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-pedra-difusora-branca-25x25-mm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/db3ea2c-183309-74p03233.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/db3ea2c-183309-74p03233.jpeg",
+      "st": 1
     },
     {
       "id": 5444884,
@@ -280,7 +315,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-area-flutuante-alimentacao-75mm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-area-flutuante-alimentacao-75mm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
     },
     {
       "id": 5444885,
@@ -292,7 +328,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-breedy-s",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-breedy-s",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
     },
     {
       "id": 5444886,
@@ -304,7 +341,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-breedy-net-box-l",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-breedy-net-box-l",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9bb492f-183307-74p03185.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9bb492f-183307-74p03185.jpeg",
+      "st": 1
     },
     {
       "id": 5444887,
@@ -316,7 +354,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-breeding-hang-on-s",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-breeding-hang-on-s",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
     },
     {
       "id": 5444888,
@@ -328,7 +367,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-breedy-airforce",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-breedy-airforce",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
     },
     {
       "id": 5444889,
@@ -340,7 +380,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-osmopower-20-190-l-d",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-osmopower-20-190-l-d",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
     },
     {
       "id": 5444890,
@@ -352,7 +393,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/pp-aquarium-pad-6030-cm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-aquarium-pad-6030-cm",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
     },
     {
       "id": 5444891,
@@ -364,7 +406,8 @@
       "af": "2,50 €",
       "url": "https://www.aquariumlife.pt/product/pp-rede-aquario-8cm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-rede-aquario-8cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9c3a46f-183303-74p03293.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9c3a46f-183303-74p03293.jpeg",
+      "st": 1
     },
     {
       "id": 5444958,
@@ -376,7 +419,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/hobby-autocolante-100x50cm-frosty",
       "cart": "https://www.aquariumlife.pt/cart/add/hobby-autocolante-100x50cm-frosty",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/cbf7d4f-164502-hobby-autocolante-100x50cm-frosty.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/cbf7d4f-164502-hobby-autocolante-100x50cm-frosty.png",
+      "st": 1
     },
     {
       "id": 5445023,
@@ -388,7 +432,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/sf-hose-brush-cleaner",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-hose-brush-cleaner",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ec4b4f4-145904-sf-hose-brush-cleaner.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ec4b4f4-145904-sf-hose-brush-cleaner.png",
+      "st": 1
     },
     {
       "id": 5445024,
@@ -400,7 +445,21 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/sf-aqua-syphon-set",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-aqua-syphon-set",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/631744f-145307-sf-aqua-syphon-set.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/631744f-145307-sf-aqua-syphon-set.png",
+      "st": 1
+    },
+    {
+      "id": 5445032,
+      "title": "SF SCAPING FOAM 375 ML",
+      "price": 9.2988,
+      "pf": "9,30 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/sf-scaping-foam-375-ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/sf-scaping-foam-375-ml",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/dfa0154-144054-sf-scaping-foam-375-ml.png",
+      "st": 0
     },
     {
       "id": 5445033,
@@ -412,7 +471,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/sf-float-clean-magnet-l",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-float-clean-magnet-l",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/aeb0436-143759-sf-float-clean-magnet-l.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/aeb0436-143759-sf-float-clean-magnet-l.png",
+      "st": 1
     },
     {
       "id": 5445034,
@@ -424,7 +484,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/sf-air-tube-suction-cup-4x",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-air-tube-suction-cup-4x",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f69f801-143159-sf-air-tube-suction-cup-4x.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f69f801-143159-sf-air-tube-suction-cup-4x.png",
+      "st": 1
     },
     {
       "id": 5445035,
@@ -436,7 +497,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/sf-air-non-return-valve-4-6-mm-2x",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-air-non-return-valve-4-6-mm-2x",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/943a48b-143002-air-non-return-valve-4-6-mm-2x.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/943a48b-143002-air-non-return-valve-4-6-mm-2x.png",
+      "st": 1
     },
     {
       "id": 5445036,
@@ -448,7 +510,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/sf-air-tube-25-m-roll",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-air-tube-25-m-roll",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5ebd5fa-142745-sf-air-tube-25-m-roll.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5ebd5fa-142745-sf-air-tube-25-m-roll.png",
+      "st": 1
     },
     {
       "id": 5445051,
@@ -460,7 +523,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/aquael-limpador-mangueria-o-9-30-mm-160-cm",
       "cart": "https://www.aquariumlife.pt/cart/add/aquael-limpador-mangueria-o-9-30-mm-160-cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4a6ba65-153143-aquael-limpador-mangueira-o-9-30-mm.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4a6ba65-153143-aquael-limpador-mangueira-o-9-30-mm.png",
+      "st": 1
     },
     {
       "id": 5445052,
@@ -472,7 +536,8 @@
       "af": "11,60 €",
       "url": "https://www.aquariumlife.pt/product/aquael-magnetic-cleaner-s-vidro-3-6-mm",
       "cart": "https://www.aquariumlife.pt/cart/add/aquael-magnetic-cleaner-s-vidro-3-6-mm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ef266a9-152701-aquael-magnetic-cleaner-l.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ef266a9-152701-aquael-magnetic-cleaner-l.png",
+      "st": 1
     },
     {
       "id": 5445055,
@@ -484,7 +549,8 @@
       "af": "1,89 €",
       "url": "https://www.aquariumlife.pt/product/aquael-air-tube-4-6-mm-3-m",
       "cart": "https://www.aquariumlife.pt/cart/add/aquael-air-tube-4-6-mm-3-m",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f5537ba-152350-aquael-air-tube-4_6-mm-3.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f5537ba-152350-aquael-air-tube-4_6-mm-3.png",
+      "st": 1
     },
     {
       "id": 5445982,
@@ -496,7 +562,8 @@
       "af": "11,75 €",
       "url": "https://www.aquariumlife.pt/product/wa-conexao-rapida-para-tubo-12-16mm",
       "cart": "https://www.aquariumlife.pt/cart/add/wa-conexao-rapida-para-tubo-12-16mm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/7a1d2ac-154739-wa-conexao-rapida-para-tubo.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/7a1d2ac-154739-wa-conexao-rapida-para-tubo.png",
+      "st": 1
     },
     {
       "id": 5532656,
@@ -508,7 +575,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/cola-segundos-para-plantas-gel-20g",
       "cart": "https://www.aquariumlife.pt/cart/add/cola-segundos-para-plantas-gel-20g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6a43b35-171956-cola-me-gel-para-plantas.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6a43b35-171956-cola-me-gel-para-plantas.png",
+      "st": 1
     },
     {
       "id": 5532657,
@@ -520,7 +588,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/cola-segundos-para-hardscape-liquido-20g",
       "cart": "https://www.aquariumlife.pt/cart/add/cola-segundos-para-hardscape-liquido-20g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/aaaf9c8-171842-cola-me-liquida-para-hardscape.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/aaaf9c8-171842-cola-me-liquida-para-hardscape.png",
+      "st": 1
     },
     {
       "id": 5549676,
@@ -532,7 +601,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/chihiros-deluxe-4-colours-tube",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-deluxe-4-colours-tube",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9fe5d79-182428-chihiros-deluxe-4-color-silicone-tube-chihiros-aquatic-studio-312639650.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9fe5d79-182428-chihiros-deluxe-4-color-silicone-tube-chihiros-aquatic-studio-312639650.jpeg",
+      "st": 1
     },
     {
       "id": 5549677,
@@ -544,7 +614,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/chihiros-dosing-pump-mate-2-cabecas",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-dosing-pump-mate-2-cabecas",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/423ce5f-182424-chihiros-dosing-system-chihiros-aquatic-studio-1679963857_d0101ffb-1594-4625-a3db-686579394ba7.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/423ce5f-182424-chihiros-dosing-system-chihiros-aquatic-studio-1679963857_d0101ffb-1594-4625-a3db-686579394ba7.jpeg",
+      "st": 1
     },
     {
       "id": 5549678,
@@ -556,7 +627,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/chihiros-dosing-container-4-pcs-450ml",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-dosing-container-4-pcs-450ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/aa9d1ab-182421-chihiros-dosing-system-chihiros-aquatic-studio-1661134753.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/aa9d1ab-182421-chihiros-dosing-system-chihiros-aquatic-studio-1661134753.jpeg",
+      "st": 1
     },
     {
       "id": 5549679,
@@ -568,7 +640,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/chihiros-dosing-container-holder",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-dosing-container-holder",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/8dd98a9-182416-the-world-s-first-professional-freshwater-aquascape-dosing-system-chihiros-dosing-system-chihiros-aquatic-studio-1661931487.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/8dd98a9-182416-the-world-s-first-professional-freshwater-aquascape-dosing-system-chihiros-dosing-system-chihiros-aquatic-studio-1661931487.jpeg",
+      "st": 1
     },
     {
       "id": 5549680,
@@ -580,7 +653,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/chihiros-magnetic-stirrers",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-magnetic-stirrers",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/96b90cb-182431-chihiros-magnetic-stirrers-chihiros-aquatic-studio-312617983.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/96b90cb-182431-chihiros-magnetic-stirrers-chihiros-aquatic-studio-312617983.jpeg",
+      "st": 1
     },
     {
       "id": 5549685,
@@ -592,7 +666,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/chihiros-dosing-tube-holder",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-dosing-tube-holder",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d0220c6-110640-chihiros-dosing-tube-holder.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d0220c6-110640-chihiros-dosing-tube-holder.png",
+      "st": 1
     },
     {
       "id": 5549686,
@@ -604,7 +679,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/chihiros-dosing-tube-holder-x",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-dosing-tube-holder-x",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1a6f74d-110924-chihiros-dosing-tube-holder-x.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1a6f74d-110924-chihiros-dosing-tube-holder-x.png",
+      "st": 1
     },
     {
       "id": 5549687,
@@ -616,7 +692,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/chihiros-magnet-cleaner-mini",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-magnet-cleaner-mini",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0a0bdec-182413-chihiros-magnet-cleaner-chihiros-aquatic-studio-1677845783.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0a0bdec-182413-chihiros-magnet-cleaner-chihiros-aquatic-studio-1677845783.jpeg",
+      "st": 1
     },
     {
       "id": 5549688,
@@ -628,7 +705,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/chihiros-magnet-cleaner-nano",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-magnet-cleaner-nano",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/dee49e6-182411-chihiros-magnet-cleaner-chihiros-aquatic-studio-1677845780.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/dee49e6-182411-chihiros-magnet-cleaner-chihiros-aquatic-studio-1677845780.jpeg",
+      "st": 1
     },
     {
       "id": 5559847,
@@ -640,7 +718,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/sf-ventosas-estrela-2x-s",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-ventosas-estrela-2x-s",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/47e20da-171957-8715897000782superfishstarsuckersmallblister2pcsfront-1280x1280.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/47e20da-171957-8715897000782superfishstarsuckersmallblister2pcsfront-1280x1280.jpeg",
+      "st": 1
     },
     {
       "id": 5559848,
@@ -652,7 +731,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/sf-ventosas-para-mangueiras-16-22mm",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-ventosas-para-mangueiras-16-22mm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/01026fa-172000-superfish-sf-ventouses-16-22mm-2-pieces-8715897000843-a4060035-29262241202289.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/01026fa-172000-superfish-sf-ventouses-16-22mm-2-pieces-8715897000843-a4060035-29262241202289.png",
+      "st": 1
     },
     {
       "id": 5559884,
@@ -664,7 +744,8 @@
       "af": "1,55 €",
       "url": "https://www.aquariumlife.pt/product/sf-rede-para-aquario-8cm",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-rede-para-aquario-8cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/115bb0b-172011-superfish-net-75-cm-1280x1280.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/115bb0b-172011-superfish-net-75-cm-1280x1280.jpeg",
+      "st": 1
     },
     {
       "id": 5559891,
@@ -676,7 +757,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/sf-air-tube-clamp-2x",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-air-tube-clamp-2x",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/86ec686-172005-foudebassin-com-sf-air-tube-clamp-2x-sf-air-tube-clamp-2x-8715897336928-c8010060-58764092080470.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/86ec686-172005-foudebassin-com-sf-air-tube-clamp-2x-sf-air-tube-clamp-2x-8715897336928-c8010060-58764092080470.jpeg",
+      "st": 1
     }
   ]
 }

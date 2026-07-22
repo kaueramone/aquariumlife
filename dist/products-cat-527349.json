@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-13",
+  "updated": "2026-07-22",
   "cat": 527349,
   "slug": "alimentacao",
-  "total": 60,
+  "total": 62,
   "min": 2.3493,
   "max": 153.1473,
   "products": [
@@ -16,7 +16,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/shrimp-king-baby-35g",
       "cart": "https://www.aquariumlife.pt/cart/add/shrimp-king-baby-35g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/39cfbf2-113255-shrimp-king-baby-35g.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/39cfbf2-113255-shrimp-king-baby-35g.png",
+      "st": 1
     },
     {
       "id": 5444802,
@@ -28,7 +29,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/shrimp-king-protein-45g",
       "cart": "https://www.aquariumlife.pt/cart/add/shrimp-king-protein-45g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/facb35e-112419-shrimp-king-protein-45g.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/facb35e-112419-shrimp-king-protein-45g.png",
+      "st": 1
     },
     {
       "id": 5444803,
@@ -40,7 +42,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/shrimp-king-mineral-45g",
       "cart": "https://www.aquariumlife.pt/cart/add/shrimp-king-mineral-45g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b09c444-112124-shrimp-king-mineral-45g.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b09c444-112124-shrimp-king-mineral-45g.png",
+      "st": 1
     },
     {
       "id": 5444804,
@@ -52,7 +55,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/shrimp-king-complete-45g",
       "cart": "https://www.aquariumlife.pt/cart/add/shrimp-king-complete-45g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9966dcb-111605-shrimp-king-complete-45g.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9966dcb-111605-shrimp-king-complete-45g.png",
+      "st": 1
     },
     {
       "id": 5444805,
@@ -64,7 +68,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/shrimp-king-snow-pops-40g",
       "cart": "https://www.aquariumlife.pt/cart/add/shrimp-king-snow-pops-40g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4c15cab-110906-shrimp-king-snow-pops-40g.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4c15cab-110906-shrimp-king-snow-pops-40g.png",
+      "st": 1
     },
     {
       "id": 5444806,
@@ -76,7 +81,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/shrimp-king-5in1-30g",
       "cart": "https://www.aquariumlife.pt/cart/add/shrimp-king-5in1-30g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/90d6846-173514-shrimp-king-5in1-30g.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/90d6846-173514-shrimp-king-5in1-30g.png",
+      "st": 1
     },
     {
       "id": 5444913,
@@ -88,7 +94,8 @@
       "af": "6,10 €",
       "url": "https://www.aquariumlife.pt/product/bassleer-biofish-garlic-m-60g",
       "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-garlic-m-60g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/933c815-110736-bassleer-biofish-garlic-l-150g.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/933c815-110736-bassleer-biofish-garlic-l-150g.png",
+      "st": 1
     },
     {
       "id": 5444918,
@@ -100,7 +107,8 @@
       "af": "5,55 €",
       "url": "https://www.aquariumlife.pt/product/bassleer-biofish-regular-m-60g",
       "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-regular-m-60g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/59efb36-110234-bassleer-biofish-regular-m-600g.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/59efb36-110234-bassleer-biofish-regular-m-600g.png",
+      "st": 1
     },
     {
       "id": 5444920,
@@ -112,7 +120,8 @@
       "af": "6,10 €",
       "url": "https://www.aquariumlife.pt/product/bassleer-biofish-green-l-60g",
       "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-green-l-60g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f9de311-160858-bassleer-biofish-green-3xl-68g.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f9de311-160858-bassleer-biofish-green-3xl-68g.png",
+      "st": 1
     },
     {
       "id": 5444927,
@@ -124,7 +133,8 @@
       "af": "5,65 €",
       "url": "https://www.aquariumlife.pt/product/bassleer-biofish-regular-flake-35g",
       "cart": "https://www.aquariumlife.pt/cart/add/bassleer-biofish-regular-flake-35g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bc4e070-161051-bassleer-biofish-regular-flake-70g.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bc4e070-161051-bassleer-biofish-regular-flake-70g.png",
+      "st": 1
     },
     {
       "id": 5444959,
@@ -136,7 +146,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/hobby-ovos-de-artemia-454g",
       "cart": "https://www.aquariumlife.pt/cart/add/hobby-ovos-de-artemia-454g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/90a8ff9-164218-ovos-de-artemia.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/90a8ff9-164218-ovos-de-artemia.png",
+      "st": 1
     },
     {
       "id": 5445067,
@@ -148,7 +159,8 @@
       "af": "7,10 €",
       "url": "https://www.aquariumlife.pt/product/tropical-welsi-gran-1000-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-welsi-gran-1000-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/76e300f-150205-tropical-welsi-gran-250-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/76e300f-150205-tropical-welsi-gran-250-ml.png",
+      "st": 1
     },
     {
       "id": 5445068,
@@ -160,7 +172,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/tropical-discus-gran-wild-1000-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-discus-gran-wild-1000-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bc79c1f-155732-tropical-discus-gran-wild-1000-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bc79c1f-155732-tropical-discus-gran-wild-1000-ml.png",
+      "st": 1
     },
     {
       "id": 5445069,
@@ -172,7 +185,8 @@
       "af": "3,90 €",
       "url": "https://www.aquariumlife.pt/product/tropical-supervit-granulat-1000-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-supervit-granulat-1000-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/e88cb0c-153441-tropical-supervit-granulat-250-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/e88cb0c-153441-tropical-supervit-granulat-250-ml.png",
+      "st": 1
     },
     {
       "id": 5445070,
@@ -184,7 +198,8 @@
       "af": "8,50 €",
       "url": "https://www.aquariumlife.pt/product/tropical-cichlid-gran-1000-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-cichlid-gran-1000-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4ab042b-151214-tropical-cichlid-gran-250-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4ab042b-151214-tropical-cichlid-gran-250-ml.png",
+      "st": 1
     },
     {
       "id": 5445071,
@@ -196,7 +211,8 @@
       "af": "4,31 €",
       "url": "https://www.aquariumlife.pt/product/tropical-discus-granulat-d-50-plus-1000-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-discus-granulat-d-50-plus-1000-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bfafffb-152744-tropical-discus-granulat-d-50-plus-250-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bfafffb-152744-tropical-discus-granulat-d-50-plus-250-ml.png",
+      "st": 1
     },
     {
       "id": 5445072,
@@ -208,7 +224,8 @@
       "af": "14,05 €",
       "url": "https://www.aquariumlife.pt/product/tropical-supervit-flakes-1000-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-supervit-flakes-1000-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1b05aa0-153652-tropical-supervit-flakes-250-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1b05aa0-153652-tropical-supervit-flakes-250-ml.png",
+      "st": 1
     },
     {
       "id": 5445073,
@@ -220,7 +237,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/tropical-cichlid-carnivore-s-250-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-cichlid-carnivore-s-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/7b10516-155551-tropical-cichlid-carnivore-s-250-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/7b10516-155551-tropical-cichlid-carnivore-s-250-ml.png",
+      "st": 1
     },
     {
       "id": 5445074,
@@ -232,7 +250,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/tropical-supervit-tablets-a-250-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-supervit-tablets-a-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/904d662-155422-tropical-supervit-tablets-a-250-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/904d662-155422-tropical-supervit-tablets-a-250-ml.png",
+      "st": 1
     },
     {
       "id": 5445075,
@@ -244,7 +263,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/tropical-3-algae-tablets-a-250-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-3-algae-tablets-a-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6620a66-155219-tropical-3-algae-tablets-a-250-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6620a66-155219-tropical-3-algae-tablets-a-250-ml.png",
+      "st": 1
     },
     {
       "id": 5445076,
@@ -256,7 +276,8 @@
       "af": "7,60 €",
       "url": "https://www.aquariumlife.pt/product/tropical-plecos-tablets-50-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-plecos-tablets-50-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3152d0a-154946-tropical-plecos-tablets-250-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3152d0a-154946-tropical-plecos-tablets-250-ml.png",
+      "st": 1
     },
     {
       "id": 5445078,
@@ -268,19 +289,21 @@
       "af": "6,10 €",
       "url": "https://www.aquariumlife.pt/product/tropical-3-algae-tablets-b-50-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-3-algae-tablets-b-50-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1fefe72-154632-tropical-3-algae-tablets-b-250-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1fefe72-154632-tropical-3-algae-tablets-b-250-ml.png",
+      "st": 1
     },
     {
       "id": 5445080,
       "title": "Tropical Supervit Tablets B",
-      "price": 4.944599999999999,
-      "pf": "4,94 €",
+      "price": 11.746500000000001,
+      "pf": "11,75 €",
       "pp": null,
       "ppf": null,
-      "af": "4,94 €",
+      "af": "11,75 €",
       "url": "https://www.aquariumlife.pt/product/tropical-supervit-tablets-b-50-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-supervit-tablets-b-50-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/305b24f-154353-tropical-supervit-tablets-b-250-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/305b24f-154353-tropical-supervit-tablets-b-250-ml.png",
+      "st": 1
     },
     {
       "id": 5445086,
@@ -292,7 +315,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/tropical-d-50-plus-flakes-250-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-d-50-plus-flakes-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/c5aed14-153257-tropical-d-50-plus-flakes-250-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/c5aed14-153257-tropical-d-50-plus-flakes-250-ml.png",
+      "st": 1
     },
     {
       "id": 5445089,
@@ -304,7 +328,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/tropical-discus-granulat-d-50-plus-baby-100-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-discus-granulat-d-50-plus-baby-100-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0d3ebf1-152533-tropical-discus-granulat-d-50-plus-baby-100-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0d3ebf1-152533-tropical-discus-granulat-d-50-plus-baby-100-ml.png",
+      "st": 1
     },
     {
       "id": 5445090,
@@ -316,7 +341,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/tropical-malawi-chips-250-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-malawi-chips-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ffe2029-151802-tropical-malawi-chips-250-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ffe2029-151802-tropical-malawi-chips-250-ml.png",
+      "st": 1
     },
     {
       "id": 5445091,
@@ -328,7 +354,8 @@
       "af": "4,45 €",
       "url": "https://www.aquariumlife.pt/product/tropical-vitality-color-granulat-100ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-vitality-color-granulat-100ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ef93cdc-151443-tropical-vitality-color-granulat-250ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ef93cdc-151443-tropical-vitality-color-granulat-250ml.png",
+      "st": 1
     },
     {
       "id": 5445103,
@@ -340,7 +367,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/tropical-d-allio-plus-granulat-250-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-d-allio-plus-granulat-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/861e15f-151035-tropical-d-allio-plus-granulat-250-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/861e15f-151035-tropical-d-allio-plus-granulat-250-ml.png",
+      "st": 1
     },
     {
       "id": 5445104,
@@ -352,7 +380,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/tropical-cichlid-herbivore-s-250-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-cichlid-herbivore-s-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d302cbf-150848-tropical-cichlid-herbivore-s-250-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d302cbf-150848-tropical-cichlid-herbivore-s-250-ml.png",
+      "st": 1
     },
     {
       "id": 5445105,
@@ -364,7 +393,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/tropical-spirulina-36-granulat-250-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-spirulina-36-granulat-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a7f8ab3-150635-tropical-spirulina-36-granulat-250-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a7f8ab3-150635-tropical-spirulina-36-granulat-250-ml.png",
+      "st": 1
     },
     {
       "id": 5445106,
@@ -376,7 +406,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/tropical-spirulina-flakes-250-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-spirulina-flakes-250-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a260578-150413-tropical-spirulina-flakes-250-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a260578-150413-tropical-spirulina-flakes-250-ml.png",
+      "st": 1
     },
     {
       "id": 5445108,
@@ -388,7 +419,21 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/tropical-shrimp-sticks-100-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-shrimp-sticks-100-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/876481d-150018-tropical-shrimp-sticks-100-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/876481d-150018-tropical-shrimp-sticks-100-ml.png",
+      "st": 1
+    },
+    {
+      "id": 5445109,
+      "title": "Tropical Guppy Flakes (100 ml)",
+      "price": 3.7514999999999996,
+      "pf": "3,75 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/tropical-guppy-flakes-100-ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/tropical-guppy-flakes-100-ml",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/85aeb2f-113018-tropical-guppy-flakes-100-ml.png",
+      "st": 0
     },
     {
       "id": 5445110,
@@ -400,7 +445,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/tropical-crusta-sticks-100-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-crusta-sticks-100-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/337b926-112828-tropical-crusta-sticks-100-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/337b926-112828-tropical-crusta-sticks-100-ml.png",
+      "st": 1
     },
     {
       "id": 5445111,
@@ -412,7 +458,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/tropical-betta-flakes-100-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-betta-flakes-100-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1da1057-112619-tropical-betta-flakes-100-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1da1057-112619-tropical-betta-flakes-100-ml.png",
+      "st": 1
     },
     {
       "id": 5445112,
@@ -424,7 +471,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/tropical-goldfish-flake-color-100-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-goldfish-flake-color-100-ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/cf6cbef-112328-tropical-goldfish-flake-color-100-ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/cf6cbef-112328-tropical-goldfish-flake-color-100-ml.png",
+      "st": 1
     },
     {
       "id": 5445188,
@@ -436,7 +484,21 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/hikari-micro-wafers-45g",
       "cart": "https://www.aquariumlife.pt/cart/add/hikari-micro-wafers-45g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d30db6d-151200-hikari-micro-wafers-45g.jpg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d30db6d-151200-hikari-micro-wafers-45g.jpg",
+      "st": 0
+    },
+    {
+      "id": 5445189,
+      "title": "Hikari Algae wafers 40g",
+      "price": 4.0959,
+      "pf": "4,10 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/hikari-algae-wafers-40g",
+      "cart": "https://www.aquariumlife.pt/cart/add/hikari-algae-wafers-40g",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 0
     },
     {
       "id": 5445190,
@@ -448,7 +510,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/hikari-micro-pellets-45g",
       "cart": "https://www.aquariumlife.pt/cart/add/hikari-micro-pellets-45g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1d99243-115202-hikari-micro-pellets-45g.webp"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1d99243-115202-hikari-micro-pellets-45g.webp",
+      "st": 0
     },
     {
       "id": 5445191,
@@ -460,7 +523,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/hikari-sinking-wafers-50g",
       "cart": "https://www.aquariumlife.pt/cart/add/hikari-sinking-wafers-50g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/658311c-115233-hikari-sinking-wafers-50g.webp"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/658311c-115233-hikari-sinking-wafers-50g.webp",
+      "st": 1
     },
     {
       "id": 5512998,
@@ -472,7 +536,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/gamma-mini-bloodworm-blister-100g",
       "cart": "https://www.aquariumlife.pt/cart/add/gamma-mini-bloodworm-blister-100g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/8afba8c-115312-gamma-mini-bloodworm-blister-100g.jpg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/8afba8c-115312-gamma-mini-bloodworm-blister-100g.jpg",
+      "st": 1
     },
     {
       "id": 5512999,
@@ -484,7 +549,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/gamma-brineshrimp-blister-100g-",
       "cart": "https://www.aquariumlife.pt/cart/add/gamma-brineshrimp-blister-100g-",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a3f28f6-115351-gamma-brineshrimp-blister-100g.webp"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a3f28f6-115351-gamma-brineshrimp-blister-100g.webp",
+      "st": 1
     },
     {
       "id": 5513000,
@@ -496,7 +562,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/gamma-bloodworm-blister-100g",
       "cart": "https://www.aquariumlife.pt/cart/add/gamma-bloodworm-blister-100g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/519db6b-232104-u5j2stzlmof.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/519db6b-232104-u5j2stzlmof.jpeg",
+      "st": 1
     },
     {
       "id": 5513001,
@@ -508,7 +575,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/gamma-tubifex-blister-100g",
       "cart": "https://www.aquariumlife.pt/cart/add/gamma-tubifex-blister-100g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/7751517-115521-gamma-tubifex-blister-100g.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/7751517-115521-gamma-tubifex-blister-100g.jpeg",
+      "st": 1
     },
     {
       "id": 5513002,
@@ -520,7 +588,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/gamma-discus-diet-blister-100g",
       "cart": "https://www.aquariumlife.pt/cart/add/gamma-discus-diet-blister-100g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0bf43cd-115634-gamma-discus-diet-blister-100g.jpg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0bf43cd-115634-gamma-discus-diet-blister-100g.jpg",
+      "st": 1
     },
     {
       "id": 5513003,
@@ -532,7 +601,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/gamma-brineshrimp-garlic-blister-100g",
       "cart": "https://www.aquariumlife.pt/cart/add/gamma-brineshrimp-garlic-blister-100g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/24a8488-115711-gamma-brineshrimp-garlic-blister-100g.jpg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/24a8488-115711-gamma-brineshrimp-garlic-blister-100g.jpg",
+      "st": 1
     },
     {
       "id": 5513004,
@@ -544,7 +614,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/gamma-cyclops-blister-100g-",
       "cart": "https://www.aquariumlife.pt/cart/add/gamma-cyclops-blister-100g-",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b8a4f35-115753-gamma-cyclops-blister-100g.jpg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b8a4f35-115753-gamma-cyclops-blister-100g.jpg",
+      "st": 1
     },
     {
       "id": 5513005,
@@ -556,7 +627,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/gamma-mysis-shrimp-garlic-blister-100g",
       "cart": "https://www.aquariumlife.pt/cart/add/gamma-mysis-shrimp-garlic-blister-100g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/46c8cea-115833-gamma-mysis-shrimp-garlic-blister-100g.jpg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/46c8cea-115833-gamma-mysis-shrimp-garlic-blister-100g.jpg",
+      "st": 1
     },
     {
       "id": 5513006,
@@ -568,7 +640,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/gamma-daphnia-blister-100g",
       "cart": "https://www.aquariumlife.pt/cart/add/gamma-daphnia-blister-100g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f2e334c-151240-gamma-daphnia-blister-100g.jpg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f2e334c-151240-gamma-daphnia-blister-100g.jpg",
+      "st": 1
     },
     {
       "id": 5513007,
@@ -580,7 +653,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/gamma-white-mosquito-larvae-blister-100g",
       "cart": "https://www.aquariumlife.pt/cart/add/gamma-white-mosquito-larvae-blister-100g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/acc9c91-151310-gamma-white-mosquito-larvae-blister-100g.webp"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/acc9c91-151310-gamma-white-mosquito-larvae-blister-100g.webp",
+      "st": 1
     },
     {
       "id": 5513008,
@@ -592,7 +666,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/gamma-cichlid-diet-blister-100g",
       "cart": "https://www.aquariumlife.pt/cart/add/gamma-cichlid-diet-blister-100g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1f7188f-151402-gamma-cichlid-diet-blister-100g.webp"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1f7188f-151402-gamma-cichlid-diet-blister-100g.webp",
+      "st": 1
     },
     {
       "id": 5513009,
@@ -604,7 +679,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/gamma-marine-quintet-blister-100g",
       "cart": "https://www.aquariumlife.pt/cart/add/gamma-marine-quintet-blister-100g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/99c067d-151526-gamma-marine-quintet-blister-100g.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/99c067d-151526-gamma-marine-quintet-blister-100g.jpeg",
+      "st": 1
     },
     {
       "id": 5513010,
@@ -616,7 +692,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/gamma-copepod-garlic-blister-100g",
       "cart": "https://www.aquariumlife.pt/cart/add/gamma-copepod-garlic-blister-100g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0a0b257-151609-gamma-copepod-garlic-blister-100g.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0a0b257-151609-gamma-copepod-garlic-blister-100g.png",
+      "st": 1
     },
     {
       "id": 5513011,
@@ -628,7 +705,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/gamma-mysis-shrimp-flat-pack-250g",
       "cart": "https://www.aquariumlife.pt/cart/add/gamma-mysis-shrimp-flat-pack-250g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/afdd767-151832-gamma-mysis-shrimp-flat-pack-250g.jpg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/afdd767-151832-gamma-mysis-shrimp-flat-pack-250g.jpg",
+      "st": 1
     },
     {
       "id": 5513012,
@@ -640,7 +718,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/gamma-brineshrimp-garlic-flat-pack-250g",
       "cart": "https://www.aquariumlife.pt/cart/add/gamma-brineshrimp-garlic-flat-pack-250g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9a2f023-151928-8468op-brine-garlic-slab.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9a2f023-151928-8468op-brine-garlic-slab.jpeg",
+      "st": 1
     },
     {
       "id": 5532590,
@@ -652,7 +731,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/shrimp-king-snail-stixx-40g-",
       "cart": "https://www.aquariumlife.pt/cart/add/shrimp-king-snail-stixx-40g-",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/04cce6c-144152-shrimp-king-snail-stixx.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/04cce6c-144152-shrimp-king-snail-stixx.png",
+      "st": 1
     },
     {
       "id": 5532591,
@@ -664,7 +744,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/shrimp-king-dadap-leaves-10x",
       "cart": "https://www.aquariumlife.pt/cart/add/shrimp-king-dadap-leaves-10x",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4e5ba07-144042-shrimp-king-dadap-leaves.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4e5ba07-144042-shrimp-king-dadap-leaves.png",
+      "st": 1
     },
     {
       "id": 5532592,
@@ -676,7 +757,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/dennerle-complete-gourmet-menu-100ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-complete-gourmet-menu-100ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/727cd1e-143812-dennerle-complete-gourmet-menu.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/727cd1e-143812-dennerle-complete-gourmet-menu.png",
+      "st": 0
     },
     {
       "id": 5532593,
@@ -688,7 +770,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/dennerle-color-booster-100ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-color-booster-100ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/161d256-143411-dennerle-color-booster.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/161d256-143411-dennerle-color-booster.png",
+      "st": 1
     },
     {
       "id": 5532594,
@@ -700,7 +783,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/dennerle-cookies-special-menu-100ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-cookies-special-menu-100ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4859769-143207-dennerle-cookies-special-menu.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4859769-143207-dennerle-cookies-special-menu.png",
+      "st": 1
     },
     {
       "id": 5532595,
@@ -712,7 +796,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/dennerle-betta-booster-12g",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-betta-booster-12g",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a638d44-142943-dennerle-betta-booster.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a638d44-142943-dennerle-betta-booster.png",
+      "st": 0
     },
     {
       "id": 5532653,
@@ -724,7 +809,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/hobby-protogen-20ml",
       "cart": "https://www.aquariumlife.pt/cart/add/hobby-protogen-20ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f12fdf8-172142-hobby-protogen-20ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f12fdf8-172142-hobby-protogen-20ml.png",
+      "st": 1
     }
   ]
 }

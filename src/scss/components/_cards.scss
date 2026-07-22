@@ -478,3 +478,36 @@ a.product-preview img {
   object-fit: contain !important;
   background: #fff !important;
 }
+
+// ============================================================
+// ESGOTADO — badge + botao inerte na grelha custom (2026-07)
+// Card ganha .aq-esgotado; badge .aq-badge-esgotado; botao .aq-btn-esgotado
+// ============================================================
+.product.aq-esgotado {
+  .product-pic {
+    opacity: 0.55;
+    filter: grayscale(35%);
+  }
+}
+
+.badge.aq-badge-esgotado {
+  display: inline-block;
+  background: #3a3f45;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.product-btn.aq-btn-esgotado {
+  background: #e4e6e8 !important;
+  border-color: #e4e6e8 !important;
+  color: #7a8087 !important;
+  cursor: not-allowed;
+  pointer-events: none;
+  user-select: none;
+}

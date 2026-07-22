@@ -2388,13 +2388,23 @@
                   ? '<del>' + p.pf + '</del><span class="product-actual">' + p.ppf + '</span>'
                   : '<span class="product-actual">' + p.pf + '</span>');
 
+            // Esgotado (st === 0): badge na foto + botao inerte (sem link para o carrinho).
+            // JSONs antigos sem o campo st continuam a comprar normalmente (st undefined -> em stock).
+            const esgotado = (p.st === 0);
+            const badgeHTML = esgotado
+              ? '<span class="badge aq-badge-esgotado">Esgotado</span>'
+              : '';
+            const btnHTML = esgotado
+              ? '<span class="product-btn btn aq-btn-esgotado" role="button" aria-disabled="true" tabindex="-1">Esgotado</span>'
+              : '<a class="product-btn btn btn-primary" href="' + p.cart + '">Comprar</a>';
+
             const col = document.createElement('div');
             col.className = 'col';
             col.innerHTML =
-              '<div class="product active hover-effect-floating" data-id="' + p.id + '">'
+              '<div class="product active hover-effect-floating' + (esgotado ? ' aq-esgotado' : '') + '" data-id="' + p.id + '">'
               + '<div class="card-shadow-hover">'
               + '<div class="product-view">'
-              + '<span class="product-badges" data-position="top-left"></span>'
+              + '<span class="product-badges" data-position="top-left">' + badgeHTML + '</span>'
               + '<a class="product-preview" href="' + p.url + '" data-thumbnail-type="square">'
               + '<img class="product-pic" src="' + (p.img || noImg) + '" alt="' + p.title.replace(/"/g,'') + '" loading="lazy">'
               + '</a>'
@@ -2403,7 +2413,7 @@
               + '<div class="product-details">'
               + '<div class="product-price">' + priceHTML + '</div>'
               + '</div>'
-              + '<a class="product-btn btn btn-primary" href="' + p.cart + '">Comprar</a>'
+              + btnHTML
               + '</div></div>';
             list.appendChild(col);
           });

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-13",
+  "updated": "2026-07-22",
   "cat": 527705,
   "slug": "outros",
   "total": 15,
@@ -16,7 +16,8 @@
       "af": "7,36 €",
       "url": "https://www.aquariumlife.pt/product/ceramica-nature-catfish-cave-l",
       "cart": "https://www.aquariumlife.pt/cart/add/ceramica-nature-catfish-cave-l",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fc213a1-161808-ceramica-nature-catfish-cave-red.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fc213a1-161808-ceramica-nature-catfish-cave-red.png",
+      "st": 1
     },
     {
       "id": 5444841,
@@ -28,7 +29,8 @@
       "af": "4,40 €",
       "url": "https://www.aquariumlife.pt/product/ceramica-nature-catfish-cave-red-xxl",
       "cart": "https://www.aquariumlife.pt/cart/add/ceramica-nature-catfish-cave-red-xxl",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/371d16c-162437-ceramica-nature-catfish-cave-red-2.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/371d16c-162437-ceramica-nature-catfish-cave-red-2.png",
+      "st": 1
     },
     {
       "id": 5445130,
@@ -40,7 +42,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/dennerle-shake-and-flow",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-shake-and-flow",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b81867b-173816-dennerle-shake-and-flow.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b81867b-173816-dennerle-shake-and-flow.png",
+      "st": 1
     },
     {
       "id": 5532648,
@@ -52,7 +55,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/hobby-safety-base-80x35-cm",
       "cart": "https://www.aquariumlife.pt/cart/add/hobby-safety-base-80x35-cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f4d7790-172745-hobby-safety-base.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f4d7790-172745-hobby-safety-base.png",
+      "st": 1
     },
     {
       "id": 5532649,
@@ -64,7 +68,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/hobby-safety-base-100x50-cm",
       "cart": "https://www.aquariumlife.pt/cart/add/hobby-safety-base-100x50-cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f4d7790-172745-hobby-safety-base.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f4d7790-172745-hobby-safety-base.png",
+      "st": 1
     },
     {
       "id": 5532650,
@@ -76,7 +81,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/hobby-safety-base-120x50cm",
       "cart": "https://www.aquariumlife.pt/cart/add/hobby-safety-base-120x50cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f4d7790-172745-hobby-safety-base.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f4d7790-172745-hobby-safety-base.png",
+      "st": 1
     },
     {
       "id": 5532654,
@@ -88,7 +94,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/easy-life-copos-de-medida-30ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-copos-de-medida-30ml",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
     },
     {
       "id": 5532655,
@@ -100,7 +107,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/easy-life-pipetas-de-medicao-5ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-pipetas-de-medicao-5ml",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/76febcd-173746-pipetas-easy-life-5ml.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/76febcd-173746-pipetas-easy-life-5ml.png",
+      "st": 1
     },
     {
       "id": 5559834,
@@ -112,7 +120,8 @@
       "af": "2,45 €",
       "url": "https://www.aquariumlife.pt/product/sf-2-folhas-para-descanso-de-bettas",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-2-folhas-para-descanso-de-bettas",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9e85e72-173513-8715897320408.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9e85e72-173513-8715897320408.png",
+      "st": 1
     },
     {
       "id": 5559836,
@@ -124,7 +133,8 @@
       "af": "8,50 €",
       "url": "https://www.aquariumlife.pt/product/sf-caverna-para-peixes-debaixo-do-areao-s",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-caverna-para-peixes-debaixo-do-areao-s",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/aa2975d-173502-foudebassin-com-sf-undergravel-fish-cave-s-sf-undergravel-fish-cave-s-8715897342356-a4040493-58673978245462.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/aa2975d-173502-foudebassin-com-sf-undergravel-fish-cave-s-sf-undergravel-fish-cave-s-8715897342356-a4040493-58673978245462.jpeg",
+      "st": 1
     },
     {
       "id": 5559838,
@@ -136,7 +146,8 @@
       "af": "5,55 €",
       "url": "https://www.aquariumlife.pt/product/sf-caverna-em-ceramica-s",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-caverna-em-ceramica-s",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5276636-171943-8715897257919ceramiccaves-1280x1280.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5276636-171943-8715897257919ceramiccaves-1280x1280.jpeg",
+      "st": 1
     },
     {
       "id": 5559860,
@@ -148,7 +159,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/sf-prato-para-alimentacao-de-camaroes-acrilico",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-prato-para-alimentacao-de-camaroes-acrilico",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ef7baf4-173404-8715897336737sfscapersfeedingplatefront-1280x1280.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ef7baf4-173404-8715897336737sfscapersfeedingplatefront-1280x1280.jpeg",
+      "st": 1
     },
     {
       "id": 5559861,
@@ -160,7 +172,8 @@
       "af": "6,70 €",
       "url": "https://www.aquariumlife.pt/product/sf-tubo-para-alimentacao-de-camaroes-30cm",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-tubo-para-alimentacao-de-camaroes-30cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2931fc9-173519-coupelle-de-nourrissage-avec-tube.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2931fc9-173519-coupelle-de-nourrissage-avec-tube.jpeg",
+      "st": 1
     },
     {
       "id": 5559866,
@@ -172,7 +185,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/sf-rede-para-tapar-aquarios-sem-tampa-diy-ate-50x80cm",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-rede-para-tapar-aquarios-sem-tampa-diy-ate-50x80cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6677d4c-172008-syc3kszlalr.jpeg"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6677d4c-172008-syc3kszlalr.jpeg",
+      "st": 1
     },
     {
       "id": 5559874,
@@ -184,7 +198,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/colombo-bomba-de-ar-60l-h-36db",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-bomba-de-ar-60l-h-36db",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
     }
   ]
 }

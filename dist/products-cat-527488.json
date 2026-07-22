@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-13",
+  "updated": "2026-07-22",
   "cat": 527488,
   "slug": "equipamento-filtros-cascata",
   "total": 4,
@@ -16,7 +16,8 @@
       "af": "19,50 €",
       "url": "https://www.aquariumlife.pt/product/sf-hang-on-filter-50",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-hang-on-filter-50",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d7c79c4-150707-sf-hang-on-filter-50.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d7c79c4-150707-sf-hang-on-filter-50.png",
+      "st": 1
     },
     {
       "id": 5559844,
@@ -28,7 +29,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/sf-filtro-cascata-100-450l-h",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-filtro-cascata-100-450l-h",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3eadf36-171946-superfish-filtre-d-aquarium-hang-on-filter-100-superfish-8715897313349-a4051875-29173252259953.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3eadf36-171946-superfish-filtre-d-aquarium-hang-on-filter-100-superfish-8715897313349-a4051875-29173252259953.png",
+      "st": 1
     },
     {
       "id": 5559845,
@@ -40,7 +42,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/sf-esponjas-para-entrada-de-filtros-cascata",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-esponjas-para-entrada-de-filtros-cascata",
-      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png"
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
     },
     {
       "id": 5559846,
@@ -52,7 +55,8 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/sf-2-cartuchos-de-reposicao-para-filtros-cascata",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-2-cartuchos-de-reposicao-para-filtros-cascata",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9f591bf-171952-superfish-cartouche-de-filtration-hang-on-cartridge-2pcs-superfish-8715897313363-a4051885-29173265498225.png"
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9f591bf-171952-superfish-cartouche-de-filtration-hang-on-cartridge-2pcs-superfish-8715897313363-a4051885-29173265498225.png",
+      "st": 1
     }
   ]
 }
