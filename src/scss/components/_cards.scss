@@ -503,10 +503,12 @@ a.product-preview img {
   pointer-events: none;
 }
 
-.product-btn.aq-btn-esgotado {
-  background: #e4e6e8 !important;
-  border-color: #e4e6e8 !important;
-  color: #7a8087 !important;
+// Seletor reforçado (.product a...) para vencer o btn-primary do tema.
+// Cores validadas em produção sobre o dark theme (2026-07-22).
+.product a.product-btn.aq-btn-esgotado {
+  background: #2a3138 !important;
+  border-color: #3a434c !important;
+  color: #8b959f !important;
   cursor: not-allowed;
   pointer-events: none;
   user-select: none;

@@ -436,8 +436,11 @@ function initPriceFilter(catId) {
         const badgeHTML = esgotado
           ? '<span class="badge aq-badge-esgotado">Esgotado</span>'
           : '';
+        // Nota: precisa ser <a> com btn-primary — o tema Boxie esconde .product-btn
+        // que nao casem com esse padrao (validado em producao 2026-07-22).
+        // Sem href + pointer-events:none no CSS = nao compravel.
         const btnHTML = esgotado
-          ? '<span class="product-btn btn aq-btn-esgotado" role="button" aria-disabled="true" tabindex="-1">Esgotado</span>'
+          ? '<a class="product-btn btn btn-primary aq-btn-esgotado" role="button" aria-disabled="true" tabindex="-1">Esgotado</a>'
           : '<a class="product-btn btn btn-primary" href="' + p.cart + '">Comprar</a>';
 
         const col = document.createElement('div');
