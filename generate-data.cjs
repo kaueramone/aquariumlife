@@ -179,8 +179,17 @@ function mapProduct(p) {
     af:    aPartirDe(p),   // "A partir de" (variante mais barata) ou null
     url:   p.url || (SITE + '/product/' + handle),
     cart:  p.add_cart_url || (SITE + '/cart/add/' + handle),
-    img:   img
+    img:   img,
+    st:    emStock(p) ? 1 : 0   // 0 = esgotado (badge + compra bloqueada na grelha)
   };
+}
+
+// Sem stock quando: produto marcado "esgotado" (status 3) ou stock ativo a zero sem backorder.
+function emStock(p) {
+  if (p.status === 3) return false;
+  const s = p.stock;
+  if (s && s.stock_enabled && !s.stock_backorder && Number(s.stock_qty) <= 0) return false;
+  return true;
 }
 
 function writeJson(file, obj) {
@@ -209,8 +218,9 @@ function buildFile(catId, slug, rawList, today) {
   const today = new Date().toISOString().slice(0, 10);
 
   console.log('A obter produtos da API Shopkit...');
-  let products = await fetchAll('/product', ONLY_ACTIVE ? { status_alias: 'active' } : {});
-  if (ONLY_ACTIVE) products = products.filter(function (p) { return p.status === 1 || p.status_alias === 'active'; });
+  // Inclui ativos (1) e esgotados (3): esgotado continua na grelha com badge, sem sumir.
+  let products = await fetchAll('/product', {});
+  if (ONLY_ACTIVE) products = products.filter(function (p) { return p.status === 1 || p.status === 3; });
   console.log('  ' + products.length + ' produtos.');
 
   console.log('A obter categorias...');
