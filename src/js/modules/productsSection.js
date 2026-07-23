@@ -17,6 +17,10 @@ function moveComprarButtons() {
   btns.forEach(btn => {
     const card = btn.closest('.card-shadow-hover');
     if (!card) return;
+    // Ja e o ultimo filho? Entao NAO re-anexar: appendChild reinsere o no,
+    // reinicia as transicoes CSS (cor ficava presa no valor antigo — bug do
+    // modo claro 2026-07-23) e dispara o MutationObserver de novo = loop.
+    if (card.lastElementChild === btn) return;
     // Ultimo filho de .card-shadow-hover = depois de .product-details
     // Fica no fluxo flex do card, abaixo do preco, dentro da borda visual
     card.appendChild(btn);

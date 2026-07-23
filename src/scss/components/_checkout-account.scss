@@ -12,10 +12,14 @@ body.page-cart,
 body.page-account {
 
   // Paineis brancos do checkout e da conta
+  // (.checkout-item .well = caixa "Ja tem uma conta? Faca Login." do
+  //  cart/data, que e .well-default e ficava fora desta lista: fundo
+  //  claro nativo + texto branco herdado = invisivel. 2026-07-23)
   .checkout-container,
   .basket.basket-checkout,
   .basket-checkout,
   .account-container,
+  .checkout-item .well,
   .well-featured.well-shadow:not(.dropdown-menu):not(.cart-list) {
     background: rgba(0, 21, 49, 0.55) !important;
     border: 1px solid rgba(8, 238, 188, 0.12) !important;
@@ -37,6 +41,13 @@ body.page-account {
     .checkout-total, strong.price { color: $color-neon-accent !important; }
 
     a:not(.btn):hover { color: $color-neon-accent !important; }
+  }
+
+  // Link "Faca Login" (e afins) dentro das caixas do checkout: destacado
+  .checkout-item .well a:not(.btn) {
+    color: $color-neon-accent !important;
+    text-decoration: underline !important;
+    font-weight: 600 !important;
   }
 
   // Indicador de passos (1-2-3): numeros legiveis
@@ -172,6 +183,7 @@ body.aq-light-mode.page-account {
   .checkout-container,
   .basket-checkout,
   .account-container,
+  .checkout-item .well,
   .well-featured.well-shadow:not(.dropdown-menu):not(.cart-list) {
     background: #FFFFFF !important;
     border: 1px solid rgba(0, 122, 92, 0.2) !important;
@@ -181,6 +193,12 @@ body.aq-light-mode.page-account {
   .checkout-container, .basket-checkout, .account-container {
     h1,h2,h3,h4,h5,.title,label,p,span,a,div,td,th { color: #00204A !important; }
     .price, .product-actual, .basket-total { color: #007A5C !important; }
+  }
+
+  .checkout-item .well a:not(.btn) {
+    color: #007A5C !important;
+    text-decoration: underline !important;
+    font-weight: 600 !important;
   }
 
   .form-control { background: #FFFFFF !important; border: 1px solid rgba(0,122,92,0.3) !important; color: #00204A !important; }

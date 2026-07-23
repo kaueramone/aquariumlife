@@ -6,6 +6,7 @@
 @use 'components/slider';
 @use 'components/categories';
 @use 'components/cart';
+@use 'components/cart-shipping';
 @use 'components/brands';
 @use 'components/faq';
 @use 'components/store';
@@ -23,3 +24,5 @@
 @use 'layouts/header';
 @use 'layouts/desktop-nav';
 @use 'layouts/footer';
+// pente fino do modo claro — SEMPRE em ultimo (vence a cascata)
+@use 'components/light-mode';

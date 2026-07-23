@@ -1,0 +1,222 @@
+@use '../base/variables' as *;
+
+// ============================================================
+// PENTE FINO MODO CLARO (2026-07-23)
+// O toggle nasceu antes de varias paginas/efeitos; esta camada
+// (carregada em ULTIMO no main.scss) corrige tudo o que ficava
+// neon/branco sobre fundo claro. Auditado ao vivo pagina a
+// pagina com detector de contraste (home, categoria, produto,
+// blog, post, /page/*, sales/new/contact, cart, signin).
+//
+// Paleta do modo claro:
+//   tinta:  #00204A (navy)   texto principal
+//   suave:  rgba(0,32,74,.65) texto secundario
+//   verde:  #007A5C           accent (substitui o neon)
+// ============================================================
+
+$lm-ink: #00204a;
+$lm-soft: rgba(0, 32, 74, 0.65);
+$lm-green: #007a5c;
+
+// .aq-light-mode repetido 6x = +6 CLASSES de especificidade em todas as
+// regras. Necessario porque as regras escuras dos componentes usam 3-5
+// classes com !important e classes vencem elementos (html/body nao chegava).
+// Validado com sondas ao vivo 2026-07-23.
+html body.aq-light-mode.aq-light-mode.aq-light-mode.aq-light-mode.aq-light-mode.aq-light-mode {
+
+  // ── 1. Precos nos cards (grids custom e nativas) ──────────
+  .product-from {
+    color: $lm-soft !important;
+  }
+  .product-actual,
+  .product-price,
+  .product-price .price {
+    color: $lm-green !important;
+  }
+  .product-price del {
+    color: rgba(0, 32, 74, 0.4) !important;
+  }
+
+  // ── 2. Botoes outline neon (Comprar / Opcoes / CTAs) ──────
+  // .product/.products-list no prefixo: vencer a especificidade da
+  // regra escura de _cards.scss (validado com sondas 2026-07-23)
+  .product-btn.btn-primary,
+  .product .product-btn.btn-primary,
+  .products-list .product .product-btn,
+  .card-btn.btn-primary,
+  a.aq-btn-primary,
+  .aq-btn-outline,
+  .aq-post-back-btn {
+    color: $lm-green !important;
+    border-color: $lm-green !important;
+    background: transparent !important;
+
+    &:hover, &:focus {
+      background: $lm-green !important;
+      color: #fff !important;
+    }
+  }
+
+  // link "Ver todos os nossos produtos" — o wrapper e um ID (#aq-ver-todos,
+  // productsSection.js) e o estilo original usa esse ID: precisamos de o
+  // incluir para ganhar (ID > qualquer pilha de classes)
+  #aq-ver-todos a,
+  #aq-ver-todos a span,
+  .products-main > div > a:not(.btn),
+  .products-main > div > a:not(.btn) span {
+    color: $lm-green !important;
+  }
+  #aq-ver-todos a {
+    border-color: $lm-green !important;
+  }
+  // botao Esgotado continua cinza inerte (legivel no claro)
+  .product-btn.aq-btn-esgotado {
+    color: #6b7680 !important;
+    border-color: #aab4bd !important;
+    background: #e9edf0 !important;
+  }
+
+  // ── 3. Chips / tags / read-time ───────────────────────────
+  .aq-section-tag,
+  .aq-blog-card-tag,
+  .aq-bl-card-tag,
+  .aq-bl-card-rt,
+  .aq-post-read-time,
+  .aq-sp-tag,
+  .aq-form-title {
+    color: $lm-green !important;
+    // fundo SOLIDO: alguns chips ficam por cima de fotos escuras
+    // (ex.: tag no canto da imagem do card do blog) — um rgba quase
+    // transparente deixava o verde ilegivel sobre a foto
+    background: #e8f4ef !important;
+    border-color: rgba(0, 122, 92, 0.25) !important;
+  }
+
+  // ── 4. Spans de destaque neon dentro de titulos ───────────
+  .aq-sp-title span,
+  .aq-section-title span,
+  .aq-store-title span,
+  .aq-bl-title span,
+  h1 span, h2 span {
+    &:not([class]) {
+      color: $lm-green !important;
+    }
+  }
+
+  // ── 4b. Avaliacoes e CTAs suaves ──────────────────────────
+  .aq-rating-text {
+    color: $lm-soft !important;
+  }
+  .aq-blog-card-cta {
+    // verde medio: legivel tanto sobre branco como sobre o corpo
+    // escuro dos cards do blog (que mantem o estilo dark)
+    color: #009874 !important;
+  }
+
+  // ── 5. Breadcrumbs (blog, post, /page/*) ──────────────────
+  .breadcrumbs-link,
+  .breadcrumbs-item,
+  .breadcrumbs-item::before {
+    color: $lm-soft !important;
+  }
+  .breadcrumbs-link:hover { color: $lm-green !important; }
+
+  // ── 6. Heros das paginas estaticas e especiais ────────────
+  .aq-pg-hero-title,
+  .aq-sp-title {
+    color: $lm-ink !important;
+  }
+  .aq-pg-hero-sub,
+  .aq-sp-sub {
+    color: $lm-soft !important;
+  }
+
+  // ── 7. Pagina de produto (markup nativo Boxie) ────────────
+  // Descricao vive em .details.section (tabs .nav-link > .details-title;
+  // texto em .details-text/.tab-pane) — sondado ao vivo 2026-07-23.
+  &.page-product {
+    .details .details-title,
+    .details .nav-link .details-title,
+    .details-title,
+    .details .tab-pane, .details .tab-pane p, .details .tab-pane li,
+    .details .tab-pane strong, .details .tab-pane em,
+    .details .tab-pane td, .details .tab-pane th, .details .tab-pane span,
+    .details-text, .details-text *,
+    label,
+    .product-info p, .product-info em, .product-info strong,
+    .card-control em, .card-control label {
+      color: $lm-ink !important;
+    }
+    // aba inativa um pouco mais suave
+    .details .nav-link:not(.active) .details-title {
+      color: $lm-soft !important;
+    }
+    .text-light-gray,
+    small.muted, .small.text-light-gray {
+      color: $lm-soft !important;
+    }
+    a.text-link, a.text-underline,
+    .details .tab-pane a {
+      color: $lm-green !important;
+      text-decoration: underline !important;
+    }
+    // botao Comprar da pagina de produto: verde solido (acao primaria)
+    form.add-cart .card-btn.btn-primary,
+    .card-btn.btn-primary {
+      background: $lm-green !important;
+      border-color: $lm-green !important;
+      color: #fff !important;
+    }
+  }
+
+  // ── 8. Post individual ────────────────────────────────────
+  .aq-post-meta, .aq-post-meta span,
+  .aq-post-date,
+  a.link-inherit {
+    color: $lm-soft !important;
+  }
+  a.link-inherit:hover { color: $lm-green !important; }
+
+  // ── 9. Formularios (contact) + labels genericos ───────────
+  .aq-form label,
+  form label,
+  small.muted {
+    color: $lm-ink !important;
+  }
+  small.muted, .muted { color: $lm-soft !important; }
+
+  // ── 10. Signin / criar conta ──────────────────────────────
+  &.page-signin, &.page-account {
+    .btn-primary {
+      background: $lm-green !important;
+      border-color: $lm-green !important;
+      color: #fff !important;
+    }
+    .btn-secondary {
+      color: $lm-ink !important;
+      border-color: rgba(0, 32, 74, 0.35) !important;
+      background: transparent !important;
+
+      &:hover { border-color: $lm-green !important; color: $lm-green !important; }
+    }
+  }
+
+  // ── 11. Descricao de categoria (header das grids) ─────────
+  .category-description,
+  .category-info p,
+  .aq-cat-desc {
+    color: $lm-soft !important;
+  }
+
+  // ── 12. Botoes de modal nativos (livro reclamacoes etc.) ──
+  .js-withdrawal-continue.btn-primary,
+  button.btn-primary.btn-shadow {
+    background: $lm-green !important;
+    border-color: $lm-green !important;
+    color: #fff !important;
+  }
+  button.btn-default {
+    color: $lm-ink !important;
+    border-color: rgba(0, 32, 74, 0.3) !important;
+  }
+}

@@ -1,0 +1,77 @@
+@use '../base/variables' as *;
+
+// ============================================================
+// PORTES NO RESUMO (/cart) — par do cartShipping.js (2026-07-23)
+// Substitui o "A calcular" pelas duas opcoes fixas PT continental.
+// A celula .total-shipping passa a ocupar a linha inteira.
+// ============================================================
+.cart-receipt .cart-line.margin-top {
+  flex-wrap: wrap;
+}
+.cart-receipt .cart-text.total-shipping {
+  flex: 1 0 100%;
+  max-width: 100%;
+  margin-top: 6px;
+}
+
+.cart-receipt .total-shipping {
+  .aq-portes {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+  }
+
+  .aq-porte {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    cursor: pointer;
+    font-size: 0.82rem;
+    line-height: 1.25;
+    font-weight: 400;
+
+    input[type='radio'] {
+      accent-color: $color-neon-accent;
+      width: 15px;
+      height: 15px;
+      margin: 0;
+      flex: 0 0 auto;
+      cursor: pointer;
+    }
+
+    .aq-porte-nome {
+      flex: 1 1 auto;
+      color: rgba(255, 255, 255, 0.88) !important;
+
+      em {
+        font-style: normal;
+        opacity: 0.6;
+        font-size: 0.9em;
+      }
+    }
+
+    .aq-porte-preco {
+      color: $color-neon-accent !important;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    &:hover .aq-porte-nome { color: #fff !important; }
+  }
+
+  .aq-porte-gratis {
+    color: $color-neon-accent !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+}
+
+// ---- LIGHT MODE -------------------------------------------
+body.aq-light-mode .cart-receipt .total-shipping {
+  .aq-porte .aq-porte-nome { color: #00204a !important; }
+  .aq-porte .aq-porte-preco,
+  .aq-porte-gratis { color: #007a5c !important; }
+}
