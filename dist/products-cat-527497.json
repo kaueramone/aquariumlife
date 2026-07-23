@@ -17,7 +17,17 @@
       "url": "https://www.aquariumlife.pt/product/colombo-flora-nitro-test",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-flora-nitro-test",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4882b67-234215-8715897342592colombofloranitrotestfront-1280x1280.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5445019,
@@ -30,7 +40,17 @@
       "url": "https://www.aquariumlife.pt/product/colombo-flora-phospho-test",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-flora-phospho-test",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5624412-234219-8715897342608colombofloraphosphotestfront-1280x1280.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5445020,
@@ -43,7 +63,17 @@
       "url": "https://www.aquariumlife.pt/product/colombo-flora-ferro-test",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-flora-ferro-test",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/de9675f-234223-8715897342615colombofloraferrotestfront-1280x1280.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5445136,
@@ -56,7 +86,17 @@
       "url": "https://www.aquariumlife.pt/product/salifert-kh-profi-test",
       "cart": "https://www.aquariumlife.pt/cart/add/salifert-kh-profi-test",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/7276e34-234226-1nfb4sebsag_65b129dd-ce0b-4012-b4e6-78618ebca059.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5445137,
@@ -69,7 +109,17 @@
       "url": "https://www.aquariumlife.pt/product/salifert-no3-profi-test",
       "cart": "https://www.aquariumlife.pt/cart/add/salifert-no3-profi-test",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f747a83-144629-salifert-no3-profi-test.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5445138,
@@ -82,7 +132,17 @@
       "url": "https://www.aquariumlife.pt/product/salifert-nitritos-profi-test",
       "cart": "https://www.aquariumlife.pt/cart/add/salifert-nitritos-profi-test",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9c06f1e-144521-salifert-nitritos-profi-test.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5445139,
@@ -95,7 +155,17 @@
       "url": "https://www.aquariumlife.pt/product/salifert-ph-profi-test",
       "cart": "https://www.aquariumlife.pt/cart/add/salifert-ph-profi-test",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d4dac8a-144223-salifert-ph-profi-test.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5445140,
@@ -108,7 +178,17 @@
       "url": "https://www.aquariumlife.pt/product/salifert-amonia-profi-test",
       "cart": "https://www.aquariumlife.pt/cart/add/salifert-amonia-profi-test",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/68b34bc-143756-salifert-amonia-profi-test.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5445179,
@@ -121,7 +201,17 @@
       "url": "https://www.aquariumlife.pt/product/sera-teste-gh",
       "cart": "https://www.aquariumlife.pt/cart/add/sera-teste-gh",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 0
+      "st": 0,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5532651,
@@ -134,7 +224,17 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-test-strips-6in1-50x",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-test-strips-6in1-50x",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/394424c-220255-easy-life-6in1-teststreifen.jpeg",
-      "st": 0
+      "st": 0,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5559867,
@@ -147,7 +247,17 @@
       "url": "https://www.aquariumlife.pt/product/colombo-teste-ph-40x",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-teste-ph-40x",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/16b9d7b-111133-colombo-teste-de-ph-inicio-40-testes.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5559868,
@@ -160,7 +270,17 @@
       "url": "https://www.aquariumlife.pt/product/colombo-teste-kh-40x",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-teste-kh-40x",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/11ff8af-111331-colombo-teste-kh-40x.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5559869,
@@ -173,7 +293,17 @@
       "url": "https://www.aquariumlife.pt/product/colombo-teste-gh-40x",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-teste-gh-40x",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a2758ab-111431-colombo-teste-gh-40x.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5559870,
@@ -186,7 +316,17 @@
       "url": "https://www.aquariumlife.pt/product/colombo-teste-nitrito-40x",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-teste-nitrito-40x",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/eaae1c3-234246-foudebassin-com-colombo-aqua-nitrite-test-colombo-aqua-nitrite-test-8715897225611-a5010970-58779285881174.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5559871,
@@ -199,7 +339,17 @@
       "url": "https://www.aquariumlife.pt/product/colombo-teste-amonia-40x-",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-teste-amonia-40x-",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/35ea59f-234248-foudebassin-com-colombo-aqua-ammonia-test-colombo-aqua-ammonia-test-8715897225604-a5010968-58779281162582.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5559872,
@@ -212,7 +362,17 @@
       "url": "https://www.aquariumlife.pt/product/colombo-teste-nitrato-40x",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-teste-nitrato-40x",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/53952cb-232101-foudebassin-com-colombo-aqua-nitrate-test-colombo-aqua-nitrate-test-8715897225628-a5010973-58779292664150.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5559873,
@@ -225,7 +385,17 @@
       "url": "https://www.aquariumlife.pt/product/colombo-teste-fosfato-40x",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-teste-fosfato-40x",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2227a2e-112018-teste-fosfato-01-tyv57dkw2q.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     }
   ]
 }

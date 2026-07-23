@@ -17,7 +17,17 @@
       "url": "https://www.aquariumlife.pt/product/hydra-dark-magic-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/hydra-dark-magic-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9515cab-145517-dark-magic-min.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5444756,
@@ -30,7 +40,17 @@
       "url": "https://www.aquariumlife.pt/product/hydra-fert-micros-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/hydra-fert-micros-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9e94aed-145431-micros-min.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5444758,
@@ -43,7 +63,17 @@
       "url": "https://www.aquariumlife.pt/product/hydra-fert-macros-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/hydra-fert-macros-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/22832ac-145340-macros-min.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5444760,
@@ -56,7 +86,17 @@
       "url": "https://www.aquariumlife.pt/product/hydra-liquid-carbon-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/hydra-liquid-carbon-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/81dc819-145301-carbon-min.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5444808,
@@ -69,7 +109,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-plant-sytem-v30-500ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-sytem-v30-500ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/77315c6-211402-dennerle-plant-system-v30.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5444810,
@@ -82,7 +132,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-plant-system-v30-100ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-system-v30-100ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/77315c6-211402-dennerle-plant-system-v30.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5444811,
@@ -95,7 +155,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-dosator",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-dosator",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/527ccb2-211406-dennerle-dosator.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5445117,
@@ -108,7 +178,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-plant-system-set",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-system-set",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fbd3562-211409-dennerle-plant-system-set.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5445118,
@@ -121,7 +201,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-plant-system-s7-250-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-system-s7-250-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/be102e9-211411-dennerle-plant-system-s7.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5445119,
@@ -134,7 +224,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-carbo-care-bio-100-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-carbo-care-bio-100-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/58cb533-210243-4810__1_carbocarebio100ml.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5445122,
@@ -147,7 +247,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-plant-care-pro-daily-100-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-care-pro-daily-100-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9c0fda3-211415-dennerle-plant-care-pro-daily.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5445123,
@@ -160,7 +270,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-plant-care-pro-250-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-care-pro-250-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5516484-211417-dennerle-plant-care-pro-250-ml.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5445124,
@@ -173,7 +293,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-plant-care-basic-root-10-stueck",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-care-basic-root-10-stueck",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/c3d7c4d-210246-mc165_1.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5512994,
@@ -186,7 +316,17 @@
       "url": "https://www.aquariumlife.pt/product/tropica-premium-nutrition-125ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-premium-nutrition-125ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/efc4f03-103550-plant-growth-system-nano-nachfuellflasche.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5512996,
@@ -199,7 +339,17 @@
       "url": "https://www.aquariumlife.pt/product/tropica-specialised-nutrition-125ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-specialised-nutrition-125ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/53c5c10-103849-fertilizante-liquido-specialised-tropica.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5532581,
@@ -212,7 +362,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-plant-system-e15-250-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-system-e15-250-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/dba501d-211512-dennerle-plant-system-e15.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5532612,
@@ -225,7 +385,17 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-greenscape-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-greenscape-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2b8b063-220207-rc338_1.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5532614,
@@ -238,7 +408,17 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-redscape-500ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-redscape-500ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d408ac6-220213-rc336_1.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5532616,
@@ -251,7 +431,17 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-nitro-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-nitro-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fa8deaa-220217-rc348_1.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5532618,
@@ -264,7 +454,17 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-ferro-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-ferro-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0b8ad66-220220-ferro_250ml_high-1280x1280.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5532620,
@@ -277,7 +477,17 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-fosfo-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-fosfo-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b37e969-220222-fosfo_250ml-1280x1280.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5532622,
@@ -290,7 +500,17 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-profito-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-profito-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0e86daf-220225-profito_250ml-1280x1280.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5532625,
@@ -303,7 +523,17 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-carbo-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-carbo-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fe840c0-220229-mo2mvyifp0e.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5532634,
@@ -316,7 +546,17 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-nano-plant",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-nano-plant",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/cab0e6c-113455-easy-life-nano-plant.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5532635,
@@ -329,7 +569,17 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-root-sticks-25x",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-root-sticks-25x",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/dffc3f9-220249-mc230_1.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     }
   ]
 }

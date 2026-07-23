@@ -17,7 +17,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-x-pro-2000-uv",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-x-pro-2000-uv",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fd45e59-110408-superfish-x-pro-2000-uv.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5445000,
@@ -30,7 +40,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-x-pro-1500-400-l",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-x-pro-1500-400-l",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f25d0d2-105934-superfish-x-pro-1500-400l.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5445003,
@@ -43,7 +63,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-eco-flow-240",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-eco-flow-240",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5785390-232427-8715897319631superfishecoflow2403d-1280.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5445174,
@@ -56,7 +86,17 @@
       "url": "https://www.aquariumlife.pt/product/ica-mangueira-cinza-12-16mm",
       "cart": "https://www.aquariumlife.pt/cart/add/ica-mangueira-cinza-12-16mm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/8873efe-105755-ica-magueiracinz.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5559797,
@@ -69,7 +109,17 @@
       "url": "https://www.aquariumlife.pt/product/uns-delta-30-filter",
       "cart": "https://www.aquariumlife.pt/cart/add/uns-delta-30-filter",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/966a766-164237-uns-delta-60-filter.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5559887,
@@ -82,7 +132,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-x-pro-thermo-1000",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-x-pro-thermo-1000",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/992a1c4-103012-superfish-x-pro-thermo-1000.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568876,
@@ -95,7 +155,17 @@
       "url": "https://www.aquariumlife.pt/product/esponja-laranja-30-ppi-para-biomaster-2",
       "cart": "https://www.aquariumlife.pt/cart/add/esponja-laranja-30-ppi-para-biomaster-2",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/69b3191-105901-biomaster30ppi-orange-001.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568877,
@@ -108,7 +178,17 @@
       "url": "https://www.aquariumlife.pt/product/2-esponjas-azuis-para-filtosmart-100",
       "cart": "https://www.aquariumlife.pt/cart/add/2-esponjas-azuis-para-filtosmart-100",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5197ef8-141024-2-esponjas-azuis-para-filtosmart-100.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568878,
@@ -121,7 +201,17 @@
       "url": "https://www.aquariumlife.pt/product/kit-acessorios-para-filtosmart-60",
       "cart": "https://www.aquariumlife.pt/cart/add/kit-acessorios-para-filtosmart-60",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/98a2af5-140712-kit-acessorios-para-filtosmart-60.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568879,
@@ -134,7 +224,17 @@
       "url": "https://www.aquariumlife.pt/product/rotor-para-filtosmart-60",
       "cart": "https://www.aquariumlife.pt/cart/add/rotor-para-filtosmart-60",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f362915-121554-oase-ersatz-rotor-filtosmart-60.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568880,
@@ -147,7 +247,17 @@
       "url": "https://www.aquariumlife.pt/product/filtosmart-60",
       "cart": "https://www.aquariumlife.pt/cart/add/filtosmart-60",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/56bcf65-140048-filtosmart-60.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568884,
@@ -160,7 +270,17 @@
       "url": "https://www.aquariumlife.pt/product/filtosmart-thermo-100",
       "cart": "https://www.aquariumlife.pt/cart/add/filtosmart-thermo-100",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/423784c-234252-oase-living-water-filtosmart-200-thermo-filtre-externe-pour-aquarium-oase-4010052426686-42668-29193403039857.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568887,
@@ -173,7 +293,17 @@
       "url": "https://www.aquariumlife.pt/product/biomaster-2-thermo-850",
       "cart": "https://www.aquariumlife.pt/cart/add/biomaster-2-thermo-850",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b98007f-135406-biomaster-2-thermo-850.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568891,
@@ -186,7 +316,17 @@
       "url": "https://www.aquariumlife.pt/product/biomaster-2-850",
       "cart": "https://www.aquariumlife.pt/cart/add/biomaster-2-850",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/7047b6e-123254-biomaster-2-600-2.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568895,
@@ -199,7 +339,17 @@
       "url": "https://www.aquariumlife.pt/product/esponja-azul-para-filtosmart-60-",
       "cart": "https://www.aquariumlife.pt/cart/add/esponja-azul-para-filtosmart-60-",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a8c8929-134859-filtro-filtosmart-60-oase.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568896,
@@ -212,7 +362,17 @@
       "url": "https://www.aquariumlife.pt/product/set-4-esponjas-pretas-prefiltro-biomaster-60ppi",
       "cart": "https://www.aquariumlife.pt/cart/add/set-4-esponjas-pretas-prefiltro-biomaster-60ppi",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ea1deb5-165005-rokkpqjptqu.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568897,
@@ -225,7 +385,17 @@
       "url": "https://www.aquariumlife.pt/product/set-4-esponjas-azuis-prefiltro-biomaster-45ppi",
       "cart": "https://www.aquariumlife.pt/cart/add/set-4-esponjas-azuis-prefiltro-biomaster-45ppi",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1bff16f-165002-y01pzioixls_815a31f2-6af1-4724-b975-c26eac8b8c4f.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568900,
@@ -238,7 +408,17 @@
       "url": "https://www.aquariumlife.pt/product/esponja-filtrante-biomaster-20-ppi-azul",
       "cart": "https://www.aquariumlife.pt/cart/add/esponja-filtrante-biomaster-20-ppi-azul",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/665c729-121809-esponja-filtrante-biomaster-20-ppi-azul.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568901,
@@ -251,7 +431,17 @@
       "url": "https://www.aquariumlife.pt/product/set-esponjas-filtrantes-200",
       "cart": "https://www.aquariumlife.pt/cart/add/set-esponjas-filtrantes-200",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2835376-121711-set-esponjas-filtrantes-200.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568904,
@@ -264,7 +454,17 @@
       "url": "https://www.aquariumlife.pt/product/rotor-para-biomaster-850",
       "cart": "https://www.aquariumlife.pt/cart/add/rotor-para-biomaster-850",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/66c4e66-121004-rotor-para-biomaster-850.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568907,
@@ -277,7 +477,17 @@
       "url": "https://www.aquariumlife.pt/product/rotorpara-biomaster-600",
       "cart": "https://www.aquariumlife.pt/cart/add/rotorpara-biomaster-600",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/882bb4d-115949-rotorpara-biomaster-600.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568908,
@@ -290,7 +500,17 @@
       "url": "https://www.aquariumlife.pt/product/kit-acessorios-de-rep-filtosmart200-300",
       "cart": "https://www.aquariumlife.pt/cart/add/kit-acessorios-de-rep-filtosmart200-300",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a5f2899-112637-kit-acessorios-de-rep-filtosmart200-300.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568909,
@@ -303,7 +523,17 @@
       "url": "https://www.aquariumlife.pt/product/kit-de-acessorios-de-rep-filtosmart-100",
       "cart": "https://www.aquariumlife.pt/cart/add/kit-de-acessorios-de-rep-filtosmart-100",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d605c28-113054-kit-de-acessorios-de-rep-filtosmart-100.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568910,
@@ -316,7 +546,17 @@
       "url": "https://www.aquariumlife.pt/product/junta-reposicao-para-biomaster",
       "cart": "https://www.aquariumlife.pt/cart/add/junta-reposicao-para-biomaster",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bfc4632-112302-oase-vedante-para-canister-biomaster.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568911,
@@ -329,7 +569,17 @@
       "url": "https://www.aquariumlife.pt/product/set-esponjas-filtrantes-para-fitosmart-300",
       "cart": "https://www.aquariumlife.pt/cart/add/set-esponjas-filtrantes-para-fitosmart-300",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/872602d-112043-juego-de-esponjas-filtrantes-filtosmart-300.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     }
   ]
 }

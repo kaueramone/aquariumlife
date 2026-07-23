@@ -17,7 +17,17 @@
       "url": "https://www.aquariumlife.pt/product/hydra-biomax-400ml",
       "cart": "https://www.aquariumlife.pt/cart/add/hydra-biomax-400ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f892619-140805-hydra-biomax400ml.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5444754,
@@ -30,7 +40,17 @@
       "url": "https://www.aquariumlife.pt/product/hydra-co2-drop-checker-20ml",
       "cart": "https://www.aquariumlife.pt/cart/add/hydra-co2-drop-checker-20ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5d4b3e0-145547-drop-checker-solution.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5444755,
@@ -43,7 +63,17 @@
       "url": "https://www.aquariumlife.pt/product/hydra-dark-magic-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/hydra-dark-magic-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9515cab-145517-dark-magic-min.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5444756,
@@ -56,7 +86,17 @@
       "url": "https://www.aquariumlife.pt/product/hydra-fert-micros-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/hydra-fert-micros-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9e94aed-145431-micros-min.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5444758,
@@ -69,7 +109,17 @@
       "url": "https://www.aquariumlife.pt/product/hydra-fert-macros-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/hydra-fert-macros-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/22832ac-145340-macros-min.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5444760,
@@ -82,7 +132,17 @@
       "url": "https://www.aquariumlife.pt/product/hydra-liquid-carbon-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/hydra-liquid-carbon-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/81dc819-145301-carbon-min.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5444762,
@@ -147,7 +207,17 @@
       "url": "https://www.aquariumlife.pt/product/twinstar-led-30b-ii",
       "cart": "https://www.aquariumlife.pt/cart/add/twinstar-led-30b-ii",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9bbb8da-232111-twinstar-led-light-b-ii.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Led´s",
+          "u": "https://www.aquariumlife.pt/category/equipamento-led-s"
+        }
+      ]
     },
     {
       "id": 5444771,
@@ -160,7 +230,17 @@
       "url": "https://www.aquariumlife.pt/product/twinstar-led-90a",
       "cart": "https://www.aquariumlife.pt/cart/add/twinstar-led-90a",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3278f62-232109-pantalla-led-twinstar-ii-a-line.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Led´s",
+          "u": "https://www.aquariumlife.pt/category/equipamento-led-s"
+        }
+      ]
     },
     {
       "id": 5444773,
@@ -173,7 +253,17 @@
       "url": "https://www.aquariumlife.pt/product/twinstar-led-iv-300ea",
       "cart": "https://www.aquariumlife.pt/cart/add/twinstar-led-iv-300ea",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b7d4cb8-232106-twinstar-aquarium-led-light-600ea-iv-1.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Led´s",
+          "u": "https://www.aquariumlife.pt/category/equipamento-led-s"
+        }
+      ]
     },
     {
       "id": 5444780,
@@ -186,7 +276,17 @@
       "url": "https://www.aquariumlife.pt/product/aa-poppy-pipe-vidro-12-16",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-poppy-pipe-vidro-12-16",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2716112-232302-74p09982.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Lilly Pipes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-lilly-pipes"
+        }
+      ]
     },
     {
       "id": 5444781,
@@ -199,7 +299,17 @@
       "url": "https://www.aquariumlife.pt/product/aa-violet-pipe-vidro-12-16",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-violet-pipe-vidro-12-16",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9557734-232305-74p09986.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Lilly Pipes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-lilly-pipes"
+        }
+      ]
     },
     {
       "id": 5444782,
@@ -212,7 +322,17 @@
       "url": "https://www.aquariumlife.pt/product/aa-lilly-pipe-vidro-12-16",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-lilly-pipe-vidro-12-16",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/7dabedf-232308-74p09984.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Lilly Pipes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-lilly-pipes"
+        }
+      ]
     },
     {
       "id": 5444786,
@@ -225,7 +345,17 @@
       "url": "https://www.aquariumlife.pt/product/aa-skimmer-pipe-vidro-16-22",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-skimmer-pipe-vidro-16-22",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d7b624b-164751-aa-skimmer-pipe-vidro-16_22.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Lilly Pipes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-lilly-pipes"
+        }
+      ]
     },
     {
       "id": 5444787,
@@ -238,7 +368,17 @@
       "url": "https://www.aquariumlife.pt/product/aa-armadilha-planarias-1buraco",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-armadilha-planarias-1buraco",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0e0185e-232312-74p09995.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444788,
@@ -251,7 +391,17 @@
       "url": "https://www.aquariumlife.pt/product/aa-armadilha-planarias-2buracos",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-armadilha-planarias-2buracos",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2a08120-232315-74p09996.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444789,
@@ -264,7 +414,17 @@
       "url": "https://www.aquariumlife.pt/product/aa-armadilha-planarias-3buracos",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-armadilha-planarias-3buracos",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/de82ee5-232317-74p09969.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444790,
@@ -277,7 +437,17 @@
       "url": "https://www.aquariumlife.pt/product/aa-copos-de-vidro-plantas",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-copos-de-vidro-plantas",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/af734eb-163047-aa-copos-de-vidro-plantas.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444792,
@@ -290,7 +460,17 @@
       "url": "https://www.aquariumlife.pt/product/aa-mini-co2-difusor-espiral",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-mini-co2-difusor-espiral",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/18cb973-232319-74p09981.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5444793,
@@ -303,7 +483,17 @@
       "url": "https://www.aquariumlife.pt/product/aa-difusor-co2-s",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-difusor-co2-s",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1de70ce-233302-74p09999.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5444794,
@@ -316,7 +506,17 @@
       "url": "https://www.aquariumlife.pt/product/aa-c02-difusor-m",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-c02-difusor-m",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b828a71-232321-74p09998.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5444796,
@@ -329,7 +529,17 @@
       "url": "https://www.aquariumlife.pt/product/aa-c02-checker-orb",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-c02-checker-orb",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/475139c-160104-aa-c02-checker-orb.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5444797,
@@ -342,7 +552,17 @@
       "url": "https://www.aquariumlife.pt/product/aa-c02-checker-clip",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-c02-checker-clip",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b52c9bc-232325-74p09979.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5444798,
@@ -355,7 +575,17 @@
       "url": "https://www.aquariumlife.pt/product/aa-co2-slim-steel-diffusor-20cm",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-co2-slim-steel-diffusor-20cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a8b03f5-232329-74p99900.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5444801,
@@ -446,7 +676,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-plant-sytem-v30-500ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-sytem-v30-500ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/77315c6-211402-dennerle-plant-system-v30.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5444810,
@@ -459,7 +699,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-plant-system-v30-100ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-system-v30-100ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/77315c6-211402-dennerle-plant-system-v30.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5444811,
@@ -472,7 +722,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-dosator",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-dosator",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/527ccb2-211406-dennerle-dosator.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5444812,
@@ -485,7 +745,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-carbo-bio-start-60",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-carbo-bio-start-60",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2c428b6-210201-mc891.jpeg",
-      "st": 0
+      "st": 0,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5444813,
@@ -498,7 +768,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-carbo-bio-depot-60-80",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-carbo-bio-depot-60-80",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b7f594d-210210-mc892_1.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5444814,
@@ -511,7 +791,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-carbo-bio-style-120",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-carbo-bio-style-120",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0e17f30-210213-mc894_1.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5444816,
@@ -524,7 +814,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-scapers-tool-set",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-scapers-tool-set",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1e0d74f-103134-dennerle-scapers-tool-set.png",
-      "st": 0
+      "st": 0,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444817,
@@ -537,7 +837,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-3x-corner-filter-element-40-60",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-3x-corner-filter-element-40-60",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4f822d8-210216-5865_fro_cornerfilterelement_40-60_3pcs.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros internos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-internos"
+        }
+      ]
     },
     {
       "id": 5444818,
@@ -550,7 +860,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-corner-filter-40",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-corner-filter-40",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/cad0ba1-210219-img_5675_1728331071893.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros internos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-internos"
+        }
+      ]
     },
     {
       "id": 5444819,
@@ -563,7 +883,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-1x-corner-filter-element-40-60",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-1x-corner-filter-element-40-60",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/11f913d-210223-dennerle_5926_corner_filter_element_40_60_1er_pack.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros internos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-internos"
+        }
+      ]
     },
     {
       "id": 5444821,
@@ -589,7 +919,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-black-slim-wood-m",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-black-slim-wood-m",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5216b40-153900-black-slim-wood.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Troncos",
+          "u": "https://www.aquariumlife.pt/category/hardscape-troncos"
+        }
+      ]
     },
     {
       "id": 5444824,
@@ -602,7 +942,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-black-normal-soil-10l",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-black-normal-soil-10l",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bcd1bb6-234901-60a0676.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444826,
@@ -615,7 +965,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-brown-normal-soil-3l",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-brown-normal-soil-3l",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0ff7330-234904-60a0678.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444827,
@@ -628,7 +988,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-red-moor-wood-xs",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-red-moor-wood-xs",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/30e539a-234906-60a7234.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Troncos",
+          "u": "https://www.aquariumlife.pt/category/hardscape-troncos"
+        }
+      ]
     },
     {
       "id": 5444828,
@@ -641,7 +1011,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-black-root-m",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-black-root-m",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0789c3b-234909-60a7563.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Troncos",
+          "u": "https://www.aquariumlife.pt/category/hardscape-troncos"
+        }
+      ]
     },
     {
       "id": 5444830,
@@ -654,7 +1034,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-talawa-wood-m",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-talawa-wood-m",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/deedc90-234911-60a7295.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Troncos",
+          "u": "https://www.aquariumlife.pt/category/hardscape-troncos"
+        }
+      ]
     },
     {
       "id": 5444834,
@@ -667,7 +1057,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-curl-wood-kg",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-curl-wood-kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b05cfb9-151448-curl-wood.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Troncos",
+          "u": "https://www.aquariumlife.pt/category/hardscape-troncos"
+        }
+      ]
     },
     {
       "id": 5444835,
@@ -680,7 +1080,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-aqua-bonsai-l",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-aqua-bonsai-l",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ea26d04-234913-60a7267.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Troncos",
+          "u": "https://www.aquariumlife.pt/category/hardscape-troncos"
+        }
+      ]
     },
     {
       "id": 5444837,
@@ -719,7 +1129,17 @@
       "url": "https://www.aquariumlife.pt/product/ada-power-sand-basic-s-1l",
       "cart": "https://www.aquariumlife.pt/cart/add/ada-power-sand-basic-s-1l",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/86833da-232331-ada-power-sand-basic.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Substrato Fértil",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-fertil"
+        }
+      ]
     },
     {
       "id": 5444846,
@@ -732,7 +1152,17 @@
       "url": "https://www.aquariumlife.pt/product/-ada-power-sand-advance-s-2l",
       "cart": "https://www.aquariumlife.pt/cart/add/-ada-power-sand-advance-s-2l",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/e2efc75-232356-ada-power-sand-advance.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Substrato Fértil",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-fertil"
+        }
+      ]
     },
     {
       "id": 5444849,
@@ -745,7 +1175,17 @@
       "url": "https://www.aquariumlife.pt/product/ada-amazonia-ver2-9l-",
       "cart": "https://www.aquariumlife.pt/cart/add/ada-amazonia-ver2-9l-",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3e7305c-233304-ada-aqua-soil-amazonia-ver2.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444851,
@@ -758,7 +1198,17 @@
       "url": "https://www.aquariumlife.pt/product/ada-powder-amazonia-ver23l",
       "cart": "https://www.aquariumlife.pt/cart/add/ada-powder-amazonia-ver23l",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d289786-232359-ada-aqua-soil-amazonia-powder-b-ware.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444852,
@@ -836,7 +1286,17 @@
       "url": "https://www.aquariumlife.pt/product/ada-aqua-gravel-8kg",
       "cart": "https://www.aquariumlife.pt/cart/add/ada-aqua-gravel-8kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ffef3f9-232401-ada-aqua-gravel-s.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444860,
@@ -849,7 +1309,17 @@
       "url": "https://www.aquariumlife.pt/product/ada-la-plata-sand-2kg",
       "cart": "https://www.aquariumlife.pt/cart/add/ada-la-plata-sand-2kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f03bb74-110853-3047-tm_large_default.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444862,
@@ -862,7 +1332,17 @@
       "url": "https://www.aquariumlife.pt/product/ada-colorado-sand-2kg",
       "cart": "https://www.aquariumlife.pt/cart/add/ada-colorado-sand-2kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/e1bd37f-152347-ada-colorado-sand-2kg.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444864,
@@ -875,7 +1355,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-filter-media-bag-13x18-cm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-filter-media-bag-13x18-cm",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5444865,
@@ -888,7 +1378,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-algae-magnet-floating-16mm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-algae-magnet-floating-16mm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2f5f940-205402-5444865.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444866,
@@ -901,7 +1401,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-nano-thermometer",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-nano-thermometer",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/e864e43-205405-5444866.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444867,
@@ -914,7 +1424,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-thermometer",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-thermometer",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/cab883d-105740-pp-thermometer.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444868,
@@ -927,7 +1447,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-digital-thermometer",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-digital-thermometer",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2a2a192-110107-papillon-digital-thermometer.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444869,
@@ -940,7 +1470,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-cotovelo-ar",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-cotovelo-ar",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444871,
@@ -953,7 +1493,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-torneira-de-ar-simples",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-torneira-de-ar-simples",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444872,
@@ -966,7 +1516,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-torneira-de-ar-em-linha",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-torneira-de-ar-em-linha",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444873,
@@ -979,7 +1539,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-torneira-de-ar-dupla",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-torneira-de-ar-dupla",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/04d226e-183410-74p03362.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444874,
@@ -992,7 +1562,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-torneira-de-ar-em-cruz",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-torneira-de-ar-em-cruz",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0bdca94-183407-74p03353.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444875,
@@ -1005,7 +1585,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-torneira-de-ar-em-x",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-torneira-de-ar-em-x",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444876,
@@ -1018,7 +1608,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-pedra-difusora-25x50-mm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-pedra-difusora-25x50-mm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/572ca61-183404-74p03245.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444877,
@@ -1031,7 +1631,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-pedra-difusora-18x50-mm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-pedra-difusora-18x50-mm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bc72078-183401-74p03242.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444878,
@@ -1044,7 +1654,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-pedra-difusora-15x25-mm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-pedra-difusora-15x25-mm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/99f95b4-183320-74p03239.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444879,
@@ -1057,7 +1677,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-pedra-difusora-cor-16x65-mm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-pedra-difusora-cor-16x65-mm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9e4bb08-183316-74p03248.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444880,
@@ -1070,7 +1700,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-pedra-difusora-cor-17x285-mm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-pedra-difusora-cor-17x285-mm",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444881,
@@ -1083,7 +1723,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-pedra-difusora-branca-24x45-mm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-pedra-difusora-branca-24x45-mm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3ee368d-183314-74p03236.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444882,
@@ -1096,7 +1746,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-pedra-difusora-branca-15x32-mm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-pedra-difusora-branca-15x32-mm",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444883,
@@ -1109,7 +1769,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-pedra-difusora-branca-25x25-mm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-pedra-difusora-branca-25x25-mm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/db3ea2c-183309-74p03233.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444884,
@@ -1122,7 +1792,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-area-flutuante-alimentacao-75mm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-area-flutuante-alimentacao-75mm",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444885,
@@ -1135,7 +1815,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-breedy-s",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-breedy-s",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444886,
@@ -1148,7 +1838,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-breedy-net-box-l",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-breedy-net-box-l",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9bb492f-183307-74p03185.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444887,
@@ -1161,7 +1861,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-breeding-hang-on-s",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-breeding-hang-on-s",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444888,
@@ -1174,7 +1884,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-breedy-airforce",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-breedy-airforce",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444889,
@@ -1187,7 +1907,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-osmopower-20-190-l-d",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-osmopower-20-190-l-d",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444890,
@@ -1200,7 +1930,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-aquarium-pad-6030-cm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-aquarium-pad-6030-cm",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444891,
@@ -1213,7 +1953,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-rede-aquario-8cm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-rede-aquario-8cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/89d83e3-205410-5444891.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444894,
@@ -1226,7 +1976,17 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-b-series-led-30cm",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-b-series-led-30cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/edc5104-232422-chihiros-b-series-led-lighting-system-chihiros-aquatic-studio-1680744385.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Led´s",
+          "u": "https://www.aquariumlife.pt/category/equipamento-led-s"
+        }
+      ]
     },
     {
       "id": 5444900,
@@ -1239,7 +1999,17 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-wrgb-ii-slim-30-cm",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-wrgb-ii-slim-30-cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/af72421-233310-chihiros-wrgb-ii-_-wrgbii-slim-shade-with-mirror-chihiros-aquatic-studio-1661133443.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Led´s",
+          "u": "https://www.aquariumlife.pt/category/equipamento-led-s"
+        }
+      ]
     },
     {
       "id": 5444905,
@@ -1252,7 +2022,17 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-wrgb-ii-30cm",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-wrgb-ii-30cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/aa4c37b-095702-331-9301_2.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Led´s",
+          "u": "https://www.aquariumlife.pt/category/equipamento-led-s"
+        }
+      ]
     },
     {
       "id": 5444913,
@@ -1317,7 +2097,17 @@
       "url": "https://www.aquariumlife.pt/product/dupla-depot-mix-active-3kg",
       "cart": "https://www.aquariumlife.pt/cart/add/dupla-depot-mix-active-3kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ae8a374-185140-dupla-depot-mix-active-3kg.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Substrato Fértil",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-fertil"
+        }
+      ]
     },
     {
       "id": 5444930,
@@ -1330,7 +2120,17 @@
       "url": "https://www.aquariumlife.pt/product/g-nature-black-pebbles-16mm-2kg",
       "cart": "https://www.aquariumlife.pt/cart/add/g-nature-black-pebbles-16mm-2kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b1aa81c-233312-ground-nature-black-pebbles-2-kg.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444931,
@@ -1343,7 +2143,17 @@
       "url": "https://www.aquariumlife.pt/product/g-nature-river-pebbles-0-16mm-2kg",
       "cart": "https://www.aquariumlife.pt/cart/add/g-nature-river-pebbles-0-16mm-2kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a129288-233315-ground-nature-river-pebbles-2-kg.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444932,
@@ -1356,7 +2166,17 @@
       "url": "https://www.aquariumlife.pt/product/g-nature-sarek-gravel-8-16mm-2kg",
       "cart": "https://www.aquariumlife.pt/cart/add/g-nature-sarek-gravel-8-16mm-2kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/369613a-233318-ground-nature-sarek-gravel-2-kg.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444933,
@@ -1369,7 +2189,17 @@
       "url": "https://www.aquariumlife.pt/product/g-nature-black-discs-20-50mm-2kg",
       "cart": "https://www.aquariumlife.pt/cart/add/g-nature-black-discs-20-50mm-2kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fe782a4-233321-ground-nature-black-discs-2-kg.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444934,
@@ -1382,7 +2212,17 @@
       "url": "https://www.aquariumlife.pt/product/g-nature-dalmatiner-stone-10-25mm-2kg",
       "cart": "https://www.aquariumlife.pt/cart/add/g-nature-dalmatiner-stone-10-25mm-2kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/84884e2-233324-ground-nature-dalmatiner-stone-2-kg.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444935,
@@ -1395,7 +2235,17 @@
       "url": "https://www.aquariumlife.pt/product/g-nature-grey-river-0-4mm-2kg",
       "cart": "https://www.aquariumlife.pt/cart/add/g-nature-grey-river-0-4mm-2kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/91a1a3e-233326-ground-nature-grey-river-2-kg.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444936,
@@ -1408,7 +2258,17 @@
       "url": "https://www.aquariumlife.pt/product/g-nature-ice-stone-16-25mm-2kg",
       "cart": "https://www.aquariumlife.pt/cart/add/g-nature-ice-stone-16-25mm-2kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/973a577-233328-ground-nature-ice-stone-2-kg.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444937,
@@ -1421,7 +2281,17 @@
       "url": "https://www.aquariumlife.pt/product/g-nature-black-pebbles-min-3-5mm-2kg",
       "cart": "https://www.aquariumlife.pt/cart/add/g-nature-black-pebbles-min-3-5mm-2kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5b66383-233330-ground-nature-black-pebbles-mini-2-kg.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444938,
@@ -1434,7 +2304,17 @@
       "url": "https://www.aquariumlife.pt/product/g-nature-los-nevados-2-8mm-2kg",
       "cart": "https://www.aquariumlife.pt/cart/add/g-nature-los-nevados-2-8mm-2kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3d9eb30-233332-ground-nature-los-nevados-2-kg.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444939,
@@ -1447,7 +2327,17 @@
       "url": "https://www.aquariumlife.pt/product/g-nature-red-star-8-16mm-2kg",
       "cart": "https://www.aquariumlife.pt/cart/add/g-nature-red-star-8-16mm-2kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fbaef8e-233334-ground-nature-red-star-2-kg.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444941,
@@ -1460,7 +2350,17 @@
       "url": "https://www.aquariumlife.pt/product/g-nature-colour-black-star-1-2-mm-10kg",
       "cart": "https://www.aquariumlife.pt/cart/add/g-nature-colour-black-star-1-2-mm-10kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/8dcd1a2-233340-ground-colour-black-star-1-2-mm-10-kg.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444942,
@@ -1473,7 +2373,17 @@
       "url": "https://www.aquariumlife.pt/product/g-nature-colour-brown-earthr-1-2-mm-10kg",
       "cart": "https://www.aquariumlife.pt/cart/add/g-nature-colour-brown-earthr-1-2-mm-10kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bf0cc51-233342-ground-colour-brown-earth-1-2-mm-10-kg.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444943,
@@ -1486,7 +2396,17 @@
       "url": "https://www.aquariumlife.pt/product/g-nature-colour-mountain-grey-1-2-mm-10kg",
       "cart": "https://www.aquariumlife.pt/cart/add/g-nature-colour-mountain-grey-1-2-mm-10kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ccc76d2-233344-ground-colour-mountain-grey-1-2-mm-10-kg.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444944,
@@ -1499,7 +2419,17 @@
       "url": "https://www.aquariumlife.pt/product/g-nature-colour-snow-white-1-2-mm-10kg",
       "cart": "https://www.aquariumlife.pt/cart/add/g-nature-colour-snow-white-1-2-mm-10kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a52a135-183345-g-nature-colour-snow-white-1-2-mm-5kg.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444948,
@@ -1512,7 +2442,17 @@
       "url": "https://www.aquariumlife.pt/product/g-nature-colour-brown-earth-1-2-mm-5kg",
       "cart": "https://www.aquariumlife.pt/cart/add/g-nature-colour-brown-earth-1-2-mm-5kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/561ce7a-182637-g-nature-colour-brown-earth-1-2-mm-5kg.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444949,
@@ -1525,7 +2465,17 @@
       "url": "https://www.aquariumlife.pt/product/g-nature-colour-black-pebbles-mini-3-5-mm-10kg",
       "cart": "https://www.aquariumlife.pt/cart/add/g-nature-colour-black-pebbles-mini-3-5-mm-10kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2a2e19c-234915-dupla-ground-nature-black-pebbles-mini-3-5-mm.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444951,
@@ -1538,7 +2488,17 @@
       "url": "https://www.aquariumlife.pt/product/g-nature-colour-river-sand-04-06-mm-5kg",
       "cart": "https://www.aquariumlife.pt/cart/add/g-nature-colour-river-sand-04-06-mm-5kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/60ddd6d-234918-dupla-ground-nature-river-sand-04-06-mm.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444955,
@@ -1551,7 +2511,17 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-hanging-kit-wrgbii",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-hanging-kit-wrgbii",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6a1e54e-233347-chihiros-seil-aufhaengung-set-serie-wrgb-ii.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Led´s",
+          "u": "https://www.aquariumlife.pt/category/equipamento-led-s"
+        }
+      ]
     },
     {
       "id": 5444956,
@@ -1564,7 +2534,17 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-hanging-kit-b-series",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-hanging-kit-b-series",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/82a7fbd-232424-chihiros-small-stand-for-rgb-vivid-and-wrgb-chihiros-aquatic-studio-1688607535126.jpeg",
-      "st": 0
+      "st": 0,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Led´s",
+          "u": "https://www.aquariumlife.pt/category/equipamento-led-s"
+        }
+      ]
     },
     {
       "id": 5444958,
@@ -1577,7 +2557,17 @@
       "url": "https://www.aquariumlife.pt/product/hobby-autocolante-100x50cm-frosty",
       "cart": "https://www.aquariumlife.pt/cart/add/hobby-autocolante-100x50cm-frosty",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/cbf7d4f-164502-hobby-autocolante-100x50cm-frosty.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5444959,
@@ -1603,7 +2593,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-areia-de-rio-2-35-25kg",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-areia-de-rio-2-35-25kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3bfeed1-104142-areao-de-rio-.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5444962,
@@ -1616,7 +2616,17 @@
       "url": "https://www.aquariumlife.pt/product/duplarit-g-500g",
       "cart": "https://www.aquariumlife.pt/cart/add/duplarit-g-500g",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6b05a3f-185901-duplarit-g-250g.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Substrato Fértil",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-fertil"
+        }
+      ]
     },
     {
       "id": 5444964,
@@ -1629,7 +2639,17 @@
       "url": "https://www.aquariumlife.pt/product/duplarit-k-250g",
       "cart": "https://www.aquariumlife.pt/cart/add/duplarit-k-250g",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/90be312-185641-duplarit-k-250g.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Substrato Fértil",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-fertil"
+        }
+      ]
     },
     {
       "id": 5444965,
@@ -1642,7 +2662,17 @@
       "url": "https://www.aquariumlife.pt/product/as-visitherm-300w",
       "cart": "https://www.aquariumlife.pt/cart/add/as-visitherm-300w",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a3cf952-103124-as-visitherm300.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Termostatos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-termostatos"
+        }
+      ]
     },
     {
       "id": 5444967,
@@ -1655,7 +2685,17 @@
       "url": "https://www.aquariumlife.pt/product/eheim-thermo-control-e-50w",
       "cart": "https://www.aquariumlife.pt/cart/add/eheim-thermo-control-e-50w",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0718d4d-103342-eheim-thermo-control-e-50w.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Termostatos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-termostatos"
+        }
+      ]
     },
     {
       "id": 5444968,
@@ -2045,7 +3085,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-x-pro-2000-uv",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-x-pro-2000-uv",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fd45e59-110408-superfish-x-pro-2000-uv.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5445000,
@@ -2058,7 +3108,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-x-pro-1500-400-l",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-x-pro-1500-400-l",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f25d0d2-105934-superfish-x-pro-1500-400l.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5445003,
@@ -2071,7 +3131,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-eco-flow-240",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-eco-flow-240",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5785390-232427-8715897319631superfishecoflow2403d-1280.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5445005,
@@ -2084,7 +3154,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-eco-led-14-24-cm-6-watt",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-eco-led-14-24-cm-6-watt",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4e3257c-232431-8715897349294sfecoled34-44cm-14w3d-1280x1280.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Led´s",
+          "u": "https://www.aquariumlife.pt/category/equipamento-led-s"
+        }
+      ]
     },
     {
       "id": 5445012,
@@ -2097,7 +3177,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-pro-heater-50-watt-20-50-l-17-cm",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-pro-heater-50-watt-20-50-l-17-cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/8f96a1e-232433-8715897313103sfproheater50w0-30l_17cm_3d-1280x1280.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Termostatos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-termostatos"
+        }
+      ]
     },
     {
       "id": 5445016,
@@ -2110,7 +3200,17 @@
       "url": "https://www.aquariumlife.pt/product/colombo-co2-kit-basic",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-co2-kit-basic",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/638412a-234209-colomboco2basicset-1080x1080.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5445017,
@@ -2123,7 +3223,17 @@
       "url": "https://www.aquariumlife.pt/product/colombo-co2-basic-refill-12-gram",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-co2-basic-refill-12-gram",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d949cff-234213-colombobasicsetreplacementbottle-1080x1080.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5445018,
@@ -2136,7 +3246,17 @@
       "url": "https://www.aquariumlife.pt/product/colombo-flora-nitro-test",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-flora-nitro-test",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4882b67-234215-8715897342592colombofloranitrotestfront-1280x1280.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5445019,
@@ -2149,7 +3269,17 @@
       "url": "https://www.aquariumlife.pt/product/colombo-flora-phospho-test",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-flora-phospho-test",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5624412-234219-8715897342608colombofloraphosphotestfront-1280x1280.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5445020,
@@ -2162,7 +3292,17 @@
       "url": "https://www.aquariumlife.pt/product/colombo-flora-ferro-test",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-flora-ferro-test",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/de9675f-234223-8715897342615colombofloraferrotestfront-1280x1280.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5445021,
@@ -2175,7 +3315,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-hang-on-filter-50",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-hang-on-filter-50",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0b64252-232436-foudebassin-com-sf-hang-on-filter-50-sf-hang-on-filter-50-8715897336607-a4051870-58736036806998.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Cascata",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-cascata"
+        }
+      ]
     },
     {
       "id": 5445023,
@@ -2188,7 +3338,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-hose-brush-cleaner",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-hose-brush-cleaner",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/e832290-232439-superfish-sf-hose-brush-cleaner-8715897305764-a4040020-29262757167217.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5445024,
@@ -2201,7 +3361,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-aqua-syphon-set",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-aqua-syphon-set",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/344a214-232442-superfish-aqua-syphon-set-superfish-8715897037863-a4040085-29262750318705.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5445025,
@@ -2214,7 +3384,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-aquapower-450-450-l-h",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-aquapower-450-450-l-h",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/665476f-232504-superfish-filtre-aquapower-450-450l-h-superfish-8715897305412-a7030955-29170180292721.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Bombas de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-bombas-de-agua"
+        }
+      ]
     },
     {
       "id": 5445027,
@@ -2227,7 +3407,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-aquaflow-300-filter-540-l-h",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-aquaflow-300-filter-540-l-h",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/85632a7-233353-8715897257742superfishaquaflow300filter540lh3d-1280.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros internos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-internos"
+        }
+      ]
     },
     {
       "id": 5445032,
@@ -2240,7 +3430,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-scaping-foam-375-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-scaping-foam-375-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/62a1d9b-232514-8715897338656superfishscapingfoam375mlfront-1280x1280.jpeg",
-      "st": 0
+      "st": 0,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5445033,
@@ -2253,7 +3453,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-float-clean-magnet-l",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-float-clean-magnet-l",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9f43afa-232516-8715897349713sffloatcleanmagnetl_front-1280x1280.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5445034,
@@ -2266,7 +3476,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-air-tube-suction-cup-4x",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-air-tube-suction-cup-4x",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ede1a47-233401-8715897275838superfishairtubesuctioncup4pcsfront-800x800.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5445035,
@@ -2279,7 +3499,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-air-non-return-valve-4-6-mm-2x",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-air-non-return-valve-4-6-mm-2x",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ff01c25-233403-8715897020865sfairnonreturnvalve4-6mm2pcsfront-1280x1280.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5445036,
@@ -2292,7 +3522,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-air-tube-25-m-roll",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-air-tube-25-m-roll",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5ebd5fa-142745-sf-air-tube-25-m-roll.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5445037,
@@ -2305,7 +3545,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-filter-cotton-white-100-gram",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-filter-cotton-white-100-gram",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/30877c5-232519-foudebassin-com-sf-filter-cotton-white-100-gram-sf-filter-cotton-white-100-gram-8715897030581-c8040006-58764694618454.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5445050,
@@ -2318,7 +3568,17 @@
       "url": "https://www.aquariumlife.pt/product/aquael-sas-500-filter-skimmer",
       "cart": "https://www.aquariumlife.pt/cart/add/aquael-sas-500-filter-skimmer",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a78f68e-153449-aquael-sas-500-filter-skimmer.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros internos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-internos"
+        }
+      ]
     },
     {
       "id": 5445051,
@@ -2331,7 +3591,17 @@
       "url": "https://www.aquariumlife.pt/product/aquael-limpador-mangueria-o-9-30-mm-160-cm",
       "cart": "https://www.aquariumlife.pt/cart/add/aquael-limpador-mangueria-o-9-30-mm-160-cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4a6ba65-153143-aquael-limpador-mangueira-o-9-30-mm.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5445052,
@@ -2344,7 +3614,17 @@
       "url": "https://www.aquariumlife.pt/product/aquael-magnetic-cleaner-s-vidro-3-6-mm",
       "cart": "https://www.aquariumlife.pt/cart/add/aquael-magnetic-cleaner-s-vidro-3-6-mm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ef266a9-152701-aquael-magnetic-cleaner-l.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5445055,
@@ -2357,7 +3637,17 @@
       "url": "https://www.aquariumlife.pt/product/aquael-air-tube-4-6-mm-3-m",
       "cart": "https://www.aquariumlife.pt/cart/add/aquael-air-tube-4-6-mm-3-m",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9a319af-234922-aquael-luftschlauch-6-m.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5445058,
@@ -2370,7 +3660,17 @@
       "url": "https://www.aquariumlife.pt/product/aquael-platinium-heater-300-w",
       "cart": "https://www.aquariumlife.pt/cart/add/aquael-platinium-heater-300-w",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3558047-150959-aquael-platinium-heater.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Termostatos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-termostatos"
+        }
+      ]
     },
     {
       "id": 5445061,
@@ -2383,7 +3683,17 @@
       "url": "https://www.aquariumlife.pt/product/aquael-media-phosmax-pro-3-x-100ml",
       "cart": "https://www.aquariumlife.pt/cart/add/aquael-media-phosmax-pro-3-x-100ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9b9c0d6-150553-aquael-media-phosmax-pro.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5445062,
@@ -2396,7 +3706,17 @@
       "url": "https://www.aquariumlife.pt/product/aquael-media-nitromax-pro-3-x-100-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/aquael-media-nitromax-pro-3-x-100-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/dfb169f-150241-aquael-media-nitromax-pro.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5445063,
@@ -2409,7 +3729,17 @@
       "url": "https://www.aquariumlife.pt/product/aquael-media-zeomax-plus-1000-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/aquael-media-zeomax-plus-1000-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/444d950-234926-aquael-filtermedium-zeomax-plus.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5445064,
@@ -2422,7 +3752,17 @@
       "url": "https://www.aquariumlife.pt/product/aquael-media-bioceramax-1200-1000-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/aquael-media-bioceramax-1200-1000-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/93237d1-145607-aquael-media-bioceramax-1200.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5445067,
@@ -2643,7 +3983,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-deko-set-dragon-stone-60-l-aquarium",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-deko-set-dragon-stone-60-l-aquarium",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ed10c3b-234928-60a7546.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Rochas",
+          "u": "https://www.aquariumlife.pt/category/hardscape-rochas"
+        }
+      ]
     },
     {
       "id": 5445094,
@@ -2656,7 +4006,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-deko-set-mini-scape-60-l-aquarium",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-deko-set-mini-scape-60-l-aquarium",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/73851b7-234931-60a7541.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Rochas",
+          "u": "https://www.aquariumlife.pt/category/hardscape-rochas"
+        }
+      ]
     },
     {
       "id": 5445098,
@@ -2669,7 +4029,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-filter-fleece-branco-50-x-50-x-25-cm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-filter-fleece-branco-50-x-50-x-25-cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/953dcda-183301-74p01401.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5445100,
@@ -2682,7 +4052,17 @@
       "url": "https://www.aquariumlife.pt/product/hobby-sponge-filter-2",
       "cart": "https://www.aquariumlife.pt/cart/add/hobby-sponge-filter-2",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3b456f7-163627-hobby-sponge-filter-2_1.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros internos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-internos"
+        }
+      ]
     },
     {
       "id": 5445103,
@@ -2812,7 +4192,17 @@
       "url": "https://www.aquariumlife.pt/product/as-garrafa-de-co2-recarregavel-500g",
       "cart": "https://www.aquariumlife.pt/cart/add/as-garrafa-de-co2-recarregavel-500g",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5445116,
@@ -2825,7 +4215,17 @@
       "url": "https://www.aquariumlife.pt/product/ma955-solenoide-valve",
       "cart": "https://www.aquariumlife.pt/cart/add/ma955-solenoide-valve",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6273223-104704-ma955_1920x1920.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5445117,
@@ -2838,7 +4238,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-plant-system-set",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-system-set",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fbd3562-211409-dennerle-plant-system-set.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5445118,
@@ -2851,7 +4261,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-plant-system-s7-250-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-system-s7-250-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/be102e9-211411-dennerle-plant-system-s7.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5445119,
@@ -2864,7 +4284,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-carbo-care-bio-100-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-carbo-care-bio-100-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/58cb533-210243-4810__1_carbocarebio100ml.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5445122,
@@ -2877,7 +4307,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-plant-care-pro-daily-100-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-care-pro-daily-100-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9c0fda3-211415-dennerle-plant-care-pro-daily.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5445123,
@@ -2890,7 +4330,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-plant-care-pro-250-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-care-pro-250-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5516484-211417-dennerle-plant-care-pro-250-ml.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5445124,
@@ -2903,7 +4353,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-plant-care-basic-root-10-stueck",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-care-basic-root-10-stueck",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/c3d7c4d-210246-mc165_1.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5445126,
@@ -2916,7 +4376,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-nano-babyprotect",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-nano-babyprotect",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/52fa260-211420-dennerle-corner-filter-baby-protect.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros internos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-internos"
+        }
+      ]
     },
     {
       "id": 5445127,
@@ -2929,7 +4399,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-nano-bio-filtergranulat-300-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-nano-bio-filtergranulat-300-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fbb029e-211423-dennerle-nano-bio-filtergranulat.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5445128,
@@ -2942,7 +4422,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-heater-constant-75-w",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-heater-constant-75-w",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9cc10a7-211502-dennerle-heater-constant-75-w.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Termostatos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-termostatos"
+        }
+      ]
     },
     {
       "id": 5445130,
@@ -2968,7 +4458,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-deponitmix-professional-10in1-24-kg",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-deponitmix-professional-10in1-24-kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9c0d4b1-211506-dennerle-deponitmix-professional-10in1.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Substrato Fértil",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-fertil"
+        }
+      ]
     },
     {
       "id": 5445132,
@@ -2981,7 +4481,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-nano-deponit-mix-pro-black-1-kg",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-nano-deponit-mix-pro-black-1-kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/45050de-211509-dennerle-deponit-mix-pro-black-1-kg.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Substrato Fértil",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-fertil"
+        }
+      ]
     },
     {
       "id": 5445133,
@@ -2994,7 +4504,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-nutribasis-6in1-24-kg",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-nutribasis-6in1-24-kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/185e75b-172441-dennerle-nutribasis-6in1-48-kg.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Substrato Fértil",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-fertil"
+        }
+      ]
     },
     {
       "id": 5445136,
@@ -3007,7 +4527,17 @@
       "url": "https://www.aquariumlife.pt/product/salifert-kh-profi-test",
       "cart": "https://www.aquariumlife.pt/cart/add/salifert-kh-profi-test",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/7276e34-234226-1nfb4sebsag_65b129dd-ce0b-4012-b4e6-78618ebca059.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5445137,
@@ -3020,7 +4550,17 @@
       "url": "https://www.aquariumlife.pt/product/salifert-no3-profi-test",
       "cart": "https://www.aquariumlife.pt/cart/add/salifert-no3-profi-test",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f747a83-144629-salifert-no3-profi-test.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5445138,
@@ -3033,7 +4573,17 @@
       "url": "https://www.aquariumlife.pt/product/salifert-nitritos-profi-test",
       "cart": "https://www.aquariumlife.pt/cart/add/salifert-nitritos-profi-test",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9c06f1e-144521-salifert-nitritos-profi-test.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5445139,
@@ -3046,7 +4596,17 @@
       "url": "https://www.aquariumlife.pt/product/salifert-ph-profi-test",
       "cart": "https://www.aquariumlife.pt/cart/add/salifert-ph-profi-test",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d4dac8a-144223-salifert-ph-profi-test.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5445140,
@@ -3059,7 +4619,17 @@
       "url": "https://www.aquariumlife.pt/product/salifert-amonia-profi-test",
       "cart": "https://www.aquariumlife.pt/cart/add/salifert-amonia-profi-test",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/68b34bc-143756-salifert-amonia-profi-test.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5445141,
@@ -3475,7 +5045,17 @@
       "url": "https://www.aquariumlife.pt/product/ica-mangueira-cinza-12-16mm",
       "cart": "https://www.aquariumlife.pt/cart/add/ica-mangueira-cinza-12-16mm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/8873efe-105755-ica-magueiracinz.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5445176,
@@ -3488,7 +5068,17 @@
       "url": "https://www.aquariumlife.pt/product/esha-2000-20ml",
       "cart": "https://www.aquariumlife.pt/cart/add/esha-2000-20ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d7ce7ff-163434-esha-2000.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Medicação",
+          "u": "https://www.aquariumlife.pt/category/equipamento-medicacao"
+        }
+      ]
     },
     {
       "id": 5445177,
@@ -3501,7 +5091,17 @@
       "url": "https://www.aquariumlife.pt/product/esha-hexamita-20ml",
       "cart": "https://www.aquariumlife.pt/cart/add/esha-hexamita-20ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fe19399-163320-esha-hexamita.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Medicação",
+          "u": "https://www.aquariumlife.pt/category/equipamento-medicacao"
+        }
+      ]
     },
     {
       "id": 5445178,
@@ -3514,7 +5114,17 @@
       "url": "https://www.aquariumlife.pt/product/esha-gdex-20ml",
       "cart": "https://www.aquariumlife.pt/cart/add/esha-gdex-20ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/cd4b56d-234234-rc011_1.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Medicação",
+          "u": "https://www.aquariumlife.pt/category/equipamento-medicacao"
+        }
+      ]
     },
     {
       "id": 5445179,
@@ -3527,7 +5137,17 @@
       "url": "https://www.aquariumlife.pt/product/sera-teste-gh",
       "cart": "https://www.aquariumlife.pt/cart/add/sera-teste-gh",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 0
+      "st": 0,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5445181,
@@ -3540,7 +5160,17 @@
       "url": "https://www.aquariumlife.pt/product/twinstar-difusor-co2-s",
       "cart": "https://www.aquariumlife.pt/cart/add/twinstar-difusor-co2-s",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6b78b84-112449-twinstar-difusor-co2-l.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5445184,
@@ -3579,7 +5209,17 @@
       "url": "https://www.aquariumlife.pt/product/tubo-co2-poliuretano",
       "cart": "https://www.aquariumlife.pt/cart/add/tubo-co2-poliuretano",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bedca2d-104939-download.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5445188,
@@ -3644,7 +5284,17 @@
       "url": "https://www.aquariumlife.pt/product/esha-exit-20ml",
       "cart": "https://www.aquariumlife.pt/cart/add/esha-exit-20ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/cb6c5d8-163438-esha-exit.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Medicação",
+          "u": "https://www.aquariumlife.pt/category/equipamento-medicacao"
+        }
+      ]
     },
     {
       "id": 5445978,
@@ -3657,7 +5307,17 @@
       "url": "https://www.aquariumlife.pt/product/strideways-pro-co2-regulator-o-ring",
       "cart": "https://www.aquariumlife.pt/cart/add/strideways-pro-co2-regulator-o-ring",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0fa7033-154540-strideways-pro-co2-regulator-plus-o-ring.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5445979,
@@ -3670,7 +5330,17 @@
       "url": "https://www.aquariumlife.pt/product/strideways-pro-co2-regulator-plus-o-ring",
       "cart": "https://www.aquariumlife.pt/cart/add/strideways-pro-co2-regulator-plus-o-ring",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0fa7033-154540-strideways-pro-co2-regulator-plus-o-ring.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5445980,
@@ -3683,7 +5353,17 @@
       "url": "https://www.aquariumlife.pt/product/wa-contador-de-bolhas-para-co2",
       "cart": "https://www.aquariumlife.pt/cart/add/wa-contador-de-bolhas-para-co2",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/70a5a02-155037-contador-de-bolhas-para-co2.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5445981,
@@ -3696,7 +5376,17 @@
       "url": "https://www.aquariumlife.pt/product/wa-ventosas-para-fixacao-tubo-de-co2",
       "cart": "https://www.aquariumlife.pt/cart/add/wa-ventosas-para-fixacao-tubo-de-co2",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/8752cb1-155215-wa-ventosas-para-fixacao-tubo-de-co2.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5445982,
@@ -3709,7 +5399,17 @@
       "url": "https://www.aquariumlife.pt/product/wa-conexao-rapida-para-tubo-12-16mm",
       "cart": "https://www.aquariumlife.pt/cart/add/wa-conexao-rapida-para-tubo-12-16mm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/7a1d2ac-154739-wa-conexao-rapida-para-tubo.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5445984,
@@ -3722,7 +5422,17 @@
       "url": "https://www.aquariumlife.pt/product/wa-valvula-solenoide-toma-rapida",
       "cart": "https://www.aquariumlife.pt/cart/add/wa-valvula-solenoide-toma-rapida",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/cfd7053-154506-wa-valvula-solenoide-toma-rapida.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5445985,
@@ -3735,7 +5445,17 @@
       "url": "https://www.aquariumlife.pt/product/wa-regulador-co2-com-solenoide-e-conta-bolhas",
       "cart": "https://www.aquariumlife.pt/cart/add/wa-regulador-co2-com-solenoide-e-conta-bolhas",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/c130293-154007-regulador-co2-com-solenoide-e-conta-bolhas.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5445986,
@@ -3748,7 +5468,17 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-regulador-co2-com-solenoide-e-conta-bolhas",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-regulador-co2-com-solenoide-e-conta-bolhas",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2b5ad45-233409-chihiros-co2-druckminderer-mate.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5445987,
@@ -3761,7 +5491,17 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-difusor-c02-externo-mangueira-12-16mm",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-difusor-c02-externo-mangueira-12-16mm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6b87a33-233411-chihiros-co2-diffusor-external-m-12-16-mm.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5445989,
@@ -3774,7 +5514,17 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-controlador-solenoide",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-controlador-solenoide",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/7c97f47-232523-chihiros-co2-regulator-solenoid-controller-chihiros-aquatic-studio-1692149353952.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5445990,
@@ -3787,7 +5537,17 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-ceramica-difusor-externo-co2",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-ceramica-difusor-externo-co2",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/78366dc-170957-chihiros-ceramica-de-substituicao-difusor-externo-co2.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5458962,
@@ -3800,7 +5560,17 @@
       "url": "https://www.aquariumlife.pt/product/aa-difusor-co2-s-2",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-difusor-co2-s-2",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0ebf2da-160813-aa-c02-difusor-m.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5506824,
@@ -4294,7 +6064,17 @@
       "url": "https://www.aquariumlife.pt/product/tropica-aquarium-soil-9l-",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-aquarium-soil-9l-",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1337227-104328-711-tropica-aquarium-soil-9-lt.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5512994,
@@ -4307,7 +6087,17 @@
       "url": "https://www.aquariumlife.pt/product/tropica-premium-nutrition-125ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-premium-nutrition-125ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/efc4f03-103550-plant-growth-system-nano-nachfuellflasche.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5512996,
@@ -4320,7 +6110,17 @@
       "url": "https://www.aquariumlife.pt/product/tropica-specialised-nutrition-125ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-specialised-nutrition-125ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/53c5c10-103849-fertilizante-liquido-specialised-tropica.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5512998,
@@ -4723,7 +6523,17 @@
       "url": "https://www.aquariumlife.pt/product/esha-ndx-20ml",
       "cart": "https://www.aquariumlife.pt/cart/add/esha-ndx-20ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3bf1faa-102741-ndx-tratamento-parasitas-nematodes-20ml.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Medicação",
+          "u": "https://www.aquariumlife.pt/category/equipamento-medicacao"
+        }
+      ]
     },
     {
       "id": 5521450,
@@ -4970,7 +6780,17 @@
       "url": "https://www.aquariumlife.pt/product/aquael-media-carbomax-plus-1l",
       "cart": "https://www.aquariumlife.pt/cart/add/aquael-media-carbomax-plus-1l",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/8b70e82-150820-aquael-media-carbomax-plus.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5532579,
@@ -4983,7 +6803,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-pedras-hakkai-kg",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-pedras-hakkai-kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bce33e0-150550-ad-pedras-hakkai.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Rochas",
+          "u": "https://www.aquariumlife.pt/category/hardscape-rochas"
+        }
+      ]
     },
     {
       "id": 5532581,
@@ -4996,7 +6826,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-plant-system-e15-250-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-plant-system-e15-250-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/dba501d-211512-dennerle-plant-system-e15.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5532583,
@@ -5061,7 +6901,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-deponitmix-black-10in1-48-kg-",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-deponitmix-black-10in1-48-kg-",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/50b4bd2-211518-dennerle-deponitmix-professional-10in1-48-kg.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Substrato Fértil",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-fertil"
+        }
+      ]
     },
     {
       "id": 5532590,
@@ -5165,7 +7015,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-nano-filtertubes-500ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-nano-filtertubes-500ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a107f1f-211539-dennerle-nano-filtertubes.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5532598,
@@ -5178,7 +7038,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-nano-algenstop-300ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-nano-algenstop-300ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/7598edd-142234-dennerle-nano-algenstop.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5532599,
@@ -5204,7 +7074,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-red-moor-branches-10-40cm",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-red-moor-branches-10-40cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/92e3ef1-141618-ad-red-moor-branches.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Troncos",
+          "u": "https://www.aquariumlife.pt/category/hardscape-troncos"
+        }
+      ]
     },
     {
       "id": 5532601,
@@ -5308,7 +7188,17 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-greenscape-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-greenscape-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2b8b063-220207-rc338_1.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5532614,
@@ -5321,7 +7211,17 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-redscape-500ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-redscape-500ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d408ac6-220213-rc336_1.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5532616,
@@ -5334,7 +7234,17 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-nitro-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-nitro-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fa8deaa-220217-rc348_1.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5532618,
@@ -5347,7 +7257,17 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-ferro-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-ferro-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0b8ad66-220220-ferro_250ml_high-1280x1280.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5532620,
@@ -5360,7 +7280,17 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-fosfo-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-fosfo-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b37e969-220222-fosfo_250ml-1280x1280.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5532622,
@@ -5373,7 +7303,17 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-profito-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-profito-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0e86daf-220225-profito_250ml-1280x1280.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5532625,
@@ -5386,7 +7326,17 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-carbo-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-carbo-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fe840c0-220229-mo2mvyifp0e.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5532627,
@@ -5477,7 +7427,17 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-nano-plant",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-nano-plant",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/cab0e6c-113455-easy-life-nano-plant.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5532635,
@@ -5490,7 +7450,17 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-root-sticks-25x",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-root-sticks-25x",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/dffc3f9-220249-mc230_1.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Fertilizantes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-fertilizantes"
+        }
+      ]
     },
     {
       "id": 5532636,
@@ -5503,7 +7473,17 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-voogle-100ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-voogle-100ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0bb655c-220252-easy-life-voogle.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Medicação",
+          "u": "https://www.aquariumlife.pt/category/equipamento-medicacao"
+        }
+      ]
     },
     {
       "id": 5532640,
@@ -5529,7 +7509,17 @@
       "url": "https://www.aquariumlife.pt/product/multi-layer-filtration-media-50x50x2cm",
       "cart": "https://www.aquariumlife.pt/cart/add/multi-layer-filtration-media-50x50x2cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/59c19fb-173332-papillon-multi-layer-filter.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5532648,
@@ -5581,7 +7571,17 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-test-strips-6in1-50x",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-test-strips-6in1-50x",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/394424c-220255-easy-life-6in1-teststreifen.jpeg",
-      "st": 0
+      "st": 0,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5532652,
@@ -5646,7 +7646,17 @@
       "url": "https://www.aquariumlife.pt/product/cola-segundos-para-plantas-gel-20g",
       "cart": "https://www.aquariumlife.pt/cart/add/cola-segundos-para-plantas-gel-20g",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6a43b35-171956-cola-me-gel-para-plantas.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5532657,
@@ -5659,7 +7669,17 @@
       "url": "https://www.aquariumlife.pt/product/cola-segundos-para-hardscape-liquido-20g",
       "cart": "https://www.aquariumlife.pt/cart/add/cola-segundos-para-hardscape-liquido-20g",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/aaaf9c8-171842-cola-me-liquida-para-hardscape.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5536078,
@@ -5750,7 +7770,17 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-wrgb-w60-55-75cm",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-wrgb-w60-55-75cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3bff8ce-095706-chihiros-led-system-universal-wrgb.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Led´s",
+          "u": "https://www.aquariumlife.pt/category/equipamento-led-s"
+        }
+      ]
     },
     {
       "id": 5548437,
@@ -5763,7 +7793,17 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-aqua-soil-3l",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-aqua-soil-3l",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/dfc20d1-152527-chihiros-aqua-soil-3l.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Areão",
+          "u": "https://www.aquariumlife.pt/category/equipamento-areao-inerte"
+        }
+      ]
     },
     {
       "id": 5549676,
@@ -5776,7 +7816,17 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-deluxe-4-colours-tube",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-deluxe-4-colours-tube",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9fe5d79-182428-chihiros-deluxe-4-color-silicone-tube-chihiros-aquatic-studio-312639650.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5549677,
@@ -5789,7 +7839,17 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-dosing-pump-mate-2-cabecas",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-dosing-pump-mate-2-cabecas",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/423ce5f-182424-chihiros-dosing-system-chihiros-aquatic-studio-1679963857_d0101ffb-1594-4625-a3db-686579394ba7.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5549678,
@@ -5802,7 +7862,17 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-dosing-container-4-pcs-450ml",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-dosing-container-4-pcs-450ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/aa9d1ab-182421-chihiros-dosing-system-chihiros-aquatic-studio-1661134753.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5549679,
@@ -5815,7 +7885,17 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-dosing-container-holder",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-dosing-container-holder",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/8dd98a9-182416-the-world-s-first-professional-freshwater-aquascape-dosing-system-chihiros-dosing-system-chihiros-aquatic-studio-1661931487.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5549680,
@@ -5828,7 +7908,17 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-magnetic-stirrers",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-magnetic-stirrers",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/96b90cb-182431-chihiros-magnetic-stirrers-chihiros-aquatic-studio-312617983.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5549681,
@@ -5841,7 +7931,17 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-nano-co2-diffuser-l",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-nano-co2-diffuser-l",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b90cf90-105101-chihiros-nano-co2-diffuser-chihiros-aquatic-studio-1681434499.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Co2",
+          "u": "https://www.aquariumlife.pt/category/equipamento-co2"
+        }
+      ]
     },
     {
       "id": 5549685,
@@ -5854,7 +7954,17 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-dosing-tube-holder",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-dosing-tube-holder",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d0220c6-110640-chihiros-dosing-tube-holder.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5549686,
@@ -5867,7 +7977,17 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-dosing-tube-holder-x",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-dosing-tube-holder-x",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1a6f74d-110924-chihiros-dosing-tube-holder-x.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5549687,
@@ -5880,7 +8000,17 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-magnet-cleaner-mini",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-magnet-cleaner-mini",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0a0bdec-182413-chihiros-magnet-cleaner-chihiros-aquatic-studio-1677845783.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5549688,
@@ -5893,7 +8023,17 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-magnet-cleaner-nano",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-magnet-cleaner-nano",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/dee49e6-182411-chihiros-magnet-cleaner-chihiros-aquatic-studio-1677845780.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5549689,
@@ -5906,7 +8046,17 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-shade-para-wrgb-ii-e-wrgb-slim-30cm",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-shade-para-wrgb-ii-e-wrgb-slim-30cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/62b195c-105450-chihirosshadevivid.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Led´s",
+          "u": "https://www.aquariumlife.pt/category/equipamento-led-s"
+        }
+      ]
     },
     {
       "id": 5549691,
@@ -6608,7 +8758,17 @@
       "url": "https://www.aquariumlife.pt/product/uns-delta-30-filter",
       "cart": "https://www.aquariumlife.pt/cart/add/uns-delta-30-filter",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/966a766-164237-uns-delta-60-filter.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5559799,
@@ -6985,7 +9145,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-filtro-cascata-100-450l-h",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-filtro-cascata-100-450l-h",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3eadf36-171946-superfish-filtre-d-aquarium-hang-on-filter-100-superfish-8715897313349-a4051875-29173252259953.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Cascata",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-cascata"
+        }
+      ]
     },
     {
       "id": 5559845,
@@ -6998,7 +9168,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-esponjas-para-entrada-de-filtros-cascata",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-esponjas-para-entrada-de-filtros-cascata",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Cascata",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-cascata"
+        }
+      ]
     },
     {
       "id": 5559846,
@@ -7011,7 +9191,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-2-cartuchos-de-reposicao-para-filtros-cascata",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-2-cartuchos-de-reposicao-para-filtros-cascata",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9f591bf-171952-superfish-cartouche-de-filtration-hang-on-cartridge-2pcs-superfish-8715897313363-a4051885-29173265498225.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Cascata",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-cascata"
+        }
+      ]
     },
     {
       "id": 5559847,
@@ -7024,7 +9214,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-ventosas-estrela-2x-s",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-ventosas-estrela-2x-s",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/47e20da-171957-8715897000782superfishstarsuckersmallblister2pcsfront-1280x1280.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5559848,
@@ -7037,7 +9237,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-ventosas-para-mangueiras-16-22mm",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-ventosas-para-mangueiras-16-22mm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/01026fa-172000-superfish-sf-ventouses-16-22mm-2-pieces-8715897000843-a4060035-29262241202289.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5559849,
@@ -7219,7 +9429,17 @@
       "url": "https://www.aquariumlife.pt/product/colombo-teste-ph-40x",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-teste-ph-40x",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/16b9d7b-111133-colombo-teste-de-ph-inicio-40-testes.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5559868,
@@ -7232,7 +9452,17 @@
       "url": "https://www.aquariumlife.pt/product/colombo-teste-kh-40x",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-teste-kh-40x",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/11ff8af-111331-colombo-teste-kh-40x.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5559869,
@@ -7245,7 +9475,17 @@
       "url": "https://www.aquariumlife.pt/product/colombo-teste-gh-40x",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-teste-gh-40x",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a2758ab-111431-colombo-teste-gh-40x.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5559870,
@@ -7258,7 +9498,17 @@
       "url": "https://www.aquariumlife.pt/product/colombo-teste-nitrito-40x",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-teste-nitrito-40x",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/eaae1c3-234246-foudebassin-com-colombo-aqua-nitrite-test-colombo-aqua-nitrite-test-8715897225611-a5010970-58779285881174.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5559871,
@@ -7271,7 +9521,17 @@
       "url": "https://www.aquariumlife.pt/product/colombo-teste-amonia-40x-",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-teste-amonia-40x-",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/35ea59f-234248-foudebassin-com-colombo-aqua-ammonia-test-colombo-aqua-ammonia-test-8715897225604-a5010968-58779281162582.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5559872,
@@ -7284,7 +9544,17 @@
       "url": "https://www.aquariumlife.pt/product/colombo-teste-nitrato-40x",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-teste-nitrato-40x",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/53952cb-232101-foudebassin-com-colombo-aqua-nitrate-test-colombo-aqua-nitrate-test-8715897225628-a5010973-58779292664150.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5559873,
@@ -7297,7 +9567,17 @@
       "url": "https://www.aquariumlife.pt/product/colombo-teste-fosfato-40x",
       "cart": "https://www.aquariumlife.pt/cart/add/colombo-teste-fosfato-40x",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2227a2e-112018-teste-fosfato-01-tyv57dkw2q.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Testes de água",
+          "u": "https://www.aquariumlife.pt/category/equipamento-testes-de-agua"
+        }
+      ]
     },
     {
       "id": 5559874,
@@ -7323,7 +9603,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-reposicao-cartucho-carvao-zeolite-aqua-flow-100-150",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-reposicao-cartucho-carvao-zeolite-aqua-flow-100-150",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/eb5f0fc-100438-recargas-para-filtro-aquaflow-superfish.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros internos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-internos"
+        }
+      ]
     },
     {
       "id": 5559878,
@@ -7336,7 +9626,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-reposicao-esponja-aqua-flow-100-150",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-reposicao-esponja-aqua-flow-100-150",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/dbee308-173702-superfish-cartouche-aqua-flow-100-easy-click-2pcs-superfish-8715897041785-a7030840-29170136252529.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros internos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-internos"
+        }
+      ]
     },
     {
       "id": 5559883,
@@ -7349,7 +9649,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-reposicao-esponja-c2-carvao-activado-para-aqua-flow-xl",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-reposicao-esponja-c2-carvao-activado-para-aqua-flow-xl",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/529aa8f-101544-esponja-aquaflow-sf.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros internos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-internos"
+        }
+      ]
     },
     {
       "id": 5559884,
@@ -7362,7 +9672,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-rede-para-aquario-8cm",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-rede-para-aquario-8cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/115bb0b-172011-superfish-net-75-cm-1280x1280.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5559887,
@@ -7375,7 +9695,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-x-pro-thermo-1000",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-x-pro-thermo-1000",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/992a1c4-103012-superfish-x-pro-thermo-1000.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5559890,
@@ -7388,7 +9718,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-crystalmax-midia-10l",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-crystalmax-midia-10l",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5326cc3-172002-superfish-crystalmax-media-extremement-filtrant-sac-de-10-litres-superfish-8715897026393-08040240-8529759961147.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5559891,
@@ -7401,7 +9741,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-air-tube-clamp-2x",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-air-tube-clamp-2x",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/86ec686-172005-foudebassin-com-sf-air-tube-clamp-2x-sf-air-tube-clamp-2x-8715897336928-c8010060-58764092080470.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Acessórios",
+          "u": "https://www.aquariumlife.pt/category/equipamento-acessorios"
+        }
+      ]
     },
     {
       "id": 5568876,
@@ -7414,7 +9764,17 @@
       "url": "https://www.aquariumlife.pt/product/esponja-laranja-30-ppi-para-biomaster-2",
       "cart": "https://www.aquariumlife.pt/cart/add/esponja-laranja-30-ppi-para-biomaster-2",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/69b3191-105901-biomaster30ppi-orange-001.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568877,
@@ -7427,7 +9787,17 @@
       "url": "https://www.aquariumlife.pt/product/2-esponjas-azuis-para-filtosmart-100",
       "cart": "https://www.aquariumlife.pt/cart/add/2-esponjas-azuis-para-filtosmart-100",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5197ef8-141024-2-esponjas-azuis-para-filtosmart-100.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568878,
@@ -7440,7 +9810,17 @@
       "url": "https://www.aquariumlife.pt/product/kit-acessorios-para-filtosmart-60",
       "cart": "https://www.aquariumlife.pt/cart/add/kit-acessorios-para-filtosmart-60",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/98a2af5-140712-kit-acessorios-para-filtosmart-60.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568879,
@@ -7453,7 +9833,17 @@
       "url": "https://www.aquariumlife.pt/product/rotor-para-filtosmart-60",
       "cart": "https://www.aquariumlife.pt/cart/add/rotor-para-filtosmart-60",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f362915-121554-oase-ersatz-rotor-filtosmart-60.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568880,
@@ -7466,7 +9856,17 @@
       "url": "https://www.aquariumlife.pt/product/filtosmart-60",
       "cart": "https://www.aquariumlife.pt/cart/add/filtosmart-60",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/56bcf65-140048-filtosmart-60.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568884,
@@ -7479,7 +9879,17 @@
       "url": "https://www.aquariumlife.pt/product/filtosmart-thermo-100",
       "cart": "https://www.aquariumlife.pt/cart/add/filtosmart-thermo-100",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/423784c-234252-oase-living-water-filtosmart-200-thermo-filtre-externe-pour-aquarium-oase-4010052426686-42668-29193403039857.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568887,
@@ -7492,7 +9902,17 @@
       "url": "https://www.aquariumlife.pt/product/biomaster-2-thermo-850",
       "cart": "https://www.aquariumlife.pt/cart/add/biomaster-2-thermo-850",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b98007f-135406-biomaster-2-thermo-850.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568891,
@@ -7505,7 +9925,17 @@
       "url": "https://www.aquariumlife.pt/product/biomaster-2-850",
       "cart": "https://www.aquariumlife.pt/cart/add/biomaster-2-850",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/7047b6e-123254-biomaster-2-600-2.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568895,
@@ -7518,7 +9948,17 @@
       "url": "https://www.aquariumlife.pt/product/esponja-azul-para-filtosmart-60-",
       "cart": "https://www.aquariumlife.pt/cart/add/esponja-azul-para-filtosmart-60-",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a8c8929-134859-filtro-filtosmart-60-oase.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568896,
@@ -7531,7 +9971,17 @@
       "url": "https://www.aquariumlife.pt/product/set-4-esponjas-pretas-prefiltro-biomaster-60ppi",
       "cart": "https://www.aquariumlife.pt/cart/add/set-4-esponjas-pretas-prefiltro-biomaster-60ppi",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ea1deb5-165005-rokkpqjptqu.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568897,
@@ -7544,7 +9994,17 @@
       "url": "https://www.aquariumlife.pt/product/set-4-esponjas-azuis-prefiltro-biomaster-45ppi",
       "cart": "https://www.aquariumlife.pt/cart/add/set-4-esponjas-azuis-prefiltro-biomaster-45ppi",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1bff16f-165002-y01pzioixls_815a31f2-6af1-4724-b975-c26eac8b8c4f.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568900,
@@ -7557,7 +10017,17 @@
       "url": "https://www.aquariumlife.pt/product/esponja-filtrante-biomaster-20-ppi-azul",
       "cart": "https://www.aquariumlife.pt/cart/add/esponja-filtrante-biomaster-20-ppi-azul",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/665c729-121809-esponja-filtrante-biomaster-20-ppi-azul.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568901,
@@ -7570,7 +10040,17 @@
       "url": "https://www.aquariumlife.pt/product/set-esponjas-filtrantes-200",
       "cart": "https://www.aquariumlife.pt/cart/add/set-esponjas-filtrantes-200",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2835376-121711-set-esponjas-filtrantes-200.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568904,
@@ -7583,7 +10063,17 @@
       "url": "https://www.aquariumlife.pt/product/rotor-para-biomaster-850",
       "cart": "https://www.aquariumlife.pt/cart/add/rotor-para-biomaster-850",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/66c4e66-121004-rotor-para-biomaster-850.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568907,
@@ -7596,7 +10086,17 @@
       "url": "https://www.aquariumlife.pt/product/rotorpara-biomaster-600",
       "cart": "https://www.aquariumlife.pt/cart/add/rotorpara-biomaster-600",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/882bb4d-115949-rotorpara-biomaster-600.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568908,
@@ -7609,7 +10109,17 @@
       "url": "https://www.aquariumlife.pt/product/kit-acessorios-de-rep-filtosmart200-300",
       "cart": "https://www.aquariumlife.pt/cart/add/kit-acessorios-de-rep-filtosmart200-300",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a5f2899-112637-kit-acessorios-de-rep-filtosmart200-300.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568909,
@@ -7622,7 +10132,17 @@
       "url": "https://www.aquariumlife.pt/product/kit-de-acessorios-de-rep-filtosmart-100",
       "cart": "https://www.aquariumlife.pt/cart/add/kit-de-acessorios-de-rep-filtosmart-100",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d605c28-113054-kit-de-acessorios-de-rep-filtosmart-100.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568910,
@@ -7635,7 +10155,17 @@
       "url": "https://www.aquariumlife.pt/product/junta-reposicao-para-biomaster",
       "cart": "https://www.aquariumlife.pt/cart/add/junta-reposicao-para-biomaster",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bfc4632-112302-oase-vedante-para-canister-biomaster.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5568911,
@@ -7648,7 +10178,17 @@
       "url": "https://www.aquariumlife.pt/product/set-esponjas-filtrantes-para-fitosmart-300",
       "cart": "https://www.aquariumlife.pt/cart/add/set-esponjas-filtrantes-para-fitosmart-300",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/872602d-112043-juego-de-esponjas-filtrantes-filtosmart-300.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros Externos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-externos"
+        }
+      ]
     },
     {
       "id": 5642265,

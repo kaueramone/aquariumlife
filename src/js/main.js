@@ -18,6 +18,7 @@ import { initImageFix }        from './modules/imageFix.js';
 import { initNativeFixes }     from './modules/nativeFixes.js';
 import { initCartQuantity }   from './modules/cartQuantity.js';
 import { initCartShipping }   from './modules/cartShipping.js';
+import { initBreadcrumbFix }  from './modules/breadcrumbFix.js';
 import { initHome }            from './modules/homeOrchestrator.js';
 
 function init() {
@@ -58,6 +59,9 @@ function init() {
 
   // Portes de envio no resumo do carrinho (2 opcoes PT continental)
   initCartShipping();
+
+  // Breadcrumb da pagina de produto: inserir subcategoria em falta
+  initBreadcrumbFix();
 
   // Toggle dark/light mode (lampada flutuante)
   initThemeToggle();

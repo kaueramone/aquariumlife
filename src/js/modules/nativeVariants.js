@@ -33,7 +33,7 @@ function aqGetDataRef() {
 }
 
 let _mapPromise = null;
-function loadMap() {
+export function loadMap() {
   if (_mapPromise) return _mapPromise;
   _mapPromise = (async function () {
     const ref = await aqGetDataRef();
@@ -42,7 +42,7 @@ function loadMap() {
     const map = {};
     (data.products || []).forEach(function (p) {
       const h = ((p.url || '').match(/\/product\/([^/?#]+)/) || [])[1];
-      if (h) map[h] = { af: p.af || null, img: p.img || null };
+      if (h) map[h] = { af: p.af || null, img: p.img || null, bc: p.bc || null };
     });
     return map;
   })().catch(function () { return {}; });

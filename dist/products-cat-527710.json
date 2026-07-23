@@ -17,7 +17,17 @@
       "url": "https://www.aquariumlife.pt/product/aa-poppy-pipe-vidro-12-16",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-poppy-pipe-vidro-12-16",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2716112-232302-74p09982.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Lilly Pipes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-lilly-pipes"
+        }
+      ]
     },
     {
       "id": 5444781,
@@ -30,7 +40,17 @@
       "url": "https://www.aquariumlife.pt/product/aa-violet-pipe-vidro-12-16",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-violet-pipe-vidro-12-16",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9557734-232305-74p09986.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Lilly Pipes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-lilly-pipes"
+        }
+      ]
     },
     {
       "id": 5444782,
@@ -43,7 +63,17 @@
       "url": "https://www.aquariumlife.pt/product/aa-lilly-pipe-vidro-12-16",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-lilly-pipe-vidro-12-16",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/7dabedf-232308-74p09984.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Lilly Pipes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-lilly-pipes"
+        }
+      ]
     },
     {
       "id": 5444786,
@@ -56,7 +86,17 @@
       "url": "https://www.aquariumlife.pt/product/aa-skimmer-pipe-vidro-16-22",
       "cart": "https://www.aquariumlife.pt/cart/add/aa-skimmer-pipe-vidro-16-22",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d7b624b-164751-aa-skimmer-pipe-vidro-16_22.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Lilly Pipes",
+          "u": "https://www.aquariumlife.pt/category/equipamento-lilly-pipes"
+        }
+      ]
     }
   ]
 }

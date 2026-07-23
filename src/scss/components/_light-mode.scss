@@ -219,4 +219,52 @@ html body.aq-light-mode.aq-light-mode.aq-light-mode.aq-light-mode.aq-light-mode.
     color: $lm-ink !important;
     border-color: rgba(0, 32, 74, 0.3) !important;
   }
+
+  // ── 13. Descricao de categoria + corpo das paginas /page/* ──
+  // Fica em .page-content; o Boxie herda texto claro do tema -> no
+  // claro dava branco-sobre-branco (Kaue viu em /category/alimentacao
+  // 2026-07-23). O seletor que eu tinha (.category-description) nem
+  // existe no markup real.
+  .page-content,
+  .page-content p,
+  .page-content li,
+  .page-content td,
+  .page-content th,
+  .page-content span,
+  .page-content h2,
+  .page-content h4,
+  .page-content strong,
+  .page-content b {
+    color: $lm-ink !important;
+  }
+  .page-content h3 { color: $lm-green !important; }
+  .page-content a { color: $lm-green !important; }
+
+  // paginas estaticas: o .page-content tinha fundo ESCURO forcado
+  // (#00040d, so' no dark) sem contraparte -> caixa preta no claro
+  &.page-page {
+    .main, .page.section { background: transparent !important; }
+    .page-content {
+      background: #ffffff !important;
+      border-color: rgba(0, 122, 92, 0.12) !important;
+    }
+  }
+
+  // ── 14. Pagina de produto: garantir fundo claro em TODA a pagina ──
+  // A metade de baixo (.details) ficava escura no claro (Kaue 2026-07-23).
+  // Aqui, com a especificidade alta deste ficheiro (carrega por ultimo),
+  // forcamos claro independentemente de qualquer regra dark remanescente.
+  &.page-product {
+    background: #f0f8ff !important;
+
+    .main,
+    .product-detail.section,
+    .details.section,
+    .details-tabs,
+    .details-item,
+    .tab-content,
+    .tab-pane { background: transparent !important; }
+
+    .details-list { background: #ffffff !important; }
+  }
 }

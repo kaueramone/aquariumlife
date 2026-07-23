@@ -17,7 +17,17 @@
       "url": "https://www.aquariumlife.pt/product/hydra-biomax-400ml",
       "cart": "https://www.aquariumlife.pt/cart/add/hydra-biomax-400ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f892619-140805-hydra-biomax400ml.webp",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5444864,
@@ -30,7 +40,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-filter-media-bag-13x18-cm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-filter-media-bag-13x18-cm",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5445037,
@@ -43,7 +63,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-filter-cotton-white-100-gram",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-filter-cotton-white-100-gram",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/30877c5-232519-foudebassin-com-sf-filter-cotton-white-100-gram-sf-filter-cotton-white-100-gram-8715897030581-c8040006-58764694618454.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5445061,
@@ -56,7 +86,17 @@
       "url": "https://www.aquariumlife.pt/product/aquael-media-phosmax-pro-3-x-100ml",
       "cart": "https://www.aquariumlife.pt/cart/add/aquael-media-phosmax-pro-3-x-100ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9b9c0d6-150553-aquael-media-phosmax-pro.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5445062,
@@ -69,7 +109,17 @@
       "url": "https://www.aquariumlife.pt/product/aquael-media-nitromax-pro-3-x-100-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/aquael-media-nitromax-pro-3-x-100-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/dfb169f-150241-aquael-media-nitromax-pro.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5445063,
@@ -82,7 +132,17 @@
       "url": "https://www.aquariumlife.pt/product/aquael-media-zeomax-plus-1000-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/aquael-media-zeomax-plus-1000-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/444d950-234926-aquael-filtermedium-zeomax-plus.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5445064,
@@ -95,7 +155,17 @@
       "url": "https://www.aquariumlife.pt/product/aquael-media-bioceramax-1200-1000-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/aquael-media-bioceramax-1200-1000-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/93237d1-145607-aquael-media-bioceramax-1200.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5445098,
@@ -108,7 +178,17 @@
       "url": "https://www.aquariumlife.pt/product/pp-filter-fleece-branco-50-x-50-x-25-cm",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-filter-fleece-branco-50-x-50-x-25-cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/953dcda-183301-74p01401.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5445127,
@@ -121,7 +201,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-nano-bio-filtergranulat-300-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-nano-bio-filtergranulat-300-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fbb029e-211423-dennerle-nano-bio-filtergranulat.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5532578,
@@ -134,7 +224,17 @@
       "url": "https://www.aquariumlife.pt/product/aquael-media-carbomax-plus-1l",
       "cart": "https://www.aquariumlife.pt/cart/add/aquael-media-carbomax-plus-1l",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/8b70e82-150820-aquael-media-carbomax-plus.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5532597,
@@ -147,7 +247,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-nano-filtertubes-500ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-nano-filtertubes-500ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a107f1f-211539-dennerle-nano-filtertubes.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5532598,
@@ -160,7 +270,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-nano-algenstop-300ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-nano-algenstop-300ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/7598edd-142234-dennerle-nano-algenstop.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5532647,
@@ -173,7 +293,17 @@
       "url": "https://www.aquariumlife.pt/product/multi-layer-filtration-media-50x50x2cm",
       "cart": "https://www.aquariumlife.pt/cart/add/multi-layer-filtration-media-50x50x2cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/59c19fb-173332-papillon-multi-layer-filter.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     },
     {
       "id": 5559890,
@@ -186,7 +316,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-crystalmax-midia-10l",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-crystalmax-midia-10l",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5326cc3-172002-superfish-crystalmax-media-extremement-filtrant-sac-de-10-litres-superfish-8715897026393-08040240-8529759961147.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Media Filtrante",
+          "u": "https://www.aquariumlife.pt/category/equipamento-media-filtrante"
+        }
+      ]
     }
   ]
 }

@@ -26,6 +26,10 @@ const OUT_DIR = path.join(__dirname, 'dist');
 const PAGE_LIMIT  = 50;     // maximo permitido pela API
 const ONLY_ACTIVE = true;   // so produtos activos vao para as grelhas
 
+// Mapa global id->categoria (preenchido no main), usado por bcChain para
+// construir a trilha de breadcrumb (Equipamento > Termostatos > ...).
+let CAT_BY_ID = new Map();
+
 function getApiKey() {
   if (process.env.SHOPKIT_API_KEY) return process.env.SHOPKIT_API_KEY.trim();
   try {
@@ -159,10 +163,39 @@ function aPartirDe(p) {
   return lo ? lo.f : null;
 }
 
+// Trilha de breadcrumb: cadeia da subcategoria MAIS PROFUNDA do produto,
+// subindo pelos pais (ex.: [Equipamento, Termostatos]). O breadcrumb nativo
+// do ShopKit so' mostra a categoria de topo; o breadcrumbFix.js usa este
+// campo para inserir os niveis intermedios em falta. Devolve null se o
+// produto so' estiver em categorias de 1o nivel.
+function bcChain(p) {
+  const cats = Array.isArray(p.categories) ? p.categories : [];
+  if (!cats.length) return null;
+  let deepest = null, deepestDepth = 0;
+  for (const c of cats) {
+    let depth = 1, node = c, guard = 0;
+    while (node && node.parent && node.parent !== 0 && guard++ < 8) {
+      depth++;
+      node = CAT_BY_ID.get(node.parent);
+    }
+    if (depth > deepestDepth) { deepestDepth = depth; deepest = c; }
+  }
+  if (!deepest || deepestDepth < 2) return null;   // sem subcategoria
+  const chain = [];
+  let cur = deepest, guard = 0;
+  const seen = new Set();
+  while (cur && !seen.has(cur.id) && guard++ < 8) {
+    seen.add(cur.id);
+    chain.unshift({ t: cur.title, u: cur.url || (SITE + '/category/' + cur.handle) });
+    cur = (cur.parent && cur.parent !== 0) ? CAT_BY_ID.get(cur.parent) : null;
+  }
+  return chain.length >= 2 ? chain : null;
+}
+
 function mapProduct(p) {
   const handle = p.handle || '';
   const img = (p.image && (p.image.full || p.image.square || p.image.thumb)) || NO_IMG;
-  return {
+  const out = {
     id:    p.id,
     title: p.title,
     price: (typeof p.price === 'number') ? p.price : (parseFloat(p.price) || 0),
@@ -175,6 +208,9 @@ function mapProduct(p) {
     img:   img,
     st:    emStock(p) ? 1 : 0   // 0 = esgotado (badge + compra bloqueada na grelha)
   };
+  const bc = bcChain(p);
+  if (bc) out.bc = bc;         // trilha de breadcrumb (so' quando ha subcategoria)
+  return out;
 }
 
 // Sem stock quando: produto marcado "esgotado" (status 3) ou stock ativo a zero sem backorder.
@@ -220,6 +256,7 @@ function buildFile(catId, slug, rawList, today) {
   const cats = await fetchAll('/category', {});
   console.log('  ' + cats.length + ' categorias.');
   const catById = new Map(cats.map(function (c) { return [c.id, c]; }));
+  CAT_BY_ID = catById;   // disponivel para bcChain (breadcrumb) no mapProduct
 
   // Agrupar produtos por categoria, subindo ate aos pais (ex.: Equipamento)
   const byCat = new Map();

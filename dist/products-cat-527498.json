@@ -17,7 +17,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-deko-set-dragon-stone-60-l-aquarium",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-deko-set-dragon-stone-60-l-aquarium",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ed10c3b-234928-60a7546.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Rochas",
+          "u": "https://www.aquariumlife.pt/category/hardscape-rochas"
+        }
+      ]
     },
     {
       "id": 5445094,
@@ -30,7 +40,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-deko-set-mini-scape-60-l-aquarium",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-deko-set-mini-scape-60-l-aquarium",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/73851b7-234931-60a7541.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Rochas",
+          "u": "https://www.aquariumlife.pt/category/hardscape-rochas"
+        }
+      ]
     },
     {
       "id": 5532579,
@@ -43,7 +63,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-pedras-hakkai-kg",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-pedras-hakkai-kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bce33e0-150550-ad-pedras-hakkai.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Rochas",
+          "u": "https://www.aquariumlife.pt/category/hardscape-rochas"
+        }
+      ]
     }
   ]
 }

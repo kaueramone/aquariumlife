@@ -17,7 +17,17 @@
       "url": "https://www.aquariumlife.pt/product/esha-2000-20ml",
       "cart": "https://www.aquariumlife.pt/cart/add/esha-2000-20ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d7ce7ff-163434-esha-2000.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Medicação",
+          "u": "https://www.aquariumlife.pt/category/equipamento-medicacao"
+        }
+      ]
     },
     {
       "id": 5445177,
@@ -30,7 +40,17 @@
       "url": "https://www.aquariumlife.pt/product/esha-hexamita-20ml",
       "cart": "https://www.aquariumlife.pt/cart/add/esha-hexamita-20ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fe19399-163320-esha-hexamita.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Medicação",
+          "u": "https://www.aquariumlife.pt/category/equipamento-medicacao"
+        }
+      ]
     },
     {
       "id": 5445178,
@@ -43,7 +63,17 @@
       "url": "https://www.aquariumlife.pt/product/esha-gdex-20ml",
       "cart": "https://www.aquariumlife.pt/cart/add/esha-gdex-20ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/cd4b56d-234234-rc011_1.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Medicação",
+          "u": "https://www.aquariumlife.pt/category/equipamento-medicacao"
+        }
+      ]
     },
     {
       "id": 5445494,
@@ -56,7 +86,17 @@
       "url": "https://www.aquariumlife.pt/product/esha-exit-20ml",
       "cart": "https://www.aquariumlife.pt/cart/add/esha-exit-20ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/cb6c5d8-163438-esha-exit.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Medicação",
+          "u": "https://www.aquariumlife.pt/category/equipamento-medicacao"
+        }
+      ]
     },
     {
       "id": 5513028,
@@ -69,7 +109,17 @@
       "url": "https://www.aquariumlife.pt/product/esha-ndx-20ml",
       "cart": "https://www.aquariumlife.pt/cart/add/esha-ndx-20ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3bf1faa-102741-ndx-tratamento-parasitas-nematodes-20ml.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Medicação",
+          "u": "https://www.aquariumlife.pt/category/equipamento-medicacao"
+        }
+      ]
     },
     {
       "id": 5532636,
@@ -82,7 +132,17 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-voogle-100ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-voogle-100ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0bb655c-220252-easy-life-voogle.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Medicação",
+          "u": "https://www.aquariumlife.pt/category/equipamento-medicacao"
+        }
+      ]
     }
   ]
 }

@@ -17,7 +17,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-3x-corner-filter-element-40-60",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-3x-corner-filter-element-40-60",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4f822d8-210216-5865_fro_cornerfilterelement_40-60_3pcs.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros internos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-internos"
+        }
+      ]
     },
     {
       "id": 5444818,
@@ -30,7 +40,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-corner-filter-40",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-corner-filter-40",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/cad0ba1-210219-img_5675_1728331071893.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros internos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-internos"
+        }
+      ]
     },
     {
       "id": 5444819,
@@ -43,7 +63,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-1x-corner-filter-element-40-60",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-1x-corner-filter-element-40-60",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/11f913d-210223-dennerle_5926_corner_filter_element_40_60_1er_pack.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros internos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-internos"
+        }
+      ]
     },
     {
       "id": 5445027,
@@ -56,7 +86,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-aquaflow-300-filter-540-l-h",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-aquaflow-300-filter-540-l-h",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/85632a7-233353-8715897257742superfishaquaflow300filter540lh3d-1280.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros internos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-internos"
+        }
+      ]
     },
     {
       "id": 5445050,
@@ -69,7 +109,17 @@
       "url": "https://www.aquariumlife.pt/product/aquael-sas-500-filter-skimmer",
       "cart": "https://www.aquariumlife.pt/cart/add/aquael-sas-500-filter-skimmer",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a78f68e-153449-aquael-sas-500-filter-skimmer.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros internos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-internos"
+        }
+      ]
     },
     {
       "id": 5445100,
@@ -82,7 +132,17 @@
       "url": "https://www.aquariumlife.pt/product/hobby-sponge-filter-2",
       "cart": "https://www.aquariumlife.pt/cart/add/hobby-sponge-filter-2",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3b456f7-163627-hobby-sponge-filter-2_1.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros internos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-internos"
+        }
+      ]
     },
     {
       "id": 5445126,
@@ -95,7 +155,17 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-nano-babyprotect",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-nano-babyprotect",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/52fa260-211420-dennerle-corner-filter-baby-protect.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros internos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-internos"
+        }
+      ]
     },
     {
       "id": 5559877,
@@ -108,7 +178,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-reposicao-cartucho-carvao-zeolite-aqua-flow-100-150",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-reposicao-cartucho-carvao-zeolite-aqua-flow-100-150",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/eb5f0fc-100438-recargas-para-filtro-aquaflow-superfish.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros internos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-internos"
+        }
+      ]
     },
     {
       "id": 5559878,
@@ -121,7 +201,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-reposicao-esponja-aqua-flow-100-150",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-reposicao-esponja-aqua-flow-100-150",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/dbee308-173702-superfish-cartouche-aqua-flow-100-easy-click-2pcs-superfish-8715897041785-a7030840-29170136252529.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros internos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-internos"
+        }
+      ]
     },
     {
       "id": 5559883,
@@ -134,7 +224,17 @@
       "url": "https://www.aquariumlife.pt/product/sf-reposicao-esponja-c2-carvao-activado-para-aqua-flow-xl",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-reposicao-esponja-c2-carvao-activado-para-aqua-flow-xl",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/529aa8f-101544-esponja-aquaflow-sf.jpg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Equipamento",
+          "u": "https://www.aquariumlife.pt/category/equipamento"
+        },
+        {
+          "t": "Filtros internos",
+          "u": "https://www.aquariumlife.pt/category/equipamento-filtros-internos"
+        }
+      ]
     }
   ]
 }

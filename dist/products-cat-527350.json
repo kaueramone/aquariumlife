@@ -30,7 +30,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-black-slim-wood-m",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-black-slim-wood-m",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5216b40-153900-black-slim-wood.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Troncos",
+          "u": "https://www.aquariumlife.pt/category/hardscape-troncos"
+        }
+      ]
     },
     {
       "id": 5444827,
@@ -43,7 +53,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-red-moor-wood-xs",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-red-moor-wood-xs",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/30e539a-234906-60a7234.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Troncos",
+          "u": "https://www.aquariumlife.pt/category/hardscape-troncos"
+        }
+      ]
     },
     {
       "id": 5444828,
@@ -56,7 +76,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-black-root-m",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-black-root-m",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0789c3b-234909-60a7563.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Troncos",
+          "u": "https://www.aquariumlife.pt/category/hardscape-troncos"
+        }
+      ]
     },
     {
       "id": 5444830,
@@ -69,7 +99,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-talawa-wood-m",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-talawa-wood-m",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/deedc90-234911-60a7295.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Troncos",
+          "u": "https://www.aquariumlife.pt/category/hardscape-troncos"
+        }
+      ]
     },
     {
       "id": 5444834,
@@ -82,7 +122,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-curl-wood-kg",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-curl-wood-kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b05cfb9-151448-curl-wood.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Troncos",
+          "u": "https://www.aquariumlife.pt/category/hardscape-troncos"
+        }
+      ]
     },
     {
       "id": 5444835,
@@ -95,7 +145,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-aqua-bonsai-l",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-aqua-bonsai-l",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ea26d04-234913-60a7267.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Troncos",
+          "u": "https://www.aquariumlife.pt/category/hardscape-troncos"
+        }
+      ]
     },
     {
       "id": 5445093,
@@ -108,7 +168,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-deko-set-dragon-stone-60-l-aquarium",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-deko-set-dragon-stone-60-l-aquarium",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ed10c3b-234928-60a7546.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Rochas",
+          "u": "https://www.aquariumlife.pt/category/hardscape-rochas"
+        }
+      ]
     },
     {
       "id": 5445094,
@@ -121,7 +191,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-deko-set-mini-scape-60-l-aquarium",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-deko-set-mini-scape-60-l-aquarium",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/73851b7-234931-60a7541.jpeg",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Rochas",
+          "u": "https://www.aquariumlife.pt/category/hardscape-rochas"
+        }
+      ]
     },
     {
       "id": 5532579,
@@ -134,7 +214,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-pedras-hakkai-kg",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-pedras-hakkai-kg",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bce33e0-150550-ad-pedras-hakkai.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Rochas",
+          "u": "https://www.aquariumlife.pt/category/hardscape-rochas"
+        }
+      ]
     },
     {
       "id": 5532600,
@@ -147,7 +237,17 @@
       "url": "https://www.aquariumlife.pt/product/ad-red-moor-branches-10-40cm",
       "cart": "https://www.aquariumlife.pt/cart/add/ad-red-moor-branches-10-40cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/92e3ef1-141618-ad-red-moor-branches.png",
-      "st": 1
+      "st": 1,
+      "bc": [
+        {
+          "t": "Hardscape",
+          "u": "https://www.aquariumlife.pt/category/hardscape"
+        },
+        {
+          "t": "Troncos",
+          "u": "https://www.aquariumlife.pt/category/hardscape-troncos"
+        }
+      ]
     }
   ]
 }
