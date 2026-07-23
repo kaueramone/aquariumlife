@@ -20,7 +20,7 @@ permissions:
 jobs:
   upscale:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 300  # CPU: ~45s/imagem; 113 imagens ~2h (45 min cancelou a meio em 2026-07-23)
     steps:
       - uses: actions/checkout@v4
 

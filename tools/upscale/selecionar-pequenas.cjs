@@ -19,6 +19,9 @@ if (!KEY) { console.error('ERRO: SHOPKIT_API_KEY ausente.'); process.exit(1); }
 const IDS = (process.env.IDS || '').split(',').map(s => s.trim()).filter(Boolean);
 const LIMIAR = parseInt(process.env.LIMIAR || '300', 10);
 const DEST = path.join(__dirname, 'entrada');
+// resume: resultados que ja estao em dist/img-hd nao se repetem
+const HD = path.join(__dirname, '..', '..', 'dist', 'img-hd');
+const FEITOS = fs.existsSync(HD) ? fs.readdirSync(HD) : [];
 
 async function fetchAll() {
   let page = 1, all = [];
@@ -50,6 +53,7 @@ async function baixa(url) {
   for (const p of alvo) {
     const img = p.image && (p.image.full || p.image.square);
     if (!img || img.includes('no-img')) continue;
+    if (FEITOS.some(f => f.startsWith(p.id + '.'))) { console.log('ja ampliado, salto:', p.id); continue; }
     try {
       const buf = await baixa(img);
       const dim = sizeOf(buf);
