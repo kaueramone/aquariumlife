@@ -23,11 +23,16 @@ function applyTheme(isLight) {
   var root = document.documentElement;
   if (isLight) {
     document.body.classList.add(LIGHT_CLASS);
+    // Espelhar a classe no <html>: a regra base e' `html,body{background:#00040d}`
+    // e o <html> pinta o canvas do viewport onde o body nao chega (aparecia
+    // uma faixa preta na metade de baixo da pagina de produto). 2026-07-23.
+    root.classList.add(LIGHT_CLASS);
     Object.keys(LIGHT_VARS).forEach(function(k) {
       root.style.setProperty(k, LIGHT_VARS[k]);
     });
   } else {
     document.body.classList.remove(LIGHT_CLASS);
+    root.classList.remove(LIGHT_CLASS);
     Object.keys(LIGHT_VARS).forEach(function(k) {
       root.style.removeProperty(k);
     });

@@ -19,6 +19,7 @@ import { initNativeFixes }     from './modules/nativeFixes.js';
 import { initCartQuantity }   from './modules/cartQuantity.js';
 import { initCartShipping }   from './modules/cartShipping.js';
 import { initBreadcrumbFix }  from './modules/breadcrumbFix.js';
+import { initCheapestVariant } from './modules/cheapestVariant.js';
 import { initHome }            from './modules/homeOrchestrator.js';
 
 function init() {
@@ -62,6 +63,9 @@ function init() {
 
   // Breadcrumb da pagina de produto: inserir subcategoria em falta
   initBreadcrumbFix();
+
+  // Pagina de produto: pre-selecionar a variante mais barata
+  initCheapestVariant();
 
   // Toggle dark/light mode (lampada flutuante)
   initThemeToggle();

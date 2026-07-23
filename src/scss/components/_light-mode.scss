@@ -18,6 +18,14 @@ $lm-ink: #00204a;
 $lm-soft: rgba(0, 32, 74, 0.65);
 $lm-green: #007a5c;
 
+// O <html> tambem ganha .aq-light-mode (themeToggle) — sem isto, a regra
+// base `html,body{background:#00040d}` deixava o canvas do viewport preto
+// onde o body nao chegava (faixa escura em baixo na pagina de produto).
+html.aq-light-mode {
+  background: #f0f8ff !important;
+  background-image: none !important;
+}
+
 // .aq-light-mode repetido 6x = +6 CLASSES de especificidade em todas as
 // regras. Necessario porque as regras escuras dos componentes usam 3-5
 // classes com !important e classes vencem elementos (html/body nao chegava).
