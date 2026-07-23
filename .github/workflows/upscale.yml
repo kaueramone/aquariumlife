@@ -46,24 +46,35 @@ jobs:
           unzip -q re.zip -d re
           chmod +x re/realesrgan-ncnn-vulkan
 
-      - name: Ampliar 4x
+      - name: Ampliar 4x (lotes de 20, commit a cada lote — nada se perde no timeout)
         run: |
           shopt -s nullglob
           files=(tools/upscale/entrada/*)
-          if [ ${#files[@]} -eq 0 ]; then echo "Sem entradas — nada a fazer."; exit 0; fi
-          mkdir -p dist/img-hd
-          ./re/realesrgan-ncnn-vulkan -i tools/upscale/entrada -o dist/img-hd -n realesrgan-x4plus -f jpg || \
-          ./re/realesrgan-ncnn-vulkan -g -1 -i tools/upscale/entrada -o dist/img-hd -n realesrgan-x4plus -f jpg
-          ls -la dist/img-hd/
-
-      - name: Commit e purge jsDelivr
-        run: |
+          total=${#files[@]}
+          if [ $total -eq 0 ]; then echo "Sem entradas — nada a fazer."; exit 0; fi
           git config user.name "upscale-bot"
           git config user.email "actions@github.com"
-          git add dist/img-hd
-          if git diff --cached --quiet; then echo "Nada novo."; exit 0; fi
-          git commit -m "img: upscale 4x Real-ESRGAN ($(date -u +%F))"
-          git push
+          mkdir -p dist/img-hd
+          i=0
+          while [ $i -lt $total ]; do
+            rm -rf /tmp/lote && mkdir /tmp/lote
+            for f in "${files[@]:$i:20}"; do cp "$f" /tmp/lote/; done
+            ./re/realesrgan-ncnn-vulkan -i /tmp/lote -o dist/img-hd -n realesrgan-x4plus -f jpg || \
+            ./re/realesrgan-ncnn-vulkan -g -1 -i /tmp/lote -o dist/img-hd -n realesrgan-x4plus -f jpg || true
+            i=$((i+20))
+            [ $i -gt $total ] && i=$total
+            git add dist/img-hd
+            if ! git diff --cached --quiet; then
+              git commit -m "img: upscale 4x parcial ($i/$total)"
+              git pull --rebase origin main || true
+              git push origin main || echo "push falhou agora, o proximo lote tenta de novo"
+            fi
+            echo ">>> progresso: $i/$total"
+          done
+
+      - name: Purge jsDelivr
+        if: always()
+        run: |
           for f in dist/img-hd/*; do
             curl -s "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/$f" > /dev/null || true
           done
