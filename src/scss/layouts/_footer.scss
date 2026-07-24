@@ -180,42 +180,56 @@ footer img[src*="trustlogo"] {
     text-align: center !important;
   }
 
+  footer .row > div,
   footer .col-lg-3,
   footer .col-md-6,
   footer .col-xs-12 {
     flex: none !important;
     width: 100% !important;
-    max-width: 320px !important;
+    max-width: 340px !important;
     min-width: unset !important;
     text-align: center !important;
-    margin-bottom: 24px !important;
+    margin: 0 auto 22px !important;
+    float: none !important;
   }
 
   footer .footer-logo img {
     margin: 0 auto !important;
   }
 
-  footer .footer-category::after {
-    left: 50% !important;
-    transform: translateX(-50%) !important;
+  footer .footer-category {
+    text-align: center !important;
+    &::after {
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+    }
   }
 
-  // Centralizar listas de links
+  // Menu / Páginas / Contactos: os links e textos vivem TODOS em .footer-menu
+  // (links <a class="footer-link">; contactos em <p><strong>+<a>). O tema
+  // força text-align:left — vencemos com seletor mais específico (2026-07-24).
+  footer .footer-menu {
+    text-align: center !important;
+  }
+  footer .footer-menu .footer-link,
+  footer .footer-menu a,
+  footer .footer-menu p,
+  footer .footer-menu strong {
+    text-align: center !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    border-bottom: none !important;
+  }
+
+  // listas nativas (se existirem)
   footer ul {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-  }
-
-  footer .footer-link,
-  footer .footer-menu a,
-  footer li a {
-    text-align: center !important;
     padding-left: 0 !important;
-    border-bottom: none !important;
   }
 
-  .aq-footer-social {
+  footer .aq-footer-social {
     justify-content: center !important;
   }
 }
