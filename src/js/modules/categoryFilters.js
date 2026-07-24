@@ -430,17 +430,21 @@ function initPriceFilter(catId) {
               ? '<del>' + p.pf + '</del><span class="product-actual">' + p.ppf + '</span>'
               : '<span class="product-actual">' + p.pf + '</span>');
 
-        // Esgotado (st === 0): badge na foto + botao inerte (sem link para o carrinho).
-        // JSONs antigos sem o campo st continuam a comprar normalmente (st undefined -> em stock).
+        // Esgotado (st === 0): identidade única = card cinza + etiqueta vermelha
+        // + botão "+ Info" que leva à ficha (não compra). Ver aqApplyEsgotado()
+        // (esgotado.js), a MESMA regra usada nos cards nativos.
+        // JSONs antigos sem o campo st continuam a comprar normalmente.
         const esgotado = (p.st === 0);
+        // SEM a classe .badge do tema (traz fundo neon que vence a cascata);
+        // só .aq-badge-esgotado, estilizado por nós (vermelho).
         const badgeHTML = esgotado
-          ? '<span class="badge aq-badge-esgotado">Esgotado</span>'
+          ? '<span class="aq-badge-esgotado">Esgotado</span>'
           : '';
         // Nota: precisa ser <a> com btn-primary — o tema Boxie esconde .product-btn
         // que nao casem com esse padrao (validado em producao 2026-07-22).
-        // Sem href + pointer-events:none no CSS = nao compravel.
+        // Esgotado leva à FICHA (p.url) com "+ Info"; normal vai ao carrinho.
         const btnHTML = esgotado
-          ? '<a class="product-btn btn btn-primary aq-btn-esgotado" role="button" aria-disabled="true" tabindex="-1">Esgotado</a>'
+          ? '<a class="product-btn btn btn-primary aq-btn-esgotado" href="' + p.url + '">+ Info</a>'
           : '<a class="product-btn btn btn-primary" href="' + p.cart + '">Comprar</a>';
 
         const col = document.createElement('div');

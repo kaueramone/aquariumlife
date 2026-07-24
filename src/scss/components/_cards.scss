@@ -480,36 +480,70 @@ a.product-preview img {
 }
 
 // ============================================================
-// ESGOTADO — badge + botao inerte na grelha custom (2026-07)
-// Card ganha .aq-esgotado; badge .aq-badge-esgotado; botao .aq-btn-esgotado
+// ESGOTADO — IDENTIDADE ÚNICA (Kaue 2026-07-24): card CINZENTO +
+// etiqueta VERMELHA + botão "+ Info" (leva à ficha, não compra).
+// UMA SÓ regra para TODOS os cards de produto: grelha custom
+// (categoryFilters) E cards nativos (home/relacionados/busca via
+// nativeVariants → aqApplyEsgotado). Basta o card ter .aq-esgotado.
 // ============================================================
 .product.aq-esgotado {
-  .product-pic {
-    opacity: 0.55;
-    filter: grayscale(35%);
+  // card cinzento — destaca "indisponível" do resto (dark e claro)
+  > .card-shadow-hover,
+  .card-shadow-hover,
+  .card-inner {
+    background: rgba(124, 136, 148, 0.16) !important;
+    border: 1px solid rgba(124, 136, 148, 0.32) !important;
+    border-radius: 12px !important;
+    box-shadow: none !important;
   }
+  // foto apagada
+  .product-pic {
+    opacity: 0.5 !important;
+    filter: grayscale(85%) !important;
+  }
+  // nome e preço mais discretos
+  .product-name { color: #9aa4ad !important; }
+  .product-price, .product-actual, .product-from,
+  .product-price .price { color: #8b959f !important; }
+
+  // quando esgotado, só a etiqueta "Esgotado" importa — esconder novidade/promo
+  .product-badges > *:not(.aq-badge-esgotado) { display: none !important; }
 }
 
-.badge.aq-badge-esgotado {
-  display: inline-block;
-  background: #d32f2f; // vermelho de destaque (pedido Kaue 2026-07-23; antes cinza)
-  color: #fff;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 4px;
+// Etiqueta VERMELHA (em qualquer card). NÃO usa a classe .badge do tema
+// (que traz fundo neon vencendo a cascata). align-self/flex/width/height
+// impedem o esticamento dentro do .product-badges (flex). Validado 2026-07-24.
+.aq-badge-esgotado {
+  display: inline-block !important;
+  align-self: flex-start !important;
+  width: auto !important;
+  height: auto !important;
+  flex: 0 0 auto !important;
+  background: #d32f2f !important;
+  color: #fff !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  line-height: 1.3 !important;
+  padding: 4px 10px !important;
+  border-radius: 4px !important;
+  box-shadow: 0 2px 8px rgba(211, 47, 47, 0.45) !important;
   pointer-events: none;
 }
 
+// Botão "+ Info" — cinza, clicável, leva à ficha do produto.
 // Seletor reforçado (.product a...) para vencer o btn-primary do tema.
-// Cores validadas em produção sobre o dark theme (2026-07-22).
 .product a.product-btn.aq-btn-esgotado {
-  background: #2a3138 !important;
-  border-color: #3a434c !important;
-  color: #8b959f !important;
-  cursor: not-allowed;
-  pointer-events: none;
-  user-select: none;
+  background: rgba(124, 136, 148, 0.14) !important;
+  border: 1px solid rgba(124, 136, 148, 0.42) !important;
+  color: #aab4bd !important;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: rgba(124, 136, 148, 0.28) !important;
+    border-color: rgba(124, 136, 148, 0.6) !important;
+    color: #ffffff !important;
+  }
 }

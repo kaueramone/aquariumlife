@@ -2397,17 +2397,21 @@
                   ? '<del>' + p.pf + '</del><span class="product-actual">' + p.ppf + '</span>'
                   : '<span class="product-actual">' + p.pf + '</span>');
 
-            // Esgotado (st === 0): badge na foto + botao inerte (sem link para o carrinho).
-            // JSONs antigos sem o campo st continuam a comprar normalmente (st undefined -> em stock).
+            // Esgotado (st === 0): identidade única = card cinza + etiqueta vermelha
+            // + botão "+ Info" que leva à ficha (não compra). Ver aqApplyEsgotado()
+            // (esgotado.js), a MESMA regra usada nos cards nativos.
+            // JSONs antigos sem o campo st continuam a comprar normalmente.
             const esgotado = (p.st === 0);
+            // SEM a classe .badge do tema (traz fundo neon que vence a cascata);
+            // só .aq-badge-esgotado, estilizado por nós (vermelho).
             const badgeHTML = esgotado
-              ? '<span class="badge aq-badge-esgotado">Esgotado</span>'
+              ? '<span class="aq-badge-esgotado">Esgotado</span>'
               : '';
             // Nota: precisa ser <a> com btn-primary — o tema Boxie esconde .product-btn
             // que nao casem com esse padrao (validado em producao 2026-07-22).
-            // Sem href + pointer-events:none no CSS = nao compravel.
+            // Esgotado leva à FICHA (p.url) com "+ Info"; normal vai ao carrinho.
             const btnHTML = esgotado
-              ? '<a class="product-btn btn btn-primary aq-btn-esgotado" role="button" aria-disabled="true" tabindex="-1">Esgotado</a>'
+              ? '<a class="product-btn btn btn-primary aq-btn-esgotado" href="' + p.url + '">+ Info</a>'
               : '<a class="product-btn btn btn-primary" href="' + p.cart + '">Comprar</a>';
 
             const col = document.createElement('div');
@@ -2674,7 +2678,7 @@
         const map = {};
         (data.products || []).forEach(function (p) {
           const h = ((p.url || '').match(/\/product\/([^/?#]+)/) || [])[1];
-          if (h) map[h] = { af: p.af || null, img: p.img || null, bc: p.bc || null };
+          if (h) map[h] = { af: p.af || null, img: p.img || null, bc: p.bc || null, st: (typeof p.st === 'number') ? p.st : 1 };
         });
         return map;
       })().catch(function () { return {}; });
@@ -2745,8 +2749,52 @@
       });
     }
 
+    // 3) ESGOTADO nos cards NATIVOS (home destaques, relacionados, busca, catálogo).
+    // Mesma identidade da grelha custom: classe .aq-esgotado (card cinza) + etiqueta
+    // vermelha + botão "+ Info" para a ficha. Uma só regra em todos os locais.
+    async function enhanceEsgotado() {
+      const cards = document.querySelectorAll('.product');
+      if (!cards.length) return;
+      const map = await loadMap();
+      cards.forEach(function (card) {
+        if (card.dataset.aqEsg) return;
+        const link = card.querySelector('a.product-name, a.product-preview, a[href*="/product/"]');
+        const rec = lookup(map, handleFromHref(link && link.getAttribute('href')));
+        if (!rec) return;                       // sem dados -> deixa como está
+        card.dataset.aqEsg = '1';
+        if (rec.st !== 0) return;               // só actua nos esgotados
+
+        card.classList.add('aq-esgotado');
+
+        // etiqueta vermelha (cria .product-badges se preciso)
+        const view = card.querySelector('.product-view') || card.querySelector('.card-shadow-hover') || card;
+        let badges = card.querySelector('.product-badges');
+        if (!badges && view) {
+          badges = document.createElement('span');
+          badges.className = 'product-badges';
+          badges.setAttribute('data-position', 'top-left');
+          view.insertBefore(badges, view.firstChild);
+        }
+        if (badges && !badges.querySelector('.aq-badge-esgotado')) {
+          const b = document.createElement('span');
+          b.className = 'aq-badge-esgotado';
+          b.textContent = 'Esgotado';
+          badges.insertBefore(b, badges.firstChild);
+        }
+
+        // botão "+ Info" -> leva à ficha (não ao carrinho)
+        const btn = card.querySelector('a.product-btn, .product-btn');
+        const ficha = (link && link.getAttribute('href')) || null;
+        if (btn) {
+          btn.classList.add('aq-btn-esgotado');
+          btn.textContent = '+ Info';
+          if (ficha) btn.setAttribute('href', ficha);
+        }
+      });
+    }
+
     function initNativeVariants() {
-      const run = function () { enhanceCards(); enhanceCartImages(); };
+      const run = function () { enhanceCards(); enhanceCartImages(); enhanceEsgotado(); };
 
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', run);

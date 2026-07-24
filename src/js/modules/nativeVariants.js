@@ -42,7 +42,7 @@ export function loadMap() {
     const map = {};
     (data.products || []).forEach(function (p) {
       const h = ((p.url || '').match(/\/product\/([^/?#]+)/) || [])[1];
-      if (h) map[h] = { af: p.af || null, img: p.img || null, bc: p.bc || null };
+      if (h) map[h] = { af: p.af || null, img: p.img || null, bc: p.bc || null, st: (typeof p.st === 'number') ? p.st : 1 };
     });
     return map;
   })().catch(function () { return {}; });
@@ -113,8 +113,52 @@ async function enhanceCartImages() {
   });
 }
 
+// 3) ESGOTADO nos cards NATIVOS (home destaques, relacionados, busca, catálogo).
+// Mesma identidade da grelha custom: classe .aq-esgotado (card cinza) + etiqueta
+// vermelha + botão "+ Info" para a ficha. Uma só regra em todos os locais.
+async function enhanceEsgotado() {
+  const cards = document.querySelectorAll('.product');
+  if (!cards.length) return;
+  const map = await loadMap();
+  cards.forEach(function (card) {
+    if (card.dataset.aqEsg) return;
+    const link = card.querySelector('a.product-name, a.product-preview, a[href*="/product/"]');
+    const rec = lookup(map, handleFromHref(link && link.getAttribute('href')));
+    if (!rec) return;                       // sem dados -> deixa como está
+    card.dataset.aqEsg = '1';
+    if (rec.st !== 0) return;               // só actua nos esgotados
+
+    card.classList.add('aq-esgotado');
+
+    // etiqueta vermelha (cria .product-badges se preciso)
+    const view = card.querySelector('.product-view') || card.querySelector('.card-shadow-hover') || card;
+    let badges = card.querySelector('.product-badges');
+    if (!badges && view) {
+      badges = document.createElement('span');
+      badges.className = 'product-badges';
+      badges.setAttribute('data-position', 'top-left');
+      view.insertBefore(badges, view.firstChild);
+    }
+    if (badges && !badges.querySelector('.aq-badge-esgotado')) {
+      const b = document.createElement('span');
+      b.className = 'aq-badge-esgotado';
+      b.textContent = 'Esgotado';
+      badges.insertBefore(b, badges.firstChild);
+    }
+
+    // botão "+ Info" -> leva à ficha (não ao carrinho)
+    const btn = card.querySelector('a.product-btn, .product-btn');
+    const ficha = (link && link.getAttribute('href')) || null;
+    if (btn) {
+      btn.classList.add('aq-btn-esgotado');
+      btn.textContent = '+ Info';
+      if (ficha) btn.setAttribute('href', ficha);
+    }
+  });
+}
+
 export function initNativeVariants() {
-  const run = function () { enhanceCards(); enhanceCartImages(); };
+  const run = function () { enhanceCards(); enhanceCartImages(); enhanceEsgotado(); };
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', run);
