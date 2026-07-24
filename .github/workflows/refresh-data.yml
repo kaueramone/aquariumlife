@@ -6,7 +6,7 @@ name: Refresh product data
 
 on:
   schedule:
-    - cron: '0 */6 * * *'      # a cada 6 horas (UTC)
+    - cron: '0 */2 * * *'      # a cada 2 horas (UTC)
   workflow_dispatch: {}         # permite correr manualmente no separador "Actions"
 
 permissions:
@@ -18,10 +18,11 @@ concurrency:
 
 jobs:
   refresh:
-    runs-on: self-hosted        # corre na tua maquina (IP que a Shopkit aceita)
-    defaults:
-      run:
-        shell: bash             # passos 'run' usam bash (Git Bash no Windows)
+    # Nuvem do GitHub 24/7 — NAO depende da maquina do Kaue estar ligada.
+    # A API Shopkit aceita qualquer IP com a key (confirmado 2026-07-24), por
+    # isso nao e preciso runner self-hosted. Antes: self-hosted = robo parava
+    # sempre que o PC estava desligado -> grelha desactualizada.
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
