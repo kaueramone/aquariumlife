@@ -45,7 +45,7 @@ if (!API_KEY) {
   process.exit(1);
 }
 
-const MAX_RETRIES = 5;       // tentativas por pedido
+const MAX_RETRIES = 6;       // tentativas por pedido
 const REQ_TIMEOUT = 30000;   // 30s por tentativa
 const sleep = function (ms) { return new Promise(function (r) { setTimeout(r, ms); }); };
 
@@ -61,7 +61,14 @@ async function api(endpoint, params) {
     const timer = setTimeout(function () { ctrl.abort(); }, REQ_TIMEOUT);
     try {
       const res = await fetch(url, {
-        headers: { 'X-API-KEY': API_KEY, 'Accept': 'application/json', 'User-Agent': 'AquariumLifeDataGen/1.0' },
+        // UA de navegador real: o 'AquariumLifeDataGen/1.0' era rejeitado pelo
+        // WAF da Shopkit a partir de IPs de datacenter (GitHub) -> 'fetch failed'
+        // no runner da nuvem, embora passasse no sandbox/PC. (2026-07-24)
+        headers: {
+          'X-API-KEY': API_KEY,
+          'Accept': 'application/json',
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36'
+        },
         signal: ctrl.signal
       });
       clearTimeout(timer);
