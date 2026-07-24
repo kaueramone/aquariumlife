@@ -258,6 +258,59 @@ html body.aq-light-mode.aq-light-mode.aq-light-mode.aq-light-mode.aq-light-mode.
     }
   }
 
+  // ── 14b. Caixa de filtros da categoria (slider preço + dropdowns) ──
+  // Vinha escura (rgba(0,21,49,.5)) no claro e destoava (Kaue 2026-07-23).
+  .filters.js-filters {
+    background: #ffffff !important;
+    border-color: rgba(0, 122, 92, 0.15) !important;
+    box-shadow: 0 6px 20px rgba(0, 32, 74, 0.06) !important;
+  }
+  .filters-wrap .dropdown > a.dropdown-toggle,
+  a.dropdown-toggle {
+    background: #f4f8fb !important;
+    border-color: rgba(0, 122, 92, 0.22) !important;
+    color: $lm-ink !important;
+    &::before { border-top-color: $lm-ink !important; }
+  }
+  .dropdown.filter.open > a.dropdown-toggle,
+  a.dropdown-toggle:hover {
+    background: rgba(0, 122, 92, 0.08) !important;
+    border-color: $lm-green !important;
+    color: $lm-green !important;
+    &::before { border-top-color: $lm-green !important; }
+  }
+  .filters .dropdown-menu {
+    background: #ffffff !important;
+    border-color: rgba(0, 122, 92, 0.2) !important;
+    box-shadow: 0 10px 30px rgba(0, 32, 74, 0.12) !important;
+  }
+  .filters .dropdown-item {
+    color: $lm-soft !important;
+    &:hover, &.active, &.selected {
+      background: rgba(0, 122, 92, 0.1) !important;
+      color: $lm-green !important;
+    }
+  }
+  #aq-price-filter {
+    .aq-pf-title { color: $lm-soft !important; }
+    .aq-pf-range { color: $lm-green !important; }
+    .aq-pf-track { background: rgba(0, 122, 92, 0.15) !important; }
+    .aq-pf-fill  { background: $lm-green !important; }
+    .aq-pf-status { color: $lm-soft !important; }
+    input[type="range"] {
+      &::-webkit-slider-thumb {
+        background: $lm-green !important;
+        border-color: #ffffff !important;
+        box-shadow: 0 0 6px rgba(0, 122, 92, 0.4) !important;
+      }
+      &::-moz-range-thumb {
+        background: $lm-green !important;
+        border-color: #ffffff !important;
+        box-shadow: 0 0 6px rgba(0, 122, 92, 0.4) !important;
+      }
+    }
+  }
+
   // ── 14. Pagina de produto: garantir fundo claro em TODA a pagina ──
   // A metade de baixo (.details) ficava escura no claro (Kaue 2026-07-23).
   // Aqui, com a especificidade alta deste ficheiro (carrega por ultimo),
