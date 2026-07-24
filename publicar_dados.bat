@@ -1,7 +1,7 @@
 @echo off
 REM Publica os dados regenerados (dist/*.json) e purga o cache do jsDelivr
 cd /d "%~dp0"
-git add dist\*.json dist\*.xml dist\app.js dist\style.css generate-data.cjs package-lock.json gerar-feed-gmc.cjs publicar_dados.bat src tools .github
+git add dist\*.json dist\*.xml dist\app.js dist\style.css aquarium.gif generate-data.cjs package-lock.json gerar-feed-gmc.cjs publicar_dados.bat src tools .github
 if exist dist\img-hd git add dist\img-hd
 git commit -m "data: publicar dados e codigo"
 git pull --rebase --autostash origin main

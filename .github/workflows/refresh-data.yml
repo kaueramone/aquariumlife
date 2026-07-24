@@ -18,11 +18,15 @@ concurrency:
 
 jobs:
   refresh:
-    # Nuvem do GitHub 24/7 — NAO depende da maquina do Kaue estar ligada.
-    # A API Shopkit aceita qualquer IP com a key (confirmado 2026-07-24), por
-    # isso nao e preciso runner self-hosted. Antes: self-hosted = robo parava
-    # sempre que o PC estava desligado -> grelha desactualizada.
-    runs-on: ubuntu-latest
+    # REVERTIDO a self-hosted 2026-07-24: a API Shopkit BLOQUEIA IPs de
+    # datacenter (GitHub/nuvem -> 'fetch failed', mesmo com UA de navegador).
+    # Aceita IPs residenciais PT (o PC do Kaue). Confirmado: o IP de saida
+    # que a API aceita e residencial PT (MEO). Por isso corre na maquina do
+    # Kaue (runner tem de estar ligado). Solucao 24/7 em discussao.
+    runs-on: self-hosted
+    defaults:
+      run:
+        shell: bash
     steps:
       - name: Checkout
         uses: actions/checkout@v4
