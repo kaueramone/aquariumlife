@@ -501,6 +501,17 @@ a.product-preview img {
     opacity: 0.5 !important;
     filter: grayscale(85%) !important;
   }
+
+  // etiqueta POR CIMA do card, sem ser cortada: o .product-view tem
+  // overflow:hidden (arredonda a foto) e cortava a etiqueta no topo.
+  // Deixamos o view sem cortar e trazemos a etiqueta para dentro do
+  // canto (a foto mantém os cantos pelo seu próprio raio). 2026-07-24.
+  .product-view { overflow: visible !important; }
+  .product-badges {
+    top: 10px !important;
+    left: 10px !important;
+    z-index: 6 !important;
+  }
   // nome e preço mais discretos
   .product-name { color: #9aa4ad !important; }
   .product-price, .product-actual, .product-from,
