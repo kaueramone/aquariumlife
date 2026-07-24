@@ -210,6 +210,11 @@ footer img[src*="trustlogo"] {
   // força text-align:left — vencemos com seletor mais específico (2026-07-24).
   footer .footer-menu {
     text-align: center !important;
+    // ESSENCIAL: .footer-menu é flex-column com align-items:flex-start (tema),
+    // por isso os links encolhiam e colavam à esquerda — o text-align não
+    // chegava. align-items:center centra os itens flex (2026-07-24, validado
+    // em iframe 390px).
+    align-items: center !important;
   }
   footer .footer-menu .footer-link,
   footer .footer-menu a,
