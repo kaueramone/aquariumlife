@@ -22,7 +22,7 @@ const path = require('path');
 const API     = 'https://api.shopk.it/v1';
 const SITE    = 'https://www.aquariumlife.pt';
 const NO_IMG  = 'https://cdn-shopkit.com/assets/store/img/no-img.png';
-const OUT_DIR = path.join(__dirname, 'dist');
+const OUT_DIR = process.env.AQ_OUT_DIR || path.join(__dirname, 'dist');   // configuravel (usado pelo refresh.exe do cliente)
 const PAGE_LIMIT  = 50;     // maximo permitido pela API
 const ONLY_ACTIVE = true;   // so produtos activos vao para as grelhas
 
@@ -249,7 +249,7 @@ function buildFile(catId, slug, rawList, today) {
   };
 }
 
-(async function main() {
+async function main() {
   if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
   const today = new Date().toISOString().slice(0, 10);
 
@@ -314,4 +314,12 @@ function buildFile(catId, slug, rawList, today) {
   writeJson('categories.json', { updated: today, total: active.length, categories: categories });
 
   console.log('Concluido: ' + nFiles + ' ficheiros products-cat-*.json + products-all.json + categories.json em dist/.');
-})().catch(function (err) { console.error('FALHOU:', err); process.exit(1); });
+}
+
+// Auto-executa quando corrido direto (robo/bat). Quando importado
+// (refresh.cjs do executavel do cliente), so' expoe main().
+if (require.main === module) {
+  main().catch(function (err) { console.error('FALHOU:', err); process.exit(1); });
+} else {
+  module.exports = { main };
+}

@@ -1,28 +1,22 @@
 @use '../base/variables' as *;
 
 // ============================================================
-// SPLASH DE LOADING — aquário (água + bolhas + gif central)
+// SPLASH DE LOADING — aquário (água + bolhas + gif + "A carregar")
 // (Kaue 2026-07-24: esconder o "flash" do conteúdo nativo do
-//  ShopKit antes do nosso JS reescrever — ex.: "CATEGORIAS"
-//  grande no canto. Vale também para transições de página.)
+//  ShopKit antes do nosso JS reescrever. Vale p/ transições.)
 //
-// COMO FUNCIONA (sem tocar no template):
-//  - O style.css está no <head> (render-blocking) → estas regras
-//    aplicam-se no 1º paint, ANTES de qualquer flash.
-//  - Overlay via pseudo-elementos de <html>/<body> (não precisa
-//    de DOM extra, que só existiria tarde).
-//  - O app.js adiciona `html.aq-ready` no fim do init → fade-out.
-//  - FALLBACK sem JS: cada camada tem `aqSafety` com 8s de delay
-//    que a esconde sozinha (se o jsDelivr/app.js falharem, a loja
-//    NUNCA fica presa atrás do splash).
+// SEM tocar no template: o style.css está no <head> (render-
+// blocking) → aplica no 1º paint. app.js põe `html.aq-ready` no
+// fim do init → fade. Fallback puro-CSS (aqSafety, 8s) esconde
+// sozinho se o app.js/jsDelivr falharem.
 //
-// O aquarium.gif fica na RAIZ do repo; o url("../aquarium.gif")
-// resolve, no jsDelivr, para o MESMO commit do style.css
-// (@hash/aquarium.gif) — versionado e imutável.
+// O aquarium.gif (RAIZ do repo, FUNDO TRANSPARENTE) é referido
+// por url("../aquarium.gif") → resolve p/ @hash/aquarium.gif no
+// jsDelivr (mesmo commit do CSS; versionado, imutável).
 // ============================================================
 
-$sp-top:    #04263a;   // água (topo)
-$sp-bottom: #00060f;   // fundo profundo
+$sp-top:    #04263a;
+$sp-bottom: #00060f;
 
 @mixin sp-layer($z) {
   content: '';
@@ -37,58 +31,75 @@ $sp-bottom: #00060f;   // fundo profundo
 @keyframes aqSafety { to { opacity: 0; visibility: hidden; pointer-events: none; } }
 @keyframes aqBubbles { to { background-position-y: -1400px; } }
 @keyframes aqFloat { 0%,100% { transform: translate(-50%, -50%); } 50% { transform: translate(-50%, calc(-50% - 12px)); } }
+@keyframes aqPulse { 0%,100% { opacity: .7; } 50% { opacity: 1; } }
 
 // ---- 1) FUNDO: água ---------------------------------------
 html::before {
   @include sp-layer(2147483640);
-  pointer-events: auto;                     // bloqueia cliques enquanto carrega
+  pointer-events: auto;
   background:
     radial-gradient(130% 90% at 50% 118%, rgba(8, 238, 188, 0.22), transparent 62%),
     linear-gradient(180deg, $sp-top 0%, $sp-bottom 100%);
   animation: aqSafety .55s ease 8s forwards;
 }
 
-// ---- 2) BOLHAS (sutis, atrás do gif) ----------------------
+// ---- 2) BOLHAS --------------------------------------------
 html::after {
   @include sp-layer(2147483641);
   background-image:
-    radial-gradient(circle at 16% 100%, rgba(255,255,255,.45) 0 3px, transparent 4px),
-    radial-gradient(circle at 40% 100%, rgba(8,238,188,.40) 0 2px, transparent 3px),
-    radial-gradient(circle at 62% 100%, rgba(255,255,255,.35) 0 4px, transparent 5px),
-    radial-gradient(circle at 84% 100%, rgba(8,238,188,.38) 0 3px, transparent 4px);
+    radial-gradient(circle at 16% 100%, rgba(255,255,255,.42) 0 3px, transparent 4px),
+    radial-gradient(circle at 40% 100%, rgba(8,238,188,.38) 0 2px, transparent 3px),
+    radial-gradient(circle at 62% 100%, rgba(255,255,255,.33) 0 4px, transparent 5px),
+    radial-gradient(circle at 84% 100%, rgba(8,238,188,.35) 0 3px, transparent 4px);
   background-size: 100% 720px;
   background-repeat: repeat-y;
   animation: aqBubbles 7s linear infinite, aqSafety .55s ease 8s forwards;
 }
 
-// ---- 3) GIF DO AQUÁRIO (centro) ---------------------------
+// ---- 3) GIF DO AQUÁRIO (centro, SEM card/caixa) -----------
 body::before {
   content: '';
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: min(62vmin, 280px);
-  height: min(62vmin, 280px);
+  width: min(58vmin, 240px);
+  height: min(58vmin, 240px);
   z-index: 2147483642;
   pointer-events: none;
-  background: #ffffff no-repeat center/contain url("../aquarium.gif");
-  border-radius: 26px;
-  box-shadow:
-    0 0 0 1px rgba(8, 238, 188, 0.25),
-    0 18px 50px rgba(0, 0, 0, 0.55),
-    0 0 40px rgba(8, 238, 188, 0.30);
+  background: no-repeat center/contain url("../aquarium.gif");
+  // brilho subtil por baixo do ícone (sem caixa branca)
+  filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.45))
+          drop-shadow(0 0 20px rgba(8, 238, 188, 0.30));
   opacity: 1;
   transition: opacity .55s ease, visibility 0s linear .55s;
   animation: aqFloat 3.4s ease-in-out infinite, aqSafety .55s ease 8s forwards;
 }
 
+// ---- 4) "A carregar..." (centralizado, em baixo) ----------
+body::after {
+  @include sp-layer(2147483643);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 16vh;
+  content: 'A carregar...';
+  font-family: $font-family-title;
+  font-size: clamp(1rem, 3.4vw, 1.35rem);
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #cdeffe;
+  text-shadow: 0 0 14px rgba(8, 238, 188, 0.5);
+  animation: aqPulse 1.6s ease-in-out infinite, aqSafety .55s ease 8s forwards;
+}
+
 // ============================================================
-// PRONTO: o app.js pôs html.aq-ready → todas as camadas somem
+// PRONTO: app.js pôs html.aq-ready → tudo some
 // ============================================================
 html.aq-ready::before,
 html.aq-ready::after,
-html.aq-ready body::before {
+html.aq-ready body::before,
+html.aq-ready body::after {
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;

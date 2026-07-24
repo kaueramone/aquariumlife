@@ -170,11 +170,14 @@ footer img[src*="trustlogo"] {
   display: none !important;
 }
 
-// -- Mobile: colunas centralizadas -------------------------------------------
-@media (max-width: 768px) {
+// -- Mobile/tablet: colunas centralizadas ------------------------------------
+// Breakpoint 991px (não 768): apanha também telemóvel em landscape e ecrãs
+// ~800px, onde as colunas col-md-6 ficavam a 2 e desalinhadas (Kaue 2026-07-24).
+@media (max-width: 991px) {
   footer .row {
     flex-direction: column !important;
     align-items: center !important;
+    text-align: center !important;
   }
 
   footer .col-lg-3,

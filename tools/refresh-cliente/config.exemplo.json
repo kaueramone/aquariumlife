@@ -1,0 +1,6 @@
+{
+  "shopkitApiKey": "COLOCA_AQUI_A_CHAVE_DA_API_SHOPKIT",
+  "githubToken": "COLOCA_AQUI_O_TOKEN_DO_GITHUB",
+  "githubRepo": "kaueramone/aquariumlife",
+  "branch": "main"
+}

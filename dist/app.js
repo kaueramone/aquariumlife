@@ -3691,14 +3691,18 @@
       console.log('[AQ] Premium Layer Loaded — readyState:', document.readyState);
 
       // Splash de loading (_splash.scss): agora que o layout base está montado,
-      // sinaliza pronto → o overlay de aquário faz fade-out. Espera 2 frames
-      // (layout assenta) + um mínimo para não "piscar" em cargas rápidas.
-      // (Há um fallback puro-CSS de 8s no _splash.scss caso isto nunca corra.)
+      // sinaliza pronto → o overlay de aquário faz fade-out.
+      var aqMarkReady = function () { document.documentElement.classList.add('aq-ready'); };
+      // Caminho normal (aba visível): 2 frames (layout assenta) + mínimo p/ não
+      // "piscar". requestAnimationFrame NÃO dispara em abas ocultas/background —
+      // por isso o setTimeout de garantia abaixo, que dispara na mesma. O primeiro
+      // a correr vence (é idempotente). Fallback puro-CSS de 8s no _splash.scss.
       requestAnimationFrame(function () {
         requestAnimationFrame(function () {
-          setTimeout(function () { document.documentElement.classList.add('aq-ready'); }, 350);
+          setTimeout(aqMarkReady, 300);
         });
       });
+      setTimeout(aqMarkReady, 2000);   // garantia p/ abas em background (rAF pausado)
     }
 
     if (document.readyState === 'loading') {
