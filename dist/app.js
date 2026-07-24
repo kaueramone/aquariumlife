@@ -3689,6 +3689,16 @@
       }
 
       console.log('[AQ] Premium Layer Loaded — readyState:', document.readyState);
+
+      // Splash de loading (_splash.scss): agora que o layout base está montado,
+      // sinaliza pronto → o overlay de aquário faz fade-out. Espera 2 frames
+      // (layout assenta) + um mínimo para não "piscar" em cargas rápidas.
+      // (Há um fallback puro-CSS de 8s no _splash.scss caso isto nunca corra.)
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          setTimeout(function () { document.documentElement.classList.add('aq-ready'); }, 350);
+        });
+      });
     }
 
     if (document.readyState === 'loading') {

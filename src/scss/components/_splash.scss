@@ -1,0 +1,124 @@
+@use '../base/variables' as *;
+
+// ============================================================
+// SPLASH DE LOADING — aquário (água + bolhas + peixe)
+// (Kaue 2026-07-24: esconder o "flash" do conteúdo nativo do
+//  ShopKit antes do nosso JS reescrever — ex.: "CATEGORIAS"
+//  grande no canto. Vale também para transições de página, já
+//  que cada navegação recarrega a página.)
+//
+// COMO FUNCIONA (sem tocar no template):
+//  - O style.css está no <head> (render-blocking) → estas regras
+//    aplicam-se no 1º paint, ANTES de qualquer flash.
+//  - O overlay cobre tudo via pseudo-elementos de <html>/<body>
+//    (não precisa de DOM extra, que só existiria tarde).
+//  - O app.js adiciona `html.aq-ready` no fim do init → fade-out.
+//  - FALLBACK sem JS: cada camada tem uma animação `aqSafety` com
+//    8s de delay que a esconde sozinha (se o jsDelivr/app.js
+//    falharem, a loja NUNCA fica presa atrás do splash).
+// ============================================================
+
+$sp-top:    #04263a;   // água (topo)
+$sp-bottom: #00060f;   // fundo profundo
+$sp-neon:   $color-neon-accent;
+
+// camada base comum a todos os pseudo-overlays
+@mixin sp-layer($z) {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: $z;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity .55s ease, visibility 0s linear .55s;
+}
+
+@keyframes aqSafety { to { opacity: 0; visibility: hidden; pointer-events: none; } }
+
+// bolhas a subir (movem o background para cima, em loop)
+@keyframes aqBubbles { to { background-position-y: -1400px; } }
+
+// peixe a nadar da esquerda para a direita + leve balanço
+@keyframes aqSwim {
+  0%   { left: -18%; transform: translateY(0) scaleX(1); }
+  48%  { transform: translateY(-16px) scaleX(1); }
+  50%  { left: 112%; transform: translateY(-16px) scaleX(1); }
+  50.01% { left: 112%; transform: translateY(-16px) scaleX(-1); }   // vira
+  98%  { transform: translateY(12px) scaleX(-1); }
+  100% { left: -18%; transform: translateY(12px) scaleX(-1); }
+}
+
+@keyframes aqPulse { 0%,100% { opacity: .82; } 50% { opacity: 1; } }
+
+// ---- 1) FUNDO: água ---------------------------------------
+html::before {
+  @include sp-layer(2147483640);
+  pointer-events: auto;                     // bloqueia cliques enquanto carrega
+  background:
+    radial-gradient(130% 90% at 50% 118%, rgba(8, 238, 188, 0.22), transparent 62%),
+    linear-gradient(180deg, $sp-top 0%, $sp-bottom 100%);
+  animation: aqSafety .55s ease 8s forwards;
+}
+
+// ---- 2) BOLHAS --------------------------------------------
+html::after {
+  @include sp-layer(2147483641);
+  background-image:
+    radial-gradient(circle at 18% 100%, rgba(255,255,255,.55) 0 3px, transparent 4px),
+    radial-gradient(circle at 34% 100%, rgba(8,238,188,.55) 0 2px, transparent 3px),
+    radial-gradient(circle at 52% 100%, rgba(255,255,255,.40) 0 4px, transparent 5px),
+    radial-gradient(circle at 68% 100%, rgba(255,255,255,.50) 0 2px, transparent 3px),
+    radial-gradient(circle at 82% 100%, rgba(8,238,188,.45) 0 3px, transparent 4px);
+  background-size: 100% 700px;
+  background-repeat: repeat-y;
+  animation: aqBubbles 6s linear infinite, aqSafety .55s ease 8s forwards;
+}
+
+// ---- 3) PEIXE ---------------------------------------------
+body::before {
+  content: '';
+  position: fixed;
+  top: 38%;
+  left: -18%;
+  width: 92px;
+  height: 56px;
+  z-index: 2147483642;
+  pointer-events: none;
+  background: no-repeat center/contain
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='92' height='56' viewBox='0 0 92 56'%3E%3Cellipse cx='47' cy='28' rx='27' ry='16' fill='%2308eebc'/%3E%3Cpath d='M22 28 L2 12 L9 28 L2 44 Z' fill='%2306c9a0'/%3E%3Cpath d='M44 13 Q52 3 61 13 Z' fill='%2306c9a0'/%3E%3Cpath d='M44 43 Q52 53 61 43 Z' fill='%2306c9a0'/%3E%3Ccircle cx='66' cy='23' r='3.6' fill='%23012028'/%3E%3Ccircle cx='67.3' cy='21.7' r='1.1' fill='%23ffffff'/%3E%3C/svg%3E");
+  filter: drop-shadow(0 0 10px rgba(8, 238, 188, 0.55));
+  opacity: 1;
+  transition: opacity .55s ease, visibility 0s linear .55s;
+  animation: aqSwim 7s ease-in-out infinite, aqSafety .55s ease 8s forwards;
+}
+
+// ---- 4) TEXTO / MARCA -------------------------------------
+body::after {
+  @include sp-layer(2147483643);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 22vh;
+  content: 'AquariumLife';
+  font-family: $font-family-title;
+  font-size: clamp(1.3rem, 4.5vw, 2.1rem);
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #eafcff;
+  text-shadow: 0 0 18px rgba(8, 238, 188, 0.6);
+  animation: aqPulse 1.8s ease-in-out infinite, aqSafety .55s ease 8s forwards;
+}
+
+// ============================================================
+// PRONTO: o app.js pôs html.aq-ready → todas as camadas somem
+// ============================================================
+html.aq-ready::before,
+html.aq-ready::after,
+html.aq-ready body::before,
+html.aq-ready body::after {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  animation-play-state: paused !important;
+}

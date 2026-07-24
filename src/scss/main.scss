@@ -26,3 +26,5 @@
 @use 'layouts/footer';
 // pente fino do modo claro — SEMPRE em ultimo (vence a cascata)
 @use 'components/light-mode';
+// splash de loading — pseudo-overlays de html/body (render-blocking = 1o paint)
+@use 'components/splash';
