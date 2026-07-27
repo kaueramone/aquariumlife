@@ -1,16 +1,23 @@
-name: Upscale de imagens (Real-ESRGAN)
+name: Upscale de imagens (Real-ESRGAN, paralelo)
 
-# Amplia imagens pequenas do catálogo em 4x e publica em dist/img-hd/ (servido via jsDelivr).
-# Disparo manual (Run workflow). Depois do commit, o Fable valida e aplica nos produtos via API.
+# Amplia imagens pequenas do catálogo em 4x → dist/img-hd/ (servido via jsDelivr).
+#
+# PARALELO: divide as imagens por vários jobs (matrix) que correm ao mesmo tempo.
+# Antes era 1 job com ~113 imagens em série (~2min cada) → batia no timeout.
+# Agora cada job faz ~6 imagens (~15min) e há até 18 em paralelo → termina numa
+# fração do tempo, sem nunca chegar perto do limite.
+#
+# Fonte das imagens: dist/products-all.json (NÃO a API Shopkit, que bloqueia o
+# datacenter do GitHub). Disparo manual (Run workflow).
 on:
   workflow_dispatch:
     inputs:
       ids:
-        description: 'IDs de produtos separados por vírgula (vazio = automático: lado menor < 300px)'
+        description: 'IDs separados por vírgula (vazio = automático: lado menor < limiar)'
         required: false
         default: ''
       limiar:
-        description: 'Limiar em px para o modo automático'
+        description: 'Limiar em px (modo automático)'
         required: false
         default: '300'
 
@@ -18,25 +25,72 @@ permissions:
   contents: write
 
 jobs:
-  upscale:
+  # 1) Escolhe as imagens-alvo, baixa-as e divide-as em lotes paralelos.
+  preparar:
     runs-on: ubuntu-latest
-    timeout-minutes: 300  # CPU: ~45s/imagem; 113 imagens ~2h (45 min cancelou a meio em 2026-07-23)
+    outputs:
+      matrix: ${{ steps.split.outputs.matrix }}
+      tem_trabalho: ${{ steps.split.outputs.tem_trabalho }}
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Preparar entradas (API Shopkit)
+      - name: Selecionar e baixar imagens-alvo (via products-all.json)
         env:
-          SHOPKIT_API_KEY: ${{ secrets.SHOPKIT_API_KEY }}
           IDS: ${{ github.event.inputs.ids }}
           LIMIAR: ${{ github.event.inputs.limiar }}
         run: |
           npm i --no-fund --no-audit image-size@1
           node tools/upscale/selecionar-pequenas.cjs
           ls -la tools/upscale/entrada/ || true
+
+      - name: Guardar entradas (artifact partilhado com os lotes)
+        uses: actions/upload-artifact@v4
+        with:
+          name: entradas
+          path: tools/upscale/entrada/
+          if-no-files-found: ignore
+          retention-days: 1
+
+      - id: split
+        name: Dividir em lotes paralelos
+        run: |
+          node -e '
+            const fs = require("fs");
+            const dir = "tools/upscale/entrada";
+            const files = fs.existsSync(dir) ? fs.readdirSync(dir).filter(f => /\.(jpg|jpeg|png)$/i.test(f)) : [];
+            const F = files.length;
+            const out = process.env.GITHUB_OUTPUT;
+            if (!F) {
+              fs.appendFileSync(out, "tem_trabalho=false\n");
+              fs.appendFileSync(out, "matrix=" + JSON.stringify({ include: [{ idx: 0, n: 1 }] }) + "\n");
+              console.log("Nada a ampliar (tudo já em dist/img-hd ou sem imagens).");
+              process.exit(0);
+            }
+            const N = Math.min(18, Math.max(1, Math.ceil(F / 6)));
+            const include = Array.from({ length: N }, (_, i) => ({ idx: i, n: N }));
+            fs.appendFileSync(out, "tem_trabalho=true\n");
+            fs.appendFileSync(out, "matrix=" + JSON.stringify({ include }) + "\n");
+            console.log(F + " imagens em " + N + " lotes paralelos (~" + Math.ceil(F / N) + " por lote).");
+          '
+
+  # 2) N jobs em paralelo — cada um amplia a sua fatia das imagens.
+  ampliar:
+    needs: preparar
+    if: needs.preparar.outputs.tem_trabalho == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.preparar.outputs.matrix) }}
+    steps:
+      - name: Buscar as entradas
+        uses: actions/download-artifact@v4
+        with:
+          name: entradas
+          path: entrada
 
       - name: Instalar Real-ESRGAN (ncnn)
         run: |
@@ -46,36 +100,79 @@ jobs:
           unzip -q re.zip -d re
           chmod +x re/realesrgan-ncnn-vulkan
 
-      - name: Ampliar 4x (lotes de 20, commit a cada lote — nada se perde no timeout)
+      - name: Selecionar a minha fatia (lote ${{ matrix.idx }} de ${{ matrix.n }})
         run: |
-          shopt -s nullglob
-          files=(tools/upscale/entrada/*)
-          total=${#files[@]}
-          if [ $total -eq 0 ]; then echo "Sem entradas — nada a fazer."; exit 0; fi
+          mkdir -p meulote saida
+          node -e '
+            const fs = require("fs");
+            const files = fs.readdirSync("entrada").filter(f => /\.(jpg|jpeg|png)$/i.test(f)).sort();
+            const idx = ${{ matrix.idx }}, N = ${{ matrix.n }};
+            let k = 0;
+            files.forEach((f, i) => { if (i % N === idx) { fs.copyFileSync("entrada/" + f, "meulote/" + f); k++; } });
+            console.log("o meu lote:", k, "imagens de", files.length, "no total");
+          '
+
+      - name: Ampliar 4x o meu lote
+        run: |
+          if [ -z "$(ls -A meulote 2>/dev/null)" ]; then echo "lote vazio — nada a fazer."; exit 0; fi
+          ./re/realesrgan-ncnn-vulkan -i meulote -o saida -n realesrgan-x4plus -f jpg || \
+          ./re/realesrgan-ncnn-vulkan -g -1 -i meulote -o saida -n realesrgan-x4plus -f jpg || true
+          # normaliza os nomes para <id>.jpg (o ncnn às vezes deixa dupla extensão)
+          cd saida
+          for f in *; do
+            [ -e "$f" ] || continue
+            id="${f%%.*}"
+            [ "$f" != "$id.jpg" ] && mv -f "$f" "$id.jpg"
+          done
+          ls -la
+
+      - name: Guardar os resultados deste lote
+        uses: actions/upload-artifact@v4
+        with:
+          name: hd-${{ matrix.idx }}
+          path: saida/
+          if-no-files-found: ignore
+          retention-days: 1
+
+  # 3) Junta todos os lotes num único commit + limpa a cache do jsDelivr.
+  publicar:
+    needs: [preparar, ampliar]
+    if: ${{ always() && needs.preparar.outputs.tem_trabalho == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Buscar todos os lotes ampliados
+        uses: actions/download-artifact@v4
+        with:
+          pattern: hd-*
+          path: novos
+          merge-multiple: true
+
+      - name: Commit único em dist/img-hd
+        run: |
+          mkdir -p dist/img-hd
+          if [ -d novos ] && [ -n "$(ls -A novos 2>/dev/null)" ]; then
+            cp -f novos/* dist/img-hd/ 2>/dev/null || true
+          fi
           git config user.name "upscale-bot"
           git config user.email "actions@github.com"
-          mkdir -p dist/img-hd
-          i=0
-          while [ $i -lt $total ]; do
-            rm -rf /tmp/lote && mkdir /tmp/lote
-            for f in "${files[@]:$i:20}"; do cp "$f" /tmp/lote/; done
-            ./re/realesrgan-ncnn-vulkan -i /tmp/lote -o dist/img-hd -n realesrgan-x4plus -f jpg || \
-            ./re/realesrgan-ncnn-vulkan -g -1 -i /tmp/lote -o dist/img-hd -n realesrgan-x4plus -f jpg || true
-            i=$((i+20))
-            [ $i -gt $total ] && i=$total
-            git add dist/img-hd
-            if ! git diff --cached --quiet; then
-              git commit -m "img: upscale 4x parcial ($i/$total)"
-              git pull --rebase origin main || true
-              git push origin main || echo "push falhou agora, o proximo lote tenta de novo"
-            fi
-            echo ">>> progresso: $i/$total"
-          done
+          git add dist/img-hd
+          if git diff --cached --quiet; then
+            echo "Nenhuma imagem nova gerada."
+            exit 0
+          fi
+          n=$(git diff --cached --name-only | grep -c 'dist/img-hd/' || true)
+          git commit -m "img: upscale 4x paralelo (+${n} imagens)"
+          git pull --rebase origin main || true
+          git push origin main
+          echo "Publicadas ${n} imagens ampliadas."
 
       - name: Purge jsDelivr
         if: always()
         run: |
           for f in dist/img-hd/*; do
+            [ -e "$f" ] || continue
             curl -s "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/$f" > /dev/null || true
           done
-          echo "Publicado. URLs: https://cdn.jsdelivr.net/gh/${{ github.repository }}@main/dist/img-hd/<id>.jpg"
+          echo "Cache limpa. URLs: https://cdn.jsdelivr.net/gh/${{ github.repository }}@main/dist/img-hd/<id>.jpg"
