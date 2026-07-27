@@ -4,16 +4,20 @@
  * e injeta a nossa versão premium com neon glow.
  */
 
+import { AQ_ASSET_BASE } from './assetBase.js';
+
+// img = WebP otimizado auto-hospedado (~8-14KB, era 42-166KB na Shopkit).
+// fb  = original da Shopkit, usado só como fallback se o WebP falhar a carregar.
 const CATEGORIES = [
-  { label: 'Equipamento',             href: '/category/equipamento',             img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/7753b01-160640-equipamentos-de-aquario.png' },
-  { label: 'Alimentação',             href: '/category/alimentacao',             img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/8d9eaef-160632-alimentacao.png' },
-  { label: 'Hardscape',               href: '/category/hardscape',               img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d56453d-160643-hardscape.png' },
-  { label: 'Plantas',                 href: '/category/plantas',                 img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fca290c-160659-plantas.png' },
-  { label: 'Peixes',                  href: '/category/peixes',                  img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/c380f2e-160654-peixes.png' },
-  { label: 'Invertebrados',           href: '/category/invertebrados',           img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/904bd1c-160646-invertebrados.png' },
-  { label: 'Condicionadores de Água', href: '/category/condicionadores-de-agua', img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3a2d344-160638-condicionadores-de-agua.png' },
-  { label: 'Aquascaping',             href: '/category/aquascaping',             img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9977c3d-160634-aquascaping.png' },
-  { label: 'Outros',                  href: '/category/outros',                  img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/41700fb-160651-outros.png' },
+  { label: 'Equipamento',             href: '/category/equipamento',             file: 'equipamento.webp',    fb: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/7753b01-160640-equipamentos-de-aquario.png' },
+  { label: 'Alimentação',             href: '/category/alimentacao',             file: 'alimentacao.webp',    fb: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/8d9eaef-160632-alimentacao.png' },
+  { label: 'Hardscape',               href: '/category/hardscape',               file: 'hardscape.webp',      fb: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d56453d-160643-hardscape.png' },
+  { label: 'Plantas',                 href: '/category/plantas',                 file: 'plantas.webp',        fb: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fca290c-160659-plantas.png' },
+  { label: 'Peixes',                  href: '/category/peixes',                  file: 'peixes.webp',         fb: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/c380f2e-160654-peixes.png' },
+  { label: 'Invertebrados',           href: '/category/invertebrados',           file: 'invertebrados.webp',  fb: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/904bd1c-160646-invertebrados.png' },
+  { label: 'Condicionadores de Água', href: '/category/condicionadores-de-agua', file: 'condicionadores.webp',fb: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3a2d344-160638-condicionadores-de-agua.png' },
+  { label: 'Aquascaping',             href: '/category/aquascaping',             file: 'aquascaping.webp',    fb: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9977c3d-160634-aquascaping.png' },
+  { label: 'Outros',                  href: '/category/outros',                  file: 'outros.webp',         fb: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/41700fb-160651-outros.png' },
 ];
 
 /**
@@ -82,10 +86,12 @@ function buildNewSection() {
     a.className = 'aq-cat-item';
 
     const img = document.createElement('img');
-    img.src = cat.img;
+    img.src = AQ_ASSET_BASE + 'img-ui/cat/' + cat.file;
     img.alt = cat.label;
     img.className = 'aq-cat-icon';
     img.loading = 'lazy';
+    img.width = 62; img.height = 62;   // dimensões explícitas (evita reflow)
+    img.onerror = function () { img.onerror = null; img.src = cat.fb; }; // fallback Shopkit
 
     const name = document.createElement('span');
     name.className = 'aq-cat-name';

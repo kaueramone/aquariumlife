@@ -210,22 +210,56 @@
       }, 400);
     }
 
+    // assetBase.js
+    // Base URL dos nossos assets estáticos (ícones/logos WebP) servidos via jsDelivr.
+    //
+    // É derivada do <script src> do próprio app.js — que o template da Shopkit carrega
+    // PINADO no commit hash (ex.: .../aquariumlife@f311fed/dist/app.js). Assim os WebP
+    // herdam o MESMO hash imutável do app.js, evitando o lag de cache do @main para
+    // ficheiros novos (o mesmo motivo pelo qual os JSON são carregados via SHA).
+    //
+    // Corre uma vez, no arranque síncrono do script (currentScript ainda válido).
+
+    function computeBase() {
+      try {
+        var s = document.currentScript;
+        if (s && s.src && s.src.indexOf('/dist/app.js') !== -1) {
+          return s.src.replace(/\/dist\/app\.js.*$/, '/dist/');
+        }
+        // fallback: procurar o <script> do app.js no DOM
+        var scripts = document.getElementsByTagName('script');
+        for (var i = 0; i < scripts.length; i++) {
+          var src = scripts[i].src || '';
+          if (src.indexOf('/dist/app.js') !== -1) {
+            return src.replace(/\/dist\/app\.js.*$/, '/dist/');
+          }
+        }
+      } catch (e) {}
+      // último recurso: @main (pode ter lag de cache, mas o onerror faz fallback à Shopkit)
+      return 'https://cdn.jsdelivr.net/gh/kaueramone/aquariumlife@main/dist/';
+    }
+
+    const AQ_ASSET_BASE = computeBase();
+
     /**
      * categorySection.js – v2
      * Oculta apenas a secção de categorias nativa do Shopkit (sem tocar no resto da página)
      * e injeta a nossa versão premium com neon glow.
      */
 
+
+    // img = WebP otimizado auto-hospedado (~8-14KB, era 42-166KB na Shopkit).
+    // fb  = original da Shopkit, usado só como fallback se o WebP falhar a carregar.
     const CATEGORIES = [
-      { label: 'Equipamento',             href: '/category/equipamento',             img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/7753b01-160640-equipamentos-de-aquario.png' },
-      { label: 'Alimentação',             href: '/category/alimentacao',             img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/8d9eaef-160632-alimentacao.png' },
-      { label: 'Hardscape',               href: '/category/hardscape',               img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d56453d-160643-hardscape.png' },
-      { label: 'Plantas',                 href: '/category/plantas',                 img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fca290c-160659-plantas.png' },
-      { label: 'Peixes',                  href: '/category/peixes',                  img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/c380f2e-160654-peixes.png' },
-      { label: 'Invertebrados',           href: '/category/invertebrados',           img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/904bd1c-160646-invertebrados.png' },
-      { label: 'Condicionadores de Água', href: '/category/condicionadores-de-agua', img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3a2d344-160638-condicionadores-de-agua.png' },
-      { label: 'Aquascaping',             href: '/category/aquascaping',             img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9977c3d-160634-aquascaping.png' },
-      { label: 'Outros',                  href: '/category/outros',                  img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/41700fb-160651-outros.png' },
+      { label: 'Equipamento',             href: '/category/equipamento',             file: 'equipamento.webp',    fb: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/7753b01-160640-equipamentos-de-aquario.png' },
+      { label: 'Alimentação',             href: '/category/alimentacao',             file: 'alimentacao.webp',    fb: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/8d9eaef-160632-alimentacao.png' },
+      { label: 'Hardscape',               href: '/category/hardscape',               file: 'hardscape.webp',      fb: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d56453d-160643-hardscape.png' },
+      { label: 'Plantas',                 href: '/category/plantas',                 file: 'plantas.webp',        fb: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/fca290c-160659-plantas.png' },
+      { label: 'Peixes',                  href: '/category/peixes',                  file: 'peixes.webp',         fb: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/c380f2e-160654-peixes.png' },
+      { label: 'Invertebrados',           href: '/category/invertebrados',           file: 'invertebrados.webp',  fb: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/904bd1c-160646-invertebrados.png' },
+      { label: 'Condicionadores de Água', href: '/category/condicionadores-de-agua', file: 'condicionadores.webp',fb: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3a2d344-160638-condicionadores-de-agua.png' },
+      { label: 'Aquascaping',             href: '/category/aquascaping',             file: 'aquascaping.webp',    fb: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9977c3d-160634-aquascaping.png' },
+      { label: 'Outros',                  href: '/category/outros',                  file: 'outros.webp',         fb: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/41700fb-160651-outros.png' },
     ];
 
     /**
@@ -294,10 +328,12 @@
         a.className = 'aq-cat-item';
 
         const img = document.createElement('img');
-        img.src = cat.img;
+        img.src = AQ_ASSET_BASE + 'img-ui/cat/' + cat.file;
         img.alt = cat.label;
         img.className = 'aq-cat-icon';
         img.loading = 'lazy';
+        img.width = 62; img.height = 62;   // dimensões explícitas (evita reflow)
+        img.onerror = function () { img.onerror = null; img.src = cat.fb; }; // fallback Shopkit
 
         const name = document.createElement('span');
         name.className = 'aq-cat-name';
@@ -899,25 +935,29 @@
      * Só marcas com logo. Cores originais com opacidade + hover neon.
      */
 
+
     const BASE = 'https://www.aquariumlife.pt/brand/';
 
+    // file = logo WebP otimizado auto-hospedado (~5-10KB, era 16-375KB na Shopkit).
+    // img  = original da Shopkit, fallback se o WebP falhar. Logos que já são SVG
+    // (Easy Life, ICA, ESHA, Colombo) ficam no original — vetor já é leve.
     const BRANDS_MAP = [
-      { label: 'Oase',          href: `${BASE}oase`,           img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1e9e814-155547-oase.png' },
-      { label: 'UNS',           href: `${BASE}uns`,            img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bf1a5d4-223057-uns.png' },
-      { label: 'ME',            href: `${BASE}me`,             img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/25baccc-224313-meaquarist.png' },
-      { label: 'Easy Life',     href: `${BASE}easy-life`,      img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/58cd74f-224703-easy-life-logo-white.svg' },
-      { label: 'Seachem',       href: `${BASE}seachem`,        img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/81c433b-230814-logo2x.png' },
-      { label: 'Hikari',        href: `${BASE}hiraki`,         img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/c6662f4-230041-hikari_logo.png' },
-      { label: 'WeekAqua',      href: `${BASE}weekaqua`,       img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d26904d-225829-weekaqua.png' },
-      { label: 'Tropica',       href: `${BASE}tropica-plants`, img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/82414e4-225722-tropica.png' },
-      { label: 'Milwaukee',     href: `${BASE}milwaukee`,      img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b191a88-232705-logo-white.png' },
-      { label: 'Salifert',      href: `${BASE}salifert`,       img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/40e8d92-232153-salifert.png' },
-      { label: 'ICA',           href: `${BASE}ica`,            img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/248e14a-231838-ica_logo_vertical.svg' },
-      { label: 'ESHA',          href: `${BASE}esha`,           img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/68ba01d-231641-esha-logo-white-2020.svg' },
-      { label: 'Sera',          href: `${BASE}sera`,           img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/641f247-231444-sera.png' },
-      { label: 'Superfish',     href: `${BASE}superfish`,      img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b5a9cb8-234638-superfish.png' },
-      { label: 'Colombo',       href: `${BASE}colombo`,        img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3ee83b1-233903-logo-colombo-awg.svg' },
-      { label: 'Tropical',      href: `${BASE}tropical`,       img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d106650-233758-tropical.png' },
+      { label: 'Oase',          href: `${BASE}oase`,           file: 'oase.webp',       img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1e9e814-155547-oase.png' },
+      { label: 'UNS',           href: `${BASE}uns`,            file: 'uns.webp',        img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bf1a5d4-223057-uns.png' },
+      { label: 'ME',            href: `${BASE}me`,             file: 'meaquarist.webp', img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/25baccc-224313-meaquarist.png' },
+      { label: 'Easy Life',     href: `${BASE}easy-life`,                               img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/58cd74f-224703-easy-life-logo-white.svg' },
+      { label: 'Seachem',       href: `${BASE}seachem`,        file: 'seachem.webp',    img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/81c433b-230814-logo2x.png' },
+      { label: 'Hikari',        href: `${BASE}hiraki`,         file: 'hikari.webp',     img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/c6662f4-230041-hikari_logo.png' },
+      { label: 'WeekAqua',      href: `${BASE}weekaqua`,       file: 'weekaqua.webp',   img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d26904d-225829-weekaqua.png' },
+      { label: 'Tropica',       href: `${BASE}tropica-plants`, file: 'tropica.webp',    img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/82414e4-225722-tropica.png' },
+      { label: 'Milwaukee',     href: `${BASE}milwaukee`,      file: 'milwaukee.webp',  img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b191a88-232705-logo-white.png' },
+      { label: 'Salifert',      href: `${BASE}salifert`,       file: 'salifert.webp',   img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/40e8d92-232153-salifert.png' },
+      { label: 'ICA',           href: `${BASE}ica`,                                     img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/248e14a-231838-ica_logo_vertical.svg' },
+      { label: 'ESHA',          href: `${BASE}esha`,                                    img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/68ba01d-231641-esha-logo-white-2020.svg' },
+      { label: 'Sera',          href: `${BASE}sera`,           file: 'sera.webp',       img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/641f247-231444-sera.png' },
+      { label: 'Superfish',     href: `${BASE}superfish`,      file: 'superfish.webp',  img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b5a9cb8-234638-superfish.png' },
+      { label: 'Colombo',       href: `${BASE}colombo`,                                 img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3ee83b1-233903-logo-colombo-awg.svg' },
+      { label: 'Tropical',      href: `${BASE}tropical`,       file: 'tropical.webp',   img: 'https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d106650-233758-tropical.png' },
     ];
 
     function hideNativeBrands() {
@@ -929,7 +969,7 @@
       return false;
     }
 
-    function buildBrandItem({ label, img: imgSrc, href }) {
+    function buildBrandItem({ label, img: imgSrc, file, href }) {
       const el = document.createElement('a');
       el.className = 'aq-brand-item';
       el.title = label;
@@ -937,11 +977,17 @@
       el.rel = 'noopener';
 
       const img = document.createElement('img');
-      img.src = imgSrc;
+      img.src = file ? (AQ_ASSET_BASE + 'img-ui/brands/' + file) : imgSrc;
       img.alt = label;
       img.loading = 'lazy';
+      let triedFallback = false;
       img.onerror = function () {
-        el.style.display = 'none'; // esconde se imagem falhar
+        if (file && !triedFallback) {      // WebP falhou -> tenta o original da Shopkit
+          triedFallback = true;
+          img.src = imgSrc;
+          return;
+        }
+        el.style.display = 'none';         // nem o fallback carregou -> esconde
       };
       el.appendChild(img);
       return el;

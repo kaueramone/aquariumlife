@@ -67,7 +67,10 @@ body::before {
   height: min(58vmin, 240px);
   z-index: 2147483642;
   pointer-events: none;
+  // WebP animado (~158KB) para browsers modernos; gif (~348KB) como fallback.
   background: no-repeat center/contain url("../aquarium.gif");
+  background-image: -webkit-image-set(url("../aquarium.webp") type("image/webp"), url("../aquarium.gif") type("image/gif"));
+  background-image: image-set(url("../aquarium.webp") type("image/webp"), url("../aquarium.gif") type("image/gif"));
   // brilho subtil por baixo do ícone (sem caixa branca)
   filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.45))
           drop-shadow(0 0 20px rgba(8, 238, 188, 0.30));
