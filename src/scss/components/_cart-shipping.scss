@@ -1,9 +1,10 @@
 @use '../base/variables' as *;
 
 // ============================================================
-// PORTES NO RESUMO (/cart) — par do cartShipping.js (2026-07-23)
-// Substitui o "A calcular" pelas duas opcoes fixas PT continental.
-// A celula .total-shipping passa a ocupar a linha inteira.
+// PORTES NO RESUMO (/cart) — par do cartShipping.js
+// MODO INFORMATIVO (2026-07-27): substitui o "A calcular" por um aviso das
+// duas opcoes com valor ESTIMADO. Nao entra na soma (total = so produtos);
+// a escolha/soma real e' no checkout. A celula ocupa a linha inteira.
 // ============================================================
 .cart-receipt .cart-line.margin-top {
   flex-wrap: wrap;
@@ -15,63 +16,50 @@
 }
 
 .cart-receipt .total-shipping {
-  .aq-portes {
+  .aq-portes-info {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 5px;
     text-align: left;
+    font-weight: 400;
   }
 
-  .aq-porte {
+  .aq-porte-op {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 8px;
-    margin: 0;
-    cursor: pointer;
     font-size: 0.82rem;
     line-height: 1.25;
-    font-weight: 400;
-
-    input[type='radio'] {
-      accent-color: $color-neon-accent;
-      width: 15px;
-      height: 15px;
-      margin: 0;
-      flex: 0 0 auto;
-      cursor: pointer;
-    }
-
-    .aq-porte-nome {
-      flex: 1 1 auto;
-      color: rgba(255, 255, 255, 0.88) !important;
-
-      em {
-        font-style: normal;
-        opacity: 0.6;
-        font-size: 0.9em;
-      }
-    }
-
-    .aq-porte-preco {
-      color: $color-neon-accent !important;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    &:hover .aq-porte-nome { color: #fff !important; }
   }
 
-  .aq-porte-gratis {
+  .aq-porte-nome {
+    color: rgba(255, 255, 255, 0.85) !important;
+
+    em {
+      font-style: normal;
+      opacity: 0.6;
+      font-size: 0.9em;
+    }
+  }
+
+  .aq-porte-preco {
     color: $color-neon-accent !important;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+
+  .aq-porte-nota {
+    display: block;
+    margin-top: 3px;
+    font-size: 0.72rem;
+    line-height: 1.3;
+    opacity: 0.7;
   }
 }
 
 // ---- LIGHT MODE -------------------------------------------
 body.aq-light-mode .cart-receipt .total-shipping {
-  .aq-porte .aq-porte-nome { color: #00204a !important; }
-  .aq-porte .aq-porte-preco,
-  .aq-porte-gratis { color: #007a5c !important; }
+  .aq-porte-nome { color: #00204a !important; }
+  .aq-porte-preco { color: #007a5c !important; }
 }

@@ -3189,28 +3189,29 @@
 
     /**
      * cartShipping.js
-     * Portes de envio no Resumo do carrinho (/cart).
+     * Portes de envio no Resumo do carrinho (/cart) — MODO INFORMATIVO (2026-07-27).
      *
-     * O Shopkit mostra "A calcular" e so revela os portes no checkout. Como os
-     * valores sao fixos para Portugal continental, mostramos ja as duas opcoes
-     * (pedido Kaue 2026-07-23):
+     * O Shopkit mostra "A calcular" e so revela/soma os portes no checkout (etapa
+     * final, ao escolher pagamento + tipo de entrega). Aqui, no carrinho inicial,
+     * apenas INFORMAMOS as duas opcoes com valor estimado — SEM entrar na soma:
      *   - Entrega em casa (Portugal continental) ......... 8,20 EUR
      *   - Pick Point mais perto de si (Portugal continental) 3,99 EUR
-     * O cliente escolhe e o Resumo atualiza na hora (portes + total + IVA).
-     * Subtotal >= 50 EUR -> portes gratis (opcoes dao lugar a "Gratis").
-     * Sem escolha feita, o total fica igual ao subtotal (como o nativo).
+     * (Valores estimados; grátis acima de 50 EUR — a escolha real e' no checkout.)
      *
-     * Estrutura do Resumo (validada em producao 2026-07-23):
+     * IMPORTANTE: o Total do resumo fica IGUAL ao subtotal dos produtos (os portes
+     * NAO sao somados nesta fase). Antes tinhamos radios que somavam — revertido a
+     * pedido do Kaue: a soma volta a ser so no checkout nativo.
+     *
+     * Estrutura do Resumo (validada em producao):
      *   .cart-receipt .cart-wrap
-     *     .cart-line                 .cart-text "Subtotal" + .cart-text valor
-     *     .cart-line.margin-top      .cart-text "Portes de envio" + .cart-text.total-shipping "A calcular"
-     *     .cart-line.margin-bottom-0 .cart-text "Total" + .cart-text valor
+     *     .cart-line                 "Subtotal" + valor
+     *     .cart-line.margin-top      "Portes de envio" + .total-shipping "A calcular"
+     *     .cart-line.margin-bottom-0 "Total" + valor
      *     .tax-included .text-muted  "Inclui IVA a X" (.total-taxes-value)
-     * Fora do resumo: .cart-total-text (2x, total grande + sticky).
+     *   Fora do resumo: .cart-total-text (total grande + sticky).
      *
-     * Convive com o cartQuantity.js (que corre em CAPTURE nos +/-): os nossos
-     * listeners correm em bubble + setTimeout(0), sempre DEPOIS do recalculo
-     * de quantidades, e leem os subtotais de linha (.cart-actual) ja atualizados.
+     * Convive com o cartQuantity.js: re-corre em setTimeout(0) DEPOIS do recalculo
+     * de quantidades, lendo os subtotais de linha (.cart-actual) ja atualizados.
      */
 
     var FREE_FROM = 50;
@@ -3219,8 +3220,6 @@
       { id: 'pick', nome: 'Pick Point mais perto de si', zona: 'Portugal continental', valor: 3.99 }
     ];
     var IVA_RATE = 0.23;
-
-    var escolha = null; // 'casa' | 'pick' | null
 
     function parsePrice$1(txt) {
       if (!txt) return 0;
@@ -3257,40 +3256,33 @@
       if (!wrap) return;
       var ship = wrap.querySelector('.total-shipping');
       var sub = subtotalAtual(wrap);
-      var gratis = sub >= FREE_FROM;
 
-      // celula dos portes: "Gratis" ou as duas opcoes
-      if (gratis) {
-        if (!ship.querySelector('.aq-porte-gratis')) {
-          ship.innerHTML = '<span class="aq-porte-gratis">Grátis</span>';
-        }
-      } else if (!ship.querySelector('.aq-portes')) {
-        ship.innerHTML = '<div class="aq-portes">' + OPCOES.map(function (o) {
-          return '<label class="aq-porte">'
-            + '<input type="radio" name="aq_porte" value="' + o.id + '"' + (escolha === o.id ? ' checked' : '') + '>'
-            + '<span class="aq-porte-nome">' + o.nome + ' <em>(' + o.zona + ')</em></span>'
-            + '<b class="aq-porte-preco">' + formatPrice(o.valor) + '</b>'
-            + '</label>';
-        }).join('') + '</div>';
+      // Celula dos portes: apenas INFORMATIVO (nao entra na soma). Reaplica se o
+      // Shopkit reescreveu a celula para "A calcular" (ex.: apos mudar quantidade).
+      if (ship && !ship.querySelector('.aq-portes-info')) {
+        ship.innerHTML = '<div class="aq-portes-info">'
+          + OPCOES.map(function (o) {
+              return '<span class="aq-porte-op">'
+                + '<span class="aq-porte-nome">' + o.nome + ' <em>(' + o.zona + ')</em></span>'
+                + '<b class="aq-porte-preco">' + formatPrice(o.valor) + '</b>'
+                + '</span>';
+            }).join('')
+          + '<small class="aq-porte-nota">Valores estimados — escolhes a entrega no checkout · Grátis acima de ' + FREE_FROM + ' €</small>'
+          + '</div>';
       }
 
-      var op = OPCOES.find(function (o) { return o.id === escolha; });
-      var portes = (gratis || !op) ? 0 : op.valor;
-      var total = sub + portes;
-
-      // linha Subtotal (1a .cart-line do resumo)
+      // Total = SO os produtos (os portes NAO sao somados nesta fase).
+      var total = sub;
       var linhas = wrap.querySelectorAll('.cart-line');
       if (linhas.length) {
         var v0 = linhas[0].querySelectorAll('.cart-text')[1];
         if (v0) v0.textContent = formatPrice(sub);
       }
-      // linha Total
       var linhaTotal = wrap.querySelector('.cart-line.margin-bottom-0');
       if (linhaTotal) {
         var vT = linhaTotal.querySelectorAll('.cart-text')[1];
         if (vT) vT.textContent = formatPrice(total);
       }
-      // totais grandes fora do resumo + IVA
       document.querySelectorAll('.cart-total-text').forEach(function (el) {
         el.textContent = formatPrice(total);
       });
@@ -3304,18 +3296,6 @@
       if (!b.classList.contains('page-cart') || b.classList.contains('cart-data')) return;
       if (b.hasAttribute('data-aq-portes-bound')) return;
       b.setAttribute('data-aq-portes-bound', '1');
-
-      try { escolha = sessionStorage.getItem('aq-porte') || null; } catch (e) {}
-      if (escolha !== 'casa' && escolha !== 'pick') escolha = null;
-
-      // escolha de portes
-      document.addEventListener('change', function (e) {
-        if (e.target && e.target.name === 'aq_porte') {
-          escolha = e.target.value;
-          try { sessionStorage.setItem('aq-porte', escolha); } catch (err) {}
-          render();
-        }
-      }, false);
 
       // depois de qualquer mexida nas quantidades (cartQuantity corre primeiro)
       document.addEventListener('click', function (e) {
