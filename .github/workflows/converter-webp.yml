@@ -1,0 +1,62 @@
+name: Converter imagens para WebP
+
+# Converte as imagens de produto (PNG/JPEG) para WebP → dist/img-webp/ (servido via jsDelivr).
+# Depois aplicam-se aos produtos via API (a Shopkit preserva o WebP — confirmado).
+# Fonte: dist/products-all.json (NÃO a API Shopkit, que bloqueia o datacenter do GitHub);
+# as imagens vêm do CDN, que serve o GitHub OK.
+#
+# IMPORTANTE: corre o AtualizarLoja.exe (ou o robô) ANTES, para o products-all.json
+# refletir as imagens atuais (ex.: as que foram ampliadas pelo upscale).
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: 'IDs separados por vírgula (vazio = todas as não-webp)'
+        required: false
+        default: ''
+      maxlado:
+        description: 'Lado maior máximo em px'
+        required: false
+        default: '1400'
+      qualidade:
+        description: 'Qualidade WebP (0-100)'
+        required: false
+        default: '82'
+
+permissions:
+  contents: write
+
+jobs:
+  converter:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Converter para WebP
+        env:
+          IDS: ${{ github.event.inputs.ids }}
+          MAXLADO: ${{ github.event.inputs.maxlado }}
+          QUALIDADE: ${{ github.event.inputs.qualidade }}
+        run: |
+          npm i --no-fund --no-audit sharp
+          node tools/webp/converter-webp.cjs
+          echo "total em dist/img-webp: $(ls dist/img-webp 2>/dev/null | wc -l)"
+
+      - name: Commit dist/img-webp
+        run: |
+          git config user.name "webp-bot"
+          git config user.email "actions@github.com"
+          git add dist/img-webp
+          if git diff --cached --quiet; then
+            echo "Nenhuma imagem nova convertida."
+            exit 0
+          fi
+          n=$(git diff --cached --name-only | grep -c 'dist/img-webp/' || true)
+          git commit -m "img: converter ${n} imagens para WebP"
+          git pull --rebase origin main || true
+          git push origin main
+          echo "Commitadas ${n} imagens WebP. (aplicar aos produtos via API a seguir)"
