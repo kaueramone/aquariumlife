@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-27",
+  "updated": "2026-08-18",
   "cat": 527352,
   "slug": "peixes",
   "total": 95,
@@ -82,7 +82,7 @@
       "url": "https://www.aquariumlife.pt/product/apistogramma-viejita-3-4cm",
       "cart": "https://www.aquariumlife.pt/cart/add/apistogramma-viejita-3-4cm",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5445148,
@@ -95,7 +95,7 @@
       "url": "https://www.aquariumlife.pt/product/apistogramma-agassizii-double-red-4-5cm",
       "cart": "https://www.aquariumlife.pt/cart/add/apistogramma-agassizii-double-red-4-5cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/e626c10-195719-5445148.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5445149,
@@ -108,7 +108,7 @@
       "url": "https://www.aquariumlife.pt/product/apistogramma-macmasteri-3-4cm",
       "cart": "https://www.aquariumlife.pt/cart/add/apistogramma-macmasteri-3-4cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0598c2f-195722-5445149.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5445150,
@@ -134,7 +134,7 @@
       "url": "https://www.aquariumlife.pt/product/microgeophagus-ramirezi-eletric-blue-3-35cm",
       "cart": "https://www.aquariumlife.pt/cart/add/microgeophagus-ramirezi-eletric-blue-3-35cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/c684262-195701-5445151.webp",
-      "st": 0
+      "st": 1
     },
     {
       "id": 5445152,
@@ -160,7 +160,7 @@
       "url": "https://www.aquariumlife.pt/product/corydora-aneus-albina-3-35cm",
       "cart": "https://www.aquariumlife.pt/cart/add/corydora-aneus-albina-3-35cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/c6b9f11-195707-5445153.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5445155,
@@ -173,7 +173,7 @@
       "url": "https://www.aquariumlife.pt/product/corydora-aneus-3-35cm",
       "cart": "https://www.aquariumlife.pt/cart/add/corydora-aneus-3-35cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1964e3f-195709-5445155.webp",
-      "st": 0
+      "st": 1
     },
     {
       "id": 5445156,
@@ -316,7 +316,7 @@
       "url": "https://www.aquariumlife.pt/product/platy-coral-vermelho-mickey-3-35cm",
       "cart": "https://www.aquariumlife.pt/cart/add/platy-coral-vermelho-mickey-3-35cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/27c777c-195748-5445168.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5445169,
@@ -511,7 +511,7 @@
       "url": "https://www.aquariumlife.pt/product/molly-balao-lyra-sortido",
       "cart": "https://www.aquariumlife.pt/cart/add/molly-balao-lyra-sortido",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4451bcb-195906-5506833.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5506834,
@@ -537,7 +537,7 @@
       "url": "https://www.aquariumlife.pt/product/molly-lyra-sortido-m",
       "cart": "https://www.aquariumlife.pt/cart/add/molly-lyra-sortido-m",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/c5a32d0-195911-5506835.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5506836,
@@ -628,7 +628,7 @@
       "url": "https://www.aquariumlife.pt/product/hyphessobrycon-herbertaxelrodi-black-diamond",
       "cart": "https://www.aquariumlife.pt/cart/add/hyphessobrycon-herbertaxelrodi-black-diamond",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d336f6b-195932-5506842.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5506843,
@@ -667,7 +667,7 @@
       "url": "https://www.aquariumlife.pt/product/gastromyzon-punctulatus-",
       "cart": "https://www.aquariumlife.pt/cart/add/gastromyzon-punctulatus-",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0ed3984-195944-5506845.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5506846,
@@ -719,7 +719,7 @@
       "url": "https://www.aquariumlife.pt/product/tateurnidina-ocellicauda-3-35cm",
       "cart": "https://www.aquariumlife.pt/cart/add/tateurnidina-ocellicauda-3-35cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/e6ee254-195957-5509690.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5509691,
@@ -732,7 +732,7 @@
       "url": "https://www.aquariumlife.pt/product/trichopsis-pumila-2-3cm",
       "cart": "https://www.aquariumlife.pt/cart/add/trichopsis-pumila-2-3cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a43e038-200000-5509691.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5509692,
@@ -810,7 +810,7 @@
       "url": "https://www.aquariumlife.pt/product/garra-flavarta-25-30cm",
       "cart": "https://www.aquariumlife.pt/cart/add/garra-flavarta-25-30cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/00fc34b-200019-5509697.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5509698,
@@ -953,7 +953,7 @@
       "url": "https://www.aquariumlife.pt/product/espada-kohako-4cm",
       "cart": "https://www.aquariumlife.pt/cart/add/espada-kohako-4cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ab459a9-200419-5536080.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5536081,
@@ -1005,7 +1005,7 @@
       "url": "https://www.aquariumlife.pt/product/colisa-lalia-femea-35-4cm",
       "cart": "https://www.aquariumlife.pt/cart/add/colisa-lalia-femea-35-4cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5f37e08-200601-5559760.webp",
-      "st": 0
+      "st": 1
     },
     {
       "id": 5559761,
@@ -1031,7 +1031,7 @@
       "url": "https://www.aquariumlife.pt/product/colisa-chuna-vermelho-4-45cm",
       "cart": "https://www.aquariumlife.pt/cart/add/colisa-chuna-vermelho-4-45cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ebc51ed-200348-5532603.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5559763,

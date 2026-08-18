@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-27",
+  "updated": "2026-08-18",
   "cat": "all",
   "slug": "all",
-  "total": 588,
+  "total": 629,
   "min": 0.5043,
   "max": 369.9471,
   "products": [
@@ -1278,8 +1278,8 @@
     {
       "id": 5444858,
       "title": "ADA Aqua Gravel",
-      "price": 19.9014,
-      "pf": "19,90 €",
+      "price": 8.856,
+      "pf": "8,86 €",
       "pp": null,
       "ppf": null,
       "af": "8,86 €",
@@ -4707,7 +4707,7 @@
       "url": "https://www.aquariumlife.pt/product/apistogramma-viejita-3-4cm",
       "cart": "https://www.aquariumlife.pt/cart/add/apistogramma-viejita-3-4cm",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5445148,
@@ -4720,7 +4720,7 @@
       "url": "https://www.aquariumlife.pt/product/apistogramma-agassizii-double-red-4-5cm",
       "cart": "https://www.aquariumlife.pt/cart/add/apistogramma-agassizii-double-red-4-5cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/e626c10-195719-5445148.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5445149,
@@ -4733,7 +4733,7 @@
       "url": "https://www.aquariumlife.pt/product/apistogramma-macmasteri-3-4cm",
       "cart": "https://www.aquariumlife.pt/cart/add/apistogramma-macmasteri-3-4cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0598c2f-195722-5445149.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5445150,
@@ -4759,7 +4759,7 @@
       "url": "https://www.aquariumlife.pt/product/microgeophagus-ramirezi-eletric-blue-3-35cm",
       "cart": "https://www.aquariumlife.pt/cart/add/microgeophagus-ramirezi-eletric-blue-3-35cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/c684262-195701-5445151.webp",
-      "st": 0
+      "st": 1
     },
     {
       "id": 5445152,
@@ -4785,7 +4785,7 @@
       "url": "https://www.aquariumlife.pt/product/corydora-aneus-albina-3-35cm",
       "cart": "https://www.aquariumlife.pt/cart/add/corydora-aneus-albina-3-35cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/c6b9f11-195707-5445153.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5445155,
@@ -4798,7 +4798,7 @@
       "url": "https://www.aquariumlife.pt/product/corydora-aneus-3-35cm",
       "cart": "https://www.aquariumlife.pt/cart/add/corydora-aneus-3-35cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1964e3f-195709-5445155.webp",
-      "st": 0
+      "st": 1
     },
     {
       "id": 5445156,
@@ -4967,7 +4967,7 @@
       "url": "https://www.aquariumlife.pt/product/platy-coral-vermelho-mickey-3-35cm",
       "cart": "https://www.aquariumlife.pt/cart/add/platy-coral-vermelho-mickey-3-35cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/27c777c-195748-5445168.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5445169,
@@ -5174,29 +5174,29 @@
     },
     {
       "id": 5445184,
-      "title": "Seachem Stability",
-      "price": 6.1992,
-      "pf": "6,20 €",
+      "title": "Seachem Stability 50ml",
+      "price": 6.0024,
+      "pf": "6,00 €",
       "pp": null,
       "ppf": null,
-      "af": "6,20 €",
+      "af": "6,00 €",
       "url": "https://www.aquariumlife.pt/product/seachem-stability-50ml-",
       "cart": "https://www.aquariumlife.pt/cart/add/seachem-stability-50ml-",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 0
+      "st": 1
     },
     {
       "id": 5445186,
       "title": "Seachem Prime 100ml",
-      "price": 8.5977,
-      "pf": "8,60 €",
+      "price": 7.9458,
+      "pf": "7,95 €",
       "pp": null,
       "ppf": null,
       "af": null,
       "url": "https://www.aquariumlife.pt/product/seachem-prime-100ml",
       "cart": "https://www.aquariumlife.pt/cart/add/seachem-prime-100ml",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 0
+      "st": 1
     },
     {
       "id": 5445187,
@@ -5700,7 +5700,7 @@
       "url": "https://www.aquariumlife.pt/product/molly-balao-lyra-sortido",
       "cart": "https://www.aquariumlife.pt/cart/add/molly-balao-lyra-sortido",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4451bcb-195906-5506833.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5506834,
@@ -5726,7 +5726,7 @@
       "url": "https://www.aquariumlife.pt/product/molly-lyra-sortido-m",
       "cart": "https://www.aquariumlife.pt/cart/add/molly-lyra-sortido-m",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/c5a32d0-195911-5506835.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5506836,
@@ -5817,7 +5817,7 @@
       "url": "https://www.aquariumlife.pt/product/hyphessobrycon-herbertaxelrodi-black-diamond",
       "cart": "https://www.aquariumlife.pt/cart/add/hyphessobrycon-herbertaxelrodi-black-diamond",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d336f6b-195932-5506842.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5506843,
@@ -5856,7 +5856,7 @@
       "url": "https://www.aquariumlife.pt/product/gastromyzon-punctulatus-",
       "cart": "https://www.aquariumlife.pt/cart/add/gastromyzon-punctulatus-",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0ed3984-195944-5506845.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5506846,
@@ -5908,7 +5908,7 @@
       "url": "https://www.aquariumlife.pt/product/tateurnidina-ocellicauda-3-35cm",
       "cart": "https://www.aquariumlife.pt/cart/add/tateurnidina-ocellicauda-3-35cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/e6ee254-195957-5509690.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5509691,
@@ -5921,7 +5921,7 @@
       "url": "https://www.aquariumlife.pt/product/trichopsis-pumila-2-3cm",
       "cart": "https://www.aquariumlife.pt/cart/add/trichopsis-pumila-2-3cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a43e038-200000-5509691.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5509692,
@@ -5999,7 +5999,7 @@
       "url": "https://www.aquariumlife.pt/product/garra-flavarta-25-30cm",
       "cart": "https://www.aquariumlife.pt/cart/add/garra-flavarta-25-30cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/00fc34b-200019-5509697.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5509698,
@@ -7718,7 +7718,7 @@
       "url": "https://www.aquariumlife.pt/product/espada-kohako-4cm",
       "cart": "https://www.aquariumlife.pt/cart/add/espada-kohako-4cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ab459a9-200419-5536080.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5536081,
@@ -8355,7 +8355,7 @@
       "url": "https://www.aquariumlife.pt/product/colisa-lalia-femea-35-4cm",
       "cart": "https://www.aquariumlife.pt/cart/add/colisa-lalia-femea-35-4cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5f37e08-200601-5559760.webp",
-      "st": 0
+      "st": 1
     },
     {
       "id": 5559761,
@@ -8381,7 +8381,7 @@
       "url": "https://www.aquariumlife.pt/product/colisa-chuna-vermelho-4-45cm",
       "cart": "https://www.aquariumlife.pt/cart/add/colisa-chuna-vermelho-4-45cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ebc51ed-200348-5532603.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5559763,
@@ -8658,7 +8658,7 @@
     },
     {
       "id": 5559789,
-      "title": "Neo Plants Soil Liter Normal",
+      "title": "Neo Plants Soil 8 Liter Normal",
       "price": 39.950399999999995,
       "pf": "39,95 €",
       "pp": null,
@@ -8671,7 +8671,7 @@
     },
     {
       "id": 5559791,
-      "title": "Neo Plants Soil Liter NO CO2",
+      "title": "Neo Plants Soil 8 Liter NO CO2",
       "price": 39.950399999999995,
       "pf": "39,95 €",
       "pp": null,
@@ -10188,6 +10188,539 @@
       "url": "https://www.aquariumlife.pt/product/aquario-neo-difusor-co2-original-m-castanho",
       "cart": "https://www.aquariumlife.pt/cart/add/aquario-neo-difusor-co2-original-m-castanho",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f1c3adf-111553-aquario-neo-difusor-co2-original-m-castanho.webp",
+      "st": 1
+    },
+    {
+      "id": 5745363,
+      "title": "Aquario Neo Media Pure Premium 1L",
+      "price": 18.8559,
+      "pf": "18,86 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/aquario-neo-media-pure-premium-1l",
+      "cart": "https://www.aquariumlife.pt/cart/add/aquario-neo-media-pure-premium-1l",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 0
+    },
+    {
+      "id": 5745364,
+      "title": "Neo outlet M",
+      "price": 9.9507,
+      "pf": "9,95 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/neo-outlet-m",
+      "cart": "https://www.aquariumlife.pt/cart/add/neo-outlet-m",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 0
+    },
+    {
+      "id": 5745365,
+      "title": "Seachem Prime 50ml",
+      "price": 5.7440999999999995,
+      "pf": "5,74 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/seachem-prime-50ml-",
+      "cart": "https://www.aquariumlife.pt/cart/add/seachem-prime-50ml-",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745366,
+      "title": "Seachem Flourish Excel 50ml",
+      "price": 5.0061,
+      "pf": "5,01 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/seachem-flourish-excel-50ml-",
+      "cart": "https://www.aquariumlife.pt/cart/add/seachem-flourish-excel-50ml-",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745367,
+      "title": "Seachem Flourish Excel 100ml",
+      "price": 7.9458,
+      "pf": "7,95 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/seachem-flourish-excel-100ml-",
+      "cart": "https://www.aquariumlife.pt/cart/add/seachem-flourish-excel-100ml-",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745368,
+      "title": "Seachem Flourish Excel 250ml",
+      "price": 12.951899999999998,
+      "pf": "12,95 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/seachem-flourish-excel-250ml-",
+      "cart": "https://www.aquariumlife.pt/cart/add/seachem-flourish-excel-250ml-",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745369,
+      "title": "Seachem Flourish 250ml",
+      "price": 13.001100000000001,
+      "pf": "13,00 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/seachem-flourish-250ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/seachem-flourish-250ml",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745370,
+      "title": "Seachem Flourish 100ml",
+      "price": 9.2988,
+      "pf": "9,30 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/seachem-flourish-100ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/seachem-flourish-100ml",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745371,
+      "title": "Seachem Flourish 50ml",
+      "price": 6.6051,
+      "pf": "6,61 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/seachem-flourish-50ml-",
+      "cart": "https://www.aquariumlife.pt/cart/add/seachem-flourish-50ml-",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745372,
+      "title": "Seachem Flourish Advance 50ml",
+      "price": 7.9458,
+      "pf": "7,95 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/seachem-flourish-advance-50ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/seachem-flourish-advance-50ml",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745373,
+      "title": "Seachem Flourish Advance 100ml",
+      "price": 10.504199999999999,
+      "pf": "10,50 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/seachem-flourish-advance-100ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/seachem-flourish-advance-100ml",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745374,
+      "title": "Seachem Flourish Advance 250ml",
+      "price": 16.002299999999998,
+      "pf": "16,00 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/seachem-flourish-advance-250ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/seachem-flourish-advance-250ml",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745375,
+      "title": "Seachem Clarity 100ml",
+      "price": 6.9495000000000005,
+      "pf": "6,95 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/seachem-clarity-100ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/seachem-clarity-100ml",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745376,
+      "title": "Seachem Pristine 100ml",
+      "price": 8.9544,
+      "pf": "8,95 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/seachem-pristine-100ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/seachem-pristine-100ml",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745377,
+      "title": "Seachem Neutral Regulator 50g",
+      "price": 5.9532,
+      "pf": "5,95 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/seachem-neutral-regulator-50g",
+      "cart": "https://www.aquariumlife.pt/cart/add/seachem-neutral-regulator-50g",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745378,
+      "title": "Seachem Neutral Regulator 250g",
+      "price": 12.8043,
+      "pf": "12,80 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/seachem-neutral-regulator-250g",
+      "cart": "https://www.aquariumlife.pt/cart/add/seachem-neutral-regulator-250g",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745379,
+      "title": "Seachem Discus Buffer 250g",
+      "price": 12.8043,
+      "pf": "12,80 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/seachem-discus-buffer-250g-",
+      "cart": "https://www.aquariumlife.pt/cart/add/seachem-discus-buffer-250g-",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745380,
+      "title": "Seachem Discus Buffer 50g",
+      "price": 5.9532,
+      "pf": "5,95 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/seachem-discus-buffer-50g",
+      "cart": "https://www.aquariumlife.pt/cart/add/seachem-discus-buffer-50g",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745381,
+      "title": "Seachem Liquid Neutral Regulator 250ml",
+      "price": 13.6038,
+      "pf": "13,60 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/seachem-liquid-neutral-regulator-250ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/seachem-liquid-neutral-regulator-250ml",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745382,
+      "title": "Seachem StressGuard 250ml",
+      "price": 15.953100000000001,
+      "pf": "15,95 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/seachem-stressguard-250ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/seachem-stressguard-250ml",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745383,
+      "title": "Seachem AmGuard 250ml",
+      "price": 14.895299999999999,
+      "pf": "14,90 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/seachem-amguard-250ml-",
+      "cart": "https://www.aquariumlife.pt/cart/add/seachem-amguard-250ml-",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745384,
+      "title": "Seachem AmGuard 100ml",
+      "price": 7.995,
+      "pf": "8,00 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/seachem-amguard-100ml-",
+      "cart": "https://www.aquariumlife.pt/cart/add/seachem-amguard-100ml-",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745385,
+      "title": "Neo Media Soft mini 1L",
+      "price": 20.848499999999998,
+      "pf": "20,85 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/neo-media-soft-mini-1l",
+      "cart": "https://www.aquariumlife.pt/cart/add/neo-media-soft-mini-1l",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745386,
+      "title": "Neo Media Soft mini 5L",
+      "price": 66.9489,
+      "pf": "66,95 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/neo-media-soft-mini-5l",
+      "cart": "https://www.aquariumlife.pt/cart/add/neo-media-soft-mini-5l",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745387,
+      "title": "Neo Media Pure mini 5L",
+      "price": 62.447100000000006,
+      "pf": "62,45 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/neo-media-pure-mini-5l-",
+      "cart": "https://www.aquariumlife.pt/cart/add/neo-media-pure-mini-5l-",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745388,
+      "title": "Neo Media Quad Soft M 1L",
+      "price": 18.9543,
+      "pf": "18,95 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/neo-media-quad-soft-m-1l-",
+      "cart": "https://www.aquariumlife.pt/cart/add/neo-media-quad-soft-m-1l-",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745389,
+      "title": "Neo Media Quad Soft M 5L",
+      "price": 61.955099999999995,
+      "pf": "61,96 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/neo-media-quad-soft-m-5l-",
+      "cart": "https://www.aquariumlife.pt/cart/add/neo-media-quad-soft-m-5l-",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745390,
+      "title": "Neo Media Quad Pure L 5L",
+      "price": 54.4521,
+      "pf": "54,45 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/neo-media-quad-pure-l-5l-",
+      "cart": "https://www.aquariumlife.pt/cart/add/neo-media-quad-pure-l-5l-",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745391,
+      "title": "Neo Media Quad Pure XL 5L",
+      "price": 53.4558,
+      "pf": "53,46 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/neo-media-quad-pure-xl-5l-",
+      "cart": "https://www.aquariumlife.pt/cart/add/neo-media-quad-pure-xl-5l-",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745392,
+      "title": "Neo Media Quad Hard M 1L",
+      "price": 18.9543,
+      "pf": "18,95 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/neo-media-quad-hard-m-1l-",
+      "cart": "https://www.aquariumlife.pt/cart/add/neo-media-quad-hard-m-1l-",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745393,
+      "title": "Neo Media Quad Hard M 5L",
+      "price": 61.955099999999995,
+      "pf": "61,96 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/neo-media-quad-hard-m-5l-",
+      "cart": "https://www.aquariumlife.pt/cart/add/neo-media-quad-hard-m-5l-",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745394,
+      "title": "Neo Fluid NO Co2 1L",
+      "price": 29.9505,
+      "pf": "29,95 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/neo-fluid-no-co2-1l",
+      "cart": "https://www.aquariumlife.pt/cart/add/neo-fluid-no-co2-1l",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745395,
+      "title": "Neo Fluid NO Co2 300ml",
+      "price": 12.951899999999998,
+      "pf": "12,95 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/neo-fluid-no-co2-300ml-",
+      "cart": "https://www.aquariumlife.pt/cart/add/neo-fluid-no-co2-300ml-",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745396,
+      "title": "Neo Holder ver. 2",
+      "price": 8.9544,
+      "pf": "8,95 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/neo-holder-ver-2",
+      "cart": "https://www.aquariumlife.pt/cart/add/neo-holder-ver-2",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745397,
+      "title": "Neo Outlet L 16/22",
+      "price": 9.9507,
+      "pf": "9,95 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/neo-outlet-l-16-22-",
+      "cart": "https://www.aquariumlife.pt/cart/add/neo-outlet-l-16-22-",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745398,
+      "title": "Neo Reliever L 16/22",
+      "price": 9.9507,
+      "pf": "9,95 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/neo-reliever-l-16-22-",
+      "cart": "https://www.aquariumlife.pt/cart/add/neo-reliever-l-16-22-",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745399,
+      "title": "Neo Reliever M 12/16",
+      "price": 9.9507,
+      "pf": "9,95 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/neo-reliever-m-12-16-",
+      "cart": "https://www.aquariumlife.pt/cart/add/neo-reliever-m-12-16-",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745400,
+      "title": "Neo Skimmer M 12/16",
+      "price": 12.951899999999998,
+      "pf": "12,95 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/neo-skimmer-m-12-16",
+      "cart": "https://www.aquariumlife.pt/cart/add/neo-skimmer-m-12-16",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745401,
+      "title": "Neo Skimmer L 16/22",
+      "price": 12.951899999999998,
+      "pf": "12,95 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/neo-skimmer-l-16-22",
+      "cart": "https://www.aquariumlife.pt/cart/add/neo-skimmer-l-16-22",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745402,
+      "title": "Neo Inlet L 16/22",
+      "price": 7.9458,
+      "pf": "7,95 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/neo-inlet-l-16-22-",
+      "cart": "https://www.aquariumlife.pt/cart/add/neo-inlet-l-16-22-",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
+      "st": 1
+    },
+    {
+      "id": 5745403,
+      "title": "Neo Inlet M 12/16",
+      "price": 7.9458,
+      "pf": "7,95 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/neo-inlet-m-12-16",
+      "cart": "https://www.aquariumlife.pt/cart/add/neo-inlet-m-12-16",
+      "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
       "st": 1
     }
   ]

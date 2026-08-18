@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-27",
+  "updated": "2026-08-18",
   "total": 27,
   "categories": [
     {
@@ -7,7 +7,7 @@
       "title": "Equipamento",
       "url": "https://www.aquariumlife.pt/category/equipamento",
       "handle": "equipamento",
-      "count": 327,
+      "count": 346,
       "children": [
         {
           "id": 527486,
@@ -191,7 +191,7 @@
       "title": "Condicionadores de água",
       "url": "https://www.aquariumlife.pt/category/condicionadores-de-agua",
       "handle": "condicionadores-de-agua",
-      "count": 26,
+      "count": 46,
       "children": []
     },
     {
