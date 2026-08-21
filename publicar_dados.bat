@@ -8,7 +8,7 @@ git commit -m "data: publicar dados e codigo"
 git pull --rebase --autostash origin main
 git push origin main
 echo.
-echo A purgar cache do jsDelivr (28 ficheiros)...
+echo A purgar cache do jsDelivr (31 ficheiros)...
 curl -s "https://purge.jsdelivr.net/gh/kaueramone/aquariumlife@main/dist/categories.json" >nul
 curl -s "https://purge.jsdelivr.net/gh/kaueramone/aquariumlife@main/dist/products-all.json" >nul
 curl -s "https://purge.jsdelivr.net/gh/kaueramone/aquariumlife@main/dist/products-cat-527348.json" >nul
@@ -37,6 +37,9 @@ curl -s "https://purge.jsdelivr.net/gh/kaueramone/aquariumlife@main/dist/product
 curl -s "https://purge.jsdelivr.net/gh/kaueramone/aquariumlife@main/dist/products-cat-527713.json" >nul
 curl -s "https://purge.jsdelivr.net/gh/kaueramone/aquariumlife@main/dist/products-cat-527722.json" >nul
 curl -s "https://purge.jsdelivr.net/gh/kaueramone/aquariumlife@main/dist/products-cat-534408.json" >nul
+curl -s "https://purge.jsdelivr.net/gh/kaueramone/aquariumlife@main/dist/products-cat-553548.json" >nul
+curl -s "https://purge.jsdelivr.net/gh/kaueramone/aquariumlife@main/dist/products-cat-553549.json" >nul
+curl -s "https://purge.jsdelivr.net/gh/kaueramone/aquariumlife@main/dist/products-cat-553550.json" >nul
 echo.
 echo Concluido! As grelhas de categoria vao refletir as imagens novas.
 pause

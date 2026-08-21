@@ -70,6 +70,9 @@
   position: relative;
   overflow: hidden !important;
   border-radius: 14px 14px 0 0 !important;
+  // O tema Boxie poe margin-bottom: 32px aqui -> era a maior parte do "vao"
+  // entre a foto e o titulo de que o cliente se queixou (2026-08-21).
+  margin: 0 !important;
 }
 
 .product-view::before,
@@ -157,9 +160,14 @@ a.product-name {
   color: #cde4f8 !important;
   text-decoration: none !important;
   text-align: center !important;
+  // O tema Boxie injeta margin 15px/16px no <a> do nome, o que abria um vao
+  // grande entre foto -> titulo -> preco. Zeramos e controlamos so' por padding.
+  margin: 0 !important;
   padding: 8px 12px 2px !important;
   line-height: 1.4 !important;
-  flex: 1;
+  // NAO esticar o nome: foto -> titulo -> preco ficam juntos e a folga que
+  // iguala a altura dos cards vai toda para cima do botao (margin-top:auto).
+  flex: 0 0 auto !important;
 
   &:hover { color: #fff !important; }
 }
@@ -173,8 +181,18 @@ a.product-name {
 }
 
 .product-price {
+  // "desde" + preco tem de ficar SEMPRE na mesma linha e centrados. Em cards
+  // estreitos o flex do tema quebrava a linha (o "desde" caia para a esquerda
+  // e o "EUR" descia). nowrap + baseline resolve. (cliente, 2026-08-21)
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: baseline !important;
+  justify-content: center !important;
+  gap: 5px !important;
+  white-space: nowrap !important;
   text-align: center !important;
-  padding: 2px 12px 6px !important;
+  margin: 0 !important;
+  padding: 5px 8px 8px !important;
 
   .product-actual, span {
     font-family: $font-family-title !important;
@@ -182,6 +200,8 @@ a.product-name {
     font-weight: 700 !important;
     color: $color-neon-accent !important;
     letter-spacing: -0.3px;
+    white-space: nowrap !important;
+    flex: 0 0 auto !important;
   }
 
   del, .old-price {
@@ -189,20 +209,25 @@ a.product-name {
     font-size: 0.82rem !important;
     font-weight: 400 !important;
     text-decoration: line-through !important;
-    margin-right: 8px;
+    margin-right: 0 !important;   // o gap do flex ja' separa
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
   }
 
   // "desde" (produtos com variantes): em linha com o preco da variante mais
   // barata, pequeno e discreto, com espaco a respirar antes do neon grande.
   .product-from {
-    display: inline !important;
+    display: inline-block !important;
     font-family: $font-family-body !important;
     font-size: 0.72rem !important;
     font-weight: 500 !important;
     color: rgba(205, 228, 248, 0.5) !important;
     text-transform: none !important;
     letter-spacing: 0.2px !important;
-    margin-right: 6px !important;
+    margin: 0 !important;          // separado pelo gap do flex
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    line-height: 1 !important;
     vertical-align: baseline !important;
   }
 }
@@ -237,7 +262,7 @@ a.product-name {
   justify-content: center !important;
   gap: 5px !important;
   width: auto !important;
-  margin: 0 14px 14px !important;
+  margin: auto 14px 14px !important;   // auto no topo = botao colado ao fundo
   padding: 7px 10px !important;
 
   background: rgba(8, 238, 188, 0.07) !important;
@@ -405,22 +430,51 @@ section:has(.product-view),
 
 // -- Mobile: cards iguais em altura, titulo cresce, preco e botao sempre no fundo --
 @media (max-width: 768px) {
+  // ------------------------------------------------------------------
+  // Cards mais largos (cliente, 2026-08-21): o card util tinha so' ~132px
+  // num ecra de 412px porque somavam 32px do .container-fluid + 15px da
+  // goteira do bootstrap + 6px da .products-list de cada lado. Reduzimos a
+  // margem lateral nas paginas de categoria/catalogo e as goteiras da
+  // grelha -> o card passa a ~184px sem risco de scroll horizontal.
+  // ------------------------------------------------------------------
+  // 16px (e nao menos): a .row exterior do bootstrap tem margin -15px, por
+  // isso um padding < 15px faz o conteudo transbordar e cria scroll lateral.
+  .page-category .main .container-fluid,
+  .page-catalog .main .container-fluid {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
   // Grid: stretch para altura igual + gap vertical entre linhas
   .products-list,
   .products.row,
   [class*="products-grid"] {
-    padding-left: 6px !important;
-    padding-right: 6px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     align-items: stretch !important;
-    row-gap: 12px !important;
+    row-gap: 14px !important;
+  }
+
+  // Goteira da celula da grelha (bootstrap poe 15px de cada lado)
+  .products-list > .col,
+  .products.row > .col,
+  [class*="products-grid"] > .col {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
   }
 
   // Wrapper .product ocupa toda a altura da celula da grelha
   .product {
-    padding: 0 3px !important;
+    padding: 0 !important;
     display: flex !important;
     flex-direction: column !important;
     height: 100% !important;
+  }
+
+  // Foto: com o card mais largo, menos respiro interno = produto maior
+  a.product-preview img.product-pic,
+  a.product-preview img {
+    padding: 12px !important;
   }
 
   // Card visual cresce para preencher o .product
@@ -435,24 +489,27 @@ section:has(.product-view),
     flex-shrink: 0 !important;
   }
 
-  // Nome cresce para preencher espaco -- empurra preco e botao para baixo
+  // Nome cresce para preencher espaco -- empurra preco e botao para baixo.
+  // margin: 0 mata as margens do tema (era o "vao" entre foto/titulo/preco).
   a.product-name {
-    padding: 4px 8px 1px !important;
-    font-size: 0.78rem !important;
-    flex: 1 !important;
+    margin: 0 !important;
+    padding: 7px 10px 0 !important;
+    font-size: 0.8rem !important;
+    flex: 0 0 auto !important;
   }
 
-  // Preco e botao ficam sempre colados ao fundo do card
+  // Preco cola ao titulo; e' o BOTAO que fica colado ao fundo do card.
   .product-details {
-    margin-top: auto !important;
+    margin-top: 0 !important;
   }
 
   .product-price {
-    padding: 1px 8px 4px !important;
+    margin: 0 !important;
+    padding: 6px 8px 8px !important;
   }
 
   .card-shadow-hover > a.product-btn {
-    margin: 0 10px 10px !important;
+    margin: auto 10px 10px !important;
     padding: 6px 8px !important;
   }
 }
