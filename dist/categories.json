@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-18",
-  "total": 27,
+  "updated": "2026-08-21",
+  "total": 30,
   "categories": [
     {
       "id": 527348,
@@ -129,7 +129,29 @@
       "url": "https://www.aquariumlife.pt/category/alimentacao",
       "handle": "alimentacao",
       "count": 62,
-      "children": []
+      "children": [
+        {
+          "id": 553548,
+          "title": "Peixes",
+          "url": "https://www.aquariumlife.pt/category/alimentacao-peixes",
+          "handle": "alimentacao-peixes",
+          "count": 37
+        },
+        {
+          "id": 553549,
+          "title": "Camarões",
+          "url": "https://www.aquariumlife.pt/category/alimentacao-camaroes",
+          "handle": "alimentacao-camaroes",
+          "count": 10
+        },
+        {
+          "id": 553550,
+          "title": "Comida Congelada",
+          "url": "https://www.aquariumlife.pt/category/alimentacao-comida-congelada",
+          "handle": "alimentacao-comida-congelada",
+          "count": 15
+        }
+      ]
     },
     {
       "id": 527350,

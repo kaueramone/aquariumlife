@@ -1,0 +1,355 @@
+{
+  "updated": "2026-08-21",
+  "cat": 553550,
+  "slug": "alimentacao-comida-congelada",
+  "total": 15,
+  "min": 3.198,
+  "max": 8.1549,
+  "products": [
+    {
+      "id": 5512998,
+      "title": "Gamma mini bloodworm blister 100g",
+      "price": 3.7514999999999996,
+      "pf": "3,75 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/gamma-mini-bloodworm-blister-100g",
+      "cart": "https://www.aquariumlife.pt/cart/add/gamma-mini-bloodworm-blister-100g",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/81c78ca-200023-5512998.webp",
+      "st": 0,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Comida Congelada",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-comida-congelada"
+        }
+      ]
+    },
+    {
+      "id": 5512999,
+      "title": "Gamma Brineshrimp blister 100g",
+      "price": 3.7514999999999996,
+      "pf": "3,75 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/gamma-brineshrimp-blister-100g-",
+      "cart": "https://www.aquariumlife.pt/cart/add/gamma-brineshrimp-blister-100g-",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a3f28f6-115351-gamma-brineshrimp-blister-100g.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Comida Congelada",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-comida-congelada"
+        }
+      ]
+    },
+    {
+      "id": 5513000,
+      "title": "Gamma Bloodworm blister 100g",
+      "price": 3.7514999999999996,
+      "pf": "3,75 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/gamma-bloodworm-blister-100g",
+      "cart": "https://www.aquariumlife.pt/cart/add/gamma-bloodworm-blister-100g",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1049e91-200025-5513000.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Comida Congelada",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-comida-congelada"
+        }
+      ]
+    },
+    {
+      "id": 5513001,
+      "title": "Gamma Tubifex blister 100g",
+      "price": 3.7514999999999996,
+      "pf": "3,75 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/gamma-tubifex-blister-100g",
+      "cart": "https://www.aquariumlife.pt/cart/add/gamma-tubifex-blister-100g",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/325a289-200028-5513001.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Comida Congelada",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-comida-congelada"
+        }
+      ]
+    },
+    {
+      "id": 5513002,
+      "title": "Gamma Discus Diet blister 100g",
+      "price": 3.7514999999999996,
+      "pf": "3,75 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/gamma-discus-diet-blister-100g",
+      "cart": "https://www.aquariumlife.pt/cart/add/gamma-discus-diet-blister-100g",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4fb09a2-200030-5513002.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Comida Congelada",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-comida-congelada"
+        }
+      ]
+    },
+    {
+      "id": 5513003,
+      "title": "Gamma Brineshrimp garlic blister 100g",
+      "price": 3.7514999999999996,
+      "pf": "3,75 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/gamma-brineshrimp-garlic-blister-100g",
+      "cart": "https://www.aquariumlife.pt/cart/add/gamma-brineshrimp-garlic-blister-100g",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/db20874-200034-5513003.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Comida Congelada",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-comida-congelada"
+        }
+      ]
+    },
+    {
+      "id": 5513004,
+      "title": "Gamma Cyclops blister 100g",
+      "price": 3.7514999999999996,
+      "pf": "3,75 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/gamma-cyclops-blister-100g-",
+      "cart": "https://www.aquariumlife.pt/cart/add/gamma-cyclops-blister-100g-",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/602513f-200037-5513004.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Comida Congelada",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-comida-congelada"
+        }
+      ]
+    },
+    {
+      "id": 5513005,
+      "title": "Gamma Mysis shrimp garlic blister 100g",
+      "price": 3.7514999999999996,
+      "pf": "3,75 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/gamma-mysis-shrimp-garlic-blister-100g",
+      "cart": "https://www.aquariumlife.pt/cart/add/gamma-mysis-shrimp-garlic-blister-100g",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5b41ce1-200040-5513005.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Comida Congelada",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-comida-congelada"
+        }
+      ]
+    },
+    {
+      "id": 5513006,
+      "title": "Gamma Daphnia blister 100g",
+      "price": 3.198,
+      "pf": "3,20 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/gamma-daphnia-blister-100g",
+      "cart": "https://www.aquariumlife.pt/cart/add/gamma-daphnia-blister-100g",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4000993-200043-5513006.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Comida Congelada",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-comida-congelada"
+        }
+      ]
+    },
+    {
+      "id": 5513007,
+      "title": "Gamma White Mosquito larvae blister 100g",
+      "price": 5.0061,
+      "pf": "5,01 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/gamma-white-mosquito-larvae-blister-100g",
+      "cart": "https://www.aquariumlife.pt/cart/add/gamma-white-mosquito-larvae-blister-100g",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/acc9c91-151310-gamma-white-mosquito-larvae-blister-100g.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Comida Congelada",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-comida-congelada"
+        }
+      ]
+    },
+    {
+      "id": 5513008,
+      "title": "Gamma Cichlid Diet blister 100g",
+      "price": 4.4034,
+      "pf": "4,40 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/gamma-cichlid-diet-blister-100g",
+      "cart": "https://www.aquariumlife.pt/cart/add/gamma-cichlid-diet-blister-100g",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1f7188f-151402-gamma-cichlid-diet-blister-100g.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Comida Congelada",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-comida-congelada"
+        }
+      ]
+    },
+    {
+      "id": 5513009,
+      "title": "Gamma Marine Quintet blister 100g",
+      "price": 5.0061,
+      "pf": "5,01 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/gamma-marine-quintet-blister-100g",
+      "cart": "https://www.aquariumlife.pt/cart/add/gamma-marine-quintet-blister-100g",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/8981bd0-200047-5513009.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Comida Congelada",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-comida-congelada"
+        }
+      ]
+    },
+    {
+      "id": 5513010,
+      "title": "Gamma Copepod garlic blister 100g",
+      "price": 4.4034,
+      "pf": "4,40 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/gamma-copepod-garlic-blister-100g",
+      "cart": "https://www.aquariumlife.pt/cart/add/gamma-copepod-garlic-blister-100g",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/e6c4940-200050-5513010.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Comida Congelada",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-comida-congelada"
+        }
+      ]
+    },
+    {
+      "id": 5513011,
+      "title": "Gamma Mysis shrimp flat pack 250g",
+      "price": 7.502999999999999,
+      "pf": "7,50 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/gamma-mysis-shrimp-flat-pack-250g",
+      "cart": "https://www.aquariumlife.pt/cart/add/gamma-mysis-shrimp-flat-pack-250g",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2c21035-200053-5513011.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Comida Congelada",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-comida-congelada"
+        }
+      ]
+    },
+    {
+      "id": 5513012,
+      "title": "Gamma Brineshrimp Garlic flat pack 250g",
+      "price": 8.1549,
+      "pf": "8,15 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/gamma-brineshrimp-garlic-flat-pack-250g",
+      "cart": "https://www.aquariumlife.pt/cart/add/gamma-brineshrimp-garlic-flat-pack-250g",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/18e1bbf-200057-5513012.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Comida Congelada",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-comida-congelada"
+        }
+      ]
+    }
+  ]
+}

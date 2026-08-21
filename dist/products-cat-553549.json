@@ -1,0 +1,240 @@
+{
+  "updated": "2026-08-21",
+  "cat": 553549,
+  "slug": "alimentacao-camaroes",
+  "total": 10,
+  "min": 4.5018,
+  "max": 14.993699999999999,
+  "products": [
+    {
+      "id": 5444801,
+      "title": "Shrimp King Baby 35g",
+      "price": 11.9925,
+      "pf": "11,99 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/shrimp-king-baby-35g",
+      "cart": "https://www.aquariumlife.pt/cart/add/shrimp-king-baby-35g",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/33189f9-194926-5444801.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Camarões",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-camaroes"
+        }
+      ]
+    },
+    {
+      "id": 5444802,
+      "title": "Shrimp King Protein 45g",
+      "price": 11.9925,
+      "pf": "11,99 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/shrimp-king-protein-45g",
+      "cart": "https://www.aquariumlife.pt/cart/add/shrimp-king-protein-45g",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6016c52-194929-5444802.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Camarões",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-camaroes"
+        }
+      ]
+    },
+    {
+      "id": 5444803,
+      "title": "Shrimp King Mineral 45g",
+      "price": 11.9925,
+      "pf": "11,99 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/shrimp-king-mineral-45g",
+      "cart": "https://www.aquariumlife.pt/cart/add/shrimp-king-mineral-45g",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b4d2646-194935-5444803.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Camarões",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-camaroes"
+        }
+      ]
+    },
+    {
+      "id": 5444804,
+      "title": "Shrimp King Complete 45g",
+      "price": 9.987599999999999,
+      "pf": "9,99 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/shrimp-king-complete-45g",
+      "cart": "https://www.aquariumlife.pt/cart/add/shrimp-king-complete-45g",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/821d07d-194941-5444804.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Camarões",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-camaroes"
+        }
+      ]
+    },
+    {
+      "id": 5444805,
+      "title": "Shrimp King Snow Pops 40g",
+      "price": 11.9925,
+      "pf": "11,99 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/shrimp-king-snow-pops-40g",
+      "cart": "https://www.aquariumlife.pt/cart/add/shrimp-king-snow-pops-40g",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/6d5a4f3-194944-5444805.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Camarões",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-camaroes"
+        }
+      ]
+    },
+    {
+      "id": 5444806,
+      "title": "Shrimp King 5in1 30g",
+      "price": 14.993699999999999,
+      "pf": "14,99 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/shrimp-king-5in1-30g",
+      "cart": "https://www.aquariumlife.pt/cart/add/shrimp-king-5in1-30g",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/99edf97-194947-5444806.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Camarões",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-camaroes"
+        }
+      ]
+    },
+    {
+      "id": 5445108,
+      "title": "Tropical Shrimp Sticks (100 ml)",
+      "price": 4.5018,
+      "pf": "4,50 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/tropical-shrimp-sticks-100-ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/tropical-shrimp-sticks-100-ml",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/e5eaad3-195607-5445108.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Camarões",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-camaroes"
+        }
+      ]
+    },
+    {
+      "id": 5445110,
+      "title": "Tropical Crusta Sticks (100 ml)",
+      "price": 5.805599999999999,
+      "pf": "5,81 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/tropical-crusta-sticks-100-ml",
+      "cart": "https://www.aquariumlife.pt/cart/add/tropical-crusta-sticks-100-ml",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5290dc3-195615-5445110.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Camarões",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-camaroes"
+        }
+      ]
+    },
+    {
+      "id": 5532590,
+      "title": "Shrimp King Snail Stixx 40g",
+      "price": 11.9925,
+      "pf": "11,99 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/shrimp-king-snail-stixx-40g-",
+      "cart": "https://www.aquariumlife.pt/cart/add/shrimp-king-snail-stixx-40g-",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4c6c3db-200237-5532590.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Camarões",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-camaroes"
+        }
+      ]
+    },
+    {
+      "id": 5532591,
+      "title": "Shrimp King Dadap Leaves 10x",
+      "price": 9.987599999999999,
+      "pf": "9,99 €",
+      "pp": null,
+      "ppf": null,
+      "af": null,
+      "url": "https://www.aquariumlife.pt/product/shrimp-king-dadap-leaves-10x",
+      "cart": "https://www.aquariumlife.pt/cart/add/shrimp-king-dadap-leaves-10x",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2f888f6-200240-5532591.webp",
+      "st": 1,
+      "bc": [
+        {
+          "t": "Alimentação",
+          "u": "https://www.aquariumlife.pt/category/alimentacao"
+        },
+        {
+          "t": "Camarões",
+          "u": "https://www.aquariumlife.pt/category/alimentacao-camaroes"
+        }
+      ]
+    }
+  ]
+}
