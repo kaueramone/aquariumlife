@@ -2917,13 +2917,82 @@
      */
 
     // 1. Concordancia singular/plural do stock
+    //
+    // ATENCAO (2026-08-21): NAO escrever textContent no elemento que envolve o
+    // contador. O markup do tema e'
+    //   <div class="card-stock">Stock:<span class="stock">
+    //     <span class="data-product-stock_qty"><strong class="data-product-stock_qty">1</strong>
+    //     unidades em stock</span></span></div>
+    // e o numero esta' num <strong> separado do texto "unidades". A versao antiga
+    // lia o textContent do .stock (onde o "1 unidades" existe junto) e reescrevia
+    // esse textContent -> isso APAGAVA o <strong class="data-product-stock_qty">.
+    // Na troca de variante o tema faz animate_updated_value('.data-product-stock_qty'),
+    // nao encontrava nada e o contador ficava congelado no valor inicial: o cliente
+    // via "1 unidade em stock" em TODAS as variantes. Agora so' mexemos nos nos de
+    // texto (a estrutura fica intacta) e re-aplicamos quando o tema muda o numero.
+    function fixStockPlural(box) {
+      var numEl = box.querySelector('.data-product-stock_qty');
+      var bruto = (numEl ? numEl.textContent : box.textContent) || '';
+      var m = bruto.match(/\d+/);
+      if (!m) return;
+      var n = parseInt(m[0], 10);
+      var sufixo = (n === 1) ? ' unidade em stock' : ' unidades em stock';
+
+      var achou = false;
+      var walker = document.createTreeWalker(box, NodeFilter.SHOW_TEXT, null, false);
+      var node;
+      while ((node = walker.nextNode())) {
+        var t = node.nodeValue;
+        if (!/unidade/i.test(t)) continue;
+        achou = true;
+        var novo = (n === 1)
+          ? t.replace(/unidades/gi, 'unidade')
+          : t.replace(/unidade(?!s)/gi, 'unidades');
+        if (novo !== t) node.nodeValue = novo;
+      }
+
+      // Na troca de variante o tema faz $('.data-product-stock_qty').text(n). Como o
+      // seletor casa o <span> exterior E o <strong> interior, o jQuery escreve no
+      // <span> e apaga o " unidades em stock" que vinha a seguir ao numero (fica so'
+      // "Stock: 2"). Repomos o sufixo. (2026-08-21)
+      if (!achou && numEl && numEl.parentNode) {
+        numEl.parentNode.insertBefore(document.createTextNode(sufixo), numEl.nextSibling);
+      }
+    }
+
+    var stockObserver = null;
+
     function fixStockText() {
       if (!document.body.classList.contains('page-product')) return;
-      document.querySelectorAll('.stock-number, .stock, .card-stock .stock').forEach(function (el) {
-        var txt = el.textContent;
-        var fixed = txt.replace(/\b1\s+unidades\b/i, '1 unidade');
-        if (fixed !== txt) el.textContent = fixed;
+
+      var boxes = document.querySelectorAll('.card-stock');
+      if (!boxes.length) boxes = document.querySelectorAll('.stock');
+      if (!boxes.length) return;
+
+      Array.prototype.forEach.call(boxes, fixStockPlural);
+
+      if (stockObserver) return;
+
+      function ligar() {
+        var alvos = document.querySelectorAll('.card-stock');
+        if (!alvos.length) alvos = document.querySelectorAll('.stock');
+        Array.prototype.forEach.call(alvos, function (b) {
+          stockObserver.observe(b, { childList: true, subtree: true, characterData: true });
+        });
+      }
+
+      // Desligamos o observador enquanto escrevemos, senao entrava em ciclo.
+      stockObserver = new MutationObserver(function () {
+        stockObserver.disconnect();
+        try {
+          var alvos = document.querySelectorAll('.card-stock');
+          if (!alvos.length) alvos = document.querySelectorAll('.stock');
+          Array.prototype.forEach.call(alvos, fixStockPlural);
+        } finally {
+          ligar();
+        }
       });
+      ligar();
     }
 
     // 2. Botao CHECKOUT -> Finalizar compra
