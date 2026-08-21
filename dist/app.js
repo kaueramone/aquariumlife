@@ -92,7 +92,16 @@
           { label: 'Bombas de Água',    icon: 'fas fa-sync',               href: '/category/equipamento-bombas-de-agua' },
         ]
       },
-      { label: 'Alimentação',           icon: 'fas fa-utensils',  href: '/category/alimentacao',           children: [] },
+      {
+        label: 'Alimentação',
+        icon: 'fas fa-utensils',
+        href: '/category/alimentacao',
+        children: [
+          { label: 'Peixes',           icon: 'fas fa-fish',      href: '/category/alimentacao-peixes' },
+          { label: 'Camarões',         icon: 'fas fa-bug',       href: '/category/alimentacao-camaroes' },
+          { label: 'Comida Congelada', icon: 'fas fa-snowflake', href: '/category/alimentacao-comida-congelada' },
+        ]
+      },
       {
         label: 'Hardscape',
         icon: 'fas fa-mountain',
