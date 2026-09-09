@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21",
+  "updated": "2026-09-09",
   "cat": 527352,
   "slug": "peixes",
   "total": 95,
@@ -983,7 +983,7 @@
     },
     {
       "id": 5536083,
-      "title": "Hyphessobrycon megalopterus Black Palmeri 2.8cm",
+      "title": "nematobrycon Black Palmeri",
       "price": 2.2017,
       "pf": "2,20 €",
       "pp": null,
@@ -991,7 +991,7 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/hyphessobrycon-megalopterus-black-palmeri-28cm",
       "cart": "https://www.aquariumlife.pt/cart/add/hyphessobrycon-megalopterus-black-palmeri-28cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/912d873-200428-5536083.webp",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/dd726f0-150829-black-palmeri.PNG",
       "st": 1
     },
     {
@@ -1044,7 +1044,7 @@
       "url": "https://www.aquariumlife.pt/product/carinotetraodon-travancoricus-15-20cm",
       "cart": "https://www.aquariumlife.pt/cart/add/carinotetraodon-travancoricus-15-20cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9f2d3cd-200607-5559763.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5559764,

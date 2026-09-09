@@ -1,8 +1,8 @@
 {
-  "updated": "2026-08-21",
+  "updated": "2026-09-09",
   "cat": "all",
   "slug": "all",
-  "total": 629,
+  "total": 628,
   "min": 0.5043,
   "max": 369.9471,
   "products": [
@@ -2603,8 +2603,8 @@
     {
       "id": 5444955,
       "title": "Chihiros Hanging kit",
-      "price": 11.9556,
-      "pf": "11,96 €",
+      "price": 16.9494,
+      "pf": "16,95 €",
       "pp": null,
       "ppf": null,
       "af": "11,96 €",
@@ -2612,29 +2612,6 @@
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-hanging-kit-wrgbii",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/816db7d-195233-5444955.webp",
       "st": 1,
-      "bc": [
-        {
-          "t": "Equipamento",
-          "u": "https://www.aquariumlife.pt/category/equipamento"
-        },
-        {
-          "t": "Led´s",
-          "u": "https://www.aquariumlife.pt/category/equipamento-led-s"
-        }
-      ]
-    },
-    {
-      "id": 5444956,
-      "title": "Chihiros Hanging kit B series",
-      "price": 16.4451,
-      "pf": "16,45 €",
-      "pp": null,
-      "ppf": null,
-      "af": null,
-      "url": "https://www.aquariumlife.pt/product/chihiros-hanging-kit-b-series",
-      "cart": "https://www.aquariumlife.pt/cart/add/chihiros-hanging-kit-b-series",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/1c38dab-195235-5444956.webp",
-      "st": 0,
       "bc": [
         {
           "t": "Equipamento",
@@ -5882,7 +5859,7 @@
     },
     {
       "id": 5445987,
-      "title": "Chihiros Difusor C02 externo mangueira",
+      "title": "Chihiros Difusor C02 externo",
       "price": 26.9493,
       "pf": "26,95 €",
       "pp": null,
@@ -8368,7 +8345,7 @@
     },
     {
       "id": 5536083,
-      "title": "Hyphessobrycon megalopterus Black Palmeri 2.8cm",
+      "title": "nematobrycon Black Palmeri",
       "price": 2.2017,
       "pf": "2,20 €",
       "pp": null,
@@ -8376,7 +8353,7 @@
       "af": null,
       "url": "https://www.aquariumlife.pt/product/hyphessobrycon-megalopterus-black-palmeri-28cm",
       "cart": "https://www.aquariumlife.pt/cart/add/hyphessobrycon-megalopterus-black-palmeri-28cm",
-      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/912d873-200428-5536083.webp",
+      "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/dd726f0-150829-black-palmeri.PNG",
       "st": 1
     },
     {
@@ -8482,7 +8459,7 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-dosing-container-4-pcs-450ml",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-dosing-container-4-pcs-450ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/48596bd-200445-5549678.webp",
-      "st": 1,
+      "st": 0,
       "bc": [
         {
           "t": "Equipamento",
@@ -8574,7 +8551,7 @@
       "url": "https://www.aquariumlife.pt/product/chihiros-dosing-tube-holder",
       "cart": "https://www.aquariumlife.pt/cart/add/chihiros-dosing-tube-holder",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a6fed3a-200455-5549685.webp",
-      "st": 1,
+      "st": 0,
       "bc": [
         {
           "t": "Equipamento",
@@ -9014,7 +8991,7 @@
       "url": "https://www.aquariumlife.pt/product/carinotetraodon-travancoricus-15-20cm",
       "cart": "https://www.aquariumlife.pt/cart/add/carinotetraodon-travancoricus-15-20cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9f2d3cd-200607-5559763.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5559764,
