@@ -1,10 +1,10 @@
 {
-  "updated": "2026-09-09",
+  "updated": "2026-09-16",
   "cat": 527487,
   "slug": "equipamento-filtros-internos",
   "total": 10,
   "min": 6.3468,
-  "max": 27.5028,
+  "max": 23.000999999999998,
   "products": [
     {
       "id": 5444817,
@@ -78,8 +78,8 @@
     {
       "id": 5445027,
       "title": "SF AQUAFLOW",
-      "price": 27.5028,
-      "pf": "27,50 €",
+      "price": 22.2015,
+      "pf": "22,20 €",
       "pp": null,
       "ppf": null,
       "af": "12,76 €",

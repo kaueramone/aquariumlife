@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-09",
+  "updated": "2026-09-16",
   "cat": 527713,
   "slug": "equipamento-acessorios",
   "total": 58,
@@ -178,7 +178,7 @@
       "url": "https://www.aquariumlife.pt/product/pp-thermometer",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-thermometer",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/694520e-195115-5444867.webp",
-      "st": 1,
+      "st": 0,
       "bc": [
         {
           "t": "Equipamento",
@@ -569,7 +569,7 @@
       "url": "https://www.aquariumlife.pt/product/pp-breedy-s",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-breedy-s",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 1,
+      "st": 0,
       "bc": [
         {
           "t": "Equipamento",
@@ -592,7 +592,7 @@
       "url": "https://www.aquariumlife.pt/product/pp-breedy-net-box-l",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-breedy-net-box-l",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f31bbe1-195131-5444886.webp",
-      "st": 1,
+      "st": 0,
       "bc": [
         {
           "t": "Equipamento",
@@ -615,7 +615,7 @@
       "url": "https://www.aquariumlife.pt/product/pp-breeding-hang-on-s",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-breeding-hang-on-s",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 1,
+      "st": 0,
       "bc": [
         {
           "t": "Equipamento",
@@ -661,7 +661,7 @@
       "url": "https://www.aquariumlife.pt/product/pp-osmopower-20-190-l-d",
       "cart": "https://www.aquariumlife.pt/cart/add/pp-osmopower-20-190-l-d",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 1,
+      "st": 0,
       "bc": [
         {
           "t": "Equipamento",
@@ -952,8 +952,8 @@
     {
       "id": 5445055,
       "title": "Aquael AIR TUBE 4/6 mm",
-      "price": 1.8942,
-      "pf": "1,89 €",
+      "price": 3.6039000000000003,
+      "pf": "3,60 €",
       "pp": null,
       "ppf": null,
       "af": "1,89 €",

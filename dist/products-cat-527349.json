@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-09",
+  "updated": "2026-09-16",
   "cat": 527349,
   "slug": "alimentacao",
   "total": 62,
@@ -86,7 +86,7 @@
       "url": "https://www.aquariumlife.pt/product/shrimp-king-complete-45g",
       "cart": "https://www.aquariumlife.pt/cart/add/shrimp-king-complete-45g",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/821d07d-194941-5444804.webp",
-      "st": 1,
+      "st": 0,
       "bc": [
         {
           "t": "Alimentação",
@@ -132,7 +132,7 @@
       "url": "https://www.aquariumlife.pt/product/shrimp-king-5in1-30g",
       "cart": "https://www.aquariumlife.pt/cart/add/shrimp-king-5in1-30g",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/99edf97-194947-5444806.webp",
-      "st": 1,
+      "st": 0,
       "bc": [
         {
           "t": "Alimentação",
@@ -454,7 +454,7 @@
       "url": "https://www.aquariumlife.pt/product/tropical-3-algae-tablets-a-250-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-3-algae-tablets-a-250-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2d30482-195511-5445075.webp",
-      "st": 1,
+      "st": 0,
       "bc": [
         {
           "t": "Alimentação",
@@ -515,8 +515,8 @@
     {
       "id": 5445080,
       "title": "Tropical Supervit Tablets B",
-      "price": 11.746500000000001,
-      "pf": "11,75 €",
+      "price": 4.944599999999999,
+      "pf": "4,94 €",
       "pp": null,
       "ppf": null,
       "af": "4,94 €",
@@ -753,7 +753,7 @@
       "url": "https://www.aquariumlife.pt/product/tropical-guppy-flakes-100-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-guppy-flakes-100-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f19bbbb-195612-5445109.webp",
-      "st": 0,
+      "st": 1,
       "bc": [
         {
           "t": "Alimentação",
@@ -960,7 +960,7 @@
       "url": "https://www.aquariumlife.pt/product/gamma-brineshrimp-blister-100g-",
       "cart": "https://www.aquariumlife.pt/cart/add/gamma-brineshrimp-blister-100g-",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a3f28f6-115351-gamma-brineshrimp-blister-100g.webp",
-      "st": 1,
+      "st": 0,
       "bc": [
         {
           "t": "Alimentação",
@@ -1052,7 +1052,7 @@
       "url": "https://www.aquariumlife.pt/product/gamma-brineshrimp-garlic-blister-100g",
       "cart": "https://www.aquariumlife.pt/cart/add/gamma-brineshrimp-garlic-blister-100g",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/db20874-200034-5513003.webp",
-      "st": 1,
+      "st": 0,
       "bc": [
         {
           "t": "Alimentação",
@@ -1351,7 +1351,7 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-color-booster-100ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-color-booster-100ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/119c2f3-200314-5532593.webp",
-      "st": 1,
+      "st": 0,
       "bc": [
         {
           "t": "Alimentação",
@@ -1374,7 +1374,7 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-cookies-special-menu-100ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-cookies-special-menu-100ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/09cfb42-200317-5532594.webp",
-      "st": 1,
+      "st": 0,
       "bc": [
         {
           "t": "Alimentação",

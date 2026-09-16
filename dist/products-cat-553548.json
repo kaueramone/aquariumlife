@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-09",
+  "updated": "2026-09-16",
   "cat": 553548,
   "slug": "alimentacao-peixes",
   "total": 37,
@@ -316,7 +316,7 @@
       "url": "https://www.aquariumlife.pt/product/tropical-3-algae-tablets-a-250-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-3-algae-tablets-a-250-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2d30482-195511-5445075.webp",
-      "st": 1,
+      "st": 0,
       "bc": [
         {
           "t": "Alimentação",
@@ -377,8 +377,8 @@
     {
       "id": 5445080,
       "title": "Tropical Supervit Tablets B",
-      "price": 11.746500000000001,
-      "pf": "11,75 €",
+      "price": 4.944599999999999,
+      "pf": "4,94 €",
       "pp": null,
       "ppf": null,
       "af": "4,94 €",
@@ -592,7 +592,7 @@
       "url": "https://www.aquariumlife.pt/product/tropical-guppy-flakes-100-ml",
       "cart": "https://www.aquariumlife.pt/cart/add/tropical-guppy-flakes-100-ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/f19bbbb-195612-5445109.webp",
-      "st": 0,
+      "st": 1,
       "bc": [
         {
           "t": "Alimentação",
@@ -776,7 +776,7 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-color-booster-100ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-color-booster-100ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/119c2f3-200314-5532593.webp",
-      "st": 1,
+      "st": 0,
       "bc": [
         {
           "t": "Alimentação",
@@ -799,7 +799,7 @@
       "url": "https://www.aquariumlife.pt/product/dennerle-cookies-special-menu-100ml",
       "cart": "https://www.aquariumlife.pt/cart/add/dennerle-cookies-special-menu-100ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/09cfb42-200317-5532594.webp",
-      "st": 1,
+      "st": 0,
       "bc": [
         {
           "t": "Alimentação",

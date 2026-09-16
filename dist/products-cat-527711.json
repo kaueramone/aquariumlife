@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-09",
+  "updated": "2026-09-16",
   "cat": 527711,
   "slug": "condicionadores-de-agua",
   "total": 46,
@@ -35,8 +35,8 @@
     {
       "id": 5444765,
       "title": "Hydra Gh+",
-      "price": 9.9507,
-      "pf": "9,95 €",
+      "price": 15.953100000000001,
+      "pf": "15,95 €",
       "pp": null,
       "ppf": null,
       "af": "9,95 €",
@@ -48,8 +48,8 @@
     {
       "id": 5444767,
       "title": "Hydra Kh+",
-      "price": 9.9507,
-      "pf": "9,95 €",
+      "price": 15.953100000000001,
+      "pf": "15,95 €",
       "pp": null,
       "ppf": null,
       "af": "9,95 €",
@@ -212,7 +212,7 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-algexit-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-algexit-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/24676a9-200302-5532609.webp",
-      "st": 0
+      "st": 1
     },
     {
       "id": 5532610,
@@ -243,8 +243,8 @@
     {
       "id": 5532628,
       "title": "Easy Life EasyStart",
-      "price": 15.0552,
-      "pf": "15,06 €",
+      "price": 9.3972,
+      "pf": "9,40 €",
       "pp": null,
       "ppf": null,
       "af": "5,10 €",
@@ -264,7 +264,7 @@
       "url": "https://www.aquariumlife.pt/product/easy-life-aquamaker-250ml",
       "cart": "https://www.aquariumlife.pt/cart/add/easy-life-aquamaker-250ml",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4909b0a-200342-5532630.webp",
-      "st": 0
+      "st": 1
     },
     {
       "id": 5532631,

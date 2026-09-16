@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-09",
+  "updated": "2026-09-16",
   "cat": 527351,
   "slug": "plantas",
   "total": 84,
@@ -69,7 +69,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-lilaeopsis-brasiliensis-pack",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-lilaeopsis-brasiliensis-pack",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/83188a7-153455-lilaeopsis-brasiliensis-5410150.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5444973,
@@ -82,7 +82,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-lobelia-cardinalis-pack",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-lobelia-cardinalis-pack",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/94e5c1d-195306-5444973.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5444974,
@@ -95,7 +95,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-rotala-rotundifolia-pack",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-rotala-rotundifolia-pack",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/98a543a-195309-5444974.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5444975,
@@ -108,7 +108,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-bacopa-compact-pack",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-bacopa-compact-pack",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/dbbfce5-195314-5444975.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5444976,
@@ -134,7 +134,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-hygrophila-siamensis-53b-pack",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-hygrophila-siamensis-53b-pack",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/e524c34-195317-5444977.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5444978,
@@ -160,7 +160,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-lobelia-cardinalis-mini-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-lobelia-cardinalis-mini-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4c96dd5-195319-5444979.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5444980,
@@ -251,7 +251,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-cryptocoryne-parva-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-cryptocoryne-parva-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/af1560b-195316-5444987.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5444989,
@@ -264,7 +264,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-taxiphyllum-barbieri-bogor-moss-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-taxiphyllum-barbieri-bogor-moss-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9e86e22-195318-5444989.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5444990,
@@ -277,7 +277,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-taxiphyllum-alternans-taiwan-moss-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-taxiphyllum-alternans-taiwan-moss-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/cf66146-195321-5444990.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5444991,
@@ -290,7 +290,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-taxiphyllum-sp-spiky-moss-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-taxiphyllum-sp-spiky-moss-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0465f0a-195328-5444991.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5444992,
@@ -342,7 +342,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-riccia-fluitans-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-riccia-fluitans-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/dad2048-195337-5444995.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5444996,
@@ -355,7 +355,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-rotala-indica-bonsai-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-rotala-indica-bonsai-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bb58b80-195341-5444996.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5444997,
@@ -368,7 +368,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-phyllanthus-fluitans-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-phyllanthus-fluitans-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/76bcdb5-195344-5444997.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5444998,
@@ -381,7 +381,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-staurogyne-repens-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-staurogyne-repens-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/23b375b-195348-5444998.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5513013,
@@ -394,7 +394,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-echinodorus-grisebachli-bleherae-pot",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-echinodorus-grisebachli-bleherae-pot",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a3dbace-200101-5513013.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5513014,
@@ -433,7 +433,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-bucephalandra-sordidula-blue-pot",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-bucephalandra-sordidula-blue-pot",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/42bf7d3-200110-5513016.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5513017,
@@ -446,7 +446,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-echinodorus-grisebachii-tropica-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-echinodorus-grisebachii-tropica-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/369f48c-200112-5513017.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5513018,
@@ -472,7 +472,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-bucephalandra-pygmaea-bukit-kelam-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-bucephalandra-pygmaea-bukit-kelam-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/66f4f5c-200117-5513019.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5513020,
@@ -485,7 +485,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-pogostemon-helferi-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-pogostemon-helferi-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/e6c1110-200102-5513020.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5513021,
@@ -498,7 +498,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-littorella-uniflora-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-littorella-uniflora-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4b98a4b-200105-5513021.webp",
-      "st": 0
+      "st": 1
     },
     {
       "id": 5513022,
@@ -524,7 +524,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-bucephalandra-diabolica-kedagang-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-bucephalandra-diabolica-kedagang-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a710f91-200112-5513023.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5513024,
@@ -537,7 +537,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-bucephalandra-sp-needle-leaf-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-bucephalandra-sp-needle-leaf-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/424ff1f-200115-5513024.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5513025,
@@ -550,7 +550,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-taxiphyllum-sp-flame-moss-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-taxiphyllum-sp-flame-moss-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/69dbb2a-200119-5513025.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5513026,
@@ -563,7 +563,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-pogostemon-deccanensis-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-pogostemon-deccanensis-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/23fc751-200122-5513026.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5513027,
@@ -576,7 +576,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-leptodictctyum-ripariu-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-leptodictctyum-ripariu-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/9a5b33e-200125-5513027.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5521450,
@@ -589,7 +589,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-ludwigia-palustris-super-red-pot",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-ludwigia-palustris-super-red-pot",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/8349951-200135-5521450.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5521451,
@@ -615,7 +615,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-cardamine-lyrata-pot",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-cardamine-lyrata-pot",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0b68616-200140-5521452.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5521453,
@@ -628,7 +628,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-eleocharis-parvula-pot",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-eleocharis-parvula-pot",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/0b3ed59-200143-5521453.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5521454,
@@ -641,7 +641,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-murdannia-keisak-pot",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-murdannia-keisak-pot",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/d22fe36-200146-5521454.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5521455,
@@ -654,7 +654,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-hygrophila-polysperma-rosanervig-pot",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-hygrophila-polysperma-rosanervig-pot",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/885015b-200149-5521455.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5521456,
@@ -667,7 +667,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-alternanthera-reineckii-pink-pot",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-alternanthera-reineckii-pink-pot",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3eb8117-200153-5521456.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5521457,
@@ -680,7 +680,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-myriophyllum-mattogrossense-pot",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-myriophyllum-mattogrossense-pot",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/695bfd3-200156-5521457.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5521458,
@@ -706,7 +706,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-anubias-barteri-var-barteri-pot",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-anubias-barteri-var-barteri-pot",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/827d4a2-200205-5521459.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5521460,
@@ -719,7 +719,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-micranthemum-umbrosum-pot",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-micranthemum-umbrosum-pot",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5c1de71-200209-5521460.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5521461,
@@ -732,7 +732,7 @@
       "url": "https://www.aquariumlife.pt/product/tropicashinnersia-rivularis-weiss-gruen-pot",
       "cart": "https://www.aquariumlife.pt/cart/add/tropicashinnersia-rivularis-weiss-gruen-pot",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/5f67179-200212-5521461.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5521462,
@@ -745,7 +745,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-hottonia-palustris-pot",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-hottonia-palustris-pot",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/63edf9d-200214-5521462.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5521463,
@@ -771,7 +771,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-helanthium-bolivianum-quadricostatus-pot",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-helanthium-bolivianum-quadricostatus-pot",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/af9a915-200221-5521464.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5521465,
@@ -784,7 +784,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-micranthemum-tweediei-monte-carlo-pot",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-micranthemum-tweediei-monte-carlo-pot",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/e195513-200224-5521465.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5521467,
@@ -797,7 +797,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-sagittaria-subulata-pot",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-sagittaria-subulata-pot",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3cf9ddc-200227-5521467.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5521468,
@@ -810,7 +810,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-limnophila-hippuridoides-pot",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-limnophila-hippuridoides-pot",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/328ce1e-200202-5521468.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5549691,
@@ -823,7 +823,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-bacopa-caroliniana-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-bacopa-caroliniana-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4e22d19-200510-5549691.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5549692,
@@ -836,7 +836,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-glossostigma-elatinoides-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-glossostigma-elatinoides-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/48b3346-200513-5549692.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5549693,
@@ -862,7 +862,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-limnobium-laevigatum-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-limnobium-laevigatum-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/4c1b73d-200502-5549694.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5549695,
@@ -875,7 +875,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-marsilea-hirsuta-grow-",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-marsilea-hirsuta-grow-",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/96f4d9c-200506-5549695.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5549696,
@@ -888,7 +888,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-blyxa-japonica-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-blyxa-japonica-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2932552-200509-5549696.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5549697,
@@ -901,7 +901,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-sagittaria-subulata-needle-leaf-grow-",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-sagittaria-subulata-needle-leaf-grow-",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bd0a235-200512-5549697.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5549698,
@@ -914,7 +914,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-hottonia-palustris-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-hottonia-palustris-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/31be408-200516-5549698.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5549699,
@@ -927,7 +927,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-heteranthera-zosterifolia-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-heteranthera-zosterifolia-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/55452ff-200518-5549699.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5549700,
@@ -940,7 +940,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-rotala-rotundifolia-green-grow-",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-rotala-rotundifolia-green-grow-",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/108952f-200520-5549700.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5549701,
@@ -953,7 +953,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-eleocharis-pusilla-mini-grow-",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-eleocharis-pusilla-mini-grow-",
       "img": "https://cdn-shopkit.com/assets/store/img/no-img.png",
-      "st": 0
+      "st": 1
     },
     {
       "id": 5549702,
@@ -966,7 +966,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-monosolenium-tenerum-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-monosolenium-tenerum-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b5d2680-200523-5549702.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5549703,
@@ -992,7 +992,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-nymphoides-hydrophylla-taiwan-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-nymphoides-hydrophylla-taiwan-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/445b3d5-200530-5549704.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5549705,
@@ -1005,7 +1005,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-sagittaria-subulata-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-sagittaria-subulata-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/82013e4-200534-5549705.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5549706,
@@ -1031,7 +1031,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-vesicularia-ferriei-weeping-moss-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-vesicularia-ferriei-weeping-moss-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/b0a2569-200540-5549707.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5549708,
@@ -1044,7 +1044,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-vesicularia-montagnei-christmas-moss-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-vesicularia-montagnei-christmas-moss-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/713926d-200543-5549708.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5549709,
@@ -1057,7 +1057,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-rotala-rotundifolia-hra-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-rotala-rotundifolia-hra-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/91c1662-200548-5549709.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5549710,
@@ -1070,7 +1070,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-spirodela-polyrrhiza-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-spirodela-polyrrhiza-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/35419f9-200552-5549710.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5549711,
@@ -1083,7 +1083,7 @@
       "url": "https://www.aquariumlife.pt/product/tropica-schismatoglottis-prietoi-grow",
       "cart": "https://www.aquariumlife.pt/cart/add/tropica-schismatoglottis-prietoi-grow",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/38c039a-200556-5549711.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5549712,

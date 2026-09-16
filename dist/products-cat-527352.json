@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-09",
+  "updated": "2026-09-16",
   "cat": 527352,
   "slug": "peixes",
   "total": 95,
@@ -56,7 +56,7 @@
       "url": "https://www.aquariumlife.pt/product/sahyadria-denisoni-35-40cm",
       "cart": "https://www.aquariumlife.pt/cart/add/sahyadria-denisoni-35-40cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/7f11535-195713-5445144.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5445146,
@@ -160,7 +160,7 @@
       "url": "https://www.aquariumlife.pt/product/corydora-aneus-albina-3-35cm",
       "cart": "https://www.aquariumlife.pt/cart/add/corydora-aneus-albina-3-35cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/c6b9f11-195707-5445153.webp",
-      "st": 0
+      "st": 1
     },
     {
       "id": 5445155,
@@ -251,7 +251,7 @@
       "url": "https://www.aquariumlife.pt/product/corydora-paleatues-albina-3-35cm",
       "cart": "https://www.aquariumlife.pt/cart/add/corydora-paleatues-albina-3-35cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/7a88740-195727-5445161.webp",
-      "st": 0
+      "st": 1
     },
     {
       "id": 5445162,
@@ -420,7 +420,7 @@
       "url": "https://www.aquariumlife.pt/product/caracol-anentome-helena",
       "cart": "https://www.aquariumlife.pt/cart/add/caracol-anentome-helena",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/3979922-195855-5506826.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5506827,
@@ -914,7 +914,7 @@
       "url": "https://www.aquariumlife.pt/product/tylomenalia-sp-3-4cm",
       "cart": "https://www.aquariumlife.pt/cart/add/tylomenalia-sp-3-4cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/2b16372-200351-5532605.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5536078,
@@ -940,7 +940,7 @@
       "url": "https://www.aquariumlife.pt/product/tetra-emperador-25cm",
       "cart": "https://www.aquariumlife.pt/cart/add/tetra-emperador-25cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/bd33fce-200416-5536079.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5536080,
@@ -953,7 +953,7 @@
       "url": "https://www.aquariumlife.pt/product/espada-kohako-4cm",
       "cart": "https://www.aquariumlife.pt/cart/add/espada-kohako-4cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/ab459a9-200419-5536080.webp",
-      "st": 0
+      "st": 1
     },
     {
       "id": 5536081,
@@ -1096,7 +1096,7 @@
       "url": "https://www.aquariumlife.pt/product/apistogramma-cacatuoides-laranja-35-40cm",
       "cart": "https://www.aquariumlife.pt/cart/add/apistogramma-cacatuoides-laranja-35-40cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a9c75c8-200603-5559767.webp",
-      "st": 0
+      "st": 1
     },
     {
       "id": 5559768,
@@ -1174,7 +1174,7 @@
       "url": "https://www.aquariumlife.pt/product/garra-rufa-2-3cm",
       "cart": "https://www.aquariumlife.pt/cart/add/garra-rufa-2-3cm",
       "img": "https://cdn-shopkit.com/usercontent/aquariumlife/media/images/a412b67-200620-5559774.webp",
-      "st": 1
+      "st": 0
     },
     {
       "id": 5559775,
