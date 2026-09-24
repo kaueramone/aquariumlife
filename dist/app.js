@@ -3339,13 +3339,15 @@
       // Shopkit reescreveu a celula para "A calcular" (ex.: apos mudar quantidade).
       if (ship && !ship.querySelector('.aq-portes-info')) {
         ship.innerHTML = '<div class="aq-portes-info">'
+          + '<div class="aq-porte-gratis"><strong>Grátis acima de ' + FREE_FROM + ' €</strong>'
+          + '<span>Portes de envio · Portugal continental</span></div>'
           + OPCOES.map(function (o) {
               return '<span class="aq-porte-op">'
                 + '<span class="aq-porte-nome">' + o.nome + ' <em>(' + o.zona + ')</em></span>'
                 + '<b class="aq-porte-preco">' + formatPrice(o.valor) + '</b>'
                 + '</span>';
             }).join('')
-          + '<small class="aq-porte-nota">Valores estimados — escolhes a entrega no checkout · Grátis acima de ' + FREE_FROM + ' €</small>'
+          + '<small class="aq-porte-nota">Valores estimados — escolhes a entrega no checkout.</small>'
           + '</div>';
       }
 

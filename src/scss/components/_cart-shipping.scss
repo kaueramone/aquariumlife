@@ -24,6 +24,31 @@
     font-weight: 400;
   }
 
+  .aq-porte-gratis {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 16px;
+    margin-bottom: 8px;
+    border: 1px solid $color-neon-accent;
+    border-radius: 10px;
+    background: rgba(8, 238, 188, 0.12);
+    color: $color-neon-accent !important;
+
+    strong, span { color: inherit !important; }
+
+    strong {
+      font-size: clamp(1.15rem, 4vw, 1.4rem);
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    span {
+      font-size: 0.78rem;
+      line-height: 1.4;
+    }
+  }
+
   .aq-porte-op {
     display: flex;
     align-items: center;
@@ -60,6 +85,11 @@
 
 // ---- LIGHT MODE -------------------------------------------
 body.aq-light-mode .cart-receipt .total-shipping {
+  .aq-porte-gratis {
+    color: #00664d !important;
+    border-color: #007a5c;
+    background: #e5f7ef;
+  }
   .aq-porte-nome { color: #00204a !important; }
   .aq-porte-preco { color: #007a5c !important; }
 }
