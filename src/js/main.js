@@ -58,7 +58,7 @@ function init() {
   // Recalculo de quantidade no carrinho
   initCartQuantity();
 
-  // Portes de envio no resumo do carrinho (2 opcoes PT continental)
+  // Portes nativos do Shopkit e aviso para cotação pendente
   initCartShipping();
 
   // Breadcrumb da pagina de produto: inserir subcategoria em falta

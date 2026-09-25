@@ -56,6 +56,18 @@ function recalcCart() {
     grandTotal += sub;
   });
 
+  var shipping = document.querySelector('.cart-receipt .total-shipping');
+  if (shipping && !/^(A calcular|Portes calculados no checkout após indicar a morada\.)$/.test(shipping.textContent.trim())) return;
+
+  // O antigo módulo de portes atualizava estas duas linhas do resumo.
+  var wrap = shipping && shipping.closest('.cart-wrap');
+  if (wrap) {
+    var subtotal = wrap.querySelector('.cart-line .cart-text + .cart-text');
+    var total = wrap.querySelector('.cart-line.margin-bottom-0 .cart-text + .cart-text');
+    if (subtotal) subtotal.textContent = formatPrice(grandTotal);
+    if (total) total.textContent = formatPrice(grandTotal);
+  }
+
   var totalEl = document.querySelector('.cart-total-text');
   if (totalEl) totalEl.textContent = formatPrice(grandTotal);
 
@@ -92,7 +104,8 @@ function step(input, dir) {
 }
 
 export function initCartQuantity() {
-  if (!document.body.classList.contains('page-cart')) return;
+  if (!document.body.classList.contains('page-cart') ||
+      !/^\/cart\/?$/.test(window.location.pathname)) return;
 
   // calculo inicial (estabelece precos unitarios) — tentar ate o carrinho existir
   var attempts = 0;

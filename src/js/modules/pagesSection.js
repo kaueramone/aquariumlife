@@ -23,7 +23,7 @@ var PAGE_CONFIG = {
     summary: [
       { icon: 'fas fa-clock', label: '2 a 5 dias úteis', desc: 'Equipamentos e produtos secos chegam entre 2 a 5 dias úteis após a confirmação do pagamento.' },
       { icon: 'fas fa-leaf', label: 'Seres vivos: Terças e Quartas', desc: 'Plantas, peixes e invertebrados são enviados às Terças e Quartas-feiras para chegarem frescos, evitando atrasos de fim de semana.' },
-      { icon: 'fas fa-truck', label: 'Portes gratuitos acima de 50€', desc: 'Encomendas com valor superior a 50€ têm portes gratuitos para Portugal continental.' },
+      { icon: 'fas fa-truck', label: 'Portes calculados no checkout', desc: 'Consulta os métodos e custos de entrega após indicar a morada. O envio de peixes ornamentais tem condições específicas, descritas abaixo.' },
       { icon: 'fas fa-map-marker-alt', label: 'Enviamos para todo o país', desc: 'Entregamos em Portugal continental, Madeira e Açores. Os prazos e custos variam consoante o destino.' }
     ]
   },

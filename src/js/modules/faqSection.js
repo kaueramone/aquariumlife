@@ -5,7 +5,7 @@
 
 const FAQS = [
   { q: 'Fazem envios para todo Portugal continental e ilhas?',
-    a: 'Sim! Enviamos para todo o Portugal continental, Madeira e Açores. Os prazos e custos de envio variam consoante o destino — consulta as condições de envio na página do carrinho.' },
+    a: 'Sim! Enviamos para todo o Portugal continental, Madeira e Açores. Os prazos e custos de envio variam consoante o destino — consulta os métodos e custos no checkout após indicar a morada, e as exceções na Política de Entrega.' },
   { q: 'Vendem peixes, plantas e invertebrados vivos?',
     a: 'Sim, trabalhamos com seres vivos! As encomendas de animais e plantas são cuidadosamente embaladas com materiais específicos para garantir a chegada em segurança. Em caso de problema na chegada, contacta-nos em até 2 horas com foto/vídeo.' },
   { q: 'Qual o prazo de entrega habitual?',

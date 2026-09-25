@@ -1419,7 +1419,7 @@
         summary: [
           { icon: 'fas fa-clock', label: '2 a 5 dias úteis', desc: 'Equipamentos e produtos secos chegam entre 2 a 5 dias úteis após a confirmação do pagamento.' },
           { icon: 'fas fa-leaf', label: 'Seres vivos: Terças e Quartas', desc: 'Plantas, peixes e invertebrados são enviados às Terças e Quartas-feiras para chegarem frescos, evitando atrasos de fim de semana.' },
-          { icon: 'fas fa-truck', label: 'Portes gratuitos acima de 50€', desc: 'Encomendas com valor superior a 50€ têm portes gratuitos para Portugal continental.' },
+          { icon: 'fas fa-truck', label: 'Portes calculados no checkout', desc: 'Consulta os métodos e custos de entrega após indicar a morada. O envio de peixes ornamentais tem condições específicas, descritas abaixo.' },
           { icon: 'fas fa-map-marker-alt', label: 'Enviamos para todo o país', desc: 'Entregamos em Portugal continental, Madeira e Açores. Os prazos e custos variam consoante o destino.' }
         ]
       },
@@ -3141,15 +3141,15 @@
      * Totais: .cart-total-text (total)  /  .total-taxes-value (IVA incluido)
      */
 
-    var IVA_RATE$1 = 0.23;
+    var IVA_RATE = 0.23;
 
-    function parsePrice$2(txt) {
+    function parsePrice$1(txt) {
       if (!txt) return 0;
       var n = txt.replace(/[^\d,.-]/g, '').replace(/\./g, '').replace(',', '.');
       var v = parseFloat(n);
       return isNaN(v) ? 0 : v;
     }
-    function formatPrice$1(v) {
+    function formatPrice(v) {
       var parts = v.toFixed(2).split('.');
       parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
       return parts[0] + ',' + parts[1] + ' €';
@@ -3173,21 +3173,33 @@
         var unit = parseFloat(row.getAttribute('data-aq-unit'));
         if (isNaN(unit)) {
           var initialQty = parseInt(input.getAttribute('data-aq-iq') || input.value, 10) || 1;
-          unit = parsePrice$2(unitEl.textContent) / initialQty;
+          unit = parsePrice$1(unitEl.textContent) / initialQty;
           row.setAttribute('data-aq-unit', unit);
           input.setAttribute('data-aq-iq', input.value);
         }
 
         var sub = unit * qty;
-        subEl.textContent = formatPrice$1(sub);
+        subEl.textContent = formatPrice(sub);
         grandTotal += sub;
       });
 
+      var shipping = document.querySelector('.cart-receipt .total-shipping');
+      if (shipping && !/^(A calcular|Portes calculados no checkout após indicar a morada\.)$/.test(shipping.textContent.trim())) return;
+
+      // O antigo módulo de portes atualizava estas duas linhas do resumo.
+      var wrap = shipping && shipping.closest('.cart-wrap');
+      if (wrap) {
+        var subtotal = wrap.querySelector('.cart-line .cart-text + .cart-text');
+        var total = wrap.querySelector('.cart-line.margin-bottom-0 .cart-text + .cart-text');
+        if (subtotal) subtotal.textContent = formatPrice(grandTotal);
+        if (total) total.textContent = formatPrice(grandTotal);
+      }
+
       var totalEl = document.querySelector('.cart-total-text');
-      if (totalEl) totalEl.textContent = formatPrice$1(grandTotal);
+      if (totalEl) totalEl.textContent = formatPrice(grandTotal);
 
       var taxEl = document.querySelector('.total-taxes-value');
-      if (taxEl) taxEl.textContent = formatPrice$1(grandTotal - grandTotal / (1 + IVA_RATE$1));
+      if (taxEl) taxEl.textContent = formatPrice(grandTotal - grandTotal / (1 + IVA_RATE));
     }
 
     // --- persistir no servidor (silencioso) --------------------------------
@@ -3219,7 +3231,8 @@
     }
 
     function initCartQuantity() {
-      if (!document.body.classList.contains('page-cart')) return;
+      if (!document.body.classList.contains('page-cart') ||
+          !/^\/cart\/?$/.test(window.location.pathname)) return;
 
       // calculo inicial (estabelece precos unitarios) — tentar ate o carrinho existir
       var attempts = 0;
@@ -3266,142 +3279,35 @@
     }
 
     /**
-     * cartShipping.js
-     * Portes de envio no Resumo do carrinho (/cart) — MODO INFORMATIVO (2026-07-27).
-     *
-     * O Shopkit mostra "A calcular" e so revela/soma os portes no checkout (etapa
-     * final, ao escolher pagamento + tipo de entrega). Aqui, no carrinho inicial,
-     * apenas INFORMAMOS as duas opcoes com valor estimado — SEM entrar na soma:
-     *   - Entrega em casa (Portugal continental) ......... 8,20 EUR
-     *   - Pick Point mais perto de si (Portugal continental) 3,99 EUR
-     * (Valores estimados; grátis acima de 50 EUR — a escolha real e' no checkout.)
-     *
-     * IMPORTANTE: o Total do resumo fica IGUAL ao subtotal dos produtos (os portes
-     * NAO sao somados nesta fase). Antes tinhamos radios que somavam — revertido a
-     * pedido do Kaue: a soma volta a ser so no checkout nativo.
-     *
-     * Estrutura do Resumo (validada em producao):
-     *   .cart-receipt .cart-wrap
-     *     .cart-line                 "Subtotal" + valor
-     *     .cart-line.margin-top      "Portes de envio" + .total-shipping "A calcular"
-     *     .cart-line.margin-bottom-0 "Total" + valor
-     *     .tax-included .text-muted  "Inclui IVA a X" (.total-taxes-value)
-     *   Fora do resumo: .cart-total-text (total grande + sticky).
-     *
-     * Convive com o cartQuantity.js: re-corre em setTimeout(0) DEPOIS do recalculo
-     * de quantidades, lendo os subtotais de linha (.cart-actual) ja atualizados.
+     * O Shopkit é a fonte dos métodos, portes e totais.
+     * Apenas esclarece o estado pendente; nunca substitui uma cotação nativa.
      */
-
-    var FREE_FROM = 50;
-    var OPCOES = [
-      { id: 'casa', nome: 'Entrega em casa', zona: 'Portugal continental', valor: 8.20 },
-      { id: 'pick', nome: 'Pick Point mais perto de si', zona: 'Portugal continental', valor: 3.99 }
-    ];
-    var IVA_RATE = 0.23;
-
-    function parsePrice$1(txt) {
-      if (!txt) return 0;
-      var n = String(txt).replace(/[^\d,.-]/g, '').replace(/\./g, '').replace(',', '.');
-      var v = parseFloat(n);
-      return isNaN(v) ? 0 : v;
-    }
-    function formatPrice(v) {
-      var parts = v.toFixed(2).split('.');
-      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-      return parts[0] + ',' + parts[1] + ' €';
-    }
-
-    function wrapResumo() {
-      var ship = document.querySelector('.cart-receipt .total-shipping');
-      return ship ? ship.closest('.cart-wrap') : null;
-    }
-
-    // Subtotal = soma dos subtotais de linha (mantidos pelo cartQuantity).
-    // Fallback: valor da propria linha "Subtotal" do resumo.
-    function subtotalAtual(wrap) {
-      var subs = document.querySelectorAll('.cart-item.well-featured .cart-actual');
-      var tot = 0;
-      if (subs.length) {
-        subs.forEach(function (el) { tot += parsePrice$1(el.textContent); });
-        return tot;
-      }
-      var linha = wrap.querySelector('.cart-line .cart-text + .cart-text');
-      return linha ? parsePrice$1(linha.textContent) : 0;
-    }
-
-    function render() {
-      var wrap = wrapResumo();
-      if (!wrap) return;
-      var ship = wrap.querySelector('.total-shipping');
-      var sub = subtotalAtual(wrap);
-
-      // Celula dos portes: apenas INFORMATIVO (nao entra na soma). Reaplica se o
-      // Shopkit reescreveu a celula para "A calcular" (ex.: apos mudar quantidade).
-      if (ship && !ship.querySelector('.aq-portes-info')) {
-        ship.innerHTML = '<div class="aq-portes-info">'
-          + '<div class="aq-porte-gratis"><strong>Grátis acima de ' + FREE_FROM + ' €</strong>'
-          + '<span>Portes de envio · Portugal continental</span></div>'
-          + OPCOES.map(function (o) {
-              return '<span class="aq-porte-op">'
-                + '<span class="aq-porte-nome">' + o.nome + ' <em>(' + o.zona + ')</em></span>'
-                + '<b class="aq-porte-preco">' + formatPrice(o.valor) + '</b>'
-                + '</span>';
-            }).join('')
-          + '<small class="aq-porte-nota">Valores estimados — escolhes a entrega no checkout.</small>'
-          + '</div>';
-      }
-
-      // Total = SO os produtos (os portes NAO sao somados nesta fase).
-      var total = sub;
-      var linhas = wrap.querySelectorAll('.cart-line');
-      if (linhas.length) {
-        var v0 = linhas[0].querySelectorAll('.cart-text')[1];
-        if (v0) v0.textContent = formatPrice(sub);
-      }
-      var linhaTotal = wrap.querySelector('.cart-line.margin-bottom-0');
-      if (linhaTotal) {
-        var vT = linhaTotal.querySelectorAll('.cart-text')[1];
-        if (vT) vT.textContent = formatPrice(total);
-      }
-      document.querySelectorAll('.cart-total-text').forEach(function (el) {
-        el.textContent = formatPrice(total);
-      });
-      document.querySelectorAll('.total-taxes-value').forEach(function (el) {
-        el.textContent = formatPrice(total - total / (1 + IVA_RATE));
-      });
-    }
-
     function initCartShipping() {
-      var b = document.body;
-      if (!b.classList.contains('page-cart') || b.classList.contains('cart-data')) return;
-      if (b.hasAttribute('data-aq-portes-bound')) return;
-      b.setAttribute('data-aq-portes-bound', '1');
-
-      // depois de qualquer mexida nas quantidades (cartQuantity corre primeiro)
-      document.addEventListener('click', function (e) {
-        if (e.target.closest && e.target.closest('.js-counter-plus, .js-counter-minus')) {
-          setTimeout(render, 0);
+      // Aviso legado guardado no painel: não manter uma promessa de preço no tema.
+      document.querySelectorAll('.store-notice-text').forEach(function (notice) {
+        if (/^Portes grátis para encomendas superiores a 50 euros\*?$/i.test(notice.textContent.trim())) {
+          notice.textContent = 'Consulta os portes e as condições de entrega no checkout.';
         }
-      }, false);
-      ['input', 'change'].forEach(function (ev) {
-        document.addEventListener(ev, function (e) {
-          if (e.target.classList && e.target.classList.contains('js-counter-input')) {
-            setTimeout(render, 0);
-          }
-        }, false);
       });
 
-      // arranque: espera o resumo existir (mesmo padrao do cartQuantity)
-      var attempts = 0;
-      var iv = setInterval(function () {
-        attempts++;
-        if (wrapResumo()) {
-          render();
-          clearInterval(iv);
-        } else if (attempts >= 20) {
-          clearInterval(iv);
-        }
-      }, 250);
+      if (!/^\/cart\/?$/.test(window.location.pathname)) return;
+      if (document.body.hasAttribute('data-aq-portes-bound')) return;
+      document.body.setAttribute('data-aq-portes-bound', '1');
+
+      function clarifyPendingShipping() {
+        document.querySelectorAll('.cart-receipt .total-shipping').forEach(function (ship) {
+          if (ship.textContent.trim() === 'A calcular') {
+            ship.textContent = 'Portes calculados no checkout após indicar a morada.';
+          }
+        });
+      }
+
+      clarifyPendingShipping();
+      // O Shopkit pode substituir o resumo após uma atualização do carrinho.
+      // A comparação exata torna o observador idempotente e preserva preços reais.
+      new MutationObserver(clarifyPendingShipping).observe(document.body, {
+        childList: true, subtree: true, characterData: true
+      });
     }
 
     /**
@@ -3657,7 +3563,7 @@
 
     const FAQS = [
       { q: 'Fazem envios para todo Portugal continental e ilhas?',
-        a: 'Sim! Enviamos para todo o Portugal continental, Madeira e Açores. Os prazos e custos de envio variam consoante o destino — consulta as condições de envio na página do carrinho.' },
+        a: 'Sim! Enviamos para todo o Portugal continental, Madeira e Açores. Os prazos e custos de envio variam consoante o destino — consulta os métodos e custos no checkout após indicar a morada, e as exceções na Política de Entrega.' },
       { q: 'Vendem peixes, plantas e invertebrados vivos?',
         a: 'Sim, trabalhamos com seres vivos! As encomendas de animais e plantas são cuidadosamente embaladas com materiais específicos para garantir a chegada em segurança. Em caso de problema na chegada, contacta-nos em até 2 horas com foto/vídeo.' },
       { q: 'Qual o prazo de entrega habitual?',
@@ -3823,7 +3729,7 @@
       // Recalculo de quantidade no carrinho
       initCartQuantity();
 
-      // Portes de envio no resumo do carrinho (2 opcoes PT continental)
+      // Portes nativos do Shopkit e aviso para cotação pendente
       initCartShipping();
 
       // Breadcrumb da pagina de produto: inserir subcategoria em falta
