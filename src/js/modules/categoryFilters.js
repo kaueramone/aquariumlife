@@ -439,7 +439,12 @@ function initPriceFilter(catId) {
         // só .aq-badge-esgotado, estilizado por nós (vermelho).
         const badgeHTML = esgotado
           ? '<span class="aq-badge-esgotado">Esgotado</span>'
-          : '';
+          : (p.promo === true
+              ? '<span class="badge promo"><div><span>Promoção</span>'
+                + (typeof p.discount === 'number' && p.discount > 0 && Number.isFinite(p.discount)
+                  ? '<span class="promo-percentage">-' + p.discount + '%</span>' : '')
+                + '</div></span>' : '')
+            + (p.new === true ? '<span class="badge new">Novidade</span>' : '');
         // Nota: precisa ser <a> com btn-primary — o tema Boxie esconde .product-btn
         // que nao casem com esse padrao (validado em producao 2026-07-22).
         // Esgotado leva à FICHA (p.url) com "+ Info"; normal vai ao carrinho.

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-25",
+  "updated": "2026-09-26",
   "cat": 527722,
   "slug": "equipamento-bombas-de-agua",
   "total": 1,
@@ -13,6 +13,9 @@
       "pf": "13,80 €",
       "pp": null,
       "ppf": null,
+      "promo": false,
+      "new": false,
+      "discount": null,
       "af": "13,80 €",
       "url": "https://www.aquariumlife.pt/product/sf-aquapower-450-450-l-h",
       "cart": "https://www.aquariumlife.pt/cart/add/sf-aquapower-450-450-l-h",

@@ -209,6 +209,11 @@ function mapProduct(p) {
     pf:    p.price_formatted || fmtPrice(p.price),
     pp:    (p.price_promo != null) ? p.price_promo : null,
     ppf:   p.price_promo_formatted || null,
+    promo: p.is_promotion === true,
+    new:   p.new === true,
+    discount: p.is_promotion === true && p.promo_show_percentage === true
+      && Number.isFinite(Number(p.price_promo_percentage)) && Number(p.price_promo_percentage) > 0
+      ? Number(p.price_promo_percentage) : null,
     af:    aPartirDe(p),   // "A partir de" (variante mais barata) ou null
     url:   p.url || (SITE + '/product/' + handle),
     cart:  p.add_cart_url || (SITE + '/cart/add/' + handle),
