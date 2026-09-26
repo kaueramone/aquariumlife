@@ -392,12 +392,16 @@ a.product-btn::before {
     min-width: 0;
     max-width: 100%;
   }
-  > div > span { margin: 0 !important; padding: 0 !important; }
+  > div > span {
+    margin: 0 !important;
+    padding: 0 !important;
+    border-right: 0 !important;
+  }
   .promo-percentage {
     position: static !important;
     margin: 0 !important;
-    padding: 0 0 0 6px !important;
-    border-left: 1px solid currentColor !important;
+    padding: 0 !important;
+    border-left: 0 !important;
     white-space: nowrap !important;
   }
   &.promo, &.sale, &.discount { background: #b51f3a !important; color: #fff !important; }
