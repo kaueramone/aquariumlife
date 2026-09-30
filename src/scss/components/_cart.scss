@@ -230,11 +230,17 @@
 .modal.in,
 .modal.show {
   z-index: 10100 !important;
-  display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   padding: 20px !important;
   overflow-y: auto !important;
+}
+
+// Só os modais abertos usam flex. Forçar display nos modais fechados deixa
+// o modal de garantias transparente sobre o checkout, interceptando Confirmar.
+.modal.in,
+.modal.show {
+  display: flex !important;
 }
 
 // Centraliza o dialog dentro do modal
