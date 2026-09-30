@@ -1,5 +1,5 @@
 /**
- * trustSeals.js - v3
+ * trustSeals.js - v4
  * - Selos de confianca no footer
  * - Move redes sociais para coluna de Contactos
  * - Remove selos nativos Shopkit
@@ -19,24 +19,7 @@ var SEALS = [
     sub: 'Dados protegidos',
     icon: '<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4L8 10v12c0 10.5 6.8 20.3 16 23.4C33.2 42.3 40 32.5 40 22V10L24 4z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M16 24l5 5 11-11" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
   },
-  {
-    id: 'mb',
-    label: 'Multibanco',
-    sub: 'Pagamento aceite',
-    icon: '<svg viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><rect x="6" y="10" width="8" height="12" rx="1" fill="currentColor" opacity=".4"/><rect x="16" y="10" width="8" height="12" rx="1" fill="currentColor" opacity=".7"/><rect x="26" y="10" width="8" height="12" rx="1" fill="currentColor"/><text x="24" y="26" text-anchor="middle" font-size="5" fill="currentColor" font-family="sans-serif" opacity=".7">MULTIBANCO</text></svg>',
-  },
-  {
-    id: 'mbway',
-    label: 'MB WAY',
-    sub: 'Pagamento aceite',
-    icon: '<svg viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><text x="24" y="14" text-anchor="middle" font-size="8" fill="#08EEBC" font-family="sans-serif" font-weight="bold">MB</text><text x="24" y="25" text-anchor="middle" font-size="7" fill="currentColor" font-family="sans-serif" opacity=".8">WAY</text></svg>',
-  },
-  {
-    id: 'cards',
-    label: 'Visa / Mastercard',
-    sub: 'Cartao aceite',
-    icon: '<svg viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="16" r="8" fill="#EA4335" opacity=".7"/><circle cx="30" cy="16" r="8" fill="#FBBC05" opacity=".7"/></svg>',
-  },
+
 ];
 
 function buildSealsBar() {
@@ -54,6 +37,68 @@ function buildSealsBar() {
   });
   bar.appendChild(inner);
   return bar;
+}
+
+// A lista nativa e gerada pelo Shopkit a partir dos metodos ativos.
+// Nao usar uma lista fixa nem expor credenciais da API no navegador.
+export function readPaymentLogos(footer) {
+  var seen = new Set();
+  return Array.from(footer.querySelectorAll('.payment-logos img')).reduce(function (out, img) {
+    var label = (img.getAttribute('alt') || img.getAttribute('title') || '').trim();
+    var source = img.getAttribute('data-src') || img.getAttribute('src') || '';
+    if (!label || !source || /(?:^|\/)no-img\./i.test(source)) return out;
+    var url;
+    try { url = new URL(source, document.baseURI); } catch (e) { return out; }
+    if (url.protocol !== 'https:' && url.protocol !== 'http:') return out;
+    var key = label.toLocaleLowerCase('pt-PT');
+    if (seen.has(key)) return out;
+    seen.add(key);
+    out.push({ label: label, src: url.href,
+      pickup: /(?:^|\/)pick_up\./i.test(url.pathname) || /levantamento nas instala/i.test(label) });
+    return out;
+  }, []);
+}
+
+function syncPaymentSeals(footer, bar) {
+  var methods = readPaymentLogos(footer);
+  var signature = JSON.stringify(methods);
+  if (bar.dataset.payments === signature) return;
+  bar.dataset.payments = signature;
+  var inner = bar.querySelector('.aq-seals-inner');
+  inner.querySelectorAll('.aq-seal-payment').forEach(function (item) { item.remove(); });
+  methods.forEach(function (method) {
+    var item = document.createElement('div');
+    item.className = 'aq-seal-item aq-seal-payment';
+    var icon = document.createElement('div');
+    icon.className = 'aq-seal-icon aq-payment-logo';
+    var img = document.createElement('img');
+    img.src = method.src;
+    img.alt = ''; // O nome esta visivel ao lado; evitar leitura duplicada.
+    img.width = 64;
+    img.height = 40;
+    img.decoding = 'async';
+    img.addEventListener('error', function () { icon.hidden = true; });
+    icon.appendChild(img);
+    var text = document.createElement('div');
+    text.className = 'aq-seal-text';
+    var title = document.createElement('strong');
+    title.textContent = method.label;
+    var subtitle = document.createElement('span');
+    subtitle.textContent = method.pickup ? 'Na nossa loja' : 'Pagamento aceite';
+    text.appendChild(title);
+    text.appendChild(subtitle);
+    item.appendChild(icon);
+    item.appendChild(text);
+    inner.appendChild(item);
+  });
+}
+
+function observePaymentLogos(footer, bar) {
+  // Tambem cobre insercao tardia, lazy loading e substituicao da lista nativa.
+  // A assinatura evita reconstrucoes e ciclos por alteracoes nos nossos cards.
+  var observer = new MutationObserver(function () { syncPaymentSeals(footer, bar); });
+  observer.observe(footer, { subtree: true, childList: true, attributes: true,
+    attributeFilter: ['src', 'data-src', 'alt', 'title'] });
 }
 
 function moveSocialToContacts(footer) {
@@ -149,7 +194,9 @@ function build() {
   removeSiteSeal(footer);
   injectSignature(footer);
 
-  console.log('[AQ] Trust seals v3 aplicados');
+  syncPaymentSeals(footer, bar);
+  observePaymentLogos(footer, bar);
+  console.log('[AQ] Trust seals v4 aplicados');
   return true;
 }
 

@@ -28,8 +28,10 @@
   border: 1px solid rgba(8, 238, 188, 0.08);
   background: rgba(0, 21, 49, 0.2);
   transition: $transition-fast;
-  width: 150px;
-  flex-shrink: 0;
+  width: 210px;
+  max-width: 100%;
+  box-sizing: border-box;
+  flex: 0 1 210px;
 
   &:hover {
     border-color: rgba(8, 238, 188, 0.25);
@@ -38,7 +40,7 @@
 
   @media (max-width: 768px) {
     width: calc(50% - 8px);
-    flex-shrink: 1;
+    flex-basis: calc(50% - 8px);
   }
 
   @media (max-width: 480px) {
@@ -59,6 +61,7 @@
 }
 
 .aq-seal-text {
+  min-width: 0;
   display: flex;
   flex-direction: column;
 
@@ -79,7 +82,25 @@
   }
 }
 
-@media (max-width: 360px) {
-  .aq-seal-text { display: none; }
-  .aq-seal-item { width: auto; padding: 8px; }
+.aq-payment-logo {
+  width: 64px;
+  height: 40px;
+  padding: 4px;
+  box-sizing: content-box;
+  background: #fff;
+  border-radius: 6px;
+
+  &[hidden] { display: none; }
+  img { width: 64px; height: 40px; object-fit: contain; }
+}
+
+body.aq-light-mode #aq-trust-seals {
+  .aq-seal-item { background: #fff; border-color: #c9ded8; }
+  .aq-seal-text strong { color: #00204a; }
+  .aq-seal-text span { color: #46586a; }
+  .aq-seal-icon { color: #007a5c; }
+}
+
+@media (max-width: 480px) {
+  #aq-trust-seals .aq-seal-item { width: 100%; flex-basis: 100%; }
 }
