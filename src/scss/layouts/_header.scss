@@ -182,7 +182,7 @@ header, .header, #header {
     margin: 0 auto !important;
     padding: 0 20px !important;
     gap: 0;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     overflow: visible;
     max-width: 1400px;
   }
@@ -286,4 +286,52 @@ header, .header, #header {
   }
 }
 
-// Mobile: esconder noss
+// Promoções: botão de destaque ao lado das categorias.
+#aq-nav-bar > ul > li.aq-nav-promotions > a,
+header #aq-mobile-promotions {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 7px !important;
+  margin: 6px 0 6px 12px;
+  padding: 9px 15px !important;
+  min-height: 40px;
+  background: #08eebc !important;
+  color: #00040d !important;
+  border: 1px solid #08eebc !important;
+  border-radius: 8px;
+  font-family: $font-family-title;
+  font-size: 0.75rem;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  box-shadow: 0 0 16px rgba(8, 238, 188, 0.2);
+
+  > span, > i:first-child, > svg:first-child { color: inherit !important; }
+
+  &:hover {
+    background: #7affdf !important;
+    color: #00040d !important;
+    text-shadow: none !important;
+    box-shadow: 0 0 20px rgba(8, 238, 188, 0.4);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #fff !important;
+    outline-offset: 3px;
+  }
+}
+
+@media (min-width: 992px) {
+  header #aq-mobile-promotions { display: none !important; }
+}
+
+@media (max-width: 991.98px) {
+  #aq-nav-bar { display: none !important; }
+  header #aq-mobile-promotions {
+    align-self: flex-end;
+    margin: 0 20px 10px;
+  }
+}

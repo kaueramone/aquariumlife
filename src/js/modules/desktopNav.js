@@ -52,15 +52,20 @@ const MENU = [
   { label: 'Condicionadores',       icon: 'fas fa-tint',      href: '/category/condicionadores-de-agua', children: [] },
   { label: 'Aquascaping',           icon: 'fas fa-leaf',      href: '/category/aquascaping',           children: [] },
   { label: 'Outros',                icon: 'fas fa-ellipsis-h',href: '/category/outros',                children: [] },
+  { label: 'Promoções',             icon: 'fas fa-tag',       href: '/sales', className: 'aq-nav-promotions', children: [] },
 ];
 
 function createNavItem(item) {
   var li = document.createElement('li');
   var hasChildren = item.children && item.children.length > 0;
   if (hasChildren) li.className = 'aq-has-sub';
+  if (item.className) li.classList.add(item.className);
 
   var a = document.createElement('a');
   a.href = item.href || '#';
+  if (item.href === '/sales' && window.location.pathname.replace(/\/$/, '') === '/sales') {
+    a.setAttribute('aria-current', 'page');
+  }
   a.setAttribute('role', 'menuitem');
 
   a.innerHTML =
@@ -145,6 +150,14 @@ function tryBuild() {
 }
 
 export function buildDesktopNav() {
+  // Acesso direto também no telemóvel, onde a barra de categorias não é usada.
+  var header = document.querySelector('body > header, body > .header, #header, header');
+  if (header && !document.getElementById('aq-mobile-promotions')) {
+    var mobileLink = createNavItem(MENU[MENU.length - 1]).firstElementChild;
+    mobileLink.id = 'aq-mobile-promotions';
+    mobileLink.removeAttribute('role');
+    header.appendChild(mobileLink);
+  }
   if (tryBuild()) return;
 
   var attempts = 0;
